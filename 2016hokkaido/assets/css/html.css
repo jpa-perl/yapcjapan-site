@@ -143,6 +143,11 @@ img { width: 100%; }
 	margin: 0 15px;
 }
 
+#footer address img {
+    max-width: 150px;
+    margin: auto;
+}
+
 #footer address {
 	font-size: 12px;
 	text-align: center;
