@@ -1,0 +1,11 @@
+
+@font-face {
+  font-family: 'Clip-W7-Regular';
+  src: url('../fonts/Clip-W7-Regular.eot?v=1.0');
+  src: url('../fonts/Clip-W7-Regular.eot?#iefix&v=1.0') format('embedded-opentype'), url('../fonts/Clip-W7-Regular.woff2?v=1.0') format('woff2'), url('../fonts/Clip-W7-Regular.woff?v=1.0') format('woff'), url('../fonts/Clip-W7-Regular.ttf?v=1.0') format('truetype'), url('../fonts/Clip-W7-Regular.svg?v=1.0#clip-w7') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Clip-W7-Regular { font-family: "Clip-W7-Regular"; }
+
