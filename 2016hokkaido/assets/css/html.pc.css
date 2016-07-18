@@ -381,6 +381,30 @@ dd img { vertical-align: bottom; }
 #sponsors .class .block ul li.medium img { width: 220px; }
 #sponsors .class .block ul li.small img { width: 150px; }
 
+#staff .class h4 {
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0;
+	padding: 10px 0;
+}
+
+#staff .class .block {
+	_zoom: 1;
+	overflow: hidden;
+}
+
+#staff .class .block ul {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+#staff .class .block ul li {
+	float: left;
+	text-align: center;
+	margin: 0 10px 10px 0;
+}
+
+#staff .class .block ul li img { max-width: 110px; }
 
 /*----------------------------------------------------------
   - FOOTER / LOGO
