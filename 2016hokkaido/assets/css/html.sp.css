@@ -339,6 +339,11 @@ dd img { vertical-align: bottom; }
 #news .article li .date,
 #news .article li a { display: block; }
 
+.fb-iframe {
+    display: block;
+    margin: 0 auto;
+}
+
 #guest-speakers .row {
 	vertical-align: middle;
 	margin-bottom: 20px;
