@@ -326,7 +326,7 @@ dd img { vertical-align: bottom; }
 }
 
 #container .box .section .body p {}
-
+#container .box-single { margin-top: 20px; }
 
 /*----------------------------------------------------------
   - HOME
