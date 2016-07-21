@@ -381,6 +381,11 @@ dd img { vertical-align: bottom; }
 #sponsors .class .block ul li.medium img { width: 220px; }
 #sponsors .class .block ul li.small img { width: 150px; }
 
+#sponsors .class .block ul li.platinum img { width: 230px; }
+#sponsors .class .block ul li.gold img { width: 190px; }
+#sponsors .class .block ul li.silver img { width: 162px; }
+#sponsors .class .block ul li.other img { width: 114px; }
+
 #staff .class h4 {
 	font-size: 16px;
 	font-weight: 700;
