@@ -378,9 +378,7 @@ dd img { vertical-align: bottom; }
 }
 
 #sponsors .class .block ul li {
-	display: block;
 	float: left;
-	width: 100%;
 	text-align: center;
 	margin: 0 10px 10px 0;
 }
