@@ -411,6 +411,9 @@ dd img { vertical-align: bottom; }
 
 #staff .class .block ul li img { max-width: 110px; }
 
+#code-of-conduct p { margin: 0 0 20px 0; }
+#code-of-conduct .small p { font-size: 14px; }
+
 /*----------------------------------------------------------
   - FOOTER / LOGO
 ----------------------------------------------------------*/
