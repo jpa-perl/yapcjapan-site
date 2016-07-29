@@ -354,7 +354,7 @@ dd img { vertical-align: bottom; }
 }
 
 #sponsors .class h4 {
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
 	margin: 0;
 	padding: 10px 0;
@@ -375,6 +375,12 @@ dd img { vertical-align: bottom; }
 	float: left;
 	text-align: center;
 	margin: 0 10px 10px 0;
+}
+
+#sponsors .class .block ul li img {
+    box-shadow: 2px 2px 1px 1px #D0D0D0;
+    -moz-box-shadow: 2px 2px 1px 1px #D0D0D0;
+    -webkit-box-shadow: 2px 2px 1px 1px #D0D0D0;
 }
 
 #sponsors .class .block ul li.large img { width: 340px; }
