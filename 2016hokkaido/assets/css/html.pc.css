@@ -364,6 +364,7 @@ dd img { vertical-align: bottom; }
 	width: 770px;
 	_zoom: 1;
 	overflow: hidden;
+    margin-bottom: 20px;
 }
 
 #sponsors .class .block ul {
