@@ -27,6 +27,7 @@ $(function() {
 				$('#gnavi').removeClass('fixed');
 			}
 		});
+        $('#facebook-news').removeAttr('height').attr('height', '750');
 
 	} else {
 
@@ -50,7 +51,7 @@ $(function() {
 				open: 'true'
 			}
 		});
-
+        $('#facebook-news').removeAttr('height').attr('height', '300');
 	}
 });
 
