@@ -27,7 +27,7 @@ $(function() {
 				$('#gnavi').removeClass('fixed');
 			}
 		});
-        $('#facebook-news').removeAttr('width').attr('width', '750');
+        // $('#facebook-news').removeAttr('width').attr('width', '750');
 
 	} else {
 
@@ -51,7 +51,7 @@ $(function() {
 				open: 'true'
 			}
 		});
-        $('#facebook-news').removeAttr('width').attr('width', '300');
+        // $('#facebook-news').removeAttr('width').attr('width', '300');
 	}
 });
 
