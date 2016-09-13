@@ -340,6 +340,15 @@ dd img { vertical-align: bottom; }
 #news .article li .date,
 #news .article li a { display: block; }
 
+#news .info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#news .info i {
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
 .fb-iframe {
     display: block;
     margin: 0 auto;
