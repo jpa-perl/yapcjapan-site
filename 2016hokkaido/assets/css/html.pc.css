@@ -260,7 +260,23 @@ dd img { vertical-align: bottom; }
 }
 
 #lead .button {
+    margin: auto;
+    width: 300px;
+    padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
 	text-align: center;
+}
+
+#lead .button .talk {
+    margin-right: 10px;
+}
+
+#lead .button .talk p {
+    font-size: 12px;
+    text-align: center;
 }
 
 #lead .button a.btn {
