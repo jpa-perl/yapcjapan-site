@@ -591,6 +591,44 @@ aside #footer-logo {
 }
 #pagetop a:hover { color: #fff; text-decoration: none; }
 
+/* timetable */
+#timetable table {
+    table-layout: fixed;
+    font-size: 14px;
+    border: 1px solid #aaaaaa;
+    width: 100%;
+}
+
+#timetable table thead {
+    border: 1px solid #aaaaaa;
+}
+
+#timetable th {
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+}
+
+#timetable td {
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+}
+
+#timetable .modal-dialog {
+    padding-top: 10%;
+}
+
+#timetable .modal-header {
+    margin-bottom: 5px;
+}
+
+#timetable .modal-header p {
+    font-size: 14px;
+}
+
+#timetable .modal-body {
+    font-size: 14px;
+    margin: 10px;
+}
 
 /*----------------------------------------------------------
   - TBD
