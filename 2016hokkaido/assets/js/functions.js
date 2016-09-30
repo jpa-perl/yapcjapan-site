@@ -118,6 +118,11 @@ $(document).ready(function() {
 	$('h3.title').kerning("./assets/js/kerning-data.json");
 	$('.mm-navbar a.mm-title').kerning("./assets/js/kerning-data.json");
 
+    $('.talk-detail').click(function(e) {
+        $("#talk-id-" + $(e.currentTarget).attr('class').split(" ")[1]).modal('show');
+        return false;
+    });
+
 });
 
 // RELAYOUT

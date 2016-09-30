@@ -506,6 +506,51 @@ dd img { vertical-align: bottom; }
     padding-bottom: 10px;
 }
 
+/* timetable */
+#timetable table {
+    table-layout: fixed;
+    font-size: 14px;
+    border: 1px solid #aaaaaa;
+    width: 100%;
+}
+
+#timetable table thead {
+    border: 1px solid #aaaaaa;
+}
+
+#timetable th {
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+}
+
+#timetable td {
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+}
+
+#timetable .modal-dialog {
+    padding-top: 10%;
+}
+
+#timetable .modal-title {
+    margin-bottom: 5px;
+}
+
+#timetable .modal-header p {
+    font-size: 14px;
+    float: left;
+}
+
+#timetable .modal-header .social {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#timetable .modal-body {
+    font-size: 14px;
+    margin: 10px;
+}
+
 /*----------------------------------------------------------
   - FOOTER / LOGO
 ----------------------------------------------------------*/
