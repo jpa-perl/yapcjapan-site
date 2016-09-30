@@ -120,6 +120,7 @@ $(document).ready(function() {
 
     $('.talk-detail').click(function(e) {
         $("#talk-id-" + $(e.currentTarget).attr('class').split(" ")[1]).modal('show');
+        return false;
     });
 
 });

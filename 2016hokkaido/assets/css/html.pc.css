@@ -617,12 +617,18 @@ aside #footer-logo {
     padding-top: 10%;
 }
 
-#timetable .modal-header {
+#timetable .modal-title {
     margin-bottom: 5px;
 }
 
 #timetable .modal-header p {
     font-size: 14px;
+    float: left;
+}
+
+#timetable .modal-header .social {
+    font-size: 20px;
+    margin-left: 10px;
 }
 
 #timetable .modal-body {
