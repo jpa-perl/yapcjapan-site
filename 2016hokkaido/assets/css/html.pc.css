@@ -272,6 +272,10 @@ dd img { vertical-align: bottom; }
 
 #lead .button .talk {
     margin-right: 10px;
+    float: left;
+}
+#lead .button .ticket {
+    float: left;
 }
 
 #lead .button .talk p {
