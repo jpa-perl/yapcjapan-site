@@ -437,6 +437,18 @@ dd img { vertical-align: bottom; }
 #code-of-conduct p { margin: 0 0 20px 0; }
 #code-of-conduct .small p { font-size: 14px; }
 
+#tickets p { margin-bottom: 20px; }
+#tickets li { list-style-type: disc; }
+#tickets .annotation {
+    font-size: 12px;
+    font-weight: 700;
+}
+#tickets h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
 #about .first { margin-bottom: 14px; }
 
 /* Special Session */
