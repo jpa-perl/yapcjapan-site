@@ -421,7 +421,10 @@ dd img { vertical-align: bottom; }
 #sponsors .class .block ul li.gold img { width: 190px; }
 #sponsors .class .block ul li.silver img { width: 170px; }
 #sponsors .class .block ul li.special img { width: 170px; }
-#sponsors .class .block ul li.other img { width: 150px; }
+#sponsors .class .block ul li.other img {
+    max-height: 150px;
+    width: auto;
+}
 
 #staff .class h4 {
 	font-size: 16px;
