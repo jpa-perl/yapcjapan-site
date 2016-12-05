@@ -427,12 +427,18 @@ dd img { vertical-align: bottom; }
 }
 
 #staff .class .block ul li {
+    width: 120px;
+    height: 130px;
 	float: left;
 	text-align: center;
 	margin: 0 10px 10px 0;
 }
 
-#staff .class .block ul li img { max-width: 110px; }
+#staff .class .block ul li img {
+    width: auto;
+    max-height: 110px;
+    height: 110px;
+}
 
 #code-of-conduct p { margin: 0 0 20px 0; }
 #code-of-conduct .small p { font-size: 14px; }
