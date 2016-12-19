@@ -239,4 +239,30 @@ img { width: 100%; }
 	opacity: 0.3;
 }
 
+/*----------------------------------------------------------
+  Sponsor Menu
+----------------------------------------------------------*/
 
+#sponsorMenu {
+    text-align: center;
+}
+#sponsorMenu h1 {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 40px;
+}
+#sponsorMenu .menu {
+    font-size: 16px;
+    margin: 20px;
+}
+#sponsorMenu img {
+    max-width: 600px;
+}
+#sponsorMenu .annotation, .history {
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+#sponsorMenu .inner {
+    margin: 30px;
+}
