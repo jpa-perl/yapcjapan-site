@@ -1,0 +1,62 @@
+/**********************************************
+**
+** YAPC::Kansai Custom CSS
+**
+***********************************************/
+
+/* common */
+
+body h4 {
+  font-weight: 700;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* buttons */
+
+.button a.btn-ticket {
+  color:  #5cb85c;
+  border: 2px solid #5cb85c;
+}
+
+.button a.btn-talk {
+  color:  #b85c5c;
+  border: 2px solid #b85c5c;
+}
+
+.button a.btn-add-lt {
+  color:  #5cb85c;
+  border: 2px solid #5cb85c;
+}
+
+/* code-of-conduct */
+#code-of-conduct p {
+  margin-bottom: 1em;
+}
+
+/* about */
+#about p {
+  margin-bottom: 1em;
+}
+
+/* tickets */
+
+#tickets li.ticket {
+  margin-top: 0.1em;
+}
+
+#tickets li.ticket b {
+  font-weight: normal;
+}
+
+#tickets li.ticket b.sold-out {
+  text-decoration: line-through;
+}
+
+#tickets li.ticket em.now-on-sale {
+  display: none;
+}
+
+#tickets li.ticket em.sold-out {
+  margin-left: 1em;
+}
