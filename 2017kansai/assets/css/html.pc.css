@@ -409,11 +409,19 @@ dd img { vertical-align: bottom; }
 	float: left;
 	text-align: center;
 	margin: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 2px 1px 1px #D0D0D0;
+    -moz-box-shadow: 2px 2px 1px 1px #D0D0D0;
+    -webkit-box-shadow: 2px 2px 1px 1px #D0D0D0;
 }
 
-#sponsors .class .block ul li.large img { width: 340px; }
-#sponsors .class .block ul li.medium img { width: 220px; }
-#sponsors .class .block ul li.small img { width: 150px; }
+#sponsors .class .block ul li.large { width: 300px; height: 300px; }
+#sponsors .class .block ul li.medium { width: 220px; height: 220px; }
+#sponsors .class .block ul li.small { width: 150px; height: 150px; }
+#sponsors .class .block ul li img { height: auto; padding: 8px; }
 
 
 /*----------------------------------------------------------
