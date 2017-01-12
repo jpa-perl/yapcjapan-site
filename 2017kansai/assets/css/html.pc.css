@@ -421,7 +421,10 @@ dd img { vertical-align: bottom; }
 #sponsors .class .block ul li.large { width: 300px; height: 300px; }
 #sponsors .class .block ul li.medium { width: 220px; height: 220px; }
 #sponsors .class .block ul li.small { width: 150px; height: 150px; }
-#sponsors .class .block ul li img { height: auto; padding: 8px; }
+#sponsors .class .block ul li img { height: auto; }
+#sponsors .class .block ul li.large img { padding: 30px; }
+#sponsors .class .block ul li.medium img  { padding: 10px; }
+#sponsors .class .block ul li.small img { padding: 5px; }
 
 
 /*----------------------------------------------------------
