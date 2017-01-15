@@ -60,3 +60,21 @@ body h4 {
 #tickets li.ticket em.sold-out {
   margin-left: 1em;
 }
+
+/* talks */
+.talk-detail {
+  margin-bottom: 1em;
+}
+
+.talk-detail aside.speaker {
+  display: block;
+  max-width: 800px;
+  text-align: right;
+  margin: 5px 0;
+}
+
+.talk-detail .description {
+  white-space: pre-wrap;
+  padding: 0.5em;
+}
+
