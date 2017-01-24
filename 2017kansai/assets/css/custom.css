@@ -60,3 +60,16 @@ body h4 {
 #tickets li.ticket em.sold-out {
   margin-left: 1em;
 }
+
+/* staff list */
+ul.staff-list {
+  list-style-type: none;
+}
+
+ul.staff-list > li {
+  display: inline-block;
+}
+
+ul.staff-list > li img {
+  width: 120px;
+}
