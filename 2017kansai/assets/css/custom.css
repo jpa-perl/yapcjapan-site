@@ -73,3 +73,17 @@ ul.staff-list > li {
 ul.staff-list > li img {
   width: 120px;
 }
+
+/* special session */
+#special-session h4.title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+#special-session div.row {
+  margin: 20px 0;
+}
+
+#special-session article.description > p {
+  margin-bottom: 1em;
+}
