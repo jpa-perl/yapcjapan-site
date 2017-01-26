@@ -87,3 +87,13 @@ ul.staff-list > li img {
 #special-session article.description > p {
   margin-bottom: 1em;
 }
+
+/* about */
+#about .table {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+#about dt {
+  padding: 0;
+}
