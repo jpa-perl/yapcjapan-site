@@ -565,8 +565,11 @@ dd img { vertical-align: bottom; }
 	padding: 10px 0;
 }
 
-#guest-speakers .row .col-md-3 { text-align: center; }
-#guest-speakers .row .col-md-3 img { max-width: 250px; }
+#guest-speakers .row .col-md-3,
+#special-session .row .col-md-3 { text-align: center; }
+
+#guest-speakers .row .col-md-3 img,
+#special-session .row .col-md-3 img { max-width: 250px }
 
 #sponsors .class h4 {
 	font-size: 16px;
