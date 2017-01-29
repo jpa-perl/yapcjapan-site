@@ -292,8 +292,13 @@ dd img { vertical-align: bottom; }
 	text-shadow: 0px 0px 1px rgba(255, 255, 255, 1.0), 0px 0px 5px rgba(255, 51, 0, 1.0), 0px 0px 5px rgba(255, 51, 0, 1.0), 0px 0px 0px rgba(255, 255, 255, 1.0), 0px 0px 0px rgba(255, 51, 0, 1.0), 0px 0px 0px rgba(255, 51, 0, 1.0);
 	background: url(../images/title_base.gif) no-repeat center center;
 	background-size: 1000px;
-	margin: 20px 0 0 0;
 	padding: 10px 120px;
+}
+
+#container h4 {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 10px;
 }
 
 #container .box .section {
@@ -302,24 +307,45 @@ dd img { vertical-align: bottom; }
 	-moz-background-size: auto 65px;
 	background-size: auto 65px;
 	margin: 0 auto;
-	padding: 40px 0;
 }
 
 #container .box .section .body {
 	text-align: justify;
 	text-justify: inter-ideograph;
-	padding: 20px 20px 40px;
+	padding: 60px 40px;
 }
 
-#container .box .section .body p {}
+#container dl {
+	width: 100%;
+	display: inline-block;
+	overflow: hidden;
+	margin-bottom: -20px;
+}
 
+#container dl dt {
+	float: left;
+	width: 6em;
+	margin-bottom: 20px;
+	padding: 7px 10px;
+	display: inline-block;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	background: #090922;
+}
+#container dl dd {
+	margin-bottom: 20px;
+	padding: 10px 15px;
+	padding-left: 8em;
+}
 
 /*----------------------------------------------------------
   - HOME
 ----------------------------------------------------------*/
 
 #button {
-	padding: 0px 15px;
+	padding: 25px 0 65px 0;
 	_zoom: 1;
 	overflow: hidden;
 }
@@ -375,28 +401,25 @@ dd img { vertical-align: bottom; }
         width: 500px;
 }
 
-#guest-speakers .row {
-	vertical-align: middle;
+.row + .row {
+	margin-top: 40px;
+}
+
+#sponsors h4 {
+	padding: 10px 15px;
 	margin-bottom: 20px;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	display: inline-block;
+	color: #fff;
+	background: #090922;
 }
 
-#guest-speakers .row > div h4 {
-	font-size: 16px;
-	font-weight: 700;
-	margin: 0;
-	padding: 10px 0;
-}
-
-#sponsors .class h4 {
-	font-size: 16px;
-	font-weight: 700;
-	margin: 0;
-	padding: 10px 0;
+#sponsors .class + .class {
+	margin-top: 40px;
 }
 
 #sponsors .class .block {
-	width: 770px;
-	_zoom: 1;
 	overflow: hidden;
 }
 
@@ -408,24 +431,22 @@ dd img { vertical-align: bottom; }
 #sponsors .class .block ul li {
 	float: left;
 	text-align: center;
-	margin: 0 10px 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+	border: 5px solid #c9c9c9;
+	border-radius: 5px;
+}
 
-    box-shadow: 2px 2px 1px 1px #D0D0D0;
-    -moz-box-shadow: 2px 2px 1px 1px #D0D0D0;
-    -webkit-box-shadow: 2px 2px 1px 1px #D0D0D0;
+#sponsors .class .block ul li:first-child,
+#sponsors .class .block ul li + li {
+	margin: 0 20px 20px 0;
 }
 
 #sponsors .class .block ul li.large { width: 300px; height: 300px; }
 #sponsors .class .block ul li.medium { width: 220px; height: 220px; }
 #sponsors .class .block ul li.small { width: 150px; height: 150px; }
 #sponsors .class .block ul li img { height: auto; }
-#sponsors .class .block ul li.large img { padding: 40px; }
-#sponsors .class .block ul li.medium img  { padding: 10px; }
-#sponsors .class .block ul li.small img { padding: 5px; }
-
 
 /*----------------------------------------------------------
   - FOOTER / LOGO
@@ -537,4 +558,3 @@ aside #footer-logo {
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
 }
-
