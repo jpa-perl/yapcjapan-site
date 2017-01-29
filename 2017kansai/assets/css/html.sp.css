@@ -442,7 +442,6 @@ dd img { vertical-align: bottom; }
 	font-weight: 500;
 	text-shadow: 0px 0px 1px rgba(255, 255, 255, 1.0), 0px 0px 5px rgba(255, 51, 0, 1.0), 0px 0px 5px rgba(255, 51, 0, 1.0), 0px 0px 0px rgba(255, 255, 255, 1.0), 0px 0px 0px rgba(255, 51, 0, 1.0), 0px 0px 0px rgba(255, 51, 0, 1.0);
 	background-color: #090922;
-	margin: 20px 0 0 0;
 	padding: 8px 35px;
 }
 #container .box h3.title::before {
@@ -450,16 +449,11 @@ dd img { vertical-align: bottom; }
 	position: absolute;
 	left: 0;
 	top: 50%;
-
 	display: block;
 	width: 20px;
 	height: 10px;
 	background-color: #fff;
 	margin: -5px 0 0 0;
-}
-
-#container .box .section {
-	padding: 20px 0;
 }
 
 #container .box .section h3.title {
@@ -473,24 +467,59 @@ dd img { vertical-align: bottom; }
 	line-height: 20px;
 	margin: 10px 0 20px 0;
 	padding: 0;
+}
 
+#container h4 {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 10px;
 }
 
 #container .box .section .body {
 	text-align: justify;
 	text-justify: inter-ideograph;
-	padding: 20px 10px 40px;
+	padding: 30px 20px;
 }
 
-#container .box .section .body p {}
+#container dl {
+	width: 100%;
+	display: inline-block;
+	overflow: hidden;
+	margin-bottom: -20px;
+}
 
+#container dl dt {
+	float: left;
+	width: 6em;
+	margin-bottom: 10px;
+	padding: 7px 10px;
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	background: #090922;
+}
+#container dl dd {
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	padding-left: 7em;
+}
+
+#container #access dl dt {
+	float: none;
+}
+
+ #container #access dl dd {
+	padding-left: 0;
+}
 
 /*----------------------------------------------------------
   - HOME
 ----------------------------------------------------------*/
 
 #button {
-	padding: 0px 15px;
+	padding-bottom: 50px;
 	_zoom: 1;
 	overflow: hidden;
 }
@@ -553,7 +582,29 @@ dd img { vertical-align: bottom; }
 	margin: 0 auto;
 }
 
-#guest-speakers .row {
+#about .row + .row {
+	margin-top: 20px;
+}
+
+.row + .row {
+	margin-top: 40px;
+}
+
+#sponsors h4 {
+	padding: 10px 15px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	display: inline-block;
+	color: #fff;
+	background: #090922;
+}
+
+#sponsors .class + .class {
+	margin-top: 40px;
+}
+
+/*#guest-speakers .row {
 	vertical-align: middle;
 	margin-bottom: 20px;
 }
@@ -563,19 +614,15 @@ dd img { vertical-align: bottom; }
 	font-weight: 700;
 	margin: 0;
 	padding: 10px 0;
-}
+}*/
 
 #guest-speakers .row .col-md-3,
 #special-session .row .col-md-3 { text-align: center; }
 
 #guest-speakers .row .col-md-3 img,
-#special-session .row .col-md-3 img { max-width: 250px }
-
-#sponsors .class h4 {
-	font-size: 16px;
-	font-weight: 700;
-	margin: 0;
-	padding: 10px 0;
+#special-session .row .col-md-3 img {
+	max-width: 200px;
+	margin-bottom: 20px;
 }
 
 #sponsors .class .block {
@@ -595,19 +642,14 @@ dd img { vertical-align: bottom; }
     display: flex;
     justify-content: center;
     align-items: center;
-
-    box-shadow: 2px 2px 1px 1px #D0D0D0;
-    -moz-box-shadow: 2px 2px 1px 1px #D0D0D0;
-    -webkit-box-shadow: 2px 2px 1px 1px #D0D0D0;
+	border: 5px solid #c9c9c9;
+	border-radius: 5px;
 }
 
-#sponsors .class .block ul li.large { width: 300px; height: 300px; }
-#sponsors .class .block ul li.medium { width: 220px; height: 220px; }
-#sponsors .class .block ul li.small { width: 150px; height: 150px; }
+#sponsors .class .block ul li.large { width: 100%; }
+#sponsors .class .block ul li.medium { width: 80%; }
+#sponsors .class .block ul li.small { width: 45%; }
 #sponsors .class .block ul li img { height: auto; }
-#sponsors .class .block ul li.large img { padding: 40px; }
-#sponsors .class .block ul li.medium img  { padding: 10px; }
-#sponsors .class .block ul li.small img { padding: 5px; }
 
 /*----------------------------------------------------------
   - FOOTER / LOGO
@@ -720,4 +762,3 @@ aside #footer-logo {
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
 }
-
