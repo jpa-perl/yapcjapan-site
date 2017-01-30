@@ -350,7 +350,7 @@ dd img { vertical-align: bottom; }
 	overflow: hidden;
 }
 
-#button .button {
+#button > .button {
 	position: relative;
 	float: left;
 	left: 50%;
@@ -358,8 +358,7 @@ dd img { vertical-align: bottom; }
 	padding: 0;
 }
 
-.button .talk,
-.button .ticket {
+#button > .button > div {
 	position: relative;
 	float: left;
 	left: -50%;
