@@ -4,14 +4,6 @@
 **
 ***********************************************/
 
-/* common */
-
-body h4 {
-  font-weight: 700;
-  margin: 0;
-  padding: 10px 0;
-}
-
 /* buttons */
 
 .button a.btn-ticket {
@@ -80,20 +72,6 @@ ul.staff-list > li img {
   margin-bottom: 16px;
 }
 
-#special-session div.row {
-  margin: 20px 0;
-}
-
 #special-session article.description > p {
   margin-bottom: 1em;
-}
-
-/* about */
-#about .table {
-  margin-top: 5px;
-  margin-bottom: 0;
-}
-
-#about dt {
-  padding: 0;
 }
