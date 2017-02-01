@@ -38,6 +38,10 @@
 
 /* tickets */
 
+#tickets ul {
+  margin-bottom: 30px;
+}
+
 #tickets li.ticket {
   margin-top: 0.1em;
 }
