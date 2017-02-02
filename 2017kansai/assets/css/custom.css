@@ -16,6 +16,11 @@
   border: 2px solid #b85c5c;
 }
 
+.button a.btn-before-night-party {
+  color:  #5cb85c;
+  border: 2px solid #5cb85c;
+}
+
 .button a.btn-after-party {
   color:  #5d5cb8;
   border: 2px solid #5d5cb8;
