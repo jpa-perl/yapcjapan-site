@@ -26,7 +26,7 @@
 
         // noramlize
         talk.author.twitterId = talk.author.twitterId.replace(/\s+/g, '');
-        talk.author.githubId  = talk.author.twitterId.replace(/\s+/g, '');
+        talk.author.githubId  = talk.author.githubId.replace(/\s+/g, '');
 
         // sanitize
         if (! talk.author.blogUrl.match(/^https?:/)) {
