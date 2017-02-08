@@ -24,6 +24,10 @@
           }
         };
 
+        // noramlize
+        talk.author.twitterId = talk.author.twitterId.replace(/\s+/g, '');
+        talk.author.githubId  = talk.author.twitterId.replace(/\s+/g, '');
+
         // sanitize
         if (! talk.author.blogUrl.match(/^https?:/)) {
           // It makes XSS maybe, so ignored.
