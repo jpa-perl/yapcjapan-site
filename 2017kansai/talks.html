@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>YAPC::Kansai 2017 OSAKA - Staff</title>
+    <title>YAPC::Kansai 2017 OSAKA - &#x63A1;&#x629E;&#x30C8;&#x30FC;&#x30AF;&#x4E00;&#x89A7;</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。" />
     <meta name="keywords" content="YAPC,ヤプシー,Perl,PM,Japan Perl Association,JPA,YAPC::Kansai,ヤプシー関西" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@yapcjapan" />
-    <meta name="twitter:title" content="YAPC::Kansai 2017 OSAKA - Staff" />
+    <meta name="twitter:title" content="YAPC::Kansai 2017 OSAKA - &#x63A1;&#x629E;&#x30C8;&#x30FC;&#x30AF;&#x4E00;&#x89A7;" />
     <meta name="twitter:description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。" />
     <meta name="twitter:image" content="http://yapcjapan.org/2017kansai/assets/images/ogp_1200x600.png" />
     <meta property="fb:app_id" content="546362158903970" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:site_name" content="YAPC::Kansai 2017 OSAKA" />
-    <meta property="og:title" content="YAPC::Kansai 2017 OSAKA - Staff" />
+    <meta property="og:title" content="YAPC::Kansai 2017 OSAKA - &#x63A1;&#x629E;&#x30C8;&#x30FC;&#x30AF;&#x4E00;&#x89A7;" />
     <meta property="og:description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。" />
     <meta property="og:url" content="http://yapcjapan.org/2017kansai/" />
     <meta property="og:image" content="http://yapcjapan.org/2017kansai/assets/images/ogp_1200x600.png" />
@@ -87,88 +87,22 @@
 
 
 
-            <h3 class="title">コアスタッフ</h3>
-            <div id="core-staff" class="section">
-              <div class="body">
-                <ul class="staff-list">
-                    <li>
-                      <a href="https://twitter.com/nqounet" target="_blank">
-                        <img src="assets/images/staff/core/nqounet.jpg"/>
-                        <p>nqounet</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/tomcha_" target="_blank">
-                        <img src="assets/images/staff/core/tomcha.jpg"/>
-                        <p>tomcha</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/stc1988" target="_blank">
-                        <img src="assets/images/staff/core/stc1988.png"/>
-                        <p>STC</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/bool_fool" target="_blank">
-                        <img src="assets/images/staff/core/r-nakamura.jpg"/>
-                        <p>r-nakamura</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/pastak" target="_blank">
-                        <img src="assets/images/staff/core/pastak.jpg"/>
-                        <p>Pasta-K</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/azumakuniyuki" target="_blank">
-                        <img src="assets/images/staff/core/azumakuniyuki.jpg"/>
-                        <p>azumakuniyuki</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/sago35tk" target="_blank">
-                        <img src="assets/images/staff/core/sago35.jpg"/>
-                        <p>sago35</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/_yabook" target="_blank">
-                        <img src="assets/images/staff/core/yabook.png"/>
-                        <p>yabook</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://karupas.org/" target="_blank">
-                        <img src="assets/images/staff/core/karupanerura.png"/>
-                        <p>karupanerura</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/mamipeko" target="_blank">
-                        <img src="assets/images/staff/core/mamipeko.jpg"/>
-                        <p>mamipeko</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/june29" target="_blank">
-                        <img src="assets/images/staff/core/june29.jpg"/>
-                        <p>june29</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/ks_yuzu" target="_blank">
-                        <img src="assets/images/staff/core/ks_yuzu.png"/>
-                        <p>ks_yuzu</p>
-                      </a>
-                    </li>
-                </ul>
-              </div>
-            </div>
 
 
-
+            <h3 class="title">&#x63A1;&#x629E;&#x30C8;&#x30FC;&#x30AF;&#x4E00;&#x89A7;</h3>
+            <div id="talks" class="section">
+              <div id="accepted-talks" class="body">
+                <article class="talk-detail" v-for="talk in talks" v-bind:id="talk.articleId">
+                  <h4><a v-bind:href="talk.url">{{ talk.title }}</a> ({{ talk.time }})</h4>
+                  <pre class="description">{{ talk.description }}</pre>
+                  <aside class="speaker">
+                    <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
+                    <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a v-if="talk.author.githubId"  v-bind:href="talk.author.githubUrl"  target="_blank"><i class="fa fa-github"  aria-hidden="true"></i></a>
+                  </aside>
+                </article>
+              </div><!--  / .body /  -->
+            </div><!--  / .section /  -->
 
 
 
