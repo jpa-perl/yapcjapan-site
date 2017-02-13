@@ -106,3 +106,17 @@ ul.staff-list > li img {
 #special-session article.description > p {
   margin-bottom: 1em;
 }
+
+/* timetable */
+
+#timetable table {
+  table-layout: fixed;
+  font-size: 14px;
+  border: 1px solid #aaaaaa;
+  width: 100%;
+}
+
+#timetable th, #timetable td {
+  border: 1px solid #aaaaaa;
+  padding: 5px;
+}
