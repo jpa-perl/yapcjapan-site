@@ -1,5 +1,26 @@
 (function () {
   $(function() {
+    // pusedo hash link
+    (function () {
+      var $window = $(window);
+      var $body = $(document.body);
+      var isPC = $window.width() >= 900;
+      var margin = isPC ? 30 : 10;
+      var $header = isPC ? $("#gnavi") : $("#header");
+      var adjust = function () {
+        var $target = $(location.hash);
+        if ($target.length) {
+          $body.scrollTop(
+            $target.offset().top - ( $header.height() + margin )
+          );
+        }
+      };
+      $window.on('hashchange', adjust);
+      if (location.hash !== "") {
+        setTimeout(adjust, 600);
+      }
+    });
+
     if (window.matchMedia('screen and (min-width: 900px)').matches) {
       // HEADER
       $(window).on('load scroll resize', function() {
