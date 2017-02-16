@@ -44,6 +44,10 @@
     this.url         = './talks.html#'+encodeURIComponent(this.articleId);
   }
 
+  function calculateEndAt(startAt, durationMinutes) {
+    return moment([1970, 1, 1].concat(startAt.split(":"))).add(durationMinutes, "minutes").format("HH:mm");
+  }
+
   function parseEntry(entry) {
     return new Talk({
       id:          entry['gsx$id']['$t'],
@@ -67,11 +71,10 @@
     var talks = [];
     $.get(url, function (json) {
       var entries = json.feed.entry;
-      for (var i = 0, l = entries.length; i < l; i ++) {
-        var entry = entries[i];
-          var talk = parseEntry(entry);
+      _.forEach(entries, function (entry) {
+        var talk = parseEntry(entry);
         talks.push(talk);
-      }
+      });
       if (cb) cb(talks);
     });
 
@@ -84,7 +87,6 @@
     var timetable = [];
     $.get(url, function (json) {
       var entries = json.feed.entry;
-      var i, l, j;
 
       // { "09:00": { "track-a": { "title": "...", "durationMinutes": 20 } } }
       var timetableMap = {
@@ -114,12 +116,11 @@
           }
         }
       };
-      for (i = 0, l = entries.length; i < l; i ++) {
-        var entry = entries[i];
+      _.forEach(entries, function (entry) {
         var talk = parseEntry(entry);
         timetableMap[talk.startAt] = timetableMap[talk.startAt] || {};
         timetableMap[talk.startAt][talk.trackId] = _.extend(talk, { author: talk.author.name });
-      }
+      });
 
       var lastEndAt;
       var times = _.keys(timetableMap).sort();
@@ -133,8 +134,7 @@
         }
         var durationMinutesList = _.chain(timetableMap[startAt]).values().map(function (talk) { return talk.durationMinutes; }).value();
         var minDurationMinutes  = Math.min.apply(Math, durationMinutesList);
-        var endAt = moment([1970, 1, 1].concat(startAt.split(":"))).add(minDurationMinutes, "minutes").format("HH:mm");
-        lastEndAt = endAt;
+        var endAt = lastEndAt = calculateEndAt(startAt, minDurationMinutes);
 
         var rowTracks = {};
         _.forEach(TRACKS, function (track) {
@@ -183,26 +183,5 @@
   var Timetable = new Vue({
     el: '#timetable',
     data: fetchTimeTables()
-  });
-
-  // pusedo hash link
-  $(function(){
-    var $window = $(window);
-    var $body = $(document.body);
-    var isPC = $window.width() >= 900;
-    var margin = isPC ? 30 : 10;
-    var $header = isPC ? $("#gnavi") : $("#header");
-    var adjust = function () {
-      var $target = $(location.hash);
-      if ($target.length) {
-        $body.scrollTop(
-          $target.offset().top - ( $header.height() + margin )
-        );
-      }
-    };
-    $window.on('hashchange', adjust);
-    if (location.hash !== "") {
-      setTimeout(adjust, 600);
-    }
   });
 })(Vue, $);
