@@ -9,6 +9,58 @@
     accepted: 'https://spreadsheets.google.com/feeds/list/1e16uUbDJGclGdrJzVl-EFr8ns2J3S2WNaAEA151NsQk/on6oryq/public/values?alt=json',
   };
 
+  function Speaker(entry) {
+    this.name      = entry.name;
+    this.githubId  = entry.githubId;
+    this.twitterId = entry.twitterId;
+    this.blogUrl   = entry.blogUrl;
+
+    // sanitize
+    if (! this.blogUrl.match(/^https?:/)) {
+      // It makes XSS maybe, so ignored.
+      this.blogUrl = null;
+    }
+
+    // normalize
+    this.twitterId = this.twitterId.replace(/\s+/g, '');
+    this.githubId  = this.githubId.replace(/\s+/g, '');
+
+    // convert id to url
+    this.githubUrl  = "https://github.com/"+encodeURIComponent(this.githubId);
+    this.twitterUrl = "https://twitter.com/"+encodeURIComponent(this.twitterId);
+  }
+
+  function Talk(entry) {
+    this.id          = entry.id;
+    this.title       = entry.title;
+    this.description = entry.description;
+    this.time        = entry.time;
+    this.startAt     = entry.startAt;
+    this.trackId     = entry.trackId;
+    this.author      = new Speaker(entry.author);
+
+    this.durationMinutes = parseInt(this.time);
+    this.articleId   = 'talk-'+this.id;
+    this.url         = './talks.html#'+encodeURIComponent(this.articleId);
+  }
+
+  function parseEntry(entry) {
+    return new Talk({
+      id:          entry['gsx$id']['$t'],
+      title:       entry['gsx$title']['$t'],
+      description: entry['gsx$description']['$t'],
+      time:        entry['gsx$talktime']['$t'],
+      startAt:     entry['gsx$startat']['$t'],
+      trackId:     entry['gsx$trackid']['$t'],
+      author: {
+        author:    entry['gsx$author']['$t'],
+        githubId:  entry['gsx$githubid']['$t'],
+        twitterId: entry['gsx$twitterid']['$t'],
+        blogUrl:   entry['gsx$blogurl']['$t']
+      }
+    });
+  }
+
   function fetchTalkProposals (type, cb) {
     var url = JSON_URL[type];
 
@@ -17,36 +69,7 @@
       var entries = json.feed.entry;
       for (var i = 0, l = entries.length; i < l; i ++) {
         var entry = entries[i];
-        var talk = {
-          id:          entry['gsx$id']['$t'],
-          title:       entry['gsx$title']['$t'],
-          description: entry['gsx$description']['$t'],
-          time:        entry['gsx$talktime']['$t'],
-          author: {
-            name:      entry['gsx$author']['$t'],
-            githubId:  entry['gsx$githubid']['$t'],
-            twitterId: entry['gsx$twitterid']['$t'],
-            blogUrl:   entry['gsx$blogurl']['$t']
-          }
-        };
-
-        // noramlize
-        talk.author.twitterId = talk.author.twitterId.replace(/\s+/g, '');
-        talk.author.githubId  = talk.author.githubId.replace(/\s+/g, '');
-
-        // sanitize
-        if (! talk.author.blogUrl.match(/^https?:/)) {
-          // It makes XSS maybe, so ignored.
-          talk.author.blogUrl = null;
-        }
-
-        // convert id to url
-        talk.author.githubUrl  = "https://github.com/"+encodeURIComponent(talk.author.githubId);
-        talk.author.twitterUrl = "https://twitter.com/"+encodeURIComponent(talk.author.twitterId);
-
-        talk.articleId = 'talk-'+talk.id;
-        talk.url       = '#'+encodeURIComponent(talk.articleId);
-
+          var talk = parseEntry(entry);
         talks.push(talk);
       }
       if (cb) cb(talks);
@@ -93,61 +116,55 @@
       };
       for (i = 0, l = entries.length; i < l; i ++) {
         var entry = entries[i];
-        var startAt = entry['gsx$startat']['$t'];
-        var trackId = entry['gsx$trackid']['$t'];
-        timetableMap[startAt] = timetableMap[startAt] || {};
-        timetableMap[startAt][trackId] = {
-          url:             "./talks.html#talk-"+encodeURIComponent(entry['gsx$id']['$t']),
-          title:           entry['gsx$title']['$t'],
-          author:          entry['gsx$author']['$t'],
-          durationMinutes: parseInt(entry['gsx$talktime']['$t'])
-        };
+        var talk = parseEntry(entry);
+        timetableMap[talk.startAt] = timetableMap[talk.startAt] || {};
+        timetableMap[talk.startAt][talk.trackId] = _.extend(talk, { author: talk.author.name });
       }
 
-      var startAt, endAt, talkEndAt, durationMinutes;
-      var times = Object.keys(timetableMap).sort();
-      for (i = 0, l = times.length; i < l; i++) {
-        startAt = times[i];
-        if (endAt != null && startAt > endAt) {
+      var lastEndAt;
+      var times = _.keys(timetableMap).sort();
+      _.forEach(times, function (startAt) {
+        if (lastEndAt != null && startAt > lastEndAt) {
           // it means break time
           timetable.push({
-            label: [endAt, startAt].join(" ~ "),
+            label: [lastEndAt, startAt].join(" ~ "),
             breakTime: true
           });
         }
-        var durationMinutesList  = Object.values(timetableMap[startAt]).map(function (talk) { return talk.durationMinutes; });
-        var minDurationMinutes   = Math.min.apply(Math, durationMinutesList);
-        endAt = moment([1970, 1, 1].concat(startAt.split(":"))).add(minDurationMinutes, "minutes").format("HH:mm");
+        var durationMinutesList = _.chain(timetableMap[startAt]).values().map(function (talk) { return talk.durationMinutes; }).value();
+        var minDurationMinutes  = Math.min.apply(Math, durationMinutesList);
+        var endAt = moment([1970, 1, 1].concat(startAt.split(":"))).add(minDurationMinutes, "minutes").format("HH:mm");
+        lastEndAt = endAt;
 
         var rowTracks = {};
-        for (j = 0; j < TRACK_COUNT; j++) {
-          var trackId = TRACKS[j].id;
-          if (!(trackId in timetableMap[startAt])) {
-            continue;
+        _.forEach(TRACKS, function (track) {
+          if (!(track.id in timetableMap[startAt])) {
+            return;
           }
 
-          var detail = timetableMap[startAt][trackId];
+          var detail = timetableMap[startAt][track.id];
 
           // XXX: atamawarui and nemui
           var rowspan = detail.durationMinutes / minDurationMinutes;
-          if (startAt === "14:50" && trackId === "track-a") {
+          if (startAt === "14:50" && track.id === "track-a") {
             rowspan = 2;
           }
 
-          rowTracks[trackId] = {
+          rowTracks[track.id] = {
             title: detail.title,
             author: detail.author,
             url: detail.url,
             durationMinutes: detail.durationMinutes,
             rowspan: rowspan
           };
-        }
+        });
+
         timetable.push({
           label: [startAt, endAt].join(" ~ "),
           breakTime: false,
           tracks: rowTracks
         });
-      }
+      });
     });
 
     return {
