@@ -57,7 +57,7 @@
       startAt:     entry['gsx$startat']['$t'],
       trackId:     entry['gsx$trackid']['$t'],
       author: {
-        author:    entry['gsx$author']['$t'],
+        name:      entry['gsx$author']['$t'],
         githubId:  entry['gsx$githubid']['$t'],
         twitterId: entry['gsx$twitterid']['$t'],
         blogUrl:   entry['gsx$blogurl']['$t']
