@@ -117,7 +117,7 @@
                         <a v-bind:href="row.tracks[track.id].url">{{ row.tracks[track.id].title }}</a> ({{ row.tracks[track.id].durationMinutes }}min)<br />
                         {{ row.tracks[track.id].author }}
                       </td>
-                      <td v-if="row.breakTime" v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+                      <td v-if="row.breakTime" v-bind:colspan="row.breakTimeColspan"><!-- 休憩 --></td>
                     </tr>
                     <tr>
                       <th>17:00 ~ 17:10</th>
@@ -129,13 +129,13 @@
                       <td v-bind:colspan="tracks.length-1"></td>
                     </tr>
                     <tr>
-                      <th>17:40 ~ 17:50</th>
+                      <th>17:40 ~ 17:45</th>
                       <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
                     </tr>
                     <tr>
-                      <th>17:50 ~ 18:50</th>
+                      <th>17:45 ~ 18:50</th>
                       <td>
-                        <a href="./#guest-speakers">Keynote: 竹迫 良範 (60min)</a><br />
+                        <a href="./#guest-speakers">Keynote: 竹迫 良範 (60min) with Keynote Sponsor</a><br />
                         竹迫 良範
                       </td>
                       <td v-bind:colspan="tracks.length-1"></td>
@@ -181,6 +181,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
     <script src="./assets/js/layout.js?cachebuster=459385"></script>
-    <script src="./assets/js/custom.js?cachebuster=470891"></script>
+    <script src="./assets/js/custom.js?cachebuster=471177"></script>
   </body>
 </html>

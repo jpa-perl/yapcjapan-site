@@ -96,7 +96,7 @@
             url: "./#guest-speakers",
             title: "GUEST: 深沢 千尋",
             author: "深沢 千尋",
-            durationMinutes: 40
+            durationMinutes: 50
           }
         },
         "13:40": {
@@ -129,7 +129,8 @@
           // it means break time
           timetable.push({
             label: [lastEndAt, startAt].join(" ~ "),
-            breakTime: true
+            breakTime: true,
+            breakTimeColspan: (lastEndAt === "10:40" ? 2 : 3)
           });
         }
         var durationMinutesList = _.chain(timetableMap[startAt]).values().map(function (talk) { return talk.durationMinutes; }).value();
@@ -146,7 +147,9 @@
 
           // XXX: atamawarui and nemui
           var rowspan = detail.durationMinutes / minDurationMinutes;
-          if (startAt === "14:50" && track.id === "track-a") {
+          if (startAt === "10:20" && track.id === "track-a") {
+            rowspan = 3;
+          } else if (startAt === "14:50" && track.id === "track-a") {
             rowspan = 2;
           }
 
