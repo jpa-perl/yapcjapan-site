@@ -97,6 +97,23 @@ ul.staff-list > li img {
   width: 120px;
 }
 
+/* staff list */
+ul.individual-sponsors {
+  list-style-type: none;
+}
+
+ul.individual-sponsors > li {
+  display: inline-block;
+  margin: 0 15px 15px 0;
+}
+
+ul.individual-sponsors > li img {
+  width: 120px;
+}
+ul.individual-sponsors > li i {
+  color: black;
+}
+
 /* special session */
 #special-session h4.title {
   font-size: 24px;
