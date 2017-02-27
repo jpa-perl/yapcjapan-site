@@ -31,6 +31,11 @@
   border: 2px solid #5cb85c;
 }
 
+.button a.btn-best-talk {
+  color:  #b85c5c;
+  border: 2px solid #b85c5c;
+}
+
 /* code-of-conduct */
 #code-of-conduct p {
   margin-bottom: 1em;
