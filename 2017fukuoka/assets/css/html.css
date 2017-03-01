@@ -361,4 +361,47 @@ img { width: 100%; }
 	opacity: 0.3;
 }
 
+/*----------------------------------------------------------
+  Sponsor Menu
+----------------------------------------------------------*/
 
+#sponsorMenu {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#sponsorMenu h1 {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+#sponsorMenu .menu {
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+}
+#sponsorMenu img {
+    max-width: 600px;
+    margin: 0 auto;
+}
+#sponsorMenu .annotation, #sponsorMenu .history {
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+#sponsorMenu .annotation li {
+    list-style-type: none;
+}
+
+#sponsorMenu .history dt {
+    font-weight: bold;
+}
+
+#sponsorMenu .history dd {
+    padding-left: 4em;
+}
+
+#sponsorMenu .inner {
+    margin: 30px;
+}
