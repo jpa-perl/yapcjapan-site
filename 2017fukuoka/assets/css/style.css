@@ -3,4 +3,6 @@
 @import url(./common.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css);
 @import url(./html.css);
+@import url(./custom.css);
