@@ -142,3 +142,8 @@ ul.individual-sponsors > li i {
   border: 1px solid #aaaaaa;
   padding: 5px;
 }
+
+#timetable ol {
+    list-style-type: decimal;
+    padding: 1em;
+}

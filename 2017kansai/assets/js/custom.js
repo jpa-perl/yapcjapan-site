@@ -6,7 +6,7 @@
   ];
   var TRACK_COUNT = TRACKS.length;
   var JSON_URL = {
-    accepted: 'https://spreadsheets.google.com/feeds/list/1e16uUbDJGclGdrJzVl-EFr8ns2J3S2WNaAEA151NsQk/on6oryq/public/values?alt=json',
+    accepted: './assets/data/accepted.json',
   };
 
   function Speaker(entry) {
