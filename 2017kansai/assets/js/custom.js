@@ -4,6 +4,7 @@
     { "id": "track-b", "name": "B会場" },
     { "id": "track-c", "name": "C会場" },
   ];
+  var TRACKS_MAP  = _.keyBy(TRACKS, 'id');
   var TRACK_COUNT = TRACKS.length;
   var DEFAULT_TARGET = 'accepted';
   var JSON_URL = {
@@ -38,11 +39,15 @@
     this.time        = entry.time;
     this.startAt     = entry.startAt;
     this.trackId     = entry.trackId;
+    this.track       = TRACKS_MAP[this.trackId];
     this.author      = new Speaker(entry.author);
 
     this.durationMinutes = parseInt(this.time);
+    this.endAt       = calculateEndAt(this.startAt, this.durationMinutes);
+    this.articleId   = "talk-"+this.id;
     this.url         = '#/detail/'+encodeURIComponent(this.id);
     this.isGuest     = false;
+    this.highlight   = false;
   }
 
   function calculateEndAt(startAt, durationMinutes) {
@@ -190,7 +195,8 @@
             rowspan = 2;
           }
 
-          rowTracks[track.id] = _.extend(detail, { rowspan: rowspan });
+          detail.rowspan = rowspan;
+          rowTracks[track.id] = detail;
         });
 
         timetable.push({
@@ -207,6 +213,20 @@
     };
   }
 
+  var adjustScrollToTalk = (function () {
+    var isPC = $(window).width() >= 900;
+    var margin = isPC ? 30 : 10;
+    var $header = isPC ? $("#gnavi") : $("#header");
+    return function (talk) {
+      var $talk = $('#'+talk.articleId);
+      if ($talk.length > 0) {
+        $(document.body).scrollTop(
+          $talk.offset().top - ($header.height() + margin)
+        );
+      }
+    };
+  })();
+
   var TalkDetailModal = new Vue({
     el: '#talk-detail-modal',
     data: {
@@ -214,46 +234,69 @@
       talk: {}
     },
     methods: {
-      open: function (talk) {
+      open: function (talk, cb) {
         this.talk = talk;
         this.render = true;
-        setTimeout(function () {
-          $('#talk-detail-modal').modal('show');
-        }, 0);
+
+        var $el = $(this.$el);
+        $el.modal('show');
+        if (cb) $el.one('hidden.bs.modal', cb);
       }
     }
   });
 
-  var CommonMethods = {
-    openModal: function (talk) {
-      if (talk.isGuest) {
-        location.href = talk.url;
-        return;
-      }
-      location.hash = talk.url;
-      TalkDetailModal.open(talk);
-    }
-  };
-
-  var TalkList = new Vue({
-    el: '#accepted-talks',
-    data: {
-      talks: fetchTalkProposals(DEFAULT_TARGET)
-    },
-    methods: _.extend(CommonMethods, {})
-  });
-
-  var Timetable = new Vue({
-    el: '#timetable',
-    data: fetchTimeTables(),
-    methods: _.extend(CommonMethods, {})
-  });
-
-  var dispatcher = new MicroDispatcher();
-  dispatcher.register('/detail/:id', function (id) {
-    fetchTalkProposalById(DEFAULT_TARGET, id, function (talk) {
-      TalkDetailModal.open(talk);
+  // dispatch path
+  (function () {
+    var dispatcher = new MicroDispatcher();
+    dispatcher.register('/:conference/talks.html', function () {
+      var TalkList = new Vue({
+        el: '#accepted-talks',
+        data: {
+          talks: fetchTalkProposals(DEFAULT_TARGET)
+        },
+        methods: {
+          openModal: function (talk) {
+            adjustScrollToTalk(talk);
+            location.hash = talk.url;
+            TalkDetailModal.open(talk);
+          }
+        }
+      });
     });
-  });
-  dispatcher.dispatch(location.hash.substring(1));
+    dispatcher.register('/:conference/timetable.html', function () {
+      var Timetable = new Vue({
+        el: '#timetable',
+        data: fetchTimeTables(),
+        methods: {
+          openModal: function (talk) {
+            if (talk.isGuest) {
+              location.href = talk.url;
+              return;
+            }
+            location.hash = talk.url;
+            talk.highlight = true;
+            TalkDetailModal.open(talk, function () {
+              talk.highlight = false;
+            });
+          }
+        }
+      });
+    });
+    dispatcher.dispatch(location.pathname);
+  })();
+
+  // dispatch hash path
+  (function () {
+    var dispatcher = new MicroDispatcher();
+    dispatcher.register('/detail/:id', function (id) {
+      fetchTalkProposalById(DEFAULT_TARGET, id, function (talk) {
+        adjustScrollToTalk(talk);
+        talk.highlight = true;
+        TalkDetailModal.open(talk, function () {
+          talk.highlight = false;
+        });
+      });
+    });
+    dispatcher.dispatch(location.hash.substring(1));
+  })();
 })(Vue, $);
