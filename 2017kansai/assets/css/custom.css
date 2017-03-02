@@ -84,7 +84,7 @@
   margin: 5px 0;
 }
 
-.talk-detail .description {
+.talk-detail .description, #talk-detail-modal .description {
   white-space: pre-wrap;
   padding: 0.5em;
 }
@@ -144,6 +144,27 @@ ul.individual-sponsors > li i {
 }
 
 #timetable ol {
-    list-style-type: decimal;
-    padding: 1em;
+  list-style-type: decimal;
+  padding: 1em;
+}
+
+/* talk detail modal */
+#talk-detail-modal {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+#talk-detail-modal .modal-dialog {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+#talk-detail-modal .modal-content {
+  width:inherit;
+  height:inherit;
+  margin: 0 auto;
+  pointer-events: all;
 }
