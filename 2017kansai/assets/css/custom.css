@@ -143,6 +143,10 @@ ul.individual-sponsors > li i {
   padding: 5px;
 }
 
+#timetable td.highlight {
+  background-color: #f8f8f8;
+}
+
 #timetable ol {
   list-style-type: decimal;
   padding: 1em;
@@ -167,4 +171,18 @@ ul.individual-sponsors > li i {
   height:inherit;
   margin: 0 auto;
   pointer-events: all;
+}
+
+#talk-detail-modal aside.time-and-place {
+  font-size: 14px;
+  text-align: right;
+}
+#talk-detail-modal aside.time-and-place dt {
+  margin-left: 7px;
+}
+#talk-detail-modal aside.time-and-place dt, #talk-detail-modal aside.time-and-place dd {
+  display: inline;
+}
+#talk-detail-modal aside.time-and-place dt:after {
+  content: ":";
 }
