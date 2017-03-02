@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="./assets/css/html.css?cachebuster=495523" />
     <link rel="stylesheet" media="(max-width: 899px)" href="./assets/css/html.sp.css?cachebuster=747480" />
     <link rel="stylesheet" media="(min-width: 900px)" href="./assets/css/html.pc.css?cachebuster=613392" />
-    <link rel="stylesheet" href="./assets/css/custom.css?cachebuster=466340"/>
+    <link rel="stylesheet" href="./assets/css/custom.css?cachebuster=469315"/>
   </head>
   <body>
     <a id="top" name="top"></a>
@@ -115,8 +115,8 @@
                     <tr v-for="row in timetable">
                       <th>{{ row.label }}</th>
                       <td v-for="track in tracks" v-if="!row.breakTime && track.id in row.tracks" v-bind:rowspan="row.tracks[track.id].rowspan">
-                        <a v-bind:href="row.tracks[track.id].url">{{ row.tracks[track.id].title }}</a> ({{ row.tracks[track.id].durationMinutes }}min)<br />
-                        {{ row.tracks[track.id].author }}
+                        <a v-on:click="openModal(row.tracks[track.id])">{{ row.tracks[track.id].title }}</a> ({{ row.tracks[track.id].durationMinutes }}min)<br />
+                        {{ row.tracks[track.id].author.name }}
                       </td>
                       <td v-if="row.breakTime" v-bind:colspan="row.breakTimeColspan"><!-- 休憩 --></td>
                     </tr>
@@ -186,12 +186,33 @@
       </footer>
       <div id="pagetop"><a href="#top"><i class="fa fa-caret-square-o-up"></i></a></div>
     </div><!--  / #wrappper /  -->
+
+      <div id="talk-detail-modal" v-if="render" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">{{ talk.title }} ({{ talk.time }})</h4>
+              <aside class="speaker">
+                <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
+                <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a v-if="talk.author.githubId"  v-bind:href="talk.author.githubUrl"  target="_blank"><i class="fa fa-github"  aria-hidden="true"></i></a>
+              </aside>
+            </div>
+            <div class="modal-body">
+              <pre class="description">{{ talk.description }}</pre>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.js"></script>
+    <script src="./assets/js/vendor/micro_dispatcher.js?cachebuster=455466"></script>
     <script src="./assets/js/layout.js?cachebuster=459385"></script>
-    <script src="./assets/js/custom.js?cachebuster=471930"></script>
+    <script src="./assets/js/custom.js?cachebuster=489017"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@
     { "id": "track-c", "name": "C会場" },
   ];
   var TRACK_COUNT = TRACKS.length;
+  var DEFAULT_TARGET = 'accepted';
   var JSON_URL = {
     accepted: './assets/data/accepted.json',
   };
@@ -40,8 +41,8 @@
     this.author      = new Speaker(entry.author);
 
     this.durationMinutes = parseInt(this.time);
-    this.articleId   = 'talk-'+this.id;
-    this.url         = './talks.html#'+encodeURIComponent(this.articleId);
+    this.url         = '#/detail/'+encodeURIComponent(this.id);
+    this.isGuest     = false;
   }
 
   function calculateEndAt(startAt, durationMinutes) {
@@ -65,29 +66,63 @@
     });
   }
 
-  function fetchTalkProposals (type, cb) {
-    var url = JSON_URL[type];
+  var fetchTalkProposals = (function () {
+    var cache = {};
+    return function (type, cb) {
+      var cached = cache[type] = cache[type] || {
+        completed: false,
+        running:   false,
+        talks:     [],
+        cbque:     []
+      };
 
-    var talks = [];
-    $.get(url, function (json) {
-      var entries = json.feed.entry;
-      _.forEach(entries, function (entry) {
-        var talk = parseEntry(entry);
-        talks.push(talk);
+      if (cached.completed) {
+        if (cb) cb(cached.talks);
+        return cached.talks;
+      }
+      else if (cached.running) {
+        if (cb) cached.cbque.push(cb);
+        return cached.talks;
+      }
+
+      var url = JSON_URL[type];
+      var talks = [];
+      $.get(url, function (json) {
+        var entries = json.feed.entry;
+        _.forEach(entries, function (entry) {
+          var talk = parseEntry(entry);
+          talks.push(talk);
+        });
+        cached.running = false;
+        cached.completed = true;
+        _.forEach(cached.cbque, function (cb) {
+          cb(talks);
+        });
+        cached.cbque = [];
+        if (cb) cb(talks);
       });
-      if (cb) cb(talks);
-    });
 
-    return talks;
-  }
+      cached.talks = talks;
+      cached.running = true;
+      return talks;
+    };
+  })();
+
+  function fetchTalkProposalById(type, id, cb) {
+    fetchTalkProposals(type, function (talks) {
+      _.forEach(talks, function (talk) {
+        if (talk.id === id) {
+          cb(talk);
+          return false;
+        }
+        return true;
+      });
+    });
+  };
 
   function fetchTimeTables() {
-    var url = JSON_URL.accepted;
-
     var timetable = [];
-    $.get(url, function (json) {
-      var entries = json.feed.entry;
-
+    fetchTalkProposals(DEFAULT_TARGET, function (talks) {
       // { "09:00": { "track-a": { "title": "...", "durationMinutes": 20 } } }
       var timetableMap = {
         // FIXME: あとでちゃんとする
@@ -96,7 +131,8 @@
             url: "./#guest-speakers",
             title: "GUEST: 深沢 千尋",
             author: "深沢 千尋",
-            durationMinutes: 50
+            durationMinutes: 50,
+            isGuest: true
           }
         },
         "13:40": {
@@ -104,7 +140,8 @@
             url: "./#guest-speakers",
             title: "GUEST: 木本 裕紀",
             author: "木本 裕紀",
-            durationMinutes: 60
+            durationMinutes: 60,
+            isGuest: true
           }
         },
         "14:50": {
@@ -112,14 +149,14 @@
             url: "./#special-session",
             title: "GUEST: スペシャルセッション",
             author: "小飼 弾",
-            durationMinutes: 60
+            durationMinutes: 60,
+            isGuest: true
           }
         }
       };
-      _.forEach(entries, function (entry) {
-        var talk = parseEntry(entry);
+      _.forEach(talks, function (talk) {
         timetableMap[talk.startAt] = timetableMap[talk.startAt] || {};
-        timetableMap[talk.startAt][talk.trackId] = _.extend(talk, { author: talk.author.name });
+        timetableMap[talk.startAt][talk.trackId] = talk;
       });
 
       var lastEndAt;
@@ -153,13 +190,7 @@
             rowspan = 2;
           }
 
-          rowTracks[track.id] = {
-            title: detail.title,
-            author: detail.author,
-            url: detail.url,
-            durationMinutes: detail.durationMinutes,
-            rowspan: rowspan
-          };
+          rowTracks[track.id] = _.extend(detail, { rowspan: rowspan });
         });
 
         timetable.push({
@@ -176,15 +207,53 @@
     };
   }
 
-  var AcceptedTalks = new Vue({
+  var TalkDetailModal = new Vue({
+    el: '#talk-detail-modal',
+    data: {
+      render: false,
+      talk: {}
+    },
+    methods: {
+      open: function (talk) {
+        this.talk = talk;
+        this.render = true;
+        setTimeout(function () {
+          $('#talk-detail-modal').modal('show');
+        }, 0);
+      }
+    }
+  });
+
+  var CommonMethods = {
+    openModal: function (talk) {
+      if (talk.isGuest) {
+        location.href = talk.url;
+        return;
+      }
+      location.hash = talk.url;
+      TalkDetailModal.open(talk);
+    }
+  };
+
+  var TalkList = new Vue({
     el: '#accepted-talks',
     data: {
-      talks: fetchTalkProposals('accepted')
-    }
+      talks: fetchTalkProposals(DEFAULT_TARGET)
+    },
+    methods: _.extend(CommonMethods, {})
   });
 
   var Timetable = new Vue({
     el: '#timetable',
-    data: fetchTimeTables()
+    data: fetchTimeTables(),
+    methods: _.extend(CommonMethods, {})
   });
+
+  var dispatcher = new MicroDispatcher();
+  dispatcher.register('/detail/:id', function (id) {
+    fetchTalkProposalById(DEFAULT_TARGET, id, function (talk) {
+      TalkDetailModal.open(talk);
+    });
+  });
+  dispatcher.dispatch(location.hash.substring(1));
 })(Vue, $);

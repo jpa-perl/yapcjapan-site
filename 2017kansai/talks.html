@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="./assets/css/html.css?cachebuster=495523" />
     <link rel="stylesheet" media="(max-width: 899px)" href="./assets/css/html.sp.css?cachebuster=747480" />
     <link rel="stylesheet" media="(min-width: 900px)" href="./assets/css/html.pc.css?cachebuster=613392" />
-    <link rel="stylesheet" href="./assets/css/custom.css?cachebuster=466340"/>
+    <link rel="stylesheet" href="./assets/css/custom.css?cachebuster=469315"/>
   </head>
   <body>
     <a id="top" name="top"></a>
@@ -94,8 +94,8 @@
             <h3 class="title">&#x63A1;&#x629E;&#x30C8;&#x30FC;&#x30AF;&#x4E00;&#x89A7;</h3>
             <div id="talks" class="section">
               <div id="accepted-talks" class="body">
-                <article class="talk-detail" v-for="talk in talks" v-bind:id="talk.articleId">
-                  <h4><a v-bind:href="talk.url">{{ talk.title }}</a> ({{ talk.time }})</h4>
+                <article class="talk-detail" v-for="talk in talks">
+                  <h4><a v-on:click="openModal(talk)">{{ talk.title }}</a> ({{ talk.time }})</h4>
                   <pre class="description">{{ talk.description }}</pre>
                   <aside class="speaker">
                     <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
@@ -132,12 +132,33 @@
       </footer>
       <div id="pagetop"><a href="#top"><i class="fa fa-caret-square-o-up"></i></a></div>
     </div><!--  / #wrappper /  -->
+
+      <div id="talk-detail-modal" v-if="render" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">{{ talk.title }} ({{ talk.time }})</h4>
+              <aside class="speaker">
+                <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
+                <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a v-if="talk.author.githubId"  v-bind:href="talk.author.githubUrl"  target="_blank"><i class="fa fa-github"  aria-hidden="true"></i></a>
+              </aside>
+            </div>
+            <div class="modal-body">
+              <pre class="description">{{ talk.description }}</pre>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.js"></script>
+    <script src="./assets/js/vendor/micro_dispatcher.js?cachebuster=455466"></script>
     <script src="./assets/js/layout.js?cachebuster=459385"></script>
-    <script src="./assets/js/custom.js?cachebuster=471930"></script>
+    <script src="./assets/js/custom.js?cachebuster=489017"></script>
   </body>
 </html>
