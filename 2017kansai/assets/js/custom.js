@@ -43,11 +43,12 @@
     this.author      = new Speaker(entry.author);
 
     this.durationMinutes = parseInt(this.time);
-    this.endAt       = calculateEndAt(this.startAt, this.durationMinutes);
-    this.articleId   = "talk-"+this.id;
-    this.url         = '#/detail/'+encodeURIComponent(this.id);
-    this.isGuest     = false;
-    this.highlight   = false;
+    this.endAt        = calculateEndAt(this.startAt, this.durationMinutes);
+    this.articleId    = "talk-"+this.id;
+    this.url          = '#/detail/'+encodeURIComponent(this.id);
+    this.timetableUrl = './timetable.html'+this.url;
+    this.isGuest      = false;
+    this.highlight    = false;
   }
 
   function calculateEndAt(startAt, durationMinutes) {
@@ -231,6 +232,7 @@
     el: '#talk-detail-modal',
     data: {
       render: false,
+      showTimetableLink: false,
       talk: {}
     },
     methods: {
@@ -253,6 +255,9 @@
         el: '#accepted-talks',
         data: {
           talks: fetchTalkProposals(DEFAULT_TARGET)
+        },
+        created: function () {
+          TalkDetailModal.showTimetableLink = true;
         },
         methods: {
           openModal: function (talk) {

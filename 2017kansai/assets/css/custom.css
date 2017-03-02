@@ -177,11 +177,11 @@ ul.individual-sponsors > li i {
   font-size: 14px;
   text-align: right;
 }
+#talk-detail-modal aside.time-and-place dl, #talk-detail-modal aside.time-and-place dt, #talk-detail-modal aside.time-and-place dd {
+  display: inline;
+}
 #talk-detail-modal aside.time-and-place dt {
   margin-left: 7px;
-}
-#talk-detail-modal aside.time-and-place dt, #talk-detail-modal aside.time-and-place dd {
-  display: inline;
 }
 #talk-detail-modal aside.time-and-place dt:after {
   content: ":";
