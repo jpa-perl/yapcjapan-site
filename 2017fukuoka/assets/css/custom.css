@@ -12,29 +12,16 @@
     overflow: hidden;
 }
 
-#button > .button {
-    position: relative;
-    float: left;
-    left: 50%;
-    margin: 0;
-    padding: 0;
-}
-
-#button > .button > div {
-    position: relative;
-    float: left;
-    left: -50%;
-    margin: 0 10px;
-    padding: 0;
-}
-
-.button {
+#button {
+    margin-top: 40px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button a.btn-info {
     color: #5bc0de;
-
     border: 2px solid #5bc0de;
 }
 
@@ -45,6 +32,7 @@
 
 .button a.btn {
     background-color: #fff;
+    margin-bottom: 10px;
     /*  -webkit-border-radius: 0px;
      *         -moz-border-radius: 0px;
      *                  border-radius: 0px;*/
