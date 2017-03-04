@@ -1,0 +1,181 @@
+/**********************************************
+**
+** YAPC::Fukuoka Custom CSS
+**
+***********************************************/
+
+/* buttons */
+
+#button {
+    padding: 25px 0 65px 0;
+    _zoom: 1;
+    overflow: hidden;
+}
+
+#button > .button {
+    position: relative;
+    float: left;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+#button > .button > div {
+    position: relative;
+    float: left;
+    left: -50%;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.button {
+    text-align: center;
+}
+
+.button a.btn-info {
+    color: #5bc0de;
+
+    border: 2px solid #5bc0de;
+}
+
+.button a.btn-success {
+    color: #5cb85c;
+    border: 2px solid #5cb85c;
+}
+
+.button a.btn {
+    background-color: #fff;
+    /*  -webkit-border-radius: 0px;
+     *         -moz-border-radius: 0px;
+     *                  border-radius: 0px;*/
+}
+
+
+.button a.btn {
+    background-color: #fff;
+    /*  -webkit-border-radius: 0px;
+     *  -moz-border-radius: 0px;
+     *  border-radius: 0px;*/
+}
+
+.button a.btn-ticket {
+  color:  #5d5cb8;
+  border: 2px solid #5d5cb8;
+}
+
+.button a.btn-personal-sponsor {
+  color:  #5cb85c;
+  border: 2px solid #5cb85c;
+}
+
+.button a.btn-talk {
+  color:  #b85c5c;
+  border: 2px solid #b85c5c;
+}
+
+/* code-of-conduct */
+#code-of-conduct p {
+  margin-bottom: 1em;
+}
+
+/* about */
+#about p {
+  margin-bottom: 1em;
+}
+
+/* tickets */
+
+#tickets ul {
+  margin-bottom: 30px;
+}
+
+#tickets li.ticket {
+  margin-top: 0.1em;
+}
+
+#tickets li.ticket b {
+  font-weight: normal;
+}
+
+#tickets li.ticket b.sold-out {
+  text-decoration: line-through;
+}
+
+#tickets li.ticket em.now-on-sale {
+  display: none;
+}
+
+#tickets li.ticket em.sold-out {
+  margin-left: 1em;
+}
+
+/* talks */
+.talk-detail {
+  margin-bottom: 1em;
+}
+
+.talk-detail aside.speaker {
+  display: block;
+  max-width: 800px;
+  text-align: right;
+  margin: 5px 0;
+}
+
+.talk-detail .description {
+  white-space: pre-wrap;
+  padding: 0.5em;
+}
+
+/* staff list */
+ul.staff-list {
+  list-style-type: none;
+}
+
+ul.staff-list > li {
+  display: inline-block;
+}
+
+ul.staff-list > li img {
+  width: 120px;
+}
+
+/* staff list */
+ul.individual-sponsors {
+  list-style-type: none;
+}
+
+ul.individual-sponsors > li {
+  display: inline-block;
+  margin: 0 15px 15px 0;
+}
+
+ul.individual-sponsors > li img {
+  width: 120px;
+}
+ul.individual-sponsors > li i {
+  color: black;
+}
+
+/* special session */
+#special-session h4.title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+#special-session article.description > p {
+  margin-bottom: 1em;
+}
+
+/* timetable */
+
+#timetable table {
+  table-layout: fixed;
+  font-size: 14px;
+  border: 1px solid #aaaaaa;
+  width: 100%;
+}
+
+#timetable th, #timetable td {
+  border: 1px solid #aaaaaa;
+  padding: 5px;
+}

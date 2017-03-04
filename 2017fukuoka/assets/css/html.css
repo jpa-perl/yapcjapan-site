@@ -1,0 +1,407 @@
+@charset "utf-8";
+
+/*//////////////////////////////////////////////////////////
+//  - CSS for HTML
+//////////////////////////////////////////////////////////*/
+
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #fff;
+	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", "Lucida Grande", "Tahoma", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", "游明朝", "YuMincho", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+	background: #eb6120 url(../images/base.gif) repeat 0 0;
+	-webkit-background-size: 140px auto;
+	   -moz-background-size: 140px auto;
+		    background-size: 140px auto;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+
+@media screen and (min-width: 900px) and (max-width: 931931px) {
+	body {
+		font-size: 16px !important;
+		line-height: 150% !important;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	body {
+		font-size: 14px !important;
+		line-height: 130% !important;
+	}
+}
+
+#wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+body > #wrapper { height: auto; }
+
+a 			{ color: #ffffff; text-decoration: none; }
+a:link		{ color: #ffffff; text-decoration: none; }
+a:visited	{ color: #ffffff; text-decoration: none; }
+a:active	{ color: #ffffff; text-decoration: none; }
+a:hover		{ color: #eb6120; text-decoration: none; }
+a.disabled	{ color: #555; }
+
+img { width: 100%; }
+
+
+/*----------------------------------------------------------
+  - HEADER
+----------------------------------------------------------*/
+
+#header {
+	position: relative;
+	width: 100%;
+	height: 160px;
+}
+
+#header .decor {
+	position: relative;
+	top: 86px;
+	width: 100%;
+	height: 61px;
+	background: url(../images/header_line.gif) repeat-x 0 0;
+	-webkit-background-size: auto 61px;
+	   -moz-background-size: auto 61px;
+		    background-size: auto 61px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	#header {
+		height: 100px;
+	}
+	#header .decor {
+		position: relative;
+		top: 46px;
+		height: 40px;
+		-webkit-background-size: auto 40px;
+		   -moz-background-size: auto 40px;
+			    background-size: auto 40px;
+	}
+}
+
+
+/*----------------------------------------------------------
+  - CONTENTS (HERO/GMAP)
+----------------------------------------------------------*/
+
+#hero {
+	width: 100%;
+	height: auto;
+	background: url(../images/hero_base.gif) repeat 0 0;
+	-webkit-background-size: 249px auto;
+	   -moz-background-size: 249px auto;
+		    background-size: 249px auto;
+	padding: 60px 0;
+}
+
+#hero .inner {
+	margin: 0;
+	padding: 0 20px;
+}
+
+#hero h1,
+#hero h2,
+#hero .decor {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	filter:alpha(opacity=0);
+	-moz-opacity: 0.0;
+	opacity: 0.0;
+}
+#hero h1 img,
+#hero h2 img,
+#hero .decor img {
+	vertical-align: bottom;
+}
+
+#hero h1 {
+	-webkit-animation: fadeIn 6s ease 0.8s 1 normal forwards;
+		    animation: fadeIn 6s ease 0.8s 1 normal forwards;
+}
+
+#hero h2 {
+	-webkit-animation: fadeIn 6s ease 0s 1 normal forwards;
+		    animation: fadeIn 6s ease 0s 1 normal forwards;
+}
+
+#hero .decor {
+	-webkit-animation: fadeIn 6s ease 0.4s 1 normal forwards;
+		    animation: fadeIn 6s ease 0.4s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+	0%   { filter:alpha(opacity=0); -moz-opacity: 0.0; opacity: 0.0; }
+	100% { filter:alpha(opacity=100); -moz-opacity: 1.0; opacity: 1.0; }
+}
+
+@-webkit-keyframes fadeIn {
+	0%   { filter:alpha(opacity=0); -moz-opacity: 0.0; opacity: 0.0; }
+	100% { filter:alpha(opacity=100); -moz-opacity: 1.0; opacity: 1.0; }
+}
+
+@media screen and (min-width: 900px) and (max-width: 931931px) {
+	#hero h1 {
+		max-width: 600px;
+	}
+	#hero h2 {
+		max-width: 460px;
+		margin-bottom: 10px;
+	}
+	#hero .decor {
+		max-width: 94px;
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: 480px) and (max-width: 899px) {
+	#hero h1 {
+		max-width: 420px;
+	}
+	#hero h2 {
+		max-width: 322px;
+		margin-bottom: 10px;
+	}
+	#hero .decor {
+		max-width: 66px;
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+	#hero {
+		padding: 30px 0;
+	}
+	#hero h1 {
+		max-width: 280px;
+	}
+	#hero h2 {
+		max-width: 214px;
+		margin-bottom: 10px;
+	}
+	#hero .decor {
+		max-width: 44px;
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (min-width: 900px) and (max-width: 931931px) {
+	.gmap {
+		min-height: 380px;
+		vertical-align: bottom;
+		margin: 0 auto !important;
+		padding: 0 !important;
+	}
+	.gmap iframe {
+		position: static;
+		width: 100%;
+		height: 380px;
+	}
+}
+
+
+/*----------------------------------------------------------
+  - FOOTER
+----------------------------------------------------------*/
+
+#footer {
+	position: relative;
+	width: 100%;
+	padding: 0 0 30px 0;
+}
+
+#footer .decor {
+	position: relative;
+	width: 100%;
+	height: 15px;
+	background: url(../images/footer_line.gif) repeat-x 0 0;
+	margin: 20px 0 35px 0;
+	-webkit-background-size: auto 15px;
+	   -moz-background-size: auto 15px;
+		    background-size: auto 15px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	#footer .decor {
+		height: 10px;
+		margin: 15px 0 30px 0;
+		-webkit-background-size: auto 10px;
+		   -moz-background-size: auto 10px;
+			    background-size: auto 10px;
+	}
+}
+
+#footer a { }
+
+#footer .social-button {
+	position: relative;
+	margin: 0 auto 30px auto;
+	padding: 0;
+	_zoom: 1;
+	overflow: hidden;
+}
+#footer .social-button ul {
+	position: relative;
+	float: left;
+	left: 50%;
+}
+#footer .social-button li {
+	position: relative;
+	left: -50%;
+	float: left;
+	margin: 0 10px;
+}
+
+#footer address {
+	font-size: 12px;
+	text-align: center;
+}
+#footer address img {
+	display: block;
+	max-width: 150px;
+	margin: 0 auto 10px auto;
+	vertical-align: bottom;
+}
+
+@media screen and (min-width: 900px) and (max-width: 931931px) {
+	#footer .social-button li {
+		width: 50px;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	#footer .social-button li {
+		width: 35px;
+		margin: 0 10px;
+	}
+	#footer address img {
+		max-width: 120px;
+	}
+}
+
+#pagetop {
+	position: fixed;
+	line-height: 100%;
+	z-index: 99999;
+}
+
+#pagetop a {
+	display: block;
+	color: #000;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+#pagetop a:hover { text-decoration: none; }
+
+@media screen and (min-width: 900px) and (max-width: 931931px) {
+	#pagetop {
+		right: 30px;
+		bottom: 30px;
+	}
+	#pagetop a {
+		font-size: 40px;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	#pagetop {
+		right: 20px;
+		bottom: 20px;
+	}
+	#pagetop a {
+		font-size: 30px;
+	}
+}
+
+/*----------------------------------------------------------
+  - TBD
+----------------------------------------------------------*/
+
+.sample {
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+	-webkit-background-size: 35px 35px;
+	   -moz-background-size: 35px 35px;
+		    background-size: 35px 35px;
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	text-indent: -9999px;
+	text-decoration: none;
+	overflow: hidden;
+	_zoom: 1;
+	overflow: hidden;
+	filter:alpha(opacity=30);
+	-moz-opacity: 0.3;
+	opacity: 0.3;
+}
+
+/*----------------------------------------------------------
+  Sponsor Menu
+----------------------------------------------------------*/
+
+#sponsorMenu {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#sponsorMenu h1 {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+#sponsorMenu .menu {
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+}
+#sponsorMenu img {
+    max-width: 600px;
+    margin: 0 auto;
+}
+#sponsorMenu .annotation, #sponsorMenu .history {
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+#sponsorMenu .annotation li {
+    list-style-type: none;
+}
+
+#sponsorMenu .history dt {
+    font-weight: bold;
+}
+
+#sponsorMenu .history dd {
+    padding-left: 4em;
+}
+
+#sponsorMenu .inner {
+    margin: 30px;
+}
