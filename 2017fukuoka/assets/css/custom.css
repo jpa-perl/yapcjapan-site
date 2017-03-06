@@ -56,6 +56,11 @@
   border: 2px solid #5cb85c;
 }
 
+.button a.btn-sponsor {
+  color:  #eb6210;
+  border: 2px solid #eb6210;
+}
+
 .button a.btn-talk {
   color:  #b85c5c;
   border: 2px solid #b85c5c;
