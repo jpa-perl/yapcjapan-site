@@ -7,13 +7,7 @@
 /* buttons */
 
 #button {
-    padding: 25px 0 65px 0;
-    _zoom: 1;
-    overflow: hidden;
-}
-
-#button {
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -171,4 +165,28 @@ ul.individual-sponsors > li i {
 #timetable th, #timetable td {
   border: 1px solid #aaaaaa;
   padding: 5px;
+}
+
+#caption {
+    color: #333;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+#caption div {
+    width: 80%;
+    text-align: center;
+}
+
+#caption .head {
+    font-size: 20px;
+    line-height: 160%;
+}
+
+.caption p {
+    margin-bottom: 20px;
 }
