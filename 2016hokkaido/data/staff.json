@@ -1,0 +1,119 @@
+{
+    "box-single": true,
+    "include-staff": true,
+    "sections": [
+        {
+            "id": "staff",
+            "title": "Staff",
+            "corestaff": [
+                {
+                    "url": "https://www.facebook.com/onagatani",
+                    "asset": "onagatani.jpg",
+                    "name": "onagatani"
+                },
+                {
+                    "url": "https://twitter.com/shinotra",
+                    "asset": "shinotra.jpeg",
+                    "name": "shinotra"
+                },
+                {
+                    "url": "https://twitter.com/kumikumitm",
+                    "asset": "kumikumitm.jpg",
+                    "name": "kumikumitm"
+                },
+                {
+                    "url": "https://twitter.com/RicoImazu",
+                    "asset": "rico.png",
+                    "name": "Rico Imazu"
+                },
+                {
+                    "url": "https://twitter.com/nekokak",
+                    "asset": "nekokak.jpg",
+                    "name": "nekokak"
+                },
+                {
+                    "url": "https://twitter.com/tomihisa",
+                    "asset": "tomihisa.jpg",
+                    "name": "tomihisa"
+                },
+                {
+                    "url": "https://twitter.com/ar_tama",
+                    "asset": "ar_tama.jpg",
+                    "name": "ar_tama"
+                }
+            ],
+            "volunteers": [
+                {
+                    "url": "https://twitter.com/journyman0419",
+                    "asset": "journyman0419.jpg",
+                    "name": "Kohsaku Saito"
+                },
+                {
+                    "url": "https://facebook.com/takayuki.fuwa",
+                    "asset": "takayuki_fuwa.jpg",
+                    "name": "Takayuki Fuwa"
+                },
+                {
+                    "url": "https://twitter.com/koyhoge",
+                    "asset": "koyhoge.png",
+                    "name": "KOYAMA Tetsuji"
+                },
+                {
+                    "url": "https://twitter.com/mamipeko",
+                    "asset": "mamipeko.jpg",
+                    "name": "まみぺこ"
+                },
+                {
+                    "url": "https://twitter.com/assialiholic",
+                    "asset": "assialiholic.jpg",
+                    "name": "assialiholic"
+                },
+                {
+                    "url": "https://www.facebook.com/alpha.cosmonaut",
+                    "asset": "alpha_cosmonaut.jpg",
+                    "name": "Atsushi Matsue"
+                },
+                {
+                    "url": "https://twitter.com/techno_neko",
+                    "asset": "techno_neko.jpeg",
+                    "name": "techno_neko"
+                },
+                {
+                    "url": "https://twitter.com/raa0121",
+                    "asset": "raa0121.png",
+                    "name": "raa0121"
+                },
+                {
+                    "url": "https://twitter.com/marcy_terui",
+                    "asset": "marcy_terui.jpeg",
+                    "name": "marcy_terui"
+                },
+                {
+                    "url": "https://twitter.com/gallus_hama",
+                    "asset": "gallus_hama.jpg",
+                    "name": "gallus_hama"
+                },
+                {
+                    "url": "https://twitter.com/aloelight",
+                    "asset": "aloelight.jpg",
+                    "name": "aloelight"
+                },
+                {
+                    "url": "https://twitter.com/maiiishiyama",
+                    "asset": "maiiishiyama.jpeg",
+                    "name": "maiiishiyama"
+                },
+                {
+                    "url": "https://twitter.com/koji_magi",
+                    "asset": "koji_magi.jpg",
+                    "name": "koji_magi"
+                },
+                {
+                    "url": "https://twitter.com/ayako119",
+                    "asset": "ayako119.png",
+                    "name": "ayako119"
+                }
+            ]
+        }
+    ]
+}

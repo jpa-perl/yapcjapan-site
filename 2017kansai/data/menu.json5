@@ -1,0 +1,59 @@
+{
+  "menu": [
+    {
+      "url": "./",
+      "title": "Home",
+      "blank": false
+    },
+    {
+      "url": "./#about",
+      "title": "About",
+      "blank": false
+    },
+    {
+      "url": "./#news",
+      "title": "News",
+      "blank": false
+    },
+    {
+      "url": "http://blog.yapcjapan.org/",
+      "title": "Blog",
+      "blank": true
+    },
+    {
+      "url": "./timetable.html",
+      "title": "Timetable",
+      "blank": false
+    },
+    {
+      "url": "./talks.html",
+      "title": "Talks",
+      "blank": false
+    },
+    {
+      "url": "./#tickets",
+      "title": "Tickets",
+      "blank": false
+    },
+    {
+      "url": "./#sponsors",
+      "title": "Sponsors",
+      "blank": false
+    },
+    {
+      "url": "individual-sponsors.html",
+      "title": "Individual Sponsors",
+      "blank": false
+    },
+    {
+      "url": "staff.html",
+      "title": "Staff",
+      "blank": false
+    },
+    {
+      "url": "code-of-conduct.html",
+      "title": "Code of Conduct",
+      "blank": false
+    },
+  ]
+}

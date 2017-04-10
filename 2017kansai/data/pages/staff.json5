@@ -1,0 +1,87 @@
+{
+  "page-title": "Staff",
+
+  // partials
+  "include-staff": true,
+
+  // contents
+  "corestaff": [
+    {
+      url: "https://twitter.com/nqounet",
+      asset: "nqounet.jpg",
+      name: "nqounet",
+    },
+    {
+      url: "https://twitter.com/tomcha_",
+      asset: "tomcha.jpg",
+      name: "tomcha",
+    },
+    {
+      url: "https://twitter.com/stc1988",
+      asset: "stc1988.png",
+      name: "STC",
+    },
+    {
+      url: "https://twitter.com/bool_fool",
+      asset: "r-nakamura.jpg",
+      name: "r-nakamura",
+    },
+    {
+      url: "https://twitter.com/pastak",
+      asset: "pastak.jpg",
+      name: "Pasta-K",
+    },
+    {
+      url: "https://twitter.com/azumakuniyuki",
+      asset: "azumakuniyuki.jpg",
+      name: "azumakuniyuki",
+    },
+    {
+      url: "https://twitter.com/sago35tk",
+      asset: "sago35.jpg",
+      name: "sago35",
+    },
+    {
+      url: "https://twitter.com/_yabook",
+      asset: "yabook.png",
+      name: "yabook",
+    },
+    {
+      url: "https://karupas.org/",
+      asset: "karupanerura.png",
+      name: "karupanerura",
+    },
+    {
+      url: "https://twitter.com/mamipeko",
+      asset: "mamipeko.jpg",
+      name: "mamipeko",
+    },
+    {
+      url: "https://twitter.com/june29",
+      asset: "june29.jpg",
+      name: "june29",
+    },
+    {
+      url: "https://twitter.com/ks_yuzu",
+      asset: "ks_yuzu.png",
+      name: "ks_yuzu",
+    },
+  ],
+  "volunteers": [
+    {
+      url: "https://twitter.com/cocodrips",
+      asset: "cocodrips.png",
+      name: "cocodrips",
+    },
+    {
+      url: "https://twitter.com/kfly8",
+      asset: "kfly8.jpg",
+      name: "kfly8",
+    },
+    {
+      url: "https://twitter.com/tomihisa",
+      asset: "tomihisa.jpg",
+      name: "馮富久",
+    },
+  ],
+}

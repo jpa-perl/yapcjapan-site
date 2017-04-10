@@ -1,0 +1,16 @@
+<h3 class="title">{{page-title}}</h3>
+{{=<% %>=}}
+<div id="talks" class="section">
+  <div id="<% type %>-talks" class="body">
+    <article v-bind:id="talk.articleId" class="talk-detail" v-for="talk in talks">
+      <h4><a v-on:click="openModal(talk)">{{ talk.title }}</a> ({{ talk.time }})</h4>
+      <pre class="description">{{ talk.description }}</pre>
+      <aside class="speaker">
+        <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
+        <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a v-if="talk.author.githubId"  v-bind:href="talk.author.githubUrl"  target="_blank"><i class="fa fa-github"  aria-hidden="true"></i></a>
+      </aside>
+    </article>
+  </div><!--  / .body /  -->
+</div><!--  / .section /  -->
+<%={{ }}=%>

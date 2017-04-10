@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:mixi="http://mixi-platform.com/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            YAPC::Hokkaido 2016 SAPPORO
+            {{#box-single}}
+                {{#sections}} - {{title}}{{/sections}}
+            {{/box-single}}
+        </title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="description" content="">
+        <meta name="keywords" content="YAPC,ヤプシー,Perl,PM,Japan Perl Association,JPA,YAPC::Hokkaido,ヤプシー北海道">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@yapcjapan">
+        <meta name="twitter:title" content="YAPC::Hokkaido 2016 SAPPORO">
+        <meta name="twitter:description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。">
+        <meta name="twitter:image" content="http://yapcjapan.org/2016hokkaido/assets/images/ogp.png">
+        <meta property="fb:app_id" content="546362158903970"/>
+        <meta property="og:title" content="YAPC::Hokkaido 2016 SAPPORO
+                                           {{#box-single}}
+                                           {{#sections}} - {{title}}{{/sections}}
+                                           {{/box-single}}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="http://yapcjapan.org/2016hokkaido/assets/images/ogp.png"/>
+        <meta property="og:site_name" content="YAPC::Hokkaido 2016 SAPPORO"/>
+        <meta property="og:description" content=""/>
+        <meta name="referrer" content="unsafe-url">
+        <link rel="shortcut icon" href="./assets/images/favicon.ico">
+        <link rel="stylesheet" href="./assets/css/style.css"/>
+        <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
+        <link rel="stylesheet" media="(max-width: 899px)" href="./assets/css/html.sp.css?ts=0">
+        <link rel="stylesheet" media="(min-width: 900px)" href="./assets/css/html.pc.css?ts=0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="./assets/js/functions.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="./assets/js/jquery.kerning.min.js"></script>
+        <script src="./assets/js/jquery.mmenu.all.min.js"></script>
+    </head>
+    <body>
+        <a id="top" name="top"></a>
+
+        <header id="header" class="mm-slideout">
+            <nav class="header">
+                <div class="btn-menu"><a href="#menu"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div><!--  / .btn-menu /  -->
+            </nav>
+        </header>
+
+        <nav id="menu">
+            <div id="gnavi">
+                <div class="innerblock">
+                    <ul>
+                        {{#menu}}
+                            {{#blank}}
+                                <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+                            {{/blank}}
+                            {{^blank}}
+                                <li><a href="{{url}}">{{title}}</a></li>
+                            {{/blank}}
+                        {{/menu}}
+                    </ul>
+                </div><!--  / .innerblock /  -->
+            </div><!--  / #gnavi /  -->
+        </nav>
+
+        <div id="wrapper">
+
+            {{#lead}}
+                {{> lead}}
+            {{/lead}}
+
+            <div id="container">
+                {{#box-single}}
+                    <div class="box box-single">
+                {{/box-single}}
+                {{^box-single}}
+                    <div class="box">
+                        <p style="text-align: center; width: 500px; margin: auto auto 20px auto;"><a href="https://goo.gl/forms/QyjkCDc4v4UJX2ns2" target="_blank"><i class="material-icons" style="vertical-align: sub; margin-right: 8px;">info_outline</i>LTの登壇募集は12/8（木）まで！</a></p>
+                {{/box-single}}
+
+
+                {{#sections}}
+                    <div class="section" id="{{id}}">
+                        <h3 class="title">{{title}}</h3>
+                        <div class="body">
+
+                            {{#include-staff}}
+                                {{> staff}}
+                            {{/include-staff}}
+
+                            {{#include-code-of-conduct}}
+                                {{> code-of-conduct}}
+                            {{/include-code-of-conduct}}
+
+                            {{#include-tickets}}
+                                {{> tickets}}
+                            {{/include-tickets}}
+
+                            {{#include-about}}
+                                {{> about}}
+                            {{/include-about}}
+
+                            {{#include-sponsors}}
+                                {{> sponsors}}
+                            {{/include-sponsors}}
+
+                            {{#include-news}}
+                                {{> news}}
+                            {{/include-news}}
+
+                            {{#include-guest}}
+                                {{> guest}}
+                            {{/include-guest}}
+
+                            {{#include-special-session}}
+                                {{> special-session}}
+                            {{/include-special-session}}
+
+                            {{#include-access}}
+                                {{> access}}
+                            {{/include-access}}
+
+                            {{#include-timetable}}
+                                {{> timetable}}
+                                {{> timetable-body}}
+                            {{/include-timetable}}
+
+                            {{#include-individual-sponsors}}
+                                {{> individual-sponsors}}
+                            {{/include-individual-sponsors}}
+
+                        </div><!--  / .body /  -->
+                    </div><!--  / .section /  -->
+                {{/sections}}
+
+                    </div><!--  / .box /  -->
+                    </div><!--  / #container /  -->
+
+                    <div id="pagetop"><a href="#top"><i class="fa fa-caret-square-o-up"></i></a></div>
+
+                    <aside><div id="footer-logo">YAPC::Hokkaido 2016 Sapporo</div></aside>
+                    <footer>
+                        <div id="footer">
+                            <div class="inner">
+                                <div class="social-button">
+                                    <ul>
+                                        <li><a href="https://twitter.com/yapcjapan" title="Twitter" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="https://www.facebook.com/yapcjapan/" title="Facebook" target="_blank"><span class="fa fa-facebook-official"></span></a></li>
+                                    </ul>
+                                </div><!--  / .social-button /  -->
+                                <address>
+                                    <div class="JPA"><a href="http://japan.perlassociation.org/" target="_blank"><img src="./assets/images/logo_white.png" alt="Japan Perl Association" /></a></div>
+                                    <div>© 2016 Japan Perl Association</div>
+                                </address>
+                            </div><!--  / .inner /  -->
+                        </div><!--  / #footer /  -->
+                    </footer>
+
+            </div><!--  / #wrapper /  -->
+    </body>
+</html>

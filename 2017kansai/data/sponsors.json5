@@ -1,0 +1,70 @@
+{
+  sponsors: {
+    "platinum": [
+      { name: "株式会社カヤック",   asset: "kayac.png",           url: "https://www.kayac.com/" },
+      { name: "日本マイクロソフト", asset: "microsoft_azure.png", url: "https://developer.microsoft.com/ja-jp/" },
+    ],
+    "platinum-jpa": [
+      { name: "株式会社ディー・エヌ・エー", asset: "dena.png",   url: "http://dena.com/jp/" },
+      { name: "株式会社はてな",             asset: "hatena.png", url: "http://hatenacorp.jp/" },
+      { name: "株式会社ガイアックス",       asset: "gaiax.png",  url: "http://www.gaiax.co.jp/" },
+      { name: "株式会社ミクシィ",           asset: "mixi.png",   url: "http://mixi.co.jp/" },
+    ],
+    "gold": [
+      { name: "株式会社フリークアウト", asset: "freakout.png", url: "https://www.fout.co.jp/freakout/" },
+    ],
+    "gold-jpa": [
+      { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
+      { name: "Wano株式会社",               asset: "wano.png",      url: "https://www.wano.co.jp/" },
+      { name: "Port株式会社",               asset: "port.png",      url: "https://www.theport.jp/" },
+    ],
+    "silver": [
+      { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
+      { name: "GMOペパボ株式会社",      asset: "pepabo.png",   url: "https://pepabo.com/" },
+      { name: "株式会社ファームノート", asset: "farmnote.png", url: "http://farmnote.jp/index.html" },
+      { name: "株式会社スカイアーク",   asset: "skyarc.png",   url: "http://www.skyarc.co.jp/" },
+    ],
+    "local": [
+      { name: "アルファサード株式会社",           asset: "alfasado.png",         url: "https://alfasado.net/" },
+      { name: "Nota, Inc.",                       asset: "gyazo.png",            url: "https://gyazo.com/" },
+      { name: "株式会社DeNA Games Osaka",         asset: "dena_osaka.png",       url: "http://denagames.jp/" },
+      { name: "アルファテクノロジー株式会社",     asset: "alpha_technology.png", url: "http://www.alphatc.co.jp/about.html" },
+      { name: "株式会社イマジカデジタルスケープ", asset: "imagica.png",          url: "https://www.dsp.co.jp/" },
+      { name: "さくらインターネット株式会社",     asset: "sakura.png",           url: "https://www.sakura.ad.jp/" },
+    ],
+    "students": [
+      { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "http://www.kodamari.com/" },
+      { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
+      { name: "株式会社ファームノート", asset: "farmnote.png", url: "http://farmnote.jp/index.html" },
+      { name: "株式会社スカイアーク",   asset: "skyarc.png",   url: "http://www.skyarc.co.jp/" },
+    ],
+    "venue": [
+      { name: "エムオーテックス株式会社", asset: "motex.png", url: "http://www.motex.co.jp/" },
+    ],
+    "key-note": [
+      { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
+    ],
+    "best-talk": [
+      { name: "株式会社ガイアックス", asset: "gaiax.png",  url: "http://www.gaiax.co.jp/" },
+    ],
+    "best-lt": [
+      { name: "株式会社コルシス", asset: "colsis.png", url: "https://colsis.jp/" },
+    ],
+    "after-party": [
+      { name: "アルファサード株式会社", asset: "alfasado.png", url: "https://alfasado.net/" },
+    ],
+    "tote-bag": [
+      { name: "株式会社リブセンス", asset: "livesense.png", url: "http://www.livesense.co.jp/" },
+    ],
+    "t-shirt": [
+      { name: "株式会社モバイルファクトリー", asset: "mobile_factory.png", url: "http://www.mobilefactory.jp/" },
+    ],
+    "media": [
+      { name: "30days Album", asset: "30days_album.png", url: "https://30d.jp/" },
+    ],
+    "host": [
+      { name: "Japan Perl Association", asset: "jpa.png",      url: "http://japan.perlassociation.org/" },
+      { name: "Kansai.pm",              asset: "kansai_pm.png", url: "http://kansai.pm.org/" },
+    ],
+  },
+}

@@ -1,0 +1,587 @@
+{
+    "box-single": true,
+    "include-timetable": true,
+    "sections": [
+        {
+            "id": "timetable",
+            "title": "Timetable",
+            "talks": [
+                {
+                    "head": "09:30-09:40",
+                    "body": [
+                        {
+                            "title": "オープニング",
+                            "speaker": "onagatani",
+                            "rowspan": 1,
+                            "time": "10min"
+                        },
+                        { "title": "Closed", "rowspan": 2 }
+                    ]
+                },
+                {
+                    "head": "09:40-09:50",
+                    "body": [{ "title": "" }]
+                },
+                {
+                    "head": "09:50-10:10",
+                    "body": [
+                        {
+                            "talk-id": 1,
+                            "title": "HTTP/2の課題と将来",
+                            "speaker": "奥 一穂（kazuho）",
+                            "rowspan": 2,
+                            "twitter": "kazuho",
+                            "github": "kazuho",
+                            "time": "40min",
+                            "slide": "http://blog.kazuhooku.com/2016/12/http2yapc-hokkaido.html",
+                            "contents": [
+                                { "content": "TBD" }
+                            ]
+                        },
+                        {
+                            "talk-id": 2,
+                            "title": "MySQL 5.7の次のMySQLは",
+                            "speaker": "yoku0825",
+                            "twitter": "yoku0825",
+                            "rowspan": 1,
+                            "time": "20min",
+                            "slide": "http://www.slideshare.net/yoku0825/mysql-57mysql",
+                            "contents": [
+                                { "content": "2016年9月、5.7の次のMySQLとなる MySQL 8.0.0-dmr が最初のリリースを迎えました。" },
+                                { "content": "" },
+                                { "content": "現時点で判明しているMySQL 8.0の新機能をユルくお知らせします。" },
+                                { "content": "- 追加されたperformance_schema" },
+                                { "content": "- SDIファイルとは" },
+                                { "content": "- SET PERSIST構文" },
+                                { "content": "- ROLE" },
+                                { "content": "" },
+                                { "content": "～行くぞ最新版、罠の貯蔵は十分か～" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "10:10-10:30",
+                    "body": [
+                        {
+                            "talk-id": 3,
+                            "title": "近年の OSS 開発における CI 選択のベストプラクティス",
+                            "speaker": "pine613",
+                            "twitter": "pine613",
+                            "github": "pine",
+                            "rowspan": 1,
+                            "time": "20min",
+                            "slide": "https://speakerdeck.com/pine613/jin-nian-false-oss-kai-fa-niokeru-ci-xuan-ze-falsebesutopurakuteisu",
+                            "contents": [
+                                { "content": "OSS 開発を円滑に進めるために利用される、各種 CI サービス。自動テストの為のサービスから、依存パッケージを監視してくれるものまで、機能は多岐にわたります。" },
+                                { "content": "本トークでは、はじめに OSS 向けの各種 CI サービスの現状について説明します。次に、Perl の OSS 開発でよく使われるサービスについて説明します。" },
+                                { "content": "後者には、次のような内容が含まれます。" },
+                                { "content": "- 複数の Perl バージョンで CI テストを行う方法" },
+                                { "content": "- Perl + XS の CI テストを Windows で行う方法" },
+                                { "content": "- CPAN Testers の仕組みと利用方法" },
+                                { "content": "- カバレッジの測定方法と GitHub との連携方法" },
+                                { "content": "それぞれの OSS プロダクトに適切な CI サービスが選択でき、開発が円滑に進められるようになることが、本トークのゴールです。" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "10:30-10:40",
+                    "body": [
+                        { "title": "" }, { "title": "" }
+                    ]
+                },
+                {
+                    "head": "10:40-11:00",
+                    "body": [
+                        {
+                            "talk-id": 4,
+                            "title": "2016年のPerl (Long Version)",
+                            "speaker": "charsbar",
+                            "twitter": "charsbar",
+                            "github": "charsbar",
+                            "rowspan": 2,
+                            "time": "40min",
+                            "slide": "http://www.slideshare.net/charsbar/2016perl-long-version",
+                            "contents": [
+                                { "content": "2016年8月に行われたLLoTではもっぱら外部の方向けにPerlの今について簡単な話をしましたが( http://www.slideshare.net/charsbar/perl-language-update )、YAPCに来る方には、LLoTではあえて話さなかった進行中の議論を含め、もっと突っ込んだ情報が必要でしょう。ここではPerl 5/6問わず、この一年内外に起こったPerlの変化について、検証可能な範囲内でまとめておきます。" }
+                            ]
+                        },
+                        {
+                            "talk-id": 16,
+                            "title": "APIをPerlで作る時に僕達が考えたこと",
+                            "speaker": "papix",
+                            "twitter": "__papix__",
+                            "github": "papix",
+                            "time": "20min",
+                            "slide": "https://speakerdeck.com/papix/yapc-hokkaido",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "私事ではありますが, ちょっと前まではWebアプリケーションといえばAmon2を使って, Text::XslateでHTMLをレンダリングして... というモノが多かったのですが, 最近は｢モバイルファースト｣であったり, React.jsを使った｢シングルページアプリケーション｣の普及によって, サーバー側でHTMLをレンダリングせず, リクエストを受け取るとそれに対するデータをJSONなどで返すという, いわゆる｢APIサーバー｣を作る機会が増えてきました." },
+                                { "content": "このトークでは, 私が業務の中で｢Perlを使って｣APIサーバーを書いてきた中で悩んだこと, 考慮したこと, 工夫したことなどについてお話したいと思います." },
+                                { "content": "具体的には, 以下の内容について触れる予定です." },
+                                { "content": "- APIサーバーを作るにあたってWAFやORMはどうするか" },
+                                { "content": "- インフラやミドルウェアをどうするか" },
+                                { "content": "- APIサーバーが担う役割をどう定義するか" },
+                                { "content": "- APIサーバーのテストをどうするか" },
+                                { "content": "- APIの仕様について" },
+                                { "content": "　　- 仕様をチームでどうやって作るか" },
+                                { "content": "　　- 作った仕様をどのように共有してまとめるか" },
+                                { "content": "　　- 仕様を最新の状態に更新し続けるための工夫" },
+                                { "content": "- 細々としたTips" },
+                                { "content": "　　- オブジェクトをよしなにJSONへ変換したい!" },
+                                { "content": "　　- APIサーバー以外のコンポーネントとの連携について" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "11:00-11:20",
+                    "body": [
+                        {
+                            "talk-id": 15,
+                            "title": "iOS/AndroidアプリにおけるAPIサーバーのいろは",
+                            "speaker": "xaicron",
+                            "twitter": "xaicron",
+                            "github": "xaicron",
+                            "time": "20min",
+                            "slide": "http://xaicron.github.io/slide/yapc-hokkaido-2016/",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "ひょんなことからiOS/Android向けのアプリを作ることになった俺達は。" },
+                                { "content": "スマホアプリ開発未経験のとあるサーバーエンジニアがゼロからAPI設計&開発してサービスをローンチさせてから2年とちょっと経ちました。" }, 
+                                { "content": "このトークでは実際にリリースして運用している「ハッカドール」というアプリのAPIの歴史を振り返りながら、良かったことや反省点、そして今後スマホアプリでのAPI設計はどうなっていくのかなど、至極個人的な視点からお話できればと思います。" }, 
+                                { "content": "※「ハッカドール」のサーバー実装は一部機能を除いてすべてPerlで実装されています。" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "11:20-11:30",
+                    "body": [
+                        { "title": "" }, { "title": "" }
+                    ]
+                },
+                {
+                    "head": "11:30-11:50",
+                    "body": [
+                        {
+                            "talk-id": 6,
+                            "title": "Perl6 と Web 開発と",
+                            "speaker": "tokuhirom",
+                            "rowspan": 1,
+                            "time": "20min",
+                            "slide": "https://docs.google.com/presentation/d/15op4A2s1aCSorX81myYukE2OnMGAx6AzR3Y0kj-iF2Y/embed",
+                            "twitter": "tokuhirom",
+                            "github": "tokuhirom",
+                            "contents": [
+                                { "content": "Perl6 でウェブ開発、本当に可能なのか……？ それを試すために Plack を移植したり、フレームワークを移植したり WebSocket を実装したり。。　色々やってみたその記録をご紹介します。" }
+                            ]
+                        },
+                        {
+                            "talk-id": 7,
+                            "title": "Writing Perl extensions in Rust (English)",
+                            "speaker": "Vickenty Fesunov",
+                            "rowspan": 1,
+                            "github": "vickenty",
+                            "time": "20min",
+                            "slide": "https://vickenty.github.io/talk-perl-xs-rs/#/slide-orgheadline1",
+                            "contents": [
+                                { "content": "Writing an extension module for Perl in C is tricky: it is easy to make a mistake that makes the interpreter catch fire and crash. XS API also adds its share of complexity." },
+                                { "content": "Rust is a new programming language that has a strong focus on memory safety — preventing bugs that cause memory corruption and segfaults. It has thin runtime and can produce C-compatible shared libraries, which makes it suitable for embedding into other programs." },
+                                { "content": "Rust expressive type system, macros, and standard library make it possible to abstract away many low-level details of XS API. The result is safer and more friendly API for extending Perl." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "11:50-12:10",
+                    "body": [
+                        {
+                            "talk-id": 8,
+                            "title": "Number Unlimited",
+                            "speaker": "Dan Kogai",
+                            "rowspan": 1,
+                            "time": "20min",
+                            "twitter": "dankogai",
+                            "github": "dankogai",
+                            "contents": [
+                                { "content": "電子計算機の本業といえば数値を扱うことですが、実はこれほど言語や環境によって扱いが異なるものも少なくないのです。Perlを例にとっても、5と6で最も変わったことの一つがコレだったりします。本セッションでは" },
+                                { "content": "* Perl 5 vs Perl 6" },
+                                { "content": "* Ruby, Python, Haskell" },
+                                { "content": "* Swift" },
+                                { "content": "* NaNって何だ?" },
+                                { "content": "など、実際にrakudoにpull requestを送ったり任意制度数値ライブラリーを作った実例を挙げながら数値の取り扱いにおける傾向と対策について話します。" },
+                                { "content": "参考URLs:" },
+                                { "content": "http://qiita.com/dankogai/items/7af3565d7657785211dc", "link": true, "href": "http://qiita.com/dankogai/items/7af3565d7657785211dc" },
+                                { "content": "http://qiita.com/dankogai/items/a333bed751e4b0a71975", "link": true, "href": "http://qiita.com/dankogai/items/a333bed751e4b0a71975" }
+                            ]
+                        },
+                        {
+                            "talk-id": 9,
+                            "title": "2017年、飛躍する技術と共に命懸けのダイブ！「普段使い言語環境」更新によるスキルリセットサバイバルガイド",
+                            "speaker": "谷内 元",
+                            "time": "20min",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "こんな出来損ないの俺を何十年も支えてくれた perl や python。" },
+                                { "content": "普段使いから面倒なお仕事まで、文句ひとつ言わずこなしてきてくれた古女房に別れを告げ Scala に浮気、結局泣いて帰ってきたのも、もう8年前のこと。" },
+                                { "content": "2016年の暮れも押し迫る中、また性懲りもなくふらふらと彷徨いでたその先には、、、" },
+                                { "content": "謎の看板とあなたを手招きして待っている極上の美女達!" },
+                                { "content": "「スクリプト言語禁止縛りスクリプティング coming in 2017 バトルロイヤル会場」へようこそ" },
+                                { "content": "...これは罠だ!" },
+                                { "content": "『あなたに私が使いこなせるかしら...』" },
+                                { "content": "蠱惑的な笑みからこぼれ出るは知性、麗しき才媛" },
+                                { "content": "F# on .NET Core/mono" },
+                                { "content": "『私、まだ何も知らないの、あなた色に染め上げて...』" },
+                                { "content": "未成熟な躰に美しいUIをまとったロリータ" },
+                                { "content": "Swift with CoreFoundation" },
+                                { "content": "『$#->%@!?』" },
+                                { "content": "それは安定を母とし混沌から産まれた - ジャングルの奥地で出会った青天の霹靂、ブラックスワン" },
+                                { "content": "制御できない野生の魅力に振り回されたい" },
+                                { "content": "Perl6 on JVM" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "12:10-12:20",
+                    "body": [ { "title": "" }, { "title": "", "rowspan": 3 } ]
+                },
+                {
+                    "head": "12:20-13:00",
+                    "body": [
+                        {
+                            "title": "ランチタイム & スポンサーセッション",
+                            "rowspan": 1,
+                            "time": "40min"
+                        }
+                    ]
+                },
+                {
+                    "head": "13:00-13:10",
+                    "body": [ { "title": "" } ]
+                },
+                {
+                    "head": "13:10-13:30",
+                    "body": [
+                        {
+                            "talk-id": 10,
+                            "title": "Site::Reliability::Engineering",
+                            "speaker": "長野 雅広（kazeburo）",
+                            "twitter": "kazeburo",
+                            "github": "kazeburo",
+                            "slide": "https://speakerdeck.com/kazeburo/site-reliability-engineering-yapc-hakkaido-2016-sapporo",
+                            "time": "40min",
+                            "rowspan": 2,
+                            "contents": [
+                                { "content": "TBD" }
+                            ]
+                        },
+                        {
+                            "talk-id": 11,
+                            "title": "10年モノ熟成Perlとの付き合い方",
+                            "speaker": "Masaki Nakagawa",
+                            "rowspan": 1,
+                            "twitter": "ikasam_a",
+                            "github": "masaki",
+                            "slide": "http://www.slideshare.net/masaki/10perl",
+                            "time": "20min",
+                            "contents": [
+                                { "content": "Perlで書かれたそれなりの規模のシステムで、めでたく10周年を超えて動き続けているサービス。" },
+                                { "content": "10年も事業継続できている栄光の影に、その歴史の跡がコードとなり、システムアーキテクチャとなって積み重なっています。" },
+                                { "content": "本トークでは、そのような歴史を持ったシステムと、どのように付き合っていくかを事例を交えてお話します。" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "13:30-13:50",
+                    "body": [
+                        {
+                            "talk-id": 12,
+                            "title": "AndApp RPGツクールMVの舞台裏とSPAの運用について",
+                            "speaker": "Hiroki Honda (Cside)",
+                            "twitter": "Cside_",
+                            "github": "Cside",
+                            "time": "20min",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "DeNA が新しく提供する AndApp という PC 向けのアプリケーションプラットフォームで、RPG ツクール MV で作られたゲームを多数公開しています。 " },
+                                { "content": "https://www.andapp.jp/rpg_tkool/" },
+                                { "content": "・Web でスクリーンショット撮影機能 / 動画撮影機能を実装した話" },
+                                { "content": "・Single Page Application の運用で工夫していること" },
+                                { "content": "・サービスをヒットさせる仕組みを入れるまでの試行錯誤" },
+                                { "content": "など、技術的な話にとどまらず、プロダクトをいかに進化させていくかという企画観点での話も織り込む予定です。" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "13:50-14:00",
+                    "body": [
+                        { "title": "" }, { "title": "" }
+                    ]
+                },
+                {
+                    "head": "14:00-14:40",
+                    "body": [
+                        {
+                            "talk-id": 17,
+                            "title": "今から始めるMicrosoft Azure - Dive into Azure",
+                            "speaker": "Tatsuro Hisamori",
+                            "twitter": "myfinder",
+                            "github": "myfinder",
+                            "time": "40min",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "\"今さら聞けない、でも聞きたい。クラウドの過去・現在・未来\" というセッションに代表されるように、実はクラウドもっとちゃんと知りたいんだよね、とお思いのエンジニアの方は実は多いのではないでしょうか。" },
+                                { "content": "そんなエンジニアの皆様へ、Microsoft Azureの基本のキから解説します。" },
+                                { "content": "スペシャルセッションでは触れられなかった話題もこちらでカバーしていきます。" },
+                                { "content": "" },
+                                { "content": "keywords: Azure, IaaS, PaaS, API, Database, IoT, Mahine Learning, etc" },
+                                { "content": "" },
+                                { "content": "下記のような方を想定しています。" },
+                                { "content": "・「実はクラウドのこと、よくわかってないんだよね……」と聞きづらくなってしまった方" },
+                                { "content": "・Azure以外のクラウドを使っているがAzureのことも知りたいと思っている方" },
+                                { "content": "・最近のMicrosoftの技術に興味がわいてきた方" }
+                            ]
+                        },
+                        {
+                            "talk-id": 5,
+                            "title": "クラウド環境におけるWebアプリケーションの正しい作り方(for Perl users)",
+                            "speaker": "照井 将士",
+                            "twitter": "marcy_terui",
+                            "github": "marcy-terui",
+                            "rowspan": 1,
+                            "slide": "http://www.slideshare.net/marcyterui/webfor-perl-users",
+                            "time": "40min",
+                            "contents": [
+                                { "content": "クラウドの普及により、Webアプリケーションの載っているサーバのスケールアップ（スペックアップ）やスケールアウト（サーバ追加）が簡単にできるようになりました。" },
+                                { "content": "しかし、AWSやGCPといったクラウドに関連するお仕事をメインでやらせていただいている身からすると、安易なスケールアップやスケールアウトは利用料金が上がってしまい本来活かせるはずのコストメリットが薄くなってしまったり、スケールアップやスケールアウトをしても思うように性能が出ないというパターンが散見されます（スケールアウトについてはそもそもできない作りだったりすることも・・・）" },
+                                { "content": "また、便利なクラウドサービスの存在を知らない、使い方が分からないために、無駄な工数をかけてしまったり運用で苦労するような場面も見受けられます。" },
+                                { "content": "本セッションでは、ミドルウェアやデータベースの剪定から、適切にスケールアウトで性能を出すためのアプリケーションの実装、クラウドサービスを活かす設計例や考え方など、クラウドと上手く付き合うためのPerlによるWebアプリケーションの作り方をお話したいと思います。" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "14:40-14:50",
+                    "body": [
+                        { "title": "" }, { "title": "" }
+                    ]
+                },
+                {
+                    "head": "14:50-15:10",
+                    "body": [
+                        {
+                            "talk-id": 13,
+                            "title": "スペシャルセッション「今さら聞けない、でも聞きたい。クラウドの過去・現在・未来」",
+                            "speaker": "荒木靖宏、田中邦裕、久森達郎、福田潔、馮富久",
+                            "time": "60min",
+                            "rowspan": 3,
+                            "contents": [
+                                { "content": "詳細はこちらをご覧ください（別ウィンドウで開きます）", "link": true, "href": "http://yapcjapan.org/2016hokkaido/#special-session" }
+                            ]
+                        },
+                        {
+                            "talk-id": 14,
+                            "title": "CMS と API の素敵な関係",
+                            "speaker": "高山裕司",
+                            "twitter": "yuji",
+                            "github": "yuji",
+                            "time": "20min",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "レガシーなウェブアプリケーションである Movable Type に REST API が搭載されているのをご存知ですか？このセッションでは、CMS と REST API がいかに相性がよく、素敵なことができるのかを具体例を紹介しながら説明しようかなと思っています。" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "15:10-15:30",
+                    "body": [
+                        {
+                            "talk-id": 18,
+                            "title": "Vue.jsによるWebアプリケーション開発",
+                            "speaker": "千葉 誠",
+                            "twitter": "hypermkt",
+                            "github": "hypermkt",
+                            "slide": "https://speakerdeck.com/hypermkt/vue-dot-jsniyoruwebapurikesiyonkai-fa",
+                            "time": "20min",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "Vue.js はインタラクティブなWebインターフェースを構築するためのライブラリです。React.js、AngularJSに比べると知名度は劣るながらも、シンプルな設計かつ学習コストが低いことから人気が出始めています。PHPフレームワークのLarabel 5.3が公式フロントエンドライブラリとして Vue.js を採用したのは目新しいニュースです。" },
+                                { "content": "本トークではVue.jsを利用したWebアプリケーション開発の事例を交えながら" },
+                                { "content": "* Vue.js の魅力" },
+                                { "content": "* Vue.jsの現状" },
+                                { "content": "* 開発環境" },
+                                { "content": "* HTTP Client" },
+                                { "content": "* Validation" },
+                                { "content": "* コンポーネント" },
+                                { "content": "* フィルタ" },
+                                { "content": "* ミックスイン" },
+                                { "content": "* CSS" },
+                                { "content": "* Routing" },
+                                { "content": "* SPA" },
+                                { "content": "などの要素についてお話します。" },
+                                { "content": "また2016年09月24日現在では Vue.js 2.0 Release Candidate 6となっており新バージョンがリリース間近となっています。合わせて Vue.js 2.0 の新機能、主な変更点などのご紹介をしたいと思います。" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "15:30-15:50",
+                    "body": [
+                        {
+                            "talk-id": 19,
+                            "title": "頼りがいのあるORM「Aniki」徹底解説！",
+                            "speaker": "karupanerura",
+                            "twitter": "karupanerura",
+                            "github": "karupanerura",
+                            "rowspan": 1,
+                            "slide": "https://speakerdeck.com/karupanerura/lai-rigaifalsearuorm-aniki-che-di-jie-shuo",
+                            "time": "20min",
+                            "contents": [
+                                { "content": "頼りがいのあるORMとして絶賛売り出し中のAnikiというORMがあります。これはTengとDBICのいいとこ取りを狙った高機能かつ柔軟でシンプルなORMです。現在最新版の1.00がリリースされています。本セッションでは作者自らがTengやDBICとの比較をベースにAnikiの特徴を解説、そしてケース別の実装パターンを紹介します。" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "15:50-16:00",
+                    "body": [
+                        { "title": "" }, { "title": "" }
+                    ]
+                },
+                {
+                    "head": "16:00-16:20",
+                    "body": [
+                        {
+                            "talk-id": 20,
+                            "title": "モジュールメンテナンスを通して感じる最近の Perl",
+                            "speaker": "吉田昌平",
+                            "rowspan": 1,
+                            "twitter": "syohex",
+                            "github": "syohex",
+                            "slide": "https://speakerdeck.com/syohex/yapc-hokkaido-2016",
+                            "time": "20min",
+                            "contents": [
+                                { "content": "Perl, Emacs Lisp等多くのモジュール/パッケージをメンテナンスしている感じる最近の 状況, 不満, 要望について述べます." }
+                            ]
+                        },
+                        {
+                            "talk-id": 21,
+                            "title": "はてなのインフラ環境を自宅で再現する",
+                            "speaker": "masayoshi",
+                            "slide": "https://speakerdeck.com/masayoshi/hatenafalseinhurahuan-jing-wozi-zhai-dezai-xian-suru",
+                            "time": "20min",
+                            "twitter": "yoyogidesaiz",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "社内のオンプレ環境のサーバ構築、自動化など基盤部分を、自宅のサーバで構築、再現にチャレンジ!" },
+                                { "content": "既存の仕組み、組み合わせを触り、そして真似ることから、新しい仕組みを作ろうと挑戦をする" },
+                                { "content": "入社半年のインフラエンジニアの勉強方法をご紹介します。" },
+                                { "content": "" },
+                                { "content": "・対象者" },
+                                { "content": "     - インフラ技術や勉強方法に興味のある学生、アプリケーションエンジニア" },
+                                { "content": "" },
+                                { "content": "・ アジェンダ(予定)" },
+                                { "content": "  ・勉強は\"泥臭く\"、仕事は\"スマート\"に" },
+                                { "content": "      - 地雷を踏んだ数だけ強くなれる" },
+                                { "content": "      - 仕事は可能な限り地雷は避ける(避けたい...)" },
+                                { "content": "      - 自宅は最高の砂場" },
+                                { "content": "  ・ とりあえず\"触ってみる\"" },
+                                { "content": "      - 学生時代の勉強方法" },
+                                { "content": "      - 触るだけの限界" },
+                                { "content": "  ・ そして\"真似てみる\"" },
+                                { "content": "      - 実際に真似てみたインフラ基盤" },
+                                { "content": "      - システムを真似る" },
+                                { "content": "      - ミドルウェアを真似る" },
+                                { "content": "  ・ そこから新しい仕組みを\"作る\"へ" },
+                                { "content": "      - まずはちょっとした改善から" },
+                                { "content": "      - 真似てわかった問題点の抽象化と本質の把握" },
+                                { "content": "      - 作ることへの挑戦" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "16:20-16:40",
+                    "body": [
+                        {
+                            "talk-id": 22,
+                            "title": "LINE Bot on the Perl",
+                            "time": "20min",
+                            "speaker": "Yappo",
+                            "twitter": "yappo",
+                            "github": "yappo",
+                            "slide": "http://www.slideshare.net/kazuhiroosawa/line-bot-on-the-perl-yapchokkaido-ver",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "9月に LINE の Messaging API が公開されて、誰でも簡単に ChatOps で捗る LINE の Bot が開発できるようになりました。本セッションでは、 Perl を使って簡単に Bot を作成する方法の紹介や、 LINE Notify や Bot の GROUP 対応などを活用した ChatOps についてのアイディアなどを、長年 LINE Bot を開発してきた視点から皆様にお伝えしたいと思います。" }
+                            ]
+                        },
+                        {
+                            "talk-id": 23,
+                            "title": "PHPエンジニアが初めてPerlでWebアプリを作った話",
+                            "speaker": "不破崇行",
+                            "time": "20min",
+                            "twitter": "pacsolution",
+                            "slide": "http://www.slideshare.net/takayukifuwa/yapchokkaido-phpperlweb",
+                            "github": "yuesan",
+                            "rowspan": 1,
+                            "contents": [
+                                { "content": "ほとんどPerlを使ったことがない人間がPerlでWebアプリを作ったらどうなるのか？どこでハマるのか？などを実例を通しながらお話しします。「これからPerlでWebアプリ開発するんだけど」という人向けのお話が中心になります。" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "head": "16:50-17:30",
+                    "body": [
+                        {
+                            "talk-id": 24,
+                            "title": "Delivering a CDN",
+                            "speaker": "Tatsuhiko Miyagawa",
+                            "rowspan": 1,
+                            "time": "40min",
+                            "twitter": "miyagawa",
+                            "github": "miyagawa",
+                            "contents": [
+                                { "content": "TBD" }
+                            ]
+                        },
+                        { "title": "Closed", "rowspan": 6 }
+                    ]
+                },
+                {
+                    "head": "17:30-17:40",
+                    "body": [
+                        { "title": "" }
+                    ]
+                },
+                {
+                    "head": "17:40-18:20",
+                    "body": [
+                        {
+                            "title": "Lightning Talks",
+                            "rowspan": 1
+                        }
+                    ]
+                },
+                {
+                    "head": "18:20-18:30",
+                    "body": [
+                        {
+                            "title": "クロージング",
+                            "time": "10min",
+                            "speaker": "nekokak",
+                            "rowspan": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "box-single": true,
+    "include-sponsors": true,
+    "sections": [
+        {
+            "id": "sponsors",
+            "title": "Sponsors"
+        }
+    ]
+}
