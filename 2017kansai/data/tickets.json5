@@ -1,0 +1,39 @@
+{
+  "ticket-groups": [
+    {
+      name: "YAPC::Kansai 2017 OSAKA 03/03 前夜祭",
+      tickets: [
+        {
+          id:    "017knhypz1d8",
+          name:  "前夜祭参加チケット",
+          class: "sold-out"
+        },
+      ],
+    },
+    {
+      name: "YAPC::Kansai 2017 OSAKA 03/04",
+      tickets: [
+        {
+          id:    "01fna3ynfjpw",
+          name:  "一般・学生チケット（Tシャツつき）",
+          class: "sold-out"
+        },
+        {
+          id:    "01a5wpynfjkd",
+          name:  "個人スポンサーチケット",
+          class: "sold-out"
+        },
+      ],
+    },
+    {
+      name: "YAPC::Kansai 2017 OSAKA 03/04 懇親会",
+      tickets: [
+        {
+          id:    "0168cjyp5rb5",
+          name:  "一般・学生チケット",
+          class: "sold-out"
+        },
+      ],
+    },
+  ],
+}

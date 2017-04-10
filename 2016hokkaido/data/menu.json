@@ -1,0 +1,54 @@
+{
+    "menu": [
+        {
+            "url": "/2016hokkaido/",
+            "title": "Home",
+            "blank": false
+        },
+        {
+            "url": "index.html#about",
+            "title": "About",
+            "blank": false
+        },
+        {
+            "url": "index.html#news",
+            "title": "News",
+            "blank": false
+        },
+        {
+            "url": "http://blog.yapcjapan.org/",
+            "title": "Blog",
+            "blank": true
+        },
+        {
+            "url": "timetable.html",
+            "title": "Timetable",
+            "blank": false
+        },
+        {
+            "url": "index.html#tickets",
+            "title": "Tickets",
+            "blank": false
+        },
+        {
+            "url": "sponsors.html",
+            "title": "Sponsors",
+            "blank": false
+        },
+        {
+            "url": "individual-sponsors.html",
+            "title": "Individual Sponsors",
+            "blank": false
+        },
+        {
+            "url": "staff.html",
+            "title": "Staff",
+            "blank": false
+        },
+        {
+            "url": "code-of-conduct.html",
+            "title": "Code of Conduct",
+            "blank": false
+        }
+    ]
+}

@@ -1,0 +1,148 @@
+{
+    "box-single": true,
+    "include-individual-sponsors": true,
+    "sections": [
+        {
+            "id": "individual-sponsors",
+            "title": "Individual Sponsors",
+            "sponsors": [
+                {
+                    "url": "https://twitter.com/ar_tama",
+                    "asset": "ar_tama.jpg"
+                },
+                {
+                    "url": "https://twitter.com/oyomeni_onihime",
+                    "asset": "oyomeni_onihime.jpeg"
+                },
+                {
+                    "url": "https://twitter.com/sho130",
+                    "asset": "sho130.jpg"
+                },
+                {
+                    "url": "https://twitter.com/RicoImazu",
+                    "asset": "rico.png"
+                },
+                {
+                    "url": "https://twitter.com/sironekotoro",
+                    "asset": "nekodot.png"
+                },
+                {
+                    "url": "https://twitter.com/xtetsuji",
+                    "asset": "xtetsuji.png"
+                },
+                {
+                    "url": "https://twitter.com/Cside_",
+                    "asset": "cside_.png"
+                },
+                {
+                    "url": "https://twitter.com/__munepom__",
+                    "asset": "munepom.jpg"
+                },
+                {
+                    "url": "https://twitter.com/kaz_hiramatsu",
+                    "asset": "kaz_hiramatsu.jpeg"
+                },
+                {
+                    "url": "https://twitter.com/nqounet",
+                    "asset": "nqounet.jpg"
+                },
+                {
+                    "url": "https://twitter.com/toku_bass",
+                    "asset": "toku_bass.png"
+                },
+                {
+                    "url": "https://twitter.com/d_tsuru",
+                    "asset": "d_tsuru.png"
+                },
+                {
+                    "url": "https://twitter.com/hide_o_55",
+                    "asset": "hide_o_55.png"
+                },
+                {
+                    "url": "https://twitter.com/hondallica",
+                    "asset": "hondallica.jpeg"
+                },
+                {
+                    "url": "https://twitter.com/syohex",
+                    "asset": "syohex.jpg"
+                },
+                {
+                    "url": "https://www.facebook.com/aya.myzr",
+                    "asset": "aya_myzr.jpg"
+                },
+                {
+                    "url": "https://twitter.com/abenben",
+                    "asset": "abenben.png"
+                },
+                {
+                    "url": "https://twitter.com/maka2_donzoko",
+                    "asset": "maka2_donzoko.png"
+                },
+                {
+                    "url": "https://twitter.com/lapis25",
+                    "asset": "lapis25.png"
+                },
+                {
+                    "url": "https://twitter.com/likk",
+                    "asset": "likk.jpg"
+                },
+                {
+                    "url": "https://github.com/jamadam",
+                    "asset": "jamadam.jpeg"
+                },
+                {
+                    "url": "https://twitter.com/aloelight",
+                    "asset": "aloelight.jpg"
+                },
+                {
+                    "url": "https://twitter.com/ohshima",
+                    "asset": "ohshima.jpg"
+                },
+                {
+                    "url": "https://twitter.com/hisaichi5518",
+                    "asset": "hisaichi5518.png"
+                },
+                {
+                    "url": "https://www.facebook.com/takayuki.fuwa",
+                    "asset": "takayuki_fuwa.jpg"
+                },
+                {
+                    "url": "https://twitter.com/marcy_terui",
+                    "asset": "marcy_terui.jpeg"
+                },
+                {
+                    "url": "https://twitter.com/ikasam_a",
+                    "asset": "ikasam_a.jpeg"
+                },
+                {
+                    "url": "https://twitter.com/pomsuke03",
+                    "asset": "pomsuke03.jpeg"
+                },
+                {
+                    "url": "https://twitter.com/jitsu",
+                    "asset": "jitsu.jpg"
+                },
+                {
+                    "url": "https://twitter.com/__papix__",
+                    "asset": "papix.jpg"
+                },
+                {
+                    "url": "https://twitter.com/saiken3110",
+                    "asset": "saiken3110.jpg"
+                },
+                {
+                    "url": "https://twitter.com/isseiel",
+                    "asset": "isseiel.jpg"
+                },
+                {
+                    "url": "https://twitter.com/inazawa32",
+                    "asset": "inazawa32.jpg"
+                },
+                {
+                    "url": "https://twitter.com/941",
+                    "asset": "941.jpg"
+                }
+            ]
+        }
+    ]
+}

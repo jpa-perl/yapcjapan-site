@@ -1,0 +1,70 @@
+<h3 class="title">{{page-title}}</h3>
+{{=<% %>=}}
+<div id="timetable" class="section">
+  <div class="body">
+    <table>
+      <thead>
+        <tr>
+          <th>時刻</th>
+          <th v-for="track in tracks">{{ track.name }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>10:00 ~ 10:10</th>
+          <td>Opening</td>
+          <td v-bind:colspan="tracks.length-1"></td>
+        </tr>
+        <tr>
+          <th>10:10 ~ 10:20</th>
+          <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+        </tr>
+        <tr v-for="row in timetable">
+          <th>{{ row.label }}</th>
+          <td v-for="track in tracks" v-if="!row.breakTime && track.id in row.tracks" v-bind:class="{highlight:row.tracks[track.id].highlight}" v-bind:rowspan="row.tracks[track.id].rowspan">
+            <a v-on:click="openModal(row.tracks[track.id])">{{ row.tracks[track.id].title }}</a> ({{ row.tracks[track.id].durationMinutes }}min)<br />
+            {{ row.tracks[track.id].author.name }}
+          </td>
+          <td v-if="row.breakTime" v-bind:colspan="row.breakTimeColspan"><!-- 休憩 --></td>
+        </tr>
+        <tr>
+          <th>17:00 ~ 17:10</th>
+          <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+        </tr>
+        <tr>
+          <th>17:10 ~ 17:40</th>
+          <td>
+            Lightning Talks (30min)<br />
+            <ol>
+              <li>八雲アナグラ</li>
+              <li>おさ</li>
+              <li>azumakuniyuki</li>
+              <li>白方 健太郎</li>
+              <li>i47_rozary</li>
+              <li>makamaka</li>
+            </ol>
+          </td>
+          <td v-bind:colspan="tracks.length-1"></td>
+        </tr>
+        <tr>
+          <th>17:40 ~ 17:45</th>
+          <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+        </tr>
+        <tr>
+          <th>17:45 ~ 18:50</th>
+          <td>
+            <a href="./#guest-speakers">Keynote: 竹迫 良範 (60min) with Keynote Sponsor</a><br />
+            竹迫 良範
+          </td>
+          <td v-bind:colspan="tracks.length-1"></td>
+        </tr>
+        <tr>
+          <th>18:50 ~ 19:00</th>
+          <td>Closing</td>
+          <td v-bind:colspan="tracks.length-1"></td>
+        </tr>
+      </thead>
+    </table>
+  </div><!--  / .body /  -->
+</div><!--  / .section /  -->
+<%={{ }}=%>

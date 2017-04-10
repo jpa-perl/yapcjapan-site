@@ -1,0 +1,40 @@
+{
+    "lead": true,
+    "sections": [
+        {
+            "id": "news",
+            "title": "News",
+            "include-news": true
+        },
+        {
+            "id": "tickets",
+            "title": "Tickets",
+            "include-tickets": true
+        },
+        {
+            "id": "about",
+            "title": "About",
+            "include-about": true
+        },
+        {
+            "id": "sponsors",
+            "title": "Sponsors",
+            "include-sponsors": true
+        },
+        {
+            "id": "guest-speakers",
+            "title": "Guest Speakers",
+            "include-guest": true
+        },
+        {
+            "id": "special-session",
+            "title": "Special Session",
+            "include-special-session": true
+        },
+        {
+            "id": "access",
+            "title": "Access",
+            "include-access": true
+        }
+    ]
+}

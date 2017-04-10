@@ -1,0 +1,10 @@
+{
+    "box-single": true,
+    "include-code-of-conduct": true,
+    "sections": [
+        {
+            "id": "code-of-conduct",
+            "title": "行動規範"
+        }
+    ]
+}

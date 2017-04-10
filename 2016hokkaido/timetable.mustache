@@ -1,0 +1,44 @@
+<div class="">
+    <table>
+        <thead>
+            <th>会場</th>
+            <td><span class="hall">A会場</span></td>
+            <td><span class="hall">B会場</span></td>
+        </thead>
+        <tbody>
+            {{#talks}}
+                <tr>
+                    <th>{{head}}</th>
+                    {{#body}}
+                        <td rowspan="{{rowspan}}">
+                            {{#talk-id}}
+                                <a href="#" class="talk-detail {{talk-id}}">
+                                    {{#time}}
+                                        {{title}} ({{time}})
+                                    {{/time}}
+                                    {{^time}}
+                                        {{title}}
+                                    {{/time}}
+                                </a>
+                            {{/talk-id}}
+                            {{^talk-id}}
+                                {{#time}}
+                                    {{title}} ({{time}})
+                                {{/time}}
+                                {{^time}}
+                                    {{title}}
+                                {{/time}}
+                            {{/talk-id}}
+                            <br>
+                            {{speaker}}
+                            <br>
+                            {{#slide}}
+                                <span style="font-size: 12px;">[<a href="{{slide}}" target="_blank">Slide</a>]</span>
+                            {{/slide}}
+                        </td>
+                    {{/body}}
+                </tr>
+            {{/talks}}
+        </tbody>
+    </table>
+</div>
