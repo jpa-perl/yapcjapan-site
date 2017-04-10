@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>YAPC::Kansai 2017 OSAKA - Timetable</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。" />
+    <meta name="keywords" content="YAPC,ヤプシー,Perl,PM,Japan Perl Association,JPA,YAPC::Kansai,ヤプシー関西" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yapcjapan" />
+    <meta name="twitter:title" content="YAPC::Kansai 2017 OSAKA - Timetable" />
+    <meta name="twitter:description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。" />
+    <meta name="twitter:image" content="http://yapcjapan.org/2017kansai/assets/images/ogp_1200x600.png" />
+    <meta property="fb:app_id" content="546362158903970" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:site_name" content="YAPC::Kansai 2017 OSAKA" />
+    <meta property="og:title" content="YAPC::Kansai 2017 OSAKA - Timetable" />
+    <meta property="og:description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。" />
+    <meta property="og:url" content="http://yapcjapan.org/2017kansai/" />
+    <meta property="og:image" content="http://yapcjapan.org/2017kansai/assets/images/ogp_1200x600.png" />
+    <meta property="og:image" content="http://yapcjapan.org/2017kansai/assets/images/ogp_1200x1200.png" />
+    <meta name="referrer" content="unsafe-url" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900|Asap" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/fonts.css?cachebuster=454690" />
+    <link rel="stylesheet" href="./assets/css/html.css?cachebuster=495523" />
+    <link rel="stylesheet" media="(max-width: 899px)" href="./assets/css/html.sp.css?cachebuster=747480" />
+    <link rel="stylesheet" media="(min-width: 900px)" href="./assets/css/html.pc.css?cachebuster=613392" />
+    <link rel="stylesheet" href="./assets/css/custom.css?cachebuster=471990"/>
+  </head>
+  <body>
+    <a id="top" name="top"></a>
+
+    <header id="header">
+      <nav class="header">
+        <div class="btn-menu">
+          <a href="javascript:void(0)">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+        </div><!--  / .btn-menu /  -->
+      </nav>
+    </header>
+
+    <nav id="menu">
+      <div id="gnavi">
+        <div class="innerblock">
+          <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./#about">About</a></li>
+                <li><a href="./#news">News</a></li>
+                <li><a href="http://blog.yapcjapan.org/" target="_blank">Blog</a></li>
+                <li><a href="./timetable.html">Timetable</a></li>
+                <li><a href="./talks.html">Talks</a></li>
+                <li><a href="./#tickets">Tickets</a></li>
+                <li><a href="./#sponsors">Sponsors</a></li>
+                <li><a href="individual-sponsors.html">Individual Sponsors</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+          </ul>
+        </div><!--  / .innerblock /  -->
+      </div><!--  / #gnavi /  -->
+    </nav>
+
+    <div id="wrapper">
+      <div id="lead">
+        <h1>
+          <a href="/"><img src="./assets/images/header_logo.png" alt="YAPC::Kansai 2017 OSAKA / ヤプシー関西 2017 大阪" /></a>
+        </h1>
+        <h2><img src="./assets/images/header_date.gif" alt="2017.3.4 SAT / @MOTEX HALL" class="" /></h2>
+      </div><!--  / #lead /  -->
+
+      <div id="container">
+        <div class="box-top"><img src="./assets/images/box_top.gif" /></div>
+        <div class="box" style="padding-top: 45px">
+
+
+
+
+
+
+
+
+
+
+
+
+            <h3 class="title">Timetable</h3>
+            <div id="timetable" class="section">
+              <div class="body">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>時刻</th>
+                      <th v-for="track in tracks">{{ track.name }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>10:00 ~ 10:10</th>
+                      <td>Opening</td>
+                      <td v-bind:colspan="tracks.length-1"></td>
+                    </tr>
+                    <tr>
+                      <th>10:10 ~ 10:20</th>
+                      <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+                    </tr>
+                    <tr v-for="row in timetable">
+                      <th>{{ row.label }}</th>
+                      <td v-for="track in tracks" v-if="!row.breakTime && track.id in row.tracks" v-bind:class="{highlight:row.tracks[track.id].highlight}" v-bind:rowspan="row.tracks[track.id].rowspan">
+                        <a v-on:click="openModal(row.tracks[track.id])">{{ row.tracks[track.id].title }}</a> ({{ row.tracks[track.id].durationMinutes }}min)<br />
+                        {{ row.tracks[track.id].author.name }}
+                      </td>
+                      <td v-if="row.breakTime" v-bind:colspan="row.breakTimeColspan"><!-- 休憩 --></td>
+                    </tr>
+                    <tr>
+                      <th>17:00 ~ 17:10</th>
+                      <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+                    </tr>
+                    <tr>
+                      <th>17:10 ~ 17:40</th>
+                      <td>
+                        Lightning Talks (30min)<br />
+                        <ol>
+                          <li>八雲アナグラ</li>
+                          <li>おさ</li>
+                          <li>azumakuniyuki</li>
+                          <li>白方 健太郎</li>
+                          <li>i47_rozary</li>
+                          <li>makamaka</li>
+                        </ol>
+                      </td>
+                      <td v-bind:colspan="tracks.length-1"></td>
+                    </tr>
+                    <tr>
+                      <th>17:40 ~ 17:45</th>
+                      <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+                    </tr>
+                    <tr>
+                      <th>17:45 ~ 18:50</th>
+                      <td>
+                        <a href="./#guest-speakers">Keynote: 竹迫 良範 (60min) with Keynote Sponsor</a><br />
+                        竹迫 良範
+                      </td>
+                      <td v-bind:colspan="tracks.length-1"></td>
+                    </tr>
+                    <tr>
+                      <th>18:50 ~ 19:00</th>
+                      <td>Closing</td>
+                      <td v-bind:colspan="tracks.length-1"></td>
+                    </tr>
+                  </thead>
+                </table>
+              </div><!--  / .body /  -->
+            </div><!--  / .section /  -->
+
+
+        </div><!--  / .box /  -->
+        <div class="box-bottom"><img src="./assets/images/box_bottom.gif" /></div>
+      </div><!--  / #container /  -->
+
+      <aside><div id="footer-logo">YAPC::Kansai 2017 OSAKA</div></aside>
+
+      <footer>
+        <div id="footer">
+          <div class="inner">
+            <div class="social-button">
+              <ul>
+                <li><a href="https://twitter.com/yapcjapan" title="Twitter" target="_blank"><img src="./assets/images/btn_t.png" alt="Twitter" /></a></li>
+                <li><a href="https://www.facebook.com/yapcjapan/" title="Facebook" target="_blank"><img src="./assets/images/btn_f.png" alt="Facebook" /></a></li>
+              </ul>
+            </div><!--  / .social-button /  -->
+            <address>
+              <a href="http://japan.perlassociation.org/" target="_blank"><img src="./assets/images/jpa.png" alt="JPA" /></a>
+              © 2017 Japan Perl Association
+            </address>
+          </div><!--  / .inner /  -->
+        </div><!--  / #footer /  -->
+      </footer>
+      <div id="pagetop"><a href="#top"><i class="fa fa-caret-square-o-up"></i></a></div>
+    </div><!--  / #wrappper /  -->
+
+      <div id="talk-detail-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" v-if="render">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">{{ talk.title }} ({{ talk.time }})</h4>
+              <aside class="speaker">
+                <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
+                <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a v-if="talk.author.githubId"  v-bind:href="talk.author.githubUrl"  target="_blank"><i class="fa fa-github"  aria-hidden="true"></i></a>
+              </aside>
+            </div>
+            <div class="modal-body">
+              <pre class="description pre-scrollable">{{ talk.description }}</pre>
+              <aside class="time-and-place">
+                <a v-if="showTimetableLink" v-bind:href="talk.timetableUrl">タイムテーブル</a>
+                <dl>
+                  <dt>時間</dt>
+                  <dd>{{ talk.startAt }} ~ {{ talk.endAt }}</dd>
+                  <dt>会場</dt>
+                  <dd>{{ talk.track.name }}</dd>
+                </dl>
+              </aside>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
+    <script src="./assets/js/vendor/micro_dispatcher.js?cachebuster=455466"></script>
+    <script src="./assets/js/layout.js?cachebuster=459442"></script>
+    <script src="./assets/js/custom.js?cachebuster=502892"></script>
+  </body>
+</html>

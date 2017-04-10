@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/*//////////////////////////////////////////////////////////
+//  - CSS for HTML
+//////////////////////////////////////////////////////////*/
+
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #52321f;
+	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", "Lucida Grande", "Tahoma", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+	background: #76b6bf url(../images/base.jpg) fixed no-repeat center/cover;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+
+@media screen and (min-width: 900px) and (max-width: 931931px) {
+	body {
+		font-size: 16px !important;
+		line-height: 150% !important;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	body {
+		font-size: 14px !important;
+		line-height: 130% !important;
+		background: none;
+	}
+	body::before {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		content: "";
+		width: 100%;
+		height: 100vh;
+		background: #76b6bf url(../images/base.jpg) no-repeat 60%/cover;
+		-webkit-background-size: cover;
+		z-index: -1;
+	}
+}
+
+#wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+body > #wrapper { height: auto; }
+
+a 			{ color: #52321f; text-decoration: none; }
+a:link		{ color: #52321f; text-decoration: none; }
+a:visited	{ color: #52321f; text-decoration: none; }
+a:active	{ color: #52321f; text-decoration: none; }
+a:hover		{ color: #ffffff; text-decoration: none; }
+a.disabled	{ color: #555; }
+
+img { width: 100%; }
+
+
+/*----------------------------------------------------------
+  - CONTENTS
+----------------------------------------------------------*/
+
+#contents {
+	display: table;
+	width: 100%;
+/*	height: 90vh;*/
+	height: auto;
+	padding: 30px 0 50px 0;
+}
+
+#contents .inner {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+#contents .inner h1,
+#contents .inner h2 {
+	max-width: 508px;
+	padding: 0 20px;
+}
+#contents .inner h1 { margin: 0 auto 50px auto; }
+#contents .inner h2 { margin: 0 auto 25px auto; }
+#contents .inner h1 img,
+#contents .inner h2 img { max-width: 508px; }
+
+#contents .inner .access {
+	max-width: 222px;
+	margin: 0 auto;
+	padding: 0 100px;
+}
+#contents .inner .access img { max-width: 222px; }
+
+
+/*----------------------------------------------------------
+  - FOOTER
+----------------------------------------------------------*/
+
+#footer {
+	position: relative;
+	color: #fff;
+	width: 100%;
+	padding: 0 0 30px 0;
+}
+
+#footer a { color: #fff; }
+
+#footer .social-button {
+	position: relative;
+	margin: 0 auto 30px auto;
+	padding: 0;
+	_zoom: 1;
+	overflow: hidden;
+}
+#footer .social-button ul {
+	position: relative;
+	float: left;
+	left: 50%;
+}
+#footer .social-button li {
+	position: relative;
+	left: -50%;
+	float: left;
+	margin: 0 15px;
+}
+
+#footer address img {
+    max-width: 150px;
+    margin: auto;
+}
+
+#footer address {
+	font-size: 12px;
+	text-align: center;
+}
+
+@media screen and (min-width: 900px) and (max-width: 931931px) {
+	#footer .social-button li {
+		font-size: 40px;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	#footer .social-button li {
+		font-size: 30px;
+	}
+}
+
+#pagetop {
+	position: fixed;
+	line-height: 100%;
+	z-index: 99999;
+}
+
+#pagetop a {
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+#pagetop a:hover { text-decoration: none; }
+
+@media screen and (min-width: 900px) and (max-width: 931931px) {
+	#pagetop {
+		right: 30px;
+		bottom: 30px;
+	}
+	#pagetop a {
+		font-size: 50px;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	#pagetop {
+		right: 20px;
+		bottom: 20px;
+	}
+	#pagetop a {
+		font-size: 40px;
+	}
+}
+
+/*----------------------------------------------------------
+  - TBD
+----------------------------------------------------------*/
+
+.sample {
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+	-webkit-background-size: 35px 35px;
+	   -moz-background-size: 35px 35px;
+		    background-size: 35px 35px;
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	text-indent: -9999px;
+	text-decoration: none;
+	overflow: hidden;
+	_zoom: 1;
+	overflow: hidden;
+	filter:alpha(opacity=30);
+	-moz-opacity: 0.3;
+	opacity: 0.3;
+}
+
+
