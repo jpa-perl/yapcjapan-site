@@ -1,0 +1,11 @@
+
+@font-face {
+  font-family: 'FabioloSmallCap';
+  src: url('../fonts/FabioloSmallCap.eot?v=1.0');
+  src: url('../fonts/FabioloSmallCap.eot?#iefix&v=1.0') format('embedded-opentype'), url('../fonts/FabioloSmallCap.woff2?v=1.0') format('woff2'), url('../fonts/FabioloSmallCap.woff?v=1.0') format('woff'), url('../fonts/FabioloSmallCap.ttf?v=1.0') format('truetype'), url('../fonts/FabioloSmallCap.svg?v=1.0#FabioloSmallCap') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.FabioloSmallCap { font-family: "FabioloSmallCap"; }
+
