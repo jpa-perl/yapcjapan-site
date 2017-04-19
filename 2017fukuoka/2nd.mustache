@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YAPC::Fukuoka 2017 HAKATA - Individual Sponsors</title>
+    <title>YAPC::Fukuoka 2017 HAKATA{{#page-title}} - {{page-title}}{{/page-title}}</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。">
     <meta name="keywords" content="YAPC,ヤプシー,Perl,PM,Japan Perl Association,JPA,YAPC::Fukuoka,ヤプシー福岡">
@@ -25,9 +25,9 @@
     <meta name="referrer" content="unsafe-url">
     <meta name="referrer" content="unsafe-url">
     <link rel="shortcut icon" href="./assets/images/favicon.ico">
-    <link rel="stylesheet" href="./assets/css/style.css?cachebuster=455106"/>
-    <link rel="stylesheet" media="(max-width: 899px)" href="./assets/css/html.sp.css?cachebuster=866237">
-    <link rel="stylesheet" media="(min-width: 900px)" href="./assets/css/html.pc.css?cachebuster=724970">
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" media="(max-width: 899px)" href="./assets/css/html.sp.css">
+    <link rel="stylesheet" media="(min-width: 900px)" href="./assets/css/html.pc.css">
   </head>
   <body>
     <a id="top" name="top"></a>
@@ -42,17 +42,14 @@
       <div id="gnavi">
         <div class="innerblock">
           <ul>
-                <li><a href="./">Home</a></li>
-                <li><a href="./#about">About</a></li>
-                <li><a href="./#news">News</a></li>
-                <li><a href="http://blog.yapcjapan.org/" target="_blank">Blog</a></li>
-                <li><a href="#">Timetable</a></li>
-                <li><a href="#">Talks</a></li>
-                <li><a href="./#tickets">Tickets</a></li>
-                <li><a href="./#sponsors">Sponsors</a></li>
-                <li><a href="./individual-sponsors.html">Individual Sponsors</a></li>
-                <li><a href="./staff.html">Staff</a></li>
-                <li><a href="http://japan.perlassociation.org/entry/yapc/code_of_conduct" target="_blank">Code of Conduct</a></li>
+            {{#menu}}
+              {{#blank}}
+                <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+              {{/blank}}
+              {{^blank}}
+                <li><a href="{{url}}">{{title}}</a></li>
+              {{/blank}}
+            {{/menu}}
           </ul>
         </div><!--  / .innerblock /  -->
       </div><!--  / #gnavi /  -->
@@ -74,20 +71,37 @@
 
       <div id="container">
 
+        {{#include-buttons}}
+          {{> buttons}}
+        {{/include-buttons}}
 
+        {{#include-about}}
+          {{> about}}
+        {{/include-about}}
 
+        {{#include-news}}
+          {{> news}}
+        {{/include-news}}
 
+        {{#include-guest}}
+          {{> guest}}
+        {{/include-guest}}
 
+        {{#include-special-session}}
+          {{> special-session}}
+        {{/include-special-session}}
 
+        {{#include-sponsors}}
+          {{> sponsors}}
+        {{/include-sponsors}}
 
+        {{#include-staff}}
+          {{> staff}}
+        {{/include-staff}}
 
-          <h3 class="title">Individual Sponsors</h3>
-          <div id="individual-sponsors" class="section">
-            <div class="body">
-              <ul class="individual-sponsors">
-              </ul>
-            </div>
-          </div>
+        {{#include-individual-sponsors}}
+          {{> individual-sponsors}}
+        {{/include-individual-sponsors}}
 
       </div><!--  / #container /  -->
 
@@ -113,8 +127,8 @@
     </div><!--  / #wrappper /  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://use.fonticons.com/5bcff1b8.js"></script>
-    <script src="./assets/js/bootstrap.min.js?cachebuster=433887"></script>
-    <script src="./assets/js/parallax.min.js?cachebuster=448995"></script>
-    <script src="./assets/js/functions.js?cachebuster=466259"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/parallax.min.js"></script>
+    <script src="./assets/js/functions.js"></script>
   </body>
 </html>

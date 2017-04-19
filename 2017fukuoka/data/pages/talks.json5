@@ -1,0 +1,9 @@
+{
+  "page-title": "採択トーク一覧",
+
+  // partials
+  "include-talks": true,
+
+  // params
+  "type": "accepted",
+}

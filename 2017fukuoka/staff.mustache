@@ -1,0 +1,36 @@
+{{#corestaff@size}}
+<h3 class="title">コアスタッフ</h3>
+<div id="core-staff" class="section">
+  <div class="body">
+    <ul class="staff-list">
+      {{#corestaff}}
+        <li>
+          <a href="{{url}}" target="_blank">
+            <img src="assets/images/staff/core/{{asset}}"/>
+            <p>{{name}}</p>
+          </a>
+        </li>
+      {{/corestaff}}
+    </ul>
+  </div>
+</div>
+{{/corestaff@size}}
+
+{{#volunteers@size}}
+<h3 class="title">ボランティアスタッフ</h3>
+<div id="volunteer-staff" class="section">
+  <div class="body">
+    <ul class="staff-list">
+      {{#volunteers}}
+        <li class="">
+          <a href="{{url}}" target="_blank">
+            <img src="assets/images/staff/volunteers/{{asset}}"/>
+            <p>{{name}}</p>
+          </a>
+        </li>
+      {{/volunteers}}
+
+    </ul>
+  </div>
+</div>
+{{/volunteers@size}}
