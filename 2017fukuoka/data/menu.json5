@@ -21,12 +21,14 @@
       "blank": true
     },
     {
-      "url": "./timetable.html",
+      //"url": "./timetable.html",
+      "url": "#",
       "title": "Timetable",
       "blank": false
     },
     {
-      "url": "./talks.html",
+      //"url": "./talks.html",
+      "url": "#",
       "title": "Talks",
       "blank": false
     },
