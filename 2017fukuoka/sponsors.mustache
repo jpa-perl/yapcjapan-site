@@ -5,18 +5,6 @@
       Comming Soon...
     {{/sponsors}}
     {{#sponsors}}
-      {{#host@size}}
-        <div class="class">
-          <h4>主催</h4>
-          <div class="block">
-            <ul>
-              {{#host}}
-                {{> sponsor-large}}
-              {{/host}}
-            </ul>
-          </div>
-        </div>
-      {{/host@size}}
       {{#perl@size}}
         <div class="class">
           <h4>パール</h4>
@@ -197,6 +185,18 @@
           </div>
         </div>
       {{/media@size}}
+      {{#host@size}}
+        <div class="class">
+          <h4>主催</h4>
+          <div class="block">
+            <ul>
+              {{#host}}
+                {{> sponsor-medium}}
+              {{/host}}
+            </ul>
+          </div>
+        </div>
+      {{/host@size}}
     {{/sponsors}}
   </div><!--  / .body /  -->
 </div><!--  / .section /  -->
