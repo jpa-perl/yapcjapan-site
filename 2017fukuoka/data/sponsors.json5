@@ -2,20 +2,23 @@
   sponsors: {
     "perl": [
       { name: "株式会社ディー・エヌ・エー", asset: "dena.png",   url: "http://dena.com/jp/" },
+      { name: "LINE株式会社", asset: "line.png",   url: "https://engineering.linecorp.com/ja/" },
     ],
     "platinum": [
       { name: "株式会社ファームノート", asset: "farmnote.png", url: "http://farmnote.jp/index.html"},
     ],
     "gold": [
       { name: "株式会社フリークアウト", asset: "freakout.png", url: "https://www.fout.co.jp/freakout/" },
-    ],
-    "gold-jpa": [
       { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
     ],
     "silver": [
       { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
     ],
     "local": [
+      { name: "株式会社ヌーラボ", asset: "nulab.png", url: "https://nulab-inc.com/ja/" },
+      { name: "株式会社イーハイブ", asset: "i-hive.png", url: "http://www.i-hive.co.jp/" },
+      { name: "株式会社フィールズ", asset: "fiilse.png", url: "https://fiilse.com/" },
+      { name: "オンサイト株式会社", asset: "onsight.png", url: "http://on-sight.biz/" },
       { name: "株式会社ペンシル", asset: "pencil.png", url: "http://www.pencil.co.jp/" },
     ],
     "students": [
@@ -28,6 +31,12 @@
     ],
     "best-lt": [
       { name: "株式会社コルシス", asset: "colsis.png", url: "https://colsis.jp/" },
+    ],
+    "back-panel": [
+      { name: "株式会社はてな",       asset: "hatena.png",    url: "http://hatenacorp.jp/" },
+      { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
+      { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
+      { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
     ],
     // "venue": [
     // ],
