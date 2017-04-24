@@ -10,8 +10,13 @@
     margin-top: 20px;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+#button div {
+    margin: 5px 5px auto 5px;
 }
 
 .button a.btn {
