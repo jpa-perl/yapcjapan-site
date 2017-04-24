@@ -4,7 +4,7 @@
       name: "YAPC::Fukuoka 2017 HAKATA 06/30 前夜祭",
       tickets: [
         {
-          id:    "017knhypz1d8",
+          id:    "01an8myrc3t0",
           name:  "前夜祭参加チケット",
           class: "now-on-sale"
         },
@@ -29,7 +29,7 @@
       name: "YAPC::Fukuoka 2017 HAKATA 07/01 懇親会",
       tickets: [
         {
-          id:    "0168cjyp5rb5",
+          id:    "01pp1jyrc3uq",
           name:  "一般・学生チケット",
           class: "now-on-sale"
         },
