@@ -161,6 +161,30 @@
           </div>
         </div>
       {{/back-panel@size}}
+      {{#before-night-party-venue@size}}
+        <div class="class">
+          <h4>前夜祭会場提供</h4>
+          <div class="block">
+            <ul>
+              {{#before-night-party-venue}}
+                {{> sponsor-medium}}
+              {{/before-night-party-venue}}
+            </ul>
+          </div>
+        </div>
+      {{/before-night-party-venue@size}}
+      {{#venue@size}}
+        <div class="class">
+          <h4>カンファレンス会場提供</h4>
+          <div class="block">
+            <ul>
+              {{#venue}}
+                {{> sponsor-medium}}
+              {{/venue}}
+            </ul>
+          </div>
+        </div>
+      {{/venue@size}}
 
       {{#media@size}}
         <div class="class">
