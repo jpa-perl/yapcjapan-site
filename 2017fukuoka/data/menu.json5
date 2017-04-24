@@ -26,6 +26,7 @@
       "title": "Timetable",
       "blank": false
     },
+    /*
     {
       //"url": "./talks.html",
       "url": "#",
@@ -37,6 +38,7 @@
       "title": "Tickets",
       "blank": false
     },
+    */
     {
       "url": "./#sponsors",
       "title": "Sponsors",
