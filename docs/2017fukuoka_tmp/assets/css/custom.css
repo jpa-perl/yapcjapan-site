@@ -14,6 +14,11 @@
     align-items: center;
 }
 
+.button a.btn {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
 .button a.btn-info {
     color: #5bc0de;
     border: 2px solid #5bc0de;
@@ -22,15 +27,6 @@
 .button a.btn-success {
     color: #5cb85c;
     border: 2px solid #5cb85c;
-}
-
-.button a.btn {
-    background-color: #fff;
-    margin-bottom: 10px;
-}
-
-.button a.btn {
-    background-color: #fff;
 }
 
 .button a.btn-ticket {
@@ -51,6 +47,16 @@
 .button a.btn-talk {
   color:  #b85c5c;
   border: 2px solid #b85c5c;
+}
+
+.button a.btn-before-night-party {
+  color:  #b85cb8;
+  border: 2px solid #b85cb8;
+}
+
+.button a.btn-after-party {
+  color:  #9acd32;
+  border: 2px solid #9acd32;
 }
 
 /* About */
