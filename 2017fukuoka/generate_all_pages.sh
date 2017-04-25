@@ -3,7 +3,7 @@ set -ue
 
 cd $(dirname $0)
 
-OUTPUT_DIR=${OUTPUT_DIR:-"../docs/2017fukuoka_tmp"}
+OUTPUT_DIR=${OUTPUT_DIR:-"../docs/2017fukuoka"}
 
 common_data=`echo ./data/{menu,buttons}.json5`
 index_contents_data=`echo ./data/{sponsors,tickets}.json5`
