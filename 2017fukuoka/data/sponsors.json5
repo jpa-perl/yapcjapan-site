@@ -22,7 +22,7 @@
       { name: "株式会社ペンシル", asset: "pencil.png", url: "http://www.pencil.co.jp/" },
     ],
     "students": [
-      { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "http://www.kodamari.com/" },
+      { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
       { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
 
     ],
