@@ -1,8 +1,8 @@
-/**********************************************
-**
-** YAPC::Fukuoka Custom CSS
-**
-***********************************************/
+@charset "utf-8";
+
+/*//////////////////////////////////////////////////////////
+//  - YAPC::Fukuoka Custom CSS
+//////////////////////////////////////////////////////////*/
 
 /* buttons */
 
@@ -10,8 +10,18 @@
     margin-top: 20px;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+#button div {
+    margin: 5px 5px auto 5px;
+}
+
+.button a.btn {
+    background-color: #fff;
+    margin-bottom: 10px;
 }
 
 .button a.btn-info {
@@ -22,22 +32,6 @@
 .button a.btn-success {
     color: #5cb85c;
     border: 2px solid #5cb85c;
-}
-
-.button a.btn {
-    background-color: #fff;
-    margin-bottom: 10px;
-    /*  -webkit-border-radius: 0px;
-     *         -moz-border-radius: 0px;
-     *                  border-radius: 0px;*/
-}
-
-
-.button a.btn {
-    background-color: #fff;
-    /*  -webkit-border-radius: 0px;
-     *  -moz-border-radius: 0px;
-     *  border-radius: 0px;*/
 }
 
 .button a.btn-ticket {
@@ -60,15 +54,92 @@
   border: 2px solid #b85c5c;
 }
 
-/* code-of-conduct */
-#code-of-conduct p {
-  margin-bottom: 1em;
+.button a.btn-before-night-party {
+  color:  #b85cb8;
+  border: 2px solid #b85cb8;
 }
 
-/* about */
-#about p {
-  margin-bottom: 1em;
+.button a.btn-after-party {
+  color:  #9acd32;
+  border: 2px solid #9acd32;
 }
+
+/* About */
+
+#about dl {
+	display: table;
+	width: 100%;
+}
+
+#about dl dt {
+	display: table-cell;
+
+	width: 6em;
+	margin-bottom: 10px;
+	padding: 5px 10px;
+
+	font-size: 16px;
+	letter-spacing: 0.1em;
+}
+
+#about dl dd {
+	display: table-cell;
+}
+
+/* Sponsors */
+
+#sponsors .class h4 {
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0;
+	padding: 10px 0;
+}
+
+#sponsors .class .block {
+	_zoom: 1;
+	overflow: hidden;
+}
+
+#sponsors .class .block ul {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+#sponsors .class .block ul li {
+	float: left;
+	text-align: center;
+	margin: 0 10px 10px 0;
+  background-color: #fff;
+}
+
+#sponsors .class .block ul li img {
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+	border: 2px solid #000;
+}
+#sponsors .class .block ul li a:hover img { border: 2px solid #ff0000; }
+
+#sponsors .class .block ul li.large img { width: 180px; }
+#sponsors .class .block ul li.medium img { width: 140px; }
+#sponsors .class .block ul li.small img { width: 100px; }
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	#sponsors .class .block ul li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		float: left;
+		text-align: center;
+		margin: 0 10px 10px 0;
+    background-color: #fff;
+	}
+	#sponsors .class .block ul li.large { float: none; width: 220px; margin: 0 auto 10px auto; }
+	#sponsors .class .block ul li.medium { width: 130px; }
+	#sponsors .class .block ul li.small { width: 100px; }
+	#sponsors .class .block ul li img { width: 100% !important; height: auto; }
+}
+
 
 /* tickets */
 
@@ -94,99 +165,4 @@
 
 #tickets li.ticket em.sold-out {
   margin-left: 1em;
-}
-
-/* talks */
-.talk-detail {
-  margin-bottom: 1em;
-}
-
-.talk-detail aside.speaker {
-  display: block;
-  max-width: 800px;
-  text-align: right;
-  margin: 5px 0;
-}
-
-.talk-detail .description {
-  white-space: pre-wrap;
-  padding: 0.5em;
-}
-
-/* staff list */
-ul.staff-list {
-  list-style-type: none;
-}
-
-ul.staff-list > li {
-  display: inline-block;
-}
-
-ul.staff-list > li img {
-  width: 120px;
-}
-
-/* staff list */
-ul.individual-sponsors {
-  list-style-type: none;
-}
-
-ul.individual-sponsors > li {
-  display: inline-block;
-  margin: 0 15px 15px 0;
-}
-
-ul.individual-sponsors > li img {
-  width: 120px;
-}
-ul.individual-sponsors > li i {
-  color: black;
-}
-
-/* special session */
-#special-session h4.title {
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-#special-session article.description > p {
-  margin-bottom: 1em;
-}
-
-/* timetable */
-
-#timetable table {
-  table-layout: fixed;
-  font-size: 14px;
-  border: 1px solid #aaaaaa;
-  width: 100%;
-}
-
-#timetable th, #timetable td {
-  border: 1px solid #aaaaaa;
-  padding: 5px;
-}
-
-#caption {
-    color: #333;
-    font-size: 14px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 70px;
-}
-
-#caption div {
-    width: 80%;
-    text-align: center;
-}
-
-#caption .head {
-    font-size: 20px;
-    line-height: 160%;
-}
-
-.caption p {
-    margin-bottom: 20px;
 }
