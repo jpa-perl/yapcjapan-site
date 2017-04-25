@@ -115,6 +115,12 @@ $(document).ready(function() {
 		$('.iframe iframe').css('pointer-events', 'auto');
 	});
 
+    $('.navbar-nav li').on('click', function(){
+        if (window.innerWidth <= 899) {
+            $('#header .header .btn-menu a').click();
+        }
+    });
+
 });
 
 // RELAYOUT

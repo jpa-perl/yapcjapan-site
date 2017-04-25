@@ -41,10 +41,10 @@
     <nav id="menu">
       <div id="gnavi">
         <div class="innerblock">
-          <ul>
+          <ul class="navbar-nav">
             {{#menu}}
               {{#blank}}
-                <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{url}}" target="_blank">{{title}}</a></li>
               {{/blank}}
               {{^blank}}
                 <li><a href="{{url}}">{{title}}</a></li>
