@@ -1,0 +1,39 @@
+{
+  "ticket-groups": [
+    {
+      name: "YAPC::Fukuoka 2017 HAKATA 06/30 前夜祭",
+      tickets: [
+        {
+          id:    "01an8myrc3t0",
+          name:  "前夜祭参加チケット",
+          class: "now-on-sale"
+        },
+      ],
+    },
+    {
+      name: "YAPC::Fukuoka 2017 HAKATA 07/01",
+      tickets: [
+        {
+          id:    "01imfcyraxau",
+          name:  "一般・学生チケット",
+          class: "now-on-sale"
+        },
+        {
+          id:    "018h1nyrc3vh",
+          name:  "個人スポンサーチケット",
+          class: "now-on-sale"
+        },
+      ],
+    },
+    {
+      name: "YAPC::Fukuoka 2017 HAKATA 07/01 懇親会",
+      tickets: [
+        {
+          id:    "01pp1jyrc3uq",
+          name:  "一般・学生チケット",
+          class: "now-on-sale"
+        },
+      ],
+    },
+  ],
+}

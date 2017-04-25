@@ -1,0 +1,18 @@
+<h3 class="title">Tickets</h3>
+<div id="tickets" class="section">
+  <div class="body">
+    {{#ticket-groups}}
+    <h4>{{name}}</h4>
+    <ul>
+      {{#tickets}}
+      <li class="ticket">
+        <b class="{{class}}">
+          <a href="http://passmarket.yahoo.co.jp/event/show/detail/{{id}}.html" target="_blank">{{name}}</a>
+        </b>
+        <em class="annotation {{class}}">完売御礼</em>
+      </li>
+      {{/tickets}}
+    </ul>
+    {{/ticket-groups}}
+  </div><!--  / .body /  -->
+</div><!--  / .section /  -->

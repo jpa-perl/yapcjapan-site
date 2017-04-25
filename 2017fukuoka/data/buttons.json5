@@ -1,0 +1,11 @@
+{
+  buttons: [
+    { type: "ticket",             label: "一般・学生チケット",         blank: false, url: "https://passmarket.yahoo.co.jp/event/show/detail/01imfcyraxau.html" },
+    { type: "personal-sponsor",             label: "個人スポンサーチケット",         blank: false, url: "https://passmarket.yahoo.co.jp/event/show/detail/018h1nyrc3vh.html" },
+    { type: "before-night-party", label: "前夜祭チケット",             blank: true,  url: "https://passmarket.yahoo.co.jp/event/show/detail/01an8myrc3t0.html" },
+    { type: "after-party",        label: "懇親会チケット",             blank: true,  url: "https://passmarket.yahoo.co.jp/event/show/detail/01pp1jyrc3uq.html" },
+    { type: "talk",               label: "トーク応募",           blank: true,  url: "https://goo.gl/forms/awA1wENxY00dph3k2" },
+    //{ type: "best-talk",             label: "ベストトーク賞投票",   blank: true,  url: "#" },
+    // { type: "add-lt",                label: "LT応募",               blank: true,  url: "#" },
+  ],
+}
