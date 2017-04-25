@@ -1,0 +1,10 @@
+{
+  "page-title": "Staff",
+
+  // partials
+  "include-staff": true,
+
+  // contents
+  "corestaff": [
+  ],
+}
