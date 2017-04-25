@@ -2,61 +2,61 @@
   "menu": [
     {
       "url": "./",
-      "title": "Home",
+      "title": "HOME",
       "blank": false
     },
     {
       "url": "./#about",
-      "title": "About",
+      "title": "ABOUT",
       "blank": false
     },
     {
       "url": "./#news",
-      "title": "News",
+      "title": "NEWS",
       "blank": false
     },
     {
       "url": "http://blog.yapcjapan.org/",
-      "title": "Blog",
+      "title": "BLOG",
       "blank": true
     },
     /*
     {
       //"url": "./timetable.html",
       "url": "#",
-      "title": "Timetable",
+      "title": "TIMETABLE",
       "blank": false
     },
     {
       //"url": "./talks.html",
       "url": "#",
-      "title": "Talks",
+      "title": "TALKS",
       "blank": false
     },
     */
     {
       "url": "./#tickets",
-      "title": "Tickets",
+      "title": "TICKETS",
       "blank": false
     },
     {
       "url": "./#sponsors",
-      "title": "Sponsors",
+      "title": "SPONSORS",
       "blank": false
     },
     {
       "url": "./individual-sponsors.html",
-      "title": "Individual Sponsors",
+      "title": "INDIVIDUAL SPONSORS",
       "blank": false
     },
     {
       "url": "./staff.html",
-      "title": "Staff",
+      "title": "STAFF",
       "blank": false
     },
     {
       "url": "http://japan.perlassociation.org/entry/yapc/code_of_conduct",
-      "title": "Code of Conduct",
+      "title": "CODE OF CONDUCT",
       "blank": true
     },
   ]
