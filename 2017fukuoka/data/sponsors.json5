@@ -288,6 +288,10 @@
     //         }
     //     ]
     // }
+    "support": [
+      { name: "福岡市",              asset: "fukuoka_city.jpg", url: "https://www.city.fukuoka.lg.jp/" },
+      { name: "FITCO",              asset: "fitco.jpg", url: "http://www.fitco.jp/" },
+    ],
 
     "host": [
       { name: "Japan Perl Association", asset: "jpa.png",      url: "http://japan.perlassociation.org/" },
