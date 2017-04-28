@@ -292,6 +292,10 @@
       { name: "福岡市",              asset: "fukuoka_city.jpg", url: "https://www.city.fukuoka.lg.jp/" },
       { name: "FITCO",              asset: "fitco.jpg", url: "http://www.fitco.jp/" },
     ],
+    "special-thanks": [
+      { name: "にわかせんぺい本舗 東雲堂",              asset: "toundo.jpg", url: "http://store.toundo.co.jp/" },
+    ],
+
 
     "host": [
       { name: "Japan Perl Association", asset: "jpa.png",      url: "http://japan.perlassociation.org/" },
