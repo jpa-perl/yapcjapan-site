@@ -210,6 +210,18 @@
           </div>
         </div>
       {{/support@size}}
+      {{#special-thanks@size}}
+        <div class="class">
+          <h4>スペシャルサンクス</h4>
+          <div class="block">
+            <ul>
+              {{#special-thanks}}
+                {{> sponsor-medium}}
+              {{/special-thanks}}
+            </ul>
+          </div>
+        </div>
+      {{/special-thanks@size}}
 
       {{#host@size}}
         <div class="class">
