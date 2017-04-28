@@ -20,6 +20,7 @@
       { name: "株式会社フィールズ", asset: "fiilse.png", url: "https://fiilse.com/" },
       { name: "オンサイト株式会社", asset: "onsight.png", url: "http://on-sight.biz/" },
       { name: "株式会社ペンシル", asset: "pencil.png", url: "http://www.pencil.co.jp/" },
+      { name: "株式会社Fusic", asset: "fusic.png", url: "https://fusic.co.jp/" },
     ],
     "students": [
       { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
