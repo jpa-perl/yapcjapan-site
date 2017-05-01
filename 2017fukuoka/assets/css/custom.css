@@ -166,3 +166,20 @@
 #tickets li.ticket em.sold-out {
   margin-left: 1em;
 }
+
+/* individual sponsors */
+ul.individual-sponsors {
+  list-style-type: none;
+}
+
+ul.individual-sponsors > li {
+  display: inline-block;
+  margin: 0 15px 15px 0;
+}
+
+ul.individual-sponsors > li img {
+  width: 120px;
+}
+ul.individual-sponsors > li i {
+  color: black;
+}
