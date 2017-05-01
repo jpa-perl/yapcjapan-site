@@ -99,7 +99,7 @@
     },
     {
       name: "jamadam",
-      twitter: "https://github.com/jamadam",
+      github: "https://github.com/jamadam",
       url: "https://github.com/jamadam",
       asset: "jamadam.jpg"
     },
@@ -142,7 +142,7 @@
     },
     {
       name: "Songmu",
-      twitter: "https://github.com/Songmu",
+      github: "https://github.com/Songmu",
       url: "https://github.com/Songmu",
       asset: "songmu.jpg"
     },
