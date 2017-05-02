@@ -13,6 +13,7 @@
     ],
     "silver": [
       { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
+      { name: "株式会社ネコトーストラボ",     asset: "nekotoast.png",  url: "https://nekotoast-lab.com/" },
     ],
     "local": [
       { name: "株式会社ヌーラボ", asset: "nulab.png", url: "https://nulab-inc.com/ja/" },
@@ -21,6 +22,7 @@
       { name: "オンサイト株式会社", asset: "onsight.png", url: "http://on-sight.biz/" },
       { name: "株式会社ペンシル", asset: "pencil.png", url: "http://www.pencil.co.jp/" },
       { name: "株式会社Fusic", asset: "fusic.png", url: "https://fusic.co.jp/" },
+      { name: "ウミーベ株式会社", asset: "umeebe.png", url: "https://tsuriho.com/" },
     ],
     "students": [
       { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
