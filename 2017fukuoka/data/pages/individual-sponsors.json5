@@ -41,7 +41,7 @@
       name: "__papix__",
       twitter: "https://twitter.com/__papix__",
       url: "https://twitter.com/__papix__",
-      asset: "__papix__.jpg"
+      asset: "papix.jpg"
     },
     {
       name: "941",
@@ -113,7 +113,7 @@
       name: "_sfus",
       twitter: "https://twitter.com/_sfus",
       url: "https://twitter.com/_sfus",
-      asset: "_sfus.png"
+      asset: "sfus.png"
     },
     {
       name: "karupanerura",
@@ -132,7 +132,7 @@
       name: "Yasu-n",
       twitter: "https://twitter.com/_yasu_n",
       url: "https://twitter.com/_yasu_n",
-      asset: "_yasu_n.jpeg"
+      asset: "yasu_n.jpeg"
     },
     {
       name: "toku_bass",
