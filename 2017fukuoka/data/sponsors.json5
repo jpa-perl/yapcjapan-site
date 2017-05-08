@@ -37,13 +37,16 @@
     "best-lt": [
       { name: "株式会社コルシス", asset: "colsis.png", url: "https://colsis.jp/" },
     ],
+    "after-party": [
+      { name: "ピクシブ株式会社", asset: "pixiv.png", url: "http://www.pixiv.co.jp/" },
+    ],
     "back-panel": [
       { name: "株式会社はてな",       asset: "hatena.png",    url: "http://hatenacorp.jp/" },
       { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
       { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
       { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
     ],
-    "before-night-party-venue": [
+    "before-night-party": [
       { name: "株式会社ヌーラボ", asset: "nulab.png", url: "https://nulab-inc.com/ja/" },
     ],
     "venue": [
@@ -52,8 +55,6 @@
     // "venue": [
     // ],
     // "key-note": [
-    // ],
-    // "after-party": [
     // ],
     // "tote-bag": [
     // ],
