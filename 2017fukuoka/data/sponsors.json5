@@ -24,6 +24,7 @@
       { name: "株式会社Fusic", asset: "fusic.png", url: "https://fusic.co.jp/" },
       { name: "ウミーベ株式会社", asset: "umeebe.png", url: "https://tsuriho.com/" },
       { name: "株式会社キャッチアップ", asset: "catchup.png", url: "https://catchup.co.jp/" },
+      { name: "株式会社エニセンス", asset: "anysense.png", url: "http://anysense.co.jp/" },
     ],
     "students": [
       { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
