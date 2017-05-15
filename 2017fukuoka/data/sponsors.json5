@@ -10,13 +10,13 @@
     "gold": [
       { name: "株式会社フリークアウト", asset: "freakout.png", url: "https://www.fout.co.jp/freakout/" },
       { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
+      { name: "GMOペパボ株式会社", asset: "gmo_pepabo.png", url: "https://pepabo.com/" },
     ],
     "silver": [
       { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
       { name: "株式会社ネコトーストラボ",     asset: "nekotoast.png",  url: "https://nekotoast-lab.com/" },
     ],
     "local": [
-      { name: "株式会社ヌーラボ", asset: "nulab.png", url: "https://nulab-inc.com/ja/" },
       { name: "株式会社イーハイブ", asset: "i-hive.png", url: "http://www.i-hive.co.jp/" },
       { name: "株式会社フィールズ", asset: "fiilse.png", url: "https://fiilse.com/" },
       { name: "オンサイト株式会社", asset: "onsight.png", url: "http://on-sight.biz/" },
@@ -36,6 +36,9 @@
     ],
     "best-lt": [
       { name: "株式会社コルシス", asset: "colsis.png", url: "https://colsis.jp/" },
+    ],
+    "t-shirt": [
+      { name: "GMOペパボ株式会社", asset: "gmo_pepabo.png", url: "https://pepabo.com/" },
     ],
     "after-party": [
       { name: "ピクシブ株式会社", asset: "pixiv.png", url: "http://www.pixiv.co.jp/" },
