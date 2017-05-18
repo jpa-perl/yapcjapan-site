@@ -25,6 +25,8 @@
       { name: "ウミーベ株式会社", asset: "umeebe.png", url: "https://tsuriho.com/" },
       { name: "株式会社キャッチアップ", asset: "catchup.png", url: "https://catchup.co.jp/" },
       { name: "株式会社エニセンス", asset: "anysense.png", url: "http://anysense.co.jp/" },
+      { name: "有限会社ユニット・エムエスイー", asset: "unitmse.png", url: "http://www.unit-mse.co.jp/" },
+      { name: "さくらインターネット株式会社", asset: "sakura.png", url: "https://www.sakura.ad.jp/" },
     ],
     "students": [
       { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
@@ -48,6 +50,7 @@
       { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
       { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
       { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
+      { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
     ],
     "before-night-party": [
       { name: "株式会社ヌーラボ", asset: "nulab.png", url: "https://nulab-inc.com/ja/" },
