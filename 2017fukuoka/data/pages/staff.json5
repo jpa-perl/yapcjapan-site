@@ -23,6 +23,13 @@
       name: "papix",
     },
     {
+      url: "https://twitter.com/hrfmk",
+      twitter: "https://twitter.com/hrfmk",
+      github: "https://github.com/papix",
+      asset: "hrfmk.jpg",
+      name: "hrfmk",
+    },
+    {
       url: "https://twitter.com/ihive_ito",
       twitter: "https://twitter.com/ihive_ito",
       facebook: "https://www.facebook.com/itoken417",
