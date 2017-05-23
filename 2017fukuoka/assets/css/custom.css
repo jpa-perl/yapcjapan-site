@@ -183,4 +183,6 @@ ul.individual-sponsors > li img {
 }
 ul.individual-sponsors > li i {
   color: black;
+  float: left;
+  margin: 2px 0 0 2px;
 }
