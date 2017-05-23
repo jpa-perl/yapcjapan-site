@@ -231,6 +231,26 @@
       twitter: "https://twitter.com/tai_ga",
       url: "https://twitter.com/tai_ga",
       asset: "tai_ga.jpeg"
+    },
+    {
+      name: "treby006",
+      twitter: "https://twitter.com/treby006",
+      facebook: "https://www.facebook.com/Hiroaki.Ninomiya",
+      github: "https://github.com/treby",
+      url: "https://twitter.com/treby006",
+      asset: "treby006.jpg"
+    },
+    {
+      name: "hakata_oyuki",
+      twitter: "https://twitter.com/hakata_oyuki",
+      url: "https://twitter.com/hakata_oyuki",
+      asset: "hakata_oyuki.jpg"
+    },
+    {
+      name: "d_tsuru",
+      twitter: "https://twitter.com/d_tsuru",
+      url: "https://twitter.com/d_tsuru",
+      asset: "d_tsuru.png"
     }
   ],
 }
