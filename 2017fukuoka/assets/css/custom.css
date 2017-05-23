@@ -174,7 +174,8 @@ ul.individual-sponsors {
 
 ul.individual-sponsors > li {
   display: inline-block;
-  margin: 0 15px 15px 0;
+  margin: 0 20px 15px 10px;
+  float: left;
 }
 
 ul.individual-sponsors > li img {
