@@ -186,3 +186,28 @@ ul.individual-sponsors > li i {
   float: left;
   margin: 2px 0 0 2px;
 }
+
+/* staff list */
+ul.staff-list {
+  list-style-type: none;
+}
+
+ul.staff-list > li {
+  display: inline-block;
+  margin: 0 20px 15px 10px;
+  float: left;
+}
+
+ul.staff-list > li img {
+  width: 120px;
+}
+
+ul.staff-list > li p {
+  margin-bottom: 0px !important;
+}
+
+ul.staff-list > li i {
+  color: black !important;
+  float: left;
+  margin: 2px 0 0 2px;
+}
