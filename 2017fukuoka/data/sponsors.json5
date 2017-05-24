@@ -45,6 +45,9 @@
     "t-shirt": [
       { name: "GMOペパボ株式会社", asset: "gmo_pepabo.png", url: "https://pepabo.com/" },
     ],
+    "tote-bag": [
+      { name: "株式会社モバイルファクトリー", asset: "mobile_factory.png", url: "http://www.mobilefactory.jp/" },
+    ],
     "after-party": [
       { name: "ピクシブ株式会社", asset: "pixiv.png", url: "http://www.pixiv.co.jp/" },
     ],
