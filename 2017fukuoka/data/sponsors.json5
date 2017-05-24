@@ -11,6 +11,7 @@
       { name: "株式会社フリークアウト", asset: "freakout.png", url: "https://www.fout.co.jp/freakout/" },
       { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
       { name: "GMOペパボ株式会社", asset: "gmo_pepabo.png", url: "https://pepabo.com/" },
+      { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
     ],
     "silver": [
       { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
@@ -54,6 +55,7 @@
       { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
       { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
       { name: "株式会社サポーターズ",       asset: "supporterz.png",    url: "https://supporterzcolab.com/" },
+      { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
     ],
     "before-night-party": [
       { name: "株式会社ヌーラボ", asset: "nulab.png", url: "https://nulab-inc.com/ja/" },
