@@ -593,6 +593,13 @@ dd img { vertical-align: bottom; }
 	padding: 10px 0;
 }
 
+#container .section .row > div h5 {
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
+
 .gmap {
 	height: 380px;
 	vertical-align: bottom;
