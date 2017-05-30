@@ -35,7 +35,7 @@
       { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
       { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
       { name: "株式会社サポーターズ",       asset: "supporterz.png",    url: "https://supporterzcolab.com/" },
-
+      { name: "株式会社ファームノート", asset: "farmnote.png", url: "http://farmnote.jp/index.html"},
     ],
     "key-note": [
       { name: "株式会社ディー・エヌ・エー", asset: "dena.png",   url: "http://dena.com/jp/" },
