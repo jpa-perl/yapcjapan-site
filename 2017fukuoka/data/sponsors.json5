@@ -16,6 +16,7 @@
     "silver": [
       { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
       { name: "株式会社ネコトーストラボ",     asset: "nekotoast.png",  url: "https://nekotoast-lab.com/" },
+      { name: "Supership株式会社",     asset: "supership.png",  url: "https://supership.jp/" },
     ],
     "local": [
       { name: "株式会社イーハイブ", asset: "i-hive.png", url: "http://www.i-hive.co.jp/" },
@@ -36,6 +37,9 @@
       { name: "株式会社サポーターズ",       asset: "supporterz.png",    url: "https://supporterzcolab.com/" },
 
     ],
+    "key-note": [
+      { name: "株式会社ディー・エヌ・エー", asset: "dena.png",   url: "http://dena.com/jp/" },
+     ],
     "best-talk": [
       { name: "オンサイト株式会社", asset: "onsight.png", url: "http://on-sight.biz/" },
     ],
@@ -59,6 +63,9 @@
       { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
       { name: "株式会社サポーターズ",       asset: "supporterz.png",    url: "https://supporterzcolab.com/" },
       { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
+      { name: "ミクシィグループ", asset: "mixi.png", url: "https://mixi.co.jp/" },
+      { name: "株式会社Diverse", asset: "poiboy.png", url: "https://poiboy.jp/" },
+      { name: "XFLAG", asset: "xflag.png", url: "http://xflag.com/" },
     ],
     "before-night-party": [
       { name: "株式会社ヌーラボ", asset: "nulab.png", url: "https://nulab-inc.com/ja/" },
