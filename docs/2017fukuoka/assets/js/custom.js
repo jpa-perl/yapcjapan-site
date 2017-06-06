@@ -55,7 +55,6 @@
   }
 
   function parseEntry(entry) {
-    console.log(entry);
     return new Talk({
       id:          entry['gsx$id']['$t'],
       title:       entry['gsx$title']['$t'],
@@ -282,7 +281,6 @@
         }
       });
     });
-    console.log(location.pathname);
     dispatcher.dispatch(location.pathname);
   })();
 
