@@ -8,8 +8,8 @@ OUTPUT_DIR=${OUTPUT_DIR:-"../docs/2017fukuoka"}
 common_data=`echo ./data/{menu,buttons}.json5`
 index_contents_data=`echo ./data/{sponsors,tickets}.json5`
 
-# TODO: declare -a pages=(code-of-conduct individual-sponsors sponsors staff timetable)
-declare -a pages=(staff sponsors individual-sponsors)
+# TODO: declare -a pages=(code-of-conduct individual-sponsors sponsors staff talks timetable)
+declare -a pages=(staff sponsors individual-sponsors talks timetable)
 
 ../process_v2.pl ./template.mustache ./data/pages/index.json5 $common_data $index_contents_data > $OUTPUT_DIR/index.html
 echo "Created $OUTPUT_DIR/index.html"
