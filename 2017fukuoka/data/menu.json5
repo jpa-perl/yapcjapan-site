@@ -20,20 +20,17 @@
       "title": "BLOG",
       "blank": true
     },
-    /*
+
     {
-      //"url": "./timetable.html",
-      "url": "#",
+      "url": "./timetable.html",
       "title": "TIMETABLE",
       "blank": false
     },
     {
-      //"url": "./talks.html",
-      "url": "#",
+      "url": "./talks.html",
       "title": "TALKS",
       "blank": false
     },
-    */
     {
       "url": "./#tickets",
       "title": "TICKETS",
