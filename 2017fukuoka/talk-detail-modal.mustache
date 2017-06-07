@@ -1,0 +1,31 @@
+{{=<% %>=}}
+
+<div id="talk-detail-modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" v-if="render">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{{ talk.title }} ({{ talk.time }})</h4>
+        <aside class="speaker">
+          <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
+          <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a v-if="talk.author.githubId"  v-bind:href="talk.author.githubUrl"  target="_blank"><i class="fa fa-github"  aria-hidden="true"></i></a>
+        </aside>
+      </div>
+      <div class="modal-body">
+        <pre class="description pre-scrollable">{{ talk.description }}</pre>
+        <aside class="time-and-place">
+          <a v-if="showTimetableLink" v-bind:href="talk.timetableUrl">タイムテーブル</a>
+          <dl>
+            <dt>時間</dt>
+            <dd>{{ talk.startAt }} ~ {{ talk.endAt }}</dd>
+            <dt>会場</dt>
+            <dd>{{ talk.track.name }}</dd>
+          </dl>
+        </aside>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<%={{ }}=%>
