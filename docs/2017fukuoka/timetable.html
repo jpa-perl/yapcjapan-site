@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YAPC::Fukuoka 2017 HAKATA - Sponsors</title>
+    <title>YAPC::Fukuoka 2017 HAKATA - Timetable</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。">
     <meta name="keywords" content="YAPC,ヤプシー,Perl,PM,Japan Perl Association,JPA,YAPC::Fukuoka,ヤプシー福岡">
@@ -78,16 +78,87 @@
 
 
 
-          <h3 class="title">SPONSORS</h3>
-          <div class="section" id="sponsors">
+
+
+
+
+          <h3 class="title">Timetable</h3>
+          <div id="timetable" class="section">
             <div class="body">
-                Coming Soon...
+              <table>
+                <thead>
+                  <tr>
+                    <th>時刻</th>
+                    <th v-for="track in tracks">{{ track.name }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>09:30 ~ 09:45</th>
+                    <td>受付</td>
+                    <td v-bind:colspan="tracks.length-1"></td>
+                  </tr>
+                  <tr>
+                    <th>09:45 ~ 09:55</th>
+                    <td>Opening</td>
+                    <td v-bind:colspan="tracks.length-1"></td>
+                  </tr>
+                  <tr>
+                    <th>09:55 ~ 10:00</th>
+                    <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+                  </tr>
+                  <tr v-for="row in timetable">
+                    <th>{{ row.label }}</th>
+                    <td v-for="track in tracks" v-if="!row.breakTime && track.id in row.tracks" v-bind:class="{highlight:row.tracks[track.id].highlight}" v-bind:rowspan="row.tracks[track.id].rowspan">
+                      <a v-on:click="openModal(row.tracks[track.id])">{{ row.tracks[track.id].title }}</a> ({{ row.tracks[track.id].durationMinutes }}min)<br />
+                      {{ row.tracks[track.id].author.name }}
+                    </td>
+                    <td v-if="row.breakTime" v-bind:colspan="row.breakTimeColspan"><!-- 休憩 --></td>
+                  </tr>
+                  <tr>
+                    <th>17:00 ~ 17:05</th>
+                    <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+                  </tr>
+                  <tr>
+                    <th>17:05 ~ 17:15</th>
+                    <td>Sponsor Session</td>
+                    <td v-bind:colspan="tracks.length-1"></td>
+                  </tr>
+                  <tr>
+                    <th>17:15 ~ 17:45</th>
+                    <td>
+                      Lightning Talks (30min)
+                    </td>
+                    <td v-bind:colspan="tracks.length-1"></td>
+                  </tr>
+                  <tr>
+                    <th>17:45 ~ 17:55</th>
+                    <td>Sponsor Session</td>
+                    <td v-bind:colspan="tracks.length-1"></td>
+                  </tr>
+                  <tr>
+                    <th>17:55 ~ 18:00</th>
+                    <td v-bind:colspan="tracks.length"><!-- 休憩 --></td>
+                  </tr>
+                  <tr>
+                    <th>18:00 ~ 18:40</th>
+                    <td>
+                      <a href="./#guest-speakers">Keynote: 山本 竜三 (40min)</a><br />
+                      山本 竜三
+                    </td>
+                    <td v-bind:colspan="tracks.length-1"></td>
+                  </tr>
+                  <tr>
+                    <th>18:40 ~ 18:45</th>
+                    <td>
+                      Closing
+                    </td>
+                    <td v-bind:colspan="tracks.length-1"></td>
+                  </tr>
+                </thead>
+              </table>
             </div><!--  / .body /  -->
           </div><!--  / .section /  -->
-
-
-
-
 
       </div><!--  / #container /  -->
 
@@ -111,6 +182,35 @@
       </footer>
       <div id="pagetop"><a href="#top"><i class="fa fa-caret-square-o-up"></i></a></div>
     </div><!--  / #wrappper /  -->
+
+      <div id="talk-detail-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" v-if="render">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">{{ talk.title }} ({{ talk.time }})</h4>
+              <aside class="speaker">
+                <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
+                <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a v-if="talk.author.githubId"  v-bind:href="talk.author.githubUrl"  target="_blank"><i class="fa fa-github"  aria-hidden="true"></i></a>
+              </aside>
+            </div>
+            <div class="modal-body">
+              <pre class="description pre-scrollable">{{ talk.description }}</pre>
+              <aside class="time-and-place">
+                <a v-if="showTimetableLink" v-bind:href="talk.timetableUrl">タイムテーブル</a>
+                <dl>
+                  <dt>時間</dt>
+                  <dd>{{ talk.startAt }} ~ {{ talk.endAt }}</dd>
+                  <dt>会場</dt>
+                  <dd>{{ talk.track.name }}</dd>
+                </dl>
+              </aside>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.min.js?cachebuster=433887"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
