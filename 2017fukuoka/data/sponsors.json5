@@ -31,6 +31,9 @@
       { name: "さくらインターネット株式会社", asset: "sakura.png", url: "https://www.sakura.ad.jp/" },
       { name: "フロイデ株式会社", asset: "froide.png", url: "http://froide.co.jp/" },
     ],
+    "logo": [
+      { name: "AMIX", asset: "asobodesign.png", url: "https://asobo-design.com/nex/" },
+    ],
     "students": [
       { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
       { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
