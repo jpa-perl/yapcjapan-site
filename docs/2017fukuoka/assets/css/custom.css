@@ -64,6 +64,21 @@
   border: 2px solid #9acd32;
 }
 
+.button a.btn-before-night-party-lt {
+  color:  #9acd32;
+  border: 2px solid #9acd32;
+}
+
+.button a.btn-main-lt {
+  color:  #5d5cb8;
+  border: 2px solid #5d5cb8;
+}
+
+.button a.btn-best-talk {
+  color:  #b85c5c;
+  border: 2px solid #b85c5c;
+}
+
 /* About */
 
 #about dl {
