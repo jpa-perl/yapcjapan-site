@@ -5,7 +5,7 @@
     //{ type: "before-night-party", label: "前夜祭チケット",             blank: true,  url: "https://passmarket.yahoo.co.jp/event/show/detail/01an8myrc3t0.html" },
     //{ type: "after-party",        label: "懇親会チケット",             blank: true,  url: "https://passmarket.yahoo.co.jp/event/show/detail/01pp1jyrc3uq.html" },
     //{ type: "talk",               label: "トーク応募",           blank: true,  url: "https://goo.gl/forms/awA1wENxY00dph3k2" },
-    { type: "main-lt",                label: "本編LT応募(要参加チケット)",               blank: true,  url: "https://goo.gl/forms/V8VUZc6jCXxQ8kks1" },
+    { type: "main-lt",                label: "本編LT応募(要参加チケット)",               blank: true,  url: "https://goo.gl/forms/Sw8WIE7BCcPVRYwG3" },
     { type: "before-night-party-lt",               label: "前夜祭LTソン LT発表者登録(要前夜祭チケット)",           blank: true,  url: "https://atnd.org/events/88820" },
     //{ type: "best-talk",             label: "ベストトーク賞投票",   blank: true,  url: "#" },
     // { type: "add-lt",                label: "LT応募",               blank: true,  url: "#" },
