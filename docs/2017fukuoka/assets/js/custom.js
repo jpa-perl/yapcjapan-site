@@ -140,6 +140,15 @@
             isGuest: true
           }
         },
+        "12:50": {
+          "track-a": {
+            url: "#",
+            title: "ランチスポンサーセッション",
+            author: "",
+            durationMinutes: 50,
+            isGuest: true
+          },
+        },
         "13:40": {
           "track-a": {
             url: "./#guest-speakers",
