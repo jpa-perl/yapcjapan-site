@@ -148,6 +148,13 @@
             durationMinutes: 50,
             isGuest: true
           },
+          "track-b": {
+            url: "#",
+            title: false,
+            author: "",
+            durationMinutes: 50,
+            isGuest: true
+          }
         },
         "13:40": {
           "track-a": {
