@@ -20,6 +20,12 @@ body, #container {
   font-size: 40px;
   font-family: 'American Typewriter','Courier New', Courier, Monaco, mono;
   color: #00abff;
+  padding-top: 10px;
+}
+
+a {
+  color: #00abff;
+  text-decoration: none;
 }
 
 #container > hr {
