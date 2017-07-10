@@ -1,21 +1,25 @@
 body, #container {
-  width: 100%;
 }
 
 #container {
-  margin: 3px 0;
+	display: -webkit-flex; /*safari(PC)用*/
+  display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
-#container > img {
-  display: block;
-  margin: 0 auto;
-  max-width: 80%;
+.image_box {
+	text-align: center;
 }
+
+.image_box > img {
+	max-width: 80%;
+}
+
+
 
 #container > p {
-  display: block;
-  margin: 0 auto;
-  max-width: 80%;
   text-align: center;
   font-size: 40px;
   font-family: 'American Typewriter','Courier New', Courier, Monaco, mono;
@@ -28,9 +32,3 @@ a {
   text-decoration: none;
 }
 
-#container > hr {
-  display: block;
-  margin: 0 auto;
-  max-width: 80%;
-  border-width: 6px 0 0 0;
-}
