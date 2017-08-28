@@ -4,7 +4,8 @@
     // { type: "before-night-party", label: "前夜祭",               blank: true,  url: "http://passmarket.yahoo.co.jp/event/show/detail/017knhypz1d8.html" },
     // { type: "after-party",           label: "懇親会",               blank: true,  url: "http://passmarket.yahoo.co.jp/event/show/detail/0168cjyp5rb5.html" },
     // { type: "talk",               label: "トーク応募",           blank: true,  url: "https://docs.google.com/forms/d/e/1FAIpQLScN_xbmjQInvM12fx79_Lm89WAnuo57S7-27YLaSGnJb7S9_w/viewform" },
-    { type: "best-talk",             label: "ベストトーク賞投票",   blank: true,  url: "https://goo.gl/forms/2YW1JJ8Qonrpz2wA3" },
+    // { type: "best-talk",             label: "ベストトーク賞投票",   blank: true,  url: "https://goo.gl/forms/2YW1JJ8Qonrpz2wA3" },
     // { type: "add-lt",                label: "LT応募",               blank: true,  url: "https://goo.gl/0CittU" },
+    { type: "photo",                 label: "写真",                 blank: true,  url: "http://30d.jp/yapcjapan/1" },
   ],
 }
