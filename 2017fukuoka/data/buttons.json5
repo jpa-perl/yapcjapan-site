@@ -9,5 +9,6 @@
     //{ type: "before-night-party-lt",               label: "前夜祭LTソン LT発表者登録(要前夜祭チケット)",           blank: true,  url: "https://atnd.org/events/88820" },
     //{ type: "best-talk",             label: "ベストトーク賞投票",   blank: true,  url: "https://goo.gl/forms/oOAv0OnEKTMAOikI3" },
     // { type: "add-lt",                label: "LT応募",               blank: true,  url: "#" },
+    { type: "photo",                 label: "写真",                 blank: true,  url: "http://30d.jp/yapcjapan/2" },
   ],
 }
