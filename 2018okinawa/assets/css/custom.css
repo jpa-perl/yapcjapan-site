@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/*//////////////////////////////////////////////////////////
+//  - YAPC::Okinawa Custom CSS
+//////////////////////////////////////////////////////////*/
+
+/* buttons */
+
+#button {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button a.btn-info {
+    color: #5bc0de;
+    border: 2px solid #5bc0de;
+}
+
+.button a.btn-success {
+    color: #5cb85c;
+    border: 2px solid #5cb85c;
+}
+
+.button a.btn {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.button a.btn {
+    background-color: #fff;
+}
+
+.button a.btn-ticket {
+  color:  #5d5cb8;
+  border: 2px solid #5d5cb8;
+}
+
+.button a.btn-personal-sponsor {
+  color:  #5cb85c;
+  border: 2px solid #5cb85c;
+}
+
+.button a.btn-sponsor {
+  color:  #eb6210;
+  border: 2px solid #eb6210;
+}
+
+.button a.btn-talk {
+  color:  #b85c5c;
+  border: 2px solid #b85c5c;
+}
+
+/* About */
+
+#about dl {
+	display: table;
+	width: 100%;
+}
+
+#about dl dt {
+	display: table-cell;
+
+	width: 6em;
+	margin-bottom: 10px;
+	padding: 5px 10px;
+
+	font-size: 16px;
+	letter-spacing: 0.1em;
+}
+
+#about dl dd {
+	display: table-cell;
+}
+
+/* Sponsors */
+
+#sponsors .class h4 {
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0;
+	padding: 10px 0;
+}
+
+#sponsors .class .block {
+	margin-bottom: 20px;
+	_zoom: 1;
+	overflow: hidden;
+}
+
+#sponsors .class .block ul {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+#sponsors .class .block ul li {
+	float: left;
+	text-align: center;
+	margin: 0 10px 10px 0;
+}
+
+#sponsors .class .block ul li img {
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+	border: 2px solid #009fe8;
+}
+#sponsors .class .block ul li a:hover img { border: 2px solid #0dac67; }
+
+#sponsors .class .block ul li.large img { width: 140px; }
+#sponsors .class .block ul li.medium img { width: 100px; }
+#sponsors .class .block ul li.small img { width: 80px; }
+
+@media screen and (min-width: 0px) and (max-width: 899px) {
+	#sponsors .class .block ul li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		float: left;
+		text-align: center;
+		margin: 0 10px 10px 0;
+	}
+	#sponsors .class .block ul li.large { float: none; width: 180px; margin: 0 auto 10px auto; }
+	#sponsors .class .block ul li.medium { width: 100px; }
+	#sponsors .class .block ul li.small { width: 80px; }
+	#sponsors .class .block ul li img { width: 100% !important; height: auto; }
+}
+
+
+
+

@@ -1,0 +1,11 @@
+
+@font-face {
+  font-family: 'Typewriter';
+  src: url('../fonts/Typewriter-Regular.eot?v=1.0');
+  src: url('../fonts/Typewriter-Regular.eot?#iefix&v=1.0') format('embedded-opentype'), url('../fonts/Typewriter-Regular.woff2?v=1.0') format('woff2'), url('../fonts/Typewriter-Regular.woff?v=1.0') format('woff'), url('../fonts/Typewriter-Regular.ttf?v=1.0') format('truetype'), url('../fonts/Typewriter-Regular.svg?v=1.0#Typewriter-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Typewriter-Regular { font-family: "Typewriter"; }
+
