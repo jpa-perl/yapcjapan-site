@@ -8,5 +8,5 @@
   "include-guest": true,
   "include-special-session": true,
   "include-access": true,
-  "include-gmap": true,
+  "include-gmap": true, 
 }
