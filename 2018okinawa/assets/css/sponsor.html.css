@@ -20,7 +20,7 @@ body {
 body {
 	color: #fff;
 	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", "Lucida Grande", "Tahoma", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", "游明朝", "YuMincho", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
-	background-color: #2E9AFE;
+	background: #6497b5 url(../images/sponsor_base.png) repeat 0 0;
 	-webkit-background-size: 140px auto;
 	   -moz-background-size: 140px auto;
 		    background-size: 140px auto;
@@ -58,8 +58,7 @@ a 			{ color: #ffffff; text-decoration: none; }
 a:link		{ color: #ffffff; text-decoration: none; }
 a:visited	{ color: #ffffff; text-decoration: none; }
 a:active	{ color: #ffffff; text-decoration: none; }
-/*a:hover		{ color: #2E64FE; text-decoration: none; }*/
-a:hover		{ color: #2E9AFE; text-decoration: none; }
+a:hover		{ color: rgba(255,255,255,0.0); text-decoration: none; }
 a.disabled	{ color: #555; }
 
 img { width: 100%; }
