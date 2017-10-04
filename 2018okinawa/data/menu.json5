@@ -20,37 +20,43 @@
       "title": "BLOG",
       "blank": true
     },
+    
+    {
+      "url": "./sponsor_menu2.html",
+      "title": "SPONSOR MENU",
+      "blank": true
+    },
 
-    {
-      "url": "./timetable.html",
-      "title": "TIMETABLE",
-      "blank": false
-    },
-    {
-      "url": "./talks.html",
-      "title": "TALKS",
-      "blank": false
-    },
-    {
-      "url": "./#tickets",
-      "title": "TICKETS",
-      "blank": false
-    },
-    {
-      "url": "./#sponsors",
-      "title": "SPONSORS",
-      "blank": false
-    },
-    {
-      "url": "./individual-sponsors.html",
-      "title": "INDIVIDUAL SPONSORS",
-      "blank": false
-    },
-    {
-      "url": "./staff.html",
-      "title": "STAFF",
-      "blank": false
-    },
+   // {
+   //   "url": "./timetable.html",
+   //   "title": "TIMETABLE",
+   //   "blank": false
+   // },
+   // {
+   //   "url": "./talks.html",
+   //   "title": "TALKS",
+   //   "blank": false
+   // },
+   // {
+   //   "url": "./#tickets",
+   //   "title": "TICKETS",
+   //   "blank": false
+   // },
+   // {
+   //   "url": "./#sponsors",
+   //   "title": "SPONSORS",
+   //   "blank": false
+   // },
+   // {
+   //   "url": "./individual-sponsors.html",
+   //   "title": "INDIVIDUAL SPONSORS",
+   //   "blank": false
+   // },
+   // {
+   //   "url": "./staff.html",
+   //   "title": "STAFF",
+   //   "blank": false
+   // },
     {
       "url": "http://japan.perlassociation.org/entry/yapc/code_of_conduct",
       "title": "CODE OF CONDUCT",
