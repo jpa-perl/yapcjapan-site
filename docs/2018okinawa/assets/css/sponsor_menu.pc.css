@@ -302,7 +302,7 @@ dd img { vertical-align: bottom; }
 	position: relative;
 	width: 1000px;
 	max-width: 1000px;
-	min-height: 280px;
+	/*min-height: 280px;*/
 	margin: 0 auto;
 	padding: 0;
 }
