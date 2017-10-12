@@ -137,7 +137,8 @@
 ----------------------------------------------------------*/
 
 #sponsor-menu-link img {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  border: solid 3px;
 }
 
 #sponsor-menu-link b {
@@ -146,19 +147,31 @@
   text-align: center;
 }
 
+#container > #sponsor-menu .body {
+  padding: 6px 20px;
+}
+
+#sponsor-menu .body h4.title {
+  margin-bottom: 47px;
+  text-align: center;
+}
+
 #sponsor-menu .button {
-  margin: 30px 0;
+  margin: 36px 0;
   width: 100%;
   text-align: center;
 }
 
 #sponsor-menu .annotation, #sponsor-menu .history {
-  font-size: 14px;
+  font-size: 13px;
+  border-top: dashed 1px;
+  padding-top: 1em;
+  margin-bottom: 3em;
 }
 
 #sponsor-menu .annotation li {
   list-style-type: disc;
-  margin-left: 1.1em;
+  margin-left: 2em;
 }
 
 #sponsor-menu .history dt {
@@ -166,6 +179,6 @@
 }
 
 #sponsor-menu .history dd {
-  margin-top: 4px;
+  margin-top: 3px;
   padding-left: 2em;
 }
