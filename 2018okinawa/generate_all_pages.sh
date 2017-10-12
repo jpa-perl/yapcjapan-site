@@ -18,13 +18,13 @@ for page in ${pages[@]}; do
   echo "Created $OUTPUT_DIR/$page.html"
 done
 
+# process sponsor menu
+../process_v2.pl ./sponsor_menu.html > $OUTPUT_DIR/sponsor_menu.html
+echo "Created sponsor_menu.html to $OUTPUT_DIR/sponsor_menu.html"
+
 # copy custom assets
 find ./assets -type d -mindepth 1 -exec mkdir -p $OUTPUT_DIR/{} \;
 find ./assets -type f -mindepth 1 -exec cp {} $OUTPUT_DIR/{} \;
 echo "Copied assets to $OUTPUT_DIR/assets"
-
-# copy sponsor menu
-cp -f ./sponsor_menu.html $OUTPUT_DIR/sponsor_menu.html
-echo "Copied sponsor_menu.html to $OUTPUT_DIR/sponsor_menu.html"
 
 echo "Complete!"
