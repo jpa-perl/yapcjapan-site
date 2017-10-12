@@ -44,8 +44,8 @@
 }
 
 .button a.btn-sponsor {
-  color:  #eb6210;
-  border: 2px solid #eb6210;
+  color:  #379bc6;
+  border: 2px solid rgba(255,255,255,0.6);
 }
 
 .button a.btn-talk {
