@@ -131,3 +131,41 @@
 
 
 
+
+/*----------------------------------------------------------
+  Sponsor Menu
+----------------------------------------------------------*/
+
+#sponsor-menu-link img {
+  margin-bottom: 1em;
+}
+
+#sponsor-menu-link b {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#sponsor-menu .button {
+  margin: 30px 0;
+  width: 100%;
+  text-align: center;
+}
+
+#sponsor-menu .annotation, #sponsor-menu .history {
+  font-size: 14px;
+}
+
+#sponsor-menu .annotation li {
+  list-style-type: disc;
+  margin-left: 1.1em;
+}
+
+#sponsor-menu .history dt {
+  font-weight: bold;
+}
+
+#sponsor-menu .history dd {
+  margin-top: 4px;
+  padding-left: 2em;
+}
