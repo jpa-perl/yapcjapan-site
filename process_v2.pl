@@ -8,7 +8,7 @@ use Path::Tiny qw/path/;
 use JSON5 qw/decode_json5/;
 
 my ($tmpl_path, @data_path) = @ARGV;
-die "tmpl_path and data_path are needed\n" unless ($tmpl_path && @data_path);
+die "tmpl_path is required\n" unless $tmpl_path;
 main($tmpl_path, @data_path);
 exit 0;
 
@@ -24,7 +24,7 @@ sub main {
     }
 
     my $r = Template::Mustache->render($tmpl, filter_data(\%data));
-    $r =~ s!"(\./assets/[^"]+\.(?:css|js))"!'"'.$1.'?cachebuster='.pseudo_hash($1).'"'!meg;
+    $r =~ s!"(\./assets/[^"]+\.(?:css|js|gif|png|jpg|pdf))"!'"'.$1.'?cachebuster='.pseudo_hash($1).'"'!meg;
     print $r;
 }
 
@@ -36,7 +36,7 @@ sub pseudo_hash {
 
         my $context = 0x6F15A; # iv
         until (eof $fh) {
-            my $line = <$fh>;
+            read $fh, my $line, 16;
             $context += $.;
             $context ^= $_ for unpack 'W*', $line;
             $context ^= length $line;

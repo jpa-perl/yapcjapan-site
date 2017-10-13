@@ -1,0 +1,13 @@
+{
+  // partials
+  "include-menu": true,
+  "include-buttons": true,
+  "include-news": true,
+  "include-tickets": false,
+  "include-about": true,
+  "include-sponsors": false,
+  "include-guest": false,
+  "include-special-session": false,
+  "include-access": true,
+  "include-gmap": true,
+}
