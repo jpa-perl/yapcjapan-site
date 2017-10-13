@@ -36,7 +36,7 @@ sub pseudo_hash {
 
         my $context = 0x6F15A; # iv
         until (eof $fh) {
-            my $line = <$fh>;
+            read $fh, my $line, 16;
             $context += $.;
             $context ^= $_ for unpack 'W*', $line;
             $context ^= length $line;
