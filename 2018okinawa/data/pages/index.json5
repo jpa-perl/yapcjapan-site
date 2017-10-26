@@ -6,7 +6,7 @@
   "include-tickets": false,
   "include-about": true,
   "include-sponsors": false,
-  "include-guest": false,
+  "include-guest": true,
   "include-special-session": false,
   "include-access": true,
   "include-gmap": true,
