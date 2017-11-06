@@ -16,12 +16,12 @@
         {
           id:    "01imfcyraxau",
           name:  "一般・学生チケット",
-          class: "now-sele"
+          class: "now-on-sale"
         },
         {
           id:    "018h1nyrc3vh",
           name:  "個人スポンサーチケット",
-          class: "now-sele"
+          class: "now-on-sale"
         },
       ],
     },
@@ -31,7 +31,7 @@
         {
           id:    "01imfcyraxau",
           name:  "バスチケット",
-          class: "now-sele"
+          class: "now-on-sale"
         },
       ],
     },
