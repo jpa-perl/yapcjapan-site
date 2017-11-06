@@ -1,39 +1,49 @@
 {
   "ticket-groups": [
-    {
-      name: "YAPC::Okinawa 2018 ONNASON 03/03 前夜祭",
-      tickets: [
-        {
-          id:    "01an8myrc3t0",
-          name:  "前夜祭参加チケット",
-          class: "sold-out"
-        },
-      ],
-    },
+    //{
+    //  name: "YAPC::Okinawa 2018 ONNASON 03/03 前夜祭",
+    //  tickets: [
+    //    {
+    //      id:    "01an8myrc3t0",
+    //      name:  "前夜祭参加チケット",
+    //      class: "sold-out"
+    //    },
+    //  ],
+    //},
     {
       name: "YAPC::Okinawa 2018 ONNASON 03/03",
       tickets: [
         {
           id:    "01imfcyraxau",
           name:  "一般・学生チケット",
-          class: "sold-out"
+          class: "now-sele"
         },
         {
           id:    "018h1nyrc3vh",
           name:  "個人スポンサーチケット",
-          class: "sold-out"
+          class: "now-sele"
         },
       ],
     },
     {
-      name: "YAPC::Okinawa 2018 ONNASON 03/03懇親会",
+      name: "YAPC::Okinawa 2018 ONNASON 03/03 バス",
       tickets: [
         {
-          id:    "01pp1jyrc3uq",
-          name:  "一般・学生チケット",
-          class: "sold-out"
+          id:    "01imfcyraxau",
+          name:  "バスチケット",
+          class: "now-sele"
         },
       ],
     },
+    //{
+    //  name: "YAPC::Okinawa 2018 ONNASON 03/03懇親会",
+    //  tickets: [
+    //    {
+    //      id:    "01pp1jyrc3uq",
+    //      name:  "一般・学生チケット",
+    //      class: "sold-out"
+    //    },
+    //  ],
+    //},
   ],
 }
