@@ -14,12 +14,12 @@
       name: "YAPC::Okinawa 2018 ONNASON 03/03",
       tickets: [
         {
-          id:    "01imfcyraxau",
+          id:    "01dewpz7g87m",
           name:  "一般・学生チケット",
           class: "now-on-sale"
         },
         {
-          id:    "018h1nyrc3vh",
+          id:    "01h74dz7g92i",
           name:  "個人スポンサーチケット",
           class: "now-on-sale"
         },
@@ -29,7 +29,7 @@
       name: "YAPC::Okinawa 2018 ONNASON 03/03 バス",
       tickets: [
         {
-          id:    "01imfcyraxau",
+          id:    "017xe4z7g99k",
           name:  "バスチケット",
           class: "now-on-sale"
         },
