@@ -45,12 +45,17 @@
 
 .button a.btn-sponsor {
   color:  #379bc6;
-  border: 2px solid rgba(255,255,255,0.6);
+  border: 2px solid #379bc6;
 }
 
 .button a.btn-talk {
   color:  #b85c5c;
   border: 2px solid #b85c5c;
+}
+
+.button a.btn-bus {
+  color:  #379bc6;
+  border: 2px solid #379bc6;
 }
 
 /* About */

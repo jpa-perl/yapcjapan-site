@@ -37,11 +37,11 @@
    //   "title": "TALKS",
    //   "blank": false
    // },
-   // {
-   //   "url": "./#tickets",
-   //   "title": "TICKETS",
-   //   "blank": false
-   // },
+    {
+      "url": "./#tickets",
+      "title": "TICKETS",
+      "blank": false
+    },
    // {
    //   "url": "./#sponsors",
    //   "title": "SPONSORS",

@@ -1,0 +1,18 @@
+<div class="section" id="tickets" data-aos="fade-up" data-aos-duration="2000">
+<h3 class="title">Tickets</h3>
+  <div class="body">
+    {{#ticket-groups}}
+    <h4>{{name}}</h4>
+    <ul>
+      {{#tickets}}
+      <li class="ticket">
+        <b class="{{class}}">
+          <a href="http://passmarket.yahoo.co.jp/event/show/detail/{{id}}.html" target="_blank">{{name}}</a>
+        </b>
+        <em class="annotation {{class}}">発売中!!</em>
+      </li>
+      {{/tickets}}
+    </ul> <br />
+    {{/ticket-groups}}
+  </div><!--  / .body /  -->
+</div><!--  / .section /  -->
