@@ -53,6 +53,11 @@
   border: 2px solid #b85c5c;
 }
 
+.button a.btn-lt {
+  color:  #f08928;
+  border: 2px solid #f08928;
+}
+
 .button a.btn-bus {
   color:  #379bc6;
   border: 2px solid #379bc6;
