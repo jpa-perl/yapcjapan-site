@@ -477,13 +477,14 @@ dd img { vertical-align: bottom; }
 
 #container #button ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 	left: 50%;
 }
  
 #container #button ul li {
+	margin: 0 10px;
 }
 
 #container h3.title {
