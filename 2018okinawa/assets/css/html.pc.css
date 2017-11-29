@@ -476,15 +476,14 @@ dd img { vertical-align: bottom; }
 }
 
 #container #button ul {
-	position: relative;
-	float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 	left: 50%;
 }
  
 #container #button ul li {
-	position: relative;
-	float: left;
-	left: -50%;
 	margin: 0 10px;
 }
 
