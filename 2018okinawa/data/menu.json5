@@ -20,12 +20,12 @@
       "title": "BLOG",
       "blank": true
     },
-    
-    {
-      "url": "./sponsor_menu.html",
-      "title": "SPONSOR MENU",
-      "blank": true
-    },
+
+   // {
+   //   "url": "./sponsor_menu.html",
+   //   "title": "SPONSOR MENU",
+   //   "blank": true
+   // },
 
    // {
    //   "url": "./timetable.html",
