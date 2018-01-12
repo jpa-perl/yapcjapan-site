@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>第二階層 | YAPC::Okinawa 2018 ONNASON</title>
+<title>YAPC::Okinawa 2018 ONNASON{{#page-title}} - {{page-title}}{{/page-title}}</title>
 <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 <meta name="description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。">
 <meta name="keywords" content="YAPC,ヤプシー,Perl,PM,Japan Perl Association,JPA,YAPC::Fukuoka,ヤプシー沖縄">
@@ -40,29 +40,26 @@
 <a id="top" name="top"></a>
 
 <header id="header">
-<nav class="header">
-<div class="btn-menu"><a href="javascript:void(0)"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div><!--  / .btn-menu /  -->
-</nav>
+  <nav class="header">
+    <div class="btn-menu"><a href="javascript:void(0)"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div><!--  / .btn-menu /  -->
+  </nav>
 </header>
 
-<nav id="menu">
-<div id="gnavi">
-<div class="innerblock">
-<ul>
-<li><a href="./">Home</a></li>
-<li><a href="./#about">About</a></li>
-<li><a href="./#news">News</a></li>
-<li><a href="http://blog.yapcjapan.org/" target="_blank">Blog</a></li>
-<li><a href="./timetable.html">Timetable</a></li>
-<li><a href="./talks.html">Talks</a></li>
-<li><a href="./#tickets">Tickets</a></li>
-<li><a href="./#sponsors">Sponsors</a></li>
-<li><a href="individual-sponsors.html">Individual Sponsors</a></li>
-<li><a href="./staff.html">Staff</a></li>
-<li><a href="./code-of-conduct.html">Code of Conduct</a></li>
-</ul>
-</div><!--  / .innerblock /  -->
-</div><!--  / #gnavi /  -->
+ <nav id="menu">
+  <div id="gnavi">
+    <div class="innerblock">
+      <ul>
+        {{#menu}}
+          {{#blank}}
+            <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+          {{/blank}}
+          {{^blank}}
+            <li><a href="{{url}}">{{title}}</a></li>
+          {{/blank}}
+        {{/menu}}
+      </ul>
+    </div><!--  / .innerblock /  -->
+  </div><!--  / #gnavi /  -->
 </nav>
 
 <div id="wrapper">
