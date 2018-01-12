@@ -7,7 +7,7 @@
   "include-about": true,
   "include-sponsors": false,
   "include-guest": true,
-  "include-special-session": false,
+  "include-special-session": true,
   "include-access": true,
   "include-gmap": true,
 }
