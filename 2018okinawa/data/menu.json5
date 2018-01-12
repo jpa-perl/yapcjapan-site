@@ -27,16 +27,16 @@
    //   "blank": true
    // },
 
-   // {
-   //   "url": "./timetable.html",
-   //   "title": "TIMETABLE",
-   //   "blank": false
-   // },
-   // {
-   //   "url": "./talks.html",
-   //   "title": "TALKS",
-   //   "blank": false
-   // },
+    {
+      "url": "./timetable.html",
+      "title": "TIMETABLE",
+      "blank": false
+    },
+    {
+      "url": "./talks.html",
+      "title": "TALKS",
+      "blank": false
+    },
     {
       "url": "./#tickets",
       "title": "TICKETS",
