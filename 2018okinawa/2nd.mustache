@@ -77,62 +77,19 @@
 
 <div id="container">
 
-<div class="section" id="sponsors" data-aos="fade-up" data-aos-duration="2000">
-<h3 class="title">Sponsors</h3>
-<div class="body">
-<div class="class">
-<h4>主催</h4>
-<div class="block">
-<ul>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>クラス1</h4>
-<div class="block">
-<ul>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>クラス2</h4>
-<div class="block">
-<ul>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>クラス3</h4>
-<div class="block">
-<ul>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-</ul>
-</div>
-</div>
-</div><!--  / .body /  -->
-</div><!--  / .section /  -->
+{{#include-talks}}
+  {{> talks}}
+{{/include-talks}}
+
+{{#include-timetable}}
+  {{> timetable}}
+{{/include-timetable}}
 
 </div><!--  / #container /  -->
 
 <aside>
 <div id="aside">
-<div id="footer-logo">YAPC::Okinawa 2018 ONNNA</div>
+<div id="footer-logo">YAPC::Okinawa 2018 ONNASON</div>
 <canvas id="c"></canvas>
 </div><!--  / .#aside /  -->
 </aside>
@@ -154,11 +111,23 @@
 </footer>
 <div id="pagetop"><a href="#top"><i class="fa fa-caret-square-o-up"></i></a></div>
 </div><!--  / #wrappper /  -->
+{{#include-talks}}
+  {{> talk-detail-modal}}
+{{/include-talks}}
+{{#include-timetable}}
+  {{> talk-detail-modal}}
+{{/include-timetable}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://use.fonticons.com/5bcff1b8.js"></script>
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
 <script src="./assets/js/canvas.js"></script>
 <script src="./assets/js/functions.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
+<script src="./assets/js/vendor/micro_dispatcher.js"></script>
+<script src="./assets/js/layout.js"></script>
+<script src="./assets/js/custom.js"></script>
 </body>
 </html>
