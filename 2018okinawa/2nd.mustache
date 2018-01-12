@@ -37,94 +37,90 @@
 <link rel="stylesheet" media="(min-width: 900px)" href="./assets/css/html.pc.css">
 </head>
 <body>
-<a id="top" name="top"></a>
+  <a id="top" name="top"></a>
+  <header id="header">
+    <nav class="header">
+      <div class="btn-menu"><a href="javascript:void(0)"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div><!--  / .btn-menu /  -->
+    </nav>
+  </header>
 
-<header id="header">
-  <nav class="header">
-    <div class="btn-menu"><a href="javascript:void(0)"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div><!--  / .btn-menu /  -->
+  <nav id="menu">
+    <div id="gnavi">
+      <div class="innerblock">
+        <ul>
+          {{#menu}}
+            {{#blank}}
+              <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+            {{/blank}}
+            {{^blank}}
+              <li><a href="{{url}}">{{title}}</a></li>
+            {{/blank}}
+          {{/menu}}
+        </ul>
+      </div><!--  / .innerblock /  -->
+    </div><!--  / #gnavi /  -->
   </nav>
-</header>
 
- <nav id="menu">
-  <div id="gnavi">
-    <div class="innerblock">
-      <ul>
-        {{#menu}}
-          {{#blank}}
-            <li><a href="{{url}}" target="_blank">{{title}}</a></li>
-          {{/blank}}
-          {{^blank}}
-            <li><a href="{{url}}">{{title}}</a></li>
-          {{/blank}}
-        {{/menu}}
-      </ul>
-    </div><!--  / .innerblock /  -->
-  </div><!--  / #gnavi /  -->
-</nav>
+  <div id="wrapper">
+    <div id="hero">
+      <div class="illust">
+        <div class="cloud"><img src="./assets/images/illust_cloud.png" alt="入道雲" /></div>
+        <div class="island-s"><img src="./assets/images/illust_island_s.png" alt="島" /></div>
+        <div class="island-l"><img src="./assets/images/illust_island_l.png" alt="島" /></div>
+      </div><!--  / .illust /  -->
+    </div><!--  / #hero /  -->
 
-<div id="wrapper">
+    <div id="container">
+    {{#include-talks}}
+      {{> talks}}
+    {{/include-talks}}
 
-<div id="hero">
-<div class="illust">
-<div class="cloud"><img src="./assets/images/illust_cloud.png" alt="入道雲" /></div>
-<div class="island-s"><img src="./assets/images/illust_island_s.png" alt="島" /></div>
-<div class="island-l"><img src="./assets/images/illust_island_l.png" alt="島" /></div>
-</div><!--  / .illust /  -->
-</div><!--  / #hero /  -->
+    {{#include-timetable}}
+      {{> timetable}}
+    {{/include-timetable}}
 
-<div id="container">
+    </div><!--  / #container /  -->
 
-{{#include-talks}}
-  {{> talks}}
-{{/include-talks}}
-
-{{#include-timetable}}
-  {{> timetable}}
-{{/include-timetable}}
-
-</div><!--  / #container /  -->
-
-<aside>
-<div id="aside">
-<div id="footer-logo">YAPC::Okinawa 2018 ONNASON</div>
-<canvas id="c"></canvas>
-</div><!--  / .#aside /  -->
-</aside>
-<footer>
-<div id="footer">
-<div class="inner">
-<div class="social-button">
-<ul>
-<li><a href="https://twitter.com/yapcjapan" title="Twitter" target="_blank"><img src="./assets/images/btn_t.png" alt="Twitter" /></a></li>
-<li><a href="https://www.facebook.com/yapcjapan/" title="Facebook" target="_blank"><img src="./assets/images/btn_f.png" alt="Facebook" /></a></li>
-</ul>
-</div><!--  / .social-button /  -->
-<address>
-<a href="http://japan.perlassociation.org/" target="_blank"><img src="./assets/images/jpa.png" alt="JPA" /></a>
-© 2018 Japan Perl Association
-</address>
-</div><!--  / .inner /  -->
-</div><!--  / #footer /  -->
-</footer>
-<div id="pagetop"><a href="#top"><i class="fa fa-caret-square-o-up"></i></a></div>
-</div><!--  / #wrappper /  -->
-{{#include-talks}}
-  {{> talk-detail-modal}}
-{{/include-talks}}
-{{#include-timetable}}
-  {{> talk-detail-modal}}
-{{/include-timetable}}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://use.fonticons.com/5bcff1b8.js"></script>
-<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
-<script src="./assets/js/canvas.js"></script>
-<script src="./assets/js/functions.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
-<script src="./assets/js/vendor/micro_dispatcher.js"></script>
-<script src="./assets/js/layout.js"></script>
-<script src="./assets/js/custom.js"></script>
+    <aside>
+      <div id="aside">
+        <div id="footer-logo">YAPC::Okinawa 2018 ONNASON</div>
+        <canvas id="c"></canvas>
+      </div><!--  / .#aside /  -->
+    </aside>
+    <footer>
+      <div id="footer">
+        <div class="inner">
+          <div class="social-button">
+            <ul>
+              <li><a href="https://twitter.com/yapcjapan" title="Twitter" target="_blank"><img src="./assets/images/btn_t.png" alt="Twitter" /></a></li>
+              <li><a href="https://www.facebook.com/yapcjapan/" title="Facebook" target="_blank"><img src="./assets/images/btn_f.png" alt="Facebook" /></a></li>
+            </ul>
+          </div><!--  / .social-button /  -->
+          <address>
+            <a href="http://japan.perlassociation.org/" target="_blank"><img src="./assets/images/jpa.png" alt="JPA" /></a>© 2018 Japan Perl Association
+          </address>
+        </div><!--  / .inner /  -->
+      </div><!--  / #footer /  -->
+    </footer>
+    <div id="pagetop"><a href="#top"><i class="fa fa-caret-square-o-up"></i></a></div>
+  </div><!--  / #wrappper /  -->
+  {{#include-talks}}
+    {{> talk-detail-modal}}
+  {{/include-talks}}
+  {{#include-timetable}}
+    {{> talk-detail-modal}}
+  {{/include-timetable}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://use.fonticons.com/5bcff1b8.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/canvas.js"></script>
+  <script src="./assets/js/functions.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
+  <script src="./assets/js/vendor/micro_dispatcher.js"></script>
+  <script src="./assets/js/layout.js"></script>
+  <script src="./assets/js/custom.js"></script>
 </body>
 </html>
