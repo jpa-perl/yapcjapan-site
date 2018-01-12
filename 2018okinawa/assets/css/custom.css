@@ -192,3 +192,26 @@
   margin-top: 3px;
   padding-left: 2em;
 }
+
+/* timetable */
+
+#timetable table {
+  table-layout: fixed;
+  font-size: 14px;
+  border: 1px solid #aaaaaa;
+  width: 100%;
+}
+
+#timetable th, #timetable td {
+  border: 1px solid #aaaaaa;
+  padding: 5px;
+}
+
+#timetable td.highlight {
+  background-color: #f8f8f8;
+}
+
+#timetable ol {
+  list-style-type: decimal;
+  padding: 1em;
+}
