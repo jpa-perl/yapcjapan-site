@@ -267,3 +267,16 @@
 #talk-detail-modal aside.time-and-place dt:after {
   content: ":";
 }
+
+/* guest-list */
+#special-session ul {
+  list-style: circle;
+}
+
+#special-session h4 {
+  line-height: 0px;
+}
+
+#special-session .col-header {
+  padding-bottom: 10px;
+}
