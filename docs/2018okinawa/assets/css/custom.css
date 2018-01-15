@@ -63,6 +63,11 @@
   border: 2px solid #379bc6;
 }
 
+.button a.btn-before-night-party {
+  color:  #008051;
+  border: 2px solid #008051;
+}
+
 /* About */
 
 #about dl {
