@@ -42,11 +42,11 @@
       "title": "TICKETS",
       "blank": false
     },
-   // {
-   //   "url": "./#sponsors",
-   //   "title": "SPONSORS",
-   //   "blank": false
-   // },
+    {
+      "url": "./#sponsors",
+      "title": "SPONSORS",
+      "blank": false
+    },
    // {
    //   "url": "./individual-sponsors.html",
    //   "title": "INDIVIDUAL SPONSORS",
