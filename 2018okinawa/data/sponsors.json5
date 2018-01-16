@@ -41,7 +41,7 @@
       { name: "株式会社ファームノート", asset: "farmnote.png", url: "http://farmnote.jp/index.html"},
     ],
     "key-note": [
-      { name: "株式会社ディー・エヌ・エー", asset: "dena.png",   url: "http://dena.com/jp/" },
+      { name: "papix", asset: "papix.png",   url: "http://papix.net/" },
      ],
     "best-talk": [
       { name: "オンサイト株式会社", asset: "onsight.png", url: "http://on-sight.biz/" },
