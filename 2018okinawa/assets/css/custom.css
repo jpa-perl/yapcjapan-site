@@ -68,6 +68,11 @@
   border: 2px solid #008051;
 }
 
+.button a.btn-after-party {
+  color:  #b97a04;
+  border: 2px solid #b97a04;
+}
+
 /* About */
 
 #about dl {
