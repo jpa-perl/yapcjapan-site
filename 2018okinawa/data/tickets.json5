@@ -35,15 +35,15 @@
         },
       ],
     },
-    //{
-    //  name: "YAPC::Okinawa 2018 ONNASON 03/03懇親会",
-    //  tickets: [
-    //    {
-    //      id:    "01pp1jyrc3uq",
-    //      name:  "一般・学生チケット",
-    //      class: "sold-out"
-    //    },
-    //  ],
-    //},
+    {
+      name: "YAPC::Okinawa 2018 ONNASON 03/03懇親会",
+      tickets: [
+        {
+          id:    "0174hjz7hzgm",
+          name:  "一般・学生チケット",
+          class: "now-on-sale"
+        },
+      ],
+    },
   ],
 }
