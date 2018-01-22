@@ -1,7 +1,7 @@
 {
   sponsors: {
     "perl": [
-      { name: "株式会社ディー・エヌ・エー", asset: "dena.png",   url: "http://dena.com/jp/" },
+      { name: "株式会社ディー・エヌ・エー", asset: "DeNA.png",   url: "http://dena.com/jp/" },
 	  { name: "SHOWROOM株式会社", asset: "showroom.png", url: "http://showroom.co.jp/" },
     ],
     "platinum": [
@@ -50,7 +50,7 @@
       // { name: "株式会社コルシス", asset: "colsis.png", url: "https://colsis.jp/" },
     ],
     "bus": [
-	  { name: "株式会社ディー・エヌ・エー", asset: "dena.png", url: "http://dena.com/jp/" },
+	  { name: "株式会社ディー・エヌ・エー", asset: "DeNA.png", url: "http://dena.com/jp/" },
       // { name: "Wano株式会社", asset: "", url: "https://www.wano.co.jp/" },
       { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
     ],
