@@ -2,80 +2,82 @@
   sponsors: {
     "perl": [
       { name: "株式会社ディー・エヌ・エー", asset: "dena.png",   url: "http://dena.com/jp/" },
-      { name: "LINE株式会社", asset: "line.png",   url: "https://engineering.linecorp.com/ja/" },
+	  { name: "SHOWROOM株式会社", asset: "showroom.png", url: "http://showroom.co.jp/" },
     ],
     "platinum": [
       { name: "株式会社ファームノート", asset: "farmnote.png", url: "http://farmnote.jp/index.html"},
+      { name: "ミクシィグループ", asset: "mixi.png", url: "https://mixi.co.jp/" },
+      { name: "LINE株式会社", asset: "line.png",   url: "https://engineering.linecorp.com/ja/" },
+      { name: "株式会社フリークアウト", asset: "freakout.png", url: "https://www.fout.co.jp/freakout/" },
+	  { name: "Nota.Inc", asset: "Nota.png", url: "http://www.notainc.com/ja" },
+	  { name: "シーサー株式会社", asset: "seesaa_logo.png", url: "http://shisa-net.com/" },
     ],
     "gold": [
-      { name: "株式会社フリークアウト", asset: "freakout.png", url: "https://www.fout.co.jp/freakout/" },
-      { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
-      { name: "GMOペパボ株式会社", asset: "gmo_pepabo.png", url: "https://pepabo.com/" },
-      { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
+      { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
+      { name: "オンサイト株式会社", asset: "onsight.png", url: "http://on-sight.biz/" },
+	  { name: "S2ファクトリー株式会社", asset: "s2factory.png", url: "https://www.s2factory.co.jp/" },
+	  { name: "株式会社GameWith", asset: "gamewith.png", url: "https://gamewith.co.jp/" },
+	  // { name: "Wano株式会社", asset: "", url: "https://www.wano.co.jp/" },
     ],
     "silver": [
-      { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
-      { name: "株式会社ネコトーストラボ",     asset: "nekotoast.png",  url: "https://nekotoast-lab.com/" },
-      { name: "Supership株式会社",     asset: "supership.png",  url: "https://supership.jp/" },
+      { name: "株式会社ネコトーストラボ", asset: "nekotoast.png",  url: "https://nekotoast-lab.com/" },
+	  { name: "株式会社リブセンス", asset: "livesense.png", url: "http://www.livesense.co.jp/" },
     ],
-    "local": [
-      { name: "株式会社イーハイブ", asset: "i-hive.png", url: "http://www.i-hive.co.jp/" },
-      { name: "株式会社フィールズ", asset: "fiilse.png", url: "https://fiilse.com/" },
-      { name: "オンサイト株式会社", asset: "onsight.png", url: "http://on-sight.biz/" },
-      { name: "株式会社ペンシル", asset: "pencil.png", url: "http://www.pencil.co.jp/" },
-      { name: "株式会社Fusic", asset: "fusic.png", url: "https://fusic.co.jp/" },
-      { name: "ウミーベ株式会社", asset: "umeebe.png", url: "https://tsuriho.com/" },
-      { name: "株式会社キャッチアップ", asset: "catchup.png", url: "https://catchup.co.jp/" },
-      { name: "株式会社エニセンス", asset: "anysense.png", url: "http://anysense.co.jp/" },
-      { name: "有限会社ユニット・エムエスイー", asset: "unitmse.png", url: "http://www.unit-mse.co.jp/" },
-      { name: "さくらインターネット株式会社", asset: "sakura.png", url: "https://www.sakura.ad.jp/" },
-      { name: "フロイデ株式会社", asset: "froide.png", url: "http://froide.co.jp/" },
+    "local-gold": [
+	  // { name: "ちゅらデータ株式会社", asset: "", url: "" },
+	  // { name: "YassLab", asset: "", url: "" },
+	  { name: "琉球インタラクティブ株式会社", asset: "ryukyu_interactive.png", url: "https://www.ryukyu-i.co.jp/" },
     ],
-    "logo": [
-      { name: "AMIX", asset: "asobodesign.png", url: "https://asobo-design.com/nex/" },
+    "local-silver": [
+	  // { name: "ギークハウス沖縄", asset: "", url: "http://blog.geekhouse.okinawa/" },
+      { name: "アディッシュプラス株式会社", asset: "adsp.png", url: "http://www.adishplus.co.jp/" },
     ],
     "students": [
-      { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
-      { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
-      { name: "株式会社サポーターズ",       asset: "supporterz.png",    url: "https://supporterzcolab.com/" },
-      { name: "株式会社ファームノート", asset: "farmnote.png", url: "http://farmnote.jp/index.html"},
+      { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
+	  { name: "株式会社サポーターズ", asset: "supporterzcolab.png", url: "https://corp.supporterz.jp/" },
+	  { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
+	  { name: "株式会社モバイルファクトリー", asset: "mobile_factory.png", url: "http://www.mobilefactory.jp/" },
+	  { name: "GMOペパボ株式会社", asset: "gmo_pepabo.png", url: "https://pepabo.com/" },
+	  { name: "株式会社ミノタケ", asset: "minotake.png", url: "" },
     ],
     "key-note": [
-      { name: "株式会社ディー・エヌ・エー", asset: "dena.png",   url: "http://dena.com/jp/" },
-     ],
+      { name: "papix", asset: "papix.png",   url: "http://papix.net/" },
+    ],
     "best-talk": [
-      { name: "オンサイト株式会社", asset: "onsight.png", url: "http://on-sight.biz/" },
+      { name: "Supership株式会社", asset: "supership.png", url: "https://supership.jp/"},
     ],
     "best-lt": [
-      { name: "株式会社コルシス", asset: "colsis.png", url: "https://colsis.jp/" },
+      // { name: "株式会社コルシス", asset: "colsis.png", url: "https://colsis.jp/" },
     ],
-    "t-shirt": [
-      { name: "GMOペパボ株式会社", asset: "gmo_pepabo.png", url: "https://pepabo.com/" },
+    "bus": [
+	  { name: "株式会社ディー・エヌ・エー", asset: "dena.png", url: "http://dena.com/jp/" },
+      // { name: "Wano株式会社", asset: "", url: "https://www.wano.co.jp/" },
+      { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
     ],
+    //"t-shirt": [
+    //  { name: "株式会社カヤック", asset: "kayac.png", url: "https://www.kayac.com/" },
+    //],
     "tote-bag": [
-      { name: "株式会社モバイルファクトリー", asset: "mobile_factory.png", url: "http://www.mobilefactory.jp/" },
+        { name: "株式会社はてな", asset: "hatena.png", url: "http://hatenacorp.jp/" },
     ],
     "after-party": [
-      { name: "ピクシブ株式会社", asset: "pixiv.png", url: "http://www.pixiv.co.jp/" },
+	  { name: "シックスアパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
     ],
     "back-panel": [
-      { name: "株式会社はてな",       asset: "hatena.png",    url: "http://hatenacorp.jp/" },
-      { name: "アイランド株式会社",     asset: "ai_land.png",  url: "https://www.ai-land.co.jp/" },
-      { name: "シックス・アパート株式会社", asset: "six_apart.png", url: "https://www.sixapart.jp/" },
-      { name: "株式会社カヤック",       asset: "kayac.png",    url: "https://www.kayac.com/" },
+	  { name: "株式会社GameWith", asset: "gamewith.png", url: "https://gamewith.co.jp/" },
+      { name: "株式会社はてな", asset: "hatena.png", url: "http://hatenacorp.jp/" },
+      { name: "Supership株式会社", asset: "supership.png", url: "https://supership.jp/"},
+	  { name: "株式会社サポーターズ", asset: "supporterzcolab.png", url: "https://corp.supporterz.jp/" },
       { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
-      { name: "株式会社サポーターズ",       asset: "supporterz.png",    url: "https://supporterzcolab.com/" },
       { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
-      { name: "ミクシィグループ", asset: "mixi.png", url: "https://mixi.co.jp/" },
-      { name: "株式会社Diverse", asset: "poiboy.png", url: "https://poiboy.jp/" },
-      { name: "XFLAG", asset: "xflag.png", url: "http://xflag.com/" },
+      { name: "株式会社ailand", asset: "ai_land.png", url: "https://www.ai-land.co.jp/" },
     ],
     "before-night-party": [
-      { name: "株式会社ヌーラボ", asset: "nulab.png", url: "https://nulab-inc.com/ja/" },
+      { name: "株式会社ミクシィ", asset: "mixi.png", url: "https://mixi.co.jp/" },
     ],
-    "venue": [
-      { name: "LINE株式会社", asset: "line.png",   url: "https://engineering.linecorp.com/ja/" },
-    ],
+   // "venue": [
+   //  { name: "LINE株式会社", asset: "line.png",   url: "https://engineering.linecorp.com/ja/" },
+   // ],
     // "venue": [
     // ],
     // "key-note": [
@@ -318,18 +320,11 @@
     //         }
     //     ]
     // }
-    "support": [
-      { name: "福岡市",              asset: "fukuoka_city.jpg", url: "https://www.city.fukuoka.lg.jp/" },
-      { name: "FITCO",              asset: "fitco.jpg", url: "http://www.fitco.jp/" },
-    ],
-    "special-thanks": [
-      { name: "にわかせんぺい本舗 東雲堂",              asset: "toundo.jpg", url: "http://store.toundo.co.jp/" },
-    ],
 
 
     "host": [
       { name: "Japan Perl Association", asset: "jpa.png",      url: "http://japan.perlassociation.org/" },
-      { name: "Fukuoka.pm",              asset: "fukuokapm.png", url: "http://fukuoka.pm.org/" },
+      { name: "Okinawa.pm", asset: "okinawa_pm.png", url: "http://okinawa.pm.org/" },
     ],
   },
 }

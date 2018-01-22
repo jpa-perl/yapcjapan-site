@@ -1,51 +1,239 @@
-<div class="section" id="sponsors" data-aos="fade-up" data-aos-duration="2000">
-<h3 class="title">Sponsors</h3>
-<div class="body">
-<div class="class">
-<h4>主催</h4>
-<div class="block">
-<ul>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>クラス1</h4>
-<div class="block">
-<ul>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="large"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>クラス2</h4>
-<div class="block">
-<ul>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="medium"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>クラス3</h4>
-<div class="block">
-<ul>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-<li class="small"><a href="" target="_blank"><img src="http://dummyimage.com/500x500/ffffff/cccccc&text=++++500+x+500++++"/></a></li>
-</ul>
-</div>
-</div>
-</div><!--  / .body /  -->
-</div><!--  / .section /  -->
+<h3 class="title">SPONSORS</h3>
+<div class="section" id="sponsors">
+  <div class="body">
+    {{^sponsors}}
+      Coming Soon...
+    {{/sponsors}}
+    {{#sponsors}}
+      {{#perl@size}}
+        <div class="class">
+          <h4>パール</h4>
+          <div class="block">
+            <ul>
+              {{#perl}}
+                {{> sponsor-large}}
+              {{/perl}}
+            </ul>
+          </div>
+        </div>
+      {{/perl@size}}
+      {{#platinum@size}}
+        <div class="class">
+          <h4>プラチナ</h4>
+          <div class="block">
+            <ul>
+              {{#platinum}}
+                {{> sponsor-large}}
+              {{/platinum}}
+            </ul>
+          </div>
+        </div>
+      {{/platinum@size}}
+      {{#gold@size}}
+        <div class="class">
+          <h4>ゴールド</h4>
+          <div class="block">
+            <ul>
+              {{#gold}}
+                {{> sponsor-medium}}
+              {{/gold}}
+            </ul>
+          </div>
+        </div>
+      {{/gold@size}}
+      {{#silver@size}}
+        <div class="class">
+          <h4>シルバー</h4>
+          <div class="block">
+            <ul>
+              {{#silver}}
+                {{> sponsor-small}}
+              {{/silver}}
+            </ul>
+          </div>
+        </div>
+      {{/silver@size}}
+      {{#local-gold@size}}
+        <div class="class">
+          <h4>ご当地ゴールド</h4>
+          <div class="block">
+            <ul>
+              {{#local-gold}}
+                {{> sponsor-medium}}
+              {{/local-gold}}
+            </ul>
+          </div>
+        </div>
+      {{/local-gold@size}}
+      {{#local-silver@size}}
+        <div class="class">
+          <h4>ご当地シルバー</h4>
+          <div class="block">
+            <ul>
+              {{#local-silver}}
+                {{> sponsor-small}}
+              {{/local-silver}}
+            </ul>
+          </div>
+        </div>
+      {{/local-silver@size}}
+      {{#key-note@size}}
+        <div class="class">
+          <h4>キーノート</h4>
+          <div class="block">
+            <ul>
+              {{#key-note}}
+                {{> sponsor-medium}}
+              {{/key-note}}
+            </ul>
+          </div>
+        </div>
+      {{/key-note@size}}
+      {{#best-talk@size}}
+        <div class="class">
+          <h4>ベストトーク</h4>
+          <div class="block">
+            <ul>
+              {{#best-talk}}
+                {{> sponsor-medium}}
+              {{/best-talk}}
+            </ul>
+          </div>
+        </div>
+      {{/best-talk@size}}
+      {{#best-lt@size}}
+        <div class="class">
+          <h4>ベストLT</h4>
+          <div class="block">
+            <ul>
+              {{#best-lt}}
+                {{> sponsor-medium}}
+              {{/best-lt}}
+            </ul>
+          </div>
+        </div>
+      {{/best-lt@size}}
+      {{#after-party@size}}
+        <div class="class">
+          <h4>懇親会</h4>
+          <div class="block">
+            <ul>
+              {{#after-party}}
+                {{> sponsor-medium}}
+              {{/after-party}}
+            </ul>
+          </div>
+        </div>
+      {{/after-party@size}}
+      {{#bus@size}}
+        <div class="class">
+          <h4>バス</h4>
+          <div class="block">
+            <ul>
+              {{#bus}}
+                {{> sponsor-medium}}
+              {{/bus}}
+            </ul>
+          </div>
+        </div>
+      {{/bus@size}}
+      {{#tote-bag@size}}
+        <div class="class">
+          <h4>トートバッグ</h4>
+          <div class="block">
+            <ul>
+              {{#tote-bag}}
+                {{> sponsor-medium}}
+              {{/tote-bag}}
+            </ul>
+          </div>
+        </div>
+      {{/tote-bag@size}}
+      {{#t-shirt@size}}
+        <div class="class">
+          <h4>Tシャツ</h4>
+          <div class="block">
+            <ul>
+              {{#t-shirt}}
+                {{> sponsor-medium}}
+              {{/t-shirt}}
+            </ul>
+          </div>
+        </div>
+      {{/t-shirt@size}}
+      {{#students@size}}
+        <div class="class">
+          <h4>学生交通費支援</h4>
+          <div class="block">
+            <ul>
+              {{#students}}
+                {{> sponsor-medium}}
+              {{/students}}
+            </ul>
+          </div>
+        </div>
+      {{/students@size}}
+      {{#back-panel@size}}
+        <div class="class">
+          <h4>バックパネル</h4>
+          <div class="block">
+            <ul>
+              {{#back-panel}}
+                {{> sponsor-medium}}
+              {{/back-panel}}
+            </ul>
+          </div>
+        </div>
+      {{/back-panel@size}}
+      {{#before-night-party@size}}
+        <div class="class">
+          <h4>前夜祭</h4>
+          <div class="block">
+            <ul>
+              {{#before-night-party}}
+                {{> sponsor-medium}}
+              {{/before-night-party}}
+            </ul>
+          </div>
+        </div>
+      {{/before-night-party@size}}
+      {{#venue@size}}
+        <div class="class">
+          <h4>カンファレンス会場提供</h4>
+          <div class="block">
+            <ul>
+              {{#venue}}
+                {{> sponsor-medium}}
+              {{/venue}}
+            </ul>
+          </div>
+        </div>
+      {{/venue@size}}
 
+      {{#media@size}}
+        <div class="class">
+          <h4>メディア</h4>
+          <div class="block">
+            <ul>
+              {{#media}}
+                {{> sponsor-medium}}
+              {{/media}}
+            </ul>
+          </div>
+        </div>
+      {{/media@size}}
+      {{#host@size}}
+        <div class="class">
+          <h4>主催</h4>
+          <div class="block">
+            <ul>
+              {{#host}}
+                {{> sponsor-medium}}
+              {{/host}}
+            </ul>
+          </div>
+        </div>
+      {{/host@size}}
+    {{/sponsors}}
+  </div><!--  / .body /  -->
+</div><!--  / .section /  -->

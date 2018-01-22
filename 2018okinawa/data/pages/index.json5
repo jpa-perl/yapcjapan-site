@@ -5,7 +5,7 @@
   "include-news": true,
   "include-tickets": true,
   "include-about": true,
-  "include-sponsors": false,
+  "include-sponsors": true,
   "include-guest": true,
   "include-special-session": true,
   "include-access": true,
