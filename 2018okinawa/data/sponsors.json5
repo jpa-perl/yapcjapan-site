@@ -53,7 +53,7 @@
 	"bus": [
 	  { name: "株式会社ディー・エヌ・エー", asset: "dena.png", url: "http://dena.com/jp/" },
 	  // { name: "Wano株式会社", asset: "", url: "https://www.wano.co.jp/" },
-      // { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
+      { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
 	],
     //"t-shirt": [
     //  { name: "株式会社カヤック", asset: "kayac.png", url: "https://www.kayac.com/" },
@@ -67,7 +67,7 @@
     "back-panel": [
 	  { name: "株式会社GameWith", asset: "gamewith.png", url: "https://gamewith.co.jp/" },
       { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
-      // { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
+      { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
     ],
     "before-night-party": [
       { name: "株式会社ミクシィ", asset: "mixi.png", url: "https://mixi.co.jp/" },
