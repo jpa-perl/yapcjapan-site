@@ -53,30 +53,30 @@
           </div>
         </div>
       {{/silver@size}}
-      {{#local@size}}
+      {{#local-gold@size}}
         <div class="class">
-          <h4>ご当地</h4>
+          <h4>ご当地ゴールド</h4>
           <div class="block">
             <ul>
-              {{#local}}
-                {{> sponsor-small}}
-              {{/local}}
+              {{#local-gold}}
+                {{> sponsor-medium}}
+              {{/local-gold}}
             </ul>
           </div>
         </div>
-      {{/local@size}}
-      {{#logo@size}}
+      {{/local-gold@size}}
+      {{#local-silver@size}}
         <div class="class">
-          <h4>ブロンズ</h4>
+          <h4>ご当地シルバー</h4>
           <div class="block">
             <ul>
-              {{#logo}}
+              {{#local-silver}}
                 {{> sponsor-small}}
-              {{/logo}}
+              {{/local-silver}}
             </ul>
           </div>
         </div>
-      {{/logo@size}}
+      {{/local-silver@size}}
       {{#key-note@size}}
         <div class="class">
           <h4>キーノート</h4>
@@ -222,31 +222,6 @@
           </div>
         </div>
       {{/media@size}}
-      {{#support@size}}
-        <div class="class">
-          <h4>後援</h4>
-          <div class="block">
-            <ul>
-              {{#support}}
-                {{> sponsor-medium}}
-              {{/support}}
-            </ul>
-          </div>
-        </div>
-      {{/support@size}}
-      {{#special-thanks@size}}
-        <div class="class">
-          <h4>スペシャルサンクス</h4>
-          <div class="block">
-            <ul>
-              {{#special-thanks}}
-                {{> sponsor-medium}}
-              {{/special-thanks}}
-            </ul>
-          </div>
-        </div>
-      {{/special-thanks@size}}
-
       {{#host@size}}
         <div class="class">
           <h4>主催</h4>
