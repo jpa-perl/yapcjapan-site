@@ -67,6 +67,7 @@
     "back-panel": [
 	  { name: "株式会社GameWith", asset: "gamewith.png", url: "https://gamewith.co.jp/" },
       { name: "株式会社はてな", asset: "hatena.png", url: "http://hatenacorp.jp/" },
+      { name: "Supership株式会社", asset: "supership.png", url: "https://supership.jp/"},
 	  { name: "株式会社サポーターズ", asset: "supporterzcolab.png", url: "https://corp.supporterz.jp/" },
       { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
       { name: "株式会社メルカリ", asset: "mercari.png", url: "https://www.mercari.com/jp/" },
