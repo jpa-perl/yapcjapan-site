@@ -21,7 +21,7 @@
     ],
     "silver": [
       { name: "株式会社ネコトーストラボ", asset: "nekotoast.png",  url: "https://nekotoast-lab.com/" },
-	  // { name: "株式会社リプセンス", asset: "", url: "http://www.livesense.co.jp/" },
+	  { name: "株式会社リブセンス", asset: "livesense.png", url: "http://www.livesense.co.jp/" },
     ],
     "local": [
       { name: "アディッシュプラス株式会社", asset: "adsp.png", url: "http://www.adishplus.co.jp/" },
