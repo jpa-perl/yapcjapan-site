@@ -126,6 +126,7 @@
 	   -moz-border-radius: 10px;
 	        border-radius: 10px;
 	border: 2px solid #009fe8;
+	background-color: #fff;
 }
 #sponsors .class .block ul li a:hover img { border: 2px solid #0dac67; }
 
