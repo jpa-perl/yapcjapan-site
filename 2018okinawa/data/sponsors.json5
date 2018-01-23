@@ -24,7 +24,7 @@
 	  { name: "株式会社リブセンス", asset: "livesense.png", url: "http://www.livesense.co.jp/" },
     ],
     "local-gold": [
-	  // { name: "ちゅらデータ株式会社", asset: "", url: "" },
+	  { name: "ちゅらデータ株式会社", asset: "chura_data.png", url: "https://churadata.okinawa/" },
 	  // { name: "YassLab", asset: "", url: "" },
 	  { name: "琉球インタラクティブ株式会社", asset: "ryukyu_interactive.png", url: "https://www.ryukyu-i.co.jp/" },
     ],
