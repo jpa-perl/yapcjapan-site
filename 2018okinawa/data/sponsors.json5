@@ -34,7 +34,7 @@
     ],
     "students": [
       { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
-	  { name: "株式会社サポーターズ", asset: "supporterzcolab.png", url: "https://corp.supporterz.jp/" },
+	  { name: "株式会社サポーターズ", asset: "supporterzcolab.png", url: "https://supporterzcolab.com/" },
 	  { name: "こだまリサーチ株式会社", asset: "kodamari.png", url: "https://www.kodamari.com/" },
 	  { name: "株式会社モバイルファクトリー", asset: "mobile_factory.png", url: "http://www.mobilefactory.jp/" },
 	  { name: "GMOペパボ株式会社", asset: "gmo_pepabo.png", url: "https://pepabo.com/" },
