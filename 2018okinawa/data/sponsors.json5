@@ -30,7 +30,7 @@
     ],
     "local-silver": [
 	  // { name: "ギークハウス沖縄", asset: "", url: "http://blog.geekhouse.okinawa/" },
-      { name: "アディッシュプラス株式会社", asset: "adsp.png", url: "http://www.adishplus.jp/" },
+      { name: "アディッシュプラス株式会社", asset: "adsp.png", url: "http://www.adishplus.co.jp/" },
     ],
     "students": [
       { name: "株式会社ガイアックス",       asset: "gaiax.png",    url: "http://www.gaiax.co.jp/" },
