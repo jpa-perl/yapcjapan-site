@@ -2,7 +2,7 @@
   sponsors: {
     "perl": [
       { name: "株式会社ディー・エヌ・エー", asset: "DeNA.png",   url: "http://dena.com/jp/" },
-	  { name: "SHOWROOM株式会社", asset: "showroom.png", url: "http://showroom.co.jp/" },
+	  { name: "SHOWROOM株式会社", asset: "showroom.png", url: "http://showroom.co.jp/", class: "sponsor-lg-padding-10" },
     ],
     "platinum": [
       { name: "株式会社ファームノート", asset: "farmnote.png", url: "https://farmnote.jp/?utm_source=YAPC&utm_medium=ad&utm_campaign=YAPC_201803"},
