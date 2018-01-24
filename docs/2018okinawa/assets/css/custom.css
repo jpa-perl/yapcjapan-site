@@ -149,7 +149,10 @@
 	#sponsors .class .block ul li img { width: 100% !important; height: auto; }
 }
 
-
+#sponsors .class .block ul li img.sponsor-lg-padding-10 {
+	padding-left: 10px;
+	padding-right: 10px;
+}
 
 
 
