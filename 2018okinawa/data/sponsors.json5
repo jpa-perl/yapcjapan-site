@@ -25,7 +25,7 @@
     ],
     "local-gold": [
 	  { name: "ちゅらデータ株式会社", asset: "chura_data.png", url: "https://churadata.okinawa/" },
-	  // { name: "YassLab", asset: "", url: "" },
+	  { name: "YassLab", asset: "okinawarb.png", url: "http://ruby.okinawa/" },
 	  { name: "琉球インタラクティブ株式会社", asset: "ryukyu_interactive.png", url: "https://www.ryukyu-i.co.jp/" },
     ],
     "local-silver": [
