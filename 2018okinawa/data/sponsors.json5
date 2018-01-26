@@ -320,8 +320,9 @@
     //         }
     //     ]
     // }
-
-
+    "special-thanks": [
+      { name: "オリオンビール株式会社", asset: "orionbeer.png", url: "https://www.orionbeer.co.jp/" },
+    ],
     "host": [
       { name: "Japan Perl Association", asset: "jpa.png",      url: "http://japan.perlassociation.org/" },
       { name: "Okinawa.pm", asset: "okinawa_pm.png", url: "http://okinawa.pm.org/" },
