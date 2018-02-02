@@ -16,11 +16,16 @@
         {
           id:    "01dewpz7g87m",
           name:  "一般・学生チケット",
-          class: "now-on-sale"
+          class: "sold-out"
         },
         {
           id:    "01h74dz7g92i",
           name:  "個人スポンサーチケット",
+          class: "sold-out"
+        },
+        {
+          id:    "01h74dz7g92i",
+          name:  "カンファレンスチケット(ノベルティ無し)",
           class: "now-on-sale"
         },
       ],
