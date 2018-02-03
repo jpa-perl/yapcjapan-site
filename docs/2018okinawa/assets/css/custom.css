@@ -293,3 +293,17 @@
 #special-session .col-header {
   padding-bottom: 10px;
 }
+
+/* tickets */
+
+#tickets li.ticket b.sold-out {
+    text-decoration: line-through;
+}
+
+#tickets li.ticket em.now-on-sale {
+    display: none;
+}
+
+#tickets li.ticket em.sold-out {
+    margin-left: 1em;
+}
