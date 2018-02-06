@@ -4,7 +4,7 @@
     //{ type: "lt",                label: "LT応募(要参加チケット)",               blank: true,  url: "https://goo.gl/forms/Sw8WIE7BCcPVRYwG3" },
     //{ type: "ticket",             label: "一般・学生チケット",         blank: true, url: "https://passmarket.yahoo.co.jp/event/show/detail/01dewpz7g87m.html" },
     //{ type: "personal-sponsor",             label: "個人スポンサーチケット",         blank: true, url: "https://passmarket.yahoo.co.jp/event/show/detail/01h74dz7g92i.html" },
-    { type: "ticket",             label: "カンファレンスチケット(ノベルティなし)",         blank: true, url: "https://passmarket.yahoo.co.jp/event/show/detail/01knejzdim27.html" },
+    { type: "ticket",             label: "カンファレンスチケット(Tシャツなし)",         blank: true, url: "https://passmarket.yahoo.co.jp/event/show/detail/01knejzdim27.html" },
     { type: "bus",             label: "バスチケット",         blank: true, url: "https://passmarket.yahoo.co.jp/event/show/detail/017xe4z7g99k.html" },
     { type: "before-night-party", label: "前夜祭チケット",             blank: true,  url: "https://passmarket.yahoo.co.jp/event/show/detail/01eqykz85hir.html" },
     { type: "after-party",        label: "懇親会チケット",             blank: true,  url: "https://passmarket.yahoo.co.jp/event/show/detail/0174hjz7hzgm.html" },
