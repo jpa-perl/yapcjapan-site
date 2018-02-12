@@ -23,11 +23,11 @@
           name:  "個人スポンサーチケット",
           class: "sold-out"
         },
-        //{
-        //  id:    "01h74dz7g92i",
-        //  name:  "カンファレンスチケット(ノベルティ無し)",
-        //  class: "now-on-sale"
-        //},
+        {
+          id:    "01jpj2ze06r0",
+          name:  "カンファレンスチケット(Tシャツ無し)",
+          class: "now-on-sale"
+        },
       ],
     },
     {
