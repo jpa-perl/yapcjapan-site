@@ -1,7 +1,7 @@
 {
   buttons: [
     //{ type: "talk",               label: "トーク応募",           blank: true,  url: "https://goo.gl/forms/TvKIt4ghqIKymUnb2" },
-    //{ type: "lt",                label: "LT応募(要参加チケット)",               blank: true,  url: "https://goo.gl/forms/Sw8WIE7BCcPVRYwG3" },
+    { type: "lt",                label: "LT応募(要参加チケット)",               blank: true,  url: "https://goo.gl/forms/LT0kzGdQQAUHDBG82" },
     //{ type: "ticket",             label: "一般・学生チケット",         blank: true, url: "https://passmarket.yahoo.co.jp/event/show/detail/01dewpz7g87m.html" },
     //{ type: "personal-sponsor",             label: "個人スポンサーチケット",         blank: true, url: "https://passmarket.yahoo.co.jp/event/show/detail/01h74dz7g92i.html" },
     { type: "ticket",             label: "カンファレンスチケット (Tシャツなし)",         blank: true, url: "https://passmarket.yahoo.co.jp/event/show/detail/01jpj2ze06r0.html" },
