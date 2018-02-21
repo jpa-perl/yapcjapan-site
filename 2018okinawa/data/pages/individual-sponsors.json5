@@ -7,250 +7,219 @@
   // contents
   sponsors: [
     {
-      name: "wakegisky",
-      twitter: "https://twitter.com/wakegisky",
-      url: "https://twitter.com/wakegisky",
-      asset: "wakegisky.png"
+      name:  "karupanerura",
+      site: "https://twitter.com/karupanerura/",
+      twitter: "https://twitter.com/karupanerura/",
+      github: "https://github.com/karupanerura",
+      asset: "karupanerura.png",
     },
     {
-      name: "i47_rozary",
-      twitter: "https://twitter.com/i47_rozary",
-      url: "https://twitter.com/i47_rozary",
-      asset: "i47_rozary.jpg"
+      name:  "sho130",
+      site:  "https://twitter.com/sho130/",
+      twitter:  "https://twitter.com/sho130/",
+      asset: "sho130.jpg",
     },
     {
-      name: "kun432",
-      twitter: "https://twitter.com/kun432",
-      github: "https://github.com/kun432",
-      url: "https://twitter.com/kun432",
-      asset: "kun432.png"
+      name:  "sironekotoro",
+      site:  "https://twitter.com/sironekotoro",
+      twitter:  "https://twitter.com/sironekotoro",
+      asset: "sironekotoro.png",
     },
     {
-      name: "sironekotoro",
-      twitter: "https://twitter.com/sironekotoro",
-      url: "https://twitter.com/sironekotoro",
-      asset: "sironekotoro.png"
+      name: "SnappyRollcake",
+      site: "https://twitter.com/SnappyRollcake",
+      twitter: "https://twitter.com/SnappyRollcake",
+      asset: "SnappyRollcake.jpg",
     },
     {
-      name: "mahoyaya",
-      twitter: "https://twitter.com/mahoyaya",
-      url: "https://twitter.com/mahoyaya",
-      asset: "mahoyaya.jpg"
+      name: "m_zuma",
+      site: "https://twitter.com/m_zuma",
+      twitter: "https://twitter.com/m_zuma",
+      asset: "m_zuma.jpg",
     },
     {
       name: "__papix__",
+      site: "https://twitter.com/__papix__",
       twitter: "https://twitter.com/__papix__",
-      url: "https://twitter.com/__papix__",
-      asset: "papix.jpg"
+      asset: "papix.jpg",
     },
     {
-      name: "941",
-      twitter: "https://twitter.com/941",
-      url: "https://twitter.com/941",
-      asset: "941.jpg"
+      name: "pastak",
+      site: "https://twitter.com/pastak",
+      twitter: "https://twitter.com/pastak",
+      asset: "pastak.jpg"
+    },
+    {
+      name: "ihive_ito",
+      site: "https://twitter.com/ihive_ito",
+      twitter: "https://twitter.com/ihive_ito",
+      github: "https://github.com/itoken417",
+      facebook: "https://www.facebook.com/itoken417",
+      asset: "ihive_ito.jpg",
+    },
+    {
+      name: "teckl",
+      site: "http://twitter.com/teckl/",
+      twitter: "http://twitter.com/teckl/",
+      asset: "teckl.jpg",
+    },
+    {
+      name: "pengo",
+      site: "http://twitter.com/pengo/",
+      twitter: "http://twitter.com/pengo/",
+      asset: "pengo.jpg"
+    },
+    {
+      name: "shunirr",
+      site: "http://twitter.com/shunirr/",
+      twitter: "http://twitter.com/shunirr/",
+      asset: "shunirr.jpg",
+    },
+    {
+      name: "moznion",
+      site: "http://twitter.com/moznion/",
+      twitter: "http://twitter.com/moznion/",
+      github: "https://github.com/moznion",
+      asset: "moznion.jpg",
+    },
+    {
+      name: "fuba",
+      twitter: "http://twitter.com/fuba/",
+    },
+    {
+      name: "sugyan",
+      twitter: "http://twitter.com/sugyan/",
+    },
+    {
+      name: "kun432",
+      twitter: "http://twitter.com/kun432/",
+      github: "https://github.com/kun432",
     },
     {
       name: "nqounet",
       twitter: "https://twitter.com/nqounet",
-      url: "https://twitter.com/nqounet",
-      asset: "nqounet.jpg"
     },
     {
-      name: "sago35tk",
-      twitter: "https://twitter.com/sago35tk",
-      url: "https://twitter.com/sago35tk",
-      asset: "sago35tk.png"
+      name: "@jitsu",
+      twitter: "http://twitter.com/jitsu/",
     },
     {
-      name: "karashi39",
-      github: "https://github.com/karashi39",
-      url: "https://github.com/karashi39",
-      asset: "karashi39.jpg"
+      name: "uzulla",
+      twitter: "http://twitter.com/uzulla/",
     },
     {
-      name: "xtetsuji",
-      twitter: "https://twitter.com/xtetsuji",
-      url: "https://twitter.com/xtetsuji",
-      asset: "xtetsuji.png"
-    },
-    {
-      name: "jitsu",
-      twitter: "https://twitter.com/jitsu",
-      url: "https://twitter.com/jitsu",
-      asset: "jitsu.jpg"
-    },
-    {
-      name: "kaz_hiramatsu",
-      twitter: "https://twitter.com/kaz_hiramatsu",
-      url: "https://twitter.com/kaz_hiramatsu",
-      asset: "kaz_hiramatsu.jpeg"
-    },
-    {
-      name: "syncbunny",
-      facebook: "https://www.facebook.com/syncbunny",
-      url: "https://www.facebook.com/syncbunny",
-      asset: "syncbunny.jpg"
-    },
-    {
-      name: "mackee_w",
-      twitter: "https://twitter.com/mackee_w",
-      url: "https://twitter.com/mackee_w",
-      asset: "mackee_w.jpeg"
-    },
-    {
-      name: "jamadam",
-      github: "https://github.com/jamadam",
-      url: "https://github.com/jamadam",
-      asset: "jamadam.jpg"
-    },
-    {
-      name: "matsumana",
-      twitter: "https://twitter.com/matsumana",
-      url: "https://twitter.com/matsumana",
-      asset: "matsumana.png"
-    },
-    {
-      name: "_sfus",
-      twitter: "https://twitter.com/_sfus",
-      url: "https://twitter.com/_sfus",
-      asset: "sfus.png"
-    },
-    {
-      name: "karupanerura",
-      twitter: "https://twitter.com/karupanerura",
-      github: "https://github.com/karupanerura",
-      url: "https://twitter.com/karupanerura",
-      asset: "karupanerura.png"
-    },
-    {
-      name: "ohshima",
-      twitter: "https://twitter.com/ohshima",
-      url: "https://twitter.com/ohshima",
-      asset: "ohshima.jpg"
-    },
-    {
-      name: "Yasu-n",
-      twitter: "https://twitter.com/_yasu_n",
-      url: "https://twitter.com/_yasu_n",
-      asset: "yasu_n.jpeg"
-    },
-    {
-      name: "toku_bass",
-      twitter: "https://twitter.com/toku_bass",
-      url: "https://twitter.com/toku_bass",
-      asset: "toku_bass.png"
-    },
-    {
-      name: "Songmu",
-      github: "https://github.com/Songmu",
-      url: "https://github.com/Songmu",
-      asset: "songmu.jpg"
+      name: "isaoeka",
+      twitter: "http://twitter.com/isaoeka/",
+      github: "https://github.com/isaoeka",
     },
     {
       name: "yukikimoto2",
       twitter: "https://twitter.com/yukikimoto2",
-      url: "https://twitter.com/yukikimoto2",
-      asset: "yukikimoto2.jpg"
     },
     {
-      name: "m_shige1979",
-      twitter: "https://twitter.com/m_shige1979",
-      url: "https://twitter.com/m_shige1979",
-      asset: "m_shige1979.jpeg"
+      name: "ara_ta3",
+      twitter: "https://twitter.com/ara_ta3",
     },
     {
-      name: "pomsuke03",
-      twitter: "https://twitter.com/pomsuke03",
-      url: "https://twitter.com/pomsuke03",
-      asset: "pomsuke03.jpeg"
+      name: "mihyaeru21",
+      twitter: "https://twitter.com/mihyaeru21",
+      github: "https://github.com/mihyaeru21",
     },
-    /*
     {
-      name: "yu_love_perl",
-      twitter: "https://twitter.com/yu_love_perl",
-      url: "https://twitter.com/yu_love_perl",
-      asset: "yu_love_perl.png"
+      name: "hoto17296",
+      twitter: "https://twitter.com/hoto17296",
     },
-   */
+    {
+      name: "ichigotake",
+      github:  "https://github.com/ichigotake",
+    },
     {
       name: "maka2_donzoko",
       twitter: "https://twitter.com/maka2_donzoko",
-      url: "https://twitter.com/maka2_donzoko",
-      asset: "maka2_donzoko.png"
     },
     {
-      name: "hide_o_55",
-      twitter: "https://twitter.com/hide_o_55",
-      url: "https://twitter.com/hide_o_55",
-      asset: "hide_o_55.png"
+      name: "yu_loveperl",
+      twitter: "https://twitter.com/yu_loveperl",
     },
     {
-      name: "likk",
-      twitter: "https://twitter.com/likk",
-      url: "https://twitter.com/likk",
-      asset: "likk.jpg"
+      name: "kazeburo",
+      twitter: "https://twitter.com/kazeburo",
     },
     {
-      name: "nasa9084",
-      twitter: "https://twitter.com/nasa9084",
-      url: "https://twitter.com/nasa9084",
-      asset: "nasa9084.jpeg"
+      name: "kimihito_",
+      twitter: "https://twitter.com/kimihito_",
     },
     {
-      name: "hitode909",
-      twitter: "https://twitter.com/hitode909",
-      url: "https://twitter.com/hitode909",
-      asset: "hitode909.jpg"
+      name: "hrfmk",
+      twitter: "https://twitter.com/hrfmk",
     },
     {
-      name: "kga",
-      twitter: "https://twitter.com/kga",
-      url: "https://twitter.com/kga",
-      asset: "kga.jpeg"
+      name: "aipacommander",
+      site: "http://profile.hatena.ne.jp/aipacommander/",
+      asset: "aipacommander.jpg"
     },
     {
-      name: "akiroom",
-      twitter: "https://twitter.com/akiroom",
-      url: "https://twitter.com/akiroom",
-      asset: "akiroom.jpg"
+      name: "xtetsuji",
+      twitter: "https://twitter.com/xtetsuji",
     },
     {
-      name: "fujiwara",
-      twitter: "https://twitter.com/fujiwara",
-      url: "https://twitter.com/fujiwara",
-      asset: "fujiwara.jpg"
+      name: "ueneid",
+      twitter: "https://twitter.com/ueneid",
     },
     {
-      name: "kaiko0524",
-      twitter: "https://twitter.com/kaiko0524",
-      url: "https://twitter.com/kaiko0524",
-      asset: "kaiko0524.gif"
+      name: "mackee",
+      github: "https://github.com/mackee",
     },
     {
-      name: "tai_ga",
-      twitter: "https://twitter.com/tai_ga",
-      url: "https://twitter.com/tai_ga",
-      asset: "tai_ga.jpeg"
+      name: "atomita",
+      github: "https://github.com/atomita",
     },
     {
-      name: "treby006",
-      twitter: "https://twitter.com/treby006",
-      facebook: "https://www.facebook.com/Hiroaki.Ninomiya",
-      github: "https://github.com/treby",
-      url: "https://twitter.com/treby006",
-      asset: "treby006.jpg"
+      name: "tnaototo",
+      twitter: "https://twitter.com/tnaototo",
+    },
+    {
+      name: "gugod",
+      github: "https://github.com/gugod",
+    },
+    {
+      name: "@k_nishijima",
+      twitter: "https://twitter.com/k_nishijima",
     },
     {
       name: "hakata_oyuki",
       twitter: "https://twitter.com/hakata_oyuki",
-      url: "https://twitter.com/hakata_oyuki",
-      asset: "hakata_oyuki.jpg"
     },
     {
-      name: "d_tsuru",
-      twitter: "https://twitter.com/d_tsuru",
-      url: "https://twitter.com/d_tsuru",
-      asset: "d_tsuru.png"
+      name: "mahoyaya",
+      twitter: "https://twitter.com/mahoyaya",
+    },
+    {
+      name: "acidlemon",
+      twitter: "https://twitter.com/acidlemon",
+    },
+    {
+      name: "miyaz697",
+      twitter: "https://twitter.com/miyaz697",
+    },
+    {
+      name: "yasuhiro_onishi",
+      twitter: "https://twitter.com/yasuhiro_onishi",
+    },
+    {
+      name: "jigyakkuma_",
+      twitter: "https://twitter.com/jigyakkuma_",
+    },
+    {
+      name: "kazuki_sue",
+      twitter: "https://twitter.com/kazuki_sue",
+      github: "https://github.com/kaneshirok",
+      facebook: "https://www.facebook.com/kaneshirok",
+    },
+    {
+      name: "atsushi.kinjo",
+      facebook: "https://www.facebook.com/atsushi.kinjo",
     }
+
   ],
 }
