@@ -316,15 +316,14 @@ ul.individual-sponsors {
 
 ul.individual-sponsors > li {
   display: inline-block;
-  margin: 0 20px 15px 10px;
-  float: left;
+  margin: 0 15px 15px 0;
 }
 
 ul.individual-sponsors > li img {
   width: 120px;
 }
+
 ul.individual-sponsors > li i {
   color: black;
   float: left;
-  margin: 2px 0 0 2px;
 }
