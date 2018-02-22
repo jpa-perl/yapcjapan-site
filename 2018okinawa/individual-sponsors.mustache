@@ -1,0 +1,23 @@
+<h3 class="title">{{page-title}}</h3>
+<div id="individual-sponsors" class="section">
+  <div class="body">
+    <ul class="individual-sponsors">
+      {{#sponsors}}
+        <li class="sponsors">
+          <div class="img-box">
+            <a href="{{site}}" target="_blank"><img src="assets/images/individual-sponsors/{{asset}}"/></a>
+          </div>
+          {{#twitter}}
+            <a href="{{twitter}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          {{/twitter}}
+          {{#github}}
+            <a href="{{github}}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          {{/github}}
+          {{#facebook}}
+            <a href="{{facebook}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          {{/facebook}}
+        </li>
+      {{/sponsors}}
+    </ul>
+  </div>
+</div>
