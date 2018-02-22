@@ -47,11 +47,11 @@
       "title": "SPONSORS",
       "blank": false
     },
-   // {
-   //   "url": "./individual-sponsors.html",
-   //   "title": "INDIVIDUAL SPONSORS",
-   //   "blank": false
-   // },
+    {
+      "url": "./individual-sponsors.html",
+      "title": "INDIVIDUAL SPONSORS",
+      "blank": false
+    },
    // {
    //   "url": "./staff.html",
    //   "title": "STAFF",
