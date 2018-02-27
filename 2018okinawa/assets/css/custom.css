@@ -327,3 +327,21 @@ ul.individual-sponsors > li i {
   color: black;
   float: left;
 }
+
+ul.staff-list {
+  list-style-type: none;
+}
+
+ul.staff-list > li {
+  display: inline-block;
+  margin: 0 15px 15px 0;
+}
+
+ul.staff-list > li img {
+  width: 120px;
+}
+
+ul.staff-list > li i {
+  color: black;
+  float: left;
+}
