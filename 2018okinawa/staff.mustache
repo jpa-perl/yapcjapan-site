@@ -1,0 +1,56 @@
+{{#corestaff@size}}
+<div id="core-staff" class="section">
+  <h3 class="title">CoreStaff</h3>
+  <div class="body">
+    <ul class="staff-list">
+      {{#corestaff}}
+        <li class="corestaff">
+          <div class="img-box">
+            <a href="{{site}}" target="_blank"><img src="assets/images/staff/{{asset}}"/>
+                <p>{{name}}</p>
+            </a>
+          </div>
+          {{#twitter}}
+            <a href="{{twitter}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          {{/twitter}}
+          {{#github}}
+            <a href="{{github}}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          {{/github}}
+          {{#facebook}}
+            <a href="{{facebook}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          {{/facebook}}
+        </li>
+      {{/corestaff}}
+    </ul>
+  </div>
+</div>
+{{/corestaff@size}}
+
+{{#volunteers@size}}
+<div id="volunteer-staff" class="section">
+  <h3 class="title">VolunteerStaff</h3>
+  <div class="body">
+    <ul class="staff-list">
+      {{#volunteers}}
+        <li class="corestaff">
+          <div class="img-box">
+            <a href="{{site}}" target="_blank"><img src="assets/images/staff/{{asset}}"/>
+                <p>{{name}}</p>
+            </a>
+          </div>
+          {{#twitter}}
+            <a href="{{twitter}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          {{/twitter}}
+          {{#github}}
+            <a href="{{github}}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          {{/github}}
+          {{#facebook}}
+            <a href="{{facebook}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          {{/facebook}}
+        </li>
+      {{/volunteers}}
+
+    </ul>
+  </div>
+</div>
+{{/volunteers@size}}

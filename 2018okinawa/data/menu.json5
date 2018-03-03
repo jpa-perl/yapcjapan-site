@@ -52,11 +52,11 @@
       "title": "INDIVIDUAL SPONSORS",
       "blank": false
     },
-   // {
-   //   "url": "./staff.html",
-   //   "title": "STAFF",
-   //   "blank": false
-   // },
+    {
+      "url": "./staff.html",
+      "title": "STAFF",
+      "blank": false
+    },
     {
       "url": "http://japan.perlassociation.org/entry/yapc/code_of_conduct",
       "title": "CODE OF CONDUCT",
