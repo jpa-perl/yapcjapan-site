@@ -73,6 +73,11 @@
   border: 2px solid #b97a04;
 }
 
+.button a.btn-photo {
+  color:  #0dac67;
+  border: 2px solid #0dac67;
+}
+
 /* About */
 
 #about dl {

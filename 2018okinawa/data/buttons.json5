@@ -10,7 +10,8 @@
     //{ type: "after-party",        label: "懇親会チケット",             blank: true,  url: "https://passmarket.yahoo.co.jp/event/show/detail/0174hjz7hzgm.html" },
     //{ type: "sponsor",             label: "スポンサーメニュー",         blank: true, url: "./sponsor_menu.html" },
     //{ type: "before-night-party-lt",               label: "前夜祭LTソン LT発表者登録(要前夜祭チケット)",           blank: true,  url: "https://atnd.org/events/88820" },
-    { type: "best-talk",             label: "ベストトーク賞投票",   blank: true,  url: "https://goo.gl/forms/7qvA1dk89nKmWShp2" },
+    //{ type: "best-talk",             label: "ベストトーク賞投票",   blank: true,  url: "https://goo.gl/forms/7qvA1dk89nKmWShp2" },
     // { type: "add-lt",                label: "LT応募",               blank: true,  url: "#" },
+    { type: "photo",                label: "写真",               blank: true,  url: "http://30d.jp/yapcjapan/3" },
   ],
 }
