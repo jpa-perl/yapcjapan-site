@@ -61,11 +61,11 @@ body::before {
 
 body > #wrapper { height: auto; }
 
-a 			{ color: #009fe8; text-decoration: none; }
-a:link		{ color: #009fe8; text-decoration: none; }
-a:visited	{ color: #009fe8; text-decoration: none; }
-a:active	{ color: #009fe8; text-decoration: none; }
-a:hover		{ color: #0dac67; text-decoration: none; }
+a 			{ color: #eee; text-decoration: none; }
+a:link		{ color: #eee; text-decoration: none; }
+a:visited	{ color: #eee; text-decoration: none; }
+a:active	{ color: #eee; text-decoration: none; }
+a:hover		{ color: #00c; text-decoration: none; }
 a.disabled	{ color: #555; }
 
 img { width: 100%; }
@@ -95,7 +95,7 @@ ol, ul {
 
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
+Z	border-spacing: 0;
 }
 
 caption, th, td {
@@ -200,6 +200,14 @@ dd img { vertical-align: bottom; }
 	text-align: center;
 }
 
+#mainvisual div {
+	position: absolute;
+	top: 58%;
+    width: 100%;
+	text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
 
 /*----------------------------------------------------------
   - FOOTER
