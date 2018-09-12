@@ -209,6 +209,8 @@ dd img { vertical-align: bottom; }
     font-size: 16px;
 }
 
+#mainvisual div a { text-decoration: underline; }
+
 /*----------------------------------------------------------
   - FOOTER
 ----------------------------------------------------------*/
