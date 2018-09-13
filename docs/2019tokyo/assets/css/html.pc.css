@@ -17,7 +17,6 @@ html {
 }
 
 body {
-	position: relative;
 	color: #000;
 	font-size: 14px !important;
 	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", "Lucida Grande", "Tahoma", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", "游明朝", "YuMincho", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
@@ -25,9 +24,11 @@ body {
 	background-color: #000;
 	margin: 0;
 	padding: 0;
-	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: unset;
+	 -webkit-font-smoothing: subpixel-antialiased;
 }
+body.fixed { background-color: #fde4b2; }
 
 body {
 	-webkit-animation: fadeIn 2s ease 0s 1 normal;
@@ -35,17 +36,11 @@ body {
 		    animation: fadeIn 2s ease 0s 1 normal;
 }
 
-body::before {
-	display: block;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: #000;
-	width: 100%;
-	height: 100%;
-	padding-bottom: 108px;
-	content: "";
-	z-index: -1;
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx) {
+	body {
+		-moz-osx-font-smoothing: grayscale;
+		 -webkit-font-smoothing: antialiased;
+	}
 }
 
 #wrapper {
@@ -61,11 +56,11 @@ body::before {
 
 body > #wrapper { height: auto; }
 
-a 			{ color: #009fe8; text-decoration: none; }
-a:link		{ color: #009fe8; text-decoration: none; }
-a:visited	{ color: #009fe8; text-decoration: none; }
-a:active	{ color: #009fe8; text-decoration: none; }
-a:hover		{ color: #0dac67; text-decoration: none; }
+a 			{ color: #eee; text-decoration: none; }
+a:link		{ color: #eee; text-decoration: none; }
+a:visited	{ color: #eee; text-decoration: none; }
+a:active	{ color: #eee; text-decoration: none; }
+a:hover		{ color: #00c; text-decoration: none; }
 a.disabled	{ color: #555; }
 
 img { width: 100%; }
@@ -188,7 +183,7 @@ dd img { vertical-align: bottom; }
 
 #mainvisual {
 	position: relative;
-	background: url(../images/mainvisual_sp.png) no-repeat center center;
+	background: url(../images/mainvisual_pc.png) no-repeat center center;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		    background-size: cover;
@@ -200,6 +195,16 @@ dd img { vertical-align: bottom; }
 	text-align: center;
 }
 
+#mainvisual div {
+	position: absolute;
+	top: 55%;
+    width: 100%;
+	text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+#mainvisual div a:hover	{ text-decoration: underline; }
 
 /*----------------------------------------------------------
   - FOOTER
@@ -215,8 +220,6 @@ dd img { vertical-align: bottom; }
 	padding: 0;
 }
 
-#footer a { }
-
 #footer .inner {
 	display: table-cell;
 	vertical-align: middle;
@@ -224,7 +227,7 @@ dd img { vertical-align: bottom; }
 
 #footer .social-button {
 	position: relative;
-	margin: 0 auto 40px auto;
+	margin: 0 auto 60px auto;
 	padding: 0;
 	_zoom: 1;
 	overflow: hidden;
@@ -240,18 +243,18 @@ dd img { vertical-align: bottom; }
 	position: relative;
 	left: -50%;
 	float: left;
-	width: 40px;
+	width: 50px;
 	margin: 0 10px;
 }
 
 #footer address {
 	color: #fff;
-	font-size: 10px;
+	font-size: 11px;
 	text-align: center;
 }
 #footer address img {
 	display: block;
-	max-width: 100px;
+	max-width: 120px;
 	margin: 0 auto 20px auto;
 	vertical-align: bottom;
 }
