@@ -202,11 +202,11 @@ dd img { vertical-align: bottom; }
 
 #mainvisual div {
 	position: absolute;
-	top: 58%;
+	top: 55%;
     width: 100%;
 	text-align: center;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 #mainvisual div a { text-decoration: underline; }
