@@ -2,6 +2,7 @@
   // partials
   "include-index": true,
   "include-tickets": false,
-  "include-guest-speakers": true,
-  "include-special-session": true,
+  "include-guest-speakers": false,
+  "include-special-session": false,
+  "include-sponsors": false,
 }
