@@ -13,8 +13,12 @@ OUTPUT_DIR=${OUTPUT_DIR:-"../docs/2019tokyo"}
 declare -a pages=()
 
 # ../process_v2.pl ./template.mustache ./data/pages/index.json5 $common_data $index_contents_data > $OUTPUT_DIR/index.html
-../process_v2.pl ./template.mustache  > $OUTPUT_DIR/index.html
+../process_v2.pl ./template.mustache > $OUTPUT_DIR/index.html
 echo "Created $OUTPUT_DIR/index.html"
+
+../process_v2.pl ./2nd.mustache > $OUTPUT_DIR/2nd.html
+echo "Created $OUTPUT_DIR/2nd.html"
+
 # for page in ${pages[@]}; do
 #   ../process_v2.pl ./2nd.mustache ./data/pages/$page.json5 $common_data > $OUTPUT_DIR/$page.html
 #   echo "Created $OUTPUT_DIR/$page.html"
