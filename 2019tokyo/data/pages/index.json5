@@ -1,5 +1,7 @@
 {
-  "page": "index",
   // partials
   "include-index": true,
+  "include-tickets": false,
+  "include-guest-speakers": true,
+  "include-special-session": true,
 }

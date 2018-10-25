@@ -3,64 +3,76 @@
     {
       "url": "/2019tokyo/",
       "title": "HOME",
-      "blank": false
+      "blank": false,
+      "visible": true,
     },
     {
       "url": "/2019tokyo/#about",
       "title": "ABOUT",
-      "blank": false
+      "blank": false,
+      "visible": true,
     },
     {
       "url": "/2019tokyo/#news",
       "title": "NEWS",
-      "blank": false
+      "blank": false,
+      "visible": true,
     },
     {
       "url": "http://blog.yapcjapan.org/",
       "title": "BLOG",
-      "blank": true
+      "blank": true,
+      "visible": true,
     },
 
     {
-      "url": "/2019tokyo/sponsor_menu.html",
+      "url": "https://docs.google.com/presentation/d/e/2PACX-1vTKQANAAq_zCyVe8wVr-Ve3OXZacDT6Ne8xad5-VzL2G91HsSFpNcANP6O63L6Qum2Y90OSYZNzGbx4/pub?start=false&loop=false&delayms=3000",
       "title": "SPONSOR MENU",
-      "blank": true
+      "blank": true,
+      "visible": true,
     },
 
     {
       "url": "/2019tokyo/timetable.html",
       "title": "TIMETABLE",
-      "blank": false
+      "blank": false,
+      "visible": false,
     },
     {
       "url": "/2019tokyo/talks.html",
       "title": "TALKS",
-      "blank": false
+      "blank": false,
+      "visible": false,
     },
     {
       "url": "/2019tokyo/#tickets",
       "title": "TICKETS",
-      "blank": false
+      "blank": false,
+      "visible": false,
     },
     {
       "url": "/2019tokyo/#sponsors",
       "title": "SPONSORS",
-      "blank": false
+      "blank": false,
+      "visible": true,
     },
     {
       "url": "/2019tokyo/individual-sponsors.html",
       "title": "INDIVIDUAL SPONSORS",
-      "blank": false
+      "blank": false,
+      "visible": false,
     },
     {
       "url": "/2019tokyo/staff.html",
       "title": "STAFF",
-      "blank": false
+      "blank": false,
+      "visible": false,
     },
     {
       "url": "http://japan.perlassociation.org/entry/yapc/code_of_conduct",
       "title": "CODE OF CONDUCT",
-      "blank": true
+      "blank": true,
+      "visible": true,
     },
   ]
 }

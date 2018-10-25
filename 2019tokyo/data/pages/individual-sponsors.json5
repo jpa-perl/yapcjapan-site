@@ -1,7 +1,5 @@
 {
-  "page": "index",
+  "page-title": "Individual Sponsors",
   // partials
-  "include-mainvisual": false,
-  "include-index": false,
-  "include-individual-sponsors": true
+  "include-individual-sponsors": true,
 }

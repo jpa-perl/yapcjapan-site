@@ -5,16 +5,15 @@ cd $(dirname $0)
 
 OUTPUT_DIR=${OUTPUT_DIR:-"../docs/2019tokyo"}
 
-# common_data=`echo ./data/{menu,buttons}.json5`
-# index_contents_data=`echo ./data/{sponsors,tickets}.json5`
 common_data=`echo ./data/menu.json5`
+index_contents_data=`echo ./data/{buttons,sponsors}.json5`
 
 # TODO: declare -a pages=(code-of-conduct individual-sponsors sponsors staff talks timetable)
-# declare -a pages=(staff sponsors individual-sponsors talks timetable)
-declare -a pages=(index individual-sponsors)
+# declare -a pages=(index staffs individual-sponsors talks timetable)
+declare -a pages=(index)
 
 for page in ${pages[@]}; do
-  ../process_v2.pl ./template.mustache ./data/pages/$page.json5 $common_data > $OUTPUT_DIR/$page.html
+  ../process_v2.pl ./template.mustache ./data/pages/$page.json5 $common_data $index_contents_data > $OUTPUT_DIR/$page.html
   echo "Created $OUTPUT_DIR/$page.html"
 done
 
