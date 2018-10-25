@@ -54,7 +54,7 @@
       "url": "/2019tokyo/#sponsors",
       "title": "SPONSORS",
       "blank": false,
-      "visible": true,
+      "visible": false,
     },
     {
       "url": "/2019tokyo/individual-sponsors.html",
