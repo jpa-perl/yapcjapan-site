@@ -1,0 +1,7 @@
+{
+  "page": "index",
+  // partials
+  "include-mainvisual": false,
+  "include-index": false,
+  "include-individual-sponsors": true
+}

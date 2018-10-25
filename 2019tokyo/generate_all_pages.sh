@@ -7,22 +7,16 @@ OUTPUT_DIR=${OUTPUT_DIR:-"../docs/2019tokyo"}
 
 # common_data=`echo ./data/{menu,buttons}.json5`
 # index_contents_data=`echo ./data/{sponsors,tickets}.json5`
+common_data=`echo ./data/menu.json5`
 
 # TODO: declare -a pages=(code-of-conduct individual-sponsors sponsors staff talks timetable)
 # declare -a pages=(staff sponsors individual-sponsors talks timetable)
-declare -a pages=()
+declare -a pages=(index individual-sponsors)
 
-# ../process_v2.pl ./template.mustache ./data/pages/index.json5 $common_data $index_contents_data > $OUTPUT_DIR/index.html
-../process_v2.pl ./template.mustache > $OUTPUT_DIR/index.html
-echo "Created $OUTPUT_DIR/index.html"
-
-../process_v2.pl ./2nd.mustache > $OUTPUT_DIR/2nd.html
-echo "Created $OUTPUT_DIR/2nd.html"
-
-# for page in ${pages[@]}; do
-#   ../process_v2.pl ./2nd.mustache ./data/pages/$page.json5 $common_data > $OUTPUT_DIR/$page.html
-#   echo "Created $OUTPUT_DIR/$page.html"
-# done
+for page in ${pages[@]}; do
+  ../process_v2.pl ./template.mustache ./data/pages/$page.json5 $common_data > $OUTPUT_DIR/$page.html
+  echo "Created $OUTPUT_DIR/$page.html"
+done
 
 # # process sponsor menu
 # ../process_v2.pl ./sponsor_menu.html > $OUTPUT_DIR/sponsor_menu.html

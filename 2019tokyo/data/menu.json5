@@ -1,0 +1,66 @@
+{
+  "menu": [
+    {
+      "url": "/2019tokyo/",
+      "title": "HOME",
+      "blank": false
+    },
+    {
+      "url": "/2019tokyo/#about",
+      "title": "ABOUT",
+      "blank": false
+    },
+    {
+      "url": "/2019tokyo/#news",
+      "title": "NEWS",
+      "blank": false
+    },
+    {
+      "url": "http://blog.yapcjapan.org/",
+      "title": "BLOG",
+      "blank": true
+    },
+
+    {
+      "url": "/2019tokyo/sponsor_menu.html",
+      "title": "SPONSOR MENU",
+      "blank": true
+    },
+
+    {
+      "url": "/2019tokyo/timetable.html",
+      "title": "TIMETABLE",
+      "blank": false
+    },
+    {
+      "url": "/2019tokyo/talks.html",
+      "title": "TALKS",
+      "blank": false
+    },
+    {
+      "url": "/2019tokyo/#tickets",
+      "title": "TICKETS",
+      "blank": false
+    },
+    {
+      "url": "/2019tokyo/#sponsors",
+      "title": "SPONSORS",
+      "blank": false
+    },
+    {
+      "url": "/2019tokyo/individual-sponsors.html",
+      "title": "INDIVIDUAL SPONSORS",
+      "blank": false
+    },
+    {
+      "url": "/2019tokyo/staff.html",
+      "title": "STAFF",
+      "blank": false
+    },
+    {
+      "url": "http://japan.perlassociation.org/entry/yapc/code_of_conduct",
+      "title": "CODE OF CONDUCT",
+      "blank": true
+    },
+  ]
+}

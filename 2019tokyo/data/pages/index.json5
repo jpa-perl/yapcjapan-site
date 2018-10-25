@@ -1,0 +1,5 @@
+{
+  "page": "index",
+  // partials
+  "include-index": true,
+}
