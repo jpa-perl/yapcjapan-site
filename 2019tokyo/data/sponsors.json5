@@ -1,2 +1,48 @@
 {
+  sponsors: [
+    {
+      type: "perl",
+      name: "パール",
+      image_size: "large",
+      list: [
+        { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
+        { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
+      ],
+    },
+    {
+      type: "platinum",
+      name: "プラチナ",
+      image_size: "large",
+      list: [
+        { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
+        { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
+      ],
+    },
+    {
+      type: "gold",
+      name: "ゴールド",
+      image_size: "medium",
+      list: [
+        { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
+        { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
+      ],
+    },
+    {
+      type: "silver",
+      name: "シルバー",
+      image_size: "small",
+      list: [
+        { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
+        { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
+      ],
+    },
+    {
+      type: "host",
+      name: "主催",
+      image_size: "medium",
+      list: [
+        { name: "Japan Perl Association", asset: "jpa.png",      url: "http://japan.perlassociation.org/" },
+      ],
+    },
+  ],
 }

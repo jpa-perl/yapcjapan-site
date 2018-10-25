@@ -1,53 +1,22 @@
 <div id="sponsors">
-<h3 class="title">SPONSORS</h3>
-<div class="section">
-<div class="body">
-<div class="class">
-<h4>パール</h4>
-<div class="block">
-<ul>
-<li class="large"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-<li class="large"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>プラチナ</h4>
-<div class="block">
-<ul>
-<li class="large"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>ゴールド</h4>
-<div class="block">
-<ul>
-<li class="medium"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-<li class="medium"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-<li class="medium"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-<li class="medium"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>シルバー</h4>
-<div class="block">
-<ul>
-<li class="small"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-<li class="small"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-<li class="small"><a href="" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="" /></a></li>
-</ul>
-</div>
-</div>
-<div class="class">
-<h4>主催</h4>
-<div class="block">
-<ul>
-<li class="medium"><a href="http://japan.perlassociation.org/" target="_blank"><img src="https://dummyimage.com/600x600/eee/333" alt="Japan Perl Association" width="220px" /></a></li>
-</ul>
-</div>
-</div>
-</div><!--  / .body /  -->
-</div><!--  / .section /  -->
+  <div class="section" id="sponsors">
+    <h3 class="title">SPONSORS</h3>
+    <div class="body">
+      {{^sponsors}}
+        Coming Soon...
+      {{/sponsors}}
+      {{#sponsors}}
+        {{#list@size}}
+          <div class="class">
+            <h4>{{name}}</h4>
+            <div class="block">
+              <ul>{{#list}}
+                <li class="{{image_size}}"><a href="{{url}}" target="_blank"><img src="./assets/images/sponsors/{{asset}}" alt="{{name}}" /></a></li>{{/list}}
+              </ul>
+            </div>
+          </div>
+        {{/list@size}}
+      {{/sponsors}}
+    </div><!--  / .body /  -->
+  </div><!--  / .section /  -->
 </div><!--  / #sponsors /  -->
