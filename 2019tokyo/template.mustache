@@ -18,7 +18,7 @@
       <div id="mainvisual">
         <div {{#include-index}}class="inner" {{/include-index}}id="scene">
           {{#include-index}}
-            {{> mainvisual}}
+            {{> index/mainvisual}}
           {{/include-index}}
         </div><!--  / #scene /  -->
         <hr class="red" />
@@ -26,14 +26,21 @@
       </div><!--  / #mainvisual /  -->
 
       <div id="container">
-
-    {{#include-index}}
-        {{> index}}
-    {{/include-index}}
-    {{#include-individual-sponsors}}
-        {{> individual-sponsors}}
-    {{/include-individual-sponsors}}
-
+        {{#include-index}}
+            {{> index}}
+        {{/include-index}}
+        {{#include-individual-sponsors}}
+            {{> sub/individual-sponsors}}
+        {{/include-individual-sponsors}}
+        {{#include-timetable}}
+            {{> sub/timetable}}
+        {{/include-timetable}}
+        {{#include-talks}}
+            {{> sub/talks}}
+        {{/include-talks}}
+        {{#include-staffs}}
+            {{> sub/staffs}}
+        {{/include-staffs}}
       </div><!--  / #container /  -->
 
     {{> footer}}
