@@ -1,0 +1,22 @@
+{{#staffs}}
+<div id="{{name}}">
+  <h3 class="title">{{title}}</h3>
+  <div class="section">
+    <div class="body">
+    {{#list@size}}
+    <ul class="staff-list">
+    {{#list}}
+      <li>
+        <a href="{{url}}" target="_blank"><img src="{{imageurl}}"/></a><br />
+        <a href="{{url}}" target="_blank">{{name}}</a><br />
+        {{#twitter_id}}<a href="https://twitter.com/{{twitter_id}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>{{/twitter_id}}
+        {{#github_id}}<a href="https://github.com/{{github_id}}" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>{{/github_id}}
+        {{#facebook_id}}<a href="https://www.facebook.com/{{facebook_id}}" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>{{/facebook_id}}
+      </li>
+    {{/list}}
+    </ul>
+    {{/list@size}}
+    </div><!--  / .body /  -->
+  </div><!--  / .section /  -->
+</div><!--  / #core-staff /  -->
+{{/staffs}}
