@@ -190,6 +190,8 @@ ul.individual-sponsors > li i {
   padding: 2px;
 }
 
+/* staffs */
+
 ul.staff-list {
   list-style-type: none;
 }
@@ -197,6 +199,7 @@ ul.staff-list {
 ul.staff-list > li {
   display: inline-block;
   margin: 0 15px 15px 0;
+  font-size: 14px;
 }
 
 ul.staff-list > li img {
@@ -206,9 +209,7 @@ ul.staff-list > li img {
 ul.staff-list > li i {
   color: black;
   float: left;
-  font-size: 18px;
+  font-size: 14px;
   margin: 0;
   padding: 2px;
 }
-
-
