@@ -3,7 +3,7 @@
     {
       type: "perl",
       name: "パール",
-      image_size: "large",
+      image_size: "xlarge",
       list: [
         { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
         { name: "XXX", asset: "dummy600x600.png",   url: "http://yapcjapan.org/" },
