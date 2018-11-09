@@ -141,12 +141,12 @@
 #sponsors .class .block ul li img {
 	background-color: #fff;
 	-webkit-border-radius: 0px;
-	   -moz-border-radius: 0px;
-	        border-radius: 0px;
+       -moz-border-radius: 0px;
+            border-radius: 0px;
 	border: 1px solid #000;
 	padding: 5px;
 }
-#sponsors .class .block ul li a:hover img { background-color: #e7373c; border: 1px solid #e7373c; }
+#sponsors .class .block ul li a:hover img { background-color: #fff; border: 1px solid #e7373c; }
 
 #sponsors .class .block ul li.xlarge img { width: 220px; }
 #sponsors .class .block ul li.large img { width: 180px; }
