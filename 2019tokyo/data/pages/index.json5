@@ -4,5 +4,5 @@
   "include-tickets": false,
   "include-guest-speakers": false,
   "include-special-session": false,
-  "include-sponsors": false,
+  "include-sponsors": true,
 }
