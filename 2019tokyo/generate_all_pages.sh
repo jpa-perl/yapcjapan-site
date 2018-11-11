@@ -8,7 +8,7 @@ rm -rf $OUTPUT_DIR
 mkdir -p $OUTPUT_DIR
 
 common_data=`echo ./data/menu.json5`
-contents_data=`echo ./data/{buttons,sponsors,staffs}.json5`
+contents_data=`echo ./data/{buttons,sponsors,staffs,tickets}.json5`
 
 # TODO: declare -a pages=(code-of-conduct individual-sponsors sponsors staff talks timetable)
 #declare -a pages=(index staffs individual-sponsors talks timetable)

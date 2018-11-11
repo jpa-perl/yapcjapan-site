@@ -1,17 +1,17 @@
 {
   buttons: [
     {
-      type: "personal-sponsor",
-      label: "個人スポンサーチケット",
-      blank: true,
-      url: "https://passmarket.yahoo.co.jp/event/show/detail/01ngc2zxqmz4.html",
-      visible: true,
-    },
-    {
       type: "ticket",
       label: "一般・学生チケット",
       blank: true,
       url: "https://passmarket.yahoo.co.jp/event/show/detail/015qs4zxqp35.html",
+      visible: true,
+    },
+    {
+      type: "personal-sponsor",
+      label: "個人スポンサーチケット",
+      blank: true,
+      url: "https://passmarket.yahoo.co.jp/event/show/detail/01ngc2zxqmz4.html",
       visible: true,
     },
     {

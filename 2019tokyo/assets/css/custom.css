@@ -215,3 +215,12 @@ ul.staff-list > li i {
   margin: 0;
   padding: 2px;
 }
+
+/* tickets */
+
+#tickets ul {
+  margin-block-end: 1.33em;
+}
+#tickets ul li.sold-out a {
+  text-decoration: line-through;
+}
