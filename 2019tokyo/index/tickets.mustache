@@ -2,11 +2,14 @@
   <h3 class="title">TICKETS</h3>
   <div class="section">
     <div class="body">
-      <h4>YAPC::Tokyo 2019 01/26</h4>
-      <ul>
-        <li><a href="" target="_blank">一般・学生チケット</a></li>
-        <li><a href="" target="_blank">個人スポンサーチケット</a></li>
+    {{#tickets}}
+      {{#visible}}
+      <h4>{{name}}</h4>
+      <ul>{{#list}}
+        <li{{#soldout}} class="sold-out"{{/soldout}}><a href="{{url}}" target="_blank">{{name}}</a>{{#soldout}} 完売御礼{{/soldout}}</li>{{/list}}
       </ul>
+      {{/visible}}
+    {{/tickets}}
     </div><!--  / .body /  -->
   </div><!--  / .section /  -->
 </div><!--  / #tickets /  -->

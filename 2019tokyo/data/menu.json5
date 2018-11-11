@@ -48,7 +48,7 @@
       "url": "/2019tokyo/#tickets",
       "title": "TICKETS",
       "blank": false,
-      "visible": false,
+      "visible": true,
     },
     {
       "url": "/2019tokyo/#sponsors",

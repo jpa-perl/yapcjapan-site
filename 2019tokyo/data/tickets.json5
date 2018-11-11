@@ -1,0 +1,46 @@
+{
+  tickets:[
+    {
+      name: "YAPC::Tokyo 2019 01/25 前夜祭",
+      visible: false,
+      list: [
+        {
+          name: "前夜祭参加チケット",
+          url: "",
+          visible: true,
+          soldout: false,
+        },
+      ],
+    },
+    {
+      name: "YAPC::Tokyo 2019 01/26",
+      visible: true,
+      list: [
+        {
+          name: "一般・学生チケット",
+          url: "https://passmarket.yahoo.co.jp/event/show/detail/015qs4zxqp35.html",
+          visible: true,
+          soldout: false,
+        },
+        {
+          name: "個人スポンサーチケット",
+          url: "https://passmarket.yahoo.co.jp/event/show/detail/01ngc2zxqmz4.html",
+          visible: true,
+          soldout: false,
+        },
+      ],
+    },
+    {
+      name: "YAPC::Tokyo 2019 01/26 懇親会",
+      visible: false,
+      list: [
+        {
+          name: "一般・学生チケット",
+          url: "",
+          visible: true,
+          soldout: false,
+        },
+      ],
+    },
+  ]
+}
