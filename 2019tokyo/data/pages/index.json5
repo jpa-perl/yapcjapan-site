@@ -1,0 +1,8 @@
+{
+  // partials
+  "include-index": true,
+  "include-tickets": true,
+  "include-guest-speakers": true,
+  "include-special-session": false,
+  "include-sponsors": true,
+}
