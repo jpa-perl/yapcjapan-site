@@ -6,7 +6,7 @@
       image_size: "xlarge",
       list: [
         { name: "株式会社ディー・エヌ・エー", asset: "dena.png", url: "https://dena.com/" },
-        //{ name: "GMOインターネット株式会社", asset: "", url: "" },
+        { name: "GMOインターネット株式会社", asset: "gmo_internet.png", url: "https://www.gmo.jp/" },
       ],
     },
     {
