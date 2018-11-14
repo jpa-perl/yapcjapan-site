@@ -3,4 +3,4 @@ requires 'Hash::Merge';
 requires 'JSON';
 requires 'JSON5';
 requires 'Path::Tiny';
-requires 'Template::Mustache', '0.5.6';
+requires 'Template::Mustache', '== 0.5.6';
