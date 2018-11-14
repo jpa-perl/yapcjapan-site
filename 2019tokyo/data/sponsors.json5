@@ -27,7 +27,7 @@
       name: "ゴールド",
       image_size: "medium",
       list: [
-        //{ name: "株式会社リブセンス 転職ドラフト", asset: "jobdraft.png", url: "https://job-draft.jp" },
+        { name: "株式会社リブセンス 転職ドラフト", asset: "jobdraft.png", url: "https://job-draft.jp" },
         { name: "株式会社リブセンス", asset: "livesense.png", url: "https://www.livesense.co.jp/" },
         { name: "シックス・アパート株式会社", asset: "sakk.png", url: "https://www.sixapart.jp/" },
         { name: "S2ファクトリー株式会社", asset: "s2f.png", url: "https://www.s2factory.co.jp/" },
