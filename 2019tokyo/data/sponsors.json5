@@ -27,6 +27,7 @@
         { name: "株式会社サポーターズ", asset: "supporterz.png", url: "https://corp.supporterz.jp/" },
         { name: "面白法人カヤック", asset: "kayac.png", url: "https://www.kayac.com/" },
         { name: "株式会社フリークアウト", asset: "freakout.png", url: "https://www.fout.co.jp/freakout/" },
+        { name: "Supership株式会社", asset: "supership.png", url: "https://supership.jp" },
       ],
     },
     {
