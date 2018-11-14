@@ -24,6 +24,7 @@
       list: [
         { name: "シックス・アパート株式会社", asset: "sakk.png", url: "https://www.sixapart.jp/" },
         { name: "S2ファクトリー株式会社", asset: "s2f.png", url: "https://www.s2factory.co.jp/" },
+        { name: "Supership株式会社", asset: "supership.png", url: "https://supership.jp" },
         { name: "株式会社サポーターズ", asset: "supporterz.png", url: "https://corp.supporterz.jp/" },
         { name: "面白法人カヤック", asset: "kayac.png", url: "https://www.kayac.com/" },
         { name: "株式会社フリークアウト", asset: "freakout.png", url: "https://www.fout.co.jp/freakout/" },
