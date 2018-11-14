@@ -16,7 +16,7 @@
       list: [
         { name: "株式会社ミクシィ", asset: "mixigroup.png", url: "https://mixi.co.jp/" },
         { name: "株式会社はてな", asset: "hatena.png", url: "http://hatenacorp.jp/" },
-        { name: "株式会社LINE", asset: "line.png", url: "https://engineering.linecorp.com/" },
+        { name: "LINE株式会社", asset: "line.png", url: "https://engineering.linecorp.com/" },
         { name: "株式会社ファームノート", asset: "farmnote.png", url: "https://farmnote.jp/index.html" },
         { name: "株式会社ガイアックス", asset: "gaiax.png", url: "https://www.gaiax.co.jp/" },
         //{ name: "株式会社メルカリ", asset: "", url: "" },
