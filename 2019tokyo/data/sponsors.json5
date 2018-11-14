@@ -1,0 +1,52 @@
+{
+  sponsors: [
+    {
+      type: "perl",
+      name: "パール",
+      image_size: "xlarge",
+      list: [
+        { name: "株式会社ディー・エヌ・エー", asset: "dena.png", url: "https://dena.com/" },
+      ],
+    },
+    {
+      type: "platinum",
+      name: "プラチナ",
+      image_size: "large",
+      list: [
+        { name: "株式会社はてな", asset: "hatena.png", url: "http://hatenacorp.jp/" },
+        { name: "株式会社ファームノート", asset: "farmnote.png", url: "https://farmnote.jp/index.html" },
+      ],
+    },
+    {
+      type: "gold",
+      name: "ゴールド",
+      image_size: "medium",
+      list: [
+        { name: "シックス・アパート株式会社", asset: "sakk.png", url: "https://www.sixapart.jp/" },
+        { name: "S2ファクトリー株式会社", asset: "s2f.png", url: "https://www.s2factory.co.jp/" },
+        { name: "株式会社サポーターズ", asset: "supporterz.png", url: "https://corp.supporterz.jp/" },
+        { name: "面白法人カヤック", asset: "kayac.png", url: "https://www.kayac.com/" },
+        { name: "株式会社フリークアウト", asset: "freakout.png", url: "https://www.fout.co.jp/freakout/" },
+      ],
+    },
+    {
+      type: "silver",
+      name: "シルバー",
+      image_size: "small",
+      list: [
+        { name: "こだまリサーチ株式会社", asset: "kodamari.com.png", url: "https://www.kodamari.com/" },
+        { name: "シーサー株式会社", asset: "seesaa.png", url: "https://www.seesaa.co.jp/" },
+        { name: "GMO ペパボ株式会社", asset: "gmo-pepabo.png", url: " https://pepabo.com" },
+        { name: "株式会社モバイルファクトリー", asset: "mf.png", url: "https://www.mobilefactory.jp/" },
+      ],
+    },
+    {
+      type: "host",
+      name: "主催",
+      image_size: "medium",
+      list: [
+        { name: "Japan Perl Association", asset: "jpa.png", url: "http://japan.perlassociation.org/" },
+      ],
+    },
+  ],
+}

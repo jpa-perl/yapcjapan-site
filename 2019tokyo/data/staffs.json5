@@ -1,0 +1,40 @@
+{
+  staffs: [
+    {
+      name: "core-staff",
+      title: "CORE STAFF",
+      list: [
+        {
+          name: "やぷしー",
+          url: "https://twitter.com/yapcjapan/",
+          imageurl: "./assets/images/staffs/dummy600x600.png",
+          twitter_id: "yapcjapan",
+          github_id: "jpa-perl",
+          facebook_id: "yapcjapan",
+        },
+        {
+          name: "やぷしー",
+          url: "https://twitter.com/yapcjapan/",
+          imageurl: "./assets/images/staffs/dummy600x600.png",
+          twitter_id: "yapcjapan",
+          github_id: "jpa-perl",
+          facebook_id: "yapcjapan",
+        },
+      ],
+    },
+    {
+      name: "volunteer-staff",
+      title: "VOLUNTEER STAFF",
+      list: [
+        {
+          name: "やぷしー",
+          url: "https://twitter.com/yapcjapan/",
+          imageurl: "./assets/images/staffs/dummy600x600.png",
+          twitter_id: "yapcjapan",
+          github_id: "jpa-perl",
+          facebook_id: "yapcjapan",
+        },
+      ],
+    }
+  ]
+}
