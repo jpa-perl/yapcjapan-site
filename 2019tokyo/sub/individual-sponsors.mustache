@@ -3,18 +3,13 @@
   <div class="section">
     <div class="body">
       <ul class="individual-sponsors">
-        {{#individual-sponsors}}
-        {{#asset}}
-        <li class="sponsors">
-          <div class="img-box">
-            <a href="{{site_url}}" target="_blank"><img src="./assets/images/individual-sponsors/{{asset}}" /></a>
-          </div>
-          {{#twitter_id}}<a href="https://twitter.com/{{twitter_id}}" target="_blank"><i class="fab fa-twitter-square" aria-hidden="true"></i></a>{{/twitter_id}}
-          {{#github_id}}<a href="https://github.com/{{github_id}}" target="_blank"><i class="fab fa-github-square" aria-hidden="true"></i></a>{{/github_id}}
-          {{#facebook_id}}<a href="https://www.facebook.com/{{facebook_id}}" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>{{/facebook_id}}
-       </li>{{/asset}}
-      {{/individual-sponsors}}
-    </ul>
+        {{#individual-sponsors}}{{#asset}}<li class="sponsors">
+          <div class="img-box"><a href="{{site_url}}" target="_blank"><img src="./assets/images/individual-sponsors/{{asset}}" /></a></div>{{#twitter_id}}
+          <a href="https://twitter.com/{{twitter_id}}" target="_blank"><i class="fab fa-twitter-square" aria-hidden="true"></i></a>{{/twitter_id}}{{#github_id}}
+          <a href="https://github.com/{{github_id}}" target="_blank"><i class="fab fa-github-square" aria-hidden="true"></i></a>{{/github_id}}{{#facebook_id}}
+          <a href="https://www.facebook.com/{{facebook_id}}" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>{{/facebook_id}}
+        </li>{{/asset}}{{/individual-sponsors}}
+      </ul>
     </div><!--  / .body /  -->
   </div><!--  / .section /  -->
 </div><!--  / #individual-sponsors /  -->
