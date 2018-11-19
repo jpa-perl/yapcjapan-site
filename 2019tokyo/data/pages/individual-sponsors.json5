@@ -189,6 +189,22 @@
       facebook_id: "",
     },
     {
+      ticket_num: "A-29",
+      asset: "tsucchi.jpg",
+      site_url: "https://twitter.com/tsucchi",
+      twitter_id: "tsucchi",
+      github_id: "",
+      facebook_id: "",
+    },
+    {
+      ticket_num: "A-31",
+      asset: "turugina.png",
+      site_url: "https://twitter.com/turugina",
+      twitter_id: "turugina",
+      github_id: "",
+      facebook_id: "",
+    },
+    {
       ticket_num: "A-",
       asset: "",
       site_url: "",
