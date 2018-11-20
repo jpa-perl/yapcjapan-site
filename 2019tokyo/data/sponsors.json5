@@ -43,7 +43,7 @@
       name: "シルバー",
       image_size: "small",
       list: [
-        //{ name: "株式会社コルシス", asset: "", url: "" },
+        { name: "株式会社コルシス", asset: "colsis.png", url: "https://colsis.jp/" },
         { name: "こだまリサーチ株式会社", asset: "kodamari.com.png", url: "https://www.kodamari.com/" },
         { name: "株式会社SBX Technologies", asset: "sbxtech.png", url: "http://www.sbx-tech.com" },
         { name: "シーサー株式会社", asset: "seesaa.png", url: "https://www.seesaa.co.jp/" },
