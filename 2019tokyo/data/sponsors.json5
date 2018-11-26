@@ -55,6 +55,7 @@
         { name: "株式会社ドリコム", asset: "drecom.png", url: "https://www.drecom.co.jp/" },
         { name: "日本経済新聞社", asset: "nikkei_solmu.png", url: "https://pr.nikkei.com/solmu/lp_en/" },
         { name: "有限会社コロン", asset: "colon.png", url: "http://wakuwaku-communications.com/" },
+        { name: "ユナイテッド株式会社", asset: "united.png", url: "https://united.jp/" },
       ],
     },
     {
