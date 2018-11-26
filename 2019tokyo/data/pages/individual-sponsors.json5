@@ -37,14 +37,6 @@
       facebook_id: "",
     },
     {
-      ticket_num: "A-6",
-      asset: "onk.jpg",
-      site_url: "https://twitter.com/onk",
-      twitter_id: "onk",
-      github_id: "onk",
-      facebook_id: "",
-    },
-    {
       ticket_num: "A-7",
       asset: "Konboi.png",
       site_url: "https://twitter.com/Konboi",
