@@ -70,7 +70,7 @@
     },
     {
       ticket_num: "A-11",
-      asset: "__papix__.jpg",
+      asset: "papix.jpg",
       site_url: "https://twitter.com/__papix__",
       twitter_id: "__papix__",
       github_id: "",
