@@ -60,7 +60,7 @@
       "url": "/2019tokyo/individual-sponsors.html",
       "title": "INDIVIDUAL SPONSORS",
       "blank": false,
-      "visible": false,
+      "visible": true,
     },
     {
       "url": "/2019tokyo/staffs.html",
