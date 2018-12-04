@@ -19,7 +19,7 @@
       label: "トーク応募",
       blank: true,
       url: "https://goo.gl/forms/1Mg7NEOywFtfV8pt1",
-      visible: true,
+      visible: false,
     },
     {
       type: "talk",
