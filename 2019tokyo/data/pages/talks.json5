@@ -2,4 +2,7 @@
   "page-title": "Talks",
   // partials
   "include-talks": true,
+
+  // params
+  "type": "accepted",
 }

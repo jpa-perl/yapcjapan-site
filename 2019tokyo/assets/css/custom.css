@@ -224,3 +224,52 @@ ul.staff-list > li i {
 #tickets ul li.sold-out a {
   text-decoration: line-through;
 }
+
+/* talks */
+
+#talks article {
+  margin-bottom: 1em;
+}
+
+#talks article h4 a {
+  color: #e7373c;
+}
+
+#talks article h4 a:hover {
+  color: #000;
+}
+
+#talks article pre.description,
+#talk-detail-modal div.modal-body pre {
+  white-space: pre-wrap;
+  padding: 0.5em;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+#talks article aside.speaker,
+#talk-detail-modal aside.speaker {
+  display: block;
+  max-width: 800px;
+  text-align: right;
+  margin: 5px 0;
+}
+
+#talk-detail-modal aside.time-and-place {
+  font-size: 14px;
+  text-align: right;
+}
+
+#talk-detail-modal aside.time-and-place dl,
+#talk-detail-modal aside.time-and-place dt,
+#talk-detail-modal aside.time-and-place dd {
+  display: inline;
+}
+
+#talk-detail-modal aside.time-and-place dt {
+  margin-left: 7px;
+}
+
+#talk-detail-modal aside.time-and-place dt:after {
+  content: ":";
+}
