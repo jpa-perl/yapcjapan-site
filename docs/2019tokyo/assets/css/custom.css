@@ -273,3 +273,35 @@ ul.staff-list > li i {
 #talk-detail-modal aside.time-and-place dt:after {
   content: ":";
 }
+
+/* timetable */
+
+#timetable table {
+  table-layout: fixed;
+  font-size: 14px;
+  border: 1px solid #aaaaaa;
+  width: 100%;
+}
+
+#timetable th, #timetable td {
+  border: 1px solid #aaaaaa;
+  padding: 5px;
+}
+
+#timetable td.highlight {
+  background-color: #f8f8f8;
+}
+
+#timetable ol {
+  list-style-type: decimal;
+  padding: 1em;
+}
+
+#timetable a {
+  color: #e7373c;
+}
+
+#timetable a:hover {
+  color: #000;
+}
+
