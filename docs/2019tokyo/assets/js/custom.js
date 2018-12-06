@@ -1,13 +1,14 @@
 (function (Vue, $) {
   var TRACKS = [
-    { "id": "track-a", "name": "A会場" },
-    { "id": "track-b", "name": "B会場" },
+    { "id": "track-a", "name": "ホール" },
+    { "id": "track-b", "name": "Room1" },
+    { "id": "track-c", "name": "Room0" },
   ];
   var TRACKS_MAP  = _.keyBy(TRACKS, 'id');
   var TRACK_COUNT = TRACKS.length;
   var DEFAULT_TARGET = 'accepted';
   var JSON_URL = {
-    accepted: 'https://spreadsheets.google.com/feeds/list/1OzGOr1eAaZrRllMrT4TUbt-fRn1xuflFZHUK-4VsU0s/on6oryq/public/values?alt=json',
+    accepted: 'https://spreadsheets.google.com/feeds/list/12QoP57c2ykO9VD_eNygvhkEUNRT8IS65dieeN5XiQqI/on6oryq/public/values?alt=json',
   };
 
   function Speaker(entry) {
@@ -131,54 +132,62 @@
       // { "09:00": { "track-a": { "title": "...", "durationMinutes": 20 } } }
       var timetableMap = {
         // FIXME: あとでちゃんとする
-        "10:00": {
+        "12:10": {
           "track-a": {
-            url: "./#guest-speakers",
-            title: "GUEST: 石垣 憲一",
-            author: "石垣 憲一",
+            url: "./#",
+            title: "YAPC座談会",
+            author: "YAPC座談会",
             durationMinutes: 40,
             isGuest: true
           }
         },
-        "12:30": {
+        "13:05": {
           "track-a": {
             url: "#",
             title: "",
             author: "",
-            durationMinutes: 50,
+            durationMinutes: 40,
             isGuest: true
           },
           "track-b": {
             url: "#",
             title: "ランチスポンサーセッション",
             author: "",
-            durationMinutes: 50,
+            durationMinutes: 40,
             isGuest: true
-          }
+          },
+          "track-c": {
+            url: "#",
+            title: "",
+            author: "",
+            durationMinutes: 40,
+            isGuest: true
+          },
         },
-        "13:30": {
+        "14:00": {
           "track-a": {
             url: "./#guest-speakers",
-            title: "GUEST: 新屋 良磨",
-            author: "新屋 良磨",
+            title: "GUEST: 大仲 能史",
+            author: "大仲 能史",
             durationMinutes: 40,
             isGuest: true
           }
         },
-        "16:00": {
+        "14:50": {
           "track-a": {
-            url: "./#special-session",
-            title: "GUEST: スペシャルセッション",
-            author: "",
-            durationMinutes: 95,
+            url: "./#guest-speakers",
+            title: "GUEST: 広木 大地",
+            author: "広木 大地",
+            durationMinutes: 40,
             isGuest: true
           }
-        }
+        },
       };
       _.forEach(talks, function (talk) {
         timetableMap[talk.startAt] = timetableMap[talk.startAt] || {};
         timetableMap[talk.startAt][talk.trackId] = talk;
       });
+        console.log(timetableMap);
 
       var lastEndAt;
       var times = _.keys(timetableMap).sort();
@@ -188,7 +197,7 @@
           timetable.push({
             label: [lastEndAt, startAt].join(" ~ "),
             breakTime: true,
-            breakTimeColspan: 2
+            breakTimeColspan: TRACK_COUNT,
           });
         }
         var durationMinutesList = _.chain(timetableMap[startAt]).values().map(function (talk) { return talk.durationMinutes; }).value();
@@ -205,12 +214,9 @@
 
           // XXX: atamawarui and nemui
           var rowspan;
-          if (startAt == "12:30" && track.id == "track-a") {
+          if (startAt == "13:05" && track.id == "track-a") {
             detail.rowspan = 2;
             rowTracks[track.id] = "";
-          } else if (startAt == "16:00" && track.id == "track-a") {
-            console.log(detail)
-            rowspan = 7;
           } else {
             rowspan = detail.durationMinutes / minDurationMinutes;
           }
