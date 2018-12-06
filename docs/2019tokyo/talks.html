@@ -51,6 +51,7 @@
             <li><a href="/2019tokyo/#about">ABOUT</a></li>
             <li><a href="/2019tokyo/#news">NEWS</a></li>
             <li><a href="http://blog.yapcjapan.org/" target="_blank">BLOG</a></li>
+            <li><a href="/2019tokyo/talks.html">TALKS</a></li>
             <li><a href="/2019tokyo/#tickets">TICKETS</a></li>
             <li><a href="/2019tokyo/#sponsors">SPONSORS</a></li>
             <li><a href="/2019tokyo/individual-sponsors.html">INDIVIDUAL SPONSORS</a></li>
@@ -119,15 +120,6 @@
                 <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
                 <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a v-if="talk.author.githubId"  v-bind:href="talk.author.githubUrl"  target="_blank"><i class="fab fa-github"  aria-hidden="true"></i></a>
-              </aside>
-              <aside class="time-and-place">
-                <a v-if="showTimetableLink" v-bind:href="talk.timetableUrl">タイムテーブル</a>
-                <dl>
-                  <dt>時間</dt>
-                  <dd>{{ talk.startAt }} ~ {{ talk.endAt }}</dd>
-                  <dt>会場</dt>
-                  <dd>{{ talk.track.name }}</dd>
-                </dl>
               </aside>
             </div>
           </div><!-- /.modal-content -->
