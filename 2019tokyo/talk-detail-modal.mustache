@@ -1,0 +1,23 @@
+{{=<% %>=}}
+<div id="talk-detail-modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content" v-if="render">
+      <div class="modal-header">
+        <h4 class="modal-title">{{ talk.title }} ({{ talk.time }})</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre class="description pre-scrollable">{{ talk.description }}</pre>
+        <aside class="speaker">
+          <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
+          <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a v-if="talk.author.githubId"  v-bind:href="talk.author.githubUrl"  target="_blank"><i class="fab fa-github"  aria-hidden="true"></i></a>
+        </aside>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<%={{ }}=%>

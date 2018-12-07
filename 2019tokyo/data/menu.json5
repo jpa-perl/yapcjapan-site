@@ -42,7 +42,7 @@
       "url": "/2019tokyo/talks.html",
       "title": "TALKS",
       "blank": false,
-      "visible": false,
+      "visible": true,
     },
     {
       "url": "/2019tokyo/#tickets",

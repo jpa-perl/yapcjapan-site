@@ -1,5 +1,8 @@
 {
-  "page-title": "Talks",
+  "page-title": "TALKS",
   // partials
   "include-talks": true,
+
+  // params
+  "type": "accepted",
 }
