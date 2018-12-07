@@ -12,7 +12,7 @@
       label: "個人スポンサーチケット",
       blank: true,
       url: "https://passmarket.yahoo.co.jp/event/show/detail/01ngc2zxqmz4.html",
-      visible: true,
+      visible: false,
     },
     {
       type: "talk",
