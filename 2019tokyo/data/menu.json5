@@ -36,7 +36,7 @@
       "url": "/2019tokyo/timetable.html",
       "title": "TIMETABLE",
       "blank": false,
-      "visible": false,
+      "visible": true,
     },
     {
       "url": "/2019tokyo/talks.html",
