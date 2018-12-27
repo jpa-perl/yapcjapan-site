@@ -39,8 +39,8 @@
       type: "info",
       label: "懇親会チケット",
       blank: true,
-      url: "",
-      visible: false,
+      url: "https://passmarket.yahoo.co.jp/event/show/detail/01bxsuzzqgc7.html",
+      visible: true,
     },
     {
       type: "success",

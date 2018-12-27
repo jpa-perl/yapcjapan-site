@@ -32,11 +32,11 @@
     },
     {
       name: "YAPC::Tokyo 2019 01/26 懇親会",
-      visible: false,
+      visible: true,
       list: [
         {
           name: "一般・学生チケット",
-          url: "",
+          url: "https://passmarket.yahoo.co.jp/event/show/detail/01bxsuzzqgc7.html",
           visible: true,
           soldout: false,
         },
