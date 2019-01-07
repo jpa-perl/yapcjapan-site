@@ -16,7 +16,7 @@
     },
     {
       type: "ticket",
-      label: "一般・学生チケット（Tシャツサイズ固定）",
+      label: "一般・学生チケット（Tシャツサイズ選択不可）",
       blank: true,
       url: "https://passmarket.yahoo.co.jp/event/show/detail/0196i2101hb5n.html",
       visible: true,
