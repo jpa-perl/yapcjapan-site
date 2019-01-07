@@ -17,7 +17,7 @@
       visible: true,
       list: [
         {
-          name: "一般・学生チケット（Tシャツサイズ固定）",
+          name: "一般・学生チケット（Tシャツサイズ選択不可）",
           url: "https://passmarket.yahoo.co.jp/event/show/detail/015qs4zxqp35.html",
           visible: true,
           soldout: false,
