@@ -6,7 +6,7 @@
       {{#visible}}
       <h4>{{name}}</h4>
       <ul>{{#list}}
-        <li{{#soldout}} class="sold-out"{{/soldout}}><a href="{{url}}" target="_blank">{{name}}</a>{{#soldout}} 完売御礼{{/soldout}}</li>{{/list}}
+        <li{{#soldout}} class="sold-out"{{/soldout}}{{#eos}} class="sold-out"{{/eos}}><a href="{{url}}" target="_blank">{{name}}</a>{{#soldout}} 完売御礼{{/soldout}}{{#eos}} 販売終了{{/eos}}</li>{{/list}}
       </ul>
       {{/visible}}
     {{/tickets}}
