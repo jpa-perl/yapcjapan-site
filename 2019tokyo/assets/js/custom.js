@@ -150,7 +150,7 @@
             isGuest: true
           },
           "track-b": {
-            url: "#",
+            url: "./#lunch-session",
             title: "ランチスポンサーセッション",
             author: "",
             durationMinutes: 40,
