@@ -4,5 +4,6 @@
   "include-tickets": true,
   "include-guest-speakers": true,
   "include-special-session": false,
+  "include-lunch-session": true,
   "include-sponsors": true,
 }
