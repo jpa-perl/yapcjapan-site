@@ -133,7 +133,7 @@
       var timetableMap = {
         // FIXME: あとでちゃんとする
         "12:10": {
-          "track-a": {
+          "track-b": {
             url: "./#",
             title: "YAPC座談会",
             author: "YAPC座談会",
@@ -143,15 +143,15 @@
         },
         "13:05": {
           "track-a": {
-            url: "#",
-            title: "",
+            url: "./#lunch-session",
+            title: "ランチスポンサーセッション",
             author: "",
             durationMinutes: 40,
             isGuest: true
           },
           "track-b": {
-            url: "./#lunch-session",
-            title: "ランチスポンサーセッション",
+            url: "#",
+            title: "",
             author: "",
             durationMinutes: 40,
             isGuest: true
