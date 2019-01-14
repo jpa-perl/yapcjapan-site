@@ -18,10 +18,13 @@
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
-  margin-bottom: 10px;
 }
 .button a:hover.btn {
   background-color: #fff;
+}
+.button small.notice {
+  display: block;
+  padding-bottom: 10px;
 }
 
 .button a.btn-info {
