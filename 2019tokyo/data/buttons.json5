@@ -46,8 +46,8 @@
       type: "talk",
       label: "LT応募",
       blank: true,
-      url: "#",
-      visible: false,
+      url: "https://goo.gl/forms/KeWxzoAjXepXmHYv2",
+      visible: true,
     },
     {
       type: "sponsor",
