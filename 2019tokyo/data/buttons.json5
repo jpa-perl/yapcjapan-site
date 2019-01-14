@@ -11,8 +11,8 @@
       type: "talk",
       label: "前夜祭LTソン発表者登録(要前夜祭チケット)",
       blank: true,
-      url: "",
-      visible: false,
+      url: "https://connpass.com/event/116310/",
+      visible: true,
     },
     {
       type: "ticket",
