@@ -47,6 +47,7 @@
     {
       type: "talk",
       label: "LT応募",
+      notice: "要参加チケット",
       blank: true,
       url: "https://goo.gl/forms/KeWxzoAjXepXmHYv2",
       visible: true,
