@@ -22,7 +22,7 @@
         <tr v-for="row in timetable">
           <th>{{ row.label }}</th>
           <td v-for="track in tracks" v-if="!row.breakTime && track.id in row.tracks" v-bind:class="{highlight:row.tracks[track.id].highlight}" v-bind:rowspan="row.tracks[track.id].rowspan">
-            <a v-on:click="openModal(row.tracks[track.id])">{{ row.tracks[track.id].title }}</a> <span v-if="!(track.id != 'track-b' && row.label == '13:05 ~ 13:45')">({{ row.tracks[track.id].durationMinutes }}min)</span><br />
+            <a v-on:click="openModal(row.tracks[track.id])">{{ row.tracks[track.id].title }}</a> <span v-if="!(track.id != 'track-a' && row.label == '13:05 ~ 13:45')">({{ row.tracks[track.id].durationMinutes }}min)</span><br />
             {{ row.tracks[track.id].author.name }}
           </td>
           <td v-if="row.breakTime" v-bind:colspan="row.breakTimeColspan"><!-- 休憩 --></td>
