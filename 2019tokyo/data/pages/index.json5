@@ -3,7 +3,7 @@
   "include-index": true,
   "include-tickets": true,
   "include-guest-speakers": true,
-  "include-special-session": false,
+  "include-special-session": true,
   "include-lunch-session": true,
   "include-sponsors": true,
 }
