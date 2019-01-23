@@ -25,13 +25,13 @@
           imageurl: "./assets/images/staffs/magnolia_k_.jpg",
           twitter_id: "magnolia_k_",
         },
+        */
         {
           name: "hideteru.otsuki",
-          url: "https://twitter.com/magnolia_k_/",
-          imageurl: "./assets/images/staffs/magnolia_k_.jpg",
-          twitter_id: "magnolia_k_",
+          url: "https://twitter.com/waterhighkick/",
+          imageurl: "./assets/images/staffs/waterhighkick.jpg",
+          twitter_id: "waterhighkick",
         },
-        */
         {
           name: "papix",
           url: "https://twitter.com/__papix__/",
