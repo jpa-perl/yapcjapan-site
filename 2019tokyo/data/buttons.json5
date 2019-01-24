@@ -13,7 +13,7 @@
       notice: "要前夜祭チケット",
       blank: true,
       url: "https://connpass.com/event/116310/",
-      visible: true,
+      visible: false,
     },
     {
       type: "ticket",
@@ -50,7 +50,7 @@
       notice: "要参加チケット",
       blank: true,
       url: "https://goo.gl/forms/KeWxzoAjXepXmHYv2",
-      visible: true,
+      visible: false,
     },
     {
       type: "sponsor",
