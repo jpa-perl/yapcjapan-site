@@ -70,7 +70,7 @@
       type: "success",
       label: "ベストトーク賞投票",
       blank: true,
-      url: "",
+      url: "https://goo.gl/forms/9xYcjx4HlD4qAx0A2",
       visible: false,
     },
     {
