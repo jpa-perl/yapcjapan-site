@@ -11,7 +11,7 @@ common_data=`echo ./data/menu.json5`
 contents_data=`echo ./data/{buttons,sponsors,staffs,tickets}.json5`
 
 #declare -a pages=(index staffs individual-sponsors talks timetable)
-declare -a pages=(index individual-sponsors talks timetable)
+declare -a pages=(index individual-sponsors staffs talks timetable)
 
 for page in ${pages[@]}; do
   ../process_v2.pl ./template.mustache ./data/pages/$page.json5 $common_data $contents_data > $OUTPUT_DIR/$page.html
