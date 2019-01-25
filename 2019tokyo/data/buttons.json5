@@ -71,7 +71,7 @@
       label: "ベストトーク賞投票",
       blank: true,
       url: "https://goo.gl/forms/9xYcjx4HlD4qAx0A2",
-      visible: false,
+      visible: true,
     },
     {
       type: "info",
