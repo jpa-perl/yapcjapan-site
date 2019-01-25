@@ -8,7 +8,7 @@
           name: "前夜祭参加チケット",
           url: "https://passmarket.yahoo.co.jp/event/show/detail/0193rnzzqgbt.html",
           visible: true,
-          soldout: false,
+          soldout: true,
         },
       ],
     },
