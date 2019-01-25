@@ -5,7 +5,7 @@
       label: "前夜祭チケット",
       blank: true,
       url: "https://passmarket.yahoo.co.jp/event/show/detail/0193rnzzqgbt.html",
-       visible: true,
+       visible: false,
     },
     {
       type: "talk",
