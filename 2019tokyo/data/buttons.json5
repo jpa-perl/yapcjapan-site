@@ -21,7 +21,7 @@
       notice: "Tシャツサイズ選択不可",
       blank: true,
       url: "https://passmarket.yahoo.co.jp/event/show/detail/0196i2101hb5n.html",
-      visible: true,
+      visible: false,
     },
     {
       type: "ticket",
@@ -64,21 +64,21 @@
       label: "懇親会チケット",
       blank: true,
       url: "https://passmarket.yahoo.co.jp/event/show/detail/01bxsuzzqgc7.html",
-      visible: true,
+      visible: false,
     },
     {
       type: "success",
       label: "ベストトーク賞投票",
       blank: true,
       url: "https://goo.gl/forms/9xYcjx4HlD4qAx0A2",
-      visible: true,
+      visible: false,
     },
     {
       type: "info",
       label: "写真",
       blank: true,
       url: "http://30d.jp/yapcjapan/4",
-      visible: false,
+      visible: true,
     },
   ],
 }
