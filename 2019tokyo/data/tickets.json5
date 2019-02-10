@@ -21,7 +21,7 @@
           url: "https://passmarket.yahoo.co.jp/event/show/detail/0196i2101hb5n.html",
           visible: true,
           soldout: false,
-          eos: false,
+          eos: true,
         },
         {
           name: "一般・学生チケット",
@@ -47,6 +47,7 @@
           url: "https://passmarket.yahoo.co.jp/event/show/detail/01bxsuzzqgc7.html",
           visible: true,
           soldout: false,
+          eos: true,
         },
       ],
     },
