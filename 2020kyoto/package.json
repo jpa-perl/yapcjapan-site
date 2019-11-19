@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "description": "just for dev preview",
+  "scripts": {
+    "start": "browser-sync start --server --ss '../docs/'",
+    "watch": "chokidar '**/*.css' '**/*.mustache' '**/*.json5' -c 'npm run build'",
+    "build": "./generate_all_pages.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "chokidar-cli": "^2.1.0"
+  }
+}
