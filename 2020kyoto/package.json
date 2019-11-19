@@ -3,7 +3,7 @@
   "description": "just for dev preview",
   "scripts": {
     "start": "npm run build && run-p bs watch",
-    "bs": "browser-sync ../docs/ -w --files '../docs/2020kyoto/' --startPath '/2020kyoto/' --no-ghost-mode --no-open",
+    "bs": "browser-sync ../docs/ -f ../docs/2020kyoto/assets/css/ --startPath '/2020kyoto/' --no-ghost-mode --no-open",
     "watch": "chokidar '**/*.css' '**/*.mustache' '**/*.json5' -c 'npm run build'",
     "build": "./generate_all_pages.sh"
   },
