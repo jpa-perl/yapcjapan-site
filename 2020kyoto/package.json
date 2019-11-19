@@ -2,13 +2,14 @@
   "private": true,
   "description": "just for dev preview",
   "scripts": {
-    "start": "browser-sync start --server --ss '../docs/'",
+    "start": "npm run build && run-p bs watch",
+    "bs": "browser-sync ../docs/ -w --files '../docs/2020kyoto/' --startPath '/2020kyoto/' --no-ghost-mode --no-open",
     "watch": "chokidar '**/*.css' '**/*.mustache' '**/*.json5' -c 'npm run build'",
-    "build": "./generate_all_pages.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./generate_all_pages.sh"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "chokidar-cli": "^2.1.0"
+    "chokidar-cli": "^2.1.0",
+    "npm-run-all": "^4.1.5"
   }
 }
