@@ -1,0 +1,12 @@
+:root {
+  --color-black: #000;
+  --window-width-l: 1440px;
+  --window-width-m: 1024px;
+  --window-width-s: 380px;
+  --font-sans: YakuHanJP, "Noto Sans JP", sans-serif;
+}
+
+body {
+  background: #fff;
+  font-family: var(--font-sans);
+}
