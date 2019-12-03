@@ -21,3 +21,16 @@ body {
 .op-3 {
   opacity: 0.3;
 }
+
+a {
+  color: #da3832;
+}
+
+a:active {
+  color: red;
+}
+
+a:hover {
+  color: #da3832;
+  text-decoration: underline;
+}
