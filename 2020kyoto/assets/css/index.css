@@ -3,10 +3,21 @@
   --window-width-l: 1440px;
   --window-width-m: 1024px;
   --window-width-s: 380px;
-  --font-sans: YakuHanJP, "Noto Sans JP", sans-serif;
+  --font-sans: "Open Sans", YakuHanJP, "Noto Sans JP", sans-serif;
+  --font-bold: "Open Sans", YakuHanJP, "Noto Sans JP", sans-serif;
 }
 
 body {
   background: #fff;
   font-family: var(--font-sans);
+  line-height: 1.8;
+}
+
+.heading {
+  font-weight: 900;
+  font-family: var(--font-bold);
+}
+
+.op-3 {
+  opacity: 0.3;
 }
