@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "description": "just for dev preview",
+  "scripts": {
+    "start": "npm run build && run-p bs watch",
+    "bs": "browser-sync ../docs/ -f ../docs/2020kyoto/ --startPath '/2020kyoto/' --no-notify --no-ghost-mode --no-open",
+    "watch": "chokidar '**/*.css' '**/*.mustache' '**/*.json5' -c 'npm run build'",
+    "build": "./generate_all_pages.sh"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "chokidar-cli": "^2.1.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
