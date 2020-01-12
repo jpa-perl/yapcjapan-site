@@ -34,3 +34,41 @@ a:hover {
   color: #da3832;
   text-decoration: underline;
 }
+
+#timetable .table {
+  line-height: 1.5;
+  min-width: 720px;
+}
+
+@media (max-width: 576px) {
+  #timetable .table {
+    font-size: 0.8rem;
+  }
+}
+
+#timetable .table th {
+  white-space: nowrap;
+}
+
+#timetable .table th:first-child {
+  border-right: 1px dotted #ccc;
+}
+
+#timetable .table tr:nth-child(2n) th:first-child {
+  background: #f0f0f0;
+}
+
+.track__title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.track__time {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.track__author {
+  display: block;
+  font-size: 0.9rem;
+}

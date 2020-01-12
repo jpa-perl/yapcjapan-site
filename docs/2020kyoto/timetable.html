@@ -39,12 +39,12 @@
       <h2 class="display-4 heading mb-3 text-uppercase">Timetable</h2>
       <div class="col-lg-12">
         <div id="timetable" class="section">
-          <div class="body">
+          <div class="body table-responsive">
             <table class="table">
               <thead>
                 <tr>
                   <th>時刻</th>
-                  <th v-for="track in tracks">{{ track.name }}</th>
+                  <th class="track__timespan" v-for="track in tracks">{{ track.name }}</th>
                 </tr>
               </thead>
               <tbody>
