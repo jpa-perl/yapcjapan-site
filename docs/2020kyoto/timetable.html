@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>YAPC::Kyoto 2020</title>
+  <title>YAPC::Kyoto 2020 - Timetable</title>
   <meta name="description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。">
   <meta name="keywords" content="YAPC,ヤプシー,Perl,PM,Japan Perl Association,JPA,YAPC::Tokyo,ヤプシー東京">
   <meta name="twitter:card" content="summary_large_image">
@@ -31,12 +31,15 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
 </head>
 
 <body class="">
 
 <nav class="navbar fixed-top  navbar-expand-lg navbar-light bg-white ">
-  <a class="navbar-brand" href="/2020kyoto/">YAPC</a>
+  <a class="navbar-brand" href="/2020kyoto/"><img src="/2020kyoto/assets/images/q_small.png" alt="YAPC Kyoto 2020" width="32" height="32"  /></a>
+  <span class="navbar-page-title">Timetable</span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -55,7 +58,7 @@
   <div class="container mt-5">
     <div class="row py-5" data-aos="fade-in">
       <div class="col-lg-12">
-        <h2 class="display-4 heading mb-3 text-uppercase">Timetable</h2>
+        <h2 class="display-5 heading mb-3 text-uppercase">Timetable</h2>
         <div id="timetable" class="section">
           <div class="body table-responsive">
             <table class="table">
@@ -145,29 +148,43 @@
   <div id="talk-detail-modal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
       <div class="modal-content" v-if="render">
+
         <div class="modal-header">
-          <h4 class="modal-title">{{ talk.title }} ({{ talk.time }})</h4>
+          <h4 class="modal-title"><strong>{{ talk.title }}</strong> <small>({{ talk.time }})</small></h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
         <div class="modal-body">
-          <pre class="description pre-scrollable">{{ talk.description }}</pre>
-          <aside class="speaker">
-            <a v-bind:href="talk.author.blogUrl" target="_blank">{{ talk.author.name }}</a>
-            <a v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a v-if="talk.author.githubId" v-bind:href="talk.author.githubUrl" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
-          </aside>
-          <aside class="time-and-place">
-            <a v-if="showTimetableLink" v-bind:href="talk.timetableUrl">タイムテーブル</a>
-            <dl>
-              <dt>時間</dt>
-              <dd>{{ talk.startAt }} ~ {{ talk.endAt }}</dd>
-              <dt>会場</dt>
-              <dd>{{ talk.track.name }}</dd>
-            </dl>
-          </aside>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="track-detail__author">
+                  <a class="h5 d-inline-block" v-bind:href="talk.author.blogUrl" target="_blank"><strong>{{ talk.author.name }}</strong></a>
+                  <a class="ml-1 d-inline-block" v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                  <a class="ml-1 d-inline-block" v-if="talk.author.githubId" v-bind:href="talk.author.githubUrl" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+                </div>
+                <p class="mb-4 mt-2" style="white-space: pre-wrap;">{{ talk.description }}</p>
+                <hr />
+                <div class="d-flex track-detail__meta">
+                  <div class="mr-4">
+                    <strong>時間</strong>
+                    <p>{{ talk.startAt }} ~ {{ talk.endAt }}</p>
+                  </div>
+                  <div class="mr-4">
+                    <strong>会場</strong>
+                    <p>{{ talk.track.name }}</p>
+                  </div>
+                  <div v-if="showTimetableLink">
+                    <a v-bind:href="talk.timetableUrl">タイムテーブル</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
