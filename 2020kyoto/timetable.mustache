@@ -5,7 +5,7 @@
     <div class="col-lg-12">
       <div id="timetable" class="section">
         <div class="body">
-          <table>
+          <table class="table">
             <thead>
               <tr>
                 <th>時刻</th>
@@ -26,9 +26,17 @@
               </tr>
               <tr v-for="row in timetable">
                 <th>{{ row.label }}</th>
-                <td v-for="track in tracks" v-if="!row.breakTime && track.id in row.tracks" v-bind:class="{highlight:row.tracks[track.id].highlight}" v-bind:rowspan="row.tracks[track.id].rowspan">
-                  <a v-on:click="openModal(row.tracks[track.id])">{{ row.tracks[track.id].title }}</a> <span v-if="!(track.id != 'track-a' && row.label == '13:05 ~ 13:45')">({{ row.tracks[track.id].durationMinutes }}min)</span><br />
-                  {{ row.tracks[track.id].author.name }}
+                <td
+                  v-for="track in tracks"
+                  v-if="!row.breakTime && track.id in row.tracks"
+                  v-bind:class="{highlight:row.tracks[track.id].highlight}"
+                  v-bind:rowspan="row.tracks[track.id].rowspan"
+                >
+                  <span class="track__container" v-on:click="openModal(row.tracks[track.id])">
+                    <span class="track__title">{{ row.tracks[track.id].title }}</span>
+                    <span class="track__time" v-if="!(track.id != 'track-a' && row.label == '13:05 ~ 13:45')">({{ row.tracks[track.id].durationMinutes }}min)</span>
+                    <span class="track__author"> {{ row.tracks[track.id].author.name }} </span>
+                  </span>
                 </td>
                 <td v-if="row.breakTime" v-bind:colspan="row.breakTimeColspan">
                   <!-- 休憩 -->
