@@ -13,6 +13,13 @@ body {
   line-height: 1.8;
 }
 
+@media (max-width: 576px) {
+  html,
+  body {
+    font-size: 0.9rem;
+  }
+}
+
 .heading {
   font-weight: 900;
   font-family: var(--font-bold);
@@ -40,12 +47,6 @@ a:hover {
   min-width: 720px;
 }
 
-@media (max-width: 576px) {
-  #timetable .table {
-    font-size: 0.8rem;
-  }
-}
-
 #timetable .table th {
   white-space: nowrap;
 }
@@ -56,6 +57,10 @@ a:hover {
 
 #timetable .table tr:nth-child(2n) th:first-child {
   background: #f0f0f0;
+}
+
+.track__container {
+  cursor: pointer;
 }
 
 .track__title {
@@ -71,4 +76,8 @@ a:hover {
 .track__author {
   display: block;
   font-size: 0.9rem;
+}
+
+.navbar-light .navbar-toggler {
+  border: 0;
 }
