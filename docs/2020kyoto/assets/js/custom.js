@@ -4,7 +4,7 @@
     { "id": "track-b", "name": "Room1" },
     { "id": "track-c", "name": "Room0" },
   ];
-  var TRACKS_MAP = _.keyBy(TRACKS, 'id');
+  var TRACKS_MAP  = _.keyBy(TRACKS, 'id');
   var TRACK_COUNT = TRACKS.length;
   var DEFAULT_TARGET = 'accepted';
   var JSON_URL = {
@@ -12,43 +12,43 @@
   };
 
   function Speaker(entry) {
-    this.name = entry.name;
-    this.githubId = entry.githubId;
+    this.name      = entry.name;
+    this.githubId  = entry.githubId;
     this.twitterId = entry.twitterId;
-    this.blogUrl = entry.blogUrl;
+    this.blogUrl   = entry.blogUrl;
 
     // sanitize
-    if (!this.blogUrl.match(/^https?:/)) {
+    if (! this.blogUrl.match(/^https?:/)) {
       // It makes XSS maybe, so ignored.
       this.blogUrl = null;
     }
 
     // normalize
     this.twitterId = this.twitterId.replace(/\s+/g, '');
-    this.githubId = this.githubId.replace(/\s+/g, '');
+    this.githubId  = this.githubId.replace(/\s+/g, '');
 
     // convert id to url
-    this.githubUrl = "https://github.com/" + encodeURIComponent(this.githubId);
-    this.twitterUrl = "https://twitter.com/" + encodeURIComponent(this.twitterId);
+    this.githubUrl  = "https://github.com/"+encodeURIComponent(this.githubId);
+    this.twitterUrl = "https://twitter.com/"+encodeURIComponent(this.twitterId);
   }
 
   function Talk(entry) {
-    this.id = entry.id;
-    this.title = entry.title;
+    this.id          = entry.id;
+    this.title       = entry.title;
     this.description = entry.description;
-    this.time = entry.time;
-    this.startAt = entry.startAt;
-    this.trackId = entry.trackId;
-    this.track = TRACKS_MAP[this.trackId];
-    this.author = new Speaker(entry.author);
+    this.time        = entry.time;
+    this.startAt     = entry.startAt;
+    this.trackId     = entry.trackId;
+    this.track       = TRACKS_MAP[this.trackId];
+    this.author      = new Speaker(entry.author);
 
     this.durationMinutes = parseInt(this.time);
-    this.endAt = calculateEndAt(this.startAt, this.durationMinutes);
-    this.articleId = "talk-" + this.id;
-    this.url = '#/detail/' + encodeURIComponent(this.id);
-    this.timetableUrl = './timetable.html' + this.url;
-    this.isGuest = false;
-    this.highlight = false;
+    this.endAt        = calculateEndAt(this.startAt, this.durationMinutes);
+    this.articleId    = "talk-"+this.id;
+    this.url          = '#/detail/'+encodeURIComponent(this.id);
+    this.timetableUrl = './timetable.html'+this.url;
+    this.isGuest      = false;
+    this.highlight    = false;
   }
 
   function calculateEndAt(startAt, durationMinutes) {
@@ -57,17 +57,17 @@
 
   function parseEntry(entry) {
     return new Talk({
-      id: entry['gsx$id']['$t'],
-      title: entry['gsx$title']['$t'],
+      id:          entry['gsx$id']['$t'],
+      title:       entry['gsx$title']['$t'],
       description: entry['gsx$description']['$t'],
-      time: entry['gsx$talktime']['$t'],
-      startAt: entry['gsx$startat']['$t'],
-      trackId: entry['gsx$trackid']['$t'],
+      time:        entry['gsx$talktime']['$t'],
+      startAt:     entry['gsx$startat']['$t'],
+      trackId:     entry['gsx$trackid']['$t'],
       author: {
-        name: entry['gsx$author']['$t'],
-        githubId: entry['gsx$githubid']['$t'],
+        name:      entry['gsx$author']['$t'],
+        githubId:  entry['gsx$githubid']['$t'],
         twitterId: entry['gsx$twitterid']['$t'],
-        blogUrl: entry['gsx$blogurl']['$t']
+        blogUrl:   entry['gsx$blogurl']['$t']
       }
     });
   }
@@ -77,9 +77,9 @@
     return function (type, cb) {
       var cached = cache[type] = cache[type] || {
         completed: false,
-        running: false,
-        talks: [],
-        cbque: []
+        running:   false,
+        talks:     [],
+        cbque:     []
       };
 
       if (cached.completed) {
@@ -187,6 +187,7 @@
         timetableMap[talk.startAt] = timetableMap[talk.startAt] || {};
         timetableMap[talk.startAt][talk.trackId] = talk;
       });
+        console.log(timetableMap);
 
       var lastEndAt;
       var times = _.keys(timetableMap).sort();
@@ -200,7 +201,7 @@
           });
         }
         var durationMinutesList = _.chain(timetableMap[startAt]).values().map(function (talk) { return talk.durationMinutes; }).value();
-        var minDurationMinutes = Math.min.apply(Math, durationMinutesList);
+        var minDurationMinutes  = Math.min.apply(Math, durationMinutesList);
         var endAt = lastEndAt = calculateEndAt(startAt, minDurationMinutes);
 
         var rowTracks = {};
@@ -243,7 +244,7 @@
     var margin = isPC ? 30 : 10;
     var $header = isPC ? $("#gnavi") : $("#header");
     return function (talk) {
-      var $talk = $('#' + talk.articleId);
+      var $talk = $('#'+talk.articleId);
       if ($talk.length > 0) {
         $(document.body).scrollTop(
           $talk.offset().top - ($header.height() + margin)
