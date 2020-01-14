@@ -1,5 +1,4 @@
 :root {
-  --color-red: #da3832;
   --color-black: #000;
   --window-width-l: 1440px;
   --window-width-m: 1024px;
@@ -34,34 +33,4 @@ a:active {
 a:hover {
   color: #da3832;
   text-decoration: underline;
-}
-
-.avatar-card {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  border: 0;
-}
-
-.avatar-card__color {
-  overflow: hidden;
-  height: 120px;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  background: linear-gradient(40deg, #af140f, var(--color-red));
-}
-
-.avatar-card__name_en {
-  font-size: 0.9rem;
-  color: #999;
-}
-
-.avatar-card__photo {
-  border-radius: 50%;
-  width: 160px;
-  margin-top: -80px;
-  overflow: hidden;
-  border: 5px solid #fff;
-}
-
-.avatar-card__description {
-  font-size: 0.9rem;
 }
