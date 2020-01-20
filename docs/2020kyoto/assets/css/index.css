@@ -63,6 +63,14 @@ a:hover {
   cursor: pointer;
 }
 
+.track__container__qa {
+  cursor: auto;
+}
+
+.track__container__qa .track__title {
+  text-decoration: none;
+}
+
 .track__title {
   font-weight: bold;
   text-decoration: underline;
