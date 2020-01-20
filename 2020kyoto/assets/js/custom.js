@@ -133,54 +133,50 @@
       // { "09:00": { "track-a": { "title": "...", "durationMinutes": 20 } } }
       var timetableMap = {
         // FIXME: あとでちゃんとする
-        "12:10": {
-          "track-b": {
-            url: "./#",
-            title: "YAPC座談会",
-            author: "YAPC座談会",
+        "10:50": {
+          "track-a": {
+            url: "./#guest-speaker",
+            title: "GUEST: 小林 篤",
+            author: "小林 篤",
             durationMinutes: 40,
-            isGuest: true
+            isGuest: true,
+            noLink: false
           }
+        },
+        "11:50": {
+          "track-a": {
+            url: "./",
+            title: "TBD",
+            author: "TBD",
+            durationMinutes: 50,
+            isGuest: false,
+            noLink: true
+          },
+          "track-b": {
+            url: "./#lunch-session",
+            title: "ランチスポンサーセッション",
+            author: "TBD",
+            durationMinutes: 50,
+            isGuest: false,
+            noLink: true
+          },
+          "track-c": {
+            url: "./#lunch-session",
+            title: "ランチスポンサーセッション",
+            author: "TBD",
+            durationMinutes: 50,
+            isGuest: false,
+            noLink: true
+          },
         },
         "13:05": {
           "track-a": {
-            url: "./#lunch-session",
-            title: "ランチスポンサーセッション",
-            author: "",
-            durationMinutes: 40,
-            isGuest: true
-          },
-          "track-b": {
-            url: "#",
-            title: "",
-            author: "",
-            durationMinutes: 40,
-            isGuest: true
-          },
-          "track-c": {
-            url: "#",
-            title: "",
-            author: "",
-            durationMinutes: 40,
-            isGuest: true
-          },
-        },
-        "14:00": {
-          "track-a": {
             url: "./#guest-speakers",
-            title: "GUEST: 大仲 能史",
-            author: "大仲 能史",
+            title: "GUEST: TBD",
+            author: "TBD",
             durationMinutes: 40,
-            isGuest: true
-          }
-        },
-        "14:50": {
-          "track-a": {
-            url: "./#guest-speakers",
-            title: "GUEST: 広木 大地",
-            author: "広木 大地",
-            durationMinutes: 40,
-            isGuest: true
+            isGuest: true,
+            noLink: false
           }
         },
       };
