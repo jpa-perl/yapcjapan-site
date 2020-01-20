@@ -100,10 +100,10 @@
                     v-bind:class="{highlight:row.tracks[track.id].highlight}"
                     v-bind:rowspan="row.tracks[track.id].rowspan"
                   >
-                    <span class="track__container" v-on:click="openModal(row.tracks[track.id])">
+                    <span class="track__container" v-bind:class="{'track__container__qa': row.tracks[track.id].isQA}" v-on:click="openModal(row.tracks[track.id])">
                       <span class="track__title">{{ row.tracks[track.id].title }}</span>
                       <span class="track__time">({{ row.tracks[track.id].durationMinutes }}min)</span>
-                      <span class="track__author"> {{ row.tracks[track.id].author.name }} </span>
+                      <span class="track__author" v-if="!row.tracks[track.id].isQA"> {{ row.tracks[track.id].author.name }} </span>
                     </span>
                   </td>
                   <td v-if="row.breakTime" v-bind:colspan="row.breakTimeColspan">
