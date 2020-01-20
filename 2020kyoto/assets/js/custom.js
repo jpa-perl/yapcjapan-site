@@ -49,6 +49,11 @@
     this.timetableUrl = './timetable.html'+this.url;
     this.isGuest      = false;
     this.noLink       = false;
+    this.hasQA        = true;
+    this.qaDurationMinutes = Math.floor(this.durationMinutes / 4); // FIXME: てきとう
+    this.qaEndAt      = calculateEndAt(this.endAt, this.qaDurationMinutes);
+    this.totalDurationMinutes = this.durationMinutes + this.qaDurationMinutes;
+    this.totalEndAt   = this.qaEndAt;
     this.highlight    = false;
   }
 
@@ -132,7 +137,7 @@
     fetchTalkProposals(DEFAULT_TARGET, function (talks) {
       // { "09:00": { "track-a": { "title": "...", "durationMinutes": 20 } } }
       var timetableMap = {
-        // FIXME: あとでちゃんとする
+        // FIXME: いつかちゃんとしたい
         "10:50": {
           "track-a": {
             url: "./#guest-speaker",
@@ -140,7 +145,8 @@
             author: "小林 篤",
             durationMinutes: 40,
             isGuest: true,
-            noLink: false
+            noLink: false,
+            hasQA: true
           }
         },
         "11:50": {
@@ -150,7 +156,8 @@
             author: "TBD",
             durationMinutes: 50,
             isGuest: false,
-            noLink: true
+            noLink: true,
+            hasQA: false
           },
           "track-b": {
             url: "./#lunch-session",
@@ -158,7 +165,8 @@
             author: "TBD",
             durationMinutes: 50,
             isGuest: false,
-            noLink: true
+            noLink: true,
+            hasQA: false
           },
           "track-c": {
             url: "./#lunch-session",
@@ -166,7 +174,8 @@
             author: "TBD",
             durationMinutes: 50,
             isGuest: false,
-            noLink: true
+            noLink: true,
+            hasQA: false
           },
         },
         "13:05": {
@@ -176,56 +185,138 @@
             author: "TBD",
             durationMinutes: 40,
             isGuest: true,
-            noLink: false
+            noLink: false,
+            hasQA: true
           }
         },
       };
+      _.forEach(timetableMap, function (talksMap, startAt) {
+        _.forEach(talksMap, function (talk, trackId) {
+          talk.startAt = startAt;
+          talk.trackId = trackId;
+          talk.track   = TRACKS_MAP[trackId];
+          talk.endAt   = calculateEndAt(startAt, talk.durationMinutes);
+          if (talk.hasQA) {
+            talk.qaDurationMinutes = Math.floor(talk.durationMinutes / 4); // FIXME: てきとう
+            talk.qaEndAt           = calculateEndAt(talk.endAt, talk.qaDurationMinutes);
+          } else {
+            talk.qaDurationMinutes = 0;
+            talk.qaEndAt           = talk.endAt;
+          }
+          talk.totalDurationMinutes = talk.durationMinutes + talk.qaDurationMinutes;
+          talk.totalEndAt           = talk.qaEndAt;
+        });
+      });
       _.forEach(talks, function (talk) {
         timetableMap[talk.startAt] = timetableMap[talk.startAt] || {};
         timetableMap[talk.startAt][talk.trackId] = talk;
       });
-        console.log(timetableMap);
 
-      var lastEndAt;
+      // timeBlocks = [{startAt: "09:50", endAt: "10:40", talksMap: {$startAt:{$trackId:$talk, ...}, ...}, qaMap: {$endAt:{$trackId:$talk, ...}, ...}}, ...]
+      var timeBlocks = [];
+
       var times = _.keys(timetableMap).sort();
+      var blockTemplate = {startAt: null, endAt: null, talksMap: {}, qaMap: {}};
+      var startAtTable = {};  // {$startAt: true, ...}
+      var lastEndAtTable = {}; // {$track-id: $talk.totalEndAt, ...}
       _.forEach(times, function (startAt) {
-        if (lastEndAt != null && startAt > lastEndAt) {
+        if (blockTemplate.startAt == null) blockTemplate.startAt = startAt;
+
+        var talksMap = timetableMap[startAt];
+        _.forEach(TRACKS, function (track) {
+          if (!(track.id in talksMap)) {
+            return;
+          }
+
+          // push Talk
+          var talk = talksMap[track.id];
+          blockTemplate.talksMap[talk.startAt] = blockTemplate.talksMap[talk.startAt] || {};
+          blockTemplate.talksMap[talk.startAt][track.id] = talk;
+
+          // push QA
+          if (talk.hasQA) {
+            blockTemplate.qaMap[talk.endAt] = blockTemplate.qaMap[talk.endAt] || {};
+            blockTemplate.qaMap[talk.endAt][track.id] = talk;
+          }
+
+          // update lastEndAtTable
+          lastEndAtTable[track.id] = talk.totalEndAt;
+
+          // update startAtTable
+          startAtTable[talk.startAt] = true;
+          if (talk.hasQA) {
+            startAtTable[talk.endAt] = true;
+          }
+        });
+
+        // check closed
+        var lastEndAts = _.values(lastEndAtTable);
+        var isClosed = lastEndAts.length === TRACKS.length && _.uniq(lastEndAts).length === 1;
+        if (isClosed) {
+          // push
+          blockTemplate.endAt = lastEndAts[0];
+          blockTemplate.timespans = _.keys(startAtTable).concat(blockTemplate.endAt).sort();
+          timeBlocks.push(blockTemplate);
+
+          // and reset
+          blockTemplate = {startAt: null, endAt: null, talksMap: {}, qaMap: {}};
+          startAtTable = {};
+          lastEndAtTable = {};
+        }
+      });
+
+      var lastEndAt = null;
+      _.forEach(timeBlocks, function (timeBlock) {
+        if (lastEndAt !== null && lastEndAt !== timeBlock.startAt) {
           // it means break time
           timetable.push({
-            label: [lastEndAt, startAt].join(" ~ "),
+            label: [lastEndAt, timeBlock.startAt].join(" ~ "),
             breakTime: true,
             breakTimeColspan: TRACK_COUNT,
           });
         }
-        var durationMinutesList = _.chain(timetableMap[startAt]).values().map(function (talk) { return talk.durationMinutes; }).value();
-        var minDurationMinutes  = Math.min.apply(Math, durationMinutesList);
-        var endAt = lastEndAt = calculateEndAt(startAt, minDurationMinutes);
 
-        var rowTracks = {};
-        _.forEach(TRACKS, function (track) {
-          if (!(track.id in timetableMap[startAt])) {
-            return;
-          }
+        var blockEndAt = timeBlock.endAt;
+        _.forEach(timeBlock.timespans, function (startAt, i) {
+          if (timeBlock.timespans.length === i+1) return;
 
-          var detail = timetableMap[startAt][track.id];
+          var talksMap = timeBlock.talksMap[startAt] || {};
+          var qaMap = timeBlock.qaMap[startAt] || {};
+          var rowTracks = {};
+          _.forEach(TRACKS, function (track) {
+            if (!(track.id in talksMap) && !(track.id in qaMap)) {
+              return;
+            }
 
-          // XXX: atamawarui and nemui
-          var rowspan;
-          if (startAt == "13:05" && track.id == "track-a") {
-            detail.rowspan = 2;
-            rowTracks[track.id] = "";
-          } else {
-            rowspan = detail.durationMinutes / minDurationMinutes;
-          }
+            var talk = talksMap[track.id];
+            if (talk) {
+              var rowspan = _.indexOf(timeBlock.timespans, talk.endAt, i) - i;
+              rowTracks[track.id] = _.assign({}, talk, { rowspan: rowspan });
+            }
 
-          detail.rowspan = rowspan;
-          rowTracks[track.id] = detail;
-        });
+            var qa = qaMap[track.id];
+            if (qa) {
+              var rowspan = _.indexOf(timeBlock.timespans, qa.qaEndAt, i) - i;
+              rowTracks[track.id] = _.assign({}, qa, { // FIXME: やっつけ
+                title: "Q&A",
+                durationMinutes: qa.qaDurationMinutes,
+                rowspan: rowspan,
+                noLink: true,
+                isQA: true,
+              });
+            }
+          });
 
-        timetable.push({
-          label: [startAt, endAt].join(" ~ "),
-          breakTime: false,
-          tracks: rowTracks
+          // skip
+          if (_.keys(rowTracks).length === 0) return;
+
+          var endAt = timeBlock.timespans[i+1];
+          timetable.push({
+            label: [startAt, endAt].join(" ~ "),
+            breakTime: false,
+            tracks: rowTracks
+          });
+          lastEndAt = endAt;
         });
       });
     });
