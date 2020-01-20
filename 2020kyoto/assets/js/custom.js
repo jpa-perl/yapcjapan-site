@@ -48,6 +48,7 @@
     this.url          = '#/detail/'+encodeURIComponent(this.id);
     this.timetableUrl = './timetable.html'+this.url;
     this.isGuest      = false;
+    this.noLink       = false;
     this.highlight    = false;
   }
 
@@ -299,6 +300,7 @@
         data: fetchTimeTables(),
         methods: {
           openModal: function (talk) {
+            if (talk.noLink) return;
             if (talk.isGuest) {
               location.href = talk.url;
               return;
