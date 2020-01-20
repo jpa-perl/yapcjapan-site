@@ -77,12 +77,17 @@
               </thead>
               <tbody>
                 <tr>
-                  <th>11:00 ~ 11:10</th>
+                  <th>09:00 ~ 09:30</th>
+                  <td>受付</td>
+                  <td v-bind:colspan="tracks.length-1"></td>
+                </tr>
+                <tr>
+                  <th>09:30 ~ 09:45</th>
                   <td>Opening</td>
                   <td v-bind:colspan="tracks.length-1"></td>
                 </tr>
                 <tr>
-                  <th>11:10 ~ 11:20</th>
+                  <th>09:45 ~ 09:50</th>
                   <td v-bind:colspan="tracks.length">
                     <!-- 休憩 -->
                   </td>
@@ -97,7 +102,7 @@
                   >
                     <span class="track__container" v-on:click="openModal(row.tracks[track.id])">
                       <span class="track__title">{{ row.tracks[track.id].title }}</span>
-                      <span class="track__time" v-if="!(track.id != 'track-a' && row.label == '13:05 ~ 13:45')">({{ row.tracks[track.id].durationMinutes }}min)</span>
+                      <span class="track__time">({{ row.tracks[track.id].durationMinutes }}min)</span>
                       <span class="track__author"> {{ row.tracks[track.id].author.name }} </span>
                     </span>
                   </td>
@@ -106,23 +111,18 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>17:10 ~ 17:20</th>
+                  <th>15:20 ~ 15:30</th>
                   <td v-bind:colspan="tracks.length">
                     <!-- 休憩 -->
                   </td>
                 </tr>
                 <tr>
-                  <th>17:20 ~ 17:50</th>
+                  <th>15:30 ~ 16:00</th>
                   <td>
                     Lightning Talks (30min)<br />
-                    <ol>
-                      <li>Shuya Motouchi</li>
-                      <li>OGATA Tetsuji</li>
-                      <li>aereal</li>
-                      <li>八雲アナグラ</li>
-                      <li>門松宏明 / note103</li>
-                      <li>moznion</li>
-                    </ol>
+                    <ul>
+                      <li>TBD...</li>
+                    </ul>
                   </td>
                   <td v-bind:colspan="tracks.length-1"></td>
                 </tr>
@@ -135,7 +135,7 @@
                 <tr>
                   <th>18:00 ~ 18:40</th>
                   <td>
-                    <a href="./#guest-speakers">Keynote: 松野 徳大</a> (40min)<br />
+                    <a href="./#guest-speakers">Keynote: 大西 康裕</a> (40min)<br />
                   </td>
                   <td v-bind:colspan="tracks.length-1"></td>
                 </tr>
@@ -201,7 +201,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
   <script src="./assets/js/vendor/micro_dispatcher.js?cachebuster=454917"></script>
-  <script src="./assets/js/custom.js?cachebuster=455160"></script>
+  <script src="./assets/js/custom.js?cachebuster=455147"></script>
 
   <footer class="global-footer mt-5 pt-5">
     <address class="text-muted text-center ">
