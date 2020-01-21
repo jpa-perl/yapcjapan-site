@@ -119,10 +119,15 @@
                 <tr>
                   <th>15:30 ~ 16:00</th>
                   <td>
-                    Lightning Talks (30min)<br />
-                    <ul>
-                      <li>TBD...</li>
-                    </ul>
+                    <span class="track__container track__container__no-link">
+                      <span class="track__title">Lightning Talks</span>
+                      <span class="track__time">(30min)</span>
+                      <span class="track__author">
+                        <ul>
+                          <li>TBD...</li>
+                        </ul>
+                      </span>
+                    </span>
                   </td>
                   <td v-bind:colspan="tracks.length-1"></td>
                 </tr>
@@ -135,14 +140,22 @@
                 <tr>
                   <th>16:05 ~ 16:10</th>
                   <td>
-                    <a href="./#sponsors"></a>キーノートスポンサーLT (5min)<br />
+                    <span class="track__container track__container__no-link">
+                      <span class="track__title"><!-- a href="./#sponsors" -->Sponsor Lightning Talk<!-- /a --></span>
+                      <span class="track__time">(5min)</span>
+                      <span class="track__author">Keynote Sponsor</span>
+                    </span>
                   </td>
                   <td v-bind:colspan="tracks.length-1"></td>
                 </tr>
                 <tr>
                   <th>16:10 ~ 16:50</th>
                   <td>
-                    <a href="./#guest-speakers">Keynote: 大西 康裕</a> (40min)<br />
+                    <span class="track__container">
+                      <a href="./#guest-speakers" class="track__title">Keynote</a>
+                      <span class="track__time">(40min)</span>
+                      <span class="track__author">大西 康裕</span>
+                    </span>
                   </td>
                   <td v-bind:colspan="tracks.length-1"></td>
                 </tr>
@@ -208,7 +221,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
   <script src="./assets/js/vendor/micro_dispatcher.js?cachebuster=454917"></script>
-  <script src="./assets/js/custom.js?cachebuster=455054"></script>
+  <script src="./assets/js/custom.js?cachebuster=455028"></script>
 
   <footer class="global-footer mt-5 pt-5">
     <address class="text-muted text-center ">
