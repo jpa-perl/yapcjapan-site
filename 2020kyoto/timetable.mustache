@@ -1,0 +1,169 @@
+{{=<% %>=}}
+<div class="container mt-5">
+  <div class="row py-5" data-aos="fade-in">
+    <div class="col-lg-12">
+      <h2 class="display-5 heading mb-3 text-uppercase">Timetable</h2>
+      <div id="timetable" class="section">
+        <div class="body table-responsive">
+
+          <div v-if="timetable.length < 1" class="position-relative vh-100">
+            <div class="position-absolute w-100 h-100 text-center mt-5 pt-5">
+              <span class="spinner-border" role="status" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <table v-if="timetable.length > 0" class="table" data-aos="fade-in">
+            <thead>
+              <tr>
+                <th>時刻</th>
+                <th class="track__timespan" v-for="track in tracks">{{ track.name }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>09:00 ~ 09:30</th>
+                <td>受付</td>
+                <td v-bind:colspan="tracks.length-1"></td>
+              </tr>
+              <tr>
+                <th>09:30 ~ 09:45</th>
+                <td>Opening</td>
+                <td v-bind:colspan="tracks.length-1"></td>
+              </tr>
+              <tr>
+                <th>09:45 ~ 09:50</th>
+                <td v-bind:colspan="tracks.length">
+                  <!-- 休憩 -->
+                </td>
+              </tr>
+              <tr v-for="row in timetable">
+                <th>{{ row.label }}</th>
+                <td
+                  v-for="track in tracks"
+                  v-if="!row.breakTime && track.id in row.tracks"
+                  v-bind:class="{highlight:row.tracks[track.id].highlight}"
+                  v-bind:rowspan="row.tracks[track.id].rowspan"
+                >
+                  <span class="track__container" v-bind:class="{'track__container__qa': row.tracks[track.id].isQA, 'track__container__no-link': row.tracks[track.id].noLink}" v-on:click="openModal(row.tracks[track.id])">
+                    <span class="track__title">{{ row.tracks[track.id].title }}</span>
+                    <span class="track__time">({{ row.tracks[track.id].durationMinutes }}min)</span>
+                    <span class="track__author" v-if="!row.tracks[track.id].isQA"> {{ row.tracks[track.id].author.name }} </span>
+                  </span>
+                </td>
+                <td v-if="row.breakTime" v-bind:colspan="row.breakTimeColspan">
+                  <!-- 休憩 -->
+                </td>
+              </tr>
+              <tr>
+                <th>15:20 ~ 15:30</th>
+                <td v-bind:colspan="tracks.length">
+                  <!-- 休憩 -->
+                </td>
+              </tr>
+              <tr>
+                <th>15:30 ~ 16:00</th>
+                <td>
+                  <span class="track__container track__container__no-link">
+                    <span class="track__title">Lightning Talks</span>
+                    <span class="track__time">(30min)</span>
+                    <span class="track__author">
+                      <ul>
+                        <li>TBD...</li>
+                      </ul>
+                    </span>
+                  </span>
+                </td>
+                <td v-bind:colspan="tracks.length-1"></td>
+              </tr>
+              <tr>
+                <th>16:00 ~ 16:05</th>
+                <td v-bind:colspan="tracks.length">
+                  <!-- 休憩 -->
+                </td>
+              </tr>
+              <tr>
+                <th>16:05 ~ 16:10</th>
+                <td>
+                  <span class="track__container track__container__no-link">
+                    <span class="track__title"><!-- a href="./#sponsors" -->Sponsor Lightning Talk<!-- /a --></span>
+                    <span class="track__time">(5min)</span>
+                    <span class="track__author">Keynote Sponsor</span>
+                  </span>
+                </td>
+                <td v-bind:colspan="tracks.length-1"></td>
+              </tr>
+              <tr>
+                <th>16:10 ~ 16:50</th>
+                <td>
+                  <span class="track__container">
+                    <a href="./#guest-speakers" class="track__title">Keynote</a>
+                    <span class="track__time">(40min)</span>
+                    <span class="track__author">大西 康裕</span>
+                  </span>
+                </td>
+                <td v-bind:colspan="tracks.length-1"></td>
+              </tr>
+              <tr>
+                <th>16:50 ~ 17:00</th>
+                <td>Closing</td>
+                <td v-bind:colspan="tracks.length-1"></td>
+              </tr>
+              </thead>
+          </table>
+        </div><!--  / .body /  -->
+      </div><!--  / .section /  -->
+    </div>
+  </div>
+</div>
+
+<div id="talk-detail-modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content" v-if="render">
+
+      <div class="modal-header">
+        <h4 class="modal-title"><strong>{{ talk.title }}</strong> <small>({{ talk.time }})</small></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="track-detail__author">
+                <a class="h5 d-inline-block" v-bind:href="talk.author.blogUrl" target="_blank"><strong>{{ talk.author.name }}</strong></a>
+                <a class="ml-1 d-inline-block" v-if="talk.author.twitterId" v-bind:href="talk.author.twitterUrl" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a class="ml-1 d-inline-block" v-if="talk.author.githubId" v-bind:href="talk.author.githubUrl" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+              </div>
+              <p class="mb-4 mt-2" style="white-space: pre-wrap;">{{ talk.description }}</p>
+              <hr />
+              <div class="d-flex track-detail__meta">
+                <div class="mr-4">
+                  <strong>時間</strong>
+                  <p>{{ talk.startAt }} ~ {{ talk.endAt }}</p>
+                </div>
+                <div class="mr-4">
+                  <strong>会場</strong>
+                  <p>{{ talk.track.name }}</p>
+                </div>
+                <div v-if="showTimetableLink">
+                  <a v-bind:href="talk.timetableUrl">タイムテーブル</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<%={{ }}=%>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
+<script src="./assets/js/vendor/micro_dispatcher.js"></script>
+<script src="./assets/js/custom.js"></script>
