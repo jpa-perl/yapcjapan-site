@@ -264,6 +264,14 @@
           lastEndAtTable = {};
         }
       });
+      // force close at last
+      (function() {
+          // push
+          var lastEndAt = _.values(lastEndAtTable)[0];
+          blockTemplate.endAt = lastEndAt;
+          blockTemplate.timespans = _.keys(startAtTable).concat(blockTemplate.endAt).sort();
+          timeBlocks.push(blockTemplate);
+      })();
 
       var lastEndAt = null;
       _.forEach(timeBlocks, function (timeBlock) {
