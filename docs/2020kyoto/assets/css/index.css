@@ -64,6 +64,10 @@ a:hover {
   cursor: pointer;
 }
 
+.track__container a {
+  color: inherit;
+}
+
 .track__container__no-link,
 .track__container__qa {
   cursor: auto;
@@ -72,6 +76,10 @@ a:hover {
 .track__container__no-link .track__title,
 .track__container__qa .track__title {
   text-decoration: none;
+}
+
+.track__container__qa .track__title {
+  font-weight: normal;
 }
 
 .track__title {
