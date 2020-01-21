@@ -64,10 +64,12 @@ a:hover {
   cursor: pointer;
 }
 
+.track__container__no-link,
 .track__container__qa {
   cursor: auto;
 }
 
+.track__container__no-link .track__title,
 .track__container__qa .track__title {
   text-decoration: none;
 }
