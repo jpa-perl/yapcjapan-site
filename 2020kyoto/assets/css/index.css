@@ -78,6 +78,10 @@ a:hover {
   text-decoration: none;
 }
 
+.track__container__qa .track__title {
+  font-weight: normal;
+}
+
 .track__title {
   font-weight: bold;
   text-decoration: underline;
