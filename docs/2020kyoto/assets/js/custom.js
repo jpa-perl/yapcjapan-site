@@ -140,7 +140,7 @@
         // FIXME: いつかちゃんとしたい
         "10:50": {
           "track-a": {
-            url: "./#guest-speaker",
+            url: "./#guest-speakers",
             title: "GUEST: 小林 篤",
             author: "小林 篤",
             durationMinutes: 40,
