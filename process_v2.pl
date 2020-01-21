@@ -24,7 +24,7 @@ sub main {
     }
 
     my $r = Template::Mustache->render($tmpl, filter_data(\%data));
-    $r =~ s!"(\./assets/[^"]+\.(?:css|js|gif|png|jpg|pdf))"!'"'.$1.'?cachebuster='.pseudo_hash($1).'"'!meg;
+    $r =~ s!"((?:\.|/[^/]+)/(assets/[^"]+\.(?:css|js|gif|png|jpg|pdf)))"!'"'.$1.'?cachebuster='.pseudo_hash($2).'"'!meg;
     print $r;
 }
 
