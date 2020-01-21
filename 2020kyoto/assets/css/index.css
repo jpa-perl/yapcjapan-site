@@ -64,6 +64,10 @@ a:hover {
   cursor: pointer;
 }
 
+.track__container a {
+  color: inherit;
+}
+
 .track__container__no-link,
 .track__container__qa {
   cursor: auto;

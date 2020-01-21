@@ -141,8 +141,8 @@
         "10:50": {
           "track-a": {
             url: "./#guest-speakers",
-            title: "GUEST: 小林 篤",
-            author: "小林 篤",
+            title: "Guest Speaker",
+            author: { name: "小林 篤" },
             durationMinutes: 40,
             isGuest: true,
             noLink: false,
@@ -153,7 +153,7 @@
           "track-a": {
             url: "./",
             title: "TBD",
-            author: "TBD",
+            author: { name: "" },
             durationMinutes: 50,
             isGuest: false,
             noLink: true,
@@ -162,7 +162,7 @@
           "track-b": {
             url: "./#lunch-session",
             title: "ランチスポンサーセッション",
-            author: "TBD",
+            author: { name: "" },
             durationMinutes: 50,
             isGuest: false,
             noLink: true,
@@ -171,7 +171,7 @@
           "track-c": {
             url: "./#lunch-session",
             title: "ランチスポンサーセッション",
-            author: "TBD",
+            author: { name: "" },
             durationMinutes: 50,
             isGuest: false,
             noLink: true,
@@ -181,8 +181,8 @@
         "13:05": {
           "track-a": {
             url: "./#guest-speakers",
-            title: "GUEST: TBD",
-            author: "TBD",
+            title: "Guest Speaker",
+            author: { name: "TBD" },
             durationMinutes: 40,
             isGuest: true,
             noLink: false,
