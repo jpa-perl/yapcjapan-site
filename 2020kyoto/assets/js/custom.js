@@ -1,8 +1,8 @@
 (function (Vue, $) {
   var TRACKS = [
     { "id": "track-a", "name": "ホール" },
-    { "id": "track-b", "name": "Room1" },
-    { "id": "track-c", "name": "Room0" },
+    { "id": "track-b", "name": "ルーム1" },
+    { "id": "track-c", "name": "ルーム2" },
   ];
   var TRACKS_MAP  = _.keyBy(TRACKS, 'id');
   var TRACK_COUNT = TRACKS.length;
