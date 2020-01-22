@@ -1,6 +1,6 @@
 (function (Vue, $) {
   var TRACKS = [
-    { "id": "track-a", "name": "ホール" },
+    { "id": "track-a", "name": "京大マイコンクラブ40周年記念ホール (バズホール)" },
     { "id": "track-b", "name": "ルーム1" },
     { "id": "track-c", "name": "ルーム2" },
   ];
