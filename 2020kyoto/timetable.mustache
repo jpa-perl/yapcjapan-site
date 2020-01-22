@@ -108,7 +108,24 @@
                 <td>Closing</td>
                 <td v-bind:colspan="tracks.length-1"></td>
               </tr>
-              </thead>
+              <tr>
+                <th>17:00 ~ 19:00</th>
+                <td v-bind:colspan="tracks.length">
+                  <!-- 移動 -->
+                </td>
+              </tr>
+              <tr>
+                <th>19:00 ~ 21:00</th>
+                <td v-bind:colspan="tracks.length">
+                  <span class="track__container track__container__no-link">
+                    <span class="track__title">懇親会</span>
+                    <span class="track__time">(2h)</span>
+                    <!-- span class="track__author">TODO: Sponsored by TBD</span -->
+                    <small>※別会場。別途チケットが必要となります。チケットは近日発売予定です。</small>
+                  </span>
+                </td>
+              </tr>
+              </tbody>
           </table>
         </div><!--  / .body /  -->
       </div><!--  / .section /  -->
