@@ -32,24 +32,24 @@
       label: "パール",
       sponsors: [
         {
-          name: "モバイルファクトリー",
+          name: "株式会社モバイルファクトリー",
           image: "mf.png",
-          url: ""
+          url: "https://www.mobilefactory.jp/"
         },
         {
-          name: "DeNA",
+          name: "株式会社ディー・エヌ・エー",
           image: "dena.png",
-          url: ""
+          url: "https://dena.com"
         },
         {
-          name: "LINE",
+          name: "LINE株式会社 Developer Success チーム",
           image: "line.png",
-          url: ""
+          url: "https://engineering.linecorp.com/ja/"
         },
         {
           name: "はてな",
           image: "hatena.png",
-          url: ""
+          url: "https://hatenacorp.jp/"
         }
       ]
     },
@@ -58,19 +58,24 @@
       label: "プラチナ",
       sponsors: [
         {
-          name: "mixi",
+          name: "株式会社ミクシィ",
           image: "mixigroup.png",
-          url: ""
+          url: "https://mixi.co.jp/recruit/"
         },
         {
           name: "ガイアックス",
           image: "gaiax.png",
-          url: ""
+          url: "https://www.gaiax.co.jp/"
         },
         {
           name: "GMOペパボ株式会社",
           image: "gmo.png",
-          url: ""
+          url: "https://pepabo.com/"
+        },
+        {
+          name: "株式会社ファームノートホールディングス",
+          image: "farmnote.png",
+          url: "https://farmnote.jp/"
         }
       ]
     },
@@ -79,24 +84,24 @@
       label: "ゴールド",
       sponsors: [
         {
-          name: "Supership",
+          name: "Supership株式会社",
           image: "supership.png",
-          url: ""
+          url: "https://supership.jp/"
         },
         {
-          name: "フリークアウト",
+          name: "株式会社フリークアウト",
           image: "freakout.png",
-          url: ""
+          url: "https://www.fout.co.jp/freakout/"
         },
         {
-          name: "メルカリ",
+          name: "株式会社メルカリ",
           image: "mercari.png",
-          url: ""
+          url: "https://about.mercari.com/"
         },
         {
-          name: "SHOWROOM",
+          name: "SHOWROOM株式会社",
           image: "showroom.png",
-          url: ""
+          url: "https://showroom.co.jp/"
         }
       ]
     },
@@ -105,13 +110,18 @@
       label: "シルバー",
       sponsors: [
         {
-          name: "ユナイテッド",
+          name: "ユナイテッド株式会社",
           image: "united.png",
-          url: ""
+          url: "https://united.jp"
         },
         {
           name: "ossan.fm",
           image: "ossanfm.png",
+          url: "https://ossan.fm/"
+        },
+        {
+          name: "Have Fun Tech LLC",
+          image: "https://have-fun.tech/",
           url: ""
         }
       ]
@@ -121,9 +131,9 @@
       label: "ゴールド(ご当地)",
       sponsors: [
         {
-          name: "Happy Elements",
+          name: "Happy Elements株式会社",
           image: "happyelements.png",
-          url: ""
+          url: "https://www.happyelements.co.jp/"
         }
       ]
     },
@@ -132,9 +142,9 @@
       label: "バックパネル",
       sponsors: [
         {
-          name: "Happy Elements",
+          name: "Happy Elements株式会社",
           image: "happyelements.png",
-          url: ""
+          url: "https://www.happyelements.co.jp/"
         }
       ]
     },
@@ -143,9 +153,9 @@
       label: "Tシャツ",
       sponsors: [
         {
-          name: "ガイアックス",
+          name: "株式会社ガイアックス",
           image: "gaiax.png",
-          url: ""
+          url: "https://www.gaiax.co.jp/"
         }
       ]
     },
@@ -154,9 +164,9 @@
       label: "トートバッグ",
       sponsors: [
         {
-          name: "Nota",
+          name: "Nota Inc.",
           image: "nota-helpfeel.png",
-          url: ""
+          url: "https://helpfeel.com/"
         }
       ]
     },
@@ -167,7 +177,7 @@
         {
           name: "京大マイコンクラブ",
           image: "kmc.png",
-          url: ""
+          url: "https://www.kmc.gr.jp/"
         }
       ]
     },
@@ -178,7 +188,7 @@
         {
           name: "Nota",
           image: "nota-helpfeel.png",
-          url: ""
+          url: "https://helpfeel.com/"
         }
       ]
     },
@@ -187,9 +197,9 @@
       label: "前夜祭",
       sponsors: [
         {
-          name: "mixi",
+          name: "株式会社ミクシィ",
           image: "mixigroup.png",
-          url: ""
+          url: "https://mixi.co.jp/recruit/"
         }
       ]
     },
@@ -198,9 +208,9 @@
       label: "懇親会",
       sponsors: [
         {
-          name: "はてな",
+          name: "株式会社はてな",
           image: "hatena.png",
-          url: ""
+          url: "https://hatenacorp.jp/"
         }
       ]
     },
@@ -209,9 +219,9 @@
       label: "ベストLT",
       sponsors: [
         {
-          name: "ネコトーストラボ",
+          name: "株式会社ネコトーストラボ",
           image: "nekotoast.png",
-          url: ""
+          url: "https://nekotoast-lab.com/"
         }
       ]
     },
@@ -220,9 +230,9 @@
       label: "ゲスト",
       sponsors: [
         {
-          name: "シックス・アパート",
+          name: "シックス・アパート株式会社",
           image: "sakk.png",
-          url: ""
+          url: "https://www.sixapart.jp/"
         }
       ]
     },
@@ -231,39 +241,39 @@
       label: "学生旅費",
       sponsors: [
         {
-          name: "カヤック",
+          name: "面白法人カヤック",
           image: "kayac.png",
-          url: ""
+          url: "https://www.kayac.com/"
         },
         {
-          name: "サポーターズ",
-          image: "supporters.png",
-          url: ""
+          name: "株式会社サポーターズ",
+          image: "supporterz.png",
+          url: "https://talent.supporterz.jp/"
         },
         {
           name: "こだまリサーチ株式会社",
           image: "kodamari.com.png",
-          url: ""
+          url: "https://www.kodamari.com/"
         },
         {
-          name: "mixi",
+          name: "株式会社ミクシィ",
           image: "mixigroup.png",
-          url: ""
+          url: "https://mixi.co.jp/recruit/"
         },
         {
           name: "株式会社yodayoda",
           image: "yodayoda.png",
-          url: ""
+          url: "https://yodayoda.co/"
         },
         {
-          name: "Repro",
+          name: "Repro Inc.",
           image: "repro.png",
-          url: ""
+          url: "https://repro.io"
         },
         {
           name: "ガイアックス",
           image: "gaiax.png",
-          url: ""
+          url: "https://www.gaiax.co.jp/"
         }
       ]
     }

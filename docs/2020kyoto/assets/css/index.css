@@ -130,3 +130,12 @@ a:hover {
 .avatar-card__description {
   font-size: 0.9rem;
 }
+
+.sponsors__class {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.sponsor__image {
+  max-width: 200px;
+}
