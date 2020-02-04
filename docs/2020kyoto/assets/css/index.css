@@ -136,6 +136,18 @@ a:hover {
   font-size: 1.5rem;
 }
 
+.sponsors__wrapper {
+  line-height: 1.4;
+}
+
+.sponsor__name {
+  display: block;
+  margin: 0.5rem 0 0 0;
+}
 .sponsor__image {
-  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+  padding: 5%;
 }
