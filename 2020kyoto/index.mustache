@@ -71,6 +71,8 @@
       </ul>
     </div>
     </div>
+    </div>
+    </div>
 
     <div id="guest-speakers" class="row pt-5" data-aos="fade-in">
       <div class="col-lg-4">
@@ -102,23 +104,28 @@
     </div>
 
     <div id="sponsors" class="row py-5" data-aos="fade-in">
-      <h2 class="display-4 heading mb-3 text-uppercase">Sponsors</h2>
-      <div class="pt-3 row">
+    <div class="col-12">
+      <h2 class="display-4 heading mb-5 text-uppercase">Sponsors</h2>
         {{#sponsors}}
-        <div class="col-lg-3 {{class}} my-5">
+      <div class="py-3 row {{key}}">
+        <div class="col-lg-3">
           <div class="sponsors__class">{{label}}</div>
         </div>
-        <div class="col-lg-9 sponsors__wrapper d-flex my-5">
+        <div class="col-lg-9 sponsors__wrapper flex-wrap row">
           {{#sponsors}}
-          <div class="sponsor">
-            <div class="sponsor__image-wrapper">
-              <img class="sponsor__image" src="/2020kyoto/assets/images/sponsors/{{image}}" alt="" />
-            </div>
-            <div class="sponsor__name">{{name}}</div>
-          </div>
+          {{#image}}
+          <a target="_blank" href="{{url}}" class="sponsor d-block text-center mb-3 col-2 {{class}}">
+            <span class="sponsor__image-wrapper">
+              <img loading="lazy" class="sponsor__image" src="/2020kyoto/assets/images/sponsors/{{image}}" alt="" />
+            </span>
+            <small class="sponsor__name">{{name}}</small>
+          </a>
+          {{/image}}
           {{/sponsors}}
         </div>
-        {{/sponsors}}
       </div>
+        {{/sponsors}}
     </div>
+    </div>
+
   </div>
