@@ -191,7 +191,7 @@
       label: "ブース",
       sponsors: [
         {
-          name: "Nota",
+          name: "Nota Inc.",
           image: "nota-helpfeel.png",
           url: "https://helpfeel.com/"
         }
