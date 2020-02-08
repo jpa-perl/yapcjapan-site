@@ -29,7 +29,7 @@
   sponsors: [
     {
       key: "perl",
-      class: "col-6",
+      class: "col-6 col-md-6",
       label: "パール",
       sponsors: [
         {
@@ -57,7 +57,7 @@
     {
       key: "platinum",
       label: "プラチナ",
-      class: "col-4",
+      class: "col-4 col-md-4",
       sponsors: [
         {
           name: "株式会社ミクシィ",
@@ -84,7 +84,7 @@
     {
       key: "gold",
       label: "ゴールド",
-      class: "col-4",
+      class: "col-4 col-md-4",
       sponsors: [
         {
           name: "Supership株式会社",
@@ -111,7 +111,7 @@
     {
       key: "silver",
       label: "シルバー",
-      class: "col-3",
+      class: "col-3 col-md-3",
       sponsors: [
         {
           name: "ユナイテッド株式会社",
