@@ -147,9 +147,9 @@
       label: "バックパネル",
       sponsors: [
         {
-          name: "Happy Elements株式会社",
-          image: "happyelements.png",
-          url: "https://www.happyelements.co.jp/"
+          name: "シックス・アパート株式会社",
+          image: "sakk.png",
+          url: "https://www.sixapart.jp/"
         }
       ]
     },
