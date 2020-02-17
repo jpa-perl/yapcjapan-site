@@ -176,6 +176,17 @@
       ]
     },
     {
+      key: "name-plate",
+      label: "名札",
+      sponsors: [
+        {
+          name: "株式会社フリークアウト",
+          image: "freakout.png",
+          url: "https://www.fout.co.jp/freakout/"
+        }
+      ]
+    },
+    {
       key: "naming",
       label: "ネーミングライツ",
       sponsors: [
