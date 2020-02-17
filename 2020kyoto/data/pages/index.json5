@@ -103,7 +103,7 @@
         },
         {
           name: "SHOWROOM株式会社",
-          image: "",
+          image: "showroom.png",
           url: "https://showroom.co.jp/"
         }
       ]
