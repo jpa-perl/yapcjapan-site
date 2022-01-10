@@ -1,14 +1,15 @@
 module.exports = {
-  content: ['./*.mustache'],
+  content: ['./*.mustache', './data/**/*.json5'],
   theme: {
-    colors: {
-      primary: '#5A3434',
-      tint: '#ED2628',
-      pink: '#F05A59',
-      bg: '#EFEFEF',
-      'bg-light': '#F6F6F6',
+    extend: {
+      colors: {
+        primary: '#5A3434',
+        tint: '#ED2628',
+        pink: '#F05A59',
+        bg: '#F6F6F6',
+        'bg-dark': '#EFEFEF',
+      },
     },
-    extend: {},
   },
   plugins: [],
 };
