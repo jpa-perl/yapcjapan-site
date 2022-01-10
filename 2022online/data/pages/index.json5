@@ -2,160 +2,104 @@
   "include-index": true,
   guestSpeakers: [
     {
-      photo: "https://cdn-ak.f.st-hatena.com/images/fotolife/o/onishi/20141028/20141028101232.jpg",
-      name: "大西 康裕",
-      name_en: "Yasuhiro Onishi",
-      description: "株式会社はてな 執行役員 サービス・システム開発本部長。\n 2001年に創業メンバーの1人として有限会社はてな（当時）に入社。入社後は主にエンジニアリングを担当し、チーフエンジニアとして全サービスの開発や技術部の指導・育成に携わる。その後「はてなブログ」の立ち上げや事業化を指揮し、2014年8月より執行役員 サービス開発本部長を経て、2016年8月より現職。代表作は Devel::KYTProf"
+      photo: "/2022online/assets/images/guest/uzulla.jpg",
+      name: "uzulla",
+      name_en: "",
+      description: "Perlに育てられ独特なPHPで生きるPerl Monger/Hachioji.pm (非公認地域pm)を2010-12より主催し、多くの友や輪を作る/登壇歴はYAPC::Asia 2014(ベストスピーカー),2015,YAPC::EU(スペイン) 2015等/愛着のあるModuleはAnyEvent、好きなlibはcgi-lib.pl「正規表現でもなんでも、大事な事は全てPerlに教わった」"
     },
     {
-      photo: "/2020kyoto/assets/images/nekokaku.jpg",
-      name: "小林 篤",
-      name_en: "Atsushi Kobayashi",
-      description: "株式会社ディー・エヌ・エー　常務執行役員 兼 CTO システム本部 本部長\n 法学部法律学科からエンジニアへ転身し、2011年にDeNAに入社。Mobageおよび協業プラットフォームの大規模システム開発、オートモーティブ事業本部の開発責任者を歴任。2018年より執行役員としてDeNAのエンジニアリングの統括を務め、2019年より常務執行役員 CTOとしてより経営レベルでの意思決定にかかわることと、技術・モノづくりの強化を担う。"
+      photo: "/2022online/assets/images/guest/yusukebe.jpg",
+      name: "和田裕介",
+      name_en: "Yusuke Wada",
+      description: "株式会社トラベルブック スーパーバイザー。大学在学時に未踏ユース採択。スーパークリエータに準ずる。SIGGRAPH Emerging Technologies採択。卒業後、父親と共に株式会社ワディットを設立。70を超える個人Webサービスを開発、公開。株式会社オモロキ「ボケて」のファウンダー。当初の開発運用をすべて一人でこなした。文化庁第17回メディア芸術祭 審査委員会推薦作品に選ばれる。YAPC::Asiaでは2年連続でベストトーク賞1位を受賞。2021年6月より現職。"
     },
     {
-      photo: "/2020kyoto/assets/images/uehara.jpg",
-      name: "上原 哲太郎",
-      name_en: "Tetsutaro Uehara",
-      description: "立命館大学 情報理工学部 教授。1990年代前半は京都大学においてftpサーバやftpmailサービスを管理。その時にftpmailやftpmirrorプログラムを自作したのがPerlライフの始まり。和歌山大学や京都大学で計算機センター教員としてシステム管理に従事。2011年総務省技官。通信規格と情報セキュリティ政策に従事。2013年より現職。京都・和歌山・滋賀各警察のサイバー犯罪対策アドバイザー。"
-    },
-    {
-      photo: "/2020kyoto/assets/images/miyawaki.jpg",
-      name: "宮脇 正晴",
-      name_en: "Miyawaki Masaharu",
-      description: "立命館大学 法学部教授。知財財産研究所特別研究員、国際高等研究所特別研究員を経て、2003年4月から立命館大学法学部助教授（2007年4月より「准教授」に改称）。2011年4月から立命館大学法学部教授。専門は知的財産法と不正競争法。インターネット上の知的財産権侵害や、知的財産権侵害に対する損害賠償額の算定方法など、知的財産権に関して幅広く研究している。"
+      photo: "/2022online/assets/images/guest/songmu.jpg",
+      name: "松木 雅幸",
+      name_en: "songmu / Matsuki Masayuki",
+      description: "LaunchableのPrincipal Software Engineer。大学で中国語と機械翻訳を学び、卒業後は中国でのITベンチャーの立ち上げ、語学学校の営業兼システム担当、SIer、ソーシャルゲーム開発のテックリード、プロダクトマネージャー、スタートアップのCTOなどの紆余曲折を経て2021年より現職。 Webサービスの安定稼働に矜持を持つソフトウェアエンジニアで、ISUCONに過去3度優勝するなど、継続的に素早くサービスを変化させながらも安定した運営を実現することが得意領域。OSS活動が趣味でGoやPerlを中心に100個以上のツールやモジュールをGitHubに公開している。"
     }
   ],
   sponsors: [
     {
       key: "perl",
-      class: "col-6 col-md-6",
-      label: "パール",
+      class: "basis-full",
+      icon_class: "max-w-[300px]",
+      label: "Perl Sponsors",
       sponsors: [
-        {
-          name: "株式会社モバイルファクトリー",
-          image: "mf.png",
-          url: "https://www.mobilefactory.jp/"
-        },
         {
           name: "株式会社ディー・エヌ・エー",
           image: "dena.png",
           url: "https://dena.com"
         },
         {
-          name: "LINE株式会社 Developer Success チーム",
+          name: "LINE株式会社",
           image: "line.png",
           url: "https://engineering.linecorp.com/ja/"
-        },
-        {
-          name: "はてな",
-          image: "hatena.png",
-          url: "https://hatenacorp.jp/"
         }
       ]
     },
     {
-      key: "platinum",
-      label: "プラチナ",
-      class: "col-4 col-md-4",
+      key: "gold",
+      label: "Gold Sponsors",
+      class: "basis-full",
+      icon_class: "max-w-[200px]",
       sponsors: [
-        {
-          name: "株式会社ミクシィ",
-          image: "mixigroup.png",
-          url: "https://mixi.co.jp/recruit/"
-        },
         {
           name: "ガイアックス",
           image: "gaiax.png",
           url: "https://www.gaiax.co.jp/"
         },
         {
-          name: "GMOペパボ株式会社",
-          image: "pepabo.png",
-          url: "https://pepabo.com/"
+          name: "株式会社ミクシィ",
+          image: "mixi.png",
+          url: "https://mixi.co.jp/recruit/"
         },
-        {
-          name: "株式会社ファームノートホールディングス",
-          image: "farmnote.png",
-          url: "https://farmnote.jp/"
-        }
-      ]
-    },
-    {
-      key: "gold",
-      label: "ゴールド",
-      class: "col-4 col-md-4",
-      sponsors: [
-        {
-          name: "Supership株式会社",
-          image: "supership.png",
-          url: "https://supership.jp/"
-        },
-        {
-          name: "株式会社フリークアウト",
-          image: "freakout.png",
-          url: "https://www.fout.co.jp/freakout/"
-        },
-        {
-          name: "株式会社メルカリ",
-          image: "mercari.png",
-          url: "https://about.mercari.com/"
-        },
-        {
-          name: "SHOWROOM株式会社",
-          image: "showroom.png",
-          url: "https://showroom.co.jp/"
-        }
       ]
     },
     {
       key: "silver",
-      label: "シルバー",
-      class: "col-3 col-md-3",
+      label: "Silver Sponsors",
+      class: "basis-full",
+      icon_class: "max-w-[150px]",
       sponsors: [
-        {
-          name: "ユナイテッド株式会社",
-          image: "united.png",
-          url: "https://united.jp"
-        },
-        {
-          name: "ossan.fm",
-          image: "ossanfm.png",
-          url: "https://ossan.fm/"
-        },
         {
           name: "Have Fun Tech LLC",
           image: "havefuntech.png",
           url: "https://have-fun.tech/"
-        }
-      ]
-    },
-    {
-      key: "gold-local",
-      label: "ゴールド(ご当地)",
-      class: "col-3",
-      sponsors: [
+        },
         {
-          name: "Happy Elements株式会社",
-          image: "happyelements.png",
-          url: "https://www.happyelements.co.jp/"
-        }
-      ]
-    },
-    {
-      key: "back-panel",
-      label: "バックパネル",
-      sponsors: [
+          name: "株式会社COLSIS（コルシス）",
+          image: "colsis.png",
+          url: "https://colsis.jp/"
+        },
+        {
+          name: "こだまリサーチ株式会社",
+          image: "kodama.png",
+          url: "https://www.kodamari.com/"
+        },
         {
           name: "シックス・アパート株式会社",
-          image: "sakk.png",
+          image: "six-apart.png",
           url: "https://www.sixapart.jp/"
-        }
+        },
+        {
+          name: "株式会社モバイルファクトリー",
+          image: "mobile-factory.png",
+          url: "https://www.mobilefactory.jp/"
+        },
+        {
+          name: "株式会社ネコトーストラボ",
+          image: "neko-toast-lab.png",
+          url: "https://nekotoast-lab.com/"
+        },
       ]
     },
     {
       key: "t-shirt",
-      label: "Tシャツ",
+      label: "Event T-shirt Sponsor",
+      class: "md:basis-64 basis-full",
+      icon_class: "max-w-[150px]",
       sponsors: [
         {
           name: "株式会社ガイアックス",
@@ -165,132 +109,15 @@
       ]
     },
     {
-      key: "tote-bag",
-      label: "トートバッグ",
-      sponsors: [
-        {
-          name: "Nota Inc.",
-          image: "nota-helpfeel.png",
-          url: "https://helpfeel.com/"
-        }
-      ]
-    },
-    {
-      key: "name-plate",
-      label: "名札",
-      sponsors: [
-        {
-          name: "株式会社フリークアウト",
-          image: "freakout.png",
-          url: "https://www.fout.co.jp/freakout/"
-        }
-      ]
-    },
-    {
-      key: "naming",
-      label: "ネーミングライツ",
-      sponsors: [
-        {
-          name: "京大マイコンクラブ",
-          image: "kmc.png",
-          url: "https://www.kmc.gr.jp/"
-        }
-      ]
-    },
-    {
-      key: "booth",
-      label: "ブース",
-      sponsors: [
-        {
-          name: "Nota Inc.",
-          image: "nota-helpfeel.png",
-          url: "https://helpfeel.com/"
-        }
-      ]
-    },
-    {
-      key: "eve",
-      label: "前夜祭",
-      sponsors: [
-        {
-          name: "株式会社ミクシィ",
-          image: "mixigroup.png",
-          url: "https://mixi.co.jp/recruit/"
-        }
-      ]
-    },
-    {
-      key: "after-party",
-      label: "懇親会",
-      sponsors: [
-        {
-          name: "株式会社はてな",
-          image: "hatena.png",
-          url: "https://hatenacorp.jp/"
-        }
-      ]
-    },
-    {
       key: "best-lt",
-      label: "ベストLT",
+      label: "Best LT Sponsor",
+      class: "md:basis-64 basis-full",
+      icon_class: "max-w-[150px]",
       sponsors: [
         {
-          name: "株式会社ネコトーストラボ",
-          image: "nekotoast.png",
-          url: "https://nekotoast-lab.com/"
-        }
-      ]
-    },
-    {
-      key: "best-lt",
-      label: "ゲスト",
-      sponsors: [
-        {
-          name: "シックス・アパート株式会社",
-          image: "sakk.png",
-          url: "https://www.sixapart.jp/"
-        }
-      ]
-    },
-    {
-      key: "student-support",
-      label: "学生旅費",
-      class: "col-md-2",
-      sponsors: [
-        {
-          name: "面白法人カヤック",
-          image: "kayac.png",
-          url: "https://www.kayac.com/"
-        },
-        {
-          name: "株式会社サポーターズ",
-          image: "supporterz.png",
-          url: "https://talent.supporterz.jp/"
-        },
-        {
-          name: "こだまリサーチ株式会社",
-          image: "kodamari.com.png",
-          url: "https://www.kodamari.com/"
-        },
-        {
-          name: "株式会社ミクシィ",
-          image: "mixigroup.png",
-          url: "https://mixi.co.jp/recruit/"
-        },
-        {
-          name: "株式会社yodayoda",
-          image: "yodayoda.png",
-          url: "https://yodayoda.co/"
-        },
-        {
-          name: "Repro Inc.",
-          image: "repro.png",
-          url: "https://repro.io"
-        },
-        {
-          name: "ガイアックス",
-          image: "gaiax.png",
-          url: "https://www.gaiax.co.jp/"
+          name: "株式会社モバイルファクトリー",
+          image: "mobile-factory.png",
+          url: "https://www.mobilefactory.jp/"
         }
       ]
     }
