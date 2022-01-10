@@ -1,4 +1,5 @@
-<div class="flex items-center justify-center bg-bg-dark text-primary">
+<div class="flex items-center justify-center bg-bg-dark text-primary relative overflow-hidden">
+  <canvas id="canvas" class="absolute top-0 left-0" ></canvas>
   <div class="container flex flex-col items-center justify-center py-20 md:pt-40 md:pb-20 mx-6">
     <h1>
       <img src="/2022online/assets/images/logo.svg" alt="YAPC::Jpana::Online 2022"/>
@@ -65,7 +66,49 @@
         {{/sponsors}}
       </div>
 
-
     </div>
   </div>
 
+<script src="https://unpkg.com/noisejs@2.1.0/index.js"></script>
+<script>
+(function(){
+  var noise = new Noise();
+  var canvas = document.getElementById("canvas");
+  var ctx    = canvas.getContext("2d");
+  var t = 0;
+  var n =10;
+
+  function init() {
+    canvas.width = document.body.clientWidth;
+    canvas.height = 450;
+    ctx.strokeStyle="rgba(240,88,89,.20)";
+    ctx.lineWidth = 7;
+  }
+
+  function calY(j,i) {
+    return canvas.height/2 + Math.sin(Math.PI/n*j + t/100 + noise.perlin2(i/2,t/1000)*10)*25;
+  }
+
+  function draw() {
+    t++;
+    ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
+    for(var i=0;i<3;i++){
+      ctx.beginPath();
+      for(var j=-1;j<=n+1;j++) {
+        ctx.quadraticCurveTo(
+          canvas.width/n*j,
+          calY(j,i),
+          canvas.width/n*(j+1),
+          calY(j+1,i)
+        )
+      }
+      ctx.stroke();
+    }
+    window.requestAnimationFrame(draw);
+  }
+  init();
+  window.addEventListener('resize', init);
+  window.requestAnimationFrame(draw);
+})();
+
+</script>
