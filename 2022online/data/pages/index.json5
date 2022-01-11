@@ -2,6 +2,12 @@
   "include-index": true,
   guestSpeakers: [
     {
+      photo: "/2022online/assets/images/guest/songmu.jpg",
+      name: "松木 雅幸",
+      name_en: "songmu / Matsuki Masayuki",
+      description: "LaunchableのPrincipal Software Engineer。大学で中国語と機械翻訳を学び、卒業後は中国でのITベンチャーの立ち上げ、語学学校の営業兼システム担当、SIer、ソーシャルゲーム開発のテックリード、プロダクトマネージャー、スタートアップのCTOなどの紆余曲折を経て2021年より現職。 Webサービスの安定稼働に矜持を持つソフトウェアエンジニアで、ISUCONに過去3度優勝するなど、継続的に素早くサービスを変化させながらも安定した運営を実現することが得意領域。OSS活動が趣味でGoやPerlを中心に100個以上のツールやモジュールをGitHubに公開している。"
+    },
+    {
       photo: "/2022online/assets/images/guest/uzulla.jpg",
       name: "uzulla",
       name_en: "",
@@ -12,12 +18,6 @@
       name: "和田裕介",
       name_en: "Yusuke Wada",
       description: "株式会社トラベルブック スーパーバイザー。大学在学時に未踏ユース採択。スーパークリエータに準ずる。SIGGRAPH Emerging Technologies採択。卒業後、父親と共に株式会社ワディットを設立。70を超える個人Webサービスを開発、公開。株式会社オモロキ「ボケて」のファウンダー。当初の開発運用をすべて一人でこなした。文化庁第17回メディア芸術祭 審査委員会推薦作品に選ばれる。YAPC::Asiaでは2年連続でベストトーク賞1位を受賞。2021年6月より現職。"
-    },
-    {
-      photo: "/2022online/assets/images/guest/songmu.jpg",
-      name: "松木 雅幸",
-      name_en: "songmu / Matsuki Masayuki",
-      description: "LaunchableのPrincipal Software Engineer。大学で中国語と機械翻訳を学び、卒業後は中国でのITベンチャーの立ち上げ、語学学校の営業兼システム担当、SIer、ソーシャルゲーム開発のテックリード、プロダクトマネージャー、スタートアップのCTOなどの紆余曲折を経て2021年より現職。 Webサービスの安定稼働に矜持を持つソフトウェアエンジニアで、ISUCONに過去3度優勝するなど、継続的に素早くサービスを変化させながらも安定した運営を実現することが得意領域。OSS活動が趣味でGoやPerlを中心に100個以上のツールやモジュールをGitHubに公開している。"
     }
   ],
   sponsors: [
@@ -102,9 +102,9 @@
       icon_class: "max-w-[150px]",
       sponsors: [
         {
-          name: "株式会社ガイアックス",
-          image: "gaiax.png",
-          url: "https://www.gaiax.co.jp/"
+          name: "株式会社モバイルファクトリー",
+          image: "mobile-factory.png",
+          url: "https://www.mobilefactory.jp/"
         }
       ]
     },
@@ -115,9 +115,9 @@
       icon_class: "max-w-[150px]",
       sponsors: [
         {
-          name: "株式会社モバイルファクトリー",
-          image: "mobile-factory.png",
-          url: "https://www.mobilefactory.jp/"
+          name: "Have Fun Tech LLC",
+          image: "havefuntech.png",
+          url: "https://have-fun.tech/"
         }
       ]
     }
