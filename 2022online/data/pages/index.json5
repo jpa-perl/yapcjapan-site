@@ -1,0 +1,125 @@
+{
+  "include-index": true,
+  guestSpeakers: [
+    {
+      photo: "/2022online/assets/images/guest/songmu.jpg",
+      name: "松木 雅幸",
+      name_en: "songmu / Matsuki Masayuki",
+      description: "LaunchableのPrincipal Software Engineer。大学で中国語と機械翻訳を学び、卒業後は中国でのITベンチャーの立ち上げ、語学学校の営業兼システム担当、SIer、ソーシャルゲーム開発のテックリード、プロダクトマネージャー、スタートアップのCTOなどの紆余曲折を経て2021年より現職。 Webサービスの安定稼働に矜持を持つソフトウェアエンジニアで、ISUCONに過去3度優勝するなど、継続的に素早くサービスを変化させながらも安定した運営を実現することが得意領域。OSS活動が趣味でGoやPerlを中心に100個以上のツールやモジュールをGitHubに公開している。"
+    },
+    {
+      photo: "/2022online/assets/images/guest/uzulla.jpg",
+      name: "uzulla",
+      name_en: "",
+      description: "Perlに育てられ独特なPHPで生きるPerl Monger/Hachioji.pm (非公認地域pm)を2010-12より主催し、多くの友や輪を作る/登壇歴はYAPC::Asia 2014(ベストスピーカー),2015,YAPC::EU(スペイン) 2015等/愛着のあるModuleはAnyEvent、好きなlibはcgi-lib.pl「正規表現でもなんでも、大事な事は全てPerlに教わった」"
+    },
+    {
+      photo: "/2022online/assets/images/guest/yusukebe.jpg",
+      name: "和田裕介",
+      name_en: "Yusuke Wada",
+      description: "株式会社トラベルブック スーパーバイザー。大学在学時に未踏ユース採択。スーパークリエータに準ずる。SIGGRAPH Emerging Technologies採択。卒業後、父親と共に株式会社ワディットを設立。70を超える個人Webサービスを開発、公開。株式会社オモロキ「ボケて」のファウンダー。当初の開発運用をすべて一人でこなした。文化庁第17回メディア芸術祭 審査委員会推薦作品に選ばれる。YAPC::Asiaでは2年連続でベストトーク賞1位を受賞。2021年6月より現職。"
+    }
+  ],
+  sponsors: [
+    {
+      key: "perl",
+      class: "basis-full",
+      icon_class: "max-w-[300px]",
+      label: "Perl Sponsors",
+      sponsors: [
+        {
+          name: "株式会社ディー・エヌ・エー",
+          image: "dena.png",
+          url: "https://dena.com"
+        },
+        {
+          name: "LINE株式会社",
+          image: "line.png",
+          url: "https://engineering.linecorp.com/ja/"
+        }
+      ]
+    },
+    {
+      key: "gold",
+      label: "Gold Sponsors",
+      class: "basis-full",
+      icon_class: "max-w-[200px]",
+      sponsors: [
+        {
+          name: "ガイアックス",
+          image: "gaiax.png",
+          url: "https://www.gaiax.co.jp/"
+        },
+        {
+          name: "株式会社ミクシィ",
+          image: "mixi.png",
+          url: "https://mixi.co.jp/recruit/"
+        },
+      ]
+    },
+    {
+      key: "silver",
+      label: "Silver Sponsors",
+      class: "basis-full",
+      icon_class: "max-w-[150px]",
+      sponsors: [
+        {
+          name: "Have Fun Tech LLC",
+          image: "havefuntech.png",
+          url: "https://have-fun.tech/"
+        },
+        {
+          name: "株式会社COLSIS（コルシス）",
+          image: "colsis.png",
+          url: "https://colsis.jp/"
+        },
+        {
+          name: "こだまリサーチ株式会社",
+          image: "kodama.png",
+          url: "https://www.kodamari.com/"
+        },
+        {
+          name: "シックス・アパート株式会社",
+          image: "six-apart.png",
+          url: "https://www.sixapart.jp/"
+        },
+        {
+          name: "株式会社モバイルファクトリー",
+          image: "mobile-factory.png",
+          url: "https://www.mobilefactory.jp/"
+        },
+        {
+          name: "株式会社ネコトーストラボ",
+          image: "neko-toast-lab.png",
+          url: "https://nekotoast-lab.com/"
+        },
+      ]
+    },
+    {
+      key: "t-shirt",
+      label: "Event T-shirt Sponsor",
+      class: "md:basis-64 basis-full",
+      icon_class: "max-w-[150px]",
+      sponsors: [
+        {
+          name: "株式会社モバイルファクトリー",
+          image: "mobile-factory.png",
+          url: "https://www.mobilefactory.jp/"
+        }
+      ]
+    },
+    {
+      key: "best-lt",
+      label: "Best LT Sponsor",
+      class: "md:basis-64 basis-full",
+      icon_class: "max-w-[150px]",
+      sponsors: [
+        {
+          name: "Have Fun Tech LLC",
+          image: "havefuntech.png",
+          url: "https://have-fun.tech/"
+        }
+      ]
+    }
+  ]
+}

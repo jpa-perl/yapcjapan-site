@@ -1,0 +1,120 @@
+<div class="flex items-center justify-center bg-bg-dark text-primary relative overflow-hidden">
+  <canvas id="canvas" class="absolute top-0 left-0 z-0" ></canvas>
+  <div class="container flex flex-col items-center justify-center py-20 md:pt-40 md:pb-20 mx-6 relative z-10">
+    <h1 id="logo">
+      <img src="/2022online/assets/images/logo.svg" alt="YAPC::Jpana::Online 2022"/>
+    </h1>
+    <div class="mt-10">
+      <span class="bg-tint font-bold text-2xl md:text-4xl text-white px-8 py-1">
+        <span>3/4</span>
+        <span class="text-xl md:text-2xl">Fri. 〜
+        </span>
+        <span>3/5</span>
+        <span class="text-xl md:text-2xl">Sat.</span>
+      </span>
+    </div>
+    <div class="flex flex-col justify-center items-center max-w-3xl font-bold">
+      <p class="text-2xl md:text-4xl my-8 md:my-16">YAPC::Japan、満を持してオンライン開催！</p>
+      <p class="leading-7 md:leading-9 text-md md:text-xl mb-8 text-justify">YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。 Perlだけにとどまらない技術者たちが、好きな技術の話をし交流するカンファレンスで、技術者であれば誰でも楽しめるお祭りです！</p>
+      <p class="leading-7 md:leading-9 text-md md:text-xl text-justify">今回のYAPC::Japan::Onlineは、オンラインイベントにありがちな単に見るだけのものではなく、ちゃんと参加して楽しめるオンラインカンファレンスになるように工夫を凝らしています。技術の祭りならではの、刺激ある技術の話、周りの人たちと共有するワイワイ感、そして美味しいご飯。そんなカンファレンスを目指して、様々な仕掛けを用意しています！ぜひ、皆さま楽しみにご参加ください！</p>
+    </div>
+  </div>
+</div>
+
+<div class="flex items-center justify-center text-primary pb-10">
+  <div class="container flex flex-col items-center justify-center py-20">
+    <h2 class="mb-10 md:mb-32">
+      <span class="bg-tint font-bold text-3xl text-white px-1 py-1 tracking-wider">
+        Guest Speakers
+      </span>
+    </h2>
+
+    <ul class="md:flex justify-between gap-10 max-w-5xl">
+      {{#guestSpeakers}}
+        <li class="flex-1 text-center my-10 md:my-0">
+          <img class="max-w-[200px] rounded-full mx-auto" src="{{photo}}" alt="">
+            <div class="font-bold my-6">{{name}}<span class="block text-sm md:min-h-[1em]">{{name_en}}</span>
+            </div>
+            <div class="text-sm px-8 md:px-0 text-justify break-all">{{description}}</div>
+          </li>
+        {{/guestSpeakers}}
+      </ul>
+
+      <h2 class="mt-16 md:mt-32 mb-6">
+        <span class="bg-tint font-bold text-3xl text-white px-1 py-1 tracking-wider">
+        Sponsors
+        </span>
+      </h2>
+
+      <div class="flex flex-wrap justify-center">
+        {{#sponsors}}
+          <div class="{{class}}">
+            <div class="text-center font-bold mt-12 mb-8">{{label}}</div>
+            <div class="flex gap-6 justify-center flex-wrap">
+              {{#sponsors}}
+                {{#image}}
+                  <a target="_blank" href="{{url}}" class="block max-w-[200px] {{icon_class}}">
+                    <span class="sponsor__image-wrapper">
+                      <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/{{image}}" alt=""/>
+                    </span>
+                  </a>
+                {{/image}}
+              {{/sponsors}}
+            </div>
+          </div>
+        {{/sponsors}}
+      </div>
+
+    </div>
+  </div>
+
+<script src="https://unpkg.com/noisejs@2.1.0/index.js"></script>
+<script>
+(function(){
+  var noise = new Noise();
+  var canvas = document.getElementById("canvas");
+  var logo   = document.getElementById("logo");
+  var ctx    = canvas.getContext("2d");
+  var t = 0;
+  var n =10;
+  var h = 0;
+
+  function init() {
+    //var logoRect = logo.getBoundingClientRect();
+    h = (logo.clientTop + logo.clientWidth) * 0.6
+    canvas.width = document.body.clientWidth;
+    canvas.height = 450;
+    ctx.strokeStyle="rgba(240,88,89,.20)";
+    ctx.lineWidth = 7;
+  }
+
+  function calY(j,i) {
+    return h + Math.sin(Math.PI/n*j + t/100 + noise.perlin2(i/2,t/1000)*10)*25;
+  }
+
+  function draw() {
+    t++;
+    ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
+    for(var i=0;i<3;i++){
+      ctx.beginPath();
+      for(var j=-1;j<=n+1;j++) {
+        ctx.quadraticCurveTo(
+          canvas.width/n*j,
+          calY(j,i),
+          canvas.width/n*(j+1),
+          calY(j+1,i)
+        )
+      }
+      ctx.stroke();
+    }
+    window.requestAnimationFrame(draw);
+  }
+  window.addEventListener('load', function(){
+    init();
+    window.requestAnimationFrame(draw);
+  });
+  window.addEventListener('resize', init);
+  //init();
+})();
+
+</script>

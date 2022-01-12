@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YAPC::Japan::Online 2022
+    </title>
+    <link rel="stylesheet" href="/2022online/assets/css/index.css?cachebuster=454941">
+  </head>
+  <body class="bg-bg">
+
+      <div class="flex items-center justify-center bg-bg-dark text-primary relative overflow-hidden">
+        <canvas id="canvas" class="absolute top-0 left-0 z-0" ></canvas>
+        <div class="container flex flex-col items-center justify-center py-20 md:pt-40 md:pb-20 mx-6 relative z-10">
+          <h1 id="logo">
+            <img src="/2022online/assets/images/logo.svg" alt="YAPC::Jpana::Online 2022"/>
+          </h1>
+          <div class="mt-10">
+            <span class="bg-tint font-bold text-2xl md:text-4xl text-white px-8 py-1">
+              <span>3/4</span>
+              <span class="text-xl md:text-2xl">Fri. 〜
+              </span>
+              <span>3/5</span>
+              <span class="text-xl md:text-2xl">Sat.</span>
+            </span>
+          </div>
+          <div class="flex flex-col justify-center items-center max-w-3xl font-bold">
+            <p class="text-2xl md:text-4xl my-8 md:my-16">YAPC::Japan、満を持してオンライン開催！</p>
+            <p class="leading-7 md:leading-9 text-md md:text-xl mb-8 text-justify">YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。 Perlだけにとどまらない技術者たちが、好きな技術の話をし交流するカンファレンスで、技術者であれば誰でも楽しめるお祭りです！</p>
+            <p class="leading-7 md:leading-9 text-md md:text-xl text-justify">今回のYAPC::Japan::Onlineは、オンラインイベントにありがちな単に見るだけのものではなく、ちゃんと参加して楽しめるオンラインカンファレンスになるように工夫を凝らしています。技術の祭りならではの、刺激ある技術の話、周りの人たちと共有するワイワイ感、そして美味しいご飯。そんなカンファレンスを目指して、様々な仕掛けを用意しています！ぜひ、皆さま楽しみにご参加ください！</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center text-primary pb-10">
+        <div class="container flex flex-col items-center justify-center py-20">
+          <h2 class="mb-10 md:mb-32">
+            <span class="bg-tint font-bold text-3xl text-white px-1 py-1 tracking-wider">
+              Guest Speakers
+            </span>
+          </h2>
+
+          <ul class="md:flex justify-between gap-10 max-w-5xl">
+              <li class="flex-1 text-center my-10 md:my-0">
+                <img class="max-w-[200px] rounded-full mx-auto" src="/2022online/assets/images/guest/songmu.jpg?cachebuster=455128" alt="">
+                  <div class="font-bold my-6">&#x677E;&#x6728; &#x96C5;&#x5E78;<span class="block text-sm md:min-h-[1em]">songmu / Matsuki Masayuki</span>
+                  </div>
+                  <div class="text-sm px-8 md:px-0 text-justify break-all">Launchable&#x306E;Principal Software Engineer&#x3002;&#x5927;&#x5B66;&#x3067;&#x4E2D;&#x56FD;&#x8A9E;&#x3068;&#x6A5F;&#x68B0;&#x7FFB;&#x8A33;&#x3092;&#x5B66;&#x3073;&#x3001;&#x5352;&#x696D;&#x5F8C;&#x306F;&#x4E2D;&#x56FD;&#x3067;&#x306E;IT&#x30D9;&#x30F3;&#x30C1;&#x30E3;&#x30FC;&#x306E;&#x7ACB;&#x3061;&#x4E0A;&#x3052;&#x3001;&#x8A9E;&#x5B66;&#x5B66;&#x6821;&#x306E;&#x55B6;&#x696D;&#x517C;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x62C5;&#x5F53;&#x3001;SIer&#x3001;&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30B2;&#x30FC;&#x30E0;&#x958B;&#x767A;&#x306E;&#x30C6;&#x30C3;&#x30AF;&#x30EA;&#x30FC;&#x30C9;&#x3001;&#x30D7;&#x30ED;&#x30C0;&#x30AF;&#x30C8;&#x30DE;&#x30CD;&#x30FC;&#x30B8;&#x30E3;&#x30FC;&#x3001;&#x30B9;&#x30BF;&#x30FC;&#x30C8;&#x30A2;&#x30C3;&#x30D7;&#x306E;CTO&#x306A;&#x3069;&#x306E;&#x7D06;&#x4F59;&#x66F2;&#x6298;&#x3092;&#x7D4C;&#x3066;2021&#x5E74;&#x3088;&#x308A;&#x73FE;&#x8077;&#x3002; Web&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306E;&#x5B89;&#x5B9A;&#x7A3C;&#x50CD;&#x306B;&#x77DC;&#x6301;&#x3092;&#x6301;&#x3064;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x30A8;&#x30F3;&#x30B8;&#x30CB;&#x30A2;&#x3067;&#x3001;ISUCON&#x306B;&#x904E;&#x53BB;3&#x5EA6;&#x512A;&#x52DD;&#x3059;&#x308B;&#x306A;&#x3069;&#x3001;&#x7D99;&#x7D9A;&#x7684;&#x306B;&#x7D20;&#x65E9;&#x304F;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3092;&#x5909;&#x5316;&#x3055;&#x305B;&#x306A;&#x304C;&#x3089;&#x3082;&#x5B89;&#x5B9A;&#x3057;&#x305F;&#x904B;&#x55B6;&#x3092;&#x5B9F;&#x73FE;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x5F97;&#x610F;&#x9818;&#x57DF;&#x3002;OSS&#x6D3B;&#x52D5;&#x304C;&#x8DA3;&#x5473;&#x3067;Go&#x3084;Perl&#x3092;&#x4E2D;&#x5FC3;&#x306B;100&#x500B;&#x4EE5;&#x4E0A;&#x306E;&#x30C4;&#x30FC;&#x30EB;&#x3084;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3092;GitHub&#x306B;&#x516C;&#x958B;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;</div>
+                </li>
+              <li class="flex-1 text-center my-10 md:my-0">
+                <img class="max-w-[200px] rounded-full mx-auto" src="/2022online/assets/images/guest/uzulla.jpg?cachebuster=455021" alt="">
+                  <div class="font-bold my-6">uzulla<span class="block text-sm md:min-h-[1em]"></span>
+                  </div>
+                  <div class="text-sm px-8 md:px-0 text-justify break-all">Perl&#x306B;&#x80B2;&#x3066;&#x3089;&#x308C;&#x72EC;&#x7279;&#x306A;PHP&#x3067;&#x751F;&#x304D;&#x308B;Perl Monger/Hachioji.pm (&#x975E;&#x516C;&#x8A8D;&#x5730;&#x57DF;pm)&#x3092;2010-12&#x3088;&#x308A;&#x4E3B;&#x50AC;&#x3057;&#x3001;&#x591A;&#x304F;&#x306E;&#x53CB;&#x3084;&#x8F2A;&#x3092;&#x4F5C;&#x308B;/&#x767B;&#x58C7;&#x6B74;&#x306F;YAPC::Asia 2014(&#x30D9;&#x30B9;&#x30C8;&#x30B9;&#x30D4;&#x30FC;&#x30AB;&#x30FC;),2015,YAPC::EU(&#x30B9;&#x30DA;&#x30A4;&#x30F3;) 2015&#x7B49;/&#x611B;&#x7740;&#x306E;&#x3042;&#x308B;Module&#x306F;AnyEvent&#x3001;&#x597D;&#x304D;&#x306A;lib&#x306F;cgi-lib.pl&#x300C;&#x6B63;&#x898F;&#x8868;&#x73FE;&#x3067;&#x3082;&#x306A;&#x3093;&#x3067;&#x3082;&#x3001;&#x5927;&#x4E8B;&#x306A;&#x4E8B;&#x306F;&#x5168;&#x3066;Perl&#x306B;&#x6559;&#x308F;&#x3063;&#x305F;&#x300D;</div>
+                </li>
+              <li class="flex-1 text-center my-10 md:my-0">
+                <img class="max-w-[200px] rounded-full mx-auto" src="/2022online/assets/images/guest/yusukebe.jpg?cachebuster=455076" alt="">
+                  <div class="font-bold my-6">&#x548C;&#x7530;&#x88D5;&#x4ECB;<span class="block text-sm md:min-h-[1em]">Yusuke Wada</span>
+                  </div>
+                  <div class="text-sm px-8 md:px-0 text-justify break-all">&#x682A;&#x5F0F;&#x4F1A;&#x793E;&#x30C8;&#x30E9;&#x30D9;&#x30EB;&#x30D6;&#x30C3;&#x30AF; &#x30B9;&#x30FC;&#x30D1;&#x30FC;&#x30D0;&#x30A4;&#x30B6;&#x30FC;&#x3002;&#x5927;&#x5B66;&#x5728;&#x5B66;&#x6642;&#x306B;&#x672A;&#x8E0F;&#x30E6;&#x30FC;&#x30B9;&#x63A1;&#x629E;&#x3002;&#x30B9;&#x30FC;&#x30D1;&#x30FC;&#x30AF;&#x30EA;&#x30A8;&#x30FC;&#x30BF;&#x306B;&#x6E96;&#x305A;&#x308B;&#x3002;SIGGRAPH Emerging Technologies&#x63A1;&#x629E;&#x3002;&#x5352;&#x696D;&#x5F8C;&#x3001;&#x7236;&#x89AA;&#x3068;&#x5171;&#x306B;&#x682A;&#x5F0F;&#x4F1A;&#x793E;&#x30EF;&#x30C7;&#x30A3;&#x30C3;&#x30C8;&#x3092;&#x8A2D;&#x7ACB;&#x3002;70&#x3092;&#x8D85;&#x3048;&#x308B;&#x500B;&#x4EBA;Web&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3092;&#x958B;&#x767A;&#x3001;&#x516C;&#x958B;&#x3002;&#x682A;&#x5F0F;&#x4F1A;&#x793E;&#x30AA;&#x30E2;&#x30ED;&#x30AD;&#x300C;&#x30DC;&#x30B1;&#x3066;&#x300D;&#x306E;&#x30D5;&#x30A1;&#x30A6;&#x30F3;&#x30C0;&#x30FC;&#x3002;&#x5F53;&#x521D;&#x306E;&#x958B;&#x767A;&#x904B;&#x7528;&#x3092;&#x3059;&#x3079;&#x3066;&#x4E00;&#x4EBA;&#x3067;&#x3053;&#x306A;&#x3057;&#x305F;&#x3002;&#x6587;&#x5316;&#x5E81;&#x7B2C;17&#x56DE;&#x30E1;&#x30C7;&#x30A3;&#x30A2;&#x82B8;&#x8853;&#x796D; &#x5BE9;&#x67FB;&#x59D4;&#x54E1;&#x4F1A;&#x63A8;&#x85A6;&#x4F5C;&#x54C1;&#x306B;&#x9078;&#x3070;&#x308C;&#x308B;&#x3002;YAPC::Asia&#x3067;&#x306F;2&#x5E74;&#x9023;&#x7D9A;&#x3067;&#x30D9;&#x30B9;&#x30C8;&#x30C8;&#x30FC;&#x30AF;&#x8CDE;1&#x4F4D;&#x3092;&#x53D7;&#x8CDE;&#x3002;2021&#x5E74;6&#x6708;&#x3088;&#x308A;&#x73FE;&#x8077;&#x3002;</div>
+                </li>
+            </ul>
+
+            <h2 class="mt-16 md:mt-32 mb-6">
+              <span class="bg-tint font-bold text-3xl text-white px-1 py-1 tracking-wider">
+              Sponsors
+              </span>
+            </h2>
+
+            <div class="flex flex-wrap justify-center">
+                <div class="basis-full">
+                  <div class="text-center font-bold mt-12 mb-8">Perl Sponsors</div>
+                  <div class="flex gap-6 justify-center flex-wrap">
+                        <a target="_blank" href="https://dena.com" class="block max-w-[200px] max-w-[300px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/dena.png?cachebuster=454982" alt=""/>
+                          </span>
+                        </a>
+                        <a target="_blank" href="https://engineering.linecorp.com/ja/" class="block max-w-[200px] max-w-[300px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/line.png?cachebuster=455113" alt=""/>
+                          </span>
+                        </a>
+                  </div>
+                </div>
+                <div class="basis-full">
+                  <div class="text-center font-bold mt-12 mb-8">Gold Sponsors</div>
+                  <div class="flex gap-6 justify-center flex-wrap">
+                        <a target="_blank" href="https://www.gaiax.co.jp/" class="block max-w-[200px] max-w-[200px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/gaiax.png?cachebuster=455077" alt=""/>
+                          </span>
+                        </a>
+                        <a target="_blank" href="https://mixi.co.jp/recruit/" class="block max-w-[200px] max-w-[200px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/mixi.png?cachebuster=455143" alt=""/>
+                          </span>
+                        </a>
+                  </div>
+                </div>
+                <div class="basis-full">
+                  <div class="text-center font-bold mt-12 mb-8">Silver Sponsors</div>
+                  <div class="flex gap-6 justify-center flex-wrap">
+                        <a target="_blank" href="https://have-fun.tech/" class="block max-w-[200px] max-w-[150px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/havefuntech.png?cachebuster=455045" alt=""/>
+                          </span>
+                        </a>
+                        <a target="_blank" href="https://colsis.jp/" class="block max-w-[200px] max-w-[150px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/colsis.png?cachebuster=455061" alt=""/>
+                          </span>
+                        </a>
+                        <a target="_blank" href="https://www.kodamari.com/" class="block max-w-[200px] max-w-[150px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/kodama.png?cachebuster=455000" alt=""/>
+                          </span>
+                        </a>
+                        <a target="_blank" href="https://www.sixapart.jp/" class="block max-w-[200px] max-w-[150px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/six-apart.png?cachebuster=454948" alt=""/>
+                          </span>
+                        </a>
+                        <a target="_blank" href="https://www.mobilefactory.jp/" class="block max-w-[200px] max-w-[150px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/mobile-factory.png?cachebuster=454953" alt=""/>
+                          </span>
+                        </a>
+                        <a target="_blank" href="https://nekotoast-lab.com/" class="block max-w-[200px] max-w-[150px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/neko-toast-lab.png?cachebuster=455064" alt=""/>
+                          </span>
+                        </a>
+                  </div>
+                </div>
+                <div class="md:basis-64 basis-full">
+                  <div class="text-center font-bold mt-12 mb-8">Event T-shirt Sponsor</div>
+                  <div class="flex gap-6 justify-center flex-wrap">
+                        <a target="_blank" href="https://www.mobilefactory.jp/" class="block max-w-[200px] max-w-[150px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/mobile-factory.png?cachebuster=454953" alt=""/>
+                          </span>
+                        </a>
+                  </div>
+                </div>
+                <div class="md:basis-64 basis-full">
+                  <div class="text-center font-bold mt-12 mb-8">Best LT Sponsor</div>
+                  <div class="flex gap-6 justify-center flex-wrap">
+                        <a target="_blank" href="https://have-fun.tech/" class="block max-w-[200px] max-w-[150px]">
+                          <span class="sponsor__image-wrapper">
+                            <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/havefuntech.png?cachebuster=455045" alt=""/>
+                          </span>
+                        </a>
+                  </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+      <script src="https://unpkg.com/noisejs@2.1.0/index.js"></script>
+      <script>
+      (function(){
+        var noise = new Noise();
+        var canvas = document.getElementById("canvas");
+        var logo   = document.getElementById("logo");
+        var ctx    = canvas.getContext("2d");
+        var t = 0;
+        var n =10;
+        var h = 0;
+
+        function init() {
+          //var logoRect = logo.getBoundingClientRect();
+          h = (logo.clientTop + logo.clientWidth) * 0.6
+          canvas.width = document.body.clientWidth;
+          canvas.height = 450;
+          ctx.strokeStyle="rgba(240,88,89,.20)";
+          ctx.lineWidth = 7;
+        }
+
+        function calY(j,i) {
+          return h + Math.sin(Math.PI/n*j + t/100 + noise.perlin2(i/2,t/1000)*10)*25;
+        }
+
+        function draw() {
+          t++;
+          ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
+          for(var i=0;i<3;i++){
+            ctx.beginPath();
+            for(var j=-1;j<=n+1;j++) {
+              ctx.quadraticCurveTo(
+                canvas.width/n*j,
+                calY(j,i),
+                canvas.width/n*(j+1),
+                calY(j+1,i)
+              )
+            }
+            ctx.stroke();
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.addEventListener('load', function(){
+          init();
+          window.requestAnimationFrame(draw);
+        });
+        window.addEventListener('resize', init);
+        //init();
+      })();
+
+      </script>
+
+  </body>
+</html>
+
