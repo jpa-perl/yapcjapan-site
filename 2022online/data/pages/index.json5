@@ -55,6 +55,21 @@
           image: "mixi.png",
           url: "https://mixi.co.jp/recruit/"
         },
+        {
+          name: "株式会社フリークアウト",
+          image: "freakout.png",
+          url: "https://www.fout.co.jp/freakout/"
+        },
+        {
+          name: "株式会社はてな",
+          image: "hatena.png",
+          url: "https://hatenacorp.jp/"
+        },
+        {
+          name: "日本ピザハット株式会社",
+          image: "pizza-hut.png",
+          url: "https://www.pizzahut.jp/"
+        }
       ]
     },
     {
