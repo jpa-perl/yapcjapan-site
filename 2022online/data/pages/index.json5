@@ -9,8 +9,8 @@
     },
     {
       photo: "/2022online/assets/images/guest/uzulla.jpg",
-      name: "uzulla",
-      name_en: "",
+      name: "石田絢一",
+      name_en: "uzulla / Junichi Ishida",
       description: "Perlに育てられ独特なPHPで生きるPerl Monger/Hachioji.pm (非公認地域pm)を2010-12より主催し、多くの友や輪を作る/登壇歴はYAPC::Asia 2014(ベストスピーカー),2015,YAPC::EU(スペイン) 2015等/愛着のあるModuleはAnyEvent、好きなlibはcgi-lib.pl「正規表現でもなんでも、大事な事は全てPerlに教わった」"
     },
     {
