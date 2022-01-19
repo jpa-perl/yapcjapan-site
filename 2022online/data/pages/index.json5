@@ -69,6 +69,11 @@
           name: "日本ピザハット株式会社",
           image: "pizza-hut.png",
           url: "https://www.pizzahut.jp/"
+        },
+        {
+          name: "Nota株式会社",
+          image: "nota.png",
+          url: "https://notainc.com/ja/home"
         }
       ]
     },
@@ -120,6 +125,19 @@
           name: "株式会社モバイルファクトリー",
           image: "mobile-factory.png",
           url: "https://www.mobilefactory.jp/"
+        }
+      ]
+    },
+    {
+      key: "best-talk",
+      label: "Best Talk Sponsor",
+      class: "md:basis-64 basis-full",
+      icon_class: "max-w-[150px]",
+      sponsors: [
+        {
+          name: "Nota株式会社",
+          image: "nota.png",
+          url: "https://notainc.com/ja/home"
         }
       ]
     },
