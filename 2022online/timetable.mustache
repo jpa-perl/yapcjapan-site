@@ -9,26 +9,34 @@
   <div class="flex flex-wrap justify-center">
     {{#timetable}}
       <div class="text-center font-bold mt-12 mb-8">{{caption}}</div>
-      <table class="table-auto" >
+      <table class="table-fixed" >
         <thead>
           <tr>
-            <th class="px-4 py-2">時刻</th>
-            <th class="px-4 py-2">トラックA</th>
-            <th class="px-4 py-2">トラックB</th>
+            <th class="w-1/5 px-4 py-2">時刻</th>
+            <th class="w-2/5 px-4 py-2">トラックA</th>
+            <th class="w-2/5 px-4 py-2">トラックB</th>
           </tr>
         </thead>
         <tbody>
           {{#talks}}
           <tr>
             <th class="border px-4 py-2">{{start}} ~ {{end}}</th>
-            <td class="border px-4 py-2">
+            <td class="border px-4 py-2" {{^track2}}colspan=2{{/track2}}>
               {{#track1}}
-                <a href="#{{talk_id}}">{{title}}</a>
-                ({{talk_time}}min)
-                <a href="{{author_url}}" target="_blank">{{author}}</a>
+                {{#talk_id}}<a class="underline font-bold cursor-pointer" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
+                {{^talk_id}}<span class="font-bold">{{title}}</span>{{/talk_id}}
+                {{#author}}{{author}}{{/author}}
+                ({{duration}}min)
               {{/track1}}
             </td>
-            <td class="border px-4 py-2">{{track2}}</div></td>
+            {{#track2}}
+            <td class="border px-4 py-2">
+                {{#track_id}}<a class="underline font-bold" href="#talk-{{talk_id}}">{{title}}</a>{{/track_id}}
+                {{^track_id}}<span class="underline font-bold">{{title}}</span>{{/track_id}}
+                {{#author}}{{author}}{{/author}}
+                ({{duration}}min)
+            </td>
+            {{/track2}}
           {{/talks}}
         </tbody>
       </table>
@@ -38,7 +46,7 @@
 
 
 {{#talks}}
-<div id="{{talk_id}}" class="invisible target:visible opacity-0 target:opacity-100 fixed max-w-full max-h-full z-30 flex flex-col rounded bg-white closed shadow">
+<div id="talk-{{talk_id}}" class="invisible target:visible opacity-0 target:opacity-100 fixed max-w-full max-h-full z-30 flex flex-col rounded bg-white closed shadow">
   <a href="#" class="bg-red-600 text-white font-bold py-2 px-4">Close</a>
   <div class="">
     <h2 class="text-center font-bold">{{title}}</h2>
