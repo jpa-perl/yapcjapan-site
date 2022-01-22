@@ -9,6 +9,9 @@ module.exports = {
         bg: '#F6F6F6',
         'bg-dark': '#EFEFEF',
       },
+      backgroundImage: {
+        'footer-logo': "url('/2022online/assets/images/logo.svg')"
+      }
     },
   },
   plugins: [],

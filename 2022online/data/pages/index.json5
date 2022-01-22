@@ -1,5 +1,6 @@
 {
   "include-index": true,
+  "include-footer": true,
   guestSpeakers: [
     {
       photo: "/2022online/assets/images/guest/songmu.jpg",
