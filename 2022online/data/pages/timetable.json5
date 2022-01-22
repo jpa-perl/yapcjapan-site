@@ -1,6 +1,7 @@
 {
   "include-timetable": true,
   "include-footer": true,
+  "include-nav": true,
   "page-title": "Timetable",
   timetable: [
     {

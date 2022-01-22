@@ -22,9 +22,30 @@
     <meta property="twitter:image" content="https://yapcjapan.org/2022online/assets/images/ogp.png">
 
     <link rel="shortcut icon" href="/2022online/assets/images/favicon.ico">
-    <link rel="stylesheet" href="/2022online/assets/css/index.css?cachebuster=455984">
+    <link rel="stylesheet" href="/2022online/assets/css/index.css?cachebuster=454930">
   </head>
   <body class="bg-bg">
+
+      <nav class="w-full fixed z-20 bg-bg-dark flex flex-wrap justify-between items-center">
+        <a class="inline-block p-2" href="/2022online/">
+          <img src="/2022online/assets/images/logo_small.png?cachebuster=456693" alt="YAPC::Japan::Online 2022" width="32" height="32" />
+        </a>
+        <input class="peer hidden" type="checkbox" id="nav-btn" />
+        <label class="flex items-center p-2 cursor-pointer md:hidden" for="nav-btn">
+          <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        </label>
+        <div class="peer-checked:block hidden w-full md:flex md:items-center md:w-auto text-sm font-bold text-primary">
+          <a href="/2022online/#guest-speakers" class="block p-2 md:inline-block transition duration-500 hover:text-pink">
+            Guest Speakers
+          </a>
+          <a href="/2022online/timetable.html" class="block p-2 md:inline-block transition duration-500 hover:text-pink">
+            Timetable
+          </a>
+          <a href="/2022online/#sponsors" class="block p-2 md:inline-block transition duration-500 hover:text-pink">
+            Sponsors
+          </a>
+        </div>
+      </nav>
 
       <div class="flex items-center justify-center bg-bg-dark text-primary relative overflow-hidden">
         <canvas id="canvas" class="absolute top-0 left-0 z-0" ></canvas>
@@ -54,7 +75,7 @@
 
       <div class="flex items-center justify-center text-primary pb-10">
         <div class="container flex flex-col items-center justify-center py-20">
-          <h2 class="mb-10 md:mb-32">
+          <h2 id="guest-speakers" class="mb-10 md:mb-10 pt-20">
             <span class="bg-tint font-bold text-3xl text-white px-1 py-1 tracking-wider">
               Guest Speakers
             </span>
@@ -81,7 +102,7 @@
                 </li>
             </ul>
 
-            <h2 class="mt-16 md:mt-32 mb-6">
+            <h2 id="sponsors" class="mt-16 md:mt-10 mb-6 pt-20">
               <span class="bg-tint font-bold text-3xl text-white px-1 py-1 tracking-wider">
               Sponsors
               </span>
