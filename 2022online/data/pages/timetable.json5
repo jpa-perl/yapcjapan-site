@@ -1,5 +1,64 @@
 {
   "include-timetable": true,
-  "page-title": "Timetable"
+  "page-title": "Timetable",
+  timetable: [
+    {
+      caption:"DAY1 2021-03-04",
+      talks: [
+        {
+          start: "19:00",
+          end: "19:15",
+          track1: {
+            talk_id: "hogegege",
+            title: "opening",
+            talk_time: 15,
+            author: "@kfly8",
+            author_url: "https://twitter.com/kfly8",
+          }
+        },
+        //{
+        //  start: "19:15",
+        //  end: "19:20",
+        //  track1: {
 
+        //   title: "乾杯",
+        //                                track2: "" },
+        //{ start: "19:20", end: "19:50", track1: "ゲスト座談会 @uzulla, @yusukebe",
+        //                                track2: "" },
+        //{ start: "19:50", end: "20:00", track1: "乾杯&休憩",
+        //                                track2: "" },
+        //{ start: "20:00", end: "20:20", track1: "フロー効率の向上から始める開発生産性の高め方 ~ モブワークを沿えて ~ @面川泰明",
+        //                                track2: "PHP で NFC リーダーを実装する @めもりー" },
+        //{ start: "20:20", end: "20:30", track1: "乾杯&休憩",
+        //                                track2: "" },
+        //{ start: "20:30", end: "20:50", track1: "my$talk=qr{\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\b}i; @DanKogai",
+        //                                track2: "ReDoS 検出の最先端 recheck の紹介 @藤浪大弥" },
+        //{ start: "20:50", end: "21:00", track1: "初日クロージング",
+        //                                track2: "" },
+        //{ start: "20:50", end: "21:00", track1: "乾杯&休憩",
+        //                                track2: "" },
+        //{ start: "21:00", end: "22:00", track1: "懇親会",
+        //                                track2: "" }
+      ],
+    },
+    {
+      caption:"DAY2 2021-03-05",
+      talks: [
+      ],
+    }
+  ],
+  talks: [
+    {
+      talk_id: "hogegege",
+      title: "opening",
+      description: "Suica や PASMO をデバイスにタッチして値を取得する、そんな夢を PHP で叶えました。\nPHP7.4 から PHP FFI と呼ばれるものが導入されました。Suica や PASMO は FeliCa と呼ばれる NFC の規格の 1 つです。実装方法は多岐に渡りますが、概ね libnfc と呼ばれるライブラリや libusb を使う方法などがあります。しかし、今までの PHP ではこのライブラリを呼び出すことさえ叶いませんでした。そこで、本セッションでは PHP7.4 から導入された PHP FFI を用いてどのように PHP で NFC リーダーを実装するのか、そして実際のデモを交えてトークできればと思います。\n\nPerl にも FFI があるようですので、このトークをみてご興味を持った方はぜひお試しいただければと思います。",
+      talk_time: 15,
+      author: "@kfly8",
+      author_icon: "https://pbs.twimg.com/profile_images/1295894413164425216/v6_NEdap_400x400.jpg",
+      github_url: "https://github.com/kfly8",
+      twitter_url: "https://twitter.com/kfly8",
+      blog_url: "https://kfly8.hatenablog.com/",
+
+    }
+  ]
 }
