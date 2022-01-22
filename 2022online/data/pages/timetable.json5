@@ -5,62 +5,296 @@
   "page-title": "Timetable",
   timetable: [
     {
-      caption:"DAY1 2021-03-04",
+      caption:"DAY1 2021.03.04(Fri.)",
       talks: [
         {
           start: "19:00",
           end: "19:15",
           track1: {
-            talk_id: "hogegege",
-            title: "opening",
-            talk_time: 15,
-            author: "@kfly8",
-            author_url: "https://twitter.com/kfly8",
-          }
+            title: "Opening",
+            duration: 15,
+          },
         },
-        //{
-        //  start: "19:15",
-        //  end: "19:20",
-        //  track1: {
-
-        //   title: "乾杯",
-        //                                track2: "" },
-        //{ start: "19:20", end: "19:50", track1: "ゲスト座談会 @uzulla, @yusukebe",
-        //                                track2: "" },
-        //{ start: "19:50", end: "20:00", track1: "乾杯&休憩",
-        //                                track2: "" },
-        //{ start: "20:00", end: "20:20", track1: "フロー効率の向上から始める開発生産性の高め方 ~ モブワークを沿えて ~ @面川泰明",
-        //                                track2: "PHP で NFC リーダーを実装する @めもりー" },
-        //{ start: "20:20", end: "20:30", track1: "乾杯&休憩",
-        //                                track2: "" },
-        //{ start: "20:30", end: "20:50", track1: "my$talk=qr{\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\b}i; @DanKogai",
-        //                                track2: "ReDoS 検出の最先端 recheck の紹介 @藤浪大弥" },
-        //{ start: "20:50", end: "21:00", track1: "初日クロージング",
-        //                                track2: "" },
-        //{ start: "20:50", end: "21:00", track1: "乾杯&休憩",
-        //                                track2: "" },
-        //{ start: "21:00", end: "22:00", track1: "懇親会",
-        //                                track2: "" }
+        {
+          start: "19:15",
+          end: "19:20",
+          track1: {
+            title: "乾杯",
+            duration: 5,
+          },
+        },
+        {
+          start: "19:20",
+          end: "19:50",
+          track1: {
+            title: "ゲスト座談会",
+            duration: 30,
+            talk_id: 1,
+            author: "Yusuke Wada, @uzulla",
+          },
+        },
+        {
+          start: "19:50",
+          end: "20:00",
+          track1: {
+            title: "乾杯&休憩",
+            duration: 10,
+          },
+        },
+        {
+          start: "20:00",
+          end: "20:20",
+          track1: {
+            title: "フロー効率の向上から始める開発生産性の高め方 ~ モブワークを沿えて ~",
+            duration: 20,
+            talk_id: 2,
+            author: "面川泰明"
+          },
+          track2: {
+            title: "PHP で NFC リーダーを実装する",
+            duration: 20,
+            talk_id: 3,
+            author: "めもりー",
+          },
+        },
+        {
+          start: "20:20",
+          end: "20:30",
+          track1: {
+            title: "乾杯&休憩",
+            duration: 10,
+          },
+        },
+        {
+          start: "20:30",
+          end: "20:50",
+          track1: {
+            title: "my$talk=qr{\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\b}i;",
+            duration: 20,
+            talk_id: 4,
+            author: "Dan Kogai"
+          },
+          track2: {
+            title: "ReDoS 検出の最先端 recheck の紹介",
+            duration: 20,
+            talk_id: 5,
+            author: "@MakeNowJust",
+          },
+        },
+        {
+          start: "20:50",
+          end: "20:55",
+          track1: {
+            title: "初日クロージング",
+            duration: 5,
+          },
+        },
+        {
+          start: "20:55",
+          end: "21:00",
+          track1: {
+            title: "乾杯&休憩",
+            duration: 5,
+          },
+        },
+        {
+          start: "21:00",
+          end: "22:00",
+          track1: {
+            title: "懇親会",
+            duration: 60,
+          },
+        },
       ],
     },
     {
-      caption:"DAY2 2021-03-05",
+      caption:"DAY2 2021.03.05(Sat.)",
       talks: [
+        {
+          start: "13:30",
+          end: "13:40",
+          track1: {
+            title: "オープニング",
+            duration: 10,
+          },
+        },
+        {
+          start: "13:40",
+          end: "14:20",
+          track1: {
+            title: '5年にわたる"Perl の" REST API を "Perl で" GraphQL API 化し作り直す',
+            duration: 40,
+            talk_id: 6,
+            author: "@mangano-ito"
+          },
+          track2: {
+            title: "じわじわとPerlからGoに移行しようとしている俺達のマイクロサービシーズの紹介",
+            duration: 40,
+            talk_id: 7,
+            author: "@macopy",
+          },
+        },
+        {
+          start: "14:20",
+          end: "14:30",
+          track1: {
+            title: "休憩",
+            duration: 10,
+          },
+        },
+        {
+          start: "14:30",
+          end: "14:50",
+          track1: {
+            title: "スクラムでつくる頼もしく生き生きとしたチーム",
+            duration: 20,
+            talk_id: 8,
+            author: "五十嵐雄",
+          },
+          track2: {
+            title: "Hono[炎] Ultrafast web framework for Cloudflare Workers.",
+            duration: 20,
+            talk_id: 9,
+            author: "Yusuke Wada",
+          },
+        },
+        {
+          start: "14:50",
+          end: "15:00",
+          track1: {
+            title: "休憩",
+            duration: 10,
+          },
+        },
+        {
+          start: "15:00",
+          end: "15:20",
+          track1: {
+            title: "あなたの知らない(かもしれない)コアモジュール",
+            duration: 20,
+            talk_id: 10,
+            author: "白方健太郎",
+          },
+          track2: {
+            title: "TypeScript へ型安全性を高めながらリプレースする",
+            duration: 20,
+            talk_id: 11,
+            author: "@kimuson",
+          },
+        },
+        {
+          start: "15:20",
+          end: "15:35",
+          track1: {
+            title: "休憩(15分)",
+            duration: 15,
+          },
+        },
+        {
+          start: "15:35",
+          end: "15:55",
+          track1: {
+            title: "perlimportsから探るPPIの世界 @八雲アナグラ",
+            duration: 20,
+            talk_id: 12,
+            author: "八雲アナグラ",
+          },
+          track2: {
+            title: "エンジニアの個人ブランディングと技術組織",
+            duration: 20,
+            talk_id: 13,
+            author: "Takafumi ONAKA",
+          },
+        },
+        {
+          start: "15:55",
+          end: "16:05",
+          track1: {
+            title: "休憩",
+            duration: 10,
+          },
+        },
+        {
+          start: "16:05",
+          end: "16:45",
+          track1: {
+            title: "Acme、其はPerlのユグドラシル",
+            duration: 20,
+            talk_id: 14,
+            author: "@makamaka",
+          },
+          track2: {
+            title: "7年間運用したソーシャルゲームをAmazon EC2構成からAmazon ECS構成へと乗り換えた話",
+            duration: 20,
+            talk_id: 15,
+            author: "@commojun",
+          },
+        },
+        {
+          start: "16:45",
+          end: "17:00",
+          track1: {
+            title: "休憩(15分)",
+            duration: 15,
+          },
+        },
+        {
+          start: "17:00",
+          end: "17:40",
+          track1: {
+            title: "Keynote",
+            duration: 40,
+            talk_id: 16,
+            author: "@songmu",
+          },
+        },
+        {
+          start: "17:40",
+          end: "17:50",
+          track1: {
+            title: "休憩",
+            duration: 10,
+          },
+        },
+        {
+          start: "17:50",
+          end: "18:30",
+          track1: {
+            title: "Lightning Talk",
+            duration: 40,
+          },
+        },
+        {
+          start: "18:30",
+          end: "18:45",
+          track1: {
+            title: "Closing",
+            duration: 15,
+          },
+        },
       ],
     }
   ],
   talks: [
     {
-      talk_id: "hogegege",
-      title: "opening",
-      description: "Suica や PASMO をデバイスにタッチして値を取得する、そんな夢を PHP で叶えました。\nPHP7.4 から PHP FFI と呼ばれるものが導入されました。Suica や PASMO は FeliCa と呼ばれる NFC の規格の 1 つです。実装方法は多岐に渡りますが、概ね libnfc と呼ばれるライブラリや libusb を使う方法などがあります。しかし、今までの PHP ではこのライブラリを呼び出すことさえ叶いませんでした。そこで、本セッションでは PHP7.4 から導入された PHP FFI を用いてどのように PHP で NFC リーダーを実装するのか、そして実際のデモを交えてトークできればと思います。\n\nPerl にも FFI があるようですので、このトークをみてご興味を持った方はぜひお試しいただければと思います。",
-      talk_time: 15,
-      author: "@kfly8",
+      talk_id: 1,
+      title: "ゲスト座談会",
+      description: "TBD",
+      duration: 30,
+      author: "Yusuke Wada, @uzulla",
+    },
+    {
+      talk_id: 2,
+      title: "フロー効率の向上から始める開発生産性の高め方 ~ モブワークを沿えて ~",
+      description: "『LeanとDevOpsの科学』という書籍では、ハイパフォーマーである組織の特徴として「デプロイの頻度が多いこと」を挙げています。しかしデプロイの頻度を多くするには具体的にどうすればいいのでしょうか？この疑問に対し、モブワークと呼ばれる開発手法を通して解決を試みた結果をお話します。試行錯誤を重ねる中でチームが文字通り一心同体となり、リソース効率からフロー効率へ発想を転換していく過程をお楽しみいただけます。ハイパフォーマーを目指したい方、良いチームを育てたい方、開発で充実感を味わいたい方におすすめです。",
+      duration: 20,
+      author: "面川泰明",
+
+// TODOTODO!!!
       author_icon: "https://pbs.twimg.com/profile_images/1295894413164425216/v6_NEdap_400x400.jpg",
       github_url: "https://github.com/kfly8",
       twitter_url: "https://twitter.com/kfly8",
       blog_url: "https://kfly8.hatenablog.com/",
-
-    }
+    },
   ]
 }
