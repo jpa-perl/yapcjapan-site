@@ -36,40 +36,38 @@
       {{#guestSpeakers}}
         <li class="flex-1 my-10 text-center md:my-0">
           <img class="max-w-[200px] rounded-full mx-auto" src="{{photo}}" alt="">
-            <div class="my-6 font-bold">{{name}}<span class="block text-sm md:min-h-[1em]">{{name_en}}</span>
-            </div>
-            <div class="px-8 text-sm text-justify break-all md:px-0">{{description}}</div>
-          </li>
-        {{/guestSpeakers}}
-      </ul>
+          <div class="my-6 font-bold">{{name}}<span class="block text-sm md:min-h-[1em]">{{name_en}}</span></div>
+          <div class="px-8 text-sm text-justify break-all md:px-0">{{description}}</div>
+        </li>
+      {{/guestSpeakers}}
+    </ul>
 
-      <h2 id="sponsors" class="pt-20 mt-16 mb-6 md:mt-10">
-        <span class="px-1 py-1 text-3xl font-bold tracking-wider text-white bg-tint">
-        Sponsors
-        </span>
-      </h2>
+    <h2 id="sponsors" class="pt-20 mt-16 mb-6 md:mt-10">
+      <span class="px-1 py-1 text-3xl font-bold tracking-wider text-white bg-tint">
+      Sponsors
+      </span>
+    </h2>
 
-      <div class="flex flex-wrap justify-center">
-        {{#sponsors}}
-          <div class="{{class}}">
-            <div class="mt-12 mb-8 font-bold text-center">{{label}}</div>
-            <div class="flex flex-wrap justify-center gap-6">
-              {{#sponsors}}
-                {{#image}}
-                  <a target="_blank" href="{{url}}" class="block max-w-[200px] {{icon_class}}">
-                    <span class="sponsor__image-wrapper">
-                      <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/{{image}}" alt=""/>
-                    </span>
-                  </a>
-                {{/image}}
-              {{/sponsors}}
-            </div>
+    <div class="flex flex-wrap justify-center">
+      {{#sponsors}}
+        <div class="{{class}}">
+          <div class="mt-12 mb-8 font-bold text-center">{{label}}</div>
+          <div class="flex flex-wrap justify-center gap-6">
+            {{#sponsors}}
+              {{#image}}
+                <a target="_blank" href="{{url}}" class="block max-w-[200px] {{icon_class}}">
+                  <span class="sponsor__image-wrapper">
+                    <img loading="lazy" class="sponsor__image" src="/2022online/assets/images/sponsor/{{image}}" alt=""/>
+                  </span>
+                </a>
+              {{/image}}
+            {{/sponsors}}
           </div>
-        {{/sponsors}}
-      </div>
-
+        </div>
+      {{/sponsors}}
     </div>
   </div>
+</div>
 
 <script src="https://unpkg.com/noisejs@2.1.0/index.js"></script>
 <script>
