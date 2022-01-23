@@ -1,45 +1,46 @@
-<div class="relative flex items-center justify-center overflow-hidden bg-bg-dark text-primary">
-
-  <h1 class="mb-10 md:mb-32">
-    <span class="px-1 py-1 text-3xl font-bold tracking-wider text-white bg-tint">
-      Timetable
-    </span>
-  </h2>
+<div class="flex items-center justify-center pb-10 text-primary">
+  <div class="container flex flex-col items-center justify-center">
+    <h2 id="guest-speakers" class="pt-20 mb-10 md:mb-10">
+      <span class="px-1 py-1 text-3xl font-bold tracking-wider text-white bg-tint">
+        Timetable
+      </span>
+    </h2>
 
   <div class="flex flex-wrap justify-center">
     {{#timetable}}
       <div class="mt-12 mb-8 font-bold text-center">{{caption}}</div>
-      <table class="table-fixed" >
-        <thead>
-          <tr>
-            <th class="w-1/5 px-4 py-2">時刻</th>
-            <th class="w-2/5 px-4 py-2">トラックA</th>
-            <th class="w-2/5 px-4 py-2">トラックB</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#talks}}
-          <tr>
-            <th class="px-4 py-2 border">{{start}} ~ {{end}}</th>
-            <td class="px-4 py-2 border" {{^track2}}colspan=2{{/track2}}>
-              {{#track1}}
-                {{#talk_id}}<a class="font-bold underline cursor-pointer" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
-                {{^talk_id}}<span class="font-bold">{{title}}</span>{{/talk_id}}
-                {{#author}}{{author}}{{/author}}
-                ({{duration}}min)
-              {{/track1}}
-            </td>
-            {{#track2}}
-            <td class="px-4 py-2 border">
-                {{#track_id}}<a class="font-bold underline" href="#talk-{{talk_id}}">{{title}}</a>{{/track_id}}
-                {{^track_id}}<span class="font-bold underline">{{title}}</span>{{/track_id}}
-                {{#author}}{{author}}{{/author}}
-                ({{duration}}min)
-            </td>
-            {{/track2}}
-          {{/talks}}
-        </tbody>
-      </table>
+        <table class="table-fixed" >
+          <thead>
+            <tr>
+              <th class="w-1/5 px-4 py-2">時刻</th>
+              <th class="w-2/5 px-4 py-2">トラックA</th>
+              <th class="w-2/5 px-4 py-2">トラックB</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#talks}}
+            <tr class="odd:bg-white">
+              <th class="px-4 py-2 border">{{start}} ~ {{end}}</th>
+              <td class="px-4 py-2 border" {{^track2}}colspan=2{{/track2}}>
+                {{#track1}}
+                  {{#talk_id}}<a class="font-bold underline cursor-pointer" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
+                  {{^talk_id}}<span class="font-bold">{{title}}</span>{{/talk_id}}
+                  {{#author}}{{author}}{{/author}}
+                  ({{duration}}min)
+                {{/track1}}
+              </td>
+              {{#track2}}
+              <td class="px-4 py-2 border">
+                  {{#track_id}}<a class="font-bold underline" href="#talk-{{talk_id}}">{{title}}</a>{{/track_id}}
+                  {{^track_id}}<span class="font-bold underline">{{title}}</span>{{/track_id}}
+                  {{#author}}{{author}}{{/author}}
+                  ({{duration}}min)
+              </td>
+              {{/track2}}
+            {{/talks}}
+          </tbody>
+        </table>
+      </div>
     {{/timetable}}
   </div>
 </div>
