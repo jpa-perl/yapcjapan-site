@@ -47,17 +47,36 @@
 
 
 {{#talks}}
-<div id="talk-{{talk_id}}" class="fixed z-30 flex flex-col invisible max-w-full max-h-full bg-white rounded shadow opacity-0 target:visible target:opacity-100 closed">
-  <a href="#" class="px-4 py-2 font-bold text-white bg-red-600">Close</a>
-  <div class="">
-    <h2 class="font-bold text-center">{{title}}</h2>
-    {{description}}
-    {{talk_time}}min
-    {{author}}
-    <img src="{{author_url}}"/>
-    <a target="_blank" href="{{github_url}}">GitHub</a>
-    <a target="_blank" href="{{twitter_url}}">Twitter</a>
-    <a target="_blank" href="{{blog_url}}">Blog</a>
+<div id="talk-{{talk_id}}" class="fixed top-0 left-0 z-30 flex items-center justify-center invisible w-full h-full opacity-0 target:visible target:opacity-100">
+  <a href="#" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default transition"></a>
+  <div class="bg-bg-dark w-11/12 h-[80vh] z-40 overflow-scroll md:w-[704px]">
+    <div class="text-right">
+      <a href="#" class="p-2 text-2xl font-bold text-primary">&times;</a>
+    </div>
+    <div class="px-16 py-8 text-primary">
+      <div class="mb-10 text-center md:mb-10">
+        <span class="px-1 py-1 text-xl font-bold tracking-wider text-white bg-tint">
+        Talk
+        </span>
+      </div>
+      <h2 class="text-2xl font-bold text-center">{{title}}</h2>
+      <div class="my-10 text-center">
+        <img class="inline-block w-20 h-20 rounded-full" src="https://pbs.twimg.com/profile_images/1328671535817580545/yEUxMSSC_400x400.jpg" />
+        <author class="block p-1 font-bold text-l">{{author}}</author>
+        <div class="p-1">
+          <a target="_blank" href="{{github_url}}">
+            <img class="inline-block w-8 h-8" src="./assets/images/btn_github.png" alt="GitHub" />
+          </a>
+          <a target="_blank" href="{{twitter_url}}">
+            <img class="inline-block w-8 h-8" src="./assets/images/btn_t.png" alt="Twitter" />
+          </a>
+          <a target="_blank" class="underline" href="{{blog_url}}">Blog</a>
+        </div>
+      </div>
+      <div class="my-10 text-l">
+        {{description}}
+      </div>
+    </div>
   </div>
 </div>
 {{/talks}}
