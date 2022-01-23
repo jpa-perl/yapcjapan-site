@@ -1,14 +1,14 @@
-<div class="flex items-center justify-center bg-bg-dark text-primary relative overflow-hidden">
+<div class="relative flex items-center justify-center overflow-hidden bg-bg-dark text-primary">
 
   <h1 class="mb-10 md:mb-32">
-    <span class="bg-tint font-bold text-3xl text-white px-1 py-1 tracking-wider">
+    <span class="px-1 py-1 text-3xl font-bold tracking-wider text-white bg-tint">
       Timetable
     </span>
   </h2>
 
   <div class="flex flex-wrap justify-center">
     {{#timetable}}
-      <div class="text-center font-bold mt-12 mb-8">{{caption}}</div>
+      <div class="mt-12 mb-8 font-bold text-center">{{caption}}</div>
       <table class="table-fixed" >
         <thead>
           <tr>
@@ -20,19 +20,19 @@
         <tbody>
           {{#talks}}
           <tr>
-            <th class="border px-4 py-2">{{start}} ~ {{end}}</th>
-            <td class="border px-4 py-2" {{^track2}}colspan=2{{/track2}}>
+            <th class="px-4 py-2 border">{{start}} ~ {{end}}</th>
+            <td class="px-4 py-2 border" {{^track2}}colspan=2{{/track2}}>
               {{#track1}}
-                {{#talk_id}}<a class="underline font-bold cursor-pointer" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
+                {{#talk_id}}<a class="font-bold underline cursor-pointer" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
                 {{^talk_id}}<span class="font-bold">{{title}}</span>{{/talk_id}}
                 {{#author}}{{author}}{{/author}}
                 ({{duration}}min)
               {{/track1}}
             </td>
             {{#track2}}
-            <td class="border px-4 py-2">
-                {{#track_id}}<a class="underline font-bold" href="#talk-{{talk_id}}">{{title}}</a>{{/track_id}}
-                {{^track_id}}<span class="underline font-bold">{{title}}</span>{{/track_id}}
+            <td class="px-4 py-2 border">
+                {{#track_id}}<a class="font-bold underline" href="#talk-{{talk_id}}">{{title}}</a>{{/track_id}}
+                {{^track_id}}<span class="font-bold underline">{{title}}</span>{{/track_id}}
                 {{#author}}{{author}}{{/author}}
                 ({{duration}}min)
             </td>
@@ -46,10 +46,10 @@
 
 
 {{#talks}}
-<div id="talk-{{talk_id}}" class="invisible target:visible opacity-0 target:opacity-100 fixed max-w-full max-h-full z-30 flex flex-col rounded bg-white closed shadow">
-  <a href="#" class="bg-red-600 text-white font-bold py-2 px-4">Close</a>
+<div id="talk-{{talk_id}}" class="fixed z-30 flex flex-col invisible max-w-full max-h-full bg-white rounded shadow opacity-0 target:visible target:opacity-100 closed">
+  <a href="#" class="px-4 py-2 font-bold text-white bg-red-600">Close</a>
   <div class="">
-    <h2 class="text-center font-bold">{{title}}</h2>
+    <h2 class="font-bold text-center">{{title}}</h2>
     {{description}}
     {{talk_time}}min
     {{author}}
