@@ -69,7 +69,7 @@ const main = () => {
     );
     params.append(
       "text",
-      `${tweetText}by ${name} [保存した画像またはクリップボードにコピーした画像を貼り付けよう]`
+      `[保存した画像またはクリップボードにコピーした画像を貼り付けよう]${tweetText}by ${name}`
     );
     params.append("hashtags", ["yapc川柳", "yapcjapan"].join(","));
     const twitterLink =
