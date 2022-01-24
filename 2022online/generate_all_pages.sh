@@ -26,6 +26,7 @@ echo "Copied assets to $OUTPUT_DIR/assets"
 mkdir -p $OUTPUT_DIR/senryu/dist
 cp ./senryu/index.html $OUTPUT_DIR/senryu/index.html
 cp ./senryu/dist/index.js $OUTPUT_DIR/senryu/dist/index.js
+cp -r ./senryu/assets $OUTPUT_DIR/senryu
 echo "Copied assets of senryu"
 
 echo "Complete!"
