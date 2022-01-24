@@ -4,14 +4,20 @@
     "start": "npm run build && run-p bs watch watch:tailwind",
     "bs": "browser-sync ../docs/ -f ../docs/2022online/ --startPath '/2022online/' --no-notify --no-ghost-mode --no-open",
     "watch": "chokidar './assets/css/**/*.css' './*.mustache' './data/**/*.json5' -c 'npm run build'",
-    "build": "npm run build:tailwind && ./generate_all_pages.sh",
+    "build": "npm run build:tailwind && npm run build:senryu && ./generate_all_pages.sh",
     "watch:tailwind": "tailwindcss -i ./src/css/index.css -o ./assets/css/index.css --watch",
-    "build:tailwind": "tailwindcss -i ./src/css/index.css -o ./assets/css/index.css --minify"
+    "build:tailwind": "tailwindcss -i ./src/css/index.css -o ./assets/css/index.css --minify",
+    "watch:senryu": "npm run build:senryu -- --watch",
+    "build:senryu": "esbuild senryu/src/index.ts --bundle --minify --outfile=senryu/dist/index.js"
   },
   "devDependencies": {
+    "@types/webfontloader": "^1.6.34",
     "browser-sync": "^2.27.7",
     "chokidar-cli": "^3.0.0",
+    "esbuild": "^0.14.13",
     "npm-run-all": "^4.1.5",
-    "tailwindcss": "^3.0.11"
+    "tailwindcss": "^3.0.11",
+    "typescript": "^4.5.5",
+    "webfontloader": "^1.6.28"
   }
 }
