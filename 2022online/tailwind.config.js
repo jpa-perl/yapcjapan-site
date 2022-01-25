@@ -7,6 +7,7 @@ module.exports = {
         tint: '#ED2628',
         pink: '#F05A59',
         bg: '#F6F6F6',
+        jpa: '#10355E',
         'bg-dark': '#EFEFEF',
       },
       backgroundImage: {
