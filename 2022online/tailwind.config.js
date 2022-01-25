@@ -9,10 +9,8 @@ module.exports = {
         bg: '#F6F6F6',
         jpa: '#10355E',
         'bg-dark': '#EFEFEF',
+        'header-bg': 'rgba(255,255,255,0.3)',
       },
-      backgroundImage: {
-        'footer-logo': "url('/2022online/assets/images/logo.svg')"
-      }
     },
   },
   plugins: [],
