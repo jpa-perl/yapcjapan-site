@@ -1,47 +1,57 @@
-<div class="flex items-center justify-center pb-10 text-primary">
-  <div class="container flex flex-col items-center justify-center">
-    <h2 id="guest-speakers" class="pt-20 mb-10 md:mb-10">
-      <span class="px-1 py-1 text-3xl font-bold tracking-wider text-white bg-tint">
+<div class="flex flex-col items-center justify-center bg-bg-dark text-primary">
+  <div class="container flex flex-col items-center justify-center pt-20 pb-10 sm:py-36 sm:pb-20">
+    <h1 id="logo" class="mb-10">
+      <img class="h-[100px] sm:h-[200px]" src="/2022online/assets/images/logo.svg" alt="YAPC::Jpana::Online 2022"/>
+    </h1>
+    <h2 id="guest-speakers" class="">
+      <span class="px-1 py-1 text-2xl sm:text-3xl font-bold tracking-wider text-white bg-tint">
         Timetable
       </span>
     </h2>
-    <div>
-      {{#timetable}}
-        <div class="mt-12 sm:text-lg mb-8 font-bold text-center">{{caption}}</div>
-          <table class="w-full">
-            <thead>
-              <tr>
-                <th class="text-xs sm:text-base px-4 py-2 whitespace-nowrap">時刻</th>
-                <th class="text-xs sm:text-base w-1/2 px-4 py-2">トラックA</th>
-                <th class="text-xs sm:text-base w-1/2 px-4 py-2">トラックB</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#talks}}
-              <tr class="odd:bg-white">
-                <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">{{start}} ~ {{end}}</th>
-                <td class="p-2 sm:p-3 border-b border-b-gray align-top" {{^track2}}colspan=2{{/track2}}>
-                  {{#track1}}
-                    {{#talk_id}}<a class="text-sm sm:text-base font-bold hover:underline" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
-                    {{^talk_id}}<span class="text-sm">{{title}}</span>{{/talk_id}}
-                    <small class="opacity-80">{{duration}}min.</small>
-                    <div class="text-sm mt-1">{{#author}}{{author}}{{/author}}</div>
-                  {{/track1}}
-                </td>
-                {{#track2}}
-                <td class="p-2 sm:p-3 border-b border-b-gray align-top">
-                    {{#talk_id}}<a class="text-sm sm:text-base font-bold hover:underline" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
-                    {{^talk_id}}<span class="">{{title}}</span>{{/talk_id}}
-                    <small class="opacity-80">{{duration}}min.</small>
-                    <div class="text-sm mt-1">{{#author}}{{author}}{{/author}}</div>
-                </td>
-                {{/track2}}
-              {{/talks}}
-            </tbody>
-          </table>
-      {{/timetable}}
-    </div>
   </div>
+</div>
+
+<div class="container text-primary m-auto pb-10">
+  {{#timetable}}
+    <div class="ml-2 mt-10 sm:mt-16 mb-8 leading-none">
+      <span class="bg-tint leading-none font-bold text-sm text-white inline-block py-1 px-1 mb-2">{{caption1}}</span>
+      <div>
+        <span class="my-2 leading-none text-2xl sm:text-3xl font-bold">{{caption2}}</span>
+        <span class="leading-none text-base">{{caption3}}</span>
+      </div>
+    </div>
+      <table class="w-full">
+        <thead>
+          <tr>
+            <th class="text-xs sm:text-base px-4 py-2 whitespace-nowrap">時刻</th>
+            <th class="text-xs sm:text-base w-1/2 px-4 py-2">トラックA</th>
+            <th class="text-xs sm:text-base w-1/2 px-4 py-2">トラックB</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#talks}}
+          <tr class="odd:bg-white">
+            <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">{{start}} ~ {{end}}</th>
+            <td class="p-2 sm:p-3 border-b border-b-gray align-top" {{^track2}}colspan=2{{/track2}}>
+              {{#track1}}
+                {{#talk_id}}<a class="text-sm sm:text-base font-bold hover:underline" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
+                {{^talk_id}}<span class="text-sm">{{title}}</span>{{/talk_id}}
+                <small class="opacity-80">{{duration}}min.</small>
+                <div class="text-sm mt-1">{{#author}}{{author}}{{/author}}</div>
+              {{/track1}}
+            </td>
+            {{#track2}}
+            <td class="p-2 sm:p-3 border-b border-b-gray align-top">
+                {{#talk_id}}<a class="text-sm sm:text-base font-bold hover:underline" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
+                {{^talk_id}}<span class="">{{title}}</span>{{/talk_id}}
+                <small class="opacity-80">{{duration}}min.</small>
+                <div class="text-sm mt-1">{{#author}}{{author}}{{/author}}</div>
+            </td>
+            {{/track2}}
+          {{/talks}}
+        </tbody>
+      </table>
+  {{/timetable}}
 </div>
 
 

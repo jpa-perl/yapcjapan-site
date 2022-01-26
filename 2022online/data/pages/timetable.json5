@@ -5,7 +5,9 @@
   "page-title": "Timetable",
   timetable: [
     {
-      caption:"DAY1 2021.03.04(Fri.)",
+      caption1:"DAY1",
+      caption2:"2021.03.04",
+      caption3:"Fri.",
       talks: [
         {
           start: "19:00",
@@ -108,7 +110,9 @@
       ],
     },
     {
-      caption:"DAY2 2021.03.05(Sat.)",
+      caption1:"DAY2",
+      caption2:"2021.03.05",
+      caption3:"Sat.",
       talks: [
         {
           start: "13:30",
