@@ -5,50 +5,49 @@
         Timetable
       </span>
     </h2>
-
-  <div class="flex flex-wrap justify-center">
-    {{#timetable}}
-      <div class="mt-12 mb-8 font-bold text-center">{{caption}}</div>
-        <table class="table-fixed" >
-          <thead>
-            <tr>
-              <th class="w-1/5 px-4 py-2">時刻</th>
-              <th class="w-2/5 px-4 py-2">トラックA</th>
-              <th class="w-2/5 px-4 py-2">トラックB</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#talks}}
-            <tr class="odd:bg-white">
-              <th class="px-4 py-2 border">{{start}} ~ {{end}}</th>
-              <td class="px-4 py-2 border" {{^track2}}colspan=2{{/track2}}>
-                {{#track1}}
-                  {{#talk_id}}<a class="font-bold underline cursor-pointer" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
-                  {{^talk_id}}<span class="font-bold">{{title}}</span>{{/talk_id}}
-                  {{#author}}{{author}}{{/author}}
-                  ({{duration}}min)
-                {{/track1}}
-              </td>
-              {{#track2}}
-              <td class="px-4 py-2 border">
-                  {{#track_id}}<a class="font-bold underline" href="#talk-{{talk_id}}">{{title}}</a>{{/track_id}}
-                  {{^track_id}}<span class="font-bold underline">{{title}}</span>{{/track_id}}
-                  {{#author}}{{author}}{{/author}}
-                  ({{duration}}min)
-              </td>
-              {{/track2}}
-            {{/talks}}
-          </tbody>
-        </table>
-      </div>
-    {{/timetable}}
+    <div>
+      {{#timetable}}
+        <div class="mt-12 sm:text-lg mb-8 font-bold text-center">{{caption}}</div>
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th class="text-xs sm:text-base px-4 py-2 whitespace-nowrap">時刻</th>
+                <th class="text-xs sm:text-base w-1/2 px-4 py-2">トラックA</th>
+                <th class="text-xs sm:text-base w-1/2 px-4 py-2">トラックB</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#talks}}
+              <tr class="odd:bg-white">
+                <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">{{start}} ~ {{end}}</th>
+                <td class="p-2 sm:p-3 border-b border-b-gray align-top" {{^track2}}colspan=2{{/track2}}>
+                  {{#track1}}
+                    {{#talk_id}}<a class="text-sm sm:text-base font-bold hover:underline" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
+                    {{^talk_id}}<span class="text-sm">{{title}}</span>{{/talk_id}}
+                    <small class="opacity-80">{{duration}}min.</small>
+                    <div class="text-sm mt-1">{{#author}}{{author}}{{/author}}</div>
+                  {{/track1}}
+                </td>
+                {{#track2}}
+                <td class="p-2 sm:p-3 border-b border-b-gray align-top">
+                    {{#talk_id}}<a class="text-sm sm:text-base font-bold hover:underline" href="#talk-{{talk_id}}">{{title}}</a>{{/talk_id}}
+                    {{^talk_id}}<span class="">{{title}}</span>{{/talk_id}}
+                    <small class="opacity-80">{{duration}}min.</small>
+                    <div class="text-sm mt-1">{{#author}}{{author}}{{/author}}</div>
+                </td>
+                {{/track2}}
+              {{/talks}}
+            </tbody>
+          </table>
+      {{/timetable}}
+    </div>
   </div>
 </div>
 
 
 {{#talks}}
-<div id="talk-{{talk_id}}" class="fixed top-0 left-0 z-30 flex items-center justify-center invisible w-full h-full opacity-0 target:visible target:opacity-100">
-  <a href="#" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default transition"></a>
+<div id="talk-{{talk_id}}" class="fixed top-0 left-0 z-30 flex items-center justify-center invisible w-full h-full transition opacity-0 target:visible target:opacity-100">
+  <a href="#" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
   <div class="bg-bg-dark w-11/12 h-[80vh] z-40 overflow-scroll md:w-[704px]">
     <div class="text-right">
       <a href="#" class="p-2 text-2xl font-bold text-primary">&times;</a>
