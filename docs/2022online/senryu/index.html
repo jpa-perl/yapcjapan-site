@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>YAPC川柳ジェネレーター | YAPC::Japan::Online 2022 #yapcjapan</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style>
+      main input.mdl-textfield__input {
+        font-family: "Yuji Syuku", serif;
+      }
+      canvas {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+    <meta
+      property="og:url"
+      content="https://yapcjapan.org/2022online/senryu/"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="YAPC川柳ジェネレーター | YAPC::Japan::Online 2022 #yapcjapan"
+    />
+    <meta
+      property="og:image"
+      content="https://yapcjapan.org/2022online/senryu/assets/ogp.png"
+    />
+  </head>
+  <body>
+    <!--
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--3-col"></div>
+      <div class="mdl-cell mdl-cell--6-col">これは何</div>
+      <div class="mdl-cell mdl-cell--3-col"></div>
+    </div>
+    -->
+    <div class="mdl-grid" id="loading">
+      <div class="mdl-cell mdl-cell--3-col"></div>
+      <div class="mdl-cell mdl-cell--6-col">
+        <div
+          class="mdl-progress mdl-js-progress mdl-progress__indeterminate"
+        ></div>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col"></div>
+    </div>
+    <main class="mdl-grid" style="display: none">
+      <div class="mdl-cell mdl-cell--8-col" style="max-height: 85vh">
+        <canvas width="1280" height="720"></canvas>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input
+            class="mdl-textfield__input"
+            type="text"
+            id="line1"
+            value="久々の"
+          />
+          <label class="mdl-textfield__label" for="line1">Text...</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input
+            class="mdl-textfield__input"
+            type="text"
+            id="line2"
+            value="YAPC開催"
+          />
+          <label class="mdl-textfield__label" for="line2">Text...</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input
+            class="mdl-textfield__input"
+            type="text"
+            id="line3"
+            value="嬉しいな"
+          />
+          <label class="mdl-textfield__label" for="line3">Text...</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input
+            class="mdl-textfield__input"
+            type="text"
+            id="nameInput"
+            value="某YAPCスタッフ"
+          />
+          <label class="mdl-textfield__label" for="nameInput">Name...</label>
+        </div>
+        <br />
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+          id="copyButton"
+        >
+          <i class="material-icons">content_copy</i>
+          クリップボードにコピー
+        </button>
+        <br />
+        <br />
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
+          id="downloadButton"
+        >
+          <i class="material-icons">download</i>
+          ダウンロード
+        </button>
+        <br />
+        <br />
+        <a
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+          id="twitterLink"
+          target="_blank"
+        >
+          <i class="material-icons">share</i>
+          川柳をTwitterで詠む
+        </a>
+      </div>
+    </main>
+    <script src="./dist/index.js"></script>
+  </body>
+</html>

@@ -115,6 +115,11 @@
           image: "neko-toast-lab.png",
           url: "https://nekotoast-lab.com/"
         },
+        {
+          name: "面白法人カヤック",
+          image: "kayac.png",
+          url: "https://www.kayac.com/company/infographics "
+        },
       ]
     },
     {

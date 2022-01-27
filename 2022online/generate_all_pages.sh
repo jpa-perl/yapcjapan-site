@@ -22,4 +22,11 @@ find ./assets -type d -mindepth 1 -exec mkdir -p $OUTPUT_DIR/{} \;
 find ./assets -type f -mindepth 1 -exec cp {} $OUTPUT_DIR/{} \;
 echo "Copied assets to $OUTPUT_DIR/assets"
 
+# copy senryu dir
+mkdir -p $OUTPUT_DIR/senryu/dist
+cp ./senryu/index.html $OUTPUT_DIR/senryu/index.html
+cp ./senryu/dist/index.js $OUTPUT_DIR/senryu/dist/index.js
+cp -r ./senryu/assets $OUTPUT_DIR/senryu
+echo "Copied assets of senryu"
+
 echo "Complete!"
