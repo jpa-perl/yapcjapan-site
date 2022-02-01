@@ -145,6 +145,16 @@
           image: "kayac.png",
           url: "https://www.kayac.com/company/infographics "
         },
+        {
+          name: "株式会社トラーナ",
+          image: "torana.png",
+          url: "http://toysub.net/"
+        },
+        {
+          name: "Wano株式会社",
+          image: "wano.png",
+          url: "https://group.wano.co.jp/"
+        }
       ]
     },
     {
@@ -185,6 +195,19 @@
           url: "https://have-fun.tech/"
         }
       ]
-    }
+    },
+    {
+      key: "original-emoji",
+      label: "Original Emoji",
+      class: "md:basis-64 basis-full",
+      icon_class: "max-w-[150px]",
+      sponsors: [
+        {
+          name: "株式会社ネコトーストラボ",
+          image: "neko-toast-lab.png",
+          url: "https://nekotoast-lab.com/"
+        },
+      ],
+    },
   ]
 }
