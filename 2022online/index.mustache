@@ -43,6 +43,20 @@
         {{/guestSpeakers}}
       </ul>
 
+      <h2 class="mt-16 mb-6 md:mt-32">
+        <span class="px-1 py-1 text-3xl font-bold tracking-wider text-white bg-tint">
+        Job Board
+        </span>
+      </h2>
+
+      <div class="flex flex-wrap justify-center basis-full gap-6">
+        {{#jobboards}}
+          <a target="_blank" href="{{url}}" class="block max-w-[400px]">
+            <img loading="lazy" class="" src="/2022online/assets/images/jobboard/{{image}}" alt=""/>
+          </a>
+        {{/jobboards}}
+      </div>
+
       <h2 class="mt-16 md:mt-32 mb-6">
         <span class="bg-tint font-bold text-3xl text-white px-1 py-1 tracking-wider">
         Sponsors
