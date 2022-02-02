@@ -154,6 +154,11 @@
           name: "Wano株式会社",
           image: "wano.png",
           url: "https://group.wano.co.jp/"
+        },
+        {
+          name: "株式会社メディカルノート",
+          image: "medicalnote.png",
+          url: "https://medicalnote.co.jp"
         }
       ]
     },
