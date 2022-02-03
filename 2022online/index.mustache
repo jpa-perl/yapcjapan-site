@@ -27,7 +27,7 @@
 <div class="flex items-center justify-center pb-10 text-primary">
   <div class="container flex flex-col items-center justify-center py-20">
     <h2 id="guest-speakers" class="pt-20 mb-10 md:mb-10">
-      <span class="px-1 py-1 text-2xl sm:text-3xl font-bold tracking-wider text-white bg-tint">
+      <span class="px-1 py-1 text-2xl font-bold tracking-wider text-white sm:text-3xl bg-tint">
         Guest Speakers
       </span>
     </h2>
@@ -42,8 +42,22 @@
       {{/guestSpeakers}}
     </ul>
 
+    <h2 id="job-board" class="pt-20 mt-16 mb-6 md:mt-10">
+      <span class="px-1 py-1 text-2xl font-bold tracking-wider text-white sm:text-3xl bg-tint">
+      Job Board
+      </span>
+    </h2>
+
+    <div class="flex flex-wrap justify-center mx-6 basis-full gap-6">
+      {{#jobboards}}
+        <a target="_blank" href="{{url}}" class="block max-w-[400px]">
+          <img loading="lazy" class="" src="/2022online/assets/images/jobboard/{{image}}" alt=""/>
+        </a>
+      {{/jobboards}}
+    </div>
+
     <h2 id="sponsors" class="pt-20 mt-16 mb-6 md:mt-10">
-      <span class="px-1 py-1 text-2xl sm:text-3xl font-bold tracking-wider text-white bg-tint">
+      <span class="px-1 py-1 text-2xl font-bold tracking-wider text-white sm:text-3xl bg-tint">
       Sponsors
       </span>
     </h2>
