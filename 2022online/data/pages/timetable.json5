@@ -552,7 +552,7 @@ Perl や JavaScript 等の動的型付け言語では柔軟性が高い利点も
       authors: [
         {
           author: "kimuson",
-          author_icon: "/2022online/assets/images/speaker/_kimuson.jpg",
+          author_icon: "/2022online/assets/images/speaker/kimuson.jpg",
           github_url: "https://github.com/d-kimuson",
           twitter_url: "https://twitter.com/_kimuson",
           blog_url: "https://kimuson.dev/",
