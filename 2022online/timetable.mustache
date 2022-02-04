@@ -4,60 +4,60 @@
       <img class="h-[100px] sm:h-[200px]" src="/2022online/assets/images/logo.svg" alt="YAPC::Jpana::Online 2022"/>
     </h1>
     <h2 id="guest-speakers" class="">
-      <span class="px-1 py-1 text-2xl sm:text-3xl font-bold tracking-wider text-white bg-tint">
+      <span class="px-1 py-1 text-2xl font-bold tracking-wider text-white sm:text-3xl bg-tint">
         Timetable
       </span>
     </h2>
   </div>
 </div>
 
-<div class="container text-primary m-auto pb-32">
+<div class="container pb-32 m-auto text-primary">
   {{#timetable}}
-    <div class="ml-2 mt-10 sm:mt-16 mb-8 leading-none">
-      <span class="bg-tint leading-none font-bold text-sm text-white inline-block py-1 px-1 mb-2">{{caption1}}</span>
+    <div class="mt-10 mb-8 ml-2 leading-none sm:mt-16">
+      <span class="inline-block px-1 py-1 mb-2 text-sm font-bold leading-none text-white bg-tint">{{caption1}}</span>
       <div>
-        <span class="my-2 leading-none text-2xl sm:text-3xl font-bold">{{caption2}}</span>
-        <span class="leading-none text-base">{{caption3}}</span>
+        <span class="my-2 text-2xl font-bold leading-none sm:text-3xl">{{caption2}}</span>
+        <span class="text-base leading-none">{{caption3}}</span>
       </div>
     </div>
       <table class="w-full">
         <thead>
           <tr>
-            <th class="text-xs sm:text-base px-4 py-2 whitespace-nowrap">時刻</th>
-            <th class="text-xs sm:text-base w-1/2 px-4 py-2">トラックA</th>
-            <th class="text-xs sm:text-base w-1/2 px-4 py-2">トラックB</th>
+            <th class="px-4 py-2 text-xs sm:text-base whitespace-nowrap">時刻</th>
+            <th class="w-1/2 px-4 py-2 text-xs sm:text-base">トラックA</th>
+            <th class="w-1/2 px-4 py-2 text-xs sm:text-base">トラックB</th>
           </tr>
         </thead>
         <tbody>
           {{#talks}}
           <tr class="odd:bg-white">
             <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">{{start}} ~ {{end}}</th>
-            <td class="p-2 sm:p-3 border-b border-b-gray align-top" {{^track2}}colspan=2{{/track2}}>
+            <td class="p-2 align-top border-b sm:p-3 border-b-gray" {{^track2}}colspan=2{{/track2}}>
               {{#track1}}
-                {{#talk_id}}<a class="text-sm sm:text-base font-bold hover:underline items-center" href="#talk-{{talk_id}}" data-modal-target="test">
+                {{#talk_id}}<a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-{{talk_id}}" data-modal-target="test">
                   {{title}}
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                     <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                   </svg>
                 </a>{{/talk_id}}
                 {{^talk_id}}<span class="text-sm">{{title}}</span>{{/talk_id}}
                 <small class="opacity-80">{{duration}}min.</small>
-                <div class="text-sm mt-1">{{#author}}{{author}}{{/author}}</div>
+                <div class="mt-1 text-sm">{{#author}}{{author}}{{/author}}</div>
               {{/track1}}
             </td>
             {{#track2}}
-            <td class="p-2 sm:p-3 border-b border-b-gray align-top">
-                {{#talk_id}}<a class="text-sm sm:text-base font-bold hover:underline items-center" href="#talk-{{talk_id}}" data-modal-target="test">
+            <td class="p-2 align-top border-b sm:p-3 border-b-gray">
+                {{#talk_id}}<a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-{{talk_id}}" data-modal-target="test">
                   {{title}}
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                     <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                   </svg>
                 </a>{{/talk_id}}
                 {{^talk_id}}<span class="">{{title}}</span>{{/talk_id}}
                 <small class="opacity-80">{{duration}}min.</small>
-                <div class="text-sm mt-1">{{#author}}{{author}}{{/author}}</div>
+                <div class="mt-1 text-sm">{{#author}}{{author}}{{/author}}</div>
             </td>
             {{/track2}}
           {{/talks}}
@@ -68,33 +68,41 @@
 
 
 {{#talks}}
-<div id="talk-{{talk_id}}" class="fixed backdrop-blur-sm top-0 left-0 z-30 flex items-center justify-center invisible flex-col w-full h-full transition-opacity opacity-0 target:visible target:opacity-100">
+<div id="talk-{{talk_id}}" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
   <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
   <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
-    <div class="overflow-scroll h-full">
-      <div class="px-8 sm:px-16 py-8 sm:py-12 text-primary">
-        <h2 class="text-xl lg:text-2xl font-bold text-center">{{title}}</h2>
-        <div class="mt-6 sm:mt-8 text-center">
-          <img class="inline-block w-24 h-24 rounded-full" src="https://pbs.twimg.com/profile_images/1328671535817580545/yEUxMSSC_400x400.jpg" />
-          <author class="block pt-4 font-bold">{{author}}</author>
-          <div class="mt-3 flex justify-center items-center gap-3">
-            <a target="_blank" href="{{github_url}}">
-              <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
-            </a>
-            <a target="_blank" href="{{twitter_url}}">
-              <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
-            </a>
-            <a target="_blank" class="underline" href="{{blog_url}}">
-              <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
-            </a>
+    <div class="h-full overflow-scroll">
+      <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+        <h2 class="text-xl font-bold text-center lg:text-2xl">{{title}}</h2>
+        <div class="md:flex">
+          {{#authors}}
+          <div class="flex-1 mt-6 text-center sm:mt-8">
+              <img class="inline-block w-24 h-24 rounded-full" src="{{author_icon}}" />
+            <author class="block pt-4 font-bold">{{author}}</author>
+            <div class="flex items-center justify-center mt-3 gap-3">
+              <a target="_blank" href="{{github_url}}">
+                <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+              </a>
+              <a target="_blank" href="{{twitter_url}}">
+                <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+              </a>
+              {{#blog_url}}
+              <a target="_blank" class="underline" href="{{blog_url}}">
+                <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+              </a>
+              {{/blog_url}}
+            </div>
           </div>
+          {{/authors}}
         </div>
-        <div class="my-6 sm:my-8 text-sm lg:text-base">
+        <div class="my-6 text-sm sm:my-8 lg:text-base">
+          <pre class="whitespace-pre-line">
           {{description}}
+          </pre>
         </div>
       </div>
     </div>
-    <a href="#__" class="text-center py-2 bg-bg-dark w-full absolute bottom-0 left-0 right-0 p-2 block text-primary font-bold text-sm">閉じる</a>
+    <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
   </div>
 </div>
 {{/talks}}
