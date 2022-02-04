@@ -22,11 +22,1078 @@
     <meta property="twitter:image" content="https://yapcjapan.org/2022online/assets/images/ogp.png">
 
     <link rel="shortcut icon" href="/2022online/assets/images/favicon.ico">
-    <link rel="stylesheet" href="/2022online/assets/css/index.css?cachebuster=455868">
+    <link rel="stylesheet" href="/2022online/assets/css/index.css?cachebuster=456395">
   </head>
   <body class="bg-bg">
 
+      <nav class="fixed z-20 w-full bg-header-bg backdrop-blur px-2 sm:pr-8 sm:pl-5">
+        <div class="container flex sm:h-[70px] flex-wrap items-center justify-between mx-auto">
+          <a href="/2022online/">
+            <img class="my-2 h-[27px] sm:h-[40px]" src="/2022online/assets/images/logo-header.svg" alt="YAPC::Japan::Online 2022" />
+          </a>
+          <input class="hidden peer" type="checkbox" id="nav-btn" />
+          <label class="flex items-center p-2 cursor-pointer sm:hidden" for="nav-btn">
+            <svg width="27" height="27" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#F05859" stroke-width="2" stroke-linecap="round" d="M8.5 10.5h20M8.5 18.5h20M8.5 26.5h20"></svg>
+          </label>
+          <div class="hidden w-full text-md peer-checked:flex peer-checked:flex-col py-10 sm:py-0 sm:flex sm:w-auto gap-8">
+            <a href="/2022online/#guest-speakers" class="px-6 sm:px-0 block text-tint">
+              Guest Speakers
+            </a>
+            <a href="/2022online/timetable.html" class="px-6 sm:px-0 block text-tint">
+              Timetable
+            </a>
+            <a href="/2022online/#sponsors" class="px-6 sm:px-0 block text-tint">
+              Sponsors
+            </a>
+          </div>
+        </div>
+      </nav>
 
+
+      <div class="flex flex-col items-center justify-center bg-bg-dark text-primary">
+        <div class="container flex flex-col items-center justify-center pt-20 pb-10 sm:py-36 sm:pb-20">
+          <h1 id="logo" class="mb-10">
+            <img class="h-[100px] sm:h-[200px]" src="/2022online/assets/images/logo.svg" alt="YAPC::Jpana::Online 2022"/>
+          </h1>
+          <h2 id="guest-speakers" class="">
+            <span class="px-1 py-1 text-2xl font-bold tracking-wider text-white sm:text-3xl bg-tint">
+              Timetable
+            </span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="container pb-32 m-auto text-primary">
+          <div class="mt-10 mb-8 ml-2 leading-none sm:mt-16">
+            <span class="inline-block px-1 py-1 mb-2 text-sm font-bold leading-none text-white bg-tint">DAY1</span>
+            <div>
+              <span class="my-2 text-2xl font-bold leading-none sm:text-3xl">2021.03.04</span>
+              <span class="text-base leading-none">Fri.</span>
+            </div>
+          </div>
+            <table class="w-full">
+              <thead>
+                <tr>
+                  <th class="px-4 py-2 text-xs sm:text-base whitespace-nowrap">時刻</th>
+                  <th class="w-1/2 px-4 py-2 text-xs sm:text-base">トラックA</th>
+                  <th class="w-1/2 px-4 py-2 text-xs sm:text-base">トラックB</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">19:00 ~ 19:15</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">Opening</span>
+                      <small class="opacity-80">15min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">19:15 ~ 19:20</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4E7E;&#x676F;</span>
+                      <small class="opacity-80">5min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">19:20 ~ 19:50</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-1" data-modal-target="test">
+                        &#x30B2;&#x30B9;&#x30C8;&#x5BFE;&#x8AC7;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">30min.</small>
+                      <div class="mt-1 text-sm">&#x77F3;&#x7530;&#x7D62;&#x4E00; uzulla / Junichi Ishida, &#x548C;&#x7530;&#x88D5;&#x4ECB; yusukebe / Yusuke Wada</div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">19:50 ~ 20:00</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4E7E;&#x676F;&amp;&#x4F11;&#x61A9;</span>
+                      <small class="opacity-80">10min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">20:00 ~ 20:20</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" >
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-19" data-modal-target="test">
+                        TypeScript &#x3078;&#x578B;&#x5B89;&#x5168;&#x6027;&#x3092;&#x9AD8;&#x3081;&#x306A;&#x304C;&#x3089;&#x30EA;&#x30D7;&#x30EC;&#x30FC;&#x30B9;&#x3059;&#x308B;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">@kimuson</div>
+                  </td>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray">
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-11" data-modal-target="test">
+                        PHP &#x3067; NFC &#x30EA;&#x30FC;&#x30C0;&#x30FC;&#x3092;&#x5B9F;&#x88C5;&#x3059;&#x308B;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">&#x3081;&#x3082;&#x308A;&#x30FC;</div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">20:20 ~ 20:30</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4E7E;&#x676F;&amp;&#x4F11;&#x61A9;</span>
+                      <small class="opacity-80">10min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">20:30 ~ 20:50</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" >
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-15" data-modal-target="test">
+                        my$talk=qr{&#8;((?:ir)?reg(?:ular )?exp(?:ressions?)?)&#8;}i;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">Dan Kogai</div>
+                  </td>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray">
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-22" data-modal-target="test">
+                        ReDoS &#x691C;&#x51FA;&#x306E;&#x6700;&#x5148;&#x7AEF; recheck &#x306E;&#x7D39;&#x4ECB;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">&#x85E4;&#x6D6A;&#x5927;&#x5F25; (@MakeNowJust)</div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">20:50 ~ 20:55</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x521D;&#x65E5;&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30F3;&#x30B0;</span>
+                      <small class="opacity-80">5min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">20:55 ~ 21:00</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4E7E;&#x676F;&amp;&#x4F11;&#x61A9;</span>
+                      <small class="opacity-80">5min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">21:00 ~ 22:00</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x61C7;&#x89AA;&#x4F1A;</span>
+                      <small class="opacity-80">60min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+              </tbody>
+            </table>
+          <div class="mt-10 mb-8 ml-2 leading-none sm:mt-16">
+            <span class="inline-block px-1 py-1 mb-2 text-sm font-bold leading-none text-white bg-tint">DAY2</span>
+            <div>
+              <span class="my-2 text-2xl font-bold leading-none sm:text-3xl">2021.03.05</span>
+              <span class="text-base leading-none">Sat.</span>
+            </div>
+          </div>
+            <table class="w-full">
+              <thead>
+                <tr>
+                  <th class="px-4 py-2 text-xs sm:text-base whitespace-nowrap">時刻</th>
+                  <th class="w-1/2 px-4 py-2 text-xs sm:text-base">トラックA</th>
+                  <th class="w-1/2 px-4 py-2 text-xs sm:text-base">トラックB</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">13:30 ~ 13:40</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x30AA;&#x30FC;&#x30D7;&#x30CB;&#x30F3;&#x30B0;</span>
+                      <small class="opacity-80">10min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">13:40 ~ 14:20</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" >
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-17" data-modal-target="test">
+                        5&#x5E74;&#x306B;&#x308F;&#x305F;&#x308B;&quot;Perl &#x306E;&quot; REST API &#x3092; &quot;Perl &#x3067;&quot; GraphQL API &#x5316;&#x3057;&#x4F5C;&#x308A;&#x76F4;&#x3059;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">40min.</small>
+                      <div class="mt-1 text-sm">@mangano-ito</div>
+                  </td>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray">
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-18" data-modal-target="test">
+                        &#x3058;&#x308F;&#x3058;&#x308F;&#x3068;Perl&#x304B;&#x3089;Go&#x306B;&#x79FB;&#x884C;&#x3057;&#x3088;&#x3046;&#x3068;&#x3057;&#x3066;&#x3044;&#x308B;&#x4FFA;&#x9054;&#x306E;&#x30DE;&#x30A4;&#x30AF;&#x30ED;&#x30B5;&#x30FC;&#x30D3;&#x30B7;&#x30FC;&#x30BA;&#x306E;&#x7D39;&#x4ECB;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">40min.</small>
+                      <div class="mt-1 text-sm">@macopy</div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">14:20 ~ 14:30</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4F11;&#x61A9;</span>
+                      <small class="opacity-80">10min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">14:30 ~ 14:50</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" >
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-20" data-modal-target="test">
+                        &#x30B9;&#x30AF;&#x30E9;&#x30E0;&#x3067;&#x3064;&#x304F;&#x308B;&#x983C;&#x3082;&#x3057;&#x304F;&#x751F;&#x304D;&#x751F;&#x304D;&#x3068;&#x3057;&#x305F;&#x30C1;&#x30FC;&#x30E0;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">&#x4E94;&#x5341;&#x5D50;&#x96C4;</div>
+                  </td>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray">
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-13" data-modal-target="test">
+                        Hono[&#x708E;] Ultrafast web framework for Cloudflare Workers.
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">Yusuke Wada</div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">14:50 ~ 15:00</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4F11;&#x61A9;</span>
+                      <small class="opacity-80">10min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">15:00 ~ 15:20</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" >
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-14" data-modal-target="test">
+                        &#x3042;&#x306A;&#x305F;&#x306E;&#x77E5;&#x3089;&#x306A;&#x3044;(&#x304B;&#x3082;&#x3057;&#x308C;&#x306A;&#x3044;)&#x30B3;&#x30A2;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">&#x767D;&#x65B9;&#x5065;&#x592A;&#x90CE;</div>
+                  </td>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray">
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-12" data-modal-target="test">
+                        &#x30D5;&#x30ED;&#x30FC;&#x52B9;&#x7387;&#x306E;&#x5411;&#x4E0A;&#x304B;&#x3089;&#x59CB;&#x3081;&#x308B;&#x958B;&#x767A;&#x751F;&#x7523;&#x6027;&#x306E;&#x9AD8;&#x3081;&#x65B9; ~ &#x30E2;&#x30D6;&#x30EF;&#x30FC;&#x30AF;&#x3092;&#x6CBF;&#x3048;&#x3066; ~
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">&#x9762;&#x5DDD;&#x6CF0;&#x660E;</div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">15:20 ~ 15:35</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4F11;&#x61A9;(15&#x5206;)</span>
+                      <small class="opacity-80">15min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">15:35 ~ 15:55</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" >
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-23" data-modal-target="test">
+                        perlimports&#x304B;&#x3089;&#x63A2;&#x308B;PPI&#x306E;&#x4E16;&#x754C; @&#x516B;&#x96F2;&#x30A2;&#x30CA;&#x30B0;&#x30E9;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">&#x516B;&#x96F2;&#x30A2;&#x30CA;&#x30B0;&#x30E9;</div>
+                  </td>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray">
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-24" data-modal-target="test">
+                        &#x30A8;&#x30F3;&#x30B8;&#x30CB;&#x30A2;&#x306E;&#x500B;&#x4EBA;&#x30D6;&#x30E9;&#x30F3;&#x30C7;&#x30A3;&#x30F3;&#x30B0;&#x3068;&#x6280;&#x8853;&#x7D44;&#x7E54;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">20min.</small>
+                      <div class="mt-1 text-sm">Takafumi ONAKA</div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">15:55 ~ 16:05</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4F11;&#x61A9;</span>
+                      <small class="opacity-80">10min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">16:05 ~ 16:45</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" >
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-16" data-modal-target="test">
+                        Acme&#x3001;&#x5176;&#x306F;Perl&#x306E;&#x30E6;&#x30B0;&#x30C9;&#x30E9;&#x30B7;&#x30EB;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">40min.</small>
+                      <div class="mt-1 text-sm">@makamaka</div>
+                  </td>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray">
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-21" data-modal-target="test">
+                        7&#x5E74;&#x9593;&#x904B;&#x7528;&#x3057;&#x305F;&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30B2;&#x30FC;&#x30E0;&#x3092;Amazon EC2&#x69CB;&#x6210;&#x304B;&#x3089;Amazon ECS&#x69CB;&#x6210;&#x3078;&#x3068;&#x4E57;&#x308A;&#x63DB;&#x3048;&#x305F;&#x8A71;
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">40min.</small>
+                      <div class="mt-1 text-sm">@commojun</div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">16:45 ~ 17:00</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4F11;&#x61A9;(15&#x5206;)</span>
+                      <small class="opacity-80">15min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">17:00 ~ 17:40</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      <a class="items-center text-sm font-bold sm:text-base hover:underline" href="#talk-2" data-modal-target="test">
+                        Keynote
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                      
+                      <small class="opacity-80">40min.</small>
+                      <div class="mt-1 text-sm">&#x677E;&#x6728; &#x96C5;&#x5E78; songmu / Matsuki Masayuki</div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">17:40 ~ 17:50</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">&#x4F11;&#x61A9;</span>
+                      <small class="opacity-80">10min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">17:50 ~ 18:30</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">Lightning Talk</span>
+                      <small class="opacity-80">40min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+                <tr class="odd:bg-white">
+                  <th class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">18:30 ~ 18:45</th>
+                  <td class="p-2 align-top border-b sm:p-3 border-b-gray" colspan=2>
+                      
+                      <span class="text-sm">Closing</span>
+                      <small class="opacity-80">15min.</small>
+                      <div class="mt-1 text-sm"></div>
+                  </td>
+              </tbody>
+            </table>
+      </div>
+
+
+      <div id="talk-1" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">&#x30B2;&#x30B9;&#x30C8;&#x5EA7;&#x8AC7;&#x4F1A;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/guest/uzulla.jpg?cachebuster=456173" />
+                  <author class="block pt-4 font-bold">&#x77F3;&#x7530;&#x7D62;&#x4E00; uzulla / Junichi Ishida</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/uzulla">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/uzulla">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://uzulla.hateblo.jp/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/guest/yusukebe.jpg?cachebuster=455876" />
+                  <author class="block pt-4 font-bold">&#x548C;&#x7530;&#x88D5;&#x4ECB; Yusuke Wada</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/yusukebe">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yusukebe">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://yusukebe.com/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                TBD
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-2" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">Keynote</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/guest/songmu.jpg?cachebuster=455544" />
+                  <author class="block pt-4 font-bold">&#x677E;&#x6728; &#x96C5;&#x5E78; songmu / Matsuki Masayuki</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/songmu">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/songmu">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://songmu.jp/riji/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                TBD
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-11" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">PHP &#x3067; NFC &#x30EA;&#x30FC;&#x30C0;&#x30FC;&#x3092;&#x5B9F;&#x88C5;&#x3059;&#x308B;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/m3m0r7.jpeg" />
+                  <author class="block pt-4 font-bold">&#x3081;&#x3082;&#x308A;&#x30FC;</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/m3m0r7">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/m3m0r7">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                Suica &#x3084; PASMO &#x3092;&#x30C7;&#x30D0;&#x30A4;&#x30B9;&#x306B;&#x30BF;&#x30C3;&#x30C1;&#x3057;&#x3066;&#x5024;&#x3092;&#x53D6;&#x5F97;&#x3059;&#x308B;&#x3001;&#x305D;&#x3093;&#x306A;&#x5922;&#x3092; PHP &#x3067;&#x53F6;&#x3048;&#x307E;&#x3057;&#x305F;&#x3002;
+PHP7.4 &#x304B;&#x3089; PHP FFI &#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x3082;&#x306E;&#x304C;&#x5C0E;&#x5165;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;Suica &#x3084; PASMO &#x306F; FeliCa &#x3068;&#x547C;&#x3070;&#x308C;&#x308B; NFC &#x306E;&#x898F;&#x683C;&#x306E; 1 &#x3064;&#x3067;&#x3059;&#x3002;&#x5B9F;&#x88C5;&#x65B9;&#x6CD5;&#x306F;&#x591A;&#x5C90;&#x306B;&#x6E21;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x6982;&#x306D; libnfc &#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3084; libusb &#x3092;&#x4F7F;&#x3046;&#x65B9;&#x6CD5;&#x306A;&#x3069;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x3057;&#x304B;&#x3057;&#x3001;&#x4ECA;&#x307E;&#x3067;&#x306E; PHP &#x3067;&#x306F;&#x3053;&#x306E;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3053;&#x3068;&#x3055;&#x3048;&#x53F6;&#x3044;&#x307E;&#x305B;&#x3093;&#x3067;&#x3057;&#x305F;&#x3002;&#x305D;&#x3053;&#x3067;&#x3001;&#x672C;&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x306F; PHP7.4 &#x304B;&#x3089;&#x5C0E;&#x5165;&#x3055;&#x308C;&#x305F; PHP FFI &#x3092;&#x7528;&#x3044;&#x3066;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B; PHP &#x3067; NFC &#x30EA;&#x30FC;&#x30C0;&#x30FC;&#x3092;&#x5B9F;&#x88C5;&#x3059;&#x308B;&#x306E;&#x304B;&#x3001;&#x305D;&#x3057;&#x3066;&#x5B9F;&#x969B;&#x306E;&#x30C7;&#x30E2;&#x3092;&#x4EA4;&#x3048;&#x3066;&#x30C8;&#x30FC;&#x30AF;&#x3067;&#x304D;&#x308C;&#x3070;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;
+
+Perl &#x306B;&#x3082; FFI &#x304C;&#x3042;&#x308B;&#x3088;&#x3046;&#x3067;&#x3059;&#x306E;&#x3067;&#x3001;&#x3053;&#x306E;&#x30C8;&#x30FC;&#x30AF;&#x3092;&#x307F;&#x3066;&#x3054;&#x8208;&#x5473;&#x3092;&#x6301;&#x3063;&#x305F;&#x65B9;&#x306F;&#x305C;&#x3072;&#x304A;&#x8A66;&#x3057;&#x3044;&#x305F;&#x3060;&#x3051;&#x308C;&#x3070;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-12" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">&#x30D5;&#x30ED;&#x30FC;&#x52B9;&#x7387;&#x306E;&#x5411;&#x4E0A;&#x304B;&#x3089;&#x59CB;&#x3081;&#x308B;&#x958B;&#x767A;&#x751F;&#x7523;&#x6027;&#x306E;&#x9AD8;&#x3081;&#x65B9; ~ &#x30E2;&#x30D6;&#x30EF;&#x30FC;&#x30AF;&#x3092;&#x6CBF;&#x3048;&#x3066; ~</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/omokawa_yasu.jpg?cachebuster=455532" />
+                  <author class="block pt-4 font-bold">&#x9762;&#x5DDD;&#x6CF0;&#x660E;</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/YasuakiOmokawa">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/omokawa_yasu">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://note.com/omokawa_yasuaki">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                &#x300E;Lean&#x3068;DevOps&#x306E;&#x79D1;&#x5B66;&#x300F;&#x3068;&#x3044;&#x3046;&#x66F8;&#x7C4D;&#x3067;&#x306F;&#x3001;&#x30CF;&#x30A4;&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3042;&#x308B;&#x7D44;&#x7E54;&#x306E;&#x7279;&#x5FB4;&#x3068;&#x3057;&#x3066;&#x300C;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x306E;&#x983B;&#x5EA6;&#x304C;&#x591A;&#x3044;&#x3053;&#x3068;&#x300D;&#x3092;&#x6319;&#x3052;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x3057;&#x304B;&#x3057;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x306E;&#x983B;&#x5EA6;&#x3092;&#x591A;&#x304F;&#x3059;&#x308B;&#x306B;&#x306F;&#x5177;&#x4F53;&#x7684;&#x306B;&#x3069;&#x3046;&#x3059;&#x308C;&#x3070;&#x3044;&#x3044;&#x306E;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#xFF1F;&#x3053;&#x306E;&#x7591;&#x554F;&#x306B;&#x5BFE;&#x3057;&#x3001;&#x30E2;&#x30D6;&#x30EF;&#x30FC;&#x30AF;&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x958B;&#x767A;&#x624B;&#x6CD5;&#x3092;&#x901A;&#x3057;&#x3066;&#x89E3;&#x6C7A;&#x3092;&#x8A66;&#x307F;&#x305F;&#x7D50;&#x679C;&#x3092;&#x304A;&#x8A71;&#x3057;&#x307E;&#x3059;&#x3002;&#x8A66;&#x884C;&#x932F;&#x8AA4;&#x3092;&#x91CD;&#x306D;&#x308B;&#x4E2D;&#x3067;&#x30C1;&#x30FC;&#x30E0;&#x304C;&#x6587;&#x5B57;&#x901A;&#x308A;&#x4E00;&#x5FC3;&#x540C;&#x4F53;&#x3068;&#x306A;&#x308A;&#x3001;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x52B9;&#x7387;&#x304B;&#x3089;&#x30D5;&#x30ED;&#x30FC;&#x52B9;&#x7387;&#x3078;&#x767A;&#x60F3;&#x3092;&#x8EE2;&#x63DB;&#x3057;&#x3066;&#x3044;&#x304F;&#x904E;&#x7A0B;&#x3092;&#x304A;&#x697D;&#x3057;&#x307F;&#x3044;&#x305F;&#x3060;&#x3051;&#x307E;&#x3059;&#x3002;&#x30CF;&#x30A4;&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3092;&#x76EE;&#x6307;&#x3057;&#x305F;&#x3044;&#x65B9;&#x3001;&#x826F;&#x3044;&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x80B2;&#x3066;&#x305F;&#x3044;&#x65B9;&#x3001;&#x958B;&#x767A;&#x3067;&#x5145;&#x5B9F;&#x611F;&#x3092;&#x5473;&#x308F;&#x3044;&#x305F;&#x3044;&#x65B9;&#x306B;&#x304A;&#x3059;&#x3059;&#x3081;&#x3067;&#x3059;&#x3002;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-13" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">Hono[&#x708E;] Ultrafast web framework for Cloudflare Workers.</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/yusukebe.jpg?cachebuster=456340" />
+                  <author class="block pt-4 font-bold">Yusuke Wada</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/yusukebe">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yusukebe">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://yusukebe.com/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                Talk about Hono - ultrafast web framework that I making, and about the wonder of Cloudflare Workers. &lt;https://github.com/yusukebe/hono&gt;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-14" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">&#x3042;&#x306A;&#x305F;&#x306E;&#x77E5;&#x3089;&#x306A;&#x3044;(&#x304B;&#x3082;&#x3057;&#x308C;&#x306A;&#x3044;)&#x30B3;&#x30A2;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB; </h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/argrath.jpg?cachebuster=456213" />
+                  <author class="block pt-4 font-bold">&#x767D;&#x65B9;&#x5065;&#x592A;&#x90CE; </author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/argrath">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/argrath">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://argrath.ub32.org/annex/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                Perl&#x306E;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x306B;&#x540C;&#x68B1;&#x3057;&#x3066;&#x914D;&#x5E03;&#x3055;&#x308C;&#x308B;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306F;&#x30B3;&#x30A2;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3068;&#x547C;&#x3070;&#x308C;&#x307E;&#x3059;&#x3002; &#x3082;&#x3061;&#x308D;&#x3093;&#x3053;&#x306E;&#x4E2D;&#x306B;&#x306F;Encode&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306E;&#x3088;&#x3046;&#x306A;&#x7121;&#x304F;&#x3066;&#x306F;&#x306A;&#x3089;&#x306A;&#x3044;&#x6709;&#x540D;&#x306A;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x4E2D;&#x306B;&#x306F;&#x300C;&#x77E5;&#x3089;&#x308C;&#x3066;&#x306A;&#x3044;&#x3051;&#x3069;&#x5B9F;&#x306F;&#x4FBF;&#x5229;&#x3063;&#x307D;&#x3044;&#x300D;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3084;&#x300C;&#x3069;&#x3046;&#x3057;&#x3066;&#x30B3;&#x30A2;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x304B;&#x3088;&#x304F;&#x308F;&#x304B;&#x3089;&#x306A;&#x3044;&#x300D;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002; &#x3053;&#x306E;&#x30C8;&#x30FC;&#x30AF;&#x3067;&#x306F;&#x305D;&#x306E;&#x3088;&#x3046;&#x306A;&#x3001;&#x3042;&#x307E;&#x308A;&#x77E5;&#x540D;&#x5EA6;&#x304C;&#x9AD8;&#x304F;&#x306A;&#x3055;&#x305D;&#x3046;&#x306A;&#x30B3;&#x30A2;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306B;&#x3064;&#x3044;&#x3066;&#x63A2;&#x6C42;&#x3057;&#x305F;&#x7D50;&#x679C;&#x3092;&#x6642;&#x9593;&#x306E;&#x9650;&#x308A;&#x3054;&#x7D39;&#x4ECB;&#x3057;&#x307E;&#x3059;&#x3002; 
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-15" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">my$talk=qr{&#8;((?:ir)?reg(?:ular )?exp(?:ressions?)?)&#8;}i;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/dankogai.jpg?cachebuster=455217" />
+                  <author class="block pt-4 font-bold">Dan Kogai</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/dankogai">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/dankogai">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://dankogai.livedoor.blog/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                &#x6B63;&#x898F;&#x8868;&#x73FE;&#x3002;Perl&#x304C;&#x6700;&#x3082;&#x611B;&#x3055;&#x308C;&#x305D;&#x3057;&#x3066;(&#x4E0D;&#x5F53;&#x306B;&#x3082;)&#x618E;&#x307E;&#x308C;&#x308B;&#x7406;&#x7531;&#x306E;&#x4E00;&#x3064;&#x3002;&#x3057;&#x304B;&#x3057;&#x4ECA;&#x3084;&#x6B63;&#x898F;&#x8868;&#x73FE;&#x3092;&#x30B5;&#x30D6;&#x8A00;&#x8A9E;&#x3068;&#x3057;&#x3066;&#x6301;&#x3064;&#x8A00;&#x8A9E;&#x306F;Perl&#x306B;&#x9650;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;&#x672C;talk&#x3067;&#x306F;&#x3053;&#x306E;&#x6700;&#x3082;&#x4EBA;&#x6C17;&#x306E;&#x3042;&#x308B;&#x8A00;&#x8A9E;&#x5185;&#x8A00;&#x8A9E;&#x306B;&#x95A2;&#x3057;&#x3066;&#x3001;&#x6642;&#x9593;&#x304C;&#x8A31;&#x3059;&#x9650;&#x308A;&#x578B;&#x3063;&#x3066;&#x3001;&#x3082;&#x3068;&#x3044;&#x8A9E;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;
+
+* regexp? what is it?
+* $supported_by ~~ @most_major_languages;
+  * but how (much)?\?
+    * Unicode support?
+    * assertions?
+    * modifiers?
+* use CPAN;
+  * Regexp::Assemble;
+  * Regexp::Common;
+* Irregular expressions
+  * qr{(func?(?:tion)(\(((?:(?&gt;[^()]+)|(?2))*)\)))}
+* (ir)?regular questions (?:from|by) the audience
+* ReDOS - Regexp considered harmful!?
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-16" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">Acme&#x3001;&#x5176;&#x306F;Perl&#x306E;&#x30E6;&#x30B0;&#x30C9;&#x30E9;&#x30B7;&#x30EB;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/maka2_donzoko.png?cachebuster=455039" />
+                  <author class="block pt-4 font-bold">makamaka</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/makamaka">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/maka2_donzoko">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="http://www.donzoko.net/gakuya/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                &#x203B;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x306F;tree&#x3067;&#x3059;
+
+CPAN&#x306B;&#x30EA;&#x30EA;&#x30FC;&#x30B9;&#x3055;&#x308C;&#x308B;&#x5168;&#x3066;&#x306E;Acme&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#xFF08;&#x540D;&#x524D;&#x7A7A;&#x9593;&#x306B;Acme&#x3092;&#x542B;&#x3080;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#xFF09;&#x3092;&#x7D39;&#x4ECB;&#x3059;&#x308B;Perl&#x306E;&#x540C;&#x4EBA;&#x6D3B;&#x52D5;&#x306F;&#x3001;2021&#x5E74;&#x5EA6;&#x7248;&#x300E;Acme&#x5927;&#x5168;&#x300F;&#x306E;&#x767A;&#x9175;&#x3092;&#x4EE5;&#x3066;&#x3001;14&#x5E74;&#x9593;&#x306E;&#x6D3B;&#x52D5;&#x306B;&#x7B11;&#x6B62;&#x7B26;&#x3092;&#x6253;&#x3061;&#x307E;&#x3057;&#x305F;&#xFF08;&#x7D42;&#x6B62;&#x7B26;&#x3068;&#x306F;&#x8A00;&#x3063;&#x3066;&#x306A;&#x3044;&#xFF09;&#x3002;
+
+&#x62D9;&#x4F5C;&#x306E;&#x5947;&#x602A;&#x3067;&#x3059;&#x306E;&#x3067;&#x3001;&#x3053;&#x308C;&#x307E;&#x3067;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x6D3B;&#x52D5;&#x306B;&#x53D6;&#x308A;&#x7D44;&#x3093;&#x3067;&#x304D;&#x305F;&#x306E;&#x304B;&#x3001;
+&#x4ECA;&#x307E;&#x3067;&#x51FA;&#x4F1A;&#x3063;&#x305F;&#x4E2D;&#x3067;&#x7279;&#x306B;&#x5370;&#x8C61;&#x8150;&#x6D77;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306F;&#x4F55;&#x3060;&#x3063;&#x305F;&#x306E;&#x304B;&#x3001;
+Acme&#x754C;&#x9688;&#x306E;&#x51FA;&#x6765;&#x4E8B;&#x3084;&#x52D5;&#x5411;&#x3001;&#x305D;&#x3057;&#x3066;&#x300C;&#x3053;&#x308C;&#x304B;&#x3089;&#x300D;&#x306B;&#x3064;&#x3044;&#x3066;&#x5927;&#x3044;&#x306B;&#x9A19;&#x308A;&#x305F;&#x3044;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;
+
+&#x30A2;&#x30B8;&#x30A7;&#x30F3;&#x30C0;
+- Acme&#x306E;&#x6249;
+- &#x5FC5;&#x8981;&#x306F;Acme&#x306E;&#x6BCD;
+- &#x5C11;&#x3005;Acme&#x30A6;&#x30BC;&#x30A7;&#x30CA;
+- &#x661F;&#x306E;Acme
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-17" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">5&#x5E74;&#x306B;&#x308F;&#x305F;&#x308B; &quot;Perl &#x306E;&quot; REST API &#x3092; &quot;Perl &#x3067;&quot; GraphQL API &#x5316;&#x3057;&#x4F5C;&#x308A;&#x76F4;&#x3059;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/mangano_ito.jpg?cachebuster=455610" />
+                  <author class="block pt-4 font-bold">mangano-ito</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/mangano-ito">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/mangano_ito">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://mangano-ito.hatenablog.com/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                &#x306F;&#x3066;&#x306A;&#x30DE;&#x30F3;&#x30AC;&#x30C1;&#x30FC;&#x30E0;&#x3067;&#x958B;&#x767A;&#x3057;&#x3066;&#x3044;&#x308B; GigaViewer &#x306B;&#x304A;&#x3044;&#x3066;&#x306F;&#xFF0C;REST API &#x3092;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x30B5;&#x30A4;&#x30C9;&#x30A8;&#x30F3;&#x30B8;&#x30CB;&#x30A2;&#x304C;&#x30CD;&#x30A4;&#x30C6;&#x30A3;&#x30D6;&#x30A2;&#x30D7;&#x30EA;&#x306E;1&#x753B;&#x9762;&#x3054;&#x3068;&#x306B;&#x6BCE;&#x56DE;&#x4F5C;&#x308A;&#xFF0C;&#x753B;&#x9762;&#x306E;&#x8981;&#x7D20;&#x5909;&#x66F4;&#x306E;&#x305F;&#x3073;&#x306B;&#x3072;&#x305F;&#x3059;&#x3089;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x63D0;&#x4F9B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3057;&#x305F;&#xFF0E;
+
+&#x3053;&#x308C;&#x3092; GraphQL API &#x3068;&#x3057;&#x3066;&#x4F5C;&#x308A;&#x76F4;&#x3057;&#x305F;&#x3053;&#x3068;&#x3067;&#xFF0C;&#x65E2;&#x5B58;&#x5B9F;&#x88C5;&#x306E;&#x518D;&#x5229;&#x7528;&#x6027;&#x3082;&#x9AD8;&#x307E;&#x308A;&#xFF0C;&#x8FFD;&#x52A0;&#x30FB;&#x5909;&#x66F4;&#x6642;&#x306E;&#x958B;&#x767A;&#x52B9;&#x7387;&#x3082;&#x9AD8;&#x304F;&#x306A;&#x308A;&#xFF0C;&#x6C7A;&#x3081;&#x3089;&#x308C;&#x305F;&#x30B9;&#x30AD;&#x30FC;&#x30DE;&#x304B;&#x3089;&#x81EA;&#x7531;&#x306B;&#x5FC5;&#x8981;&#x306A;&#x8981;&#x7D20;&#x3092;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x30B5;&#x30A4;&#x30C9;&#x304B;&#x3089;&#x3082;&#x6271;&#x3044;&#x3084;&#x3059;&#x304F;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#xFF0E;
+
+&#x3053;&#x306E;&#x767A;&#x8868;&#x3067;&#x306F;&#xFF0C;5&#x5E74;&#x306B;&#x308F;&#x305F;&#x308B; Perl &#x306B;&#x3088;&#x308B;&#x65E2;&#x5B58;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x30D9;&#x30FC;&#x30B9;&#x304C;&#x3042;&#x308B;&#x3046;&#x3048;&#x3067;&#xFF0C;&#x3044;&#x304B;&#x306B;&#x3057;&#x3066;&#xFF0C;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3068;&#x7D50;&#x5408;&#x3057; &#x4E0D;&#x8DB3;&#x3059;&#x308B;&#x6A5F;&#x80FD;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x5411;&#x4E0A;&#x30FB;GraphQL &#x30D9;&#x30B9;&#x30C8;&#x30D7;&#x30E9;&#x30AF;&#x30C6;&#x30A3;&#x30B9;&#x3092;&#x5C0E;&#x5165;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x3057;&#x305F;&#x304B;&#x3084;&#xFF0C;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x30C1;&#x30FC;&#x30E0;&#x9593;&#x3067;&#x9023;&#x643A;&#x3057;&#x306A;&#x304C;&#x3089;&#x30B9;&#x30AD;&#x30FC;&#x30DE;&#x30D5;&#x30A1;&#x30FC;&#x30B9;&#x30C8;&#x3067;&#x958B;&#x767A;&#x3092;&#x884C;&#x3044;&#x65E2;&#x5B58;&#x30FB;&#x65B0;&#x898F;&#x30A2;&#x30D7;&#x30EA;&#x306B;&#x5C0E;&#x5165;&#x3057;&#x3066;&#x3044;&#x3051;&#x308B;&#x67D4;&#x8EDF;&#x306A; GraphQL API &#x3092;&#x5B9F;&#x73FE;&#x3057;&#x305F;&#x304B;&#x306B;&#x3064;&#x3044;&#x3066;&#x8A71;&#x3057;&#x307E;&#x3059;&#xFF0E;
+
+## &#x30A2;&#x30B8;&#x30A7;&#x30F3;&#x30C0;
+
+- REST API &#x6642;&#x4EE3;&#x306B;&#x304A;&#x3051;&#x308B;&#x82E6;&#x52B4;&#x306E;&#x7D39;&#x4ECB;
+  - 1&#x753B;&#x9762;1API &#x304B;&#x3089;&#x751F;&#x307E;&#x308C;&#x308B;&#x4E0D;&#x5FC5;&#x8981;&#x306A;&#x60C5;&#x5831;
+  - &#x3088;&#x304F;&#x4F3C;&#x305F;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x306E;&#x5897;&#x52A0;
+  - &#x518D;&#x5229;&#x7528;&#x306E;&#x3057;&#x3065;&#x3089;&#x3055;
+- &#x65E2;&#x5B58;&#x306E;&#x8A2D;&#x8A08;&#x3092;&#x3075;&#x307E;&#x3048;&#x305F;&#x5C0E;&#x5165;
+  - GraphQL &#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;&#x5C0E;&#x5165;
+  - &#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x3068;&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x6539;&#x5584;&#x306E;&#x305F;&#x3081;&#x306E;&#x4ED5;&#x7D44;&#x307F;
+- GraphQL &#x30C7;&#x30D5;&#x30A1;&#x30AF;&#x30C8;&#x30B9;&#x30BF;&#x30F3;&#x30C0;&#x30FC;&#x30C9;&#x306B;&#x63C3;&#x3048;&#x308B;
+  - GraphQL &#x30D9;&#x30B9;&#x30C8;&#x30D7;&#x30E9;&#x30AF;&#x30C6;&#x30A3;&#x30B9;&#x3092;&#x5B9F;&#x73FE;&#x3059;&#x308B;&#x62E1;&#x5F35;
+  - &#x30A8;&#x30E9;&#x30FC;&#x30CF;&#x30F3;&#x30C9;&#x30EA;&#x30F3;&#x30B0;&#x3068;&#x30B9;&#x30AD;&#x30FC;&#x30DE;&#x30D5;&#x30A1;&#x30FC;&#x30B9;&#x30C8;&#x958B;&#x767A;&#x306E;&#x305F;&#x3081;&#x306E;&#x4ED5;&#x7D44;&#x307F;
+- &#x30CD;&#x30A4;&#x30C6;&#x30A3;&#x30D6;&#x30A2;&#x30D7;&#x30EA;&#x958B;&#x767A;&#x30C1;&#x30FC;&#x30E0;&#x30FB;&#x30A6;&#x30A7;&#x30D6;&#x958B;&#x767A;&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x6A2A;&#x65AD;&#x3057;&#x305F;&#x9023;&#x643A;&#x3068;&#x610F;&#x601D;&#x6C7A;&#x5B9A;
+  - GraphQL &#x5C0E;&#x5165;&#x306E;&#x305F;&#x3081;&#x306E;&#x5B9F;&#x9A13;
+  - &#x30B9;&#x30AD;&#x30FC;&#x30DE;&#x306E;&#x6C7A;&#x5B9A;&#x3068;&#x6574;&#x5408;&#x6027;&#x3092;&#x53D6;&#x308B;&#x305F;&#x3081;&#x306E;&#x4F1A;
+- &#x3069;&#x3046;&#x826F;&#x304F;&#x306A;&#x3063;&#x305F;&#x304B;
+  - &#x30D7;&#x30ED;&#x30C8;&#x30BF;&#x30A4;&#x30D7;&#x3065;&#x304F;&#x308A;&#x304C;&#x7C21;&#x5358;&#x306B;
+  - &#x30A6;&#x30A7;&#x30D6;&#x3067;&#x3082;&#x4F7F;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x305F;
+  - &#x6A5F;&#x80FD;&#x306E;&#x8FFD;&#x52A0;&#x5909;&#x66F4;&#x304C;&#x7C21;&#x5358;&#x306B;
+
+## &#x30B4;&#x30FC;&#x30EB;
+
+- Perl &#x306B;&#x3088;&#x308B; GraphQL &#x958B;&#x767A;&#x306E;&#x305F;&#x3081;&#x306E;&#x77E5;&#x898B;&#x3068;&#x624B;&#x6BB5;&#x306B;&#x3064;&#x3044;&#x3066;&#x77E5;&#x308B;
+- &#x30D7;&#x30ED;&#x30C0;&#x30AF;&#x30C8;&#x306E;&#x7279;&#x6027;&#x306B;&#x5FDC;&#x3058;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x62E1;&#x5F35;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x958B;&#x767A;&#x52B9;&#x7387;&#x3092;&#x4E0A;&#x3052;&#x308B;
+- &#x30C1;&#x30FC;&#x30E0;&#x3092;&#x6A2A;&#x65AD;&#x3057;&#x305F;&#x67A0;&#x7D44;&#x307F;&#x3067;&#x5171;&#x540C;&#x958B;&#x767A;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x610F;&#x601D;&#x6C7A;&#x5B9A;&#x3057;&#x3066;&#x9032;&#x3081;&#x308B;
+
+## &#x5BFE;&#x8C61;&#x8005;
+
+- Perl &#x306B;&#x3088;&#x308B; GraphQL &#x958B;&#x767A;&#x306B;&#x8208;&#x5473;&#x306E;&#x3042;&#x308B;&#x958B;&#x767A;&#x8005;
+- &#x65E2;&#x5B58;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x6D3B;&#x304B;&#x3057;&#x3066;&#x3088;&#x308A;&#x67D4;&#x8EDF;&#x306A; API &#x3092;&#x63D0;&#x4F9B;&#x3057;&#x305F;&#x3044;&#x958B;&#x767A;&#x8005;
+- &#x65E2;&#x306B; GraphQL &#x958B;&#x767A;&#x3092;&#x884C;&#x3063;&#x3066;&#x3044;&#x3066;&#x4ED6;&#x793E;&#x4E8B;&#x4F8B;&#x304C;&#x6C17;&#x306B;&#x306A;&#x308B;&#x958B;&#x767A;&#x8005;
+- &#x30C1;&#x30FC;&#x30E0;&#x3092;&#x6A2A;&#x65AD;&#x3057;&#x305F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x884C;&#x3046;&#x958B;&#x767A;&#x8005;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-18" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">&#x3058;&#x308F;&#x3058;&#x308F;&#x3068;Perl&#x304B;&#x3089;Go&#x306B;&#x79FB;&#x884C;&#x3057;&#x3088;&#x3046;&#x3068;&#x3057;&#x3066;&#x3044;&#x308B;&#x4FFA;&#x9054;&#x306E;&#x30DE;&#x30A4;&#x30AF;&#x30ED;&#x30B5;&#x30FC;&#x30D3;&#x30B7;&#x30FC;&#x30BA;&#x306E;&#x7D39;&#x4ECB;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/mackee_w.jpg?cachebuster=456214" />
+                  <author class="block pt-4 font-bold">macopy</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/mackee">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/mackee_w">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://mackee.hatenablog.com/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                &#x307F;&#x306A;&#x3055;&#x3093;&#x306F;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3092;&#x904B;&#x55B6;&#x3057;&#x3066;&#x3044;&#x3066;&#x3001;&#x6280;&#x8853;&#x7684;&#x306A;&#x8981;&#x56E0;&#x3001;&#x3082;&#x3057;&#x304F;&#x306F;&#x63A1;&#x7528;&#x7684;&#x306A;&#x8981;&#x56E0;&#x3067;Perl&#x3067;&#x3053;&#x308C;&#x304B;&#x3089;&#x5C06;&#x6765;&#x3084;&#x3063;&#x3066;&#x3044;&#x304F;&#x3053;&#x3068;&#x306B;&#x884C;&#x304D;&#x8A70;&#x307E;&#x3063;&#x3066;&#x3057;&#x307E;&#x3046;&#x3053;&#x3068;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x304B;&#x3002;
+&#x3042;&#x308A;&#x307E;&#x3059;&#x3088;&#x306D;&#x3001;&#x305D;&#x3046;&#x3042;&#x308B;&#x3093;&#x3067;&#x3059;&#x3088;&#xFF01;
+
+&#x3068;&#x3044;&#x3046;&#x308F;&#x3051;&#x3067;&#x9762;&#x767D;&#x6CD5;&#x4EBA;&#x30AB;&#x30E4;&#x30C3;&#x30AF;&#x304C;&#x904B;&#x55B6;&#x3059;&#x308B;&#x30C8;&#x30FC;&#x30CA;&#x30E1;&#x30F3;&#x30C8;Tonamel&#x306F;&#x69D8;&#x3005;&#x306A;&#x7406;&#x7531;&#x306B;&#x3088;&#x308A;&#x3001;&#x3058;&#x308F;&#x3063;&#x3058;&#x308F;&#x3063;&#x3068;Perl&#x3092;&#x4E3B;&#x8EF8;&#x3068;&#x3057;&#x305F;&#x30E2;&#x30CE;&#x30EA;&#x30B9;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304B;&#x3089;&#x3001;Go&#x3092;&#x4E3B;&#x4F53;&#x3068;&#x3057;&#x305F;&#x30DE;&#x30A4;&#x30AF;&#x30ED;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x7FA4;&#x3078;&#x6A5F;&#x80FD;&#x3092;&#x79FB;&#x8A2D;&#x3057;&#x3066;&#x3044;&#x308B;&#x771F;&#x3063;&#x6700;&#x4E2D;&#x3067;&#x3054;&#x3056;&#x3044;&#x307E;&#x3059;&#x3002;
+
+&#x3053;&#x306E;&#x30C8;&#x30FC;&#x30AF;&#x3067;&#x306F;&#x3001;2020&#x5E74;&#x304B;&#x3089;&#x59CB;&#x3081;&#x305F;&#x79FB;&#x884C;&#x306E;&#x6B69;&#x307F;&#x3092;&#x9053;&#x534A;&#x3070;&#x3067;&#x3059;&#x304C;&#x7D39;&#x4ECB;&#x3057;&#x307E;&#x3059;&#x3002;
+
+* &#x79FB;&#x884C;&#x306B;&#x969B;&#x3057;&#x3066;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x73FE;&#x72B6;&#x3068;&#x6280;&#x8853;&#x7684;&#x3082;&#x3057;&#x304F;&#x306F;&#x958B;&#x767A;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x7684;&#x306B;&#x6298;&#x308A;&#x5408;&#x3044;&#x3092;&#x3064;&#x3051;&#x3066;&#x3044;&#x304F;&#x304B;
+* &#x3069;&#x3046;&#x3084;&#x3063;&#x3066;2&#x3064;&#x306E;&#x8A00;&#x8A9E;&#x3092;&#x5171;&#x5B58;&#x3055;&#x305B;&#x308B;&#x304B;
+* &#x8A8D;&#x8A3C;&#x3092;&#x3069;&#x3046;&#x3059;&#x308B;&#x304B;
+  * &#x307E;&#x3060;Perl&#x304B;&#x3089;&#x5265;&#x304C;&#x305B;&#x3066;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;Perl&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304C;API Gateway&#x306E;&#x5F79;&#x5272;&#x3092;&#x6301;&#x3063;&#x3066;&#x3044;&#x308B;&#x8A71;
+
+&#x306A;&#x3069;&#x306A;&#x3069;&#x3001;&#x305D;&#x306E;&#x3078;&#x3093;&#x306E;&#x3088;&#x3082;&#x3084;&#x307E;&#x3092;&#x8A71;&#x3057;&#x307E;&#x3059;&#x3002;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-19" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">TypeScript &#x3078;&#x578B;&#x5B89;&#x5168;&#x6027;&#x3092;&#x9AD8;&#x3081;&#x306A;&#x304C;&#x3089;&#x30EA;&#x30D7;&#x30EC;&#x30FC;&#x30B9;&#x3059;&#x308B;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/_kimuson.jpg?cachebuster=456311" />
+                  <author class="block pt-4 font-bold">kimuson</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/d-kimuson">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/_kimuson">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://kimuson.dev/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                Perl &#x3084; JavaScript &#x7B49;&#x306E;&#x52D5;&#x7684;&#x578B;&#x4ED8;&#x3051;&#x8A00;&#x8A9E;&#x3067;&#x306F;&#x67D4;&#x8EDF;&#x6027;&#x304C;&#x9AD8;&#x3044;&#x5229;&#x70B9;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x8907;&#x96D1;&#x5316;&#x3057;&#x3066;&#x304D;&#x3066;&#x601D;&#x3046;&#x3088;&#x3046;&#x306B;&#x958B;&#x767A;&#x901F;&#x5EA6;&#x304C;&#x51FA;&#x306A;&#x304B;&#x3063;&#x305F;&#x308A;&#x3001;&#x30E1;&#x30F3;&#x30C6;&#x30CA;&#x30F3;&#x30B9;&#x304C;&#x5927;&#x5909;&#x3060;&#x3063;&#x305F;&#x308A;&#x3068;&#x8A00;&#x3063;&#x305F;&#x3064;&#x3089;&#x3055;&#x3092;&#x611F;&#x3058;&#x3066;&#x306F;&#x3044;&#x307E;&#x305B;&#x3093;&#x304B;&#xFF1F;
+&#x672C;&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x306F;&#x52D5;&#x7684;&#x578B;&#x4ED8;&#x3051;&#x8A00;&#x8A9E;&#x306B;&#x9759;&#x7684;&#x578B;&#x3092;&#x3064;&#x3051;&#x308B;&#x300C;&#x6F38;&#x9032;&#x7684;&#x578B;&#x4ED8;&#x3051;&#x300D;&#x306B;&#x89E6;&#x308C;&#x306A;&#x304C;&#x3089;&#x3001;JavaScript &#x3092;&#x7DE9;&#x3044;&#x578B;&#x4ED8;&#x3051;&#x306E; TypeScritpt &#x3078;&#x3001;&#x305D;&#x3057;&#x3066;&#x3088;&#x308A;&#x5805;&#x3044; TypeScript &#x3078;&#x3068;&#x79FB;&#x884C;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x306B;&#x3064;&#x3044;&#x3066;&#x3001;&#x5B9F;&#x969B;&#x306E;&#x30EA;&#x30D7;&#x30EC;&#x30FC;&#x30B9;&#x4E8B;&#x4F8B;&#x3092;&#x4EA4;&#x3048;&#x3066;&#x7D39;&#x4ECB;&#x3057;&#x307E;&#x3059;&#x3002;
+
+&#x30C8;&#x30D4;&#x30C3;&#x30AF;
+- &#x52D5;&#x7684;&#x578B;&#x4ED8;&#x3051;&#x8A00;&#x8A9E;&#x3064;&#x3089;&#x3044;
+  - Perl &#x3068; JavaScript &#x306E;&#x5B9F;&#x4F8B;
+- &#x6F38;&#x9032;&#x7684;&#x578B;&#x4ED8;&#x3051;&#x3063;&#x3066;&#x306A;&#x306B; 
+- &#x304C;&#x3093;&#x3070;&#x3089;&#x306A;&#x3044; TypeScript: &#x7DE9;&#x3044;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x306A;&#x3089;&#x7C21;&#x5358;&#x306B;&#x79FB;&#x884C;&#x3067;&#x304D;&#x308B;
+- &#x30E1;&#x30EA;&#x30CF;&#x30EA;&#x306E;&#x3042;&#x308B; TypeScript: &#x5805;&#x3044;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x90E8;&#x5206;&#x7684;&#x306B;&#x7121;&#x52B9;&#x306B;&#x3057;&#x306A;&#x304C;&#x3089;&#x79FB;&#x884C;&#x3059;&#x308B;
+- &#x30EA;&#x30D7;&#x30EC;&#x30FC;&#x30B9;&#x624B;&#x9806;
+- &#x30EA;&#x30D7;&#x30EC;&#x30FC;&#x30B9;&#x306E;&#x7D50;&#x679C;
+
+&#x60F3;&#x5B9A;&#x30BF;&#x30FC;&#x30B2;&#x30C3;&#x30C8;
+- &#x904B;&#x7528;&#x6B74;&#x306E;&#x9577;&#x304F;&#x30D5;&#x30ED;&#x30F3;&#x30C8;&#x30A8;&#x30F3;&#x30C9;&#x306E;&#x74B0;&#x5883;&#x304C;&#x30EC;&#x30AC;&#x30B7;&#x30FC;&#x306A;&#x30D7;&#x30ED;&#x30C0;&#x30AF;&#x30C8;&#x3067;&#x958B;&#x767A;&#x3092;&#x3057;&#x3066;&#x3044;&#x308B;&#x4EBA;
+  - JavaScript &#x3092;&#x4F7F;&#x3063;&#x3066;&#x308B; or TypeScript &#x306B;&#x7F6E;&#x304D;&#x63DB;&#x3048;&#x6E08;&#x307F;&#x3060;&#x304C;&#x7DE9;&#x3044;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x601D;&#x3046;&#x3088;&#x3046;&#x306B;&#x6069;&#x6075;&#x3092;&#x53D7;&#x3051;&#x3089;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;
+- &#x52D5;&#x7684;&#x578B;&#x4ED8;&#x3051;&#x8A00;&#x8A9E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-20" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">&#x30B9;&#x30AF;&#x30E9;&#x30E0;&#x3067;&#x3064;&#x304F;&#x308B;&#x983C;&#x3082;&#x3057;&#x304F;&#x751F;&#x304D;&#x751F;&#x304D;&#x3068;&#x3057;&#x305F;&#x30C1;&#x30FC;&#x30E0;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/yigarashi_9.jpg?cachebuster=454791" />
+                  <author class="block pt-4 font-bold">&#x4E94;&#x5341;&#x5D50;&#x96C4;</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/yigarashi-9">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yigarashi_9">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://yigarashi.hatenablog.com/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                &#x306F;&#x3066;&#x306A;&#x30D6;&#x30C3;&#x30AF;&#x30DE;&#x30FC;&#x30AF;&#x306E;Web&#x30C1;&#x30FC;&#x30E0;&#x3067;&#x306F;&#x3001;&#x958B;&#x767A;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x306B;&#x30B9;&#x30AF;&#x30E9;&#x30E0;&#x3092;&#x63A1;&#x7528;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x306A;&#x304B;&#x306A;&#x304B;&#x30B9;&#x30AF;&#x30E9;&#x30E0;&#x3092;&#x4E57;&#x308A;&#x3053;&#x306A;&#x305B;&#x306A;&#x3044;&#x6642;&#x671F;&#x304C;&#x7D9A;&#x3044;&#x3066;&#x3044;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;2021&#x5E74;10&#x6708;&#x306B;&#x5927;&#x304D;&#x306A;&#x8EE2;&#x671F;&#x304C;&#x3042;&#x308A;&#x3001;&#x30C1;&#x30FC;&#x30E0;&#x304C;&#x5287;&#x7684;&#x306A;&#x9032;&#x5316;&#x3092;&#x9042;&#x3052;&#x307E;&#x3057;&#x305F;&#x3002;&#x4ECA;&#x3067;&#x306F;&#x3001;2&#x9031;&#x9593;&#x30B9;&#x30D7;&#x30EA;&#x30F3;&#x30C8;&#x306E;&#x30B4;&#x30FC;&#x30EB;&#x3092;&#x9069;&#x5207;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x3001;&#x305D;&#x306E;&#x9054;&#x6210;&#x306E;&#x9053;&#x306E;&#x308A;&#x3092;&#x697D;&#x3057;&#x3080;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x30B9;&#x30D7;&#x30EA;&#x30F3;&#x30C8;&#x306E;&#x30B4;&#x30FC;&#x30EB;&#x3092;&#x9054;&#x6210;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x3001;&#x30BF;&#x30B9;&#x30AF;&#x306E;&#x5206;&#x89E3;&#x3084;&#x65E5;&#x3005;&#x306E;&#x30B3;&#x30DF;&#x30E5;&#x30CB;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3082;&#x6D3B;&#x767A;&#x306B;&#x306A;&#x308A;&#x3001;&#x5B89;&#x5B9A;&#x3057;&#x305F;&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x3092;&#x767A;&#x63EE;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x305D;&#x306E;&#x5B89;&#x5B9A;&#x3057;&#x305F;&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x3092;&#x80CC;&#x666F;&#x306B;&#x3001;&#x5C11;&#x3057;&#x9060;&#x3044;&#x672A;&#x6765;&#x306E;&#x4E88;&#x5B9A;&#x306B;&#x3064;&#x3044;&#x3066;&#x3082;&#x3001;&#x6839;&#x62E0;&#x3092;&#x6301;&#x3063;&#x3066;&#x7B54;&#x3048;&#x3089;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;&#x3053;&#x306E;&#x767A;&#x8868;&#x3067;&#x306F;&#x3001;&#x30B9;&#x30AF;&#x30E9;&#x30E0;&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x5927;&#x304D;&#x304F;&#x9032;&#x5316;&#x3055;&#x305B;&#x305F;&#x65B9;&#x6CD5;&#x3084;&#x3001;&#x5B9F;&#x4F53;&#x9A13;&#x3092;&#x901A;&#x3058;&#x3066;&#x5B66;&#x3093;&#x3060;&#x30B9;&#x30AF;&#x30E9;&#x30E0;&#x306E;&#x30D1;&#x30EF;&#x30FC;&#x3092;&#x304A;&#x4F1D;&#x3048;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x767A;&#x8868;&#x3092;&#x805E;&#x3044;&#x305F;&#x3042;&#x306A;&#x305F;&#x306F;&#x3001;&#x304D;&#x3063;&#x3068;&#x81EA;&#x5206;&#x306E;&#x30C1;&#x30FC;&#x30E0;&#x3067;&#x3082;&#x30B9;&#x30AF;&#x30E9;&#x30E0;&#x3092;&#x5B9F;&#x8DF5;&#x3057;&#x3066;&#x307F;&#x305F;&#x304F;&#x306A;&#x308B;&#x3053;&#x3068;&#x3067;&#x3057;&#x3087;&#x3046;&#xFF01;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-21" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">7&#x5E74;&#x9593;&#x904B;&#x7528;&#x3057;&#x305F;&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30B2;&#x30FC;&#x30E0;&#x3092;Amazon EC2&#x69CB;&#x6210;&#x304B;&#x3089;Amazon ECS&#x69CB;&#x6210;&#x3078;&#x3068;&#x4E57;&#x308A;&#x63DB;&#x3048;&#x305F;&#x8A71;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/commojun.jpg?cachebuster=455198" />
+                  <author class="block pt-4 font-bold">commojun</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/commojun">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/commojun">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                &#x5F0A;&#x793E;KAYAC&#x3067;&#x904B;&#x7528;&#x3057;&#x3066;&#x3044;&#x308B;&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30B2;&#x30FC;&#x30E0;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x300C;&#x307C;&#x304F;&#x3089;&#x306E;&#x7532;&#x5B50;&#x5712;&#xFF01;&#x30DD;&#x30B1;&#x30C3;&#x30C8;&#x300D;&#x306F;&#x3001;2014&#x5E74;&#x306E;&#x30EA;&#x30EA;&#x30FC;&#x30B9;&#x304B;&#x3089;&#x3001;7&#x5468;&#x5E74;&#x3092;&#x8FCE;&#x3048;&#x307E;&#x3057;&#x305F;&#x3002;&#x958B;&#x767A;&#x30C1;&#x30FC;&#x30E0;&#x3067;&#x306F;&#x3001;Amazon Linux OS&#x306E;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x7D42;&#x4E86;&#x306B;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x304D;&#x3063;&#x304B;&#x3051;&#x306B;&#x3001;Amazon EC2&#x69CB;&#x6210;&#x304B;&#x3089;Amazon ECS&#x69CB;&#x6210;&#x3078;&#x306E;&#x4E57;&#x308A;&#x63DB;&#x3048;&#x3092;&#x3059;&#x308B;&#x3068;&#x3044;&#x3046;&#x6C7A;&#x65AD;&#x3092;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;
+- &#x5F93;&#x6765;&#x306E;EC2&#x306B;&#x3088;&#x308B;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x69CB;&#x6210;&#x304B;&#x3089;&#x30B3;&#x30F3;&#x30C6;&#x30CA;&#x30D9;&#x30FC;&#x30B9;&#x306E;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x69CB;&#x6210;&#x3078;&#x3068;&#x4E57;&#x308A;&#x63DB;&#x3048;&#x308B;&#x3053;&#x3068;&#x3067;&#x5927;&#x304D;&#x304F;&#x5909;&#x308F;&#x3063;&#x305F;&#x70B9;
+- &#x30EA;&#x30EA;&#x30FC;&#x30B9;&#x6642;&#x304B;&#x3089;&#x30A2;&#x30C3;&#x30D7;&#x30C7;&#x30FC;&#x30C8;&#x3055;&#x308C;&#x305A;&#x7DAD;&#x6301;&#x3055;&#x308C;&#x3066;&#x3044;&#x305F;&#x3001;Perl&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3092;5.16&#x304B;&#x3089;5.30&#x3078;&#x3068;&#x30A2;&#x30C3;&#x30D7;&#x30C7;&#x30FC;&#x30C8;&#x3057;&#x305F;&#x969B;&#x306E;&#x82E6;&#x52B4;
+- &#x9577;&#x3044;&#x6B74;&#x53F2;&#x3067;&#x80A5;&#x5927;&#x5316;&#x3057;&#x3066;&#x3057;&#x307E;&#x3063;&#x305F;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x7279;&#x6709;&#x306E;&#x554F;&#x984C;&#x3068;&#x305D;&#x306E;&#x5BFE;&#x51E6;&#x3001;&#x3069;&#x3046;&#x3057;&#x3066;&#x3082;SPOF&#x3068;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3063;&#x3066;&#x3044;&#x305F;&#x30D0;&#x30C3;&#x30C1;&#x30B5;&#x30FC;&#x30D0;&#x3092;&#x5197;&#x9577;&#x5316;&#x3059;&#x308B;&#x4F5C;&#x6226;
+- &#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x69CB;&#x6210;&#x306E;&#x5237;&#x65B0;&#x3068;&#x3044;&#x3063;&#x305F;&#x3088;&#x3046;&#x306A;&#x3001;&#x5C02;&#x9580;&#x7684;&#x3067;&#x3001;&#x975E;&#x30A8;&#x30F3;&#x30B8;&#x30CB;&#x30A2;&#x306B;&#x306F;&#x305D;&#x306E;&#x6069;&#x6075;&#x304C;&#x5B9F;&#x611F;&#x3055;&#x308C;&#x3065;&#x3089;&#x3044;&#x4ED5;&#x4E8B;&#x3092;&#x7406;&#x89E3;&#x3057;&#x3066;&#x3082;&#x3089;&#x3044;&#x5354;&#x529B;&#x3092;&#x5F97;&#x308B;&#x3053;&#x3068;&#x306E;&#x91CD;&#x8981;&#x6027;
+&hellip;&#x306A;&#x3069;&#x3001;&#x4E00;&#x9023;&#x306E;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x5237;&#x65B0;&#x4F5C;&#x696D;&#x3092;&#x901A;&#x3057;&#x3066;&#x69D8;&#x3005;&#x306A;&#x5B66;&#x3073;&#x304C;&#x5F97;&#x3089;&#x308C;&#x305F;&#x306E;&#x3067;&#x3001;&#x305D;&#x308C;&#x3089;&#x306B;&#x3064;&#x3044;&#x3066;&#x304A;&#x8A71;&#x3055;&#x305B;&#x3066;&#x3044;&#x305F;&#x3060;&#x304D;&#x305F;&#x3044;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-22" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">ReDoS &#x691C;&#x51FA;&#x306E;&#x6700;&#x5148;&#x7AEF; recheck &#x306E;&#x7D39;&#x4ECB;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/make_now_just.png?cachebuster=456006" />
+                  <author class="block pt-4 font-bold">&#x85E4;&#x6D6A;&#x5927;&#x5F25; (@MakeNowJust)</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/MakeNowJust">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/make_now_just">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://makenowjust-labo.github.io/blog/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                Perl &#x3092;&#x306F;&#x3058;&#x3081;&#x591A;&#x304F;&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DF;&#x30F3;&#x30B0;&#x8A00;&#x8A9E;&#x306E;&#x6B63;&#x898F;&#x8868;&#x73FE;&#x306E;&#x30DE;&#x30C3;&#x30C1;&#x30F3;&#x30B0;&#x3067;&#x306F;&#x30D0;&#x30C3;&#x30AF;&#x30C8;&#x30E9;&#x30C3;&#x30AD;&#x30F3;&#x30B0;&#x304C;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#xFF0C;&#x6B63;&#x898F;&#x8868;&#x73FE;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;&#x30D0;&#x30C3;&#x30AF;&#x30C8;&#x30E9;&#x30C3;&#x30AD;&#x30F3;&#x30B0;&#x304C;&#x7206;&#x767A;&#x3057;&#xFF0C;&#x30DE;&#x30C3;&#x30C1;&#x30F3;&#x30B0;&#x306B;&#x591A;&#x5927;&#x306A;&#x6642;&#x9593;&#x3092;&#x6D88;&#x8CBB;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF0E;&#x3053;&#x308C;&#x3092;&#x5229;&#x7528;&#x3057;&#x305F; DoS &#x653B;&#x6483;&#x306E;&#x4E00;&#x7A2E;&#x304C; ReDoS &#x3068;&#x547C;&#x3070;&#x308C;&#x307E;&#x3059;&#xFF0E;
+&#x767A;&#x8868;&#x8005;&#x306F; recheck &#x3068;&#x3044;&#x3046; ReDoS &#x691C;&#x51FA;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0; (https://github.com/MakeNowJust-Labo/recheck) &#x3092;&#x958B;&#x767A;&#x30FB;&#x516C;&#x958B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#xFF0E;&#x3053;&#x308C;&#x306F;&#x6700;&#x5148;&#x7AEF;&#x306E; ReDoS &#x691C;&#x51FA;&#x30A2;&#x30EB;&#x30B4;&#x30EA;&#x30BA;&#x30E0;&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x3066;&#xFF0C;&#x9AD8;&#x901F;&#x304B;&#x3064;&#x6B63;&#x78BA;&#x306A;&#x691C;&#x51FA;&#x304C;&#x53EF;&#x80FD;&#x3068;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#xFF0E;
+&#x767A;&#x8868;&#x3067;&#x306F;&#xFF0C;ReDoS &#x3068;&#x3044;&#x3046;&#x8106;&#x5F31;&#x6027;&#x304C;&#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x304B;&#xFF0C;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066; ReDoS &#x3092;&#x691C;&#x51FA;&#x3059;&#x308B;&#x306E;&#x304B;&#xFF0C;ReDoS &#x3092;&#x9632;&#x3050;&#x305F;&#x3081;&#x306B;&#x306F;&#x3069;&#x3046;&#x3059;&#x308C;&#x3070;&#x3088;&#x3044;&#x306E;&#x304B;&#xFF0C;&#x3068;&#x3044;&#x3063;&#x305F;&#x70B9;&#x306B;&#x3064;&#x3044;&#x3066;&#x89E3;&#x8AAC;&#x3057;&#x307E;&#x3059;&#xFF0E;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-23" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">perlimports&#x304B;&#x3089;&#x63A2;&#x308B;PPI&#x306E;&#x4E16;&#x754C;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/AnaTofuZ.jpg?cachebuster=454709" />
+                  <author class="block pt-4 font-bold">&#x516B;&#x96F2;&#x30A2;&#x30CA;&#x30B0;&#x30E9;</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/AnaTofuZ">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/AnaTofuZ">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://anatofuz.hatenablog.com/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                TPC 2021 in the Cloud&#x3067;&#x767A;&#x8868;&#x3055;&#x308C;&#x305F;perlimports&#x306F;&#x3001;Perl&#x306E;&#x95A2;&#x6570;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x6A5F;&#x68B0;&#x7684;&#x306B;&#x6574;&#x7406;&#x3057;&#x3066;&#x304F;&#x308C;&#x308B;&#x753B;&#x671F;&#x7684;&#x306A;&#x30C4;&#x30FC;&#x30EB;&#x3067;&#x3057;&#x305F;&#x3002;Perl&#x3067;&#x66F8;&#x304B;&#x308C;&#x305F;perlimports&#x306F;&#x3001;&#x95A2;&#x6570;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x5BFE;&#x8C61;&#x306E;&#x95A2;&#x6570;&#x540D;&#x306E;&#x89E3;&#x6C7A;&#x306B;PPI&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x9759;&#x7684;&#x89E3;&#x6790;&#x30C4;&#x30FC;&#x30EB;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
+&#x672C;&#x30C8;&#x30FC;&#x30AF;&#x3067;&#x306F;perlimports&#x306E;&#x7D39;&#x4ECB;&#x3092;&#x901A;&#x3057;&#x3066;&#x3001;PPI&#x3092;&#x5229;&#x7528;&#x3057;&#x305F;Perl&#x306E;&#x9759;&#x7684;&#x89E3;&#x6790;&#x306E;&#x4E16;&#x754C;&#x3092;&#x8997;&#x3044;&#x3066;&#x307F;&#x307E;&#x3059;&#x3002;
+
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+      <div id="talk-24" class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+        <a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+        <div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+          <div class="h-full overflow-scroll">
+            <div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+              <h2 class="text-xl font-bold text-center lg:text-2xl">&#x30A8;&#x30F3;&#x30B8;&#x30CB;&#x30A2;&#x306E;&#x500B;&#x4EBA;&#x30D6;&#x30E9;&#x30F3;&#x30C7;&#x30A3;&#x30F3;&#x30B0;&#x3068;&#x6280;&#x8853;&#x7D44;&#x7E54;</h2>
+              <div class="md:flex">
+                <div class="flex-1 mt-6 text-center sm:mt-8">
+                    <img class="inline-block w-24 h-24 rounded-full" src="/2022online/assets/images/speaker/onk.jpg?cachebuster=456394" />
+                  <author class="block pt-4 font-bold">Takafumi ONAKA</author>
+                  <div class="flex items-center justify-center mt-3 gap-3">
+                    <a target="_blank" href="https://github.com/onk">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-github.svg" alt="GitHub" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/onk">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a target="_blank" class="underline" href="https://onk.hatenablog.jp/">
+                      <img class="inline-block w-6 h-6" src="./assets/images/icon-link.svg" alt="Blog" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-sm sm:my-8 lg:text-base">
+                <pre class="whitespace-pre-line">
+                &#x50D5;&#x3089;&#x306F;&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30CD;&#x30C3;&#x30C8;&#x4E0A;&#x3067;&#x958B;&#x767A;&#x306E;&#x77E5;&#x898B;&#x3092;&#x5F97;&#x308B;&#x3053;&#x3068;&#x306B;&#x3088;&#x3063;&#x3066;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3092;&#x958B;&#x767A;&#x30FB;&#x904B;&#x55B6;&#x3067;&#x304D;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30CD;&#x30C3;&#x30C8;&#x306B;&#x9084;&#x5143;&#x3057;&#x305F;&#x3044;&#x3002;&#x305D;&#x3093;&#x306A;&#x6C17;&#x6301;&#x3061;&#x304B;&#x3089;&#x3001;&#x4F1A;&#x793E;&#x3067;&#x3082;&#x30A2;&#x30A6;&#x30C8;&#x30D7;&#x30C3;&#x30C8; (&#x767B;&#x58C7;&#x3084;&#x6280;&#x8853;&#x30D6;&#x30ED;&#x30B0;&#x3001;&#x57F7;&#x7B46;&#x3001;OSS &#x6D3B;&#x52D5;&#x7B49;) &#x304C;&#x63A8;&#x5968;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
+&#x793E;&#x3068;&#x3057;&#x3066;&#x306E;&#x6280;&#x8853;&#x30D6;&#x30ED;&#x30B0;&#x3082;&#x5B58;&#x5728;&#x3057;&#x307E;&#x3059;&#x304C;&#x3001;&#x30B9;&#x30BF;&#x30C3;&#x30D5;&#x500B;&#x4EBA;&#x306E;&#x30D6;&#x30ED;&#x30B0;&#x3092;&#x901A;&#x3058;&#x3066;&#x767A;&#x4FE1;&#x3059;&#x308B;&#x306E;&#x3082;&#x540C;&#x3058;&#x3088;&#x3046;&#x306B;&#x63A8;&#x5968;&#x3057;&#x3066;&#x3044;&#x304D;&#x305F;&#x3044;&#x3002;&#x30A8;&#x30F3;&#x30B8;&#x30CB;&#x30A2;&#x306E;&#x500B;&#x4EBA;&#x30D6;&#x30E9;&#x30F3;&#x30C7;&#x30A3;&#x30F3;&#x30B0;&#x3082;&#x5927;&#x4E8B;&#x3060;&#x3068;&#x8003;&#x3048;&#x3066;&#x3044;&#x308B;&#x3057;&#x3001;&#x81EA;&#x5206;&#x306E;&#x5834;&#x6240;&#x306E;&#x65B9;&#x304C;&#x66F8;&#x304D;&#x3084;&#x3059;&#x3044;&#x3068;&#x3044;&#x3046;&#x306E;&#x3082;&#x611F;&#x3058;&#x3066;&#x3044;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;
+&#x305D;&#x306E;&#x4E0A;&#x3067;&#x3001;&#x793E;&#x5185;&#x5916;&#x306E;&#x8272;&#x3093;&#x306A;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306B;&#x6563;&#x3089;&#x3070;&#x3063;&#x305F;&#x6280;&#x8853; Tips &#x3092;&#x4E0A;&#x624B;&#x304F;&#x307E;&#x3068;&#x3081;&#x3066;&#x518D;&#x653E;&#x6D41;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x624B;&#x8EFD;&#x306B;&#x60C5;&#x5831;&#x3092;&#x6442;&#x53D6;&#x3057;&#x3001;&#x6280;&#x8853;&#x7684;&#x597D;&#x5947;&#x5FC3;&#x3092;&#x6E80;&#x305F;&#x3057;&#x3001;&#x6210;&#x9577;&#x3057;&#x7D9A;&#x3051;&#x3089;&#x308C;&#x308B;&#x74B0;&#x5883;&#x3092;&#x7528;&#x610F;&#x3057;&#x305F;&#x3044;&#x3002;
+&#x305D;&#x3093;&#x306A;&#x3001;&#x500B;&#x4EBA;&#x306E;&#x96C6;&#x5408;&#x4F53;&#x3068;&#x3057;&#x3066;&#x306E;&#x6280;&#x8853;&#x30B3;&#x30DF;&#x30E5;&#x30CB;&#x30C6;&#x30A3;&#x3092;&#x904B;&#x55B6;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x3068;&#x3001;&#x305D;&#x306E;&#x305F;&#x3081;&#x306B;&#x958B;&#x767A;&#x3057;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306B;&#x3064;&#x3044;&#x3066;&#x7D39;&#x4ECB;&#x3057;&#x307E;&#x3059;&#x3002;
+                </pre>
+              </div>
+            </div>
+          </div>
+          <a href="#__" class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+        </div>
+      </div>
+
+      <footer class="bg-bg-dark py-12">
+        <div class="flex justify-center pb-7 gap-3">
+          <a href="https://twitter.com/yapcjapan" title="Twitter" target="_blank"><img class="w-[35px]" src="./assets/images/btn_t.png?cachebuster=455461" alt="Twitter" /></a>
+          <a href="https://www.facebook.com/yapcjapan/" title="Facebook" target="_blank"><img class="w-[35px]" src="./assets/images/btn_f.png?cachebuster=456086" alt="Facebook" /></a>
+        </div>
+        <address class="text-center not-italic">
+          <a href="http://japan.perlassociation.org/" target="_blank"><img class="w-[90px] inline-block" src="./assets/images/jpa.png?cachebuster=455677" alt="JPA" /></a>
+          <p class="text-xs mt-3 text-jpa">© 2022 Japan Perl Association</p>
+        </address>
+      </footer>
   </body>
 </html>
 
