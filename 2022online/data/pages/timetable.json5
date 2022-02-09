@@ -6,7 +6,7 @@
   timetable: [
     {
       caption1:"DAY1",
-      caption2:"2021.03.04",
+      caption2:"2022.03.04",
       caption3:"Fri.",
       talks: [
         {
@@ -111,7 +111,7 @@
     },
     {
       caption1:"DAY2",
-      caption2:"2021.03.05",
+      caption2:"2022.03.05",
       caption3:"Sat.",
       talks: [
         {
