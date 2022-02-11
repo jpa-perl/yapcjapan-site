@@ -50,7 +50,7 @@
           end: "20:00",
           track1: {
             title: "乾杯&休憩",
-            duration: 10,
+            duration: 5,
           },
         },
         {
