@@ -10,33 +10,43 @@
       caption3:"Fri.",
       talks: [
         {
-          start: "19:00",
-          end: "19:15",
+          start: "18:50",
+          end: "19:00",
           track1: {
             title: "Opening",
-            duration: 15,
+            duration: 10,
           },
         },
         {
-          start: "19:15",
-          end: "19:20",
+          start: "19:00",
+          end: "19:25",
+          track1: {
+            title: "ゲスト対談(前半)",
+            duration: 25,
+            talk_id: 1,
+            author: "石田絢一 uzulla / Junichi Ishida, 和田裕介 yusukebe / Yusuke Wada",
+          },
+        },
+        {
+          start: "19:25",
+          end: "19:30",
           track1: {
             title: "乾杯",
             duration: 5,
           },
         },
         {
-          start: "19:20",
-          end: "19:50",
+          start: "19:30",
+          end: "19:55",
           track1: {
-            title: "ゲスト対談",
-            duration: 30,
+            title: "ゲスト対談(後半)",
+            duration: 25,
             talk_id: 1,
             author: "石田絢一 uzulla / Junichi Ishida, 和田裕介 yusukebe / Yusuke Wada",
           },
         },
         {
-          start: "19:50",
+          start: "19:55",
           end: "20:00",
           track1: {
             title: "乾杯&休憩",
