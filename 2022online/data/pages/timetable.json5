@@ -292,9 +292,9 @@
   talks: [
     {
       talk_id: 1,
-      title: "ゲスト座談会",
+      title: "ゲスト対談",
       description: "TBD",
-      duration: 30,
+      duration: 50,
       authors: [
         {
           author: "石田絢一 uzulla / Junichi Ishida",
