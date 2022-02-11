@@ -166,7 +166,7 @@
     },
     {
       key: "t-shirt",
-      label: "Event T-shirt Sponsor",
+      label: "イベントTシャツ",
       class: "md:basis-64 basis-full",
       icon_class: "max-w-[150px]",
       sponsors: [
@@ -179,7 +179,7 @@
     },
     {
       key: "best-talk",
-      label: "Best Talk Sponsor",
+      label: "ベストトーク",
       class: "md:basis-64 basis-full",
       icon_class: "max-w-[150px]",
       sponsors: [
@@ -192,7 +192,7 @@
     },
     {
       key: "best-lt",
-      label: "Best LT Sponsor",
+      label: "ベストLT",
       class: "md:basis-64 basis-full",
       icon_class: "max-w-[150px]",
       sponsors: [
@@ -204,8 +204,21 @@
       ]
     },
     {
+      key: "student-support",
+      label: "学生支援",
+      class: "md:basis-64 basis-full",
+      icon_class: "max-w-[150px]",
+      sponsors: [
+        {
+          name: "面白法人カヤック",
+          image: "kayac.png",
+          url: "https://www.kayac.com/company/infographics "
+        }
+      ]
+    },
+    {
       key: "original-emoji",
-      label: "Original Emoji",
+      label: "オリジナル絵文字",
       class: "md:basis-64 basis-full",
       icon_class: "max-w-[150px]",
       sponsors: [
