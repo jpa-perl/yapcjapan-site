@@ -48,6 +48,11 @@
       image: "gaiax.jpg",
       url: "https://www.gaiax.co.jp/careers/graduates/engineer/",
     },
+    {
+      name: "株式会社モバイルファクトリー",
+      image: "mobile-factory.png",
+      url: "https://open.talentio.com/r/1/c/mfac/pages/60947/apply",
+    },
   ],
   sponsors: [
     {
