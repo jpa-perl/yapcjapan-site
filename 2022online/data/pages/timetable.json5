@@ -49,7 +49,7 @@
           start: "19:55",
           end: "20:00",
           track1: {
-            title: "乾杯&休憩",
+            title: "乾杯",
             duration: 5,
           },
         },
@@ -73,7 +73,7 @@
           start: "20:20",
           end: "20:30",
           track1: {
-            title: "乾杯&休憩",
+            title: "休憩",
             duration: 10,
           },
         },
@@ -103,18 +103,10 @@
         },
         {
           start: "20:55",
-          end: "21:00",
-          track1: {
-            title: "乾杯&休憩",
-            duration: 5,
-          },
-        },
-        {
-          start: "21:00",
           end: "22:00",
           track1: {
             title: "懇親会",
-            duration: 60,
+            duration: 65,
           },
         },
       ],
