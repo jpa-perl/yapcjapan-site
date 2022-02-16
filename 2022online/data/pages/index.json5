@@ -222,7 +222,12 @@
         {
           name: "面白法人カヤック",
           image: "kayac.png",
-          url: "https://www.kayac.com/company/infographics "
+          url: "https://www.kayac.com/company/infographics"
+        },
+        {
+          name: "MyAnimeList",
+          image: "myanimelist.png",
+          url: "https://myanimelist.net/"
         }
       ]
     },
