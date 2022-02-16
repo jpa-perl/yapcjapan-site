@@ -53,6 +53,11 @@
       image: "mobile-factory.png",
       url: "https://open.talentio.com/r/1/c/mfac/pages/60947/apply",
     },
+    {
+      name: "株式会社ネコトーストラボ",
+      image: "neko-toast-lab.png",
+      url: "https://nekotoast-lab.com/man.html"
+    },
   ],
   sponsors: [
     {
