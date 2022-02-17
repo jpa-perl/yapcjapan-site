@@ -58,6 +58,16 @@
       image: "neko-toast-lab.png",
       url: "https://nekotoast-lab.com/man.html"
     },
+    {
+      name: "株式会社メディカルノート",
+      image: "medicalnote.png",
+      url: "https://recruit.medicalnote.co.jp/"
+    },
+    {
+      name: "株式会社フリークアウト",
+      image: "freakout.png",
+      url: "https://www.fout.co.jp/recruit/freakout/career_tech/"
+    },
   ],
   sponsors: [
     {
