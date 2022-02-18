@@ -78,6 +78,11 @@
       image: "hatena.jpg",
       url: "https://hatenacorp.jp/recruit"
     },
+    {
+      name: "LINE株式会社",
+      image: "line.png",
+      url: "https://feedback.line.me/enquete/public/15508-STYiMNxb"
+    }
   ],
   sponsors: [
     {
