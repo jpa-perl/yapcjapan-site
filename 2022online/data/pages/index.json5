@@ -68,6 +68,11 @@
       image: "freakout.png",
       url: "https://www.fout.co.jp/recruit/freakout/career_tech/"
     },
+    {
+      name: "Nota株式会社",
+      image: "nota.png",
+      url: "https://notainc.com/ja/recruit#introduction-sheet"
+    }
   ],
   sponsors: [
     {
