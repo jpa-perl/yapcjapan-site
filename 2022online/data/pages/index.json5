@@ -72,7 +72,12 @@
       name: "Nota株式会社",
       image: "nota.png",
       url: "https://notainc.com/ja/recruit#introduction-sheet"
-    }
+    },
+    {
+      name: "株式会社はてな",
+      image: "hatena.jpg",
+      url: "https://hatenacorp.jp/recruit"
+    },
   ],
   sponsors: [
     {
