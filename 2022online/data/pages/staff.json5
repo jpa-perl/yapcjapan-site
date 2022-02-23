@@ -1,0 +1,62 @@
+{
+  "include-staff": true,
+  "include-footer": true,
+  "include-nav": true,
+  "page-title": "Staff",
+  "staff": [
+    {
+      name: "karupanerura",
+      icon: "/2022online/assets/images/staff/karupanerura.png",
+      url: "https://twitter.com/karupanerura",
+    },
+    {
+      name: "kfly8",
+      icon: "/2022online/assets/images/staff/kfly8.jpg",
+      url: "https://twitter.com/kfly8",
+    },
+    {
+      name: "xtetsuji",
+      icon: "/2022online/assets/images/staff/xtetsuji.png",
+      url: "https://twitter.com/xtetsuji",
+    },
+    {
+      name: "Godan09",
+      icon: "/2022online/assets/images/staff/godan.jpg",
+      url: "https://twitter.com/godan09/",
+    },
+    {
+      name: "ariaki",
+      icon: "/2022online/assets/images/staff/ariaki.jpg",
+      url: "https://twitter.com/ariaki4dev/",
+    },
+    {
+      name: "Pasta-K",
+      icon: "/2022online/assets/images/staff/pastak.jpg",
+      url: "https://twitter.com/pastak/",
+    },
+    {
+      name: "nyanco15",
+      icon: "/2022online/assets/images/staff/nyanco15.jpg",
+    },
+    {
+      name: "tomcha",
+      icon: "/2022online/assets/images/staff/tomcha.jpg",
+      url: "https://twitter.com/tomcha_/",
+    },
+    {
+      name: "papix",
+      icon: "/2022online/assets/images/staff/papix.jpg",
+      url: "https://twitter.com/__papix__/",
+    },
+    {
+      name: "osima",
+      icon: "/2022online/assets/images/staff/osima.jpg",
+      url: "https://twitter.com/__osima/",
+    },
+    {
+      name: "nagayama",
+      icon: "/2022online/assets/images/staff/nagayama.jpg",
+      url: "https://twitter.com/nagayama/",
+    },
+  ]
+}
