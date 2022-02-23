@@ -26,9 +26,9 @@
 
 <div class="flex items-center justify-center pb-10 text-primary">
   <div class="container flex flex-col items-center justify-center py-20">
-    <h2 id="guest-speakers" class="pt-20 mb-10 md:mb-10">
+    <h2 id="speakers" class="pt-20 mb-10 md:mb-10">
       <span class="px-1 py-1 text-2xl font-bold tracking-wider text-white sm:text-3xl bg-tint">
-        Guest Speakers
+        Speakers
       </span>
     </h2>
 
@@ -40,6 +40,17 @@
           <div class="px-8 text-sm text-justify break-all md:px-0">{{description}}</div>
         </li>
       {{/guestSpeakers}}
+    </ul>
+
+    <ul class="flex flex-wrap justify-center m-auto mt-10">
+      {{#speakers}}
+        <li class="m-3 text-center">
+          <a href="/2022online/timetable.html#talk-{{talk_id}}">
+            <img loading="lazy" class="inline-block w-24 h-24 rounded-full" src="{{author_icon}}">
+          </a>
+          <author class="block pt-2 font-bold">{{author}}</author>
+        </li>
+      {{/speakers}}
     </ul>
 
     <h2 id="job-board" class="pt-20 mt-16 mb-6 md:mt-10">
