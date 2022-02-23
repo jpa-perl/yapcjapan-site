@@ -1,0 +1,25 @@
+<div class="flex flex-col items-center justify-center bg-bg-dark text-primary">
+  <div class="container flex flex-col items-center justify-center pt-20 pb-10 sm:py-36 sm:pb-20">
+    <h1 id="logo" class="mb-10">
+      <img class="h-[100px] sm:h-[200px]" src="/2022online/assets/images/logo.svg" alt="YAPC::Jpana::Online 2022"/>
+    </h1>
+    <h2 class="">
+      <span class="px-1 py-1 text-2xl font-bold tracking-wider text-white sm:text-3xl bg-tint">
+        Staff
+      </span>
+    </h2>
+  </div>
+</div>
+
+<div class="pb-32 mt-10 mb-8 ml-2 text-primary sm:mt-16">
+  <div class="flex flex-wrap justify-center w-3/4 m-auto">
+  {{#staff}}
+    <div class="w-24 m-3 text-center">
+      {{#url}}<a href="{{url}}" target="_blank">{{/url}}
+        <img class="inline-block w-24 h-24 rounded-full" src="{{icon}}" />
+      {{#url}}</a>{{/url}}
+      <author class="block pt-4 font-bold">{{name}}</author>
+    </div>
+  {{/staff}}
+  </div>
+</div>
