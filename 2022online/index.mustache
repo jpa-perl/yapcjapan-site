@@ -18,7 +18,8 @@
       <p class="mb-8 text-justify leading-7 md:leading-9 text-md md:text-xl">YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。 Perlだけにとどまらない技術者たちが、好きな技術の話をし交流するカンファレンスで、技術者であれば誰でも楽しめるお祭りです！</p>
       <p class="text-justify leading-7 md:leading-9 text-md md:text-xl">今回のYAPC::Japan::Onlineは、オンラインイベントにありがちな単に見るだけのものではなく、ちゃんと参加して楽しめるオンラインカンファレンスになるように工夫を凝らしています。技術の祭りならではの、刺激ある技術の話、周りの人たちと共有するワイワイ感、そして美味しいご飯。そんなカンファレンスを目指して、様々な仕掛けを用意しています！ぜひ、皆さま楽しみにご参加ください！</p>
       <div class="pt-12 text-center">
-        <a class="inline-block px-8 py-3 m-3 text-xl font-bold text-center text-white rounded-full bg-tint" href="https://passmarket.yahoo.co.jp/event/show/detail/02rs16t3t1721.html">追加チケットの購入<span class="block text-sm font-normal underline">2/23(水) 23:59まで</span></a>
+        <a class="inline-block px-8 py-3 m-3 text-xl font-bold text-center text-white rounded-full bg-tint" href="https://docs.google.com/forms/d/e/1FAIpQLSfzj1D4d4bVQ1RRwQZ6WPqcrAPrYjiJCJ40Dz584yaCbTwc-Q/viewform">LTに応募する<span class="block text-sm font-normal underline">3/2(水) 23:59まで</span></a>
+        <a class="inline-block px-8 py-3 m-3 text-xl font-bold text-center text-white rounded-full bg-tint" href="/2022online/senryu/">川柳を詠む<span class="block text-sm font-normal underline">入選で技術書プレゼント</span></a>
       </div>
     </div>
   </div>
@@ -26,9 +27,9 @@
 
 <div class="flex items-center justify-center pb-10 text-primary">
   <div class="container flex flex-col items-center justify-center py-20">
-    <h2 id="guest-speakers" class="pt-20 mb-10 md:mb-10">
+    <h2 id="speakers" class="pt-20 mb-10 md:mb-10">
       <span class="px-1 py-1 text-2xl font-bold tracking-wider text-white sm:text-3xl bg-tint">
-        Guest Speakers
+        Speakers
       </span>
     </h2>
 
@@ -40,6 +41,17 @@
           <div class="px-8 text-sm text-justify break-all md:px-0">{{description}}</div>
         </li>
       {{/guestSpeakers}}
+    </ul>
+
+    <ul class="flex flex-wrap justify-center m-auto mt-10">
+      {{#speakers}}
+        <li class="m-3 text-center">
+          <a href="/2022online/timetable.html#talk-{{talk_id}}">
+            <img loading="lazy" class="inline-block w-24 h-24 rounded-full" src="{{author_icon}}">
+          </a>
+          <author class="block pt-2 font-bold">{{author}}</author>
+        </li>
+      {{/speakers}}
     </ul>
 
     <h2 id="job-board" class="pt-20 mt-16 mb-6 md:mt-10">

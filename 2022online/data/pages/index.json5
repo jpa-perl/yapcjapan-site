@@ -22,6 +22,73 @@
       description: "株式会社トラベルブック スーパーバイザー。大学在学時に未踏ユース採択。スーパークリエータに準ずる。SIGGRAPH Emerging Technologies採択。卒業後、父親と共に株式会社ワディットを設立。70を超える個人Webサービスを開発、公開。株式会社オモロキ「ボケて」のファウンダー。当初の開発運用をすべて一人でこなした。文化庁第17回メディア芸術祭 審査委員会推薦作品に選ばれる。YAPC::Asiaでは2年連続でベストトーク賞1位を受賞。2021年6月より現職。"
     }
   ],
+  speakers: [
+    {
+      talk_id: 11,
+      author: "めもりー",
+      author_icon: "/2022online/assets/images/speaker/m3m0r7.jpeg",
+    },
+    {
+      talk_id: 12,
+      author: "面川泰明",
+      author_icon: "/2022online/assets/images/speaker/omokawa_yasu.jpg",
+    },
+    {
+      talk_id: 13,
+      author: "Yusuke Wada",
+      author_icon: "/2022online/assets/images/speaker/yusukebe.jpg",
+    },
+    {
+      talk_id: 14,
+      author: "白方健太郎 ",
+      author_icon: "/2022online/assets/images/speaker/argrath.jpg",
+    },
+    {
+      talk_id: 15,
+      author: "Dan Kogai",
+      author_icon: "/2022online/assets/images/speaker/dankogai.jpg",
+    },
+    {
+      talk_id: 16,
+      author: "makamaka",
+      author_icon: "/2022online/assets/images/speaker/maka2_donzoko.png",
+    },
+    {
+      talk_id: 17,
+      author: "mangano-ito",
+      author_icon: "/2022online/assets/images/speaker/mangano_ito.jpg",
+    },
+    {
+      talk_id: 18,
+      author: "macopy",
+      author_icon: "/2022online/assets/images/speaker/mackee_w.jpg",
+    },
+    {
+      talk_id: 20,
+      author: "五十嵐雄",
+      author_icon: "/2022online/assets/images/speaker/yigarashi_9.jpg",
+    },
+    {
+      talk_id: 21,
+      author: "commojun",
+      author_icon: "/2022online/assets/images/speaker/commojun.jpg",
+    },
+    {
+      talk_id: 22,
+      author: "MakeNowJust",
+      author_icon: "/2022online/assets/images/speaker/make_now_just.png",
+    },
+    {
+      talk_id: 23,
+      author: "八雲アナグラ",
+      author_icon: "/2022online/assets/images/speaker/AnaTofuZ.jpg",
+    },
+    {
+      talk_id: 24,
+      author: "Takafumi ONAKA",
+      author_icon: "/2022online/assets/images/speaker/onk.jpg",
+    },
+  ],
   jobboards: [
     {
       name: "株式会社COLSIS（コルシス）",
