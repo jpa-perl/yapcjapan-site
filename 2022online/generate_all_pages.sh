@@ -10,7 +10,7 @@ mkdir -p $OUTPUT_DIR
 contents_data=`echo ./data/menu.json5`
 
 #declare -a pages=(index staffs individual-sponsors talks timetable)
-declare -a pages=(index timetable)
+declare -a pages=(index timetable staff)
 
 for page in ${pages[@]}; do
   ../process_v2.pl ./template.mustache ./data/pages/$page.json5 $contents_data > $OUTPUT_DIR/$page.html
