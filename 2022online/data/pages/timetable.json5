@@ -266,8 +266,9 @@
           start: "17:50",
           end: "18:30",
           track1: {
-            title: "Lightning Talk",
+            title: "Lightning Talks",
             duration: 40,
+            talk_id: 3,
           },
         },
         {
@@ -319,6 +320,24 @@
         },
       ]
     },
+    {
+      talk_id: 3,
+      title: "Lightning Talks",
+      description: "\
+1. スポンサーLT（ピザハット様）\n\
+2. さっぴー川原 「MyDNSとUnboundが同居していることにハマった」\n\
+3. Kang-min Liu「aaa.pl」\n\
+4. nikkie 「Perlの力も使って聴かせるAIの声」\n\
+5. ariaki 「CTOになりたいと思っていたけど今はそのときではないと気づいた件」\n\
+6. utgwkk 「prototypeとjust epic. と私」\n\
+7. タケタニヒロト「Perl詩を味わう」\n\
+8. kfly8 「Tシャツに書かれたコードを読む」\n\
+",
+      duration: 40,
+      authors: [
+      ]
+    },
+
     {
       talk_id: 11,
       title: "PHP で NFC リーダーを実装する",
