@@ -200,7 +200,7 @@
           start: "15:35",
           end: "15:55",
           track1: {
-            title: "perlimportsから探るPPIの世界 @八雲アナグラ",
+            title: "perlimportsから探るPPIの世界",
             duration: 20,
             talk_id: 23,
             author: "八雲アナグラ",
