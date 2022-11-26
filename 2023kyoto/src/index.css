@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	background-color: #fff;
+}
+
 .hero-bg {
 	background: linear-gradient(180deg, #FFF7CA 66.67%, rgba(255, 247, 202, 0) 100%);
 	height: 600px;
