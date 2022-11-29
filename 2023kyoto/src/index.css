@@ -9,7 +9,6 @@ body {
 
 .hero-bg {
 	background: linear-gradient(180deg, #FFF7CA 66.67%, rgba(255, 247, 202, 0) 100%);
-	height: 600px;
 }
 
 .hr__tora,
@@ -118,7 +117,7 @@ body {
 
 .guests {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(auto,350px));
+	grid-template-columns: repeat(2, minmax(auto,400px));
 	justify-content: center;
 	@apply gap-8 sm:gap-16;
 }
