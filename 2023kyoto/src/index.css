@@ -94,7 +94,7 @@ body {
 }
 
 .announcement li {
-	@apply text-lg;
+	@apply sm:text-lg;
 	display: grid;
 	grid-template-columns: auto 1fr;
 	align-items: flex-start;
@@ -120,7 +120,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(auto,350px));
 	justify-content: center;
-	gap: 4em;
+	@apply gap-8 sm:gap-16;
 }
 @media screen and (max-width: 720px) {
 	.guests {
@@ -175,6 +175,11 @@ overflow: hidden;
 }
 
 
+.table__place td,
+.table__place th {
+	@apply py-3 px-2 sm:px-10 sm:text-xl text-left
+
+}
 
 
 
