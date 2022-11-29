@@ -26,10 +26,28 @@ html:before {
 	position: fixed;
 	background:transparent url(images/header-bg.png) repeat-x scroll center -44.5px;
 	background-size: 1254.5px 89px ;
-	height: 200px;
 	width: 100%;
 	z-index: 999;
 }
+
+.global-nav__inner {
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px;
+}
+
+.global-nav__links {
+	display: flex;
+	gap: 20px;
+	background: #fff;
+	border: 3px solid black;
+	border-radius: 30px;
+	z-index: 999;
+	font-weight: 900;
+	padding: 5px 20px;
+	max-width: 100%;
+}
+
 
 .hero-bg {
 	background: linear-gradient(180deg, #FFF7CA 66.67%, rgba(255, 247, 202, 0) 100%);
