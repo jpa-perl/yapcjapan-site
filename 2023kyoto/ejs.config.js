@@ -2,21 +2,21 @@ module.exports = {
   locals: {
     guestSpeakers: [
       {
-        photo: '/images/onishi.jpg',
+        photo: 'images/onishi.jpg',
         name: '大西 康裕',
         name_en: 'Yasuhiro Onishi',
         description:
           '株式会社はてな 執行役員 サービス・システム開発本部長。\n 2001年に創業メンバーの1人として有限会社はてな（当時）に入社。入社後は主にエンジニアリングを担当し、チーフエンジニアとして全サービスの開発や技術部の指導・育成に携わる。その後「はてなブログ」の立ち上げや事業化を指揮し、2014年8月より執行役員 サービス開発本部長を経て、2016年8月より現職。代表作は Devel::KYTProf',
       },
       {
-        photo: './images/nekokaku.jpg',
+        photo: 'images/nekokaku.jpg',
         name: '小林 篤',
         name_en: 'Atsushi Kobayashi',
         description:
           '株式会社ディー・エヌ・エー　常務執行役員 兼 CTO システム本部 本部長\n 法学部法律学科からエンジニアへ転身し、2011年にDeNAに入社。Mobageおよび協業プラットフォームの大規模システム開発、オートモーティブ事業本部の開発責任者を歴任。2018年より執行役員としてDeNAのエンジニアリングの統括を務め、2019年より常務執行役員 CTOとしてより経営レベルでの意思決定にかかわることと、技術・モノづくりの強化を担う。',
       },
       {
-        photo: './images/uehara.jpg',
+        photo: 'images/uehara.jpg',
         name: '上原 哲太郎',
         name_en: 'Tetsutaro Uehara',
         description:
