@@ -1,0 +1,71 @@
+<%- include('partial/header'); -%>
+	<div class="hero-bg flex justify-center items-center px-6 h-[500px] pt-10">
+		<img class="w-[422px]" src="images/home-logo.png" alt="YAPC KYOTO 2023" />
+	</div>
+	<div class="max-w-3xl mx-auto">
+		<div class="container px-5">
+			<p class="my-4 sm:text-lg">
+				YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。
+				Perlだけにとどまらない技術者たちが、好きな技術の話をし交流するカンファレンスで、技術者であれば誰でも楽しめるお祭りです！
+			</p>
+			<p class="my-4 sm:text-lg">
+                今回のYAPC::Japanのテーマは「try/catch」。
+                YAPC::Japanとして初めての試みとなる「会場と配信のハイブリッド形式」で開催されるこのカンファレンスを、
+                様々なジャンルのtryや情報を披露し、たくさんの知見をcatchできる場所にしたいと考えています。!....
+			</p>
+			<table class="mx-auto my-10 table__place">
+				<tbody>
+					<tr>
+						<th>開催日</th>
+						<td> 2023年 3月 19日 </td>
+					</tr>
+					<tr>
+						<th>会場</th>
+						<td>京都リサーチパーク <a class="underline text-base"
+								href="https://goo.gl/maps/27pN3skabcqsxACs7" target="_blank" rel="noreferrer">(地図を見る)</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<hr class="hr__tora" id="announcements" />
+	<h2 class="h2__bell"><span>おしらせ</span></h2>
+	<div class="max-w-4xl mx-auto px-5 flex justify-center">
+		<ul class="announcement">
+			<li>
+				<a href="https://blog.yapcjapan.org/entry/2022/12/12/130000">YAPC::Kyoto 2023 ご協賛の一般募集を開始しております</a>
+			</li>
+			<li>
+				<a href="https://blog.yapcjapan.org/entry/2022/11/24/150000">YAPC::Kyoto 2023を協賛いただける企業を募集しています</a>
+			</li>
+		</ul>
+	</div>
+
+
+	<hr class="hr__cat" id="speakers" />
+	<h2 class="h2__nikukyu"><span>ゲストスピーカー</span></h2>
+	<div class="max-w-5xl mx-auto px-5 guests">
+		<% for (const speaker of locals.guestSpeakers) { %>
+			<div class="guest mt-6">
+			<div class="guest-photo__wrapper">
+				<img src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
+			</div>
+			<div class="grid m-auto my-5">
+				<div class="font-bold text-lg text-center">
+					<%= speaker.name %>
+				</div>
+				<div class="text-sm text-center">
+					<%= speaker.name_en %>
+				</div>
+			</div>
+			<p class="px-6 pb-8 text-sm text-justify">
+                <%= speaker.title %><br>
+				<%= speaker.description %>
+			</p>
+
+			</div>
+		<% } %>
+	</div>
+
+	<%- include('partial/footer'); -%>
