@@ -21,7 +21,7 @@ npm run start
 ## ビルド
 
 ```
-npm un build
+npm run build
 ```
 
 で `../docs/` に必要なファイルがビルドされます
