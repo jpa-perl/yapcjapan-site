@@ -4,7 +4,7 @@
     "start": "parcel src/*.ejs --public-url /2023kyoto/",
     "build": "run-s build:clean build:parcel build:copy",
     "build:clean": "rimraf dist",
-    "build:parcel": "parcel build src/*.ejs --no-source-maps --dist-dir dist --public-url /2023kyoto/",
+    "build:parcel": "parcel build src/*.ejs --no-source-maps --dist-dir dist --public-url https://yapcjapan.org/2023kyoto/",
     "build:copy": "rimraf ../docs/2023kyoto && cp -a ./dist/ ../docs/2023kyoto"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
