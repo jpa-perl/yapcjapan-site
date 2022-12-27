@@ -45,7 +45,7 @@
 
 	<hr class="hr__cat" id="speakers" />
 	<h2 class="h2__nikukyu"><span>ゲストスピーカー</span></h2>
-	<div class="max-w-5xl mx-auto px-5 guests">
+	<div class="max-w-5xl mx-auto px-5 guests mb-20">
 		<% for (const speaker of locals.guestSpeakers) { %>
 			<div class="guest mt-6">
 			<div class="guest-photo__wrapper">
@@ -68,13 +68,13 @@
 		<% } %>
 	</div>
 
-	<hr class="hr__cat" id="sponsors" />
+	<hr class="hr__tora" id="sponsors" />
 	<h2 class="h2__nikukyu"><span>スポンサー</span></h2>
-	<div class="max-w-5xl mx-auto px-5 guests">
+	<div class="max-w-5xl mx-auto px-5">
 		<div class="flex flex-wrap justify-center">
 			<% for (const sponsor of locals.sponsors) { %>
 				<div class="<%= sponsor.class %>">
-					<div class="mt-12 mb-8 font-bold text-center">
+					<div class="mt-12 mb-8 text-xl font-bold text-center">
 						<%= sponsor.label %>
 					</div>
 					<div class="flex flex-wrap justify-center gap-6">
