@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html {
 	background:#fff;
 }
@@ -223,4 +224,25 @@ overflow: hidden;
 }
 
 
+.btn-ticket {
+	border-radius: 5px;
+	background: #222;
+	color: #FFDE17;
+	font-weight: bold;
+	@apply text-center text-lg sm:text-2xl px-8 sm:px-12 pt-4 sm:pt-5 pb-3 sm:pb-4;
+	position: relative;
+}
 
+.btn-ticket:after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 48px;
+	height: 48px;
+	background-image: url(images/bell.png);
+	background-size: 48px auto;
+	background-repeat: no-repeat;
+	left: 50%;
+	top: 0px;
+	transform: translate(-50%, -50%);
+}
