@@ -68,4 +68,28 @@
 		<% } %>
 	</div>
 
+	<hr class="hr__cat" id="sponsors" />
+	<h2 class="h2__nikukyu"><span>スポンサー</span></h2>
+	<div class="max-w-5xl mx-auto px-5 guests">
+		<div class="flex flex-wrap justify-center">
+			<% for (const sponsor of locals.sponsors) { %>
+				<div class="<%= sponsor.class %>">
+					<div class="mt-12 mb-8 font-bold text-center">
+						<%= sponsor.label %>
+					</div>
+					<div class="flex flex-wrap justify-center gap-6">
+						<% for (const company of sponsor.companies) { %>
+							<a target="_blank" href="<%= company.url %>" class="block max-w-[200px] <%= sponsor.icon_class %>">
+								<span class="sponsor__image-wrapper">
+									<img loading="lazy" class="sponsor__image" src="images/sponsor/<%= company.image %>" alt="<%= company.name %>" />
+								</span>
+							</a>
+							<% } %>
+					</div>
+				</div>
+		<% } %>
+    </div>
+
+
+	</div>
 	<%- include('partial/footer'); -%>
