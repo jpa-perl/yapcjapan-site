@@ -1,5 +1,12 @@
 module.exports = {
   locals: {
+    site: {
+      title: 'YAPC::Kyoto 2023',
+      url: 'https://yapcjapan.org/2023kyoto/',
+      description:
+        'YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。',
+      image: 'images/ogp-image.jpg',
+    },
     guestSpeakers: [
       {
         photo: 'images/onishi.jpg',
