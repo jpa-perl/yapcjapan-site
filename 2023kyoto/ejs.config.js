@@ -23,13 +23,6 @@ module.exports = {
         description: '法学部法律学科からエンジニアへ転身し、2011年にDeNAに入社。Mobageおよび協業プラットフォームの大規模システム開発、オートモーティブ事業本部の開発責任者を歴任。2018年より執行役員としてDeNAのエンジニアリングの統括を務め、2019年より常務執行役員 CTOとしてより経営レベルでの意思決定にかかわることと、技術・モノづくりの強化を担う。2020年より常務執行役員として技術領域を担当しつつ、メディカル領域の新規事業を担当。',
       },
       {
-        photo: 'images/nekokaku.jpg',
-        name: '川上 大喜',
-        name_en: 'Taiki Kawakami / @moznion',
-        title: '株式会社ソラコム シニアソフトウェアエンジニア',
-        description: '2017年より株式会社ソラコムにて、セルラーコアネットワークを中心とする複数のソフトウェアコンポーネントの開発を担当。大学在学中の2013年よりLINE株式会社にてブログサービスや動画配信サービス、ウェブ広告配信システムなどの高トラフィックなウェブサービスの設計・開発に従事。2015年The Perl Foundation Grants Committee ProgramにてPerl::Lintが採択。builderscon Tokyo 2018にてベストスピーカー賞を受賞。',
-      },
-      {
         photo: "images/uehara.jpg",
         name: "上原 哲太郎",
         name_en: "Tetsutaro Uehara",
@@ -42,6 +35,13 @@ module.exports = {
         name_en: "Miyawaki Masaharu",
         title: "立命館大学 法学部 教授",
         description: "知財財産研究所特別研究員、国際高等研究所特別研究員を経て、2003年4月から立命館大学法学部助教授（2007年4月より「准教授」に改称）。2011年4月から立命館大学法学部教授。専門は知的財産法と不正競争法。インターネット上の知的財産権侵害や、知的財産権侵害に対する損害賠償額の算定方法など、知的財産権に関して幅広く研究している。"
+      },
+      {
+        photo: 'images/moznion.jpg',
+        name: '川上 大喜',
+        name_en: 'Taiki Kawakami / @moznion',
+        title: '株式会社ソラコム シニアソフトウェアエンジニア',
+        description: '2017年より株式会社ソラコムにて、セルラーコアネットワークを中心とする複数のソフトウェアコンポーネントの開発を担当。大学在学中の2013年よりLINE株式会社にてブログサービスや動画配信サービス、ウェブ広告配信システムなどの高トラフィックなウェブサービスの設計・開発に従事。2015年The Perl Foundation Grants Committee ProgramにてPerl::Lintが採択。builderscon Tokyo 2018にてベストスピーカー賞を受賞。',
       },
     ],
   },
