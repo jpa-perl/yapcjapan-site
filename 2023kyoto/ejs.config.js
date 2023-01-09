@@ -31,9 +31,14 @@ module.exports = {
             url: 'https://dena.com',
           },
           {
-            name: 'LINE株式会社',
-            image: 'line.png',
-            url: 'https://engineering.linecorp.com/ja/',
+            name: '株式会社はてな',
+            image: 'hatena.png',
+            url: 'https://hatenacorp.jp/',
+          },
+          {
+            name: '株式会社Helpfeel',
+            image: 'helpfeel.png',
+            url: 'https://corp.helpfeel.com/ja/home',
           },
         ],
       },
@@ -44,14 +49,9 @@ module.exports = {
         icon_class: 'max-w-[200px]',
         companies: [
           {
-            name: '株式会社ガイアックス',
-            image: 'gaiax.png',
-            url: 'https://www.gaiax.co.jp/',
-          },
-          {
-            name: '株式会社ミクシィ',
-            image: 'mixi.png',
-            url: 'https://mixi.co.jp/recruit/',
+            name: '株式会社モバイルファクトリー',
+            image: 'mobile-factory.png',
+            url: 'https://www.mobilefactory.jp/',
           },
           {
             name: '株式会社フリークアウト',
@@ -59,19 +59,14 @@ module.exports = {
             url: 'https://www.fout.co.jp/freakout/',
           },
           {
-            name: '株式会社はてな',
-            image: 'hatena.png',
-            url: 'https://hatenacorp.jp/',
+            name: '株式会社カヤック',
+            image: 'kayac.png',
+            url: 'https://www.kayac.com/company/infographics',
           },
           {
-            name: '日本ピザハット株式会社',
-            image: 'pizza-hut.png',
-            url: 'https://www.pizzahut.jp/',
-          },
-          {
-            name: 'Nota株式会社',
-            image: 'nota.png',
-            url: 'https://notainc.com/ja/home',
+            name: '合同会社Y.pm',
+            image: 'ypm.png',
+            url: 'https://www.ypm.llc/',
           },
         ],
       },
@@ -82,29 +77,9 @@ module.exports = {
         icon_class: 'max-w-[150px]',
         companies: [
           {
-            name: 'Have Fun Tech LLC',
-            image: 'havefuntech.png',
-            url: 'https://have-fun.tech/',
-          },
-          {
-            name: '株式会社COLSIS（コルシス）',
-            image: 'colsis.png',
-            url: 'https://colsis.jp/',
-          },
-          {
             name: 'こだまリサーチ株式会社',
             image: 'kodama.png',
             url: 'https://www.kodamari.com/',
-          },
-          {
-            name: 'シックス・アパート株式会社',
-            image: 'six-apart.png',
-            url: 'https://www.sixapart.jp/',
-          },
-          {
-            name: '株式会社モバイルファクトリー',
-            image: 'mobile-factory.png',
-            url: 'https://www.mobilefactory.jp/',
           },
           {
             name: '株式会社ネコトーストラボ',
@@ -112,63 +87,92 @@ module.exports = {
             url: 'https://nekotoast-lab.com/',
           },
           {
-            name: '面白法人カヤック',
-            image: 'kayac.png',
-            url: 'https://www.kayac.com/company/infographics ',
+            name: '株式会社COLSIS（コルシス）',
+            image: 'colsis.png',
+            url: 'https://colsis.jp/',
           },
-          {
-            name: '株式会社トラーナ',
-            image: 'torana.png',
-            url: 'http://toysub.net/',
-          },
-          {
-            name: 'Wano株式会社',
-            image: 'wano.png',
-            url: 'https://group.wano.co.jp/',
-          },
-          {
-            name: '株式会社メディカルノート',
-            image: 'medicalnote.png',
-            url: 'https://medicalnote.co.jp',
-          },
-        ],
-      },
-      {
-        key: 't-shirt',
-        label: 'イベントTシャツ',
-        class: 'md:basis-64 basis-full',
-        icon_class: 'max-w-[150px]',
-        companies: [
-          {
-            name: '株式会社モバイルファクトリー',
-            image: 'mobile-factory.png',
-            url: 'https://www.mobilefactory.jp/',
-          },
-        ],
-      },
-      {
-        key: 'best-talk',
-        label: 'ベストトーク',
-        class: 'md:basis-64 basis-full',
-        icon_class: 'max-w-[150px]',
-        companies: [
-          {
-            name: 'Nota株式会社',
-            image: 'nota.png',
-            url: 'https://notainc.com/ja/home',
-          },
-        ],
-      },
-      {
-        key: 'best-lt',
-        label: 'ベストLT',
-        class: 'md:basis-64 basis-full',
-        icon_class: 'max-w-[150px]',
-        companies: [
           {
             name: 'Have Fun Tech LLC',
             image: 'havefuntech.png',
             url: 'https://have-fun.tech/',
+          },
+        ],
+      },
+      {
+        key: 'lt-battle',
+        label: 'LTバトル',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: '株式会社ネコトーストラボ',
+            image: 'neko-toast-lab.png',
+            url: 'https://nekotoast-lab.com/',
+          },
+        ],
+      },
+      {
+        key: 'naming-rights-large',
+        label: 'ネーミングライツ(大部屋)',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: '株式会社Helpfeel',
+            image: 'helpfeel.png',
+            url: 'https://corp.helpfeel.com/ja/home',
+          },
+        ],
+      },
+      {
+        key: 'naming-rights-small',
+        label: 'ネーミングライツ(小部屋)',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: '株式会社Helpfeel',
+            image: 'helpfeel.png',
+            url: 'https://corp.helpfeel.com/ja/home',
+          },
+        ],
+      },
+      {
+        key: 'recording',
+        label: '公開収録',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: '株式会社Helpfeel',
+            image: 'helpfeel.png',
+            url: 'https://corp.helpfeel.com/ja/home',
+          },
+        ],
+      },
+      {
+        key: 'signboard',
+        label: '案内看板',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: '株式会社Helpfeel',
+            image: 'helpfeel.png',
+            url: 'https://corp.helpfeel.com/ja/home',
+          },
+        ],
+      },
+      {
+        key: 'tote-bag',
+        label: 'トートバック',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: '株式会社はてな',
+            image: 'hatena.png',
+            url: 'https://hatenacorp.jp/',
           },
         ],
       },
@@ -179,27 +183,14 @@ module.exports = {
         icon_class: 'max-w-[150px]',
         companies: [
           {
-            name: '面白法人カヤック',
-            image: 'kayac.png',
-            url: 'https://www.kayac.com/company/infographics',
+            name: '株式会社はてな',
+            image: 'hatena.png',
+            url: 'https://hatenacorp.jp/',
           },
           {
-            name: 'MyAnimeList',
-            image: 'myanimelist.png',
-            url: 'https://myanimelist.net/',
-          },
-        ],
-      },
-      {
-        key: 'original-emoji',
-        label: 'オリジナル絵文字',
-        class: 'md:basis-64 basis-full',
-        icon_class: 'max-w-[150px]',
-        companies: [
-          {
-            name: '株式会社ネコトーストラボ',
-            image: 'neko-toast-lab.png',
-            url: 'https://nekotoast-lab.com/',
+            name: '合同会社Y.pm',
+            image: 'ypm.png',
+            url: 'https://www.ypm.llc/',
           },
         ],
       },
