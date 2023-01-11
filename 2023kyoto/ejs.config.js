@@ -40,6 +40,11 @@ module.exports = {
             image: 'helpfeel.png',
             url: 'https://corp.helpfeel.com/ja/home',
           },
+        //   {
+        //     name: '合同会社もりたつ技商',
+        //     image: 'moritaz.png',
+        //     url: 'https://corp.moritaz.com/',
+        //   },
         ],
       },
       {
@@ -58,16 +63,36 @@ module.exports = {
             image: 'freakout.png',
             url: 'https://www.fout.co.jp/freakout/',
           },
+        //   {
+        //     name: 'さくらインターネット株式会社',
+        //     image: 'sakura.png',
+        //     url: 'https://www.sakura.ad.jp/',
+        //   },
+        //   {
+        //     name: '株式会社PR TIMES',
+        //     image: 'prtimes.png',
+        //     url: 'https://developers.prtimes.jp/',
+        //   },
           {
             name: '株式会社カヤック',
             image: 'kayac.png',
             url: 'https://www.kayac.com/company/infographics',
           },
           {
+            name: 'コインチェック株式会社',
+            image: 'coincheck.png',
+            url: 'https://corporate.coincheck.com/',
+          },
+          {
             name: '合同会社Y.pm',
             image: 'ypm.png',
             url: 'https://www.ypm.llc/',
           },
+        //   {
+        //     name: '株式会社マネーフォワード',
+        //     image: 'moneyforward.png',
+        //     url: 'https://corp.moneyforward.com/',
+        //   },
         ],
       },
       {
@@ -81,21 +106,31 @@ module.exports = {
             image: 'kodama.png',
             url: 'https://www.kodamari.com/',
           },
+        //   {
+        //     name: '株式会社Diverse',
+        //     image: 'diverse.png',
+        //     url: 'https://diverse-inc.co.jp/',
+        //   },
           {
             name: '株式会社ネコトーストラボ',
             image: 'neko-toast-lab.png',
             url: 'https://nekotoast-lab.com/',
           },
           {
-            name: '株式会社COLSIS（コルシス）',
+            name: '株式会社コルシス',
             image: 'colsis.png',
             url: 'https://colsis.jp/',
           },
           {
-            name: 'Have Fun Tech LLC',
+            name: '合同会社HaveFunTech',
             image: 'havefuntech.png',
             url: 'https://have-fun.tech/',
           },
+        //   {
+        //     name: 'hachioji.pm',
+        //     image: 'hachioji.png',
+        //     url: 'https://twitter.com/hachiojipm',
+        //   },
         ],
       },
       {
@@ -112,21 +147,8 @@ module.exports = {
         ],
       },
       {
-        key: 'naming-rights-large',
-        label: 'ネーミングライツ(大部屋)',
-        class: 'md:basis-64 basis-full',
-        icon_class: 'max-w-[150px]',
-        companies: [
-          {
-            name: '株式会社Helpfeel',
-            image: 'helpfeel.png',
-            url: 'https://corp.helpfeel.com/ja/home',
-          },
-        ],
-      },
-      {
-        key: 'naming-rights-small',
-        label: 'ネーミングライツ(小部屋)',
+        key: 'naming-rights',
+        label: 'ネーミングライツ',
         class: 'md:basis-64 basis-full',
         icon_class: 'max-w-[150px]',
         companies: [
@@ -163,6 +185,19 @@ module.exports = {
           },
         ],
       },
+    //   {
+    //     key: 't-shirt',
+    //     label: 'Tシャツ',
+    //     class: 'md:basis-64 basis-full',
+    //     icon_class: 'max-w-[150px]',
+    //     companies: [
+    //       {
+    //         name: 'hachioji.pm',
+    //         image: 'hachioji.png',
+    //         url: 'https://twitter.com/hachiojipm',
+    //       },
+    //     ],
+    //   },
       {
         key: 'tote-bag',
         label: 'トートバック',
@@ -187,6 +222,11 @@ module.exports = {
             image: 'hatena.png',
             url: 'https://hatenacorp.jp/',
           },
+        //   {
+        //     name: '合同会社もりたつ技商',
+        //     image: 'moritaz.png',
+        //     url: 'https://corp.moritaz.com/',
+        //   },
           {
             name: '合同会社Y.pm',
             image: 'ypm.png',
@@ -194,6 +234,45 @@ module.exports = {
           },
         ],
       },
+    //   {
+    //     key: 'best-talk',
+    //     label: 'ベストトーク',
+    //     class: 'md:basis-64 basis-full',
+    //     icon_class: 'max-w-[150px]',
+    //     companies: [
+    //       {
+    //         name: '株式会社コルシス',
+    //         image: 'colsis.png',
+    //         url: 'https://colsis.jp/',
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     key: 'best-lt',
+    //     label: 'ベストLT',
+    //     class: 'md:basis-64 basis-full',
+    //     icon_class: 'max-w-[150px]',
+    //     companies: [
+    //       {
+    //         name: 'さくらインターネット株式会社',
+    //         image: 'sakura.png',
+    //         url: 'https://www.sakura.ad.jp/',
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     key: 'guest',
+    //     label: 'ゲスト',
+    //     class: 'md:basis-64 basis-full',
+    //     icon_class: 'max-w-[150px]',
+    //     companies: [
+    //       {
+    //         name: 'hachioji.pm',
+    //         image: 'hachioji.png',
+    //         url: 'https://twitter.com/hachiojipm',
+    //       },
+    //     ],
+    //   },
     ],
   },
 };
