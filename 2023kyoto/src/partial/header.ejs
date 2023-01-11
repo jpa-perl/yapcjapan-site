@@ -6,7 +6,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./index.css">
-	<title>YAPC::Kyoto 2023</title>
+	<title><%= locals.site.title %></title>
+
+	<meta property="og:title" content="<%= locals.site.title %> " />
+	<meta property="og:description" content="<%= locals.site.description %>" />
+	<meta property="og:url" content="<%= locals.site.url %>" />
+	<meta property="og:image" content="<%= locals.site.image %>" />
+	<meta property="og:site_name" content="<%= locals.site.title %> " />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="<%= locals.site.title %> " />
+	<meta name="twitter:description" content="<%= locals.site.description %>" />
+	<meta name="twitter:site" content="<%= locals.site.url %>" />
+	<meta name="twitter:image" content="<%= locals.site.image %>" />
+
 </head>
 
 <body class="pt-10 sm:pt-28">
@@ -15,6 +28,7 @@
 			<ul class="global-nav__links text-xs sm:text-base">
 				<li><a href="/2023kyoto/">Home</a></li>
 				<li><a href="/2023kyoto/#announcements">Announcements</a></li>
+				<li><a href="https://passmarket.yahoo.co.jp/event/show/detail/02gwpiyyvcs21.html" target="_blank">Tickets</a></li>
 				<li><a href="/2023kyoto/#speakers">Speakers</a></li>
 				<li><a href="/2023kyoto/#sponsors">Sponsors</a></li>
 			</ul>
