@@ -260,19 +260,19 @@ module.exports = {
           },
         ],
       },
-    //   {
-    //     key: 'best-talk',
-    //     label: 'ベストトーク',
-    //     class: 'md:basis-64 basis-full',
-    //     icon_class: 'max-w-[150px]',
-    //     companies: [
-    //       {
-    //         name: '株式会社コルシス',
-    //         image: 'colsis.png',
-    //         url: 'https://colsis.jp/',
-    //       },
-    //     ],
-    //   },
+      {
+        key: 'best-talk',
+        label: 'ベストトーク',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: '株式会社コルシス',
+            image: 'colsis.png',
+            url: 'https://colsis.jp/',
+          },
+        ],
+      },
     //   {
     //     key: 'best-lt',
     //     label: 'ベストLT',
