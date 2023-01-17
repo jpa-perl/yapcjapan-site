@@ -132,11 +132,11 @@ module.exports = {
             image: 'kodama.png',
             url: 'https://www.kodamari.com/',
           },
-        //   {
-        //     name: '株式会社Diverse',
-        //     image: 'diverse.png',
-        //     url: 'https://diverse-inc.co.jp/',
-        //   },
+          {
+            name: '株式会社Diverse',
+            image: 'diverse.png',
+            url: 'https://diverse-inc.co.jp/',
+          },
           {
             name: '株式会社ネコトーストラボ',
             image: 'neko-toast-lab.png',
