@@ -66,11 +66,11 @@ module.exports = {
             image: 'helpfeel.png',
             url: 'https://corp.helpfeel.com/ja/home',
           },
-        //   {
-        //     name: '合同会社もりたつ技商',
-        //     image: 'moritaz.png',
-        //     url: 'https://corp.moritaz.com/',
-        //   },
+          {
+            name: '合同会社もりたつ技商',
+            image: 'moritaz.png',
+            url: 'https://corp.moritaz.com/',
+          },
         ],
       },
       {
@@ -248,11 +248,11 @@ module.exports = {
             image: 'hatena.png',
             url: 'https://hatenacorp.jp/',
           },
-        //   {
-        //     name: '合同会社もりたつ技商',
-        //     image: 'moritaz.png',
-        //     url: 'https://corp.moritaz.com/',
-        //   },
+          {
+            name: '合同会社もりたつ技商',
+            image: 'moritaz.png',
+            url: 'https://corp.moritaz.com/',
+          },
           {
             name: '合同会社Y.pm',
             image: 'ypm.png',
