@@ -152,11 +152,11 @@ module.exports = {
             image: 'havefuntech.png',
             url: 'https://have-fun.tech/',
           },
-        //   {
-        //     name: 'hachioji.pm',
-        //     image: 'hachioji.png',
-        //     url: 'https://twitter.com/hachiojipm',
-        //   },
+          {
+            name: 'hachioji.pm',
+            image: 'hachioji.png',
+            url: 'https://twitter.com/hachiojipm',
+          },
         ],
       },
       {
@@ -211,19 +211,19 @@ module.exports = {
           },
         ],
       },
-    //   {
-    //     key: 't-shirt',
-    //     label: 'Tシャツ',
-    //     class: 'md:basis-64 basis-full',
-    //     icon_class: 'max-w-[150px]',
-    //     companies: [
-    //       {
-    //         name: 'hachioji.pm',
-    //         image: 'hachioji.png',
-    //         url: 'https://twitter.com/hachiojipm',
-    //       },
-    //     ],
-    //   },
+      {
+        key: 't-shirt',
+        label: 'Tシャツ',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: 'hachioji.pm',
+            image: 'hachioji.png',
+            url: 'https://twitter.com/hachiojipm',
+          },
+        ],
+      },
       {
         key: 'tote-bag',
         label: 'トートバック',
@@ -286,19 +286,19 @@ module.exports = {
     //       },
     //     ],
     //   },
-    //   {
-    //     key: 'guest',
-    //     label: 'ゲスト',
-    //     class: 'md:basis-64 basis-full',
-    //     icon_class: 'max-w-[150px]',
-    //     companies: [
-    //       {
-    //         name: 'hachioji.pm',
-    //         image: 'hachioji.png',
-    //         url: 'https://twitter.com/hachiojipm',
-    //       },
-    //     ],
-    //   },
+      {
+        key: 'guest',
+        label: 'ゲスト',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: 'hachioji.pm',
+            image: 'hachioji.png',
+            url: 'https://twitter.com/hachiojipm',
+          },
+        ],
+      },
     ],
   },
 };
