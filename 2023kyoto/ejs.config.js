@@ -94,11 +94,11 @@ module.exports = {
         //     image: 'sakura.png',
         //     url: 'https://www.sakura.ad.jp/',
         //   },
-        //   {
-        //     name: '株式会社PR TIMES',
-        //     image: 'prtimes.png',
-        //     url: 'https://developers.prtimes.jp/',
-        //   },
+          {
+            name: '株式会社PR TIMES',
+            image: 'prtimes.png',
+            url: 'https://developers.prtimes.jp/',
+          },
           {
             name: '株式会社カヤック',
             image: 'kayac.png',
