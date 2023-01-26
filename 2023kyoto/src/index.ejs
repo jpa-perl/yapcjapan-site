@@ -2,8 +2,8 @@
 	<div class="hero-bg flex justify-center items-center px-6 h-[500px] pt-10">
 		<img class="w-[422px]" src="images/home-logo.png" alt="YAPC KYOTO 2023" />
 	</div>
-	<div class="max-w-3xl mx-auto">
-		<div class="container px-5">
+	<div class="container mx-auto">
+		<div class="max-w-3xl px-5 mx-auto">
 			<p class="my-4 sm:text-lg">
 				YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。
 				Perlだけにとどまらない技術者たちが、好きな技術の話をし交流するカンファレンスで、技術者であれば誰でも楽しめるお祭りです！
@@ -35,7 +35,7 @@
 
 	<hr class="hr__tora" id="announcements" />
 	<h2 class="h2__bell"><span>おしらせ</span></h2>
-	<div class="max-w-4xl mx-auto px-5 flex justify-center">
+	<div class="max-w-3xl mx-auto px-5 flex justify-center">
 		<ul class="announcement">
 			<li>
 				<a href="https://blog.yapcjapan.org/entry/2022/12/28/180000">｢学生旅費支援制度｣の募集を開始しました</a>
@@ -52,9 +52,9 @@
 
 	<hr class="hr__cat" id="speakers" />
 	<h2 class="h2__nikukyu"><span>ゲストスピーカー</span></h2>
-	<div class="max-w-5xl mx-auto px-5 guests mb-20">
+	<div class="mx-auto px-5 guests mb-20">
 		<% for (const speaker of locals.guestSpeakers) { %>
-			<div class="guest mt-6">
+			<div class="guest mt-6 lg:w-1/3 xl:w-1/4">
 			<div class="guest-photo__wrapper">
 				<img src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
 			</div>
@@ -74,8 +74,19 @@
 			</div>
 		<% } %>
 	</div>
-
 	<hr class="hr__tora" id="sponsors" />
+	<h2 class="h2__nikukyu"><span>ジョブボード</span></h2>
+	<div class="mx-auto px-5 my-24">
+		<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+			<% for (const board of locals.jobboards) { %>
+				<a href="<%= board.url %>">
+					<img src="<%= board.src %>" alt="<%= board.alt %>" />
+				</a>
+				<% } %>
+		</div>
+	</div>
+
+	<hr class="hr__cat" id="sponsors" />
 	<h2 class="h2__nikukyu"><span>スポンサー</span></h2>
 	<div class="max-w-5xl mx-auto px-5">
 		<div class="flex flex-wrap justify-center">

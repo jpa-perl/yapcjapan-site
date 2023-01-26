@@ -66,7 +66,6 @@ html:before {
 	margin: 1em auto;
 	background-size: 32px 40px;
 	width: calc(100% - 30px);
-	max-width: 1024px;
 }
 .hr__tora {
 	background-image: url(images/hr__tora.svg);
@@ -159,10 +158,8 @@ html:before {
 }
 
 .guests {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(auto,400px));
 	justify-content: center;
-	@apply gap-8 sm:gap-16;
+	@apply gap-8 sm:gap-10 flex flex-wrap;
 }
 @media screen and (max-width: 720px) {
 	.guests {
