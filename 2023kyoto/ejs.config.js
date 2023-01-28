@@ -1,3 +1,5 @@
+const jobboards = require('./data/jobboards.js')
+
 module.exports = {
   locals: {
     site: {
@@ -44,6 +46,7 @@ module.exports = {
         description: '2017年より株式会社ソラコムにて、セルラーコアネットワークを中心とする複数のソフトウェアコンポーネントの開発を担当。大学在学中の2013年よりLINE株式会社にてブログサービスや動画配信サービス、ウェブ広告配信システムなどの高トラフィックなウェブサービスの設計・開発に従事。2015年The Perl Foundation Grants Committee ProgramにてPerl::Lintが採択。builderscon Tokyo 2018にてベストスピーカー賞を受賞。',
       },
     ],
+    jobboards,
     sponsors: [
       {
         key: 'perl',
