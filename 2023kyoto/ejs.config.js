@@ -114,11 +114,11 @@ module.exports = {
             image: 'ypm.png',
             url: 'https://www.ypm.llc/',
           },
-        //   {
-        //     name: '株式会社マネーフォワード',
-        //     image: 'moneyforward.png',
-        //     url: 'https://corp.moneyforward.com/',
-        //   },
+          {
+            name: '株式会社マネーフォワード',
+            image: 'moneyforward.png',
+            url: 'https://corp.moneyforward.com/',
+          },
         ],
       },
       {
