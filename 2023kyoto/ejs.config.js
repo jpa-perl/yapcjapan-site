@@ -89,11 +89,11 @@ module.exports = {
             image: 'freakout.png',
             url: 'https://www.fout.co.jp/freakout/',
           },
-        //   {
-        //     name: 'さくらインターネット株式会社',
-        //     image: 'sakura.png',
-        //     url: 'https://www.sakura.ad.jp/',
-        //   },
+          {
+            name: 'さくらインターネット株式会社',
+            image: 'sakura.png',
+            url: 'https://www.sakura.ad.jp/',
+          },
           {
             name: '株式会社PR TIMES',
             image: 'prtimes.png',
@@ -153,9 +153,19 @@ module.exports = {
             url: 'https://have-fun.tech/',
           },
           {
+            name: '株式会社Cubicroot',
+            image: 'cubicroot.png',
+            url: 'https://libsisimai.org/',
+          },
+          {
             name: 'hachioji.pm',
             image: 'hachioji.png',
             url: 'https://twitter.com/hachiojipm',
+          },
+          {
+            name: 'Ossan.fm',
+            image: 'ossanfm.png',
+            url: 'https://ossan.fm',
           },
         ],
       },
@@ -238,6 +248,19 @@ module.exports = {
         ],
       },
       {
+        key: 'name-tag',
+        label: '名札',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: 'Ossan.fm',
+            image: 'ossanfm.png',
+            url: 'https://ossan.fm',
+          },
+        ],
+      },
+      {
         key: 'student-support',
         label: '学生支援',
         class: 'md:basis-64 basis-full',
@@ -273,19 +296,19 @@ module.exports = {
           },
         ],
       },
-    //   {
-    //     key: 'best-lt',
-    //     label: 'ベストLT',
-    //     class: 'md:basis-64 basis-full',
-    //     icon_class: 'max-w-[150px]',
-    //     companies: [
-    //       {
-    //         name: 'さくらインターネット株式会社',
-    //         image: 'sakura.png',
-    //         url: 'https://www.sakura.ad.jp/',
-    //       },
-    //     ],
-    //   },
+      {
+        key: 'best-lt',
+        label: 'ベストLT',
+        class: 'md:basis-64 basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: 'さくらインターネット株式会社',
+            image: 'sakura.png',
+            url: 'https://www.sakura.ad.jp/',
+          },
+        ],
+      },
       {
         key: 'guest',
         label: 'ゲスト',
