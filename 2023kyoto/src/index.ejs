@@ -97,7 +97,7 @@
 					</div>
 					<div class="flex flex-wrap justify-center gap-6">
 						<% for (const company of sponsor.companies) { %>
-							<a target="_blank" href="<%= company.url %>" class="block max-w-[200px] <%= sponsor.icon_class %>">
+							<a target="_blank" href="<%= company.url %>" class="block <%= sponsor.icon_class %>">
 								<span class="sponsor__image-wrapper">
 									<img loading="lazy" class="sponsor__image" src="images/sponsor/<%= company.image %>" alt="<%= company.name %>" />
 								</span>
