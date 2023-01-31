@@ -156,6 +156,11 @@ module.exports = {
             url: 'https://have-fun.tech/',
           },
           {
+            name: 'シックス・アパート株式会社',
+            image: 'six-apart.png',
+            url: 'https://www.sixapart.jp/',
+          },
+          {
             name: '株式会社Cubicroot',
             image: 'cubicroot.png',
             url: 'https://libsisimai.org/',
