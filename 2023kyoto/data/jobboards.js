@@ -15,6 +15,11 @@ module.exports = [
     url: 'https://recruit.mobilefactory.jp/',
   },
   {
+    src: 'sakura.png',
+    alt: 'さくらインターネット株式会社',
+    url: 'https://www.sakura.ad.jp/lp/22engineer/',
+  },
+  {
     src: 'prtimes.png',
     alt: '株式会社PR TIMES',
     url: 'https://developers.prtimes.jp/',
