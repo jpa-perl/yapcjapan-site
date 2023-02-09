@@ -1,0 +1,131 @@
+<%- include('partial/header'); -%>
+	<hr class="hr__tora" id="announcements" />
+	<h2 class="h2__bell"><span>タイムテーブル</span></h2>
+
+	<div class="container pb-32 m-auto text-primary">
+		<% for (const table of locals.timetable.timetable) { %>
+			<div class="mt-10 mb-8 ml-2 leading-none sm:mt-16">
+				<span class="inline-block px-1 py-1 mb-2 text-sm font-bold leading-none">
+					<%= table.caption1 %>
+				</span>
+				<div>
+					<span class="my-2 text-2xl font-bold leading-none sm:text-3xl">
+						<%= table.caption2 %>
+					</span>
+					<span class="text-base leading-none">
+						<%= table.caption3 %>
+					</span>
+				</div>
+			</div>
+			<table class="w-full">
+				<thead>
+					<tr>
+						<th class="px-4 py-2 text-xs sm:text-base whitespace-nowrap">時刻</th>
+						<th class="w-1/2 px-4 py-2 text-xs sm:text-base">トラックA</th>
+						<th class="w-1/2 px-4 py-2 text-xs sm:text-base">トラックB</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for (const talk of table.talks) { %>
+						<tr class="odd:bg-white">
+							<th
+								class="p-2 sm:p-3 leading-4 sm:leading-7 text-sm w-[15em] sm:whitespace-nowrap sm:align-top font-normal border-b border-b-gray">
+								<%= talk.start %> ~ <%= talk.start %>
+							</th>
+							<td class="p-2 align-top border-b sm:p-3 border-b-gray" <% if(!talk.track2) { %> colspan=2 <%}%>>
+									<% if(talk.track1.talk_id){ %>
+										<a class="items-center text-sm font-bold sm:text-base hover:underline"
+											href="#talk-<%= talk.track1.talk_id%>" data-modal-target="test">
+											<%= talk.track1.title %>
+												<svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top"
+													viewBox="0 0 20 20" fill="currentColor">
+													<path
+														d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+													<path
+														d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+												</svg>
+										</a>
+										<% } else {%>
+											<span class="text-sm">
+												<%= talk.track1.title %>
+											</span>
+											<% } %>
+												<small class="opacity-80">
+													<%= talk.duration %>min.
+												</small>
+												<div class="mt-1 text-sm">
+													<%= talk.author %>
+														<div>
+							</td>
+							<% if (talk.track2) { %>
+								<td class="p-2 align-top border-b sm:p-3 border-b-gray">
+									<% if(talk.track2.talk_id){ %>
+										<a class="items-center text-sm font-bold sm:text-base hover:underline"
+											href="#talk-<%= talk.track2.talk_id%>" data-modal-target="test">
+											<%= talk.track2.title %>
+												<svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 align-text-top"
+													viewBox="0 0 20 20" fill="currentColor">
+													<path
+														d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+													<path
+														d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+												</svg>
+										</a>
+									<% } else {%>
+										<span class="text-sm"><%= talk.track2.title %></span>
+									<% } %>
+										<small class="opacity-80"><%= talk.duration %>min.</small>
+										<div class="mt-1 text-sm"><%= talk.author %><div>
+								</td>
+								<% } %>
+							</tr>
+						<% } %>
+				</tbody>
+			</table>
+			<% } %>
+	</div>
+
+
+	<% for (const talk of locals.timetable.talks) { %>
+		<div id="talk-<%= talk.talk_id %>"
+			class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+			<a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+			<div class="rounded-lg overflow-hidden bg-bg w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative">
+				<div class="h-full overflow-scroll">
+					<div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+						<h2 class="text-xl font-bold text-center lg:text-2xl">
+							<%= talk.title%>
+						</h2>
+						<div class="md:flex">
+							<% for (const author of talk.authors) { %>
+								<div class="flex-1 mt-6 text-center sm:mt-8">
+									<author class="block pt-4 font-bold">
+										<%= author.author %>
+									</author>
+									<div class="flex items-center justify-center mt-3 gap-3">
+										<a target="_blank" href="<%= author.github_url %>">
+											<img class="inline-block w-6 h-6" src="./images/icon-github.svg" alt="GitHub" />
+										</a>
+										<a target="_blank" href="<%= author.twitter_url %>">
+											<img class="inline-block w-6 h-6" src="./images/icon-twitter.svg" alt="Twitter" />
+										</a>
+										<% if(author.blog_url){ %>
+											<a target="_blank" class="underline" href="<%= author.blog_url %>">
+												<img class="inline-block w-6 h-6" src="./images/icon-link.svg" alt="Blog" />
+											</a>
+											<% } %>
+									</div>
+								</div>
+								<% } %>
+						</div>
+						<div class="my-6 text-sm sm:my-8 lg:text-base">
+							<pre class="whitespace-pre-line"><%= talk.description %></pre>
+						</div>
+					</div>
+				</div>
+				<a href="#__"
+					class="absolute bottom-0 left-0 right-0 block w-full p-2 py-2 text-sm font-bold text-center bg-bg-dark text-primary">閉じる</a>
+			</div>
+		</div>
+		<% } %>
+<%- include('partial/footer'); -%>
