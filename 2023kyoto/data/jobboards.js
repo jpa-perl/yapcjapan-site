@@ -10,6 +10,11 @@ module.exports = [
     url: 'https://hatena.co.jp/recruit/engineer',
   },
   {
+    src: 'helpfeel.png',
+    alt: '株式会社Helpfeel',
+    url: 'https://scrapbox.io/helpfeel-dev-careers/%E9%96%8B%E7%99%BA%E9%83%A8_%E6%8E%A1%E7%94%A8%E6%83%85%E5%A0%B1',
+  },
+  {
     src: 'mobile-factory.png',
     alt: '株式会社モバイルファクトリー',
     url: 'https://recruit.mobilefactory.jp/',
