@@ -1,324 +1,100 @@
-module.exports = { timetable: [
-    {
-      caption1:"DAY1",
-      caption2:"2022.03.04",
-      caption3:"Fri.",
-      talks: [
-        {
-          start: "18:50",
-          end: "19:00",
-          track1: {
-            title: "Opening",
-            duration: 10,
-          },
-        },
-        {
-          start: "19:00",
-          end: "19:25",
-          track1: {
-            title: "ゲスト対談(前半)",
-            duration: 25,
-            talk_id: 1,
-            author: "石田絢一 uzulla / Junichi Ishida, 和田裕介 yusukebe / Yusuke Wada",
-          },
-        },
-        {
-          start: "19:25",
-          end: "19:30",
-          track1: {
-            title: "乾杯(株式会社ディー・エヌ・エー様)",
-            duration: 5,
-          },
-        },
-        {
-          start: "19:30",
-          end: "19:55",
-          track1: {
-            title: "ゲスト対談(後半)",
-            duration: 25,
-            talk_id: 1,
-            author: "石田絢一 uzulla / Junichi Ishida, 和田裕介 yusukebe / Yusuke Wada",
-          },
-        },
-        {
-          start: "19:55",
-          end: "20:00",
-          track1: {
-            title: "乾杯(LINE株式会社様)",
-            duration: 5,
-          },
-        },
-        {
-          start: "20:00",
-          end: "20:20",
-          track1: {
-            title: "TypeScript へ型安全性を高めながらリプレースする",
-            duration: 20,
-            talk_id: 19,
-            author: "@kimuson",
-          },
-          track2: {
-            title: "PHP で NFC リーダーを実装する",
-            duration: 20,
-            talk_id: 11,
-            author: "めもりー",
-          },
-        },
-        {
-          start: "20:20",
-          end: "20:30",
-          track1: {
-            title: "休憩",
-            duration: 10,
-          },
-        },
-        {
-          start: "20:30",
-          end: "20:50",
-          track1: {
-            title: "my$talk=qr{\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\b}i;",
-            duration: 20,
-            talk_id: 15,
-            author: "Dan Kogai"
-          },
-          track2: {
-            title: "ReDoS 検出の最先端 recheck の紹介",
-            duration: 20,
-            talk_id: 22,
-            author: "藤浪大弥 (@MakeNowJust)",
-          },
-        },
-        {
-          start: "20:50",
-          end: "20:55",
-          track1: {
-            title: "初日クロージング",
-            duration: 5,
-          },
-        },
-        {
-          start: "20:55",
-          end: "22:00",
-          track1: {
-            title: "懇親会",
-            duration: 65,
-          },
-        },
-      ],
-    },
-    {
-      caption1:"DAY2",
-      caption2:"2022.03.05",
-      caption3:"Sat.",
-      talks: [
-        {
-          start: "13:30",
-          end: "13:40",
-          track1: {
-            title: "オープニング",
-            duration: 10,
-          },
-        },
-        {
-          start: "13:40",
-          end: "14:20",
-          track1: {
-            title: '5年にわたる"Perl の" REST API を "Perl で" GraphQL API 化し作り直す',
-            duration: 40,
-            talk_id: 17,
-            author: "@mangano-ito"
-          },
-          track2: {
-            title: "じわじわとPerlからGoに移行しようとしている俺達のマイクロサービシーズの紹介",
-            duration: 40,
-            talk_id: 18,
-            author: "@macopy",
-          },
-        },
-        {
-          start: "14:20",
-          end: "14:30",
-          track1: {
-            title: "休憩",
-            duration: 10,
-          },
-        },
-        {
-          start: "14:30",
-          end: "14:50",
-          track1: {
-            title: "スクラムでつくる頼もしく生き生きとしたチーム",
-            duration: 20,
-            talk_id: 20,
-            author: "五十嵐雄",
-          },
-          track2: {
-            title: "Hono[炎] Ultrafast web framework for Cloudflare Workers.",
-            duration: 20,
-            talk_id: 13,
-            author: "Yusuke Wada",
-          },
-        },
-        {
-          start: "14:50",
-          end: "15:00",
-          track1: {
-            title: "休憩",
-            duration: 10,
-          },
-        },
-        {
-          start: "15:00",
-          end: "15:20",
-          track1: {
-            title: "あなたの知らない(かもしれない)コアモジュール",
-            duration: 20,
-            talk_id: 14,
-            author: "白方健太郎",
-          },
-          track2: {
-            title: "フロー効率の向上から始める開発生産性の高め方 ~ モブワークを沿えて ~",
-            duration: 20,
-            talk_id: 12,
-            author: "面川泰明"
-          },
-        },
-        {
-          start: "15:20",
-          end: "15:35",
-          track1: {
-            title: "休憩(15分)",
-            duration: 15,
-          },
-        },
-        {
-          start: "15:35",
-          end: "15:55",
-          track1: {
-            title: "perlimportsから探るPPIの世界",
-            duration: 20,
-            talk_id: 23,
-            author: "八雲アナグラ",
-          },
-          track2: {
-            title: "エンジニアの個人ブランディングと技術組織",
-            duration: 20,
-            talk_id: 24,
-            author: "Takafumi ONAKA",
-          },
-        },
-        {
-          start: "15:55",
-          end: "16:05",
-          track1: {
-            title: "休憩",
-            duration: 10,
-          },
-        },
-        {
-          start: "16:05",
-          end: "16:45",
-          track1: {
-            title: "Acme、其はPerlのユグドラシル",
-            duration: 40,
-            talk_id: 16,
-            author: "@makamaka",
-          },
-          track2: {
-            title: "7年間運用したソーシャルゲームをAmazon EC2構成からAmazon ECS構成へと乗り換えた話",
-            duration: 40,
-            talk_id: 21,
-            author: "@commojun",
-          },
-        },
-        {
-          start: "16:45",
-          end: "17:00",
-          track1: {
-            title: "休憩(15分)",
-            duration: 15,
-          },
-        },
-        {
-          start: "17:00",
-          end: "17:40",
-          track1: {
-            title: "Keynote",
-            duration: 40,
-            talk_id: 2,
-            author: "松木 雅幸 songmu / Matsuki Masayuki",
-          },
-        },
-        {
-          start: "17:40",
-          end: "17:50",
-          track1: {
-            title: "休憩",
-            duration: 10,
-          },
-        },
-        {
-          start: "17:50",
-          end: "18:30",
-          track1: {
-            title: "Lightning Talks",
-            duration: 40,
-            talk_id: 3,
-          },
-        },
-        {
-          start: "18:30",
-          end: "18:45",
-          track1: {
-            title: "Closing",
-            duration: 15,
-          },
-        },
-      ],
+const {trackA, trackB, trackC} = require('./tracks');
+
+const start = new Date('2023/3/19 9:30');
+const end = new Date('2023/3/19 19:30');
+
+const tracks = [
+  {
+    name: 'Track A',
+    talks: trackA,
+  },
+  {
+    name: 'Track B',
+    talks: trackB,
+  },
+  {
+    name: 'Track C',
+    talks: trackC,
+  }
+];
+
+let currentTime = start;
+const row = [];
+const currentDurations = [...tracks.map(() => 0)];
+
+while(currentTime.getTime() < end.getTime()) {
+  const td = [];
+  for(let i = 0; i < tracks.length; i++) {
+    const currentDuration = currentDurations[i];
+    if(currentDuration >= 5) {
+      currentDurations[i] -= 5;
+    } else {
+      const talk = tracks[i].talks.shift();
+      if(talk) {
+        currentDurations[i] = talk.duration - 5;
+        const rowspan = Math.ceil(talk.duration / 5);
+        td.push({ rowspan, ...talk });
+      }
     }
-  ],
+  }
+  const hour = currentTime.getHours();
+  const _min = currentTime.getMinutes();
+  const minute = _min < 10 ? `0${_min}` : _min;
+  const time = `${hour}:${minute}`;
+  row.push({ time, td });
+  currentTime.setMinutes(currentTime.getMinutes() + 5);
+}
+
+const table = {
+  head: ['時刻', ...tracks.map((track) => track.name)],
+  row,
+};
+
+module.exports = {
+  table,
   talks: [
     {
       talk_id: 1,
-      title: "ゲスト対談",
-      description: "TBD",
+      title: 'ゲスト対談',
+      description: 'TBD',
       duration: 50,
       authors: [
         {
-          author: "石田絢一 uzulla / Junichi Ishida",
-          author_icon: "/2022online/assets/images/guest/uzulla.jpg",
-          github_url: "https://github.com/uzulla",
-          twitter_url: "https://twitter.com/uzulla",
-          blog_url: "https://uzulla.hateblo.jp/",
+          author: '石田絢一 uzulla / Junichi Ishida',
+          author_icon: './images/speaker/uzulla.jpg',
+          github_url: 'https://github.com/uzulla',
+          twitter_url: 'https://twitter.com/uzulla',
+          blog_url: 'https://uzulla.hateblo.jp/',
         },
         {
-          author: "和田裕介 Yusuke Wada",
-          author_icon: "/2022online/assets/images/guest/yusukebe.jpg",
-          github_url: "https://github.com/yusukebe",
-          twitter_url: "https://twitter.com/yusukebe",
-          blog_url: "https://yusukebe.com/",
+          author: '和田裕介 Yusuke Wada',
+          author_icon: './images/speaker/yusukebe.jpg',
+          github_url: 'https://github.com/yusukebe',
+          twitter_url: 'https://twitter.com/yusukebe',
+          blog_url: 'https://yusukebe.com/',
         },
-      ]
+      ],
     },
     {
       talk_id: 2,
-      title: "Keynote",
-      description: "TBD",
+      title: 'Keynote',
+      description: 'TBD',
       duration: 40,
       authors: [
         {
-          author: "松木 雅幸 songmu / Matsuki Masayuki",
-          author_icon: "/2022online/assets/images/guest/songmu.jpg",
-          github_url: "https://github.com/songmu",
-          twitter_url: "https://twitter.com/songmu",
-          blog_url: "https://songmu.jp/riji/",
+          author: '松木 雅幸 songmu / Matsuki Masayuki',
+          author_icon: './images/speaker/songmu.jpg',
+          github_url: 'https://github.com/songmu',
+          twitter_url: 'https://twitter.com/songmu',
+          blog_url: 'https://songmu.jp/riji/',
         },
-      ]
+      ],
     },
     {
       talk_id: 3,
-      title: "Lightning Talks",
-      description: "\
+      title: 'Lightning Talks',
+      description:
+        '\
 1. スポンサーLT（ピザハット様）\n\
 2. さっぴー川原 「MyDNSとUnboundが同居していることにハマった」\n\
 3. Kang-min Liu「aaa.pl」\n\
@@ -327,88 +103,93 @@ module.exports = { timetable: [
 6. utgwkk 「prototypeとjust epic. と私」\n\
 7. タケタニヒロト「Perl詩を味わう」\n\
 8. kfly8 「Tシャツに書かれたコードを読む」\n\
-",
+',
       duration: 40,
-      authors: [
-      ]
+      authors: [],
     },
 
     {
       talk_id: 11,
-      title: "PHP で NFC リーダーを実装する",
-      description: "\
+      title: 'PHP で NFC リーダーを実装する',
+      description:
+        '\
 Suica や PASMO をデバイスにタッチして値を取得する、そんな夢を PHP で叶えました。\n\
 PHP7.4 から PHP FFI と呼ばれるものが導入されました。Suica や PASMO は FeliCa と呼ばれる NFC の規格の 1 つです。実装方法は多岐に渡りますが、概ね libnfc と呼ばれるライブラリや libusb を使う方法などがあります。しかし、今までの PHP ではこのライブラリを呼び出すことさえ叶いませんでした。そこで、本セッションでは PHP7.4 から導入された PHP FFI を用いてどのように PHP で NFC リーダーを実装するのか、そして実際のデモを交えてトークできればと思います。\n\
 \n\
-Perl にも FFI があるようですので、このトークをみてご興味を持った方はぜひお試しいただければと思います。",
+Perl にも FFI があるようですので、このトークをみてご興味を持った方はぜひお試しいただければと思います。',
       duration: 20,
       authors: [
         {
-          author: "めもりー",
-          author_icon: "/2022online/assets/images/speaker/m3m0r7.jpeg",
-          github_url: "https://github.com/m3m0r7",
-          twitter_url: "https://twitter.com/m3m0r7",
-          blog_url: "",
+          author: 'めもりー',
+          author_icon: './images/speaker/m3m0r7.jpeg',
+          github_url: 'https://github.com/m3m0r7',
+          twitter_url: 'https://twitter.com/m3m0r7',
+          blog_url: '',
         },
-      ]
+      ],
     },
     {
       talk_id: 12,
-      title: "フロー効率の向上から始める開発生産性の高め方 ~ モブワークを沿えて ~",
-      description: "\
-『LeanとDevOpsの科学』という書籍では、ハイパフォーマーである組織の特徴として「デプロイの頻度が多いこと」を挙げています。しかしデプロイの頻度を多くするには具体的にどうすればいいのでしょうか？この疑問に対し、モブワークと呼ばれる開発手法を通して解決を試みた結果をお話します。試行錯誤を重ねる中でチームが文字通り一心同体となり、リソース効率からフロー効率へ発想を転換していく過程をお楽しみいただけます。ハイパフォーマーを目指したい方、良いチームを育てたい方、開発で充実感を味わいたい方におすすめです。",
+      title:
+        'フロー効率の向上から始める開発生産性の高め方 ~ モブワークを沿えて ~',
+      description:
+        '\
+『LeanとDevOpsの科学』という書籍では、ハイパフォーマーである組織の特徴として「デプロイの頻度が多いこと」を挙げています。しかしデプロイの頻度を多くするには具体的にどうすればいいのでしょうか？この疑問に対し、モブワークと呼ばれる開発手法を通して解決を試みた結果をお話します。試行錯誤を重ねる中でチームが文字通り一心同体となり、リソース効率からフロー効率へ発想を転換していく過程をお楽しみいただけます。ハイパフォーマーを目指したい方、良いチームを育てたい方、開発で充実感を味わいたい方におすすめです。',
       duration: 20,
       authors: [
         {
-          author: "面川泰明",
-          author_icon: "/2022online/assets/images/speaker/omokawa_yasu.jpg",
-          github_url: "https://github.com/YasuakiOmokawa",
-          twitter_url: "https://twitter.com/omokawa_yasu",
-          blog_url: "https://note.com/omokawa_yasuaki",
+          author: '面川泰明',
+          author_icon: './images/speaker/omokawa_yasu.jpg',
+          github_url: 'https://github.com/YasuakiOmokawa',
+          twitter_url: 'https://twitter.com/omokawa_yasu',
+          blog_url: 'https://note.com/omokawa_yasuaki',
         },
-      ]
+      ],
     },
     {
       talk_id: 13,
-      title: "Hono[炎] Ultrafast web framework for Cloudflare Workers.",
-      description: "\
-Talk about Hono - ultrafast web framework that I making, and about the wonder of Cloudflare Workers. <https://github.com/yusukebe/hono>",
+      title: 'Hono[炎] Ultrafast web framework for Cloudflare Workers.',
+      description:
+        '\
+Talk about Hono - ultrafast web framework that I making, and about the wonder of Cloudflare Workers. <https://github.com/yusukebe/hono>',
       duration: 20,
       authors: [
         {
-          author: "Yusuke Wada",
-          author_icon: "/2022online/assets/images/speaker/yusukebe.jpg",
-          github_url: "https://github.com/yusukebe",
-          twitter_url: "https://twitter.com/yusukebe",
-          blog_url: "https://yusukebe.com/",
+          author: 'Yusuke Wada',
+          author_icon: './images/speaker/yusukebe.jpg',
+          github_url: 'https://github.com/yusukebe',
+          twitter_url: 'https://twitter.com/yusukebe',
+          blog_url: 'https://yusukebe.com/',
         },
-      ]
+      ],
     },
     {
       talk_id: 14,
-      title: "あなたの知らない(かもしれない)コアモジュール ",
-      description: "\
-Perlのバイナリに同梱して配布されるモジュールはコアモジュールと呼ばれます。 もちろんこの中にはEncodeモジュールのような無くてはならない有名なモジュールもありますが、中には「知られてないけど実は便利っぽい」モジュールや「どうしてコアモジュールになっているのかよくわからない」モジュールもあります。 このトークではそのような、あまり知名度が高くなさそうなコアモジュールについて探求した結果を時間の限りご紹介します。 ",
+      title: 'あなたの知らない(かもしれない)コアモジュール ',
+      description:
+        '\
+Perlのバイナリに同梱して配布されるモジュールはコアモジュールと呼ばれます。 もちろんこの中にはEncodeモジュールのような無くてはならない有名なモジュールもありますが、中には「知られてないけど実は便利っぽい」モジュールや「どうしてコアモジュールになっているのかよくわからない」モジュールもあります。 このトークではそのような、あまり知名度が高くなさそうなコアモジュールについて探求した結果を時間の限りご紹介します。 ',
       duration: 20,
       authors: [
         {
-          author: "白方健太郎 ",
-          author_icon: "/2022online/assets/images/speaker/argrath.jpg",
-          github_url: "https://github.com/argrath",
-          twitter_url: "https://twitter.com/argrath",
-          blog_url: "https://argrath.ub32.org/annex/",
+          author: '白方健太郎 ',
+          author_icon: './images/speaker/argrath.jpg',
+          github_url: 'https://github.com/argrath',
+          twitter_url: 'https://twitter.com/argrath',
+          blog_url: 'https://argrath.ub32.org/annex/',
         },
-      ]
+      ],
     },
     {
       talk_id: 15,
-      title: "my$talk=qr{\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\b}i;",
-      description: "\
+      title: 'my$talk=qr{\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\b}i;',
+      description:
+        '\
 正規表現。Perlが最も愛されそして(不当にも)憎まれる理由の一つ。しかし今や正規表現をサブ言語として持つ言語はPerlに限りません。本talkではこの最も人気のある言語内言語に関して、時間が許す限り型って、もとい語っていきます。\n\
 \n\
 * regexp? what is it?\n\
 * $supported_by ~~ @most_major_languages;\n\
-  * but how (much)?\?\n\
+  * but how (much)??\n\
     * Unicode support?\n\
     * assertions?\n\
     * modifiers?\n\
@@ -416,24 +197,25 @@ Perlのバイナリに同梱して配布されるモジュールはコアモジ�
   * Regexp::Assemble;\n\
   * Regexp::Common;\n\
 * Irregular expressions\n\
-  * qr{(func?(?:tion)(\(((?:(?>[^()]+)|(?2))*)\)))}\n\
+  * qr{(func?(?:tion)((((?:(?>[^()]+)|(?2))*))))}\n\
 * (ir)?regular questions (?:from|by) the audience\n\
-* ReDOS - Regexp considered harmful!?",
+* ReDOS - Regexp considered harmful!?',
       duration: 20,
       authors: [
         {
-          author: "Dan Kogai",
-          author_icon: "/2022online/assets/images/speaker/dankogai.jpg",
-          github_url: "https://github.com/dankogai",
-          twitter_url: "https://twitter.com/dankogai",
-          blog_url: "https://dankogai.livedoor.blog/",
+          author: 'Dan Kogai',
+          author_icon: './images/speaker/dankogai.jpg',
+          github_url: 'https://github.com/dankogai',
+          twitter_url: 'https://twitter.com/dankogai',
+          blog_url: 'https://dankogai.livedoor.blog/',
         },
-      ]
+      ],
     },
     {
       talk_id: 16,
-      title: "Acme、其はPerlのユグドラシル",
-      description: "\
+      title: 'Acme、其はPerlのユグドラシル',
+      description:
+        '\
 ※タイトルはtreeです\n\
 \n\
 CPANにリリースされる全てのAcmeモジュール（名前空間にAcmeを含むモジュール）を紹介するPerlの同人活動は、2021年度版『Acme大全』の発酵を以て、14年間の活動に笑止符を打ちました（終止符とは言ってない）。\n\
@@ -446,22 +228,24 @@ Acme界隈の出来事や動向、そして「これから」について大い�
 - Acmeの扉\n\
 - 必要はAcmeの母\n\
 - 少々Acmeウゼェナ\n\
-- 星のAcme",
+- 星のAcme',
       duration: 40,
       authors: [
         {
-          author: "makamaka",
-          author_icon: "/2022online/assets/images/speaker/maka2_donzoko.png",
-          github_url: "https://github.com/makamaka",
-          twitter_url: "https://twitter.com/maka2_donzoko",
-          blog_url: "http://www.donzoko.net/gakuya/",
+          author: 'makamaka',
+          author_icon: './images/speaker/maka2_donzoko.png',
+          github_url: 'https://github.com/makamaka',
+          twitter_url: 'https://twitter.com/maka2_donzoko',
+          blog_url: 'http://www.donzoko.net/gakuya/',
         },
-      ]
+      ],
     },
     {
       talk_id: 17,
-      title: '5年にわたる "Perl の" REST API を "Perl で" GraphQL API 化し作り直す',
-      description: "\
+      title:
+        '5年にわたる "Perl の" REST API を "Perl で" GraphQL API 化し作り直す',
+      description:
+        '\
 はてなマンガチームで開発している GigaViewer においては，\
 REST API をサーバーサイドエンジニアがネイティブアプリの1画面ごとに毎回作り，画面の要素変更のたびにひたすらパラメーターを追加して提供していました．\n\
 \n\
@@ -504,22 +288,24 @@ REST API をサーバーサイドエンジニアがネイティブアプリの1�
 - Perl による GraphQL 開発に興味のある開発者\n\
 - 既存のコードを活かしてより柔軟な API を提供したい開発者\n\
 - 既に GraphQL 開発を行っていて他社事例が気になる開発者\n\
-- チームを横断したプロジェクトを行う開発者",
+- チームを横断したプロジェクトを行う開発者',
       duration: 40,
       authors: [
         {
-          author: "mangano-ito",
-          author_icon: "/2022online/assets/images/speaker/mangano_ito.jpg",
-          github_url: "https://github.com/mangano-ito",
-          twitter_url: "https://twitter.com/mangano_ito",
-          blog_url: "https://mangano-ito.hatenablog.com/",
+          author: 'mangano-ito',
+          author_icon: './images/speaker/mangano_ito.jpg',
+          github_url: 'https://github.com/mangano-ito',
+          twitter_url: 'https://twitter.com/mangano_ito',
+          blog_url: 'https://mangano-ito.hatenablog.com/',
         },
-      ]
+      ],
     },
     {
       talk_id: 18,
-      title: "じわじわとPerlからGoに移行しようとしている俺達のマイクロサービシーズの紹介",
-      description: "\
+      title:
+        'じわじわとPerlからGoに移行しようとしている俺達のマイクロサービシーズの紹介',
+      description:
+        '\
 みなさんはサービスを運営していて、技術的な要因、もしくは採用的な要因でPerlでこれから将来やっていくことに行き詰まってしまうことはありませんか。\n\
 ありますよね、そうあるんですよ！\n\
 \n\
@@ -532,22 +318,23 @@ REST API をサーバーサイドエンジニアがネイティブアプリの1�
 * 認証をどうするか\n\
   * まだPerlから剥がせてないので、PerlアプリケーションがAPI Gatewayの役割を持っている話\n\
 \n\
-などなど、そのへんのよもやまを話します。",
+などなど、そのへんのよもやまを話します。',
       duration: 40,
       authors: [
         {
-          author: "macopy",
-          author_icon: "/2022online/assets/images/speaker/mackee_w.jpg",
-          github_url: "https://github.com/mackee",
-          twitter_url: "https://twitter.com/mackee_w",
-          blog_url: "https://mackee.hatenablog.com/",
+          author: 'macopy',
+          author_icon: './images/speaker/mackee_w.jpg',
+          github_url: 'https://github.com/mackee',
+          twitter_url: 'https://twitter.com/mackee_w',
+          blog_url: 'https://mackee.hatenablog.com/',
         },
-      ]
+      ],
     },
     {
       talk_id: 19,
-      title: "TypeScript へ型安全性を高めながらリプレースする",
-      description: "\
+      title: 'TypeScript へ型安全性を高めながらリプレースする',
+      description:
+        '\
 Perl や JavaScript 等の動的型付け言語では柔軟性が高い利点もありますが、複雑化してきて思うように開発速度が出なかったり、メンテナンスが大変だったりと言ったつらさを感じてはいませんか？\n\
 本セッションでは動的型付け言語に静的型をつける「漸進的型付け」に触れながら、JavaScript を緩い型付けの TypeScritpt へ、そしてより堅い TypeScript へと移行する方法について、実際のリプレース事例を交えて紹介します。\n\
 \n\
@@ -563,109 +350,115 @@ Perl や JavaScript 等の動的型付け言語では柔軟性が高い利点も
 想定ターゲット\n\
 - 運用歴の長くフロントエンドの環境がレガシーなプロダクトで開発をしている人\n\
   - JavaScript を使ってる or TypeScript に置き換え済みだが緩いオプションで思うように恩恵を受けられていない\n\
-- 動的型付け言語ユーザー",
+- 動的型付け言語ユーザー',
       duration: 20,
       authors: [
         {
-          author: "kimuson",
-          author_icon: "/2022online/assets/images/speaker/kimuson.jpg",
-          github_url: "https://github.com/d-kimuson",
-          twitter_url: "https://twitter.com/_kimuson",
-          blog_url: "https://kimuson.dev/",
+          author: 'kimuson',
+          author_icon: './images/speaker/kimuson.jpg',
+          github_url: 'https://github.com/d-kimuson',
+          twitter_url: 'https://twitter.com/_kimuson',
+          blog_url: 'https://kimuson.dev/',
         },
-      ]
+      ],
     },
     {
       talk_id: 20,
-      title: "スクラムでつくる頼もしく生き生きとしたチーム",
-      description: "\
-はてなブックマークのWebチームでは、開発プロセスにスクラムを採用しています。なかなかスクラムを乗りこなせない時期が続いていましたが、2021年10月に大きな転期があり、チームが劇的な進化を遂げました。今では、2週間スプリントのゴールを適切に設定し、その達成の道のりを楽しむことができています。スプリントのゴールを達成するために、タスクの分解や日々のコミュニケーションも活発になり、安定したパフォーマンスを発揮できるようになっています。その安定したパフォーマンスを背景に、少し遠い未来の予定についても、根拠を持って答えられるようになりました。この発表では、スクラムチームを大きく進化させた方法や、実体験を通じて学んだスクラムのパワーをお伝えします。この発表を聞いたあなたは、きっと自分のチームでもスクラムを実践してみたくなることでしょう！",
+      title: 'スクラムでつくる頼もしく生き生きとしたチーム',
+      description:
+        '\
+はてなブックマークのWebチームでは、開発プロセスにスクラムを採用しています。なかなかスクラムを乗りこなせない時期が続いていましたが、2021年10月に大きな転期があり、チームが劇的な進化を遂げました。今では、2週間スプリントのゴールを適切に設定し、その達成の道のりを楽しむことができています。スプリントのゴールを達成するために、タスクの分解や日々のコミュニケーションも活発になり、安定したパフォーマンスを発揮できるようになっています。その安定したパフォーマンスを背景に、少し遠い未来の予定についても、根拠を持って答えられるようになりました。この発表では、スクラムチームを大きく進化させた方法や、実体験を通じて学んだスクラムのパワーをお伝えします。この発表を聞いたあなたは、きっと自分のチームでもスクラムを実践してみたくなることでしょう！',
       duration: 20,
       authors: [
         {
-          author: "五十嵐雄",
-          author_icon: "/2022online/assets/images/speaker/yigarashi_9.jpg",
-          github_url: "https://github.com/yigarashi-9",
-          twitter_url: "https://twitter.com/yigarashi_9",
-          blog_url: "https://yigarashi.hatenablog.com/",
+          author: '五十嵐雄',
+          author_icon: './images/speaker/yigarashi_9.jpg',
+          github_url: 'https://github.com/yigarashi-9',
+          twitter_url: 'https://twitter.com/yigarashi_9',
+          blog_url: 'https://yigarashi.hatenablog.com/',
         },
-      ]
+      ],
     },
     {
       talk_id: 21,
-      title: "7年間運用したソーシャルゲームをAmazon EC2構成からAmazon ECS構成へと乗り換えた話",
-      description: "\
+      title:
+        '7年間運用したソーシャルゲームをAmazon EC2構成からAmazon ECS構成へと乗り換えた話',
+      description:
+        '\
 弊社KAYACで運用しているソーシャルゲームタイトル「ぼくらの甲子園！ポケット」は、2014年のリリースから、7周年を迎えました。開発チームでは、Amazon Linux OSのサポート終了に対応することをきっかけに、Amazon EC2構成からAmazon ECS構成への乗り換えをするという決断をしました。\n\
 - 従来のEC2によるシステム構成からコンテナベースのシステム構成へと乗り換えることで大きく変わった点\n\
 - リリース時からアップデートされず維持されていた、Perlのバージョンを5.16から5.30へとアップデートした際の苦労\n\
 - 長い歴史で肥大化してしまったリポジトリ特有の問題とその対処、どうしてもSPOFとなってしまっていたバッチサーバを冗長化する作戦\n\
 - システム構成の刷新といったような、専門的で、非エンジニアにはその恩恵が実感されづらい仕事を理解してもらい協力を得ることの重要性\n\
-…など、一連のシステム刷新作業を通して様々な学びが得られたので、それらについてお話させていただきたいと思います。",
+…など、一連のシステム刷新作業を通して様々な学びが得られたので、それらについてお話させていただきたいと思います。',
       duration: 40,
       authors: [
         {
-          author: "commojun",
-          author_icon: "/2022online/assets/images/speaker/commojun.jpg",
-          github_url: "https://github.com/commojun",
-          twitter_url: "https://twitter.com/commojun",
-          blog_url: "",
+          author: 'commojun',
+          author_icon: './images/speaker/commojun.jpg',
+          github_url: 'https://github.com/commojun',
+          twitter_url: 'https://twitter.com/commojun',
+          blog_url: '',
         },
-      ]
+      ],
     },
     {
       talk_id: 22,
-      title: "ReDoS 検出の最先端 recheck の紹介",
-      description: "\
+      title: 'ReDoS 検出の最先端 recheck の紹介',
+      description:
+        '\
 Perl をはじめ多くのプログラミング言語の正規表現のマッチングではバックトラッキングが使われていますが，正規表現パターンによってはバックトラッキングが爆発し，マッチングに多大な時間を消費することがあります．これを利用した DoS 攻撃の一種が ReDoS と呼ばれます．\n\
 発表者は recheck という ReDoS 検出プログラム (https://github.com/MakeNowJust-Labo/recheck) を開発・公開しています．これは最先端の ReDoS 検出アルゴリズムを実装していて，高速かつ正確な検出が可能となっています．\n\
-発表では，ReDoS という脆弱性がどのようなものか，どのようにして ReDoS を検出するのか，ReDoS を防ぐためにはどうすればよいのか，といった点について解説します．",
+発表では，ReDoS という脆弱性がどのようなものか，どのようにして ReDoS を検出するのか，ReDoS を防ぐためにはどうすればよいのか，といった点について解説します．',
       duration: 20,
       authors: [
         {
-          author: "藤浪大弥 (@MakeNowJust)",
-          author_icon: "/2022online/assets/images/speaker/make_now_just.png",
-          github_url: "https://github.com/MakeNowJust",
-          twitter_url: "https://twitter.com/make_now_just",
-          blog_url: "https://makenowjust-labo.github.io/blog/",
+          author: '藤浪大弥 (@MakeNowJust)',
+          author_icon: './images/speaker/make_now_just.png',
+          github_url: 'https://github.com/MakeNowJust',
+          twitter_url: 'https://twitter.com/make_now_just',
+          blog_url: 'https://makenowjust-labo.github.io/blog/',
         },
-      ]
+      ],
     },
     {
       talk_id: 23,
-      title: "perlimportsから探るPPIの世界",
-      description: "\
+      title: 'perlimportsから探るPPIの世界',
+      description:
+        '\
 TPC 2021 in the Cloudで発表されたperlimportsは、Perlの関数エクスポートを機械的に整理してくれる画期的なツールでした。Perlで書かれたperlimportsは、関数エクスポート対象の関数名の解決にPPIと呼ばれる静的解析ツールを利用しています。\n\
 本トークではperlimportsの紹介を通して、PPIを利用したPerlの静的解析の世界を覗いてみます。\n\
-",
+',
       duration: 20,
       authors: [
         {
-          author: "八雲アナグラ",
-          author_icon: "/2022online/assets/images/speaker/AnaTofuZ.jpg",
-          github_url: "https://github.com/AnaTofuZ",
-          twitter_url: "https://twitter.com/AnaTofuZ",
-          blog_url: "https://anatofuz.hatenablog.com/",
+          author: '八雲アナグラ',
+          author_icon: './images/speaker/AnaTofuZ.jpg',
+          github_url: 'https://github.com/AnaTofuZ',
+          twitter_url: 'https://twitter.com/AnaTofuZ',
+          blog_url: 'https://anatofuz.hatenablog.com/',
         },
-      ]
+      ],
     },
     {
       talk_id: 24,
-      title: "エンジニアの個人ブランディングと技術組織",
-      description: "\
+      title: 'エンジニアの個人ブランディングと技術組織',
+      description:
+        '\
 僕らはインターネット上で開発の知見を得ることによってサービスを開発・運営できているので、インターネットに還元したい。そんな気持ちから、会社でもアウトプット (登壇や技術ブログ、執筆、OSS 活動等) が推奨されています。\n\
 社としての技術ブログも存在しますが、スタッフ個人のブログを通じて発信するのも同じように推奨していきたい。エンジニアの個人ブランディングも大事だと考えているし、自分の場所の方が書きやすいというのも感じているからです。\n\
 その上で、社内外の色んなサービスに散らばった技術 Tips を上手くまとめて再放流することで、手軽に情報を摂取し、技術的好奇心を満たし、成長し続けられる環境を用意したい。\n\
-そんな、個人の集合体としての技術コミュニティを運営する方法と、そのために開発したアプリケーションについて紹介します。",
+そんな、個人の集合体としての技術コミュニティを運営する方法と、そのために開発したアプリケーションについて紹介します。',
       duration: 20,
       authors: [
         {
-          author: "Takafumi ONAKA",
-          author_icon: "/2022online/assets/images/speaker/onk.jpg",
-          github_url: "https://github.com/onk",
-          twitter_url: "https://twitter.com/onk",
-          blog_url: "https://onk.hatenablog.jp/",
+          author: 'Takafumi ONAKA',
+          author_icon: './images/speaker/onk.jpg',
+          github_url: 'https://github.com/onk',
+          twitter_url: 'https://twitter.com/onk',
+          blog_url: 'https://onk.hatenablog.jp/',
         },
-      ]
+      ],
     },
-  ]
-}
+  ],
+};

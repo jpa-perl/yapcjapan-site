@@ -21,6 +21,9 @@ html:before {
 	background: linear-gradient(180deg, #FFF7CA 66.67%, rgba(255, 247, 202, 0) 100%);
 	z-index: -1;
 }
+.modal-bg {
+	background: #fff linear-gradient(180deg, #FFF7CA 40%, rgba(255, 247, 202, 0) 100%);
+}
 
 .global-nav {
 	top:0;
@@ -212,6 +215,26 @@ overflow: hidden;
 	object-fit: cover;
 	border-radius: 50%;
 }
+
+.guest-photo__wrapper--talk  {
+	padding-top: 0;
+}
+
+.guest-photo__wrapper--talk::before {
+	background: transparent;
+}
+
+.guest-photo__wrapper--talk::after  {
+	transform: translateY(-47px);
+	background-size: 150px;
+	bottom: 0;
+}
+
+.guest-photo__wrapper--talk img {
+	width: 100px;
+	height: 100px;
+}
+
 
 
 .table__place td,
