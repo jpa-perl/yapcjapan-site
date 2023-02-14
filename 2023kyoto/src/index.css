@@ -267,12 +267,25 @@ overflow: hidden;
 	transform: translate(-50%, -50%);
 }
 
+.timetable thead th:nth-child(2) {
+	color: #2D8000;
+}
+
+.timetable thead th:nth-child(3) {
+	color: #7870D2;
+}
+
+.timetable thead th:nth-child(4) {
+	color: #B43C3C;
+}
+
 .timetable__cell {
 	line-height: 1.2;
 	background-color: rgba(255, 247, 202, 1);
 	border-radius: 0.5em;
 	height: 100%;
 	min-width: 10em;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .timetable__cell.A{
@@ -311,6 +324,7 @@ overflow: hidden;
 	border-top-left-radius: 0;
 	opacity: 0.8;
 	border:0;
+	box-shadow: none;
 }
 
 .timetable__cell.rest .title,
@@ -325,6 +339,7 @@ overflow: hidden;
 	color: #333;
 	opacity: 0.7;
 	border:0;
+	box-shadow: none;
 }
 
 .timetable__cell.lt .time,
