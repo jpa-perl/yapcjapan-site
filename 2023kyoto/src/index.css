@@ -266,3 +266,69 @@ overflow: hidden;
 	top: 0px;
 	transform: translate(-50%, -50%);
 }
+
+.timetable__cell {
+	line-height: 1.2;
+	background-color: rgba(255, 247, 202, 1);
+	border-radius: 0.5em;
+	height: 100%;
+	min-width: 10em;
+}
+
+.timetable__cell.A{
+	background: #E3EEDB;
+	border: 1px solid #2D8000;
+}
+
+.timetable__cell.B{
+	background: #EDECF9;
+	border: 1px solid #7870D2;
+}
+
+.timetable__cell.C{
+	background: #F5E5E5;
+	border: 1px solid #B43C3C;
+}
+
+.timetable__cell.A .time span{
+	background: #2D8000;
+}
+
+.timetable__cell.B .time span{
+	background: #7870D2;
+}
+
+.timetable__cell.C .time span{
+	background: #B43C3C;
+}
+
+.timetable__cell .title {
+	font-weight: bold;
+}
+
+.timetable__cell.qa {
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	opacity: 0.8;
+	border:0;
+}
+
+.timetable__cell.rest .title,
+.timetable__cell.qa .title {
+	font-weight: normal;
+	font-size: 80%;
+	opacity: 0.95;
+}
+
+.timetable__cell.rest {
+	background: #eee;
+	color: #333;
+	opacity: 0.7;
+	border:0;
+}
+
+.timetable__cell.lt .time,
+.timetable__cell.qa .time,
+.timetable__cell.rest .time {
+	display: none;
+}

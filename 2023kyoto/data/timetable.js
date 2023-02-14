@@ -6,14 +6,17 @@ const end = new Date('2023/3/19 19:30');
 const tracks = [
   {
     name: 'Track A',
+    track: 'A',
     talks: trackA,
   },
   {
     name: 'Track B',
+    track: 'B',
     talks: trackB,
   },
   {
     name: 'Track C',
+    track: 'C',
     talks: trackC,
   }
 ];
@@ -22,8 +25,14 @@ let currentTime = start;
 const row = [];
 const currentDurations = [...tracks.map(() => 0)];
 
+// 5分ごとのtrを作る
 while(currentTime.getTime() < end.getTime()) {
+  // track分のtrを作る
   const td = [];
+  const hour = currentTime.getHours();
+  const _min = currentTime.getMinutes();
+  const minute = _min < 10 ? `0${_min}` : _min;
+  const time = `${hour}:${minute}`;
   for(let i = 0; i < tracks.length; i++) {
     const currentDuration = currentDurations[i];
     if(currentDuration >= 5) {
@@ -32,21 +41,22 @@ while(currentTime.getTime() < end.getTime()) {
       const talk = tracks[i].talks.shift();
       if(talk) {
         currentDurations[i] = talk.duration - 5;
+        // 発表時間からrowspanを割り出す
         const rowspan = Math.ceil(talk.duration / 5);
-        td.push({ rowspan, ...talk });
+        const classes = [tracks[i].track];
+        if(talk.title.includes('LT')) classes.push('lt');
+        if(talk.title.includes('休憩')) classes.push('rest');
+        if(talk.title.includes('質疑応答')) classes.push('qa');
+        td.push({ rowspan, class: classes.join(' '), start: time, ...talk });
       }
     }
   }
-  const hour = currentTime.getHours();
-  const _min = currentTime.getMinutes();
-  const minute = _min < 10 ? `0${_min}` : _min;
-  const time = `${hour}:${minute}`;
   row.push({ time, td });
   currentTime.setMinutes(currentTime.getMinutes() + 5);
 }
 
 const table = {
-  head: ['時刻', ...tracks.map((track) => track.name)],
+  head: [...tracks.map((track) => track.name)],
   row,
 };
 

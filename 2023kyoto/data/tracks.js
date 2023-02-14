@@ -2,7 +2,7 @@ const trackAtsv = `
 5	オープニング	
 5	スポンサーセッション(会場)	
 10	休憩(移動)	
-40	2023年春のPerl	charsbar
+40	2023年春のPerl	charsbar	1
 5	質疑応答	
 5	休憩	
 20	売上と開発環境を同時に改善するために既存のPerl Web アプリケーションをどのようにリプレイスするか	須藤将史
@@ -23,7 +23,7 @@ const trackAtsv = `
 40	デプロイ今昔物語 〜CGIからサーバーレスまで〜	macopy
 5	質疑応答	
 20	休憩	
-50	ゲスト	上原先生/宮脇先生 (50min)
+50	ゲスト	上原先生/宮脇先生
 5	質疑応答	
 5	休憩	
 5	スポンサーセッション(ゲスト)	
@@ -31,18 +31,13 @@ const trackAtsv = `
 5	質疑応答	
 15	休憩	
 5	接続テスト	
-5	LT	
-5	LT	
-5	LT	
-5	LT	
-5	LT	
-5	LT	
+30	ライトニングトーク	
 40	キーノート	onihsi
 5	クロージング	
 `;
 
 const trackBtsv = `
-10	-	
+10		
 10	休憩(移動)	
 40	小さく始め、長く続けるOSS開発と貢献	Songmu
 5	質疑応答	
@@ -79,7 +74,7 @@ const trackBtsv = `
 `
 
 const trackCtsv = `
-10	-	
+10		
 5	休憩(移動)	
 50	ぶつかり稽古	
 5	休憩	
@@ -117,14 +112,11 @@ const trackCtsv = `
 const tsv2talks = (tsv) => {
   return tsv.trim().split(/\n/).map((line) => {
     const col = line.split(/\t/);
-    const duration = parseInt(col[0], 10);
-    const title = col[1];
-    const author = col[2];
-
     return {
-      duration,
-      title,
-      author,
+      duration: parseInt(col[0], 10),
+      title: col[1],
+      author: col[2],
+      talk_id: col[3],
     };
   });
 };
