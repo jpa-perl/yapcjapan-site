@@ -73,17 +73,21 @@
 										<%= author.author %>
 									</author>
 									<div class="flex items-center justify-center mt-3 gap-3">
-										<a target="_blank" href="<%= author.github_url %>">
-											<img class="inline-block w-6 h-6" src="./images/icon-github.svg" alt="GitHub" />
-										</a>
-										<a target="_blank" href="<%= author.twitter_url %>">
-											<img class="inline-block w-6 h-6" src="./images/icon-twitter.svg" alt="Twitter" />
-										</a>
+										<% if (author.github_url) { %>
+											<a target="_blank" href="<%= author.github_url %>">
+												<img class="inline-block w-6 h-6" src="./images/icon-github.svg" alt="GitHub" />
+											</a>
+										<% } %>
+										<% if (author.twitter_url ) { %>
+											<a target="_blank" href="<%= author.twitter_url %>">
+												<img class="inline-block w-6 h-6" src="./images/icon-twitter.svg" alt="Twitter" />
+											</a>
+										<% } %>
 										<% if(author.blog_url){ %>
 											<a target="_blank" class="underline" href="<%= author.blog_url %>">
 												<img class="inline-block w-6 h-6" src="./images/icon-link.svg" alt="Blog" />
 											</a>
-											<% } %>
+										<% } %>
 									</div>
 								</div>
 								<% } %>
