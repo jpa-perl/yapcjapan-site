@@ -66,19 +66,19 @@
 						<div class="md:flex mb-9">
 							<% for (const author of talk.authors) { %>
 								<div class="flex-1 mt-6 text-center sm:mt-8">
-			<div class="guest-photo__wrapper guest-photo__wrapper--talk">
-				<img src="<%= author.author_icon %>" alt="" />
-			</div>
+									<div class="guest-photo__wrapper guest-photo__wrapper--talk">
+										<img src="<%= author.author_icon %>" alt="" />
+									</div>
 									<author class="block pt-4 font-bold">
 										<%= author.author %>
 									</author>
 									<div class="flex items-center justify-center mt-3 gap-3">
-										<% if (author.github_url) { %>
+										<% if(author.github_url) { %>
 											<a target="_blank" href="<%= author.github_url %>">
 												<img class="inline-block w-6 h-6" src="./images/icon-github.svg" alt="GitHub" />
 											</a>
 										<% } %>
-										<% if (author.twitter_url ) { %>
+										<% if(author.twitter_url) { %>
 											<a target="_blank" href="<%= author.twitter_url %>">
 												<img class="inline-block w-6 h-6" src="./images/icon-twitter.svg" alt="Twitter" />
 											</a>
