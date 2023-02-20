@@ -431,7 +431,7 @@ module.exports = {
       authors: [
         {
           author: '渡部 龍一',
-          author_icon: './images/speaker/ryuichi1208.jpg',
+          author_icon: './images/speaker/ryuichi1208.png',
           github_url: "https://github.com/ryuichi1208",
           twitter_url: "https://twitter.com/ryuichi_1208",
           blog_url: "https://ryuichi1208.hateblo.jp/",
