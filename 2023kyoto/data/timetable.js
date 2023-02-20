@@ -65,17 +65,62 @@ module.exports = {
   talks: [
     {
       talk_id: 1,
-      title: 'ゲスト対談',
+      title: 'キーノート',
+      description: 'TBD',
+      duration: 40,
+      authors: [
+        {
+          author: '大西 康裕 / Yasuhiro Onishi',
+          author_icon: './images/onishi.jpg',
+        }
+      ],
+    },
+    {
+      talk_id: 2,
+      title: 'ゲストトーク',
+      description: 'TBD',
+      duration: 40,
+      authors: [
+        {
+          author: '小林 篤 / Atsushi Kobayashi',
+          author_icon: './images/nekokak.jpg',
+        }
+      ],
+    },
+    {
+      talk_id: 3,
+      title: 'ゲストトーク',
       description: 'TBD',
       duration: 50,
       authors: [
         {
-          author: '石田絢一 uzulla / Junichi Ishida',
-          author_icon: './images/speaker/uzulla.jpg',
-          github_url: 'https://github.com/uzulla',
-          twitter_url: 'https://twitter.com/uzulla',
-          blog_url: 'https://uzulla.hateblo.jp/',
+          author: '上原 哲太郎 / Tetsutaro Uehara',
+          author_icon: './images/uehara.jpg',
+        },
+        {
+          author: '宮脇 正晴 / Miyawaki Masaharu',
+          author_icon: './images/miyawaki.jpg',
         }
+      ],
+    },
+    {
+      talk_id: 4,
+      title: 'ゲストトーク',
+      description: 'TBD',
+      duration: 40,
+      authors: [
+        {
+          author: '川上 大喜 / Taiki Kawakami / @moznion',
+          author_icon: './images/moznion.jpg',
+        }
+      ],
+    },
+    {
+      talk_id: 5,
+      title: 'ぶつかり稽古',
+      description: 'TBD',
+      duration: 50,
+      authors: [
       ],
     },
     {
@@ -161,7 +206,7 @@ module.exports = {
       authors: [
         {
           author: 'Pasta-K',
-          author_icon: './images/speaker/pastak.jpg',
+          author_icon: './images/speaker/pastak.png',
           github_url: "https://github.com/pastak",
           twitter_url: "https://twitter.com/pastak",
           blog_url: "https://blog.pastak.net/",
@@ -176,7 +221,7 @@ module.exports = {
       authors: [
         {
           author: 'catatsuy',
-          author_icon: './images/speaker/catatsuy.jpg',
+          author_icon: './images/speaker/catatsuy.png',
           github_url: "https://github.com/catatsuy",
           twitter_url: "https://twitter.com/catatsuy",
           blog_url: "https://www.catatsuy.org/",
@@ -206,7 +251,7 @@ module.exports = {
       authors: [
         {
           author: 'Dan Kogai',
-          author_icon: './images/speaker/dankogai.jpg',
+          author_icon: './images/speaker/dankogai.png',
           github_url: "https://github.com/dankogai",
           twitter_url: "https://twitter.com/dankogai",
           blog_url: "https://dankogai.livedoor.blog",
@@ -221,7 +266,7 @@ module.exports = {
       authors: [
         {
           author: 'Takafumi ONAKA',
-          author_icon: './images/speaker/onk.jpg',
+          author_icon: './images/speaker/onk.png',
           github_url: "https://github.com/onk",
           twitter_url: "https://twitter.com/onk",
           blog_url: "https://onk.hatenablog.jp/",
@@ -251,7 +296,7 @@ module.exports = {
       authors: [
         {
           author: 'うたがわきき',
-          author_icon: './images/speaker/utgwkk.jpg',
+          author_icon: './images/speaker/utgwkk.png',
           github_url: "https://github.com/utgwkk",
           twitter_url: "https://twitter.com/utgwkk",
           blog_url: "https://blog.utgw.net/",
@@ -296,7 +341,7 @@ module.exports = {
       authors: [
         {
           author: '白方 健太郎',
-          author_icon: './images/speaker/argrath.jpg',
+          author_icon: './images/speaker/argrath.png',
           github_url: "https://github.com/argrath",
           twitter_url: "https://twitter.com/argrath",
           blog_url: "",
@@ -326,7 +371,7 @@ module.exports = {
       authors: [
         {
           author: '伊奈 林太郎',
-          author_icon: './images/speaker/tarao.jpg',
+          author_icon: './images/speaker/tarao.png',
           github_url: "https://github.com/tarao",
           twitter_url: "https://twitter.com/oarat",
           blog_url: "https://tarao.hatenablog.com/",
@@ -341,7 +386,7 @@ module.exports = {
       authors: [
         {
           author: 'macopy',
-          author_icon: './images/speaker/mackee.jpg',
+          author_icon: './images/speaker/mackee.png',
           github_url: "https://github.com/mackee",
           twitter_url: "https://twitter.com/mackee_w",
           blog_url: "https://mackee.hatenablog.com/",
@@ -356,7 +401,7 @@ module.exports = {
       authors: [
         {
           author: '曽根 壮大',
-          author_icon: './images/speaker/soudai.jpg',
+          author_icon: './images/speaker/soudai.png',
           github_url: "https://github.com/soudai",
           twitter_url: "https://twitter.com/soudai1025",
           blog_url: "https://soudai.hatenablog.com/",
@@ -446,7 +491,7 @@ module.exports = {
       authors: [
         {
           author: 'koluku',
-          author_icon: './images/speaker/koluku.jpg',
+          author_icon: './images/speaker/koluku.png',
           github_url: "https://github.com/koluku",
           twitter_url: "https://twitter.com/koluku",
           blog_url: "https://koluku.com",
@@ -461,7 +506,7 @@ module.exports = {
       authors: [
         {
           author: 'Konboi ',
-          author_icon: './images/speaker/Konboi.jpg',
+          author_icon: './images/speaker/Konboi.png',
           github_url: "https://github.com/Konboi",
           twitter_url: "https://twitter.com/Konboi",
           blog_url: "https://blog.konboi.com",
