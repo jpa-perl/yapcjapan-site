@@ -21,6 +21,9 @@ html:before {
 	background: linear-gradient(180deg, #FFF7CA 66.67%, rgba(255, 247, 202, 0) 100%);
 	z-index: -1;
 }
+.modal-bg {
+	background: #fff linear-gradient(180deg, #FFF7CA 40%, rgba(255, 247, 202, 0) 100%);
+}
 
 .global-nav {
 	top:0;
@@ -213,6 +216,26 @@ overflow: hidden;
 	border-radius: 50%;
 }
 
+.guest-photo__wrapper--talk  {
+	padding-top: 0;
+}
+
+.guest-photo__wrapper--talk::before {
+	background: transparent;
+}
+
+.guest-photo__wrapper--talk::after  {
+	transform: translateY(-47px);
+	background-size: 150px;
+	bottom: 0;
+}
+
+.guest-photo__wrapper--talk img {
+	width: 100px;
+	height: 100px;
+}
+
+
 
 .table__place td,
 .table__place th {
@@ -242,4 +265,85 @@ overflow: hidden;
 	left: 50%;
 	top: 0px;
 	transform: translate(-50%, -50%);
+}
+
+.timetable thead th:nth-child(2) {
+	color: #2D8000;
+}
+
+.timetable thead th:nth-child(3) {
+	color: #7870D2;
+}
+
+.timetable thead th:nth-child(4) {
+	color: #B43C3C;
+}
+
+.timetable__cell {
+	line-height: 1.2;
+	background-color: rgba(255, 247, 202, 1);
+	border-radius: 0.5em;
+	height: 100%;
+	min-width: 10em;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.timetable__cell.A{
+	background: #E3EEDB;
+	border: 1px solid #2D8000;
+}
+
+.timetable__cell.B{
+	background: #EDECF9;
+	border: 1px solid #7870D2;
+}
+
+.timetable__cell.C{
+	background: #F5E5E5;
+	border: 1px solid #B43C3C;
+}
+
+.timetable__cell.A .time span{
+	background: #2D8000;
+}
+
+.timetable__cell.B .time span{
+	background: #7870D2;
+}
+
+.timetable__cell.C .time span{
+	background: #B43C3C;
+}
+
+.timetable__cell .title {
+	font-weight: bold;
+}
+
+.timetable__cell.qa {
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	opacity: 0.8;
+	border:0;
+	box-shadow: none;
+}
+
+.timetable__cell.rest .title,
+.timetable__cell.qa .title {
+	font-weight: normal;
+	font-size: 80%;
+	opacity: 0.95;
+}
+
+.timetable__cell.rest {
+	background: #eee;
+	color: #333;
+	opacity: 0.7;
+	border:0;
+	box-shadow: none;
+}
+
+.timetable__cell.lt .time,
+.timetable__cell.qa .time,
+.timetable__cell.rest .time {
+	display: none;
 }

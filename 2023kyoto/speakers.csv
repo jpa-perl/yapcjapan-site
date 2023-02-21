@@ -1,0 +1,223 @@
+talk_id,author,duration,title,description,icon,github_url,twitter_url,blog_url,github_icon_url
+101,niboshi,40,"""普通""のWebアプリでWASMを活用する","WebAssembly(WASM)は近年Web以外にも活用の幅を広げており、Perlエコシステムにおいても、Perl処理系をWasmに変換してWeb上で動作させるWebPerlや、PerlからWasmを呼び出すためのCPANモジュールが登場しています。
+一方、実プロダクトでの活用シーンの情報はまだまだ少なく、WASM適用がどのようなシチュエーションで有効なのか、イメージが湧きづらい状態です。
+
+このトークでは、株式会社Helpfeelにおける独自記法パーサのWasm実装を例に、""普通""のWebアプリケーションへのWasm適用にトライする中での、適用先の検討、トレードオフ、具体的な活用例などをご紹介します。",mpppk.jpg,https://github.com/mpppk,https://twitter.com/mpppk,https://nibo.sh/,https://avatars.githubusercontent.com/u/4279342?v=4
+102,charsbar,40,2023年春のPerl,久しぶりのシリーズ再開ということで、今回はPerl 5.32からそろそろ概要が見えてきている Perl 5.38 までの情報を簡単にまとめていきます。,charsbar.jpeg,,,,
+103,三上　烈史（みかみ　つよし）,40,4PB(ペタバイト)を超えるオブジェクトストレージをハードウェアからアプリケーションにかけて運用するノウハウ,"GMOペパボでは、分散オブジェクトストレージを実現できるPerl製のソフトウェアであるMogileFSと、300本以上の大容量のHDDを搭載したオンプレミスなサーバ群を組み合わせて、大規模なオブジェクトストレージを実現しています。
+これを活用して、写真共有サービスの30days Albumの写真・動画をホストしたり、さらにS3互換のREST APIを開発してS3ライクに利用できるプライベートオブジェクトストレージとしても利用できるよう拡張してきました。
+運用を始めた2008年時点で1TB程度だったオブジェクトストレージは、2023年1月現在では4PBを超えており4000倍以上の規模まで成長しました。
+
+本トークでは、十数年かけて4PBまで成長したオブジェクトストレージをどのように運用してきたのかハードウェアからアプリケーションにかけて横断して紹介します。
+
+アジェンダ
+ - MogileFSを利用したオブジェクトストレージのアーキテクチャ
+ - キャパシティを意識したストレージのライフサイクル管理
+ - サービスの特性を考慮したREST APIの実装
+ - S3互換のプライベートオブジェクトストレージのS3移設",rsym.jpg,https://github.com/rsym,https://twitter.com/rsym1290,https://rsym1290.hatenablog.jp/,https://avatars.githubusercontent.com/u/22150870?v=4
+104,長野雅広,20,DNS権威サービスへのDDoSとハイパフォーマンスなベンチマーカ,"クラウドファースト、クラウドバイデフォルトなどと言われるようにクラウドサービス前提にシステムの構築運用がなっています。インターネットにおける重要な基盤技術のひとつであるDNSにおいてもクラウドサービスが使われるようになっています。
+
+本トークでは、さくらのクラウドのDNSアプライアンスサービスに行われたDNS水責め攻撃と呼ばれるDDoS攻撃の内容およびその対策について紹介します。また、対策にあたって作成したDNSサーバへ負荷をかけるベンチマーカを題材にハイパフォーマンスなベンチマーカを作る上で必要な要素も紹介します。
+
+アジェンダ
+- さくらのクラウド DNSアプライアンスとは(Perlも使っているよ)
+- DNS水責め攻撃とその実際
+- GoによるハイパフォーマンスなDNSのベンチマーカ作成
+- さくらインターネット SRE室の取り組み
+",kazeburo.jpg,https://github.com/kazeburo,https://twitter.com/kazeburo,https://kazeburo.hatenablog.com/,https://avatars.githubusercontent.com/u/46764?v=4
+105,天野 卓,20,honoの3+1のルーターと、そこにつながるPRがプロジェクトにもたらしたもの,"超軽量のウェブフレームワークであるhonoにおいて、高速な動作を中心で支えているのがルーターです。
+honoは現在、内部では3つのルーターの実装を持っていますが、構築したアプリケーションのルーティングに応じてそこから自動で選択されて、実行時には最適な1つが利用されるようになっています。
+
+発表の前半では3つのルーターの紹介と、そこから1つが選択される仕組みについてお話します。
+
+後半では、ルーターの実装が追加されていった経緯と、そこにつながるPRがOSSとしてのhonoになにをもたらしたかについて、PR作成者側の視点で感じたことをお話します。",usualoma.jpg,https://github.com/usualoma,https://twitter.com/usualoma,https://blog.taaas.jp/,https://avatars.githubusercontent.com/u/30598?v=4
+106,Pasta-K,20,JavaScriptのASTと戯れる,"Perl Mongerの皆さんもウェブアプリケーション開発を行う上で切っても切り離せないものの1つがJavaScriptかと思います。皆さんも聞き馴染みがあるであろうESLintやBabelやWebpack、esbuildやPrettierやTypeScriptなどなどあらゆるJavaScript関連のツールは内部的にJavaScriptのASTを操作し、それらを組み合わせることで成果物を生成しています。
+
+このトークではJavaScript(ECMAScript)を扱う上でのASTの概要について紹介した後に、実際にハンズオン形式でASTを利用したJavaScriptのソースコードの変換や生成の片鱗を体験していただけるような構成になる予定です。
+
+※ ASTとは何かという話であったり、AST自体の詳細に踏み込んだりなどはしない予定であくまで「戯れる」ことがメインの発表になるかと思います",pastak.jpg,https://github.com/pastak,https://twitter.com/pastak,https://blog.pastak.net/,https://avatars.githubusercontent.com/u/191533?v=4
+107,catatsuy,20,llsとcachectlから学ぶ、Goでシステムプログラミングをする方法,"PerlのCPANモジュールのSys::PageCacheはLinux上のページキャッシュを調整したい時に使われてきました。このようにシステムプログラミングが必要な場面でPerlが使われることがよくありました。
+しかし最近はSys::PageCacheの代替として使えるGo製のcubicdaiya/cachectlのようにGoで作られる事例も出てきています。
+cubicdaiya/cachectlは元々cgoを使ってシステムコールをC言語経由で実行していましたが、以前私がpure Go実装に書き変えています。
+また大量のファイルが置かれているディレクトリに対しても利用できるlsとして、私が作ったllsもGoからシステムコールのgetdents64を直接呼び出すことで、pure Goで実装しています。
+そこで本発表ではGoでシステムプログラミングをする方法について、私が経験したことをベースにお話しします。
+参考：
+https://developers.prtimes.jp/2021/09/15/decommissioning_old_storage_list_a_dir_29million/
+https://github.com/catatsuy/lls
+https://github.com/cubicdaiya/cachectl
+",catatsuy.jpg,https://github.com/catatsuy,https://twitter.com/catatsuy,https://www.catatsuy.org/,https://avatars.githubusercontent.com/u/1249910?v=4
+108,井手優太,20,my new error...,try catch に一家言あり最近 https://blog.ojisan.io/my-new-error/ というブログを書きました。この記事ではResult型の導入やエラー監視ツールにデバッグ可能なログを出させる技術について解説をし、自分の考える理想のエラーハンドリングを書きました。しかし職場の7年物の既存実装に正しいエラーハンドリングを持ち込むのは難しかったです。そこで本セッションでは理想のエラーハンドリングプラクティスやそれを支える要素技術について解説し、現場でどうやって段階的にエラーハンドリングや監視体制を改善していけたかという話をします。,sadnessOjisan.jpg,https://github.com/sadnessOjisan,https://twitter.com/sadnessOjisan,https://blog.ojisan.io,https://avatars.githubusercontent.com/u/13712715?v=4
+109,Dan Kogai,20,my$talk=qr{\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\b}ig;,"正規表現。Perlが最も愛されそして(不当にも)憎まれる理由の一つ。しかし今や正規表現をサブ言語として持つ言語はPerlに限りません。本talkではこの最も人気のある言語内言語に関して(再び)時間が許す限り型って、もとい語っていきます。
+
+* regexp? what is it?
+* $supported_by ~~ @most_major_languages;
+  * but how (much)?\?
+    * Unicode support?
+    * assertions?
+    * modifiers?
+* use CPAN;
+  * Regexp::Assemble;
+  * Regexp::Common;
+* Irregular expressions
+  * qr{(func?(?:tion)(\(((?:(?>[^()]+)|(?2))*)\)))}
+* (ir)?regular questions (?:from|by) the audience
+* ReDOS - Regexp considered harmful!?",dankogai.jpg,https://github.com/dankogai,https://twitter.com/dankogai,https://dankogai.livedoor.blog,https://avatars.githubusercontent.com/u/68812?v=4
+110,Takafumi ONAKA,40,ORM - Object-relational mapping,"タイトルは [Kyoto.pm Tech Talks #01](http://kyotopm.github.io/) リスペクトです。
+
+はてなの Perl プロダクトは薄いフレームワークを志向して、データベースとのやり取りに DBIx::Sunny や DBIx::Handler::Sunny を用い、主に SQL を書いて暮らしていました。最近、私はこの世界に ORM を持ち込みました。
+PofEAA によるデータソースのアーキテクチャの 4 分類、我々が何を考えてどのパターンを選んだか、必要になって書いたプラグイン等、ORM の無い世界に ORM を入れていくに当たって考えたことと、その実践。
+Perl Monger なら一生に一度は書くといわれる ORM を書いていく様子を、Rails の ActiveRecord に慣れ親しんだ現代の目線も交えつつお送りします。",onk.jpg,https://github.com/onk,https://twitter.com/onk,https://onk.hatenablog.jp/,https://avatars.githubusercontent.com/u/203046?v=4
+111,堀本 泰弘,40,Perlと全文検索エンジンGroongaでMySQLのデータを高速に全文検索する,"MySQLのデータを全文検索したい場合、よくあるアプローチとしては以下の3つが考えられます。
+
+1. MySQLのデフォルトのストレージエンジンInnoDBの全文検索機能を使う。
+2. 別途Elasticsearchを用意し、アプリケーションでMySQLとElasticsearchのデータを更新し、検索はElasticsearchで行う。
+3. 別途Elasticsearchを用意し、Logstashを使ってMySQLのデータをElasticsearchに同期する。
+
+1.は手軽に全文検索を実行できますが、InnoDBの全文検索はあまり速くありません。
+2.はMySQL、Elasticsearchのどちらかのデータ更新に失敗した場合のケアなどでアプリケーションが複雑になります。
+また、Elasticsearchが起動していない期間はデータの更新ができなくなります。
+3.はデータの削除に対応するのに追加の設定が必要です。また、Logstashはサービスとして起動するのでLogstashの死活監視も必要です。
+
+上記の通り、よくあるアプローチはそれぞれ課題があります。
+そこで、これらの課題を解決すべく、今回MySQLのデータをGroongaに取り込むツールとGroongaに対してHTTP経由でクエリーを発行できるPerl用の
+Groongaクライアントモジュールを作成し、これらを組み合わせてMySQLのデータをPerlからGroongaを使って全文検索できる仕組みを作りました。
+
+これによって、Groongaを使ってMySQLのデータを高速に全文検索できます。
+また、この仕組みでは、アプリケーションからはMySQLのデータのみを更新すれば良いため、アプリケーション側で更新処理を
+変更する必要がありませんし、Groongaが起動していなくてもデータの更新が可能です。
+さらに、データの削除についてもデフォルトで対応しているので追加の設定は必要ありません。
+またサービスではなく、定期的に同期を実行する仕組みなので安定しやすいです。
+
+Groonga独自のクエリーを覚える学習コストとGroonga⇔MySQL間のデータをマッピングする設定は必要ですが、
+そこまでやってしまえばMySQLのデータをほぼリアルタイムでGroongaに取り込みPerlから最新のデータを
+高速に全文検索できます。
+
+本発表では、どうやってPerlからGroongaを使ってMySQLのデータを全文検索するのか、その仕組みと
+上記で紹介したよくあるアプローチの課題がこの仕組みでどのように解消されるのかを紹介します。",komainu8.jpg,https://github.com/komainu8,,,https://avatars.githubusercontent.com/u/19166236?v=4
+112,うたがわきき,20,prototype大全,"prototypeは、Perlのサブルーチンの引数の振る舞いを変える機能です。一見するとただの記号の並びに見えるprototypeですが、実は身近なところに潜んでいて、Perlプログラムを支えているのです。このトークでは、そんなprototypeについて魅力や活用法などを交じえながらお話しする予定です。
+
+* try/catchから始めるprototype入門
+* こんなにあるぞ！！ prototype
+* 気になるあのサブルーチンのprototype、コッソリ教えます
+* prototypeを使う/使わない理由",utgwkk.jpg,https://github.com/utgwkk,https://twitter.com/utgwkk,https://blog.utgw.net/,https://avatars.githubusercontent.com/u/4530627?v=4
+113,aereal,40,qron: Cloud Native Cron Alternativeの今,"タスクを定期的にexactly-onceで実行する仕組みを2020年代に構築するとしたらどんな方法があるでしょうか?
+cronを動かすホストをひとつだけ用意する……それはSPOFと表裏一体です。Cloud Nativeという言葉が広がりつつある今、クラウドサービスの力を借りてスケーラブルなcron alternativeを実現できないでしょうか?
+
+世にあるFaaSなどはat-least-onceは実現されていてもexactly-onceはなかなか実現されていません。
+しかしわたしたちはexactly-onceを求めているのです。自然界にexactly-onceはあるのです。
+
+今回は、クラウドサービスを組み合わせてタスクをexactly-onceで定期的に実行するシステムの構築を探求し実現した事例について紹介します。
+さらにこのシステムを数年運用して遭遇した出来事やその解決策についてもお話しすることでcron alternativeの《リアル》についても紹介します。
+
+予定しているトピック:
+- 共有排他ロックの実装
+- 統合されたエラーレポートの実現
+
+扱う主なキーワード:
+- AWS Step Functions
+- cron
+- Observability",aereal.jpg,https://github.com/aereal,https://twitter.com/aereal,,https://avatars.githubusercontent.com/u/87649?v=4
+114,外山智史（とやま さとし）,20,tRPCとCloudflare PagesとCloudflare D1で実現する 安くて速くて堅牢なWebアプリケーション,"Cloudflare PagesとCloudflare D1を組み合わせることで、外部サービスを使わずにデータを永続化したWebアプリケーションを簡単に作成できるようになりました。
+
+さらに、tRPCを組み合わせることで、エンドツーエンドで型安全な環境を加えることができます。
+
+本トークでは、シンプルなWebアプリケーションの作成を通して、Cloudflare PagesやCloudflare D1, tRPCの魅力をお伝えしたいと思います。",toyamarinyon.jpg,https://github.com/toyamarinyon,https://twitter.com/toyamarinyon,https://sat0shi.dev/,https://avatars.githubusercontent.com/u/535254?v=4
+115,白方 健太郎,20,あなたの知らない(かもしれない)コアモジュール 2023,Perlのバイナリに同梱して配布されるモジュールはコアモジュールと呼ばれます。 YAPC::Japan::Onlineではそこからいくつかを紹介しましたが、時間の都合で紹介しきれなかったものや、その後重要度が増したものもあります。このトークではそのような、知っておくと役に立つ、あるいはそうでもないコアモジュールを時間の限り紹介します。,argrath.jpg,https://github.com/argrath,https://twitter.com/argrath,,https://avatars.githubusercontent.com/u/53912?v=4
+116,あらたま,40,あの日ハッカーに憧れた自分が、「ハッカーの呪縛」から解き放たれるまで,"YAPC::Asiaで憧れたハッカー集団の末席に、新卒という形で頭から飛び込んだのが約10年前。YAPCを始めとした様々な技術コミュニティにお世話になり、時にはスタッフや運営・スピーカーとして貢献しながら、少しずつ歩を進めてきました。
+キャリアとしては事業会社のエンジニア・リードエンジニアを経て、現在はCTOとしてエンジニアリングだけでない様々なロールを担っていますが、これまでのキャリア選択の傍らには常に「ハッカー」への憧れがありました。
+いつしかそれが自分への呪縛となっていたこと、そして様々な葛藤と試行錯誤を経て、ようやくそれから解き放たれつつあることに、最近気づきつつあります。
+エンジニアとして、時にはロールを変えながらサバイブする皆さんに。またかつての悩める自分に、ちょっとしたヒントをおすそ分けできるようなトークにしたいと考えています。",ar-tama.jpg,https://github.com/ar-tama,https://twitter.com/ar_tama,https://note.com/ar_tama,https://avatars.githubusercontent.com/u/1155849?v=4
+117,伊奈 林太郎,20,ジョブキューシステムFireworqのアーキテクチャ設計と運用時のベストプラクティス,"OSSのジョブキューシステムであるFireworqはGoで書かれていますが、TheSchwartzやMogileFSなどのPerlプロダクトにおけるジョブキュー部分の実装に大きな影響を受けて開発されました。FireworqはHTTPでやりとりするため言語非依存で、ジョブがたくさん溜まっている状態でもパフォーマンスが下がらない、キューを動的に複数作成できるなどの特徴があります。
+
+このトークでは、Fireworqのこれらの設計に至った経緯や、はてなブックマークのシステム内で実際に運用する上で見えてきたベストプラクティスなどを紹介します。",tarao.jpg,https://github.com/tarao,https://twitter.com/oarat,https://tarao.hatenablog.com/,https://avatars.githubusercontent.com/u/132569?v=4
+118,macopy,40,デプロイ今昔物語 〜CGIからサーバーレスまで〜,"みなさま日々Webアプリケーションのデプロイにいそしんでいるかと思います。
+デプロイの風景は数年前と比べるとだいぶ様相が変わっています。Perlなどの開発言語は一緒であっても、デプロイの形態は変わっているという方が多いかと思います。
+このトークでは、歴史のあるWebアプリ開発言語であるPerlの例を元に2000年頃のCGIとレンタルサーバーを用いたデプロイから、現代のFaaSによるデプロイまでをたどる旅をご紹介します。
+
+トークタイトルの「デプロイ」が指す範囲
+* Webサーバーへの反映方法
+  * 例
+    * FTPやscpによるアップロード
+    * git pullやtarball, dockerなどを用いたPull型デプロイ
+* Webサーバーの更新方法
+  * 例
+    * ファイル更新だけで完了する形態
+    * プロセスの入れ替えを用いたGraceful restart
+    * サーバ毎のローリングリスタート
+* Webアプリケーションから各端末へコンテンツを配信するためのWebアプリケーションの駆動形態
+  * 例
+    * CGI
+    * mod_perl
+    * FastCGI
+    * Plack/PSGI
+    * サーバーレス
+
+このトークで語る内容
+* Perlによる各デプロイの形態の解説・デモ
+
+このトークの対象者
+* Webアプリケーション開発者
+* Webアプリケーションがどのように開発され、Web上にデプロイされてきたかを知りたい方",mackee.jpg,https://github.com/mackee,https://twitter.com/mackee_w,https://mackee.hatenablog.com/,https://avatars.githubusercontent.com/u/1021371?v=4
+119,曽根 壮大,40,マルチテナントの実現における技術選定の審美眼とDB設計 ~ PostgreSQLを添えて ~,"マルチテナントを提供する上で一番の悩みどころはどこでしょうか。
+私はテナント毎のデータの分割とセキュリティの確保、そして共有情報の分割です。
+
+この一つの答えに私がtryした結果が、PostgreSQLの活用です。
+PostgreSQLにはRow Level Securityをはじめとした様々な機能があり、アプリケーションから意識することなく、マルチテナントを実現することができます。
+
+現実的な負担の無い設計を実現しながらも、十分なパフォーマンスを出したい。
+そんな欲張りな皆さんに必ずcatch（納得）してもらえるような実践的なテクニックから、実際の設計における技術選定の勘所をお伝えしたいと思います。
+
+# 対象者
+- Webサービスなどでマルチテナントを実装したいと考えている人
+- 既存のマルチテナントで苦しんでいて、リプレースを考えている人
+- シングルテナント形式で実装に限界を感じている人",soudai.jpg,https://github.com/soudai,https://twitter.com/soudai1025,https://soudai.hatenablog.com/,https://avatars.githubusercontent.com/u/1297128?v=4
+120,Yusuke Wada,20,どこでも動くWebフレームワークをつくる,"HonoというWebフレームワークをつくっています。Honoは速いです。ただし、それだけではありません。HonoはどんなJavaScriptのランタイムでも動きます。少なくとも、Cloudflare
+Workers、Deno、Bun、Fastly
+Compute@Edge、Lagonの6つのランタイムで動きます。本トークではHonoがなぜどこでも動くのか、そのために努力していることを紹介します。",yusukebe.jpg,https://github.com/yusukebe,https://twitter.com/yusukebe,https://yusukebe.com,https://avatars.githubusercontent.com/u/10682?v=4
+121,渡部 龍一,20,入門 障害対応 「サービス運用はTry::Catchの繰り返しだよ、ワトソン君」,"サービスの運用では開発環境やステージング環境で入念に動作検証をしても本番環境では想定していない事態が起きます。
+サービス障害発生時に障害に対して適切な対応を取れるかどうかはユーザーへの影響度に大きく起因します。
+また、全ての障害を100%なくすことは現実的ではないため発生してしまった障害について「調査・分析・対応」をできるようにしておく必要があります。
+一方で障害対応は一部のエンジニアが「調査・分析・対応」行ってしまい中々ノウハウが他のエンジニアに広まっていかず属人化してしまうという課題があります。
+そういった課題に対してGMOペパボでは「Playbook」の運用や「障害対応訓練」の実施などを通して解決へアプローチを行いました。
+本セッションはサービスの運用で発生する障害対応に課題を感じている組織やエンジニアを対象として属人化してしまいがちな「障害対応能力」そのものにフォーカスをし、どのように向上させるのかというノウハウを紹介します。",ryuichi1208.jpg,https://github.com/ryuichi1208,https://twitter.com/ryuichi_1208,https://ryuichi1208.hateblo.jp/,https://avatars.githubusercontent.com/u/35625782?v=4
+122,東岡和也,20,地方のエンジニアが作る日本のITコミュニティの未来,"私のキャリアの直近3~4年は、地方のエンジニア採用を通じて労働環境づくりや、技術コミュニティづくりをして今後も貢献してきたいと考えております。
+今後、労働力減少や少子高齢化に伴う問題などを通じて、関東一極型の働き方は難しくなり、より関西やそれ以外の地域でのエンジ二アの活躍場所や、居住地を含めた柔軟な働き方は避けられなくなっていくと思っています。
+私自身の経験を通じて、地域ITコミュティの重要性や京都のエンジニアが活躍することにより来る明るい未来についてお話したいと思います。",Tooka_91.png,,https://twitter.com/Tooka_91,,
+123,須藤将史,20,売上と開発環境を同時に改善するために既存のPerl Web アプリケーションをどのようにリプレイスするか,新規サービスをPerlで開発する事例は減りました。しかし、Perlで開発され、現在も利益が出ているサービスはあります。弊社のサービスもその一つです。今後もサービスを出来るだけ長くユーザーに届けるために、弊社ではバックエンドをPerlで開発する決断をしました。この決断の背景と、モダンPerlへのリプレイスの過程を紹介します。紹介の一部は吉祥寺.pmで発表済みで、当日のYAPCではより詳細に発表できればと思います。https://speakerdeck.com/masashi_sutou/jin-nian-yatutakoto-20nian-yi-shang-sok-kuwebsabisunoripureisu-shu-itakodosi-gamodankamotosi-uperl,kurotyann9696.jpg,,https://twitter.com/kurotyann9696,,
+124,Songmu,40,小さく始め、長く続けるOSS開発と貢献,"私の初めてのOSS体験にはPerlが深く関与しています。PerlのおかげでOSS活動が始められたと言っても過言ではありません。
+
+私はこれまでOSSに対して多くのpull reuqestを送り、マージされたものは1000を超えます。多くは自分のOSSに対してのものですが、それ以外でも、海外を含む数百以上のリポジトリにpull requestが取り込まれています。 
+
+pull requestを送ることに対して最初は心理的障壁があるのはよくわかります。しかし、慣れてしまえば怖くありません。実際、私が送った変更の中には、コードを一文字だけ直したものや、単純作業によるものも数多くあります。 
+
+本トークでは私が実際に送ったPull Requestを幾つか取り上げながら、そういうどのようにすれば多くの人がOSSに貢献できるようになるかを話したいと思います。
+
+具体的には以下のようなテーマについて取り上げます。
+
+- Perlに小さなモジュールが多いからこその貢献のしやすさ
+- 貢献しやすいリポジトリを見つける方法
+- pull requestを送る上での心構え
+- 技術選定するときにまずPull Reuqestを送ってみるということ
+- OSSを引き継ぐことの美味しさ
+- OSSを他者に引き継ぐことの感慨
+- OSSを始める方法",Songmu.jpg,https://github.com/Songmu,https://twitter.com/songmu,https://songmu.jp/riji/,https://avatars.githubusercontent.com/u/177122?v=4
+125,koluku,20,日常業務のカイゼンで図る開発チームへの貢献,"「カイゼン」は業務や作業に対して今ある状態の問題やより良くなるアイデアに気付き、解決し続けることでより良い状態へ昇華し続けることを指し、一般的に改善とは区別されます。
+
+私たちエンジニアがカイゼンを行うにあたって何に取り組むべきでしょうか。この悩みについて、新卒3年目が1年間かけて行った日常業務における業務負荷の調査と、そのカイゼンのために行った活動、その影響について紹介します。
+
+このトークでは8年以上運用が続いているPerlで作られたソーシャルゲーム運用を題材に、1回のデプロイに数時間かかる作業の工数の削減や、週に何度も行われる定形作業の自動化、エンジニア以外にも作業できる人を増やした資料の整備など話す予定です。
+
+これにより、メンバーを希望の別チームへ配属させるなど、チームの人数減少に耐えられる体制を築きました。
+
+以下の悩みを持つ方に聞いて欲しいテーマとなっています。
+- 運用の手作業が多くて開発の時間が取れなくて困っている
+- どこからをカイゼンすれば良いのかわからなくて始めから躓いている
+- 自主的にチームと関わるにはどうすればいいのかわからないといった悩みがある",koluku.jpg,https://github.com/koluku,https://twitter.com/koluku,https://koluku.com,https://avatars.githubusercontent.com/u/3754179?v=4
+126,Konboi ,20,様々な環境へコマンドラインツールを提供する上での苦労とその対策,"所属しているLaunchable Inc, ではユーザーの自動テスト基盤からデータを送ってもらうためにコマンドラインツール launchableinc/cli (以下 cli ※Python製)をユーザーに提供しています。 我々のサービスを利用してくれているユーザーはエンタープライズな規模から小さいチームまで、使用しているOS、CIプラットフォーム、言語のバージョンなどユーザーによって異なるため多岐に渡ります。それによりcliを開発/運用する上で様々な問題に直面してきました。 本発表ではそのような多岐にわたるユーザーの環境へ提供するためのcliの技術スタック/開発体制など紹介しながら今まで遭遇した課題とその対応策の一部を紹介したいと思います。 本発表を通して開発の参考になればと思っています。
+
+",Konboi.jpg,https://github.com/Konboi,https://twitter.com/Konboi,https://blog.konboi.com,https://avatars.githubusercontent.com/u/536667?v=4
+127,鈴木 正樹(SUZUKI Masaki),40,CloudWatchエージェントとCloudWatchで行うアプリケーション監視,"システム・アプリケーションの稼働環境として、AWS EC2を採用しているケースも多いと思いますが、その際にシステム・アプリケーションの監視をどう行うかが課題になるケースがあると思います。
+
+その解決方法の一つとして、私達は「CloudWatchエージェント」というAWS公式ツールを利用してEC2内に出力されるログをCloudWatch Logsに転送し、CloudWatchにて監視する方法を採択しました。
+
+今回はそれに関して、CloudWatchエージェントの紹介、および具体的にCloudWatchにて監視を行い、最終的に異常発生をSlackで通知する...といったことをAWSだけで実現する方法について、紹介したいと思います。",smt7174.jpg,https://github.com/smt7174,https://twitter.com/makky12,https://makky12.hatenablog.com/,https://avatars.githubusercontent.com/u/13555318?v=4
