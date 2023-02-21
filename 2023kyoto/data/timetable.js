@@ -117,7 +117,7 @@ module.exports = {
     },
     {
       talk_id: 5,
-      title: 'ぶつかり稽古',
+      title: '企画',
       description: 'TBD',
       duration: 50,
       authors: [
