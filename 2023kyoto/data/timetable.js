@@ -245,7 +245,7 @@ module.exports = {
     },
     {
       talk_id: 109,
-      title: 'my$talk=qr{\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\b}ig;',
+      title: 'my$talk=qr{\\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\\b}ig;',
       description: "正規表現。Perlが最も愛されそして(不当にも)憎まれる理由の一つ。しかし今や正規表現をサブ言語として持つ言語はPerlに限りません。本talkではこの最も人気のある言語内言語に関して(再び)時間が許す限り型って、もとい語っていきます。\n\n\n\n* regexp? what is it?\n\n* $supported_by ~~ @most_major_languages;\n\n  * but how (much)?\?\n\n    * Unicode support?\n\n    * assertions?\n\n    * modifiers?\n\n* use CPAN;\n\n  * Regexp::Assemble;\n\n  * Regexp::Common;\n\n* Irregular expressions\n\n  * qr{(func?(?:tion)(\(((?:(?>[^()]+)|(?2))*)\)))}\n\n* (ir)?regular questions (?:from|by) the audience\n\n* ReDOS - Regexp considered harmful!?",
       duration: 20,
       authors: [

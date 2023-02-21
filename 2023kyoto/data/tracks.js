@@ -16,7 +16,7 @@ const trackAtsv = `
 20	売上と開発環境を同時に改善するために既存のPerl Web アプリケーションをどのようにリプレイスするか	須藤将史	123
 5	質疑応答
 5	休憩
-20	my$talk=qr{\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\b}ig;	Dan Kogai	109
+20	my$talk=qr{\\b((?:ir)?reg(?:ular )?exp(?:ressions?)?)\\b}ig;	Dan Kogai	109
 5	質疑応答
 20	休憩
 20	ORM - Object-relational mapping	Takafumi ONAKA	110
