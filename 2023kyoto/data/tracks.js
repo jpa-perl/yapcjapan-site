@@ -8,8 +8,8 @@
 
 const trackAtsv = `
 5	オープニング
-5	スポンサーセッション(会場)
-10	休憩(移動)
+5	スポンサーセッション 	 株式会社Helpfeel
+10	休憩
 40	2023年春のPerl	charsbar	102
 5	質疑応答
 5	休憩
@@ -34,7 +34,7 @@ const trackAtsv = `
 50	ゲスト	上原 哲太郎/宮脇 正晴	3
 5	質疑応答
 5	休憩
-5	スポンサーセッション(ゲスト)
+5	スポンサーセッション		Hachioji.pm
 40	ゲスト	小林 篤	2
 5	質疑応答
 15	休憩
@@ -46,7 +46,7 @@ const trackAtsv = `
 
 const trackBtsv = `
 10
-10	休憩(移動)
+10	休憩
 40	小さく始め、長く続けるOSS開発と貢献	Songmu	124
 5	質疑応答
 5	休憩
@@ -61,7 +61,7 @@ const trackBtsv = `
 5	休憩
 40	"普通"のWebアプリでWASMを活用する	niboshi	101
 5	質疑応答
-60	公開収録ランチセッション	Helpfeel
+60	公開収録ランチセッション	株式会社Helpfeel
 40	qron: Cloud Native Cron Alternativeの今	aereal	113
 5	質疑応答
 5	休憩
@@ -83,8 +83,8 @@ const trackBtsv = `
 
 const trackCtsv = `
 10
-5	休憩(移動)
-50	ぶつかり稽古	おたのしみ	5
+5	休憩
+50	企画	 TBD 	5
 5	休憩
 20	地方のエンジニアが作る日本のITコミュニティの未来	東岡和也	122
 5	質疑応答
