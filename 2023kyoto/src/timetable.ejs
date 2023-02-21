@@ -1,0 +1,105 @@
+<%- include('partial/header'); -%>
+	<h2 class="h2__bell"><span>タイムテーブル</span></h2>
+	<div class="container pb-32 m-auto text-primary ">
+		<div class="p-2 mx-auto max-w-5xl overflow-scroll">
+			<table class="timetable w-full h-full">
+				<thead>
+					<tr>
+						<th></th>
+						<% for(h of locals.timetable.table.head) { %>
+							<th class="w-1/3 px-4 py-4 text-xs sm:text-lg"><%= h %></th>
+							<% } %>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for (const row of locals.timetable.table.row) { %>
+						<tr>
+							<th
+								class="py-1 md:py-2 text-xs md:text-xs sm:whitespace-nowrap sm:align-top font-normal text-gray-500 text-right">
+								<% row.time %>
+							</th>
+							<% for(const td of row.td) {%>
+								<td rowspan="<%= td.rowspan%>" class="py-1 px-1 align-top relative h-full">
+									<% if(td.title) {%>
+									<div class="timetable__cell p-2 <%= td.class %>">
+										<div class="text-xs time">
+											<span class="rounded-md bg-black text-white inline-block px-[5px] py-[1px] mb-1"><%= td.start %></span>
+										</div>
+										<% if(td.talk_id){ %>
+												<a class="title items-center text-sm underline"
+													href="#talk-<%= td.talk_id%>" data-modal-target="test">
+													<%= td.title %>
+												</a>
+											<% } else {%>
+												<span class="title text-sm ">
+													<%= td.title %>
+												</span>
+										<% } %>
+										<span class="text-xs opacity-80"><%= td.duration %>分</span>
+										<% if (td.author) { %>
+										<div class="mt-1 text-xs opacity-80">by <%= td.author %></div>
+										<% } %>
+									</div>
+									<%}%>
+								</td>
+							<%}%>
+						</tr>
+					<% } %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+	<% for (const talk of locals.timetable.talks) { %>
+		<div id="talk-<%= talk.talk_id %>"
+			class="fixed top-0 left-0 z-30 flex flex-col items-center justify-center invisible w-full h-full opacity-0 backdrop-blur-sm transition-opacity target:visible target:opacity-100">
+			<a href="#__" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 cursor-default"></a>
+			<div class="rounded-lg overflow-hidden w-11/12 z-40 md:w-[704px] h-full md:h-[80vh] my-4 relative modal-bg">
+				<div class="h-full overflow-scroll">
+					<div class="px-8 py-8 sm:px-16 sm:py-12 text-primary">
+						<h2 class="text-xl font-bold text-center lg:text-3xl">
+							<%= talk.title%>
+						</h2>
+						<hr class="hr__tora" />
+						<div class="md:flex mb-9">
+							<% for (const author of talk.authors) { %>
+								<div class="flex-1 mt-6 text-center sm:mt-8">
+									<div class="guest-photo__wrapper guest-photo__wrapper--talk">
+										<img src="<%= author.author_icon %>" alt="" />
+									</div>
+									<author class="block pt-4 font-bold">
+										<%= author.author %>
+									</author>
+									<div class="flex items-center justify-center mt-3 gap-3">
+										<% if(author.github_url) { %>
+											<a target="_blank" href="<%= author.github_url %>">
+												<img class="inline-block w-6 h-6" src="./images/icon-github.svg" alt="GitHub" />
+											</a>
+										<% } %>
+										<% if(author.twitter_url) { %>
+											<a target="_blank" href="<%= author.twitter_url %>">
+												<img class="inline-block w-6 h-6" src="./images/icon-twitter.svg" alt="Twitter" />
+											</a>
+										<% } %>
+										<% if(author.blog_url){ %>
+											<a target="_blank" class="underline" href="<%= author.blog_url %>">
+												<img class="inline-block w-6 h-6" src="./images/icon-link.svg" alt="Blog" />
+											</a>
+										<% } %>
+									</div>
+								</div>
+								<% } %>
+						</div>
+						<div class="my-6 text-sm sm:my-8 lg:text-base">
+							<pre class="whitespace-pre-line"><%= talk.description %></pre>
+						</div>
+					</div>
+				</div>
+				<a href="#__"
+					class="absolute bottom-0 left-0 right-0 block w-full p-5 text-md font-bold text-center bg-black text-[#FFDE17] text-primary">閉じる</a>
+			</div>
+		</div>
+		<% } %>
+<%- include('partial/footer'); -%>
