@@ -5,17 +5,17 @@ const end = new Date('2023/3/19 19:30');
 
 const tracks = [
   {
-    name: 'Track A',
+    name: 'Scrapboxホール by Helpfeel',
     track: 'A',
     talks: trackA,
   },
   {
-    name: 'Track B',
+    name: 'Gyazoホール by Helpfeel',
     track: 'B',
     talks: trackB,
   },
   {
-    name: 'Track C',
+    name: 'G会議室',
     track: 'C',
     talks: trackC,
   }
