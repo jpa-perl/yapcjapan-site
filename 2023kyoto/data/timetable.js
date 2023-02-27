@@ -119,7 +119,7 @@ module.exports = {
       talk_id: 5,
       title: '企画',
       description: 'TBD',
-      duration: 50,
+      duration: 45,
       authors: [
       ],
     },
