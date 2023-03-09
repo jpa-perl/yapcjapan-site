@@ -1,5 +1,6 @@
 const jobboards = require('./data/jobboards.js')
 const timetable = require('./data/timetable.js')
+const staff = require('./data/staff.js')
 
 module.exports = {
   locals: {
@@ -338,5 +339,6 @@ module.exports = {
       },
     ],
     timetable,
+    staff,
   },
 };
