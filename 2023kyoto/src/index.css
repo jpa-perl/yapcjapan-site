@@ -41,8 +41,6 @@ html:before {
 }
 
 .global-nav__links {
-	display: flex;
-	gap: 20px;
 	background: #fff;
 	border: 3px solid black;
 	border-radius: 30px;
