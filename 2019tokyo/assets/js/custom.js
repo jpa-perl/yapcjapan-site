@@ -8,7 +8,7 @@
   var TRACK_COUNT = TRACKS.length;
   var DEFAULT_TARGET = 'accepted';
   var JSON_URL = {
-    accepted: 'https://spreadsheets.google.com/feeds/list/12QoP57c2ykO9VD_eNygvhkEUNRT8IS65dieeN5XiQqI/on6oryq/public/values?alt=json',
+    accepted: './assets/data/accepted.json',
   };
 
   function Speaker(entry) {
