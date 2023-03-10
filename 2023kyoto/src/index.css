@@ -40,17 +40,6 @@ html:before {
 	padding: 10px;
 }
 
-.global-nav__links {
-	background: #fff;
-	border: 3px solid black;
-	border-radius: 30px;
-	z-index: 999;
-	font-weight: 900;
-	padding: 5px 20px;
-	max-width: 100%;
-}
-
-
 .hero-bg {
 	background: linear-gradient(180deg, #FFF7CA 66.67%, rgba(255, 247, 202, 0) 100%);
 }
