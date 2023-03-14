@@ -334,3 +334,48 @@ overflow: hidden;
 .timetable__cell.rest .time {
 	display: none;
 }
+
+
+.note h3 {
+	@apply text-2xl sm:text-3xl font-bold;
+	@apply my-4 pb-2;
+	border-bottom: 2px dotted #000;
+}
+
+.note h4 {
+	@apply text-xl sm:text-2xl font-bold;
+	@apply my-4
+}
+
+.note p {
+	@apply my-4
+}
+
+.note ul {
+	@apply my-4;
+	@apply list-disc list-inside;
+}
+
+.note ul li {
+	@apply my-1;
+}
+
+.note strong {
+	@apply font-bold;
+}
+
+.note a {
+	@apply underline;
+}
+
+.note table {
+	margin: 1em auto;
+}
+
+.note tr {
+	@apply border-b border-gray-300;
+}
+
+.note td, .note th {
+	@apply p-2;
+}
