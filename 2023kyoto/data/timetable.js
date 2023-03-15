@@ -47,7 +47,8 @@ while(currentTime.getTime() < end.getTime()) {
         // 発表時間からrowspanを割り出す
         const rowspan = Math.ceil(talk.duration / 5);
         const classes = [tracks[i].track];
-        if(talk.title.includes('LT')) classes.push('lt');
+        if(talk.title.includes('ライトニングトーク')) classes.push('lt');
+        if(talk.title.includes('接続テスト')) classes.push('rest');
         if(talk.title.includes('休憩')) classes.push('rest');
         if(talk.title.includes('質疑応答')) classes.push('qa');
         td.push({ rowspan, class: classes.join(' '), start: time, ...talk });
