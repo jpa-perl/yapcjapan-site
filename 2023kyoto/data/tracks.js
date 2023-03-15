@@ -84,7 +84,7 @@ const trackBtsv = `
 const trackCtsv = `
 10
 10	休憩
-45	企画	 TBD 	5
+45	【企画】春のエンジニア ぶつかり稽古 2023	 kan/kenchan 	5
 5	休憩
 20	地方のエンジニアが作る日本のITコミュニティの未来	東岡和也	122
 5	質疑応答
