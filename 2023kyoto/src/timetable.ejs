@@ -7,7 +7,7 @@
 					<tr>
 						<th></th>
 						<% for(h of locals.timetable.table.head) { %>
-							<th class="w-1/3 px-4 py-4 text-xs sm:text-lg"><%= h %></th>
+							<th class="w-1/3 px-4 py-4 text-xs sm:text-lg"><%= h.name %><br>(<%= h.subname %>)</th>
 							<% } %>
 						</th>
 					</tr>

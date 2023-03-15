@@ -6,16 +6,19 @@ const end = new Date('2023/3/19 19:30');
 const tracks = [
   {
     name: 'Scrapboxホール by Helpfeel',
+    subname: 'アトリウム',
     track: 'A',
     talks: trackA,
   },
   {
     name: 'Gyazoホール by Helpfeel',
+    subname: 'サイエンスホール',
     track: 'B',
     talks: trackB,
   },
   {
-    name: 'G会議室',
+    name: '土俵',
+    subname: 'G会議室',
     track: 'C',
     talks: trackC,
   }
@@ -56,7 +59,7 @@ while(currentTime.getTime() < end.getTime()) {
 }
 
 const table = {
-  head: [...tracks.map((track) => track.name)],
+  head: tracks,
   row,
 };
 
@@ -117,8 +120,8 @@ module.exports = {
     },
     {
       talk_id: 5,
-      title: '企画',
-      description: 'TBD',
+      title: '春のエンジニア ぶつかり稽古 2023',
+      description: '10年前、YAPC::Asia 2013で行われたあることをキッカケに「秋のエンジニアぶつかり稽古 2013」というイベントが開催されました。 当時のあの「事件」を、皆様は覚えていますでしょうか?\n\nあれから約10年が経過した2023年吉日、YAPC::Kyoto 2023にこの #ぶつかり稽古 が帰ってくることになりました！\n\n@__kan さんと、antipop さんにより送り込まれた刺客 @kenchan さんが壇上でアツいぶつかり稽古を繰り広げます。乞うご期待！',
       duration: 45,
       authors: [
       ],
