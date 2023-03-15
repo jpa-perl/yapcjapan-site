@@ -1,69 +1,99 @@
 const individualSponsors = [
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'うたがわきき',
+    avatar_url: './images/sponsor/individual/uploaded/utgwkk.png',
+    profile_url: 'https://twitter.com/utgwkk'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'sironekotoro',
+    avatar_url: './images/sponsor/individual/twitter/sironekotoro.png',
+    profile_url: 'https://twitter.com/sironekotoro'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'しょこ氏',
+    avatar_url: './images/sponsor/individual/twitter/aenikuy.png',
+    profile_url: 'https://twitter.com/aenikuy'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: '稲葉 準',
+    avatar_url: './images/sponsor/individual/metacpan/INA.png',
+    profile_url: 'https://metacpan.org/author/INA'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'すてにゃん',
+    avatar_url: './images/sponsor/individual/uploaded/stefafafan.png',
+    profile_url: 'https://twitter.com/stefafafan'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'nasa9084',
+    avatar_url: './images/sponsor/individual/twitter/nasa9084.png',
+    profile_url: 'https://twitter.com/nasa9084'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'teckl',
+    avatar_url: './images/sponsor/individual/twitter/teckl.png',
+    profile_url: 'https://twitter.com/teckl'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'Shinji Nakamatsu',
+    avatar_url: './images/sponsor/individual/github/snaka.png',
+    profile_url: 'https://github.com/snaka'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'fujiwara',
+    avatar_url: './images/sponsor/individual/twitter/fujiwara.png',
+    profile_url: 'https://twitter.com/fujiwara'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'uzulla',
+    avatar_url: './images/sponsor/individual/twitter/uzulla.png',
+    profile_url: 'https://twitter.com/uzulla'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'hakobe',
+    avatar_url: './images/sponsor/individual/twitter/hakobe.png',
+    profile_url: 'https://twitter.com/hakobe'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'あらたま',
+    avatar_url: './images/sponsor/individual/twitter/ar_tama.png',
+    profile_url: 'https://twitter.com/ar_tama'
   },
   {
-    name: 'nagayama',
-    avatar_url: 'https://avatars.githubusercontent.com/u/8455?v=4',
-    profile_url: 'https://twitter.com/nagayama',
+    name: 'にゃるら',
+    avatar_url: './images/sponsor/individual/uploaded/nyarla.png',
+    profile_url: 'https://kalaclista.com/@nyarla',
   },
+  {
+    name: 'Yoshihiro Sugi',
+    avatar_url: './images/sponsor/individual/github/sugyan.png',
+    profile_url: 'https://github.com/sugyan'
+  },
+  {
+    name: 'Hiroaki Kadomatsu',
+    avatar_url: './images/sponsor/individual/uploaded/note103.jpeg',
+    profile_url: 'https://twitter.com/note103'
+  },
+  {
+    name: 'gugod',
+    avatar_url: './images/sponsor/individual/uploaded/gugod.jpg',
+    profile_url: 'https://g0v.social/@gugod',
+  },
+  {
+    name: 'Naru',
+    avatar_url: './images/sponsor/individual/twitter/narutaka_org.png',
+    profile_url: 'https://twitter.com/narutaka_org'
+  },
+  {
+    name: 'makamaka',
+    avatar_url: './images/sponsor/individual/twitter/maka2_donzoko.png',
+    profile_url: 'https://twitter.com/maka2_donzoko'
+  },
+  {
+    name: 'いちりんちゃん',
+    avatar_url: './images/sponsor/individual/uploaded/ichirin2501.jpeg',
+    profile_url: 'https://twitter.com/ichirin2501'
+  }
 ];
 
 
