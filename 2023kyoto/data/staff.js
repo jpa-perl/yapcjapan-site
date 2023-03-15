@@ -89,7 +89,7 @@ const volunteerStaff = [
   },
   {
     name: 'riko',
-    avatar_url: './images/staff/uploaded/riko.jpeg',
+    avatar_url: './images/staff/facebook/riko.jpeg',
     profile_url: 'https://www.facebook.com/riko.nakagawa'
   },
   {
