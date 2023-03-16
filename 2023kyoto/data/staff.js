@@ -1,12 +1,12 @@
 const coreStaff = [
   {
     name: 'azumakuniyuki',
-    avatar_url: './images/staff/twitter/azumakuniyuki.png',
+    avatar_url: './images/staff/twitter/azumakuniyuki.jpg',
     profile_url: 'https://twitter.com/azumakuniyuki'
   },
   {
     name: 'papix',
-    avatar_url: './images/staff/twitter/__papix__.png',
+    avatar_url: './images/staff/twitter/__papix__.jpg',
     profile_url: 'https://twitter.com/__papix__'
   },
   {
@@ -26,7 +26,7 @@ const coreStaff = [
   },
   {
     name: 'godan',
-    avatar_url: './images/staff/twitter/godan09.png',
+    avatar_url: './images/staff/twitter/godan09.jpg',
     profile_url: 'https://twitter.com/godan09'
   },
   {
@@ -41,12 +41,12 @@ const coreStaff = [
   },
   {
     name: 'nagayama',
-    avatar_url: './images/staff/twitter/nagayama.png',
+    avatar_url: './images/staff/twitter/nagayama.jpg',
     profile_url: 'https://twitter.com/nagayama'
   },
   {
     name: 'kobaken',
-    avatar_url: './images/staff/twitter/kfly8.png',
+    avatar_url: './images/staff/twitter/kfly8.jpg',
     profile_url: 'https://twitter.com/kfly8'
   },
   {
@@ -79,7 +79,7 @@ const coreStaff = [
 const volunteerStaff = [
   {
     name: 'yebis0942',
-    avatar_url: './images/staff/github/yebis0942.png',
+    avatar_url: './images/staff/github/yebis0942.jpg',
     profile_url: 'https://github.com/yebis0942'
   },
   {
@@ -94,7 +94,7 @@ const volunteerStaff = [
   },
   {
     name: 'hyumanase',
-    avatar_url: './images/staff/twitter/hyumanase.png',
+    avatar_url: './images/staff/twitter/hyumanase.jpg',
     profile_url: 'https://twitter.com/hyumanase'
   },
   {
@@ -104,7 +104,7 @@ const volunteerStaff = [
   },
   {
     name: 'gomaaburamax',
-    avatar_url: './images/staff/twitter/gomaaburamax.png',
+    avatar_url: './images/staff/twitter/gomaaburamax.jpg',
     profile_url: 'https://twitter.com/gomaaburamax'
   },
   {
@@ -119,22 +119,22 @@ const volunteerStaff = [
   },
   {
     name: 'walkure',
-    avatar_url: './images/staff/github/walkure.png',
+    avatar_url: './images/staff/github/walkure.jpg',
     profile_url: 'https://github.com/walkure'
   },
   {
     name: 'munisystem',
-    avatar_url: './images/staff/twitter/munisystem.png',
+    avatar_url: './images/staff/twitter/munisystem.jpg',
     profile_url: 'https://twitter.com/munisystem'
   },
   {
     name: 'tymikii',
-    avatar_url: './images/staff/twitter/tymikii.png',
+    avatar_url: './images/staff/twitter/tymikii.jpg',
     profile_url: 'https://twitter.com/tymikii'
   },
   {
     name: 'たかね',
-    avatar_url: './images/staff/twitter/takanen28.png',
+    avatar_url: './images/staff/twitter/takanen28.jpg',
     profile_url: 'https://twitter.com/takanen28'
   },
   {
@@ -144,7 +144,7 @@ const volunteerStaff = [
   },
   {
     name: 'ybrliiu',
-    avatar_url: './images/staff/twitter/_ybrliiu.png',
+    avatar_url: './images/staff/twitter/_ybrliiu.jpg',
     profile_url: 'https://twitter.com/_ybrliiu'
   },
 ];
