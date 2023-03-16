@@ -3,7 +3,7 @@
   "scripts": {
     "start": "parcel src/*.ejs --no-cache --public-url /2023kyoto/",
     "build": "run-s build:clean build:parcel build:copy",
-    "build:clean": "rimraf dist",
+    "build:clean": "rimraf dist && rm -rf .parcel-cache",
     "build:parcel": "parcel build src/*.ejs --no-source-maps --dist-dir dist --public-url https://yapcjapan.org/2023kyoto/",
     "build:copy": "rimraf ../docs/2023kyoto && cp -a ./dist/ ../docs/2023kyoto"
   },
