@@ -1,0 +1,21 @@
+<%- include('partial/header'); -%>
+		<h2 class="h2__bell"><span>個人スポンサー</span></h2>
+		<div class="container pb-32 m-auto text-primary ">
+			<div class="p-2 mx-auto max-w-5xl">
+				<div class="flex flex-wrap justify-center">
+					<% for (const member  of locals.individualSponsors) { %>
+						<div class="flex-3 mt-6 text-center sm:mt-8 basis-32 sm:basis-48">
+							<a href="<%= member.profile_url %>" target="_blank">
+								<div class="guest-photo__wrapper guest-photo__wrapper--talk">
+									<img src="<%= member.avatar_url %>" alt="" />
+								</div>
+								<div class="block pt-4 font-bold">
+									<%= member.name %>
+								</div>
+							</a>
+						</div>
+						<%}%>
+				</div>
+			</div>
+		</div>
+<%- include('partial/footer'); -%>
