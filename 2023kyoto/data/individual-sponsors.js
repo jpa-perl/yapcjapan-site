@@ -11,12 +11,12 @@ const individualSponsors = [
   },
   {
     name: 'しょこ氏',
-    avatar_url: './images/sponsor/individual/twitter/aenikuy.png',
+    avatar_url: './images/sponsor/individual/twitter/aenikuy.jpg',
     profile_url: 'https://twitter.com/aenikuy'
   },
   {
     name: '稲葉 準',
-    avatar_url: './images/sponsor/individual/metacpan/INA.png',
+    avatar_url: './images/sponsor/individual/metacpan/INA.jpg',
     profile_url: 'https://metacpan.org/author/INA'
   },
   {
@@ -26,22 +26,22 @@ const individualSponsors = [
   },
   {
     name: 'nasa9084',
-    avatar_url: './images/sponsor/individual/twitter/nasa9084.png',
+    avatar_url: './images/sponsor/individual/twitter/nasa9084.jpg',
     profile_url: 'https://twitter.com/nasa9084'
   },
   {
     name: 'teckl',
-    avatar_url: './images/sponsor/individual/twitter/teckl.png',
+    avatar_url: './images/sponsor/individual/twitter/teckl.jpg',
     profile_url: 'https://twitter.com/teckl'
   },
   {
     name: 'Shinji Nakamatsu',
-    avatar_url: './images/sponsor/individual/github/snaka.png',
+    avatar_url: './images/sponsor/individual/github/snaka.jpg',
     profile_url: 'https://github.com/snaka'
   },
   {
     name: 'fujiwara',
-    avatar_url: './images/sponsor/individual/twitter/fujiwara.png',
+    avatar_url: './images/sponsor/individual/twitter/fujiwara.jpg',
     profile_url: 'https://twitter.com/fujiwara'
   },
   {
@@ -51,12 +51,12 @@ const individualSponsors = [
   },
   {
     name: 'hakobe',
-    avatar_url: './images/sponsor/individual/twitter/hakobe.png',
+    avatar_url: './images/sponsor/individual/twitter/hakobe.jpg',
     profile_url: 'https://twitter.com/hakobe'
   },
   {
     name: 'あらたま',
-    avatar_url: './images/sponsor/individual/twitter/ar_tama.png',
+    avatar_url: './images/sponsor/individual/twitter/ar_tama.jpg',
     profile_url: 'https://twitter.com/ar_tama'
   },
   {
@@ -81,7 +81,7 @@ const individualSponsors = [
   },
   {
     name: 'Naru',
-    avatar_url: './images/sponsor/individual/twitter/narutaka_org.png',
+    avatar_url: './images/sponsor/individual/twitter/narutaka_org.jpg',
     profile_url: 'https://twitter.com/narutaka_org'
   },
   {
