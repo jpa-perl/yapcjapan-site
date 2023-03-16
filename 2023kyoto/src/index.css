@@ -335,10 +335,14 @@ overflow: hidden;
 	display: none;
 }
 
+.note {
+ @apply leading-7;
+}
+
 
 .note h3 {
 	@apply text-2xl sm:text-3xl font-bold;
-	@apply my-4 pb-2;
+	@apply my-5 mt-10 pb-3;
 	border-bottom: 2px dotted #000;
 }
 
