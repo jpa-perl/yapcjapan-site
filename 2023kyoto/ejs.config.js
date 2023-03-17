@@ -338,6 +338,29 @@ module.exports = {
           },
         ],
       },
+      {
+        key: 'special-thanks',
+        label: 'スペシャルサンクス',
+        class: 'basis-full',
+        icon_class: 'max-w-[150px]',
+        companies: [
+          {
+            name: '30days Album',
+            image: '30days_album.png',
+            url: 'https://30d.jp/',
+          },
+          {
+            name: '株式会社ヌーラボ',
+            image: 'nulab.png',
+            url: 'https://nulab.com/',
+          },
+          {
+            name: '株式会社はてな',
+            image: 'hatena.png',
+            url: 'https://hatenacorp.jp/',
+          },
+        ],
+      },
     ],
     timetable,
     staff,
