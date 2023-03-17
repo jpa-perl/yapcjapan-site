@@ -122,9 +122,23 @@ module.exports = {
     {
       talk_id: 5,
       title: '春のエンジニア ぶつかり稽古 2023',
-      description: '10年前、YAPC::Asia 2013で行われたあることをキッカケに「秋のエンジニアぶつかり稽古 2013」というイベントが開催されました。 当時のあの「事件」を、皆様は覚えていますでしょうか?\n\nあれから約10年が経過した2023年吉日、YAPC::Kyoto 2023にこの #ぶつかり稽古 が帰ってくることになりました！\n\n@__kan さんと、antipop さんにより送り込まれた刺客 @kenchan さんが壇上でアツいぶつかり稽古を繰り広げます。乞うご期待！',
+      description: '10年前、YAPC::Asia 2013で行われたあることをキッカケに「秋のエンジニアぶつかり稽古 2013」というイベントが開催されました。 当時のあの「事件」を、皆様は覚えていますでしょうか?\n\nあれから約10年が経過した2023年吉日、YAPC::Kyoto 2023にこの #ぶつかり稽古 が帰ってくることになりました！\n\n@kan さんと、antipop さんにより送り込まれた刺客 @kenchan さんが壇上でアツいぶつかり稽古を繰り広げます。乞うご期待！',
       duration: 45,
       authors: [
+        {
+          author: '@kan',
+          author_icon: './images/kan.jpeg',
+          github_url: "https://github.com/kan",
+          twitter_url: "https://twitter.com/__kan",
+          blog_url: "https://fushihara.net/",
+        },
+        {
+          author: '@kenchan',
+          author_icon: './images/kenchan.jpeg',
+          github_url: "https://github.com/kenchan",
+          twitter_url: "https://twitter.com/kenchan",
+          blog_url: "https://diary.shu-cream.net/",
+        },
       ],
     },
     {
