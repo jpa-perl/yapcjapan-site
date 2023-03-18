@@ -93,7 +93,22 @@ const individualSponsors = [
     name: 'いちりんちゃん',
     avatar_url: './images/sponsor/individual/uploaded/ichirin2501.jpeg',
     profile_url: 'https://twitter.com/ichirin2501'
-  }
+  },
+  {
+    name: 'toku_bass',
+    avatar_url: './images/sponsor/individual/twitter/toku_bass.png',
+    profile_url: 'https://twitter.com/toku_bass'
+  },
+  {
+    name: 'Likk',
+    avatar_url: './images/sponsor/individual/twitter/likk.jpeg',
+    profile_url: 'https://twitter.com/likk'
+  },
+  {
+    name: 'turugina',
+    avatar_url: './images/sponsor/individual/twitter/turugina.png',
+    profile_url: 'https://twitter.com/turugina'
+  },
 ];
 
 
