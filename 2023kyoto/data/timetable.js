@@ -47,7 +47,6 @@ while(currentTime.getTime() < end.getTime()) {
         // 発表時間からrowspanを割り出す
         const rowspan = Math.ceil(talk.duration / 5);
         const classes = [tracks[i].track];
-        if(talk.title.includes('ライトニングトーク')) classes.push('lt');
         if(talk.title.includes('接続テスト')) classes.push('rest');
         if(talk.title.includes('休憩')) classes.push('rest');
         if(talk.title.includes('質疑応答')) classes.push('qa');
@@ -545,6 +544,13 @@ module.exports = {
           blog_url: "https://makky12.hatenablog.com/",
         }
       ],
+    },
+    {
+      talk_id: 200,
+      title: 'ライトニングトーク',
+      description: "karupaneruraさん ｢Javaの実装をPerlでテストする｣\nnasa9084さん ｢Kubernetes SIG-docs jaへのお誘い｣\n永島　薫さん ｢ワンライナーでちょっと楽に確認するNOSコンフィグ｣\nnuggedさん ｢Intro and invitation to Perl and Koha Conference in Helsinki, 14-16 August, 2023｣\nShunさん ｢chatGPTと文字コード｣\ntkzwtksさん ｢はてなのPerlブートキャンプご紹介｣\nmoznionさん ｢Prefix Treeによる高速ルーティングテーブル実装｣",
+      duration: 30,
+      authors: [],
     }
   ]
 };
