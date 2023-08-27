@@ -27,19 +27,19 @@
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;700&display=swap" rel="stylesheet">
 	<script src="//unpkg.com/alpinejs" defer></script>
 
-
 </head>
 
 <body class="pt-[38px] sm:pt-[58px]">
 	<div x-data="{open: false}">
 		<nav id="global-nav"
-			class="fixed z-10 right-0 top-0 flex w-full border border-black h-[38px] sm:h-[58px] content-center ">
-			<div class="grow pl-2 sm:pl-3 border-r border-black flex items-center">
+			class="fixed z-10 right-0 top-0 flex w-full border-t border-b border-black h-[38px] sm:h-[58px] content-center  bg-white">
+			<div class="grow pl-2 sm:pl-3 flex items-center">
 				<a href="/"><img src="./images/logo-site.png" class="h-[26px] sm:h-[33px] w-auto object-contain" width="210"
 						height="33" alt="YAPC::Hiroshima 2024" /></a>
 			</div>
+			<!--
 			<button @click="open = !open"
-				class="en-serif text-xs sm:text-xl flex items-center justify-center  w-[110px] sm:w-[150px]">
+				class="text-xs sm:text-xl flex items-center justify-center border-l border-black  w-[110px] sm:w-[150px]">
 				<svg class="mr-1 h-[9px] sm:h-[14px]" fill="none" height="14" viewBox="0 0 10 14" width="10"
 					xmlns="http://www.w3.org/2000/svg">
 					<g fill="#000">
@@ -53,7 +53,9 @@
 				</span>
 			</button>
 		</nav>
-		<div x-transition.opacity x-show="open" class="pt-[38px] sm:pt-[58px] fixed bg-white top-0 left-0 w-full h-full">
+		<div x-transition.opacity x-show="open"
+			class="pt-[38px] sm:pt-[58px] fixed bg-white top-0 left-0 w-full h-full bg-pattern">
 			TBD
 		</div>
+		-->
 	</div>
