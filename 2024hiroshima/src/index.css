@@ -3,5 +3,19 @@
 @tailwind utilities;
 
 html {
-	background: #fff;
+  background: #fff;
+}
+
+.en-serif {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+}
+
+.en-serif-bold {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+}
+
+#global-nav.open + .global-menu-content {
+  display: block;
 }
