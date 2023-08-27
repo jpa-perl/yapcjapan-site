@@ -37,3 +37,8 @@ body {
   @apply p-1 sm:py-3 sm:px-6;
   border: 1px solid #000;
 }
+
+.whatyoulike {
+  color: #333;
+  text-shadow: 10px 10px 0px rgba(195, 33, 33, 0.1);
+}
