@@ -30,11 +30,10 @@ body {
 }
 
 .section {
-  @apply border-b border-black;
-  padding: 100px 20px;
+  @apply border-b border-black py-12 sm:py-32 px-5;
 }
 
 .table td {
-  padding: 10px 20px;
+  @apply p-1 sm:py-3 sm:px-6;
   border: 1px solid #000;
 }
