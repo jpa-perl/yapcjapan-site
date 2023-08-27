@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./index.css">
+	<title>
+		<%= locals.site.title %>
+	</title>
+
+	<meta property="og:title" content="<%= locals.site.title %> " />
+	<meta property="og:description" content="<%= locals.site.description %>" />
+	<meta property="og:url" content="<%= locals.site.url %>" />
+	<meta property="og:image" content="<%= locals.site.image %>" />
+	<meta property="og:site_name" content="<%= locals.site.title %> " />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="<%= locals.site.title %> " />
+	<meta name="twitter:description" content="<%= locals.site.description %>" />
+	<meta name="twitter:site" content="<%= locals.site.url %>" />
+	<meta name="twitter:image" content="<%= locals.site.image %>" />
+
+</head>
+
+<body class="pt-10 sm:pt-28">
+	<nav class="global-nav">
+		<div class="text-right md:flex justify-end p-2">
+			<label for="nav-btn" class="bg-white border-black border-[3px] rounded-full inline-block p-3 md:hidden">
+				<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd"
+						d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+						clip-rule="evenodd"></path>
+				</svg>
+			</label>
+			<input class="hidden peer" type="checkbox" id="nav-btn" />
+			<ul
+				class="hidden ml-auto max-w-max md:flex peer-checked:flex text-left global-nav__links bg-white border-black border-[3px] rounded-3xl z-50  px-5 py-4 md:py-1 font-bold flex-wrap flex-col md:flex-row gap-x-8 md:gap-x-7 gap-y-3 md:gap-y-1 justify-center text-s md:text-base">
+				<li><a href="/2024hiroshima/">Home</a></li>
+				<li><a href="https://japan.perlassociation.org/entry/yapc/code_of_conduct" target="_blank">Code of Conduct</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
