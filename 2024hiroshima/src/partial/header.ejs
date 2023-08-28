@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./index.css">
+	<title>
+		<%= locals.site.title %>
+	</title>
+
+	<meta property="og:title" content="<%= locals.site.title %> " />
+	<meta property="og:description" content="<%= locals.site.description %>" />
+	<meta property="og:url" content="<%= locals.site.url %>" />
+	<meta property="og:image" content="<%= locals.site.image %>" />
+	<meta property="og:site_name" content="<%= locals.site.title %> " />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="<%= locals.site.title %> " />
+	<meta name="twitter:description" content="<%= locals.site.description %>" />
+	<meta name="twitter:site" content="<%= locals.site.url %>" />
+	<meta name="twitter:image" content="<%= locals.site.image %>" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;700&display=swap" rel="stylesheet">
+	<script src="//unpkg.com/alpinejs" defer></script>
+
+</head>
+
+<body class="pt-[38px] sm:pt-[58px]">
+	<div x-data="{open: false}">
+		<nav id="global-nav"
+			class="fixed z-10 right-0 top-0 flex w-full border-t border-b border-black h-[38px] sm:h-[58px] content-center  bg-white">
+			<div class="grow pl-2 sm:pl-3 flex items-center">
+				<a href="/"><img src="./images/logo-site.svg" class="h-[26px] sm:h-[33px] w-auto object-contain" width="210"
+						height="33" alt="YAPC::Hiroshima 2024" /></a>
+			</div>
+			<!--
+			<button @click="open = !open"
+				class="text-xs sm:text-xl flex items-center justify-center border-l border-black  w-[110px] sm:w-[150px]">
+				<svg class="mr-1 h-[9px] sm:h-[14px]" fill="none" height="14" viewBox="0 0 10 14" width="10"
+					xmlns="http://www.w3.org/2000/svg">
+					<g fill="#000">
+						<path d="m0 0h10v2h-10z" />
+						<path d="m0 6h10v2h-10z" />
+						<path d="m0 12h10v2h-10z" />
+					</g>
+				</svg>
+				<span x-text="open?'CLOSE':'MENU'">
+					MENU
+				</span>
+			</button>
+		</nav>
+		<div x-transition.opacity x-show="open"
+			class="pt-[38px] sm:pt-[58px] fixed bg-white top-0 left-0 w-full h-full bg-pattern">
+			TBD
+		</div>
+		-->
+	</div>

@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: #fff;
+}
+
+body {
+  color: #222;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.en-serif {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+}
+
+.en-serif-bold {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+}
+
+.bg-pattern {
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section {
+  @apply border-b border-black py-12 sm:py-32 px-5;
+}
+
+.table td {
+  @apply p-1 sm:py-3 sm:px-6;
+  border: 1px solid #000;
+}
+
+.whatyoulike {
+  color: #333;
+  text-shadow: 10px 10px 0px rgba(195, 33, 33, 0.1);
+}
