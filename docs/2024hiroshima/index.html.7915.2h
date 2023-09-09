@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/2024hiroshima/index.61d3354a.css">
+	<title>
+		YAPC::Hiroshima 2024
+	</title>
+
+	<meta property="og:title" content="YAPC::Hiroshima 2024 ">
+	<meta property="og:description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。">
+	<meta property="og:url" content="https://yapcjapan.org/2024hiroshima/">
+	<meta property="og:image" content="/2024hiroshima/images/ogp-image.jpg">
+	<meta property="og:site_name" content="YAPC::Hiroshima 2024 ">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="YAPC::Hiroshima 2024 ">
+	<meta name="twitter:description" content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。">
+	<meta name="twitter:site" content="https://yapcjapan.org/2024hiroshima/">
+	<meta name="twitter:image" content="/2024hiroshima/images/ogp-image.jpg">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;700&display=swap" rel="stylesheet">
+	<script src="//unpkg.com/alpinejs" defer=""></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+
+</head>
+
+<body class="pt-[38px] sm:pt-[58px]">
+	<div id="p5-container"></div>
+	<div x-data="{open: false}">
+		<nav id="global-nav" class="fixed z-10 right-0 top-0 flex w-full border-t border-b border-black h-[38px] sm:h-[58px] content-center  bg-white">
+			<div class="grow pl-2 sm:pl-3 flex items-center">
+				<a href="/"><img src="/2024hiroshima/logo-site.b97a3cc7.svg" class="h-[26px] sm:h-[33px] w-auto object-contain" width="210" height="33" alt="YAPC::Hiroshima 2024"></a>
+			</div>
+			<!--
+			<button @click="open = !open"
+				class="text-xs sm:text-xl flex items-center justify-center border-l border-black  w-[110px] sm:w-[150px]">
+				<svg class="mr-1 h-[9px] sm:h-[14px]" fill="none" height="14" viewBox="0 0 10 14" width="10"
+					xmlns="http://www.w3.org/2000/svg">
+					<g fill="#000">
+						<path d="m0 0h10v2h-10z" />
+						<path d="m0 6h10v2h-10z" />
+						<path d="m0 12h10v2h-10z" />
+					</g>
+				</svg>
+				<span x-text="open?'CLOSE':'MENU'">
+					MENU
+				</span>
+			</button>
+		</nav>
+		<div x-transition.opacity x-show="open"
+			class="pt-[38px] sm:pt-[58px] fixed bg-white top-0 left-0 w-full h-full bg-pattern">
+			TBD
+		</div>
+		-->
+	</nav></div>
+	<div id="content">
+	<section class="section bg-pattern flex flex-col items-center gap-[40px]">
+		<img src="/2024hiroshima/logo-main.64874ea3.png" alt="YAPC::Hiroshima 2024 ロゴ" class="sm:w-[400px] w-[250px] sm:max-w-full">
+		<p class="font-extrabold text-xl sm:text-2xl max-w-4xl sm:mx-12">
+			YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。
+			Perlだけにとどまらない技術者たちが、好きな技術の話をし交流するカンファレンスで、技術者であれば誰でも楽しめるお祭りです！
+		</p>
+		<img src="/2024hiroshima/text-main-date.2575fd4e.png" class="w-[300px] sm:w-[400px] md:w-[613px]  sm:max-w-full" alt=" 2024年2月10日 広島国際会議場">
+	</section>
+
+	<section class="section flex flex-col">
+		<h2 class="en-serif-bold text-4xl sm:text-6xl text-center mb-16">SCHEDULE</h2>
+		<table class="table-fixed mx-auto en-serif text-bold sm:text-2xl md:text-3xl table">
+			<tbody>
+				<tr>
+					<td>前夜祭</td>
+					<td>2024年2月9日(金)</td>
+					<td>TBD</td>
+				</tr>
+				<tr>
+					<td>本編</td>
+					<td>2024年2月10 日(土)</td>
+					<td>広島国際会議場</td>
+				</tr>
+				<tr>
+					<td>後夜祭</td>
+					<td>2024年2月11日(日)</td>
+					<td>TBD</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section class="section bg-pattern flex flex-col items-center gap-[50px]">
+		<p class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center whatyoulike">WHAT YOU LIKE</p>
+		<img src="/2024hiroshima/okonomi.508f0361.png" class="w-[732px] max-w-full" alt="">
+		<p class="font-extrabold text-2xl sm:text-3xl max-w-3xl sm:mx-12">
+			今回のYAPC::Hiroshima 2024は<span class="text-red">｢what you like｣</span>がテーマです。職種、ロール、プログラミング言語、技術要素...
+			あなたのさまざまな<span class="text-red">｢お好み｣</span>を語ってみてください。</p>
+	</section>
+
+	</div>
+<footer class="mt-32 mx-auto mb-10 flex flex-col items-center">
+	<img src="/2024hiroshima/jpa.e315e8ee.png" alt="JPA" class="w-[90px]">
+	<p class="text-xs mt-3">© Japan Perl Association</p>
+</footer>
+<script src="/2024hiroshima/index.ff5375b2.js"></script>
+<script src="/2024hiroshima/2024hiroshima.0ed98494.js"></script></body>
+
+</html>
