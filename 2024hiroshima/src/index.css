@@ -21,16 +21,13 @@ body {
   font-weight: 700;
 }
 
-.bg-pattern {
-  background-image: url("./images/bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+.section {
+  background: #fff;
+  @apply border-b border-black py-12 sm:py-32 px-5;
 }
 
-.section {
-  @apply border-b border-black py-12 sm:py-32 px-5;
+.bg-pattern {
+  background: transparent;
 }
 
 .table td {
@@ -41,4 +38,16 @@ body {
 .whatyoulike {
   color: #333;
   text-shadow: 10px 10px 0px rgba(195, 33, 33, 0.1);
+}
+
+#p5-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#content {
+  position: relative;
+  z-index: 1;
 }
