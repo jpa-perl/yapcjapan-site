@@ -1,3 +1,5 @@
+import p5 from "p5";
+
 let canvas;
 let shapes = [];
 let centerX;
@@ -5,25 +7,37 @@ let objectNum;
 
 const COLOR = "#C32121";
 
-function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
+/**
+ *
+ * @param {p5} p
+ */
+function setup(p) {
+  canvas = p.createCanvas(p.windowWidth, p.windowHeight);
   canvas.parent("p5-container");
-  pixelDensity(1);
-  init();
+  p.pixelDensity(1);
+  init(p);
 }
 
-function init() {
-  centerX = width / 2;
-  objectNum = floor(map(width, 0, 1920, 10, 60));
+/**
+ *
+ * @param {p5} p
+ */
+function init(p) {
+  centerX = p.width / 2;
+  objectNum = p.floor(p.map(p.width, 0, 1920, 10, 60));
 }
 
-function draw() {
-  background(255);
-  push();
-  translate(centerX, 0);
+/**
+ *
+ * @param {p5} p
+ */
+function draw(p) {
+  p.background(255);
+  p.push();
+  p.translate(centerX, 0);
   for (let i = 0; i < objectNum; i++) {
     if (shapes[i] == null) {
-      shapes[i] = new Shape();
+      shapes[i] = new Shape(p);
     }
     const shape = shapes[i];
     if (i > objectNum) {
@@ -33,12 +47,16 @@ function draw() {
     }
     shape.draw();
   }
-  pop();
+  p.pop();
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  init();
+/**
+ *
+ * @param {p5} p
+ */
+function windowResized(p) {
+  p.resizeCanvas(p.windowWidth, p.windowHeight);
+  init(p);
 }
 
 const ShapeType = {
@@ -48,27 +66,32 @@ const ShapeType = {
 };
 
 class Shape {
-  constructor() {
-    this.shapeType = random(Object.values(ShapeType));
-    this.x = random(-width / 2, width / 2);
-    this.y = random(height);
-    this.z = random(0, 100);
-    this.acl = map(this.z, 0, 100, 0.5, 2);
-    this.size = map(this.z, 0, 100, 10, 100);
-    this.rotation = random(TAU);
-    this.rotAcl = random(-0.01, 0.01);
-    this.color = color(COLOR);
-    this.strokeWeight = map(this.size, 10, 100, 2, 8);
+  constructor(p) {
+    /**
+     * @type {p5}
+     */
+    this.p = p;
+
+    this.shapeType = this.p.random(Object.values(ShapeType));
+    this.x = this.p.random(-this.p.width / 2, this.p.width / 2);
+    this.y = this.p.random(this.p.height);
+    this.z = this.p.random(0, 100);
+    this.acl = this.p.map(this.z, 0, 100, 0.5, 2);
+    this.size = this.p.map(this.z, 0, 100, 10, 100);
+    this.rotation = this.p.random(this.p.TAU);
+    this.rotAcl = this.p.random(-0.01, 0.01);
+    this.color = this.p.color(COLOR);
+    this.strokeWeight = this.p.map(this.size, 10, 100, 2, 8);
     this.targetOpacity = 255;
     this.show = true;
     this.opacity = 0;
   }
 
   reset() {
-    this.shapeType = random(Object.values(ShapeType));
-    this.x = random(-width / 2, width / 2);
-    this.rotation = random(TAU);
-    this.rotAcl = random(-0.01, 0.01);
+    this.shapeType = this.p.random(Object.values(ShapeType));
+    this.x = this.p.random(-this.p.width / 2, this.p.width / 2);
+    this.rotation = this.p.random(this.p.TAU);
+    this.rotAcl = this.p.random(-0.01, 0.01);
   }
 
   setShow(show) {
@@ -77,12 +100,14 @@ class Shape {
 
   update() {
     this.y -= this.acl;
-    this.x += sin(this.y * 0.001 + this.size * 2) / 2;
-    const targetOpacity = this.show ? map(this.y, height, 0, 0, 30) : 0;
+    this.x += this.p.sin(this.y * 0.001 + this.size * 2) / 2;
+    const targetOpacity = this.show
+      ? this.p.map(this.y, this.p.height, 0, 0, 30)
+      : 0;
     this.opacity += (targetOpacity - this.opacity) * 0.9;
     this.color.setAlpha(this.opacity);
     if (this.y < 0 - this.size) {
-      this.y = height + this.size;
+      this.y = this.p.height + this.size;
       this.reset();
     }
     this.rotation += this.rotAcl;
@@ -90,14 +115,14 @@ class Shape {
 
   draw() {
     this.update();
-    push();
-    rectMode(CENTER);
-    fill(255, 100);
-    strokeJoin(ROUND);
-    strokeWeight(this.strokeWeight);
-    stroke(this.color);
-    translate(this.x, this.y);
-    rotate(this.rotation);
+    this.p.push();
+    this.p.rectMode(this.p.CENTER);
+    this.p.fill(255, 100);
+    this.p.strokeJoin(this.p.ROUND);
+    this.p.strokeWeight(this.strokeWeight);
+    this.p.stroke(this.color);
+    this.p.translate(this.x, this.y);
+    this.p.rotate(this.rotation);
     switch (this.shapeType) {
       case ShapeType.CIRCLE:
         this.drawCircle();
@@ -109,26 +134,38 @@ class Shape {
         this.drawTriangle();
         break;
     }
-    pop();
+    this.p.pop();
   }
 
   drawCircle() {
-    circle(0, 0, this.size);
+    this.p.circle(0, 0, this.size);
   }
 
   drawRect() {
-    rect(0, 0, this.size, this.size);
+    this.p.rect(0, 0, this.size, this.size);
   }
 
   drawTriangle() {
-    beginShape();
+    this.p.beginShape();
     for (let i = 3; i > 0; i--) {
-      const R = (TAU / 3) * i;
-      const x = cos(R) * this.size;
-      const y = sin(R) * this.size;
+      const R = (this.p.TAU / 3) * i;
+      const x = this.p.cos(this.p.R) * this.size;
+      const y = this.p.sin(this.p.R) * this.size;
 
-      vertex(x, y);
+      this.p.vertex(x, y);
     }
-    endShape(CLOSE);
+    this.p.endShape(this.p.CLOSE);
   }
 }
+
+/**
+ *
+ * @param {p5} p
+ */
+const sketch = (p) => {
+  p.setup = () => setup(p);
+  p.draw = () => draw(p);
+  p.windowResized = () => windowResized(p);
+};
+
+new p5(sketch);
