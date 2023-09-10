@@ -11,6 +11,12 @@ module.exports = {
         "YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。",
       image: "images/ogp-image.jpg",
     },
+    information: [
+      {
+        title: "スポンサーメニューを公開しました",
+        url: "https://fortee.jp/yapc-hiroshima-2024/go/sponsor-menu",
+      }
+    ],
     guestSpeakers: [
       {
         photo: "images/tohoho.jpg",
