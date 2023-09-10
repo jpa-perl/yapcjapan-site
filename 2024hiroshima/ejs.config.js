@@ -13,7 +13,7 @@ module.exports = {
     },
     guestSpeakers: [
       {
-        photo: "images/",
+        photo: "images/tohoho.jpg",
         name: "杜甫々",
         name_en: "Tohoho",
         title: "株式会社はてな 取締役 組織・基盤開発本部長",
