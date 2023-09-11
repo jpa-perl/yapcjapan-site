@@ -13,9 +13,10 @@ module.exports = {
     },
     information: [
       {
+        date: "2023/09/11",
         title: "スポンサーメニューを公開しました",
         url: "https://fortee.jp/yapc-hiroshima-2024/go/sponsor-menu",
-      }
+      },
     ],
     guestSpeakers: [
       {
