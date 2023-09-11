@@ -26,7 +26,7 @@ body {
   @apply border-b border-black py-12 sm:py-32 px-5;
 }
 
-.bg-pattern {
+.section:nth-child(odd) {
   background: transparent;
 }
 
