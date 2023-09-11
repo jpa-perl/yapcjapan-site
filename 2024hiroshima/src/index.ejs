@@ -73,7 +73,7 @@
 		<div class="mx-auto px-5 grid-flow-col">
 			<% for (const speaker of locals.guestSpeakers) { %>
 				<div class="max-w-sm">
-					<img src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
+					<img class="rounded-xl" src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
 					<div class="grid m-auto my-5">
 						<div class="font-bold text-2xl text-center">
 							<%= speaker.name %>
@@ -81,10 +81,12 @@
 						<div class="text-sm text-center text-gray-500">
 							<%= speaker.name_en %>
 						</div>
+						<div class="mt-4 text-sm text-center ">
+							<%= speaker.title %><br>
+						</div>
 					</div>
-					<p class="text-justify">
-						<%= speaker.title %><br>
-							<%= speaker.description %>
+					<p class="text-sm sm:text-md md:text-lg text-justify">
+						<%= speaker.description %>
 					</p>
 				</div>
 				<% } %>
