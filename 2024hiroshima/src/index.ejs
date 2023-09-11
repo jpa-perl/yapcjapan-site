@@ -11,6 +11,40 @@
 	</section>
 
 	<section class="section flex flex-col">
+		<h2 class="en-serif-bold text-4xl sm:text-6xl text-center mb-16">ANNOUNCEMENT</h2>
+		<table class="table-fixed mx-auto en-serif text-bold sm:text-2xl md:text-3xl table">
+			<tbody>
+				<% for (const i of locals.information) { %>
+					<tr>
+						<td>
+							<%=i.date%>
+						</td>
+						<td>
+							<a class="underline" href="<%= i.url %>" target="_blank" rel="noopener noreferrer">
+								<%= i.title %>
+							</a>
+						</td>
+					</tr>
+					<% } %>
+			</tbody>
+		</table>
+		<div>
+			<ul>
+				<li>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section bg-pattern flex flex-col items-center gap-[50px]">
+		<p class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center whatyoulike">WHAT YOU LIKE</p>
+		<img src="./images/okonomi.png" class="w-[732px] max-w-full" alt="" />
+		<p class="font-extrabold text-2xl sm:text-3xl max-w-3xl sm:mx-12">
+			今回のYAPC::Hiroshima 2024は<span class="text-red">｢what you like｣</span>がテーマです。職種、ロール、プログラミング言語、技術要素...
+			あなたのさまざまな<span class="text-red">｢お好み｣</span>を語ってみてください。</p>
+	</section>
+
+	<section class="section flex flex-col">
 		<h2 class="en-serif-bold text-4xl sm:text-6xl text-center mb-16">SCHEDULE</h2>
 		<table class="table-fixed mx-auto en-serif text-bold sm:text-2xl md:text-3xl table">
 			<tbody>
@@ -33,51 +67,29 @@
 		</table>
 	</section>
 
-	<section class="section bg-pattern flex flex-col items-center gap-[50px]">
-		<p class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center whatyoulike">WHAT YOU LIKE</p>
-		<img src="./images/okonomi.png" class="w-[732px] max-w-full" alt="" />
-		<p class="font-extrabold text-2xl sm:text-3xl max-w-3xl sm:mx-12">
-			今回のYAPC::Hiroshima 2024は<span class="text-red">｢what you like｣</span>がテーマです。職種、ロール、プログラミング言語、技術要素...
-			あなたのさまざまな<span class="text-red">｢お好み｣</span>を語ってみてください。</p>
-	</section>
 
-<section>
-	<p>ANNOUNCEMENT</p>
-	<div>
-		<ul>
-			<% for (const i of locals.information) { %>
-			<li>
-				<a href="<%= i.url %>"><%= i.title %></a>
-			</li>
-			<% } %>
-		</ul>
-	</div>
-</section>
-
-<section class="section bg-pattern flex flex-col items-center gap-[50px]">
-	<p class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center">GUEST SPEAKER</p>
-	<div class="mx-auto px-5 guests mb-20">
-		<% for (const speaker of locals.guestSpeakers) { %>
-			<div class="guest mt-6 lg:w-1/3 xl:w-1/4">
-				<div class="guest-photo__wrapper">
+	<section class="section flex flex-col items-center gap-[50px]">
+		<h2 class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center">GUEST SPEAKER</h2>
+		<div class="mx-auto px-5 grid-flow-col">
+			<% for (const speaker of locals.guestSpeakers) { %>
+				<div class="max-w-sm">
 					<img src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
-				</div>
-				<div class="grid m-auto my-5">
-					<div class="font-bold text-lg text-center">
-						<%= speaker.name %>
+					<div class="grid m-auto my-5">
+						<div class="font-bold text-2xl text-center">
+							<%= speaker.name %>
+						</div>
+						<div class="text-sm text-center text-gray-500">
+							<%= speaker.name_en %>
+						</div>
 					</div>
-					<div class="text-sm text-center">
-						<%= speaker.name_en %>
-					</div>
+					<p class="text-justify">
+						<%= speaker.title %><br>
+							<%= speaker.description %>
+					</p>
 				</div>
-				<p class="px-6 pb-8 text-sm text-justify">
-					<%= speaker.title %><br>
-					<%= speaker.description %>
-				</p>
-			</div>
-			<% } %>
-	</div>
-</section>
+				<% } %>
+		</div>
+	</section>
 
 
 	<%- include('partial/footer'); -%>
