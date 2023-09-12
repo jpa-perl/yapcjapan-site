@@ -70,7 +70,7 @@
 
 	<section class="section flex flex-col items-center gap-[50px]">
 		<h2 class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center">GUEST SPEAKER</h2>
-		<div class="mx-auto px-5 grid-flow-col">
+		<div class="mx-auto px-5 grid md:grid-flow-col auto-cols-fr gap-12">
 			<% for (const speaker of locals.guestSpeakers) { %>
 				<div class="max-w-sm">
 					<img class="rounded-xl" src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
@@ -85,7 +85,7 @@
 							<%= speaker.title %><br>
 						</div>
 					</div>
-					<p class="text-sm sm:text-md md:text-lg text-justify">
+					<p class="text-sm sm:text-md text-justify">
 						<%= speaker.description %>
 					</p>
 				</div>
