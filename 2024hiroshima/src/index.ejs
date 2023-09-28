@@ -93,5 +93,26 @@
 		</div>
 	</section>
 
+<h2><span>スポンサー</span></h2>
+<div>
+	<div>
+		<% for (const sponsor of locals.sponsors) { %>
+			<div class="<%= sponsor.class %>">
+				<div>
+					<%= sponsor.label %>
+				</div>
+				<div>
+					<% for (const company of sponsor.companies) { %>
+						<a target="_blank" href="<%= company.url %>" class="block <%= sponsor.icon_class %>">
+								<span class="sponsor__image-wrapper">
+									<img loading="lazy" src="images/sponsor/<%= company.image %>" alt="<%= company.name %>" />
+								</span>
+						</a>
+					<% } %>
+				</div>
+			</div>
+		<% } %>
+	</div>
+</div>
 
 	<%- include('partial/footer'); -%>

@@ -42,7 +42,208 @@ module.exports = {
       },
     ],
     jobboards,
-    sponsors: [],
+    sponsors: [
+      {
+        key: 'perl',
+        class: 'basis-full',
+        icon_class: 'max-w-[300px]',
+        label: 'Perl Sponsors',
+        companies: [
+          {
+            name: '株式会社ディー・エヌ・エー',
+            url: 'https://engineering.dena.com/',
+            image: 'dena.png',
+          },
+          {
+            name: '株式会社Helpfeel',
+            url: 'https://corp.helpfeel.com/ja/home',
+            image: 'helpfeel.png'
+          },
+          {
+            name: '株式会社ドリーム・アーツ',
+            url: 'https://www.dreamarts.co.jp/',
+            image: 'temp.png'
+          }
+        ],
+      },
+      {
+        key: 'Platinum',
+        class: 'basis-full',
+        icon_class: 'max-w-[200px]',
+        label: 'Platinum Sponsors',
+        companies: [
+          {
+            name: 'シックス・アパート株式会社',
+            url: 'https://www.sixapart.jp/',
+            image: 'six-apart.png'
+          },
+        ],
+      },
+      {
+        key: 'Gold',
+        class: 'basis-full',
+        icon_class: 'max-w-[150px]',
+        label: 'Gold Sponsors',
+        companies: [
+          {
+            name: '株式会社はてな',
+            url: 'https://hatena.co.jp',
+            image: 'hatena.png'
+          },
+          {
+            name: '株式会社ハイヤールー',
+            url: 'https://hireroo.io/',
+            image: 'temp.png'
+          },
+          {
+            name: '株式会社モバイルファクトリー',
+            url: 'https://www.mobilefactory.jp/',
+            image: 'mobile-factory.png'
+          },
+          {
+            name: '株式会社Diverse',
+            url: 'https://diverse-inc.co.jp/',
+            image: 'diverse.png'
+          },
+          {
+            name: '株式会社SmartHR',
+            url: 'https://hello-world.smarthr.co.jp/',
+            image: 'temp.png'
+          },
+          {
+            name: "さくらインターネット株式会社",
+            url: "https://www.sakura.ad.jp/",
+            image: 'sakura.png'
+          },
+          {
+            name: 'Y.pm',
+            url: 'https://www.ypm.llc/',
+            image: 'ypm.png'
+          }
+        ],
+      },
+      {
+        key: 'Silver',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: 'Silver Sponsors',
+        companies: [
+          {
+            name: 'こだまリサーチ株式会社',
+            url: 'https://www.kodamari.com/',
+            image: 'temp.png',
+          },
+          {
+            name: "合同会社もりたつ技商",
+            url: "https://corp.moritaz.com/",
+            image: 'moritaz.png'
+          },
+          {
+            name: 'NOT A HOTEL株式会社',
+            url: 'https://notahotel.com/',
+            image: 'temp.png'
+          },
+        ],
+      },
+      {
+        key: 'Booth',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: 'ブーススポンサー',
+        companies: [
+          {
+            name: '株式会社ハイヤールー',
+            url: 'https://hireroo.io/',
+            image: 'temp.png'
+          },
+          {
+            name: '株式会社Helpfeel',
+            url: 'https://corp.helpfeel.com/ja/home',
+            image: 'helpfeel.png'
+          },
+          {
+            name: '株式会社SmartHR',
+            url: 'https://hello-world.smarthr.co.jp/',
+            image: 'temp.png'
+          },
+          {
+            name: "さくらインターネット株式会社",
+            url: "https://www.sakura.ad.jp/",
+            image: 'sakura.png'
+          },
+        ],
+      },
+      {
+        key: 'Lunch',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: '広島名物ランチセッション',
+        companies: [
+          {
+            name: '株式会社Helpfeel',
+            url: 'https://corp.helpfeel.com/ja/home',
+            image: 'helpfeel.png'
+          },
+        ],
+      },
+      {
+        key: 'StudentSupport',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: '学生支援 記事広告',
+        companies: [
+          {
+            name: '株式会社モバイルファクトリー',
+            url: 'https://www.mobilefactory.jp/',
+            image: 'mobile-factory.png'
+          },
+          {
+            name: 'こだまリサーチ株式会社',
+            url: 'https://www.kodamari.com/',
+            image: 'temp.png',
+          },
+        ],
+      },
+      {
+        key: 'coffee',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: 'コーヒーブース',
+        companies: [
+          {
+            name: '株式会社はてな',
+            url: 'https://hatena.co.jp',
+            image: 'hatena.png'
+          },
+        ],
+      },
+      {
+        key: 'after-party',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: '懇親会',
+        companies: [
+          {
+            name: '株式会社ドリーム・アーツ',
+            url: 'https://www.dreamarts.co.jp/',
+            image: 'temp.png'
+          },
+        ],
+      },
+      {
+        key: 'morning',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: 'モーニング（むさしのむすび）',
+        companies: [
+          {
+            name: '株式会社ディー・エヌ・エー',
+            url: 'https://engineering.dena.com/',
+            image: 'dena.png',
+          },
+        ],
+      },
+    ],
     staff,
     individualSponsors,
   },
