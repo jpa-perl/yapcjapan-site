@@ -62,7 +62,7 @@ module.exports = {
           {
             name: '株式会社ドリーム・アーツ',
             url: 'https://www.dreamarts.co.jp/',
-            image: 'temp.png'
+            image: 'dreamarts.png'
           }
         ],
       },
@@ -90,11 +90,11 @@ module.exports = {
             url: 'https://hatena.co.jp',
             image: 'hatena.png'
           },
-          {
-            name: '株式会社ハイヤールー',
-            url: 'https://hireroo.io/',
-            image: 'temp.png'
-          },
+          // {
+          //   name: '株式会社ハイヤールー',
+          //   url: 'https://hireroo.io/',
+          //   image: 'temp.png'
+          // },
           {
             name: '株式会社モバイルファクトリー',
             url: 'https://www.mobilefactory.jp/',
@@ -108,18 +108,18 @@ module.exports = {
           {
             name: '株式会社SmartHR',
             url: 'https://hello-world.smarthr.co.jp/',
-            image: 'temp.png'
+            image: 'smarthr.png'
           },
           {
             name: "さくらインターネット株式会社",
             url: "https://www.sakura.ad.jp/",
             image: 'sakura.png'
           },
-          {
-            name: 'Y.pm',
-            url: 'https://www.ypm.llc/',
-            image: 'ypm.png'
-          }
+          // {
+          //   name: 'Y.pm',
+          //   url: 'https://www.ypm.llc/',
+          //   image: 'ypm.png'
+          // }
         ],
       },
       {
@@ -131,7 +131,7 @@ module.exports = {
           {
             name: 'こだまリサーチ株式会社',
             url: 'https://www.kodamari.com/',
-            image: 'temp.png',
+            image: 'kodamari.png',
           },
           {
             name: "合同会社もりたつ技商",
@@ -141,7 +141,7 @@ module.exports = {
           {
             name: 'NOT A HOTEL株式会社',
             url: 'https://notahotel.com/',
-            image: 'temp.png'
+            image: 'not-a-hotel.png'
           },
         ],
       },
@@ -151,11 +151,11 @@ module.exports = {
         icon_class: 'max-w-[100px]',
         label: 'ブーススポンサー',
         companies: [
-          {
-            name: '株式会社ハイヤールー',
-            url: 'https://hireroo.io/',
-            image: 'temp.png'
-          },
+          // {
+          //   name: '株式会社ハイヤールー',
+          //   url: 'https://hireroo.io/',
+          //   image: 'temp.png'
+          // },
           {
             name: '株式会社Helpfeel',
             url: 'https://corp.helpfeel.com/ja/home',
@@ -164,7 +164,7 @@ module.exports = {
           {
             name: '株式会社SmartHR',
             url: 'https://hello-world.smarthr.co.jp/',
-            image: 'temp.png'
+            image: 'smarthr.png'
           },
           {
             name: "さくらインターネット株式会社",
@@ -200,7 +200,7 @@ module.exports = {
           {
             name: 'こだまリサーチ株式会社',
             url: 'https://www.kodamari.com/',
-            image: 'temp.png',
+            image: 'kodamari.png',
           },
         ],
       },
@@ -226,7 +226,7 @@ module.exports = {
           {
             name: '株式会社ドリーム・アーツ',
             url: 'https://www.dreamarts.co.jp/',
-            image: 'temp.png'
+            image: 'dreamarts.png'
           },
         ],
       },
