@@ -90,11 +90,11 @@ module.exports = {
             url: 'https://hatena.co.jp',
             image: 'hatena.png'
           },
-          // {
-          //   name: '株式会社ハイヤールー',
-          //   url: 'https://hireroo.io/',
-          //   image: 'temp.png'
-          // },
+          {
+            name: '株式会社ハイヤールー',
+            url: 'https://hireroo.io/',
+            image: 'hireroo.png'
+          },
           {
             name: '株式会社モバイルファクトリー',
             url: 'https://www.mobilefactory.jp/',
@@ -115,11 +115,11 @@ module.exports = {
             url: "https://www.sakura.ad.jp/",
             image: 'sakura.png'
           },
-          // {
-          //   name: 'Y.pm',
-          //   url: 'https://www.ypm.llc/',
-          //   image: 'ypm.png'
-          // }
+          {
+            name: 'Y.pm',
+            url: 'https://www.ypm.llc/',
+            image: 'ypm.png'
+          }
         ],
       },
       {
@@ -151,11 +151,11 @@ module.exports = {
         icon_class: 'max-w-[100px]',
         label: 'ブーススポンサー',
         companies: [
-          // {
-          //   name: '株式会社ハイヤールー',
-          //   url: 'https://hireroo.io/',
-          //   image: 'temp.png'
-          // },
+          {
+            name: '株式会社ハイヤールー',
+            url: 'https://hireroo.io/',
+            image: 'hireroo.png'
+          },
           {
             name: '株式会社Helpfeel',
             url: 'https://corp.helpfeel.com/ja/home',
