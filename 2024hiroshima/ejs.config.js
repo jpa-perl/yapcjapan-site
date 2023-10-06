@@ -202,6 +202,11 @@ module.exports = {
             url: 'https://www.kodamari.com/',
             image: 'kodamari.png',
           },
+          {
+            name: "合同会社もりたつ技商",
+            url: "https://corp.moritaz.com/",
+            image: 'moritaz.png'
+          },
         ],
       },
       {
