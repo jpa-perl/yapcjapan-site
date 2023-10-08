@@ -51,3 +51,48 @@ body {
   position: relative;
   z-index: 1;
 }
+
+.global-menu {
+  background: url(./images/bg.jpg);
+  background-size: cover;
+}
+
+.global-menu ul {
+  @apply text-4xl md:text-6xl;
+  display: grid;
+  line-height: 1;
+  margin: 1em 0.5em;
+  gap: 0.8em;
+  font-weight: 900;
+  align-items: flex-start;
+  justify-items: flex-end;
+  text-align: right;
+}
+
+.global-menu li a > span {
+  @apply text-2xl md:text-3xl;
+  display: block;
+}
+
+.global-menu li a {
+  display: block;
+  position: relative;
+  padding: 0 0.7em 0 0;
+  transition: all 0.1s linear;
+}
+
+.global-menu li a:after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  right: -0.5rem;
+  transform: translateY(-50%);
+}
+
+.global-menu li a:hover {
+  @apply bg-red text-white;
+}
+
+.global-menu li a:hover:after {
+  right: 0;
+}
