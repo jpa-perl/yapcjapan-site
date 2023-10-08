@@ -39,10 +39,10 @@
 						height="33" alt="YAPC::Hiroshima 2024" /></a>
 			</div>
 			<button @click="open = !open"
-				class="text-xs sm:text-xl flex items-center justify-center border-l border-black  w-[110px] sm:w-[150px]">
+				class="text-xs sm:text-xl flex items-center justify-center border-l border-black  w-[110px] sm:w-[150px] hover:bg-red hover:text-white transition-all">
 				<svg class="mr-1 h-[9px] sm:h-[14px]" fill="none" height="14" viewBox="0 0 10 14" width="10"
 					xmlns="http://www.w3.org/2000/svg">
-					<g fill="#000">
+					<g fill="currentColor">
 						<path d="m0 0h10v2h-10z" />
 						<path d="m0 6h10v2h-10z" />
 						<path d="m0 12h10v2h-10z" />
@@ -56,7 +56,6 @@
 		<div x-transition.opacity x-show="open"
 			class="pt-[38px] sm:pt-[58px] fixed bg-white top-0 left-0 w-full h-full overflow-y-auto bg-pattern z-10 global-menu">
 			<ul>
-				<li><a @click="open=false" href="/2024hiroshima/"><span>🏠ホーム</span>HOME</a></li>
 				<li><a target="_blank" rel="noopener noreferrer" href="https://blog.yapcjapan.org/" target="_blank"
 						rel="noopener noreferrer"><span>🎫チケット</span>TICKETS</a>
 				</li>
