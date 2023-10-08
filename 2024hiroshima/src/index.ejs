@@ -105,7 +105,7 @@
 				<div class="flex justify-center flex-wrap gap-5">
 					<% for (const company of sponsor.companies) { %>
 						<a target="_blank" href="<%= company.url %>"
-							class="block border rounded-xl p-1 border-gray-200 <%= sponsor.icon_class %>">
+							class="block border rounded-xl p-1 border-gray-200 hover:scale-105 transition-transform <%= sponsor.icon_class %>">
 							<img class="aspect-square object-contain content-center" loading="lazy"
 								src="images/sponsor/<%= company.image %>" alt="<%= company.name %>" />
 						</a>
