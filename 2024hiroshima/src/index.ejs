@@ -44,7 +44,7 @@
 			あなたのさまざまな<span class="text-red">｢お好み｣</span>を語ってみてください。</p>
 	</section>
 
-	<section class="section flex flex-col">
+	<section class="section flex flex-col" id="schedule">
 		<h2 class="en-serif-bold text-4xl sm:text-6xl text-center mb-16">SCHEDULE</h2>
 		<table class="table-fixed mx-auto en-serif text-bold sm:text-2xl md:text-3xl table">
 			<tbody>
@@ -68,8 +68,10 @@
 	</section>
 
 
-	<section class="section flex flex-col items-center gap-[50px]">
-		<h2 class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center">GUEST SPEAKER</h2>
+	<section class="section flex flex-col items-center gap-[50px]" id="guest-speaker">
+		<h2 class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center">
+			GUEST SPEAKER
+		</h2>
 		<div class="mx-auto px-5 grid md:grid-flow-col auto-cols-fr gap-12">
 			<% for (const speaker of locals.guestSpeakers) { %>
 				<div class="max-w-sm">
@@ -103,7 +105,7 @@
 				<div class="flex justify-center flex-wrap gap-5">
 					<% for (const company of sponsor.companies) { %>
 						<a target="_blank" href="<%= company.url %>"
-							class="block border rounded-xl p-1 border-gray-200 <%= sponsor.icon_class %>">
+							class="block border rounded-xl p-1 border-gray-200 hover:scale-105 transition-transform <%= sponsor.icon_class %>">
 							<img class="aspect-square object-contain content-center" loading="lazy"
 								src="images/sponsor/<%= company.image %>" alt="<%= company.name %>" />
 						</a>

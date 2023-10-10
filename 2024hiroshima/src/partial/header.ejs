@@ -33,17 +33,16 @@
 	<div id="p5-container"></div>
 	<div x-data="{open: false}">
 		<nav id="global-nav"
-			class="fixed z-10 right-0 top-0 flex w-full border-t border-b border-black h-[38px] sm:h-[58px] content-center  bg-white">
+			class="fixed z-20 right-0 top-0 flex w-full border-t border-b border-black h-[38px] sm:h-[58px] content-center  bg-white">
 			<div class="grow pl-2 sm:pl-3 flex items-center">
 				<a href="/"><img src="./images/logo-site.svg" class="h-[26px] sm:h-[33px] w-auto object-contain" width="210"
 						height="33" alt="YAPC::Hiroshima 2024" /></a>
 			</div>
-			<!--
 			<button @click="open = !open"
-				class="text-xs sm:text-xl flex items-center justify-center border-l border-black  w-[110px] sm:w-[150px]">
+				class="text-xs sm:text-xl flex items-center justify-center border-l border-black  w-[110px] sm:w-[150px] hover:bg-red hover:text-white transition-all">
 				<svg class="mr-1 h-[9px] sm:h-[14px]" fill="none" height="14" viewBox="0 0 10 14" width="10"
 					xmlns="http://www.w3.org/2000/svg">
-					<g fill="#000">
+					<g fill="currentColor">
 						<path d="m0 0h10v2h-10z" />
 						<path d="m0 6h10v2h-10z" />
 						<path d="m0 12h10v2h-10z" />
@@ -55,9 +54,19 @@
 			</button>
 		</nav>
 		<div x-transition.opacity x-show="open"
-			class="pt-[38px] sm:pt-[58px] fixed bg-white top-0 left-0 w-full h-full bg-pattern">
-			TBD
+			class="pt-[38px] sm:pt-[58px] fixed bg-white top-0 left-0 w-full h-full overflow-y-auto bg-pattern z-10 global-menu">
+			<ul>
+				<li><a target="_blank" rel="noopener noreferrer" href="https://passmarket.yahoo.co.jp/event/show/detail/02y81p2r6ab31.html" target="_blank"
+						rel="noopener noreferrer"><span>🎫チケット</span>TICKETS</a>
+				</li>
+				<li><a @click="open=false" href="/2024hiroshima/#schedule"><span>📅日程</span>SCHEDULE</a></li>
+				<li><a @click="open=false" href="/2024hiroshima/#guest-speaker"><span>🎤ゲストスピーカー</span>GUEST SPEAKER</a></li>
+				<li><a target="_blank" rel="noopener noreferrer" href="https://blog.yapcjapan.org/"><span>📝️ブログ</span>BlOG</a>
+				</li>
+				<li><a target="_blank" rel="noopener noreferrer"
+						href="https://japan.perlassociation.org/entry/yapc/code_of_conduct"><span>⚖️行動規範</span>Code of
+						Conduct</a></li>
+			</ul>
 		</div>
-		-->
 	</div>
 	<div id="content">
