@@ -13,14 +13,19 @@ module.exports = {
     },
     information: [
       {
-        date: "2023/09/11",
-        title: "スポンサーメニューを公開しました",
-        url: "https://fortee.jp/yapc-hiroshima-2024/go/sponsor-menu",
+        date: "2023/10/11",
+        title: "チケット販売を開始しました",
+        url: "https://passmarket.yahoo.co.jp/event/show/detail/02y81p2r6ab31.html",
       },
       {
         date: "2023/09/12",
         title: "スピーカーの公募を開始しました",
         url: "https://fortee.jp/yapc-hiroshima-2024/speaker/callfor/talk/callfor",
+      },
+      {
+        date: "2023/09/11",
+        title: "スポンサーメニューを公開しました",
+        url: "https://fortee.jp/yapc-hiroshima-2024/go/sponsor-menu",
       },
     ],
     guestSpeakers: [
@@ -39,6 +44,14 @@ module.exports = {
         title: "合同会社 Have Fun Tech 代表社員 / 株式会社 Linkage CTO",
         description:
           "数々の業務システム、Webサービスなどの開発・運用を担当し、2017年に株式会社はてなでサービス監視サービス「Mackerel」のCRE（Customer Reliability Engineer）、株式会社オミカレの副社長/CTOなどを経て、合同会社 Have Fun Techを起業。 その後、LinkageのCTOとしてJOINし、HaveFunTechの経営と二足の草鞋を履きこなしている。 コミュニティでは、Microsoft MVPをはじめ、日本PostgreSQLユーザ会の理事として勉強会の開催を担当し、各地で登壇している。 builderscon 2017、YAPC::Kansaiなどのイベントでベストスピーカーを受賞し、分かりやすく実践的な内容のトークに定評がある。 他に、岡山Python勉強会を主催し、オープンラボ備後にも所属。著書に『Software Design』誌で、データベースに関する連載「RDBアンチパターン」をまとめた『失敗から学ぶRDBの正しい歩き方』を執筆",
+      },
+      {
+        photo: "images/speakers/matsumoto.png",
+        name: "松本 勇気",
+        name_en: "Yuki Matsumoto",
+        title: "株式会社LayerX 代表取締役CTO",
+        description:
+            "東京大学在学時に株式会社Gunosy入社、CTOとして技術組織全体を統括。またLayerXの前身となるブロックチェーン研究開発チームを立ち上げる。2018年より合同会社DMM.com CTOに就任し技術組織改革を推進。大規模Webサービスの構築をはじめ、機械学習、Blockchain、マネジメント、人事、経営管理、事業改善、行政支援等広く歴任。2019年日本CTO協会理事に就任。2021年3月よりLayerX 代表取締役CTO就任。開発や組織づくり、及びFintechとAI・LLMの2事業の推進を担当。"
       },
     ],
     jobboards,
