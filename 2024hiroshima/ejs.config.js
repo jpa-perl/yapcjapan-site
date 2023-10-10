@@ -13,7 +13,7 @@ module.exports = {
     },
     information: [
       {
-        date: "2023/10/11",
+        date: "2023/10/10",
         title: "チケット販売を開始しました",
         url: "https://passmarket.yahoo.co.jp/event/show/detail/02y81p2r6ab31.html",
       },
