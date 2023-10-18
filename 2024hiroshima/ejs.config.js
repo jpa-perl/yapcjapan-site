@@ -146,6 +146,21 @@ module.exports = {
             name: 'Y.pm',
             url: 'https://www.ypm.llc/',
             image: 'ypm.png'
+          },
+          {
+            name: '面白法人カヤック',
+            url: 'https://hubspot.kayac.com/engineer-interviews',
+            image: 'kayac.png'
+          },
+          {
+            name: 'codoc株式会社',
+            url: 'https://codoc.jp',
+            image: 'codoc.png'
+          },
+          {
+            name: '株式会社ネコトーストラボ',
+            url: 'https://nekotoast-lab.com',
+            image: 'neko-toast-lab.png'
           }
         ],
       },
@@ -170,6 +185,37 @@ module.exports = {
             url: 'https://notahotel.com/',
             image: 'not-a-hotel.png'
           },
+          {
+            name: '合同会社HaveFunTech',
+            url: 'https://have-fun.tech/',
+            image: 'have-fun-tech.png'
+          }
+        ],
+      },
+      {
+        key: 'Hiroshima',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: 'ご当地広島スポンサー',
+        companies: [
+          {
+            name: '株式会社シュアルタ',
+            url: 'https://www.shuaruta.com/',
+            image: 'shuaruta.png',
+          },
+        ],
+      },
+      {
+        key: 'Chair',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: '椅子スポンサー',
+        companies: [
+          {
+            name: '面白法人カヤック',
+            url: 'https://hubspot.kayac.com/engineer-interviews',
+            image: 'kayac.png'
+          }
         ],
       },
       {
