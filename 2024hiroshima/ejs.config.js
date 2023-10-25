@@ -13,14 +13,14 @@ module.exports = {
     },
     information: [
       {
+        date: "2023/10/24",
+        title: "タイムテーブルを公開しました",
+        url: "https://fortee.jp/yapc-hiroshima-2024/timetable",
+      },
+      {
         date: "2023/10/10",
         title: "チケット販売を開始しました",
         url: "https://passmarket.yahoo.co.jp/event/show/detail/02y81p2r6ab31.html",
-      },
-      {
-        date: "2023/09/12",
-        title: "スピーカーの公募を開始しました",
-        url: "https://fortee.jp/yapc-hiroshima-2024/speaker/callfor/talk/callfor",
       },
       {
         date: "2023/09/11",
