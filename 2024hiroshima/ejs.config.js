@@ -279,6 +279,11 @@ module.exports = {
             url: "https://www.sakura.ad.jp/",
             image: 'sakura.png'
           },
+          {
+            name: "株式会社タイミー",
+            url: "https://timee.notion.site/Timee-Product-Org-Entrance-Book-b7380eb4f6954e29b2664fe6f5e775f9",
+            image: 'timee.png'
+          },
         ],
       },
       {
@@ -291,6 +296,32 @@ module.exports = {
             name: '株式会社Helpfeel',
             url: 'https://corp.helpfeel.com/ja/home',
             image: 'helpfeel.png'
+          },
+        ],
+      },
+      {
+        key: 'best-lt',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: 'ベストLT',
+        companies: [
+          {
+            name: '株式会社フリークアウト',
+            url: 'https://www.fout.co.jp/freakout/',
+            image: 'freakout.png',
+          },
+        ],
+      },
+      {
+        key: 'StudentSupportSymposium',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: '学生支援 座談会＋記事広告',
+        companies: [
+          {
+            name: "株式会社LayerX",
+            url: "https://layerx.co.jp/",
+            image: 'layerx.png'
           },
         ],
       },
@@ -314,6 +345,11 @@ module.exports = {
             name: "合同会社もりたつ技商",
             url: "https://corp.moritaz.com/",
             image: 'moritaz.png'
+          },
+          {
+            name: "八雲アナグラ",
+            url: "https://anatofuz.net",
+            image: 'anatofuz.png'
           },
         ],
       },
@@ -353,6 +389,19 @@ module.exports = {
             name: '株式会社ディー・エヌ・エー',
             url: 'https://engineering.dena.com/',
             image: 'dena.png',
+          },
+        ],
+      },
+      {
+        key: 'after-event',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: 'アフターイベント',
+        companies: [
+          {
+            name: 'kobaken',
+            url: 'https://twitter.com/kfly8',
+            image: 'kobaken.png',
           },
         ],
       },
