@@ -158,6 +158,11 @@ module.exports = {
             image: 'kayac.png'
           },
           {
+            name: '株式会社タイミー',
+            url: 'https://timee.notion.site/Timee-Product-Org-Entrance-Book-b7380eb4f6954e29b2664fe6f5e775f9',
+            image: 'timee.png'
+          },
+          {
             name: 'codoc株式会社',
             url: 'https://codoc.jp',
             image: 'codoc.png'
@@ -166,11 +171,6 @@ module.exports = {
             name: '株式会社ネコトーストラボ',
             url: 'https://nekotoast-lab.com',
             image: 'neko-toast-lab.png'
-          },
-          {
-            name: '株式会社タイミー',
-            url: 'https://timee.notion.site/Timee-Product-Org-Entrance-Book-b7380eb4f6954e29b2664fe6f5e775f9',
-            image: 'timee.png'
           },
           {
             name: '株式会社フリークアウト',
@@ -201,11 +201,6 @@ module.exports = {
             image: 'not-a-hotel.png'
           },
           {
-            name: '合同会社HaveFunTech',
-            url: 'https://have-fun.tech/',
-            image: 'have-fun-tech.png'
-          },
-          {
             name: 'kobaken',
             url: 'https://twitter.com/kfly8',
             image: 'kobaken.png'
@@ -214,6 +209,11 @@ module.exports = {
             name: '八雲アナグラ',
             url: 'https://anatofuz.net',
             image: 'anatofuz.png'
+          },
+          {
+            name: '合同会社HaveFunTech',
+            url: 'https://have-fun.tech/',
+            image: 'have-fun-tech.png'
           },
           {
             name: '株式会社COLSIS',
@@ -260,14 +260,14 @@ module.exports = {
         label: 'ブーススポンサー',
         companies: [
           {
-            name: '株式会社ハイヤールー',
-            url: 'https://hireroo.io/',
-            image: 'hireroo.png'
-          },
-          {
             name: '株式会社Helpfeel',
             url: 'https://corp.helpfeel.com/ja/home',
             image: 'helpfeel.png'
+          },
+          {
+            name: '株式会社ハイヤールー',
+            url: 'https://hireroo.io/',
+            image: 'hireroo.png'
           },
           {
             name: '株式会社SmartHR',
