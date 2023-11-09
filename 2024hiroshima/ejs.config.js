@@ -13,6 +13,11 @@ module.exports = {
     },
     information: [
       {
+        date: "2023/11/10",
+        title: "アフターイベントのまとめ情報を公開しました",
+        url: "https://blog.yapcjapan.org/entry/2023/11/10/120000",
+      },
+      {
         date: "2023/10/24",
         title: "タイムテーブルを公開しました",
         url: "https://fortee.jp/yapc-hiroshima-2024/timetable",
