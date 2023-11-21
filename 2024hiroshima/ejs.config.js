@@ -95,7 +95,12 @@ module.exports = {
             name: '株式会社ドリーム・アーツ',
             url: 'https://www.dreamarts.co.jp/',
             image: 'dreamarts.png'
-          }
+          },
+          {
+            name: 'RIZAPグループ株式会社',
+            url: 'https://www.rizapgroup.com/',
+            image: 'rizap.png'
+          },
         ],
       },
       {
@@ -113,6 +118,11 @@ module.exports = {
             name: '株式会社LayerX',
             url: 'https://layerx.co.jp/',
             image: 'layerx.png'
+          },
+          {
+            name: 'BASE株式会社',
+            url: 'https://binc.jp/',
+            image: 'base.png'
           },
         ],
       },
@@ -181,7 +191,12 @@ module.exports = {
             name: '株式会社フリークアウト',
             url: 'https://www.fout.co.jp/freakout/',
             image: 'freakout.png'
-          }
+          },
+          {
+            name: 'Fastly',
+            url: 'https://www.fastly.com/jp/',
+            image: 'fastly.png'
+          },
         ],
       },
       {
@@ -224,7 +239,18 @@ module.exports = {
             name: '株式会社COLSIS',
             url: 'https://colsis.jp',
             image: 'colsis.png'
-          }
+          },
+          {
+            name: 'ワインと鍋',
+            url: 'https://winenabe.jp/',
+            image: 'wine-to-nabe.png'
+          },
+          {
+            name: 'グリー株式会社',
+            url: 'https://corp.gree.net/jp/ja/',
+            image: 'gree.png'
+          },
+          
         ],
       },
       {
@@ -242,7 +268,35 @@ module.exports = {
             name: '株式会社stak',
             url: 'https://stak.tech/',
             image: 'stak.png'
-          }
+          },
+          {
+            name: 'ビットリバー株式会社',
+            url: 'https://bitriver.jp/',
+            image: 'bit-river.png'
+          },
+          {
+            name: '株式会社ツクリエ',
+            url: 'https://www.tsuqrea.co.jp/',
+            image: 'tsuqrea.png'
+          },
+          {
+            name: '広島ミックスあゆむバー',
+            url: 'https://hiroshima-mix-ayumubar.business.site/',
+            image: 'ayumu-bar.png'
+          },
+        ],
+      },
+      {
+        key: 'NamingRights',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: 'ネーミングライツ',
+        companies: [
+          {
+            name: 'ビットリバー株式会社',
+            url: 'https://bitriver.jp/',
+            image: 'bit-river.png'
+          },
         ],
       },
       {
@@ -288,6 +342,29 @@ module.exports = {
             name: "株式会社タイミー",
             url: "https://timee.notion.site/Timee-Product-Org-Entrance-Book-b7380eb4f6954e29b2664fe6f5e775f9",
             image: 'timee.png'
+          },
+          {
+            name: 'Fastly',
+            url: 'https://www.fastly.com/jp/',
+            image: 'fastly.png'
+          },
+          {
+            name: 'RIZAPグループ株式会社',
+            url: 'https://www.rizapgroup.com/',
+            image: 'rizap.png'
+          },
+        ],
+      },
+      {
+        key: 'sponsor-lt',
+        class: 'basis-full',
+        icon_class: 'max-w-[100px]',
+        label: 'スポンサーLT',
+        companies: [
+          {
+            name: 'BASE株式会社',
+            url: 'https://binc.jp/',
+            image: 'base.png'
           },
         ],
       },
@@ -407,6 +484,11 @@ module.exports = {
             name: 'kobaken',
             url: 'https://twitter.com/kfly8',
             image: 'kobaken.png',
+          },
+          {
+            name: 'RIZAPグループ株式会社',
+            url: 'https://www.rizapgroup.com/',
+            image: 'rizap.png'
           },
         ],
       },
