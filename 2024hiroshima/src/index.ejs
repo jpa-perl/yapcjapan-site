@@ -51,21 +51,25 @@
 				<tr>
 					<td>前夜祭</td>
 					<td>2024年2月9日(金) 18:00 開場</td>
-					<td><a href="https://maps.app.goo.gl/YHMZL99QQgFPxeKH8" class="underline" target="_blank" rel="noopener noreferrer">広島国際会議場</a></td>
+					<td><a href="https://maps.app.goo.gl/YHMZL99QQgFPxeKH8" class="underline" target="_blank"
+							rel="noopener noreferrer">広島国際会議場</a></td>
 				</tr>
 				<tr>
 					<td>本編</td>
 					<td>2024年2月10日(土) 9:45 開始</td>
-					<td><a href="https://maps.app.goo.gl/YHMZL99QQgFPxeKH8" class="underline" target="_blank" rel="noopener noreferrer">広島国際会議場</a></td>
+					<td><a href="https://maps.app.goo.gl/YHMZL99QQgFPxeKH8" class="underline" target="_blank"
+							rel="noopener noreferrer">広島国際会議場</a></td>
 				</tr>
 				<tr>
 					<td>懇親会</td>
 					<td>2024年2月10日(土) 19:30 開始</td>
-					<td><a href="https://maps.app.goo.gl/ccufgMbm957Q2tHdA" class="underline" target="_blank" rel="noopener noreferrer">広島市文化交流会館</a></td>
+					<td><a href="https://maps.app.goo.gl/ccufgMbm957Q2tHdA" class="underline" target="_blank"
+							rel="noopener noreferrer">広島市文化交流会館</a></td>
 				</tr>
 				<tr>
 					<td>アフターイベント</td>
-					<td colspan="2"><a href="https://blog.yapcjapan.org/entry/2023/11/10/120000" class="underline" target="_blank" rel="noopener noreferrer">まとめ一覧</a></td>
+					<td colspan="2"><a href="https://blog.yapcjapan.org/entry/2023/11/10/120000" class="underline" target="_blank"
+							rel="noopener noreferrer">まとめ一覧</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -76,10 +80,10 @@
 		<h2 class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center">
 			GUEST SPEAKER
 		</h2>
-		<div class="mx-auto px-5 grid md:grid-flow-col auto-cols-fr gap-12">
+		<div class="mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-12">
 			<% for (const speaker of locals.guestSpeakers) { %>
 				<div class="max-w-sm">
-					<img class="rounded-xl" src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
+					<img class="rounded-xl w-full" src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
 					<div class="grid m-auto my-5">
 						<div class="font-bold text-2xl text-center">
 							<%= speaker.name %>
@@ -97,6 +101,21 @@
 				</div>
 				<% } %>
 		</div>
+	</section>
+
+	<section class="section flex flex-col items-center gap-[50px]" id="guest-speaker">
+		<h2 class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center">
+			JOB BOARD
+		</h2>
+
+		<div class="flex flex-wrap justify-center">
+			<%_ for (const board of locals.jobboards) { _%>
+				<a href="<%= board.url %>" class="block p-2  md:basis-1/2 2xl:basis-1/3 ">
+					<img src="images/jobboard/<%= board.src %>" alt="<%= board.alt %>" />
+				</a>
+				<%_ } -%>
+		</div>
+
 	</section>
 
 	<section class="section flex flex-col">
