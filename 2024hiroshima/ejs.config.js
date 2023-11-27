@@ -222,7 +222,7 @@ module.exports = {
           },
           {
             name: 'kobaken',
-            url: 'https://twitter.com/kfly8',
+            url: 'https://kobaken.co',
             image: 'kobaken.png'
           },
           {
@@ -250,7 +250,7 @@ module.exports = {
             url: 'https://corp.gree.net/jp/ja/',
             image: 'gree.png'
           },
-          
+
         ],
       },
       {
