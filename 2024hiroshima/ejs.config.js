@@ -482,7 +482,7 @@ module.exports = {
         companies: [
           {
             name: 'kobaken',
-            url: 'https://twitter.com/kfly8',
+            url: 'https://kobaken.co',
             image: 'kobaken.png',
           },
           {
