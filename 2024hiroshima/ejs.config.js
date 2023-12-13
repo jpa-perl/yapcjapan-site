@@ -342,6 +342,11 @@ module.exports = {
         label: 'ネーミングライツ',
         companies: [
           {
+            name: 'Hamee株式会社',
+            url: 'https://hamee.co.jp/recruit/love-odawara',
+            image: 'hamee.png'
+          },
+          {
             name: 'ビットリバー株式会社',
             url: 'https://bitriver.jp/',
             image: 'bit-river.png'
@@ -358,7 +363,12 @@ module.exports = {
             name: '面白法人カヤック',
             url: 'https://hubspot.kayac.com/engineer-interviews',
             image: 'kayac.png'
-          }
+          },
+          {
+            name: '株式会社スマートバンク',
+            url: 'https://bit.ly/smartbank_inc',
+            image: 'smartbank.png'
+          },
         ],
       },
       {
@@ -371,6 +381,11 @@ module.exports = {
             name: '株式会社Helpfeel',
             url: 'https://corp.helpfeel.com/ja/home',
             image: 'helpfeel.png'
+          },
+          {
+            name: 'RIZAPグループ株式会社',
+            url: 'https://www.rizapgroup.com/',
+            image: 'rizap.png'
           },
           {
             name: '株式会社ハイヤールー',
@@ -398,9 +413,9 @@ module.exports = {
             image: 'fastly.png'
           },
           {
-            name: 'RIZAPグループ株式会社',
-            url: 'https://www.rizapgroup.com/',
-            image: 'rizap.png'
+            name: 'Findy',
+            url: 'https://findy.co.jp/',
+            image: 'findy.png'
           },
         ],
       },
@@ -428,6 +443,11 @@ module.exports = {
             url: 'https://corp.helpfeel.com/ja/home',
             image: 'helpfeel.png'
           },
+          {
+            name: '株式会社hacomono',
+            url: 'https://coal-son-1e1.notion.site/Entrance-Book-hacomono-4f5f5cec269e4e60ae8a918bed653efd',
+            image: 'hacomono.png'
+          },
         ],
       },
       {
@@ -453,6 +473,11 @@ module.exports = {
             name: "株式会社LayerX",
             url: "https://layerx.co.jp/",
             image: 'layerx.png'
+          },
+          {
+            name: 'STORES 株式会社',
+            url: 'https://jobs.st.inc/engineer',
+            image: 'stores.png'
           },
         ],
       },
