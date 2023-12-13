@@ -417,6 +417,11 @@ module.exports = {
             url: 'https://findy.co.jp/',
             image: 'findy.png'
           },
+          {
+            name: '株式会社hacomono',
+            url: 'https://coal-son-1e1.notion.site/Entrance-Book-hacomono-4f5f5cec269e4e60ae8a918bed653efd',
+            image: 'hacomono.png'
+          },
         ],
       },
       {
