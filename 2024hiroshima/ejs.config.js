@@ -101,6 +101,11 @@ module.exports = {
             url: 'https://www.rizapgroup.com/',
             image: 'rizap.png'
           },
+          {
+            name: '転職ドラフト',
+            url: 'https://job-draft.jp/',
+            image: 'job-draft.png'
+          },
         ],
       },
       {
@@ -123,6 +128,11 @@ module.exports = {
             name: 'BASE株式会社',
             url: 'https://binc.jp/',
             image: 'base.png'
+          },
+          {
+            name: 'Cloudflare, Inc.',
+            url: 'https://developers.cloudflare.com/',
+            image: 'cloudflare.png'
           },
         ],
       },
@@ -197,6 +207,26 @@ module.exports = {
             url: 'https://www.fastly.com/jp/',
             image: 'fastly.png'
           },
+          {
+            name: 'サイボウズ株式会社',
+            url: 'https://tech.cybozu.io/',
+            image: 'cybozu.png'
+          },
+          {
+            name: 'Cloudbase株式会社',
+            url: 'https://cloudbase.co.jp/',
+            image: 'cloudbase.png'
+          },
+          {
+            name: 'Findy',
+            url: 'https://findy.co.jp/',
+            image: 'findy.png'
+          },
+          {
+            name: '株式会社hacomono',
+            url: 'https://coal-son-1e1.notion.site/Entrance-Book-hacomono-4f5f5cec269e4e60ae8a918bed653efd',
+            image: 'hacomono.png'
+          },
         ],
       },
       {
@@ -250,7 +280,21 @@ module.exports = {
             url: 'https://corp.gree.net/jp/ja/',
             image: 'gree.png'
           },
-
+          {
+            name: '株式会社スマートバンク',
+            url: 'https://bit.ly/smartbank_inc',
+            image: 'smartbank.png'
+          },
+          {
+            name: 'STORES 株式会社',
+            url: 'https://jobs.st.inc/engineer',
+            image: 'stores.png'
+          },
+          {
+            name: 'Hamee株式会社',
+            url: 'https://hamee.co.jp/recruit/love-odawara',
+            image: 'hamee.png'
+          },
         ],
       },
       {
@@ -278,6 +322,11 @@ module.exports = {
             name: '株式会社ツクリエ',
             url: 'https://www.tsuqrea.co.jp/',
             image: 'tsuqrea.png'
+          },
+          {
+            name: 'SPARKN',
+            url: 'https://app.sparkn.io/',
+            image: 'sparkn.png'
           },
           {
             name: '広島ミックスあゆむバー',
