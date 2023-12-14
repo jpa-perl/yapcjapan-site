@@ -3,7 +3,7 @@
 ## セットアップ
 
 ```
-npm install
+yarn install
 ```
 
 で、必要な node modules をインストールします。
@@ -13,7 +13,7 @@ npm install
 ## HTML コーディング
 
 ```
-npm run start
+yarn run start
 ```
 
 で開発サーバが立ち上がります
@@ -21,7 +21,7 @@ npm run start
 ## ビルド
 
 ```
-npm run build
+yarn run build
 ```
 
 で `../docs/` に必要なファイルがビルドされます
