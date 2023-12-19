@@ -60,6 +60,11 @@ module.exports = [
     url: "https://www.fout.co.jp/recruit/freakout/career_tech/",
   },
   {
+    src: "not-a-hotel.png",
+    alt: "NOT A HOTEL株式会社",
+    url: "https://notahotel.com/careers",
+  },
+  {
     src: "bit-river.png",
     alt: "ビットリバー株式会社",
     url: "https://bitriver.jp/recruit",
