@@ -10,6 +10,16 @@ module.exports = [
     url: "https://scrapbox.io/helpfeel-dev-careers/%E9%96%8B%E7%99%BA%E9%83%A8_%E6%8E%A1%E7%94%A8%E6%83%85%E5%A0%B1",
   },
   {
+    src: "dreamarts.jpeg",
+    alt: "株式会社ドリーム・アーツ",
+    url: "https://recruit.dreamarts.co.jp/entry/engineer/",
+  },
+  {
+    src: "rizap.png",
+    alt: "RIZAPグループ株式会社",
+    url: "https://hrmos.co/pages/rizapgroup/jobs?category=1799629274565783552",
+  },
+  {
     src: "six-apart.png",
     alt: "シックス・アパート株式会社",
     url: "https://www.sixapart.jp/jobs/",
@@ -33,6 +43,11 @@ module.exports = [
     src: "smarthr.png",
     alt: "株式会社SmartHR",
     url: "https://hello-world.smarthr.co.jp/",
+  },
+  {
+    src: "kayac.png",
+    alt: "面白法人カヤック",
+    url: "https://www.kayac.com/news/2022/07/interview_sakata",
   },
   {
     src: "neko-toast-lab.png",
