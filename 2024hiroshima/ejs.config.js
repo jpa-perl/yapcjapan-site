@@ -288,6 +288,11 @@ module.exports = {
             image: 'smartbank.png'
           },
           {
+            name: '株式会社ギフティ',
+            url: 'https://giftee.co.jp/',
+            image: 'giftee.png'
+          },
+          {
             name: 'STORES 株式会社',
             url: 'https://jobs.st.inc/engineer',
             image: 'stores.png'
@@ -296,6 +301,16 @@ module.exports = {
             name: 'Hamee株式会社',
             url: 'https://hamee.co.jp/recruit/love-odawara',
             image: 'hamee.png'
+          },
+          {
+            name: 'note',
+            url: 'https://note.com/',
+            image: 'note.png'
+          },
+          {
+            name: '株式会社スタディスト',
+            url: 'https://studist.jp/',
+            image: 'studist.png'
           },
         ],
       },
