@@ -215,6 +215,11 @@ module.exports = {
             image: 'cybozu.png'
           },
           {
+            name: '株式会社DeNA SOMPO Mobility',
+            url: 'https://ds-mobility.jp/',
+            image: 'dena-sompo-mobility.png'
+          },
+          {
             name: 'Cloudbase株式会社',
             url: 'https://cloudbase.co.jp/',
             image: 'cloudbase.png'
@@ -430,6 +435,11 @@ module.exports = {
             image: "fastly.png",
           },
           {
+            name: '株式会社DeNA SOMPO Mobility',
+            url: 'https://ds-mobility.jp/',
+            image: 'dena-sompo-mobility.png'
+          },
+          {
             name: 'Findy',
             url: 'https://findy.co.jp/',
             image: 'findy.png'
@@ -451,6 +461,11 @@ module.exports = {
             name: "BASE株式会社",
             url: "https://binc.jp/",
             image: "base.png",
+          },
+          {
+            name: '株式会社DeNA SOMPO Mobility',
+            url: 'https://ds-mobility.jp/',
+            image: 'dena-sompo-mobility.png'
           },
         ],
       },
