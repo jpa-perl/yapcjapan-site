@@ -73,6 +73,44 @@ module.exports = {
         description: "青山学院大学大学院修了後、ニフティ株式会社、株式会社はてな取締役CTOなどを経て2016年4月に株式会社 一休に入社、執行役員CTOに就任（現職）。\n",
       },
     ],
+    specialSessionSpeakers: [
+      {
+        photo: "images/speakers/tohoho.jpg",
+        name: "櫛井優介",
+        name_en: "941",
+        title: "aaa",
+        description:
+          "LINEヤフー株式会社のDeveloper Relations所属。 ISUCONを始めとした技術系イベントを担当。Podcast番組ほっとテックのMCで、スタートレックとHHKBとビリヤードとBTSが好き。"
+      },
+      {
+        photo: "images/speakers/naoya.jpeg",
+        name: "伊藤 直也",
+        name_en: "Naoya Ito",
+        title: "株式会社一休 執行役員CTO",
+        description: "青山学院大学大学院修了後、ニフティ株式会社、株式会社はてな取締役CTOなどを経て2016年4月に株式会社 一休に入社、執行役員CTOに就任（現職）。\n",
+      },
+      {
+        photo: "images/speakers/twada.png",
+        name: "和田 裕介",
+        name_en: "Yusuke Wada",
+        title: "aaa",
+        description: "1981年生まれ。最近は就職してCloudflareでDeveloper Advocateをやっていて、毎日Webのフレームワーク書いてます。WEB+DB PRESSで最初に執筆したのは2009年で「Webサービス[即日]開発」という特集です。"
+      },
+      {
+        photo: "images/speakers/twada.png",
+        name: "和田卓人",
+        name_en: "Takuto Wada",
+        title: "プログラマ、テスト駆動開発者",
+        description: "学生時代にソフトウェア工学を学び、オブジェクト指向分析/設計に傾倒。執筆活動や講演、ハンズオンイベントなどを通じてテスト駆動開発を広めようと努力している。 『プログラマが知るべき97のこと』（オライリージャパン、2010）監修。『SQLアンチパターン』（オライリージャパン、2013）監訳。『テスト駆動開発』（オーム社、2017）翻訳。『事業をエンジニアリングする技術者たち』（ラムダノート、2022）編者。テストライブラリ power-assert-js 作者。"
+      },
+      {
+        photo: "images/speakers/naoya.jpeg",
+        name: "馮 富久",
+        name_en: "Tomihisa Fuon",
+        title: "ccc",
+        description: "1975年生まれ。横浜市出身。1999年4月株式会社技術評論社に入社。入社後から『Software Design』編集部に配属、同誌編集長（2004年1月～2011年12月）や『Web Site Expert』編集長を歴任。その後、2007年、gihyo.jpの立ち上げなど、技術評論社のWeb・オンライン企画、イベント企画などを担当。現在は、2022年4月に設立したデジタル事業部にて、技術評論社の電子出版やEC、企業マーケティング、広告を中心に、デジタル・オンライン事業を取りまとめる。2021年5月より、電子書籍専門企業 株式会社GREEPの社外取締役に就任。社外活動として電子書籍を考える出版社の会の代表幹事やWebSig 24/7のモデレーター，TechLIONプロデューサーなども務める。過去にIPAオープンソースデータベースワーキンググループ委員やアックゼロヨン・アワード他各賞審査員などの経験を持つ",
+      },
+    ],
     jobboards,
     sponsors: [
       {

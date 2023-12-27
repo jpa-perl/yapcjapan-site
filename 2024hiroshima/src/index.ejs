@@ -99,6 +99,40 @@
 		</div>
 	</section>
 
+	<section class="section flex flex-col items-center gap-[50px]" id="guest-speaker">
+		<h2 class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center">
+			特別企画
+		</h2>
+		<h3 class="en-serif-bold text-xl sm:text-3xl md:text-4xl text-center">
+			平成のエンジニアから令和のエンジニアへの遺言<br />〜技術情報を伝達する手段の変遷〜
+		</h3>
+		<p class="font-extrabold text-sm sm:text-lg max-w-4xl sm:mx-12">
+			平成から令和、時代が変わりエンジニアを取り巻く環境も変わってきました。そんな中、技術やノウハウを伝える方法も変化していると思います。今と昔でどう変わってきたのか、これからはどうなっていくのか、今を生きるエンジニアに伝いたいことは何か、などについて豪華ゲストをお招きしてお話してもらう特別企画を用意しました。詳しくはこちら。
+			豪華ゲストは以下の４人です！さらに、全員＋技術評論社の馮さんもお招きして後半はパネルディスカッションも予定しています！お楽しみに！
+		</p>
+		<h3 class="en-serif-bold text-xl sm:text-3xl md:text-4xl text-center">
+			登壇者(登壇順、敬称略)
+		</h3>
+		<div class="mx-auto px-5 grid md:grid-flow-col auto-cols-fr gap-12">
+			<% for (const speaker of locals.specialSessionSpeakers) { %>
+				<div class="max-w-sm">
+					<img class="rounded-xl" src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
+					<div class="grid m-auto my-5">
+						<div class="font-bold text-2xl text-center">
+							<%= speaker.name %>
+						</div>
+						<div class="text-sm text-center text-gray-500">
+							<%= speaker.name_en %>
+						</div>
+					</div>
+					<p class="text-sm sm:text-md text-justify">
+						<%= speaker.description %>
+					</p>
+				</div>
+				<% } %>
+		</div>
+	</section>
+
 	<section class="section flex flex-col">
 		<h2 class="en-serif-bold text-5xl sm:text-7xl md:text-8xl text-center">SPONSORS</h2>
 		<% for (const sponsor of locals.sponsors) { %>
