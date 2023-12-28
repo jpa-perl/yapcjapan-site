@@ -60,7 +60,7 @@ module.exports = {
       },
       {
         photo: "images/speakers/twada.png",
-        name: "和田卓人",
+        name: "和田 卓人",
         name_en: "Takuto Wada",
         title: "プログラマ、テスト駆動開発者",
         description:
@@ -77,8 +77,8 @@ module.exports = {
     ],
     specialSessionSpeakers: [
       {
-        photo: "images/speakers/tohoho.jpg",
-        name: "櫛井優介",
+        photo: "images/speakers/941.png",
+        name: "櫛井 優介",
         name_en: "941",
         title: "aaa",
         description:
@@ -92,7 +92,7 @@ module.exports = {
         description: "青山学院大学大学院修了後、ニフティ株式会社、株式会社はてな取締役CTOなどを経て2016年4月に株式会社 一休に入社、執行役員CTOに就任（現職）。\n",
       },
       {
-        photo: "images/speakers/twada.png",
+        photo: "images/speakers/yusukebe.png",
         name: "和田 裕介",
         name_en: "Yusuke Wada",
         title: "aaa",
@@ -100,13 +100,13 @@ module.exports = {
       },
       {
         photo: "images/speakers/twada.png",
-        name: "和田卓人",
+        name: "和田 卓人",
         name_en: "Takuto Wada",
         title: "プログラマ、テスト駆動開発者",
         description: "学生時代にソフトウェア工学を学び、オブジェクト指向分析/設計に傾倒。執筆活動や講演、ハンズオンイベントなどを通じてテスト駆動開発を広めようと努力している。 『プログラマが知るべき97のこと』（オライリージャパン、2010）監修。『SQLアンチパターン』（オライリージャパン、2013）監訳。『テスト駆動開発』（オーム社、2017）翻訳。『事業をエンジニアリングする技術者たち』（ラムダノート、2022）編者。テストライブラリ power-assert-js 作者。"
       },
       {
-        photo: "images/speakers/naoya.jpeg",
+        photo: "images/speakers/fuon.jpeg",
         name: "馮 富久",
         name_en: "Tomihisa Fuon",
         title: "ccc",
