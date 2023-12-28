@@ -111,16 +111,15 @@
 			平成のエンジニアから令和のエンジニアへの遺言<br />〜技術情報を伝達する手段の変遷〜
 		</h3>
 		<p class="font-extrabold text-sm sm:text-lg max-w-4xl sm:mx-12">
-			平成から令和、時代が変わりエンジニアを取り巻く環境も変わってきました。そんな中、技術やノウハウを伝える方法も変化していると思います。今と昔でどう変わってきたのか、これからはどうなっていくのか、今を生きるエンジニアに伝いたいことは何か、などについて豪華ゲストをお招きしてお話してもらう特別企画を用意しました。詳しくはこちら。
-			豪華ゲストは以下の４人です！さらに、全員＋技術評論社の馮さんもお招きして後半はパネルディスカッションも予定しています！お楽しみに！
+			平成から令和、時代が変わりエンジニアを取り巻く環境も変わってきました。そんな中、技術やノウハウを伝える方法も変化していると思います。今と昔でどう変わってきたのか、これからはどうなっていくのか、今を生きるエンジニアに伝いたいことは何か、などについて豪華ゲストをお招きしてお話してもらう特別企画を用意しました。詳しくはこちら。<a href="https://blog.yapcjapan.org/entry/2023/10/12/200000" class="underline">https://blog.yapcjapan.org/entry/2023/10/12/200000</a>
 		</p>
 		<h3 class="en-serif-bold text-xl sm:text-3xl md:text-4xl text-center">
-			登壇者(登壇順、敬称略)
+			登壇者(敬称略)
 		</h3>
 		<div class="mx-auto px-5 grid md:grid-flow-col auto-cols-fr gap-12">
 			<% for (const speaker of locals.specialSessionSpeakers) { %>
 				<div class="max-w-sm">
-					<img class="rounded-xl" src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
+					<img class="rounded-xl w-full" src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
 					<div class="grid m-auto my-5">
 						<div class="font-bold text-2xl text-center">
 							<%= speaker.name %>
