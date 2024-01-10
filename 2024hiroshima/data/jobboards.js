@@ -40,6 +40,11 @@ module.exports = [
     url: "https://hatena.co.jp/recruit/engineer",
   },
   {
+    src: "mobile-factory.png",
+    alt: "株式会社モバイルファクトリー",
+    url: "https://recruit.mobilefactory.jp/",
+  },
+  {
     src: "diverse.png",
     alt: "株式会社Diverse",
     url: "https://herp.careers/v1/diverse/pkobU6L3Cl72",
@@ -75,9 +80,19 @@ module.exports = [
     url: "https://www.fout.co.jp/recruit/freakout/career_tech/",
   },
   {
+    src: "cybozu.png",
+    alt: "サイボウズ株式会社",
+    url: "https://cybozu.co.jp/recruit/",
+  },
+  {
     src: "dena-sompo-mobility.png",
     alt: "株式会社DeNA SOMPO Mobility",
     url: "https://herp.careers/v1/dsrecruit/sp7wBIoCmiLk",
+  },
+  {
+    src: "findy.png",
+    alt: "Findy",
+    url: "https://careers.findy.co.jp/#block-b017af555fa34cc389f14ff79a3b255e",
   },
   {
     src: "not-a-hotel.png",
@@ -90,9 +105,34 @@ module.exports = [
     url: "https://twitter.com/winenabe",
   },
   {
+    src: "gree.png",
+    alt: "グリー株式会社",
+    url: "https://corp.gree.net/jp/ja/recruit/",
+  },
+  {
     src: "smartbank.png",
     alt: "株式会社スマートバンク",
     url: "https://smartbank.co.jp/recruit/engineer-summary",
+  },
+  {
+    src: "giftee.png",
+    alt: "株式会社ギフティ",
+    url: "https://giftee.co.jp/careers",
+  },
+  {
+    src: "stores.png",
+    alt: "STORES 株式会社",
+    url: "https://jobs.st.inc/engineer",
+  },
+  {
+    src: "hamee.png",
+    alt: "Hamee株式会社",
+    url: "https://hamee.co.jp/recruit/love-odawara",
+  },
+  {
+    src: "note.png",
+    alt: "note",
+    url: "https://note.jp/n/nc0fe1a230633",
   },
   {
     src: "studist.png",
@@ -100,9 +140,19 @@ module.exports = [
     url: "https://studist-engineering.gitbook.io/entrance-book/",
   },
   {
+    src: "shuaruta.png",
+    alt: "株式会社シュアルタ",
+    url: "https://www.shuaruta.com/",
+  },
+  {
     src: "bit-river.png",
     alt: "ビットリバー株式会社",
     url: "https://bitriver.jp/recruit",
+  },
+  {
+    src: "sparkn.png",
+    alt: "SPARKN",
+    url: "https://codefox.co.jp/recruit",
   },
   {
     src: "bullet-group.png",

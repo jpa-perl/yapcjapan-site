@@ -331,6 +331,11 @@ module.exports = {
             image: 'stores.png'
           },
           {
+            name: 'Wano株式会社',
+            url: 'https://group.wano.co.jp/',
+            image: 'wano.png'
+          },
+          {
             name: 'Hamee株式会社',
             url: 'https://hamee.co.jp/recruit/love-odawara',
             image: 'hamee.png'
