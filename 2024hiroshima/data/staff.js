@@ -7,22 +7,22 @@ const coreStaff = [
   {
     name: 'chanyou',
     avatar_url: './images/staff/uploaded/chanyou.png',
-    profile_url: '',
+    profile_url: 'https://twitter.com/chanyou0311',
   },
   {
     name: 'nishimotz',
-    avatar_url: './images/staff/uploaded/nishimotoz.png',
-    profile_url: '',
+    avatar_url: './images/staff/uploaded/nishimotz.png',
+    profile_url: 'https://twitter.com/24motz',
   },
   {
     name: 'mu2in',
     avatar_url: './images/staff/uploaded/mu2in.png',
-    profile_url: '',
+    profile_url: 'https://twitter.com/mu2in',
   },
   {
     name: 'tamaclaw',
     avatar_url: './images/staff/uploaded/tamaclaw.png',
-    profile_url: '',
+    profile_url: 'https://twitter.com/tamaclaw',
   },
   {
     name: 'kobakazu0429',
@@ -32,27 +32,7 @@ const coreStaff = [
   {
     name: 'yicru',
     avatar_url: './images/staff/uploaded/yicru.png',
-    profile_url: '',
-  },
-  {
-    name: 'karupanerura',
-    avatar_url: './images/staff/github/karupanerura.png',
-    profile_url: 'https://github.com/karupanerura'
-  },
-  {
-    name: 'papix',
-    avatar_url: './images/staff/twitter/__papix__.jpg',
-    profile_url: 'https://twitter.com/__papix__'
-  },
-  {
-    name: 'xtetsuji',
-    avatar_url: './images/staff/twitter/xtetsuji.png',
-    profile_url: 'https://twitter.com/xtetsuji'
-  },
-  {
-    name: 'liiu',
-    avatar_url: './images/staff/twitter/_ybrliiu.jpg',
-    profile_url: 'https://twitter.com/_ybrliiu'
+    profile_url: 'https://twitter.com/yicru',
   },
   {
     name: 'tkzwtks',
@@ -60,14 +40,19 @@ const coreStaff = [
     profile_url: 'https://twitter.com/tkzwtks'
   },
   {
+    name: 'papix',
+    avatar_url: './images/staff/twitter/__papix__.jpg',
+    profile_url: 'https://twitter.com/__papix__'
+  },
+  {
+    name: 'toya',
+    avatar_url: './images/staff/uploaded/toya.png',
+    profile_url: 'https://twitter.com/toya'
+  },
+  {
     name: 'Pasta-K',
     avatar_url: './images/staff/uploaded/pastak.png',
     profile_url: 'https://twitter.com/pastak'
-  },
-  {
-    name: 'nyanco',
-    avatar_url: './images/staff/uploaded/nyanco15.png',
-    profile_url: 'https://twitter.com/nyanco15'
   },
   {
     name: 'godan',
@@ -75,19 +60,34 @@ const coreStaff = [
     profile_url: 'https://twitter.com/godan09'
   },
   {
-    name: 'toya',
-    avatar_url: './images/staff/uploaded/toya.png',
-    profile_url: ''
+    name: 'xtetsuji',
+    avatar_url: './images/staff/twitter/xtetsuji.png',
+    profile_url: 'https://twitter.com/xtetsuji'
+  },
+  {
+    name: 'karupanerura',
+    avatar_url: './images/staff/github/karupanerura.png',
+    profile_url: 'https://github.com/karupanerura'
   },
   {
     name: 'maeken2010',
     avatar_url: './images/staff/uploaded/maeken2010.png',
-    profile_url: ''
+    profile_url: 'https://twitter.com/maeken2010'
   },
   {
-    name: 'tomcha',
-    avatar_url: './images/staff/uploaded/tomcha.jpg',
-    profile_url: 'https://twitter.com/tomcha_'
+    name: 'liiu',
+    avatar_url: './images/staff/twitter/_ybrliiu.jpg',
+    profile_url: 'https://twitter.com/_ybrliiu'
+  },
+  {
+    name: '八雲アナグラ',
+    avatar_url: './images/staff/uploaded/AnaTofuZ.jpeg',
+    profile_url: 'https://twitter.com/AnaTofuZ'
+  },
+  {
+    name: 'nyanco',
+    avatar_url: './images/staff/uploaded/nyanco15.png',
+    profile_url: 'https://twitter.com/nyanco15'
   },
   {
     name: 'nagayama',
@@ -99,16 +99,17 @@ const coreStaff = [
     avatar_url: './images/staff/uploaded/mazco.png',
     profile_url: 'https://twitter.com/mazco_dx'
   },
-  {
-    name: '八雲アナグラ',
-    avatar_url: './images/staff/uploaded/AnaTofuZ.jpeg',
-    profile_url: 'https://twitter.com/AnaTofuZ'
-  },
 ];
 
-const volunteerStaff = [
-];
+//const volunteerStaff = [
+  // {
+  //   name: 'tomcha',
+  //   avatar_url: './images/staff/uploaded/tomcha.jpg',
+  //   profile_url: 'https://twitter.com/tomcha_'
+  // },
+//];
 
 module.exports = {
   coreStaff,
+  //volunteerStaff,
 }
