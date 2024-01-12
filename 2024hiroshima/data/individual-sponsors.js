@@ -202,7 +202,7 @@ const individualSponsors = [
   {
     name: 'moshimoshi_yuki',
     avatar_url: './images/individual-sponsors/moshimoshi_yuki.jpg',
-    profile_url: 'https://twitter.com/moshimoshi_yuki',
+    profile_url: 'https://lit.link/shimookayuki',
   },
 
 ];
