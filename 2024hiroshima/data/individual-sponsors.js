@@ -199,6 +199,12 @@ const individualSponsors = [
     avatar_url: './images/individual-sponsors/chanyou0311.jpg',
     profile_url: 'https://x.com/chanyou0311'
   },
+  {
+    name: 'moshimoshi_yuki',
+    avatar_url: './images/individual-sponsors/moshimoshi_yuki.jpg',
+    profile_url: 'https://twitter.com/moshimoshi_yuki',
+  },
+
 ];
 
 module.exports = individualSponsors
