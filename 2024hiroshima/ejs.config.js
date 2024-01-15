@@ -88,7 +88,7 @@ module.exports = {
         photo: "images/speakers/yusukebe.png",
         name: "和田 裕介",
         name_en: "Yusuke Wada",
-        description: "1981年生まれ。最近は就職してCloudflareでDeveloper Advocateをやっていて、毎日Webのフレームワーク書いてます。WEB+DB PRESSで最初に執筆したのは2009年で「Webサービス[即日]開発」という特集です。"
+        description: "1981年生まれ。最近は就職してCloudflareでDeveloper Advocateをやっていて、毎日Webのフレームワーク書いてます。"
       },
       {
         photo: "images/speakers/twada.png",
