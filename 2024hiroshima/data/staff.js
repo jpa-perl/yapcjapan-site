@@ -101,15 +101,40 @@ const coreStaff = [
   },
 ];
 
-//const volunteerStaff = [
-  // {
-  //   name: 'tomcha',
-  //   avatar_url: './images/staff/uploaded/tomcha.jpg',
-  //   profile_url: 'https://twitter.com/tomcha_'
-  // },
-//];
+const volunteerStaff = [
+  {
+    name: 'shimpeimatsu',
+    avatar_url: './images/staff/uploaded/shimpeimatsu.png',
+    profile_url: 'https://researchmap.jp/smatsumoto'
+  },
+  {
+    name: 'しゅら',
+    avatar_url: './images/staff/twitter/yaseinosi1.jpg',
+    profile_url: 'https://twitter.com/yaseinosi1/'
+  },
+  {
+    name: '野崎真',
+    avatar_url: './images/staff/uploaded/nozakimakoto.webp',
+    profile_url: 'https://www.perlfoundation.org/the-board.html',
+  },
+  {
+    name: '兼安　聡',
+    avatar_url: './images/staff/uploaded/kaneyasu.jpeg',
+    profile_url: 'https://profile.hatena.ne.jp/swx-satoshi-kaneyasu/profile',
+  },
+  {
+    name: '石川 遼',
+    avatar_url: './images/staff/uploaded/skyblue_clip.jpg',
+    profile_url: 'https://twitter.com/skyblue_clip',
+  },
+  {
+    name: 'cohalz',
+    avatar_url: './images/staff/twitter/cohalz.png',
+    profile_url: 'https://twitter.com/cohalz',
+  },
+];
 
 module.exports = {
   coreStaff,
-  //volunteerStaff,
+  volunteerStaff,
 }
