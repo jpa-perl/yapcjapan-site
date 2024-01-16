@@ -113,12 +113,12 @@ const volunteerStaff = [
     profile_url: 'https://twitter.com/yaseinosi1/'
   },
   {
-    name: '野崎真',
+    name: '野崎 真',
     avatar_url: './images/staff/uploaded/nozakimakoto.webp',
     profile_url: 'https://www.perlfoundation.org/the-board.html',
   },
   {
-    name: '兼安　聡',
+    name: '兼安 聡',
     avatar_url: './images/staff/uploaded/kaneyasu.jpeg',
     profile_url: 'https://profile.hatena.ne.jp/swx-satoshi-kaneyasu/profile',
   },
