@@ -95,6 +95,11 @@ module.exports = [
     url: "https://careers.findy.co.jp/#block-b017af555fa34cc389f14ff79a3b255e",
   },
   {
+    src: "hacomono.png",
+    alt: "株式会社hacomono",
+    url: "https://open.talentio.com/r/1/c/hacomono/homes/4140?job_titles=9123%2C9124%2C9125%2C9121%2C9122",
+  },
+  {
     src: "not-a-hotel.png",
     alt: "NOT A HOTEL株式会社",
     url: "https://notahotel.com/careers",
@@ -123,6 +128,11 @@ module.exports = [
     src: "stores.png",
     alt: "STORES 株式会社",
     url: "https://jobs.st.inc/engineer",
+  },
+  {
+    src: "wano.png",
+    alt: "Wano株式会社",
+    url: "https://group.wano.co.jp/recruit/",
   },
   {
     src: "hamee.png",
