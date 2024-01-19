@@ -233,9 +233,19 @@ module.exports = {
             image: "freakout.png",
           },
           {
+            name: "技育プロジェクト",
+            url: "https://biz.supporterz.jp/geekpjt/",
+            image: "geekpjt.png",
+          },
+          {
             name: "Fastly",
             url: "https://www.fastly.com/jp/",
             image: "fastly.png",
+          },
+          {
+            name: "cluster",
+            url: "https://corp.cluster.mu/",
+            image: "cluster.png",
           },
           {
             name: 'サイボウズ株式会社',
@@ -388,6 +398,11 @@ module.exports = {
             url: "https://hiroshima-mix-ayumubar.business.site/",
             image: "ayumu-bar.png",
           },
+          {
+            name: "バレットグループ株式会社",
+            url: "https://bltinc.co.jp/",
+            image: "bltinc.png",
+          },
         ],
       },
       {
@@ -432,6 +447,11 @@ module.exports = {
         icon_class: "max-w-[100px]",
         label: "ブーススポンサー",
         companies: [
+          {
+            name: "株式会社ディー・エヌ・エー",
+            url: "https://engineering.dena.com/",
+            image: "dena.png",
+          },
           {
             name: "株式会社Helpfeel",
             url: "https://corp.helpfeel.com/ja/home",
@@ -496,6 +516,11 @@ module.exports = {
             image: "base.png",
           },
           {
+            name: "cluster",
+            url: "https://corp.cluster.mu/",
+            image: "cluster.png",
+          },
+          {
             name: '株式会社DeNA SOMPO Mobility',
             url: 'https://ds-mobility.jp/',
             image: 'dena-sompo-mobility.png'
@@ -543,6 +568,11 @@ module.exports = {
             name: "株式会社LayerX",
             url: "https://layerx.co.jp/",
             image: "layerx.png",
+          },
+          {
+            name: "技育プロジェクト",
+            url: "https://biz.supporterz.jp/geekpjt/",
+            image: "geekpjt.png",
           },
           {
             name: 'STORES 株式会社',
@@ -602,6 +632,11 @@ module.exports = {
             name: "株式会社ドリーム・アーツ",
             url: "https://www.dreamarts.co.jp/",
             image: "dreamarts.png",
+          },
+          {
+            name: "バレットグループ株式会社",
+            url: "https://bltinc.co.jp/",
+            image: "bltinc.png",
           },
         ],
       },
