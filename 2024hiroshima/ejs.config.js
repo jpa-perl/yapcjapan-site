@@ -669,6 +669,11 @@ module.exports = {
             url: "https://www.rizapgroup.com/",
             image: "rizap.png",
           },
+          {
+            name: 'Findy',
+            url: 'https://findy.co.jp/',
+            image: 'findy.png'
+          },
         ],
       },
     ],
