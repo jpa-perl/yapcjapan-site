@@ -5,6 +5,7 @@ let sketch = function (p) {
   let shapes = [];
   let centerX;
   let objectNum;
+  let animationRunning = true;
 
   const COLOR = "#C32121";
 
@@ -19,6 +20,9 @@ let sketch = function (p) {
     canvas.parent("p5-container");
     p.pixelDensity(1);
     init();
+    setTimeout(() => {
+      animationRunning = false;
+    }, 5000);
   };
 
   function init() {
@@ -27,6 +31,9 @@ let sketch = function (p) {
   }
 
   p.draw = function () {
+    if (!animationRunning) {
+      return;
+    }
     p.background(255);
     p.push();
     p.translate(centerX, 0);
