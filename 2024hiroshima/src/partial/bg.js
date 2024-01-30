@@ -20,20 +20,18 @@ let sketch = function (p) {
     canvas.parent("p5-container");
     p.pixelDensity(1);
     init();
-    setTimeout(() => {
-      animationRunning = false;
-    }, 5000);
   };
 
   function init() {
     centerX = p.width / 2;
     objectNum = p.floor(p.map(p.width, 0, 1920, 10, 60));
+    animationRunning = true;
+    setTimeout(() => {
+      animationRunning = false;
+    }, 5000);
   }
 
   p.draw = function () {
-    if (!animationRunning) {
-      return;
-    }
     p.background(255);
     p.push();
     p.translate(centerX, 0);
@@ -87,6 +85,9 @@ let sketch = function (p) {
     }
 
     update() {
+      if (!animationRunning) {
+        return;
+      }
       this.y -= this.acl;
       this.x += p.sin(this.y * 0.001 + this.size * 2) / 2;
       const targetOpacity = this.show ? p.map(this.y, p.height, 0, 0, 30) : 0;
