@@ -6,6 +6,7 @@ let sketch = function (p) {
   let centerX;
   let objectNum;
   let animationRunning = true;
+  let animationStartTime;
 
   const COLOR = "#C32121";
 
@@ -26,6 +27,7 @@ let sketch = function (p) {
     centerX = p.width / 2;
     objectNum = p.floor(p.map(p.width, 0, 1920, 10, 60));
     animationRunning = true;
+    animationStartTime = Date.now();
     setTimeout(() => {
       animationRunning = false;
     }, 5000);
@@ -88,8 +90,10 @@ let sketch = function (p) {
       if (!animationRunning) {
         return;
       }
-      this.y -= this.acl;
-      this.x += p.sin(this.y * 0.001 + this.size * 2) / 2;
+      const elapsedTime = Date.now() - animationStartTime;
+      const slowDownFactor = elapsedTime > 3000 ? (5000 - elapsedTime) / 2000 : 1;
+      this.y -= this.acl * slowDownFactor;
+      this.x += p.sin(this.y * 0.001 + this.size * 2) / 2 * slowDownFactor;
       const targetOpacity = this.show ? p.map(this.y, p.height, 0, 0, 30) : 0;
       this.opacity += (targetOpacity - this.opacity) * 0.9;
       this.color.setAlpha(this.opacity);
