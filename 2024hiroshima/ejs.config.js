@@ -243,7 +243,7 @@ module.exports = {
             image: "fastly.png",
           },
           {
-            name: "cluster",
+            name: "クラスター株式会社",
             url: "https://corp.cluster.mu/",
             image: "cluster.png",
           },
@@ -573,6 +573,11 @@ module.exports = {
             name: "技育プロジェクト",
             url: "https://biz.supporterz.jp/geekpjt/",
             image: "geekpjt.png",
+          },
+          {
+            name: "クラスター株式会社",
+            url: "https://corp.cluster.mu/",
+            image: "cluster.png",
           },
           {
             name: 'STORES 株式会社',
