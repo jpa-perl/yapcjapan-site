@@ -35,6 +35,11 @@ module.exports = [
     url: "https://jobs.layerx.co.jp/",
   },
   {
+    src: "base.png",
+    alt: "BASE株式会社",
+    url: "https://speakerdeck.com/base/for-engineers",
+  },
+  {
     src: "hatena.png",
     alt: "株式会社はてな",
     url: "https://hatena.co.jp/recruit/engineer",
