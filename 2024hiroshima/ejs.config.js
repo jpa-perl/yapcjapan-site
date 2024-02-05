@@ -403,6 +403,11 @@ module.exports = {
             url: "https://bltinc.co.jp/",
             image: "bltinc.png",
           },
+          {
+            name: "ワキヤコーヒー",
+            url: "https://wakiya.coffee",
+            image: "wakiyacoffee.png",
+          },
         ],
       },
       {
