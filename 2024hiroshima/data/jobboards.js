@@ -174,4 +174,9 @@ module.exports = [
     alt: "バレットグループ株式会社",
     url: "https://herp.careers/v1/bltinc/requisition-groups/11cb05a4-0f9c-4d35-aed9-767faa5edea5",
   },
+  {
+    src: "wakiyacoffee.png",
+    alt: "ワキヤコーヒー",
+    url: "https://wakiya.coffee",
+  },
 ];
