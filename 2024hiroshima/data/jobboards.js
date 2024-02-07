@@ -85,6 +85,11 @@ module.exports = [
     url: "https://www.fout.co.jp/recruit/freakout/career_tech/",
   },
   {
+    src: "cluster.png",
+    alt: "クラスター株式会社",
+    url: "https://recruit.cluster.mu/engineer/",
+  },
+  {
     src: "cybozu.png",
     alt: "サイボウズ株式会社",
     url: "https://cybozu.co.jp/recruit/",
