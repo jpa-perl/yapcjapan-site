@@ -132,6 +132,11 @@ const volunteerStaff = [
     avatar_url: './images/staff/twitter/cohalz.png',
     profile_url: 'https://twitter.com/cohalz',
   },
+  {
+    name: 'teckl',
+    avatar_url: './images/staff/twitter/teckl.jpeg',
+    profile_url: 'https://twitter.com/teckl',
+  },
 ];
 
 module.exports = {
