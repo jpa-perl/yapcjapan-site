@@ -99,6 +99,11 @@ const coreStaff = [
     avatar_url: './images/staff/uploaded/mazco.png',
     profile_url: 'https://twitter.com/mazco_dx'
   },
+  {
+    name: 'たかね',
+    avatar_url: './images/staff/twitter/takane28.jpeg',
+    profile_url: 'https://twitter.com/takanen28',
+  },
 ];
 
 const volunteerStaff = [
@@ -136,6 +141,11 @@ const volunteerStaff = [
     name: 'teckl',
     avatar_url: './images/staff/twitter/teckl.jpeg',
     profile_url: 'https://twitter.com/teckl',
+  },
+  {
+    name: 'walkure',
+    avatar_url: './images/staff/github/walkure.jpeg',
+    profile_url: 'https://github.com/walkure',
   },
 ];
 
