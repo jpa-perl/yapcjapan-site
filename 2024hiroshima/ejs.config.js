@@ -384,9 +384,9 @@ module.exports = {
             image: "bit-river.png",
           },
           {
-            name: "株式会社ツクリエ",
-            url: "https://www.tsuqrea.co.jp/",
-            image: "tsuqrea.png",
+            name: "株式会社FP16",
+            url: "https://fp16.co.jp/",
+            image: "fp16.png",
           },
           {
             name: 'SPARKN',
