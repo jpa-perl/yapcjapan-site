@@ -147,6 +147,11 @@ const volunteerStaff = [
     avatar_url: './images/staff/github/walkure.jpeg',
     profile_url: 'https://github.com/walkure',
   },
+  {
+    name: 'Yamada',
+    avatar_url: './images/staff/github/Ishigami100.jpeg',
+    profile_url: 'https://github.com/Ishigami100',
+  },
 ];
 
 module.exports = {
