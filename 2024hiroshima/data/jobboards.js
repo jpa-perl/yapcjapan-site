@@ -100,6 +100,11 @@ module.exports = [
     url: "https://herp.careers/v1/dsrecruit/sp7wBIoCmiLk",
   },
   {
+    src: "cloudbase.png",
+    alt: "Cloudbase株式会社",
+    url: "https://herp.careers/v1/cloudbase",
+  },
+  {
     src: "findy.png",
     alt: "Findy",
     url: "https://careers.findy.co.jp/#block-b017af555fa34cc389f14ff79a3b255e",
