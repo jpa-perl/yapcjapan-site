@@ -95,6 +95,11 @@ const coreStaff = [
     profile_url: 'https://twitter.com/nagayama'
   },
   {
+    name: 'ariaki',
+    avatar_url: './images/staff/twitter/ariaki4dev.jpeg',
+    profile_url: 'https://twitter.com/ariaki4dev'
+  },
+  {
     name: 'mazco',
     avatar_url: './images/staff/uploaded/mazco.png',
     profile_url: 'https://twitter.com/mazco_dx'
@@ -151,6 +156,21 @@ const volunteerStaff = [
     name: 'Yamada',
     avatar_url: './images/staff/github/Ishigami100.jpeg',
     profile_url: 'https://github.com/Ishigami100',
+  },
+  {
+    name: 'kga',
+    avatar_url: './images/staff/twitter/kga.jpeg',
+    profile_url: 'https://twitter.com/kga',
+  },
+  {
+    name: 'polamjag',
+    avatar_url: './images/staff/twitter/polamjag.jpeg',
+    profile_url: 'https://twitter.com/polamjag',
+  },
+  {
+    name: 'azumakuniyuki',
+    avatar_url: './images/staff/twitter/azumakuniyuki.jpeg',
+    profile_url: 'https://twitter.com/azumakuniyuki',
   },
 ];
 
