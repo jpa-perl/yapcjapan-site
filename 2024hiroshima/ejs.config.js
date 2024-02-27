@@ -13,19 +13,9 @@ module.exports = {
     },
     information: [
       {
-        date: "2024/01/11",
-        title: "チケットの追加販売を開始しました",
-        url: "https://passmarket.yahoo.co.jp/event/show/detail/028iu3fs2fh31.html",
-      },
-      {
-        date: "2023/11/10",
-        title: "アフターイベントのまとめ情報を公開しました",
-        url: "https://blog.yapcjapan.org/entry/2023/11/10/120000",
-      },
-      {
-        date: "2023/10/24",
-        title: "タイムテーブルを公開しました",
-        url: "https://fortee.jp/yapc-hiroshima-2024/timetable",
+        date: "2024/02/27",
+        title: "写真を公開しました",
+        url: "https://30d.jp/yapcjapan/7",
       },
     ],
     guestSpeakers: [
