@@ -13,6 +13,11 @@ module.exports = {
     },
     information: [
       {
+        date: "2024/04/10",
+        title: "動画を公開しました",
+        url: "https://www.youtube.com/watch?v=QLrtLtMbrEU&list=PLc_D79K7j3r9Hr2_w0Ut9CVChxLqtoTFz",
+      },
+      {
         date: "2024/02/27",
         title: "写真を公開しました",
         url: "https://30d.jp/yapcjapan/7",
