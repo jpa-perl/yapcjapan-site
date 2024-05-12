@@ -1,4 +1,4 @@
-#YAPC HIROSHIMA 2024
+#YAPC HAKODATE 2024
 
 ## セットアップ
 

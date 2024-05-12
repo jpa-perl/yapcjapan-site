@@ -1,11 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "start": "parcel src/*.ejs --no-cache --public-url /2024hiroshima/",
+    "start": "parcel src/*.ejs --no-cache --public-url /2024hakodate/",
     "build": "run-s build:clean build:parcel build:copy",
     "build:clean": "rimraf dist && rm -rf .parcel-cache",
-    "build:parcel": "parcel build src/*.ejs --no-source-maps --dist-dir dist --public-url https://yapcjapan.org/2024hiroshima/",
-    "build:copy": "rimraf ../docs/2024hiroshima && cp -a ./dist/ ../docs/2024hiroshima"
+    "build:parcel": "parcel build src/*.ejs --no-source-maps --dist-dir dist --public-url /2024hakodate/",
+    "build:copy": "rimraf ../docs/2024hakodate && cp -a ./dist/ ../docs/2024hakodate"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
@@ -16,7 +16,5 @@
     "rimraf": "^5.0.1",
     "tailwindcss": "^3.3.3"
   },
-  "dependencies": {
-    "p5": "^1.7.0"
-  }
+  "dependencies": {}
 }
