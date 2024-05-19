@@ -74,7 +74,7 @@
     scale: 1.1;
   }
   100% {
-    opacity: 1;
+    opacity: 0.8;
     filter: blur(0px);
     scale: 1;
   }
