@@ -5,28 +5,29 @@ import ShuffleText from "shuffle-text";
 
 export function setUpHero() {
   const heroBg = document.getElementById("heroBg");
-  const heroBgImg = new Image();
-  heroBgImg.src = bgImage;
+  const heroBgLoader = new Image();
+  heroBgLoader.src = bgImage;
 
   let anim: AnimationItem;
 
-  if (heroBg) {
-    heroBgImg.onload = () => {
-      heroBg.setAttribute("src", bgImage);
-      document.body.classList.add("bg_loaded");
-      setTimeout(() => {
-        anim.play();
-      }, 500);
+  heroBgLoader.onload = () => {
+    if (!heroBg) return;
+    heroBg.setAttribute("src", bgImage);
+    document.body.classList.add("bg_loaded");
+    const buffer = new Image();
+    buffer.src = bgImage;
+    setTimeout(() => {
+      anim.play();
+    }, 500);
 
-      setTimeout(() => {
-        showBanner();
-      }, 1700);
+    setTimeout(() => {
+      showBanner();
+    }, 1700);
 
-      setTimeout(() => {
-        heroBg.classList.add("hero_bg_anim");
-      }, 2000);
-    };
-  }
+    setTimeout(() => {
+      heroBg.classList.add("hero_bg_anim");
+    }, 2000);
+  };
 
   const element = document.getElementById("heroLogo");
 
