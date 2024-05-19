@@ -17,8 +17,8 @@
 	<nav class="bg-gray-800 text-white">
 		<div class=" flex justify-between items-center">
 			<div>
-				<div class="bg-key tri-right flex pl-4 w-40 h-14">
-					<img class="w-8" src="./images/logo_small.svg" alt="YAPC::Hiroshima 2024" />
+				<div class="bg-key tri-right flex pl-4 w-32 sm:w-40 h-10 sm:h-14">
+					<img class="w-6 sm:w-8" src="./images/logo_small.svg" alt="YAPC::Hiroshima 2024" />
 				</div>
 			</div>
 			<!--
@@ -47,31 +47,47 @@
 -->
 
 	<div id="hero" class="hero overflow-hidden">
-		<img id="hero_bg" class="hero_bg absolute inset-0 w-full h-full object-cover opacity-0"></img>
-
-		<div class="absolute top-1/2 left-1/2 -translate-y-2/3 -translate-x-1/2" id="logo"></div>
-
-		<div class="text-right bg-key tri-left mb-7">
-			<div class="p-4">
-				<p class="text-6xl">2024.10.5<span class="text-4xl"> sat.</span></p>
-				<p class="text-2xl not-italic font-extrabold">公立はこだて未来大学 </p>
+		<img id="heroBg" class="hero_bg absolute inset-0 w-full h-full object-cover opacity-0"></img>
+		<div id="heroLogo"></div>
+		<div id="heroBanner" class="text-right bg-key tri-left mb-7">
+			<div class="p-2 sm:p-4">
+				<p class="text-4xl sm:text-6xl"><span class="shuffleTextHero">2024.10.5</span><span
+						class="text-2xl sm:text-4xl"><span class="shuffleTextHero">
+							sat.</span></span></p>
+				<p class="text-xl sm:text-2xl not-italic font-extrabold"><span class="shuffleTextHero">@公立はこだて未来大学</span></p>
 			</div>
 		</div>
 	</div>
 
 
-	<div id="container" class="container mx-auto">
-		<p class="my-10 mx-auto p-4 text-xl sm:w-2/4 font-bold">
+	<div class="container mx-auto">
+		<p class="my-6 sm:my-20 mx-auto p-6 text-xl sm:text-2xl lg:w-3/4 font-bold leading-relaxed">
 			YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。
 			Perlだけにとどまらない技術者たちが、好きな技術の話をし交流するカンファレンスで、技術者であれば誰でも楽しめるお祭りです！
 		</p>
+	</div>
 
 
-		<header class="text-center">
-			<h2 class="text-6xl font-bold text-display">OPEN THE FUTURE</h2>
-		</header>
+	<header class="sectionHeader">
+		<h2><span>Open the future</span></h2>
+	</header>
+	<div class="container mx-auto">
+		<p class="my-6 sm:my-20 mx-auto p-6 text-xl sm:text-2xl lg:w-3/4 font-bold leading-relaxed">
+			YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。
+			Perlだけにとどまらない技術者たちが、好きな技術の話をし交流するカンファレンスで、技術者であれば誰でも楽しめるお祭りです！
+		</p>
+	</div>
 
-
+	<header class="sectionHeader">
+		<h2><span>Annoucement</span></h2>
+	</header>
+	<div class="container mx-auto">
+		<ul class="my-10 mx-auto p-6 text-xl sm:text-2xl lg:w-3/4 font-bold leading-relaxed text-display">
+			<li class="border-b-4 border-key py-2 mb-2"><span class="mr-3">2024.5.5</span><a href="">ABCを公開しました</a></li>
+			<li class="border-b-4 border-key py-2 mb-2"><span class="mr-3">2024.5.5</span><a href="">ABCを公開しました</a></li>
+			<li class="border-b-4 border-key py-2 mb-2"><span class="mr-3">2024.5.5</span><a href="">ABCを公開しました</a></li>
+			<li class="border-b-4 border-key py-2 mb-2"><span class="mr-3">2024.5.5</span><a href="">ABCを公開しました</a></li>
+		</ul>
 	</div>
 
 	<footer class="flex flex-col items-center mb-10 mt-32 mx-auto text-jpa"> <img src="./images/jpa.png" alt="JPA"
