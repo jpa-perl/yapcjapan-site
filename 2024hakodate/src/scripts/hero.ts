@@ -18,15 +18,15 @@ export function setUpHero() {
     buffer.src = bgImage;
     setTimeout(() => {
       anim.play();
-    }, 500);
+    }, 100);
 
     setTimeout(() => {
       showBanner();
-    }, 1700);
+    }, 1300);
 
     setTimeout(() => {
       heroBg.classList.add("hero_bg_anim");
-    }, 2000);
+    }, 1600);
   };
 
   const element = document.getElementById("heroLogo");
