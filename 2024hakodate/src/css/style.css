@@ -87,7 +87,7 @@
 }
 
 #heroBanner {
-  @apply absolute bottom-0 right-0 text-nowrap;
+  @apply absolute bottom-0 right-0 text-nowrap z-10;
   translate: 150%;
   transition: translate 0.2s ease-out;
   will-change: translate;
