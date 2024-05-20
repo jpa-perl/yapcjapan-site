@@ -4,36 +4,29 @@ import bgImage from "url:../images/photo_main.jpg";
 import ShuffleText from "shuffle-text";
 
 export function setUpHero() {
-  const heroBg = document.getElementById("heroBg");
-  const heroBgLoader = new Image();
-  heroBgLoader.src = bgImage;
+  const bgLoader = new Image();
+  bgLoader.src = bgImage;
+  let logoAnimator: AnimationItem;
 
-  let anim: AnimationItem;
-
-  heroBgLoader.onload = () => {
+  bgLoader.onload = async () => {
+    const heroBg = document.getElementById("heroBg");
     if (!heroBg) return;
     heroBg.setAttribute("src", bgImage);
     document.body.classList.add("bg_loaded");
-    const buffer = new Image();
-    buffer.src = bgImage;
-    setTimeout(() => {
-      anim.play();
-    }, 100);
 
-    setTimeout(() => {
-      showBanner();
-    }, 1300);
-
-    setTimeout(() => {
-      heroBg.classList.add("hero_bg_anim");
-    }, 1600);
+    await sleep(100);
+    logoAnimator.play();
+    await sleep(1000);
+    showBanner();
+    await sleep(350);
+    heroBg.classList.add("hero_bg_anim");
   };
 
-  const element = document.getElementById("heroLogo");
+  const logo = document.getElementById("heroLogo");
 
-  if (element) {
-    anim = lottie.loadAnimation({
-      container: element,
+  if (logo) {
+    logoAnimator = lottie.loadAnimation({
+      container: logo,
       renderer: "svg",
       loop: false,
       autoplay: false,
@@ -49,5 +42,11 @@ function showBanner() {
   document.querySelectorAll<HTMLElement>(".shuffleTextHero").forEach((elm) => {
     const shuffleText = new ShuffleText(elm);
     shuffleText.start();
+  });
+}
+
+function sleep(ms: number) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
   });
 }
