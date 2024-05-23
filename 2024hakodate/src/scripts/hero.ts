@@ -12,14 +12,13 @@ export function setUpHero() {
     const heroBg = document.getElementById("heroBg");
     if (!heroBg) return;
     heroBg.setAttribute("src", bgImage);
-    document.body.classList.add("bg_loaded");
 
     await sleep(100);
     logoAnimator.play();
     await sleep(1000);
     showBanner();
     await sleep(350);
-    heroBg.classList.add("hero_bg_anim");
+    heroBg.classList.add("heroBgAnim");
   };
 
   const logo = document.getElementById("heroLogo");

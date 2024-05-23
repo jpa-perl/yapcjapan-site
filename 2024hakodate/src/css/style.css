@@ -67,7 +67,7 @@
   }
 }
 
-.hero_bg_anim {
+.heroBgAnim {
   filter: brightness(0) blur(2px);
   animation: blurIn 1s;
   animation-fill-mode: forwards;
@@ -138,5 +138,18 @@
   &.inView::before,
   &.inView::after {
     scale: 1 1;
+  }
+}
+
+.skewedBg {
+  @apply inline-block relative py-4 px-3;
+
+  &:after {
+    @apply bg-key;
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: skewX(-45deg) skewY(-2deg);
+    z-index: -1;
   }
 }
