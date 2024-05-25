@@ -19,6 +19,8 @@ export function setUpHero() {
     showBanner();
     await sleep(350);
     heroBg.classList.add("heroBgAnim");
+    await sleep(100);
+    document.body.classList.add("heroAnimDone");
   };
 
   const logo = document.getElementById("heroLogo");
