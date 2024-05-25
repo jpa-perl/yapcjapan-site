@@ -6,7 +6,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link
-		href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,700;1,500;1,700&family=Roboto:wght@400;500;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,700;1,500;1,700&family=Roboto:wght@400;500;700&family=IBM+Plex+Mono:wght@400&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -59,8 +59,7 @@
 		</div>
 	</div>
 
-
-	<div class="container mx-auto">
+	<div class="topText">
 		<p class="my-6 sm:my-20 mx-auto p-6 text-xl sm:text-2xl lg:w-3/4 font-bold leading-relaxed">
 			YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。
 			Perlだけにとどまらない技術者たちが、好きな技術の話をし交流するカンファレンスで、技術者であれば誰でも楽しめるお祭りです！
@@ -74,11 +73,12 @@
 	<div class="container mx-auto">
 		<div
 			class="my-6 sm:my-20 mx-auto p-6 text-xl sm:text-2xl lg:w-3/4 font-bold leading-relaxed text-center text-display">
-			<p>今回のYAPC::Hakodate 2024は
-			<p class="text-5xl my-5"><span class="skewedBg">「Open the future」</span></p>
-			<p>がテーマです。</p>
-			<p>
-				｢未来｣の名を冠するはこだて未来大で、<br />あなたが思い描く｢未来｣を存分に語り合い、<br />あなたの｢未来｣を切り拓くエネルギーとしてください。
+			<p class="fadeIn">今回のYAPC::Hakodate 2024は
+			<p data-watch-inView class="messageMain"><span class="messageSkewedBg">「Open the future」</span></p>
+			<p class="fadeIn">
+				がテーマです。<br />
+				<span class="uline">｢未来｣</span>の名を冠するはこだて未来大で、<br />あなたが思い描く<span
+					class="uline">｢未来｣</span>を存分に語り合い、<br />あなたの<span class="uline">｢未来｣</span>を切り拓くエネルギーとしてください。
 			</p>
 		</div>
 	</div>
@@ -87,12 +87,14 @@
 		<h2><span>Announcement</span></h2>
 	</header>
 	<div class="container mx-auto">
-		<dl class="my-10 mx-auto p-6 text-2xl sm:text-3xl lg:w-3/4 font-bold leading-relaxed text-display">
-			<div class="border-b-4 border-key py-2 mb-2">
-				<dt class="datte mr-3"><span class="shuffle">2024.5.5</span></dt>
-				<dd><a href="">ABCを公開しました</a></dd>
+		<dl class="announcement">
+			<div>
+				<dt><span class="shuffleText">2024.5.5</span></dt>
+				<dd class="fadeIn"><a target="_blank" href="https://blog.yapcjapan.org/entry/2024/05/24/170000">YAPC::Hakodate
+						2024 ご協賛のお願い
+					</a></dd>
 			</div>
-			</ul>
+		</dl>
 	</div>
 
 	<footer class="flex flex-col items-center mb-10 mt-32 mx-auto text-jpa"> <img src="./images/jpa.png" alt="JPA"

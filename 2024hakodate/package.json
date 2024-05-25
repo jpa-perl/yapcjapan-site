@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "parcel src/*.ejs --no-cache --public-url /2024hakodate/",
+    "start": "parcel src/*.* --no-cache --public-url /2024hakodate/",
     "build": "run-s build:clean build:parcel build:copy",
     "build:clean": "rimraf dist && rm -rf .parcel-cache",
     "build:parcel": "parcel build src/*.ejs --no-source-maps --dist-dir dist --public-url /2024hakodate/",
