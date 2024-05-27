@@ -4,7 +4,7 @@
     "start": "parcel src/*.* --no-cache --public-url /2024hakodate/",
     "build": "run-s build:clean build:parcel build:copy",
     "build:clean": "rimraf dist && rm -rf .parcel-cache",
-    "build:parcel": "parcel build src/*.ejs --no-source-maps --dist-dir dist --public-url /2024hakodate/",
+    "build:parcel": "parcel build src/*.ejs --no-source-maps --dist-dir dist --public-url https://yapc-hakodate.org/2024hakodate/",
     "build:copy": "rimraf ../docs/2024hakodate && cp -a ./dist/ ../docs/2024hakodate"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
