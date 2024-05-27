@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "parcel src/*.* --no-cache --public-url /2024hakodate/",
+    "build": "run-s build:clean build:parcel build:copy",
+    "build:clean": "rimraf dist && rm -rf .parcel-cache",
+    "build:parcel": "parcel build src/*.ejs --no-source-maps --dist-dir dist --public-url /2024hakodate/",
+    "build:copy": "rimraf ../docs/2024hakodate && cp -a ./dist/ ../docs/2024hakodate"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.9.3",
+    "parcel-transformer-ejs": "^1.0.1",
+    "postcss": "^8.4.28",
+    "rimraf": "^5.0.1",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "lottie-web": "^5.12.2",
+    "shuffle-text": "^0.4.0"
+  }
+}
