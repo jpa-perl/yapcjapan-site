@@ -133,6 +133,43 @@
   }
 }
 
+.sponsorLabel {
+  @apply text-center text-2xl md:text-3xl text-center border-b py-4 mb-8 font-bold text-display;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: auto max-content auto;
+  gap: 0.3em;
+
+  &::before,
+  &::after {
+    @apply bg-key;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: scale 0.2s ease-out;
+    scale: 0 1;
+  }
+
+  &::before {
+    left: 0;
+    background-image: url("../images/tri_right_black.svg");
+    background-position: right;
+    transform-origin: left;
+  }
+
+  &::after {
+    background-image: url("../images/tri_left_black.svg");
+    right: 0;
+    transform-origin: right;
+  }
+
+  &.inView::before,
+  &.inView::after {
+    scale: 1 1;
+  }
+}
+
 .topText {
   @apply opacity-0 container mx-auto;
 
