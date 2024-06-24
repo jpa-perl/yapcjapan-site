@@ -133,6 +133,20 @@
   }
 }
 
+.sponsorLabel {
+  @apply text-center text-2xl md:text-2xl  py-4 mb-8 font-bold text-display;
+
+  &::after {
+    @apply block my-2 h-2 border border-gray-400;
+    content: "";
+  }
+
+  &.inView::after {
+    animation: spreadIn 0.3s ease-in;
+    animation-fill-mode: forwards;
+  }
+}
+
 .topText {
   @apply opacity-0 container mx-auto;
 
@@ -265,5 +279,14 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes spreadIn {
+  0% {
+    transform: scaleX(0) skewX(-45deg);
+  }
+  100% {
+    transform: scaleX(1) skewX(-45deg);
   }
 }
