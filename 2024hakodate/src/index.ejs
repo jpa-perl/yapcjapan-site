@@ -30,30 +30,22 @@
 					</a>
 				</div>
 			</div>
-			<!--
 
 			<button id="menu-btn" class="material-symbols-outlined hamburger focus:outline-none" aria-label="メニューを開く">
 				menu
 			</button>
-			-->
 		</div>
-		<!--
 		<div id="menu" class="hidden">
-			<a href="#" class="block p-4 border-b border-gray-700 hover:bg-gray-700">MENU1</a>
-			<a href="#" class="block p-4 border-b border-gray-700 hover:bg-gray-700">MENU2</a>
-			<a href="#" class="block p-4 border-b border-gray-700 hover:bg-gray-700">MENU3</a>
-			<a href="#" class="block p-4">コンタクト</a>
+			<a href="https://blog.yapcjapan.org/" class="block p-4 border-b border-gray-700 hover:bg-gray-700">BLOG</a>
+			<a href="https://x.com/yapcjapan" class="block p-4">X</a>
 		</div>
-			-->
 	</nav>
 
-	<!--
 	<script>
 		document.getElementById('menu-btn').addEventListener('click', function () {
 			document.getElementById('menu').classList.toggle('hidden');
 		});
 	</script>
--->
 
 	<div id="hero" class="hero overflow-hidden">
 		<img id="heroBg" class="hero_bg absolute inset-0 w-full h-full object-cover opacity-0"></img>
@@ -97,26 +89,50 @@
 	</header>
 	<div class="container mx-auto">
 		<dl class="announcement">
-			<div>
-				<dt><span class="shuffleText">2024.06.17</span></dt>
-				<dd class="fadeIn"><a target="_blank" href="https://blog.yapcjapan.org/entry/2024/06/17/150000">YAPC::Hakodate
-						2024のスピーカーを募集します
-					</a></dd>
-			</div>
-			<div>
-				<dt><span class="shuffleText">2024.05.24</span></dt>
-				<dd class="fadeIn"><a target="_blank" href="https://blog.yapcjapan.org/entry/2024/05/24/170000">YAPC::Hakodate
-						2024 ご協賛のお願い
-					</a></dd>
-			</div>
+			<% for (const entry of locals.announcements) { %>
+				<div>
+					<dt><span class="shuffleText">
+							<%= entry.date %>
+						</span></dt>
+					<dd class="fadeIn"><a target="_blank" href="<%= entry.url %>">
+							<%= entry.title %>
+						</a></dd>
+				</div>
+				<% } %>
 		</dl>
 	</div>
 
-	<footer class="flex flex-col items-center mb-10 mt-32 mx-auto text-jpa"> <img src="./images/jpa.png" alt="JPA"
-			class="w-[90px]">
-		<p class="mt-3 text-xs text-jpa">© Japan Perl Association</p>
-	</footer>
-	<script src="./scripts/index.ts" type="module"></script>
+	<% if (Object.keys(locals.sponsors).length> 0) { %>
+		<header class="sectionHeader">
+			<h2><span>Sponsor</span></h2>
+		</header>
+		<section class="section flex flex-col" id="sponsors">
+			<% for (const sponsor of locals.sponsors) { %>
+				<div class="mx-auto w-full max-w-5xl mt-20  <%= sponsor.class %>">
+					<h3 data-watch-inView class="sponsorLabel">
+						<span class="shuffleText">
+							<%= sponsor.label %>
+						</span>
+					</h3>
+					<div class="flex justify-center flex-wrap gap-5">
+						<% for (const company of sponsor.companies) { %>
+							<a target="_blank" href="<%= company.url %>"
+								class="block border rounded-sm p-1 border-gray-500 hover:scale-105 transition-transform <%= sponsor.icon_class %>">
+								<img class="aspect-square rounded-sm object-contain content-center" loading="lazy"
+									src="images/sponsor/<%= company.image %>" alt="<%= company.name %>" />
+							</a>
+							<% } %>
+					</div>
+				</div>
+				<% } %>
+		</section>
+		<% } %>
+
+			<footer class="flex flex-col items-center mb-10 mt-32 mx-auto text-jpa"> <img src="./images/jpa.png" alt="JPA"
+					class="w-[90px]">
+				<p class="mt-3 text-xs text-jpa">© Japan Perl Association</p>
+			</footer>
+			<script src="./scripts/index.ts" type="module"></script>
 </body>
 
 </html>
