@@ -3,7 +3,7 @@ module.exports = [
   {
     key: "perl",
     class: "basis-full",
-    icon_class: "max-w-[300px]",
+    icon_class: "max-w-[400px]",
     label: "Perl Sponsors",
     companies: [
       {
@@ -32,7 +32,7 @@ module.exports = [
   {
     key: "platinum",
     class: "basis-full",
-    icon_class: "max-w-[200px]",
+    icon_class: "max-w-[320px]",
     label: "Platinum Sponsors",
     companies: [
       /*
@@ -90,7 +90,7 @@ module.exports = [
   {
     key: "gold",
     class: "basis-full",
-    icon_class: "max-w-[200px]",
+    icon_class: "max-w-[210px]",
     label: "Gold Sponsors",
     companies: [
       {
@@ -115,7 +115,7 @@ module.exports = [
   {
     key: "silver",
     class: "basis-full",
-    icon_class: "max-w-[200px]",
+    icon_class: "max-w-[160px]",
     label: "Silver Sponsors",
     companies: [
       {
@@ -134,7 +134,7 @@ module.exports = [
   {
     key: "bronze",
     class: "basis-full",
-    icon_class: "max-w-[200px]",
+    icon_class: "max-w-[120px]",
     label: "Bronze Sponsors",
     companies: [
       {
