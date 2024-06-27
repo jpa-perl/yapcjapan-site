@@ -113,18 +113,19 @@ module.exports = [
   */
     ]
   },
-  /*
   {
     key: "silver",
     class: "basis-full",
     icon_class: "max-w-[160px]",
     label: "Silver Sponsors",
     companies: [
+  /*
       {
         name: "面白法人カヤック",
         url: "https://hubspot.kayac.com/engineer-interviews",
         image: "kayac.png"
       },
+  */
       {
         name: "株式会社モバイルファクトリー",
         url: "https://www.mobilefactory.jp/",
@@ -132,7 +133,6 @@ module.exports = [
       }
     ]
   },
-  */
   {
     key: "bronze",
     class: "basis-full",
