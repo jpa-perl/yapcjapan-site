@@ -1,21 +1,23 @@
 module.exports = [
-  /*
   {
     key: "perl",
     class: "basis-full",
     icon_class: "max-w-[400px]",
     label: "Perl Sponsors",
     companies: [
+  /*
       {
         name: "トグルホールディングス株式会社",
         url: "https://toggle.co.jp/",
         image: "toggle.png"
       },
+  */
       {
         name: "株式会社ディー・エヌ・エー",
         url: "http://dena.com/",
         image: "dena.png"
       },
+  /*
       {
         name: "株式会社Helpfeel",
         url: "https://corp.helpfeel.com",
@@ -26,9 +28,9 @@ module.exports = [
         url: "https://newmo.me/",
         image: "newmo.png"
       }
+  */
     ]
   },
-  */
   {
     key: "platinum",
     class: "basis-full",
@@ -86,7 +88,6 @@ module.exports = [
       */
     ]
   },
-  /*
   {
     key: "gold",
     class: "basis-full",
@@ -98,6 +99,7 @@ module.exports = [
         url: "https://hatena.co.jp",
         image: "hatena.png"
       },
+  /*
       {
         name: "シックス・アパート株式会社",
         url: "https://www.sixapart.jp/",
@@ -108,9 +110,9 @@ module.exports = [
         url: "https://www.fout.co.jp/freakout/",
         image: "fout.png"
       }
+  */
     ]
   },
-  */
   /*
   {
     key: "silver",
@@ -165,12 +167,12 @@ module.exports = [
         url: "https://winenabe.jp/",
         image: "winenabe.png"
       },
+      */
       {
         name: "有限会社アートライ",
         url: "http://www.artry.co.jp",
         image: "artry.png"
       }
-      */
     ]
   },
   /*
