@@ -55,15 +55,10 @@
 }
 
 .hero {
-  @apply relative text-display  h-5/6;
+  @apply relative text-display h-5/6;
 
   &:before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    width: 100%;
-    height: 5%;
+    @apply content-[''] absolute z-10 bottom-0 w-full h-[5%];
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 0%,
@@ -94,7 +89,7 @@
 }
 
 .sectionHeader {
-  @apply text-center;
+  @apply text-center mt-20;
   h2 {
     @apply text-3xl sm:text-5xl md:text-6xl font-bold text-display;
   }
