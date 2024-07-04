@@ -21,6 +21,7 @@ const colors = {
 module.exports = {
   content: [
     "ejs.config.js",
+    "./data/*.js",
     "./src/**/*.{ejs,js,ts,jsx,tsx}",
     "./dist/**/*.html",
   ],
