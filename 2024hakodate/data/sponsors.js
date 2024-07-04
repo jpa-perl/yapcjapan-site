@@ -49,12 +49,12 @@ module.exports = [
         url: "https://coal-son-1e1.notion.site/Entrance-Book-hacomono-4f5f5cec269e4e60ae8a918bed653efd",
         image: "hacomono.png"
       },
-      /*
       {
         name: "さくらインターネット株式会社",
         url: "https://www.sakura.ad.jp/",
         image: "sakura.png"
       },
+      /*
       {
         name: "Cloudbase株式会社",
         url: "https://cloudbase.co.jp/company",
@@ -75,11 +75,13 @@ module.exports = [
         url: "https://www.kakehashi.life/",
         image: "kakehashi.png"
       },
+      */
       {
         name: "株式会社スマートバンク",
         url: "https://smartbank.co.jp/recruit/engineer-summary",
         image: "smartbank.png"
       },
+      /*
       {
         name: "ファインディ株式会社",
         url: "https://findy.co.jp/",
@@ -99,7 +101,6 @@ module.exports = [
         url: "https://hatena.co.jp",
         image: "hatena.png"
       },
-  /*
       {
         name: "シックス・アパート株式会社",
         url: "https://www.sixapart.jp/",
@@ -108,9 +109,8 @@ module.exports = [
       {
         name: "株式会社フリークアウト",
         url: "https://www.fout.co.jp/freakout/",
-        image: "fout.png"
+        image: "freakout.png"
       }
-  */
     ]
   },
   {
@@ -149,13 +149,11 @@ module.exports = [
         url: "https://note.jp/",
         image: "note.png"
       },
-      /*
       {
         name: "株式会社カオナビ",
         url: "https://corp.kaonavi.jp/",
         image: "kaonavi.png"
       },
-      */
       {
         name: "合同会社ザウエル",
         url: "https://zauel.co.jp",
