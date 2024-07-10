@@ -35,6 +35,15 @@ module.exports = {
 2015年The Perl Foundation Grants Committee ProgramにてPerl::Lintが採択。builderscon Tokyo 2018にてベストスピーカー賞を受賞。北海道函館市出身。
           `,
       },
+      {
+        photo: "./images/speaker/akiym.png",
+        name: "akiym",
+        name_en: "Takumi Akiyama",
+        title: "株式会社Flatt Security セキュリティエンジニア",
+        description: `
+2017年に新卒で株式会社はてなにソフトウェアエンジニアとして入社後、2021年より現職に入社し、セキュリティエンジニアにキャリアチェンジ。SECCON2015学生大会、SECCON2018・2019国内大会で優勝するなど、以降多数の実績を納める。Perlとの出会いは小学生のときにKENT WEBの掲示板を触ったことから。YAPC::Asia/YAPC::Japanにて2011年より計6回登壇、CPAN Author。
+        `,
+      }
     ],
   },
 };
