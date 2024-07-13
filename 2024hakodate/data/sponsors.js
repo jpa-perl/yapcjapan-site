@@ -17,18 +17,18 @@ module.exports = [
         url: "http://dena.com/",
         image: "dena.png"
       },
+  /*
       {
         name: "株式会社Helpfeel",
         url: "https://corp.helpfeel.com",
         image: "helpfeel.png"
       },
-  /*
+  */
       {
         name: "newmo株式会社",
         url: "https://newmo.me/",
         image: "newmo.png"
       }
-  */
     ]
   },
   {
