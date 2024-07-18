@@ -43,6 +43,16 @@ module.exports = {
         description: `
 2017年に新卒で株式会社はてなにソフトウェアエンジニアとして入社後、2021年より現職に入社し、セキュリティエンジニアにキャリアチェンジ。SECCON2015学生大会、SECCON2018・2019国内大会で優勝するなど、以降多数の実績を納める。Perlとの出会いは小学生のときにKENT WEBの掲示板を触ったことから。YAPC::Asia/YAPC::Japanにて2011年より計6回登壇、CPAN Author。
         `,
+      },
+      {
+        photo: "./images/speaker/sumi-prof.jpg",
+        name: "角 康之",
+        name_en: "Yasuyuki Sumi",
+        title: "公立はこだて未来大学 教授",
+        description: `
+早稲田大学、東京大学大学院を修了後、ATR研究員、京都大学准教授を経て、2011年からはこだて未来大学教授。
+体験メディア、インタラクションの理解とデザイン、ライフログなどの研究と教育に従事。
+        `,
       }
     ],
   },
