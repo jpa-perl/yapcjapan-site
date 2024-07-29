@@ -5,13 +5,11 @@ module.exports = [
     icon_class: "max-w-[400px]",
     label: "Perl Sponsors",
     companies: [
-  /*
       {
         name: "トグルホールディングス株式会社",
         url: "https://toggle.co.jp/",
         image: "toggle.png"
       },
-  */
       {
         name: "株式会社ディー・エヌ・エー",
         url: "http://dena.com/",
@@ -57,23 +55,23 @@ module.exports = [
         url: "https://cloudbase.co.jp/company",
         image: "cloudbase.png"
       },
-      /*
       {
         name: "株式会社LayerX",
         url: "https://jobs.layerx.co.jp",
         image: "layerx.png"
       },
+      /*
       {
         name: "株式会社DELTA",
         url: "https://teamdelta.jp",
         image: "teamdelta.png"
       },
+      */
       {
         name: "株式会社カケハシ",
         url: "https://www.kakehashi.life/",
         image: "kakehashi.png"
       },
-      */
       {
         name: "株式会社スマートバンク",
         url: "https://smartbank.co.jp/recruit/engineer-summary",
@@ -126,6 +124,11 @@ module.exports = [
         name: "株式会社モバイルファクトリー",
         url: "https://www.mobilefactory.jp/",
         image: "mobilefactory.png"
+      },
+      {
+        name: "株式会社コルシス",
+        url: "https://colsis.jp/",
+        image: "colsis.png"
       }
     ]
   },
