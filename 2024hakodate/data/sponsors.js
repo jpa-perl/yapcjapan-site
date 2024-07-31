@@ -15,13 +15,11 @@ module.exports = [
         url: "http://dena.com/",
         image: "dena.png"
       },
-  /*
       {
         name: "株式会社Helpfeel",
-        url: "https://corp.helpfeel.com",
+        url: "https://corp.helpfeel.com/",
         image: "helpfeel.png"
       },
-  */
       {
         name: "newmo株式会社",
         url: "https://newmo.me/",
@@ -57,7 +55,7 @@ module.exports = [
       },
       {
         name: "株式会社LayerX",
-        url: "https://jobs.layerx.co.jp",
+        url: "https://jobs.layerx.co.jp/",
         image: "layerx.png"
       },
       /*
@@ -155,7 +153,7 @@ module.exports = [
       },
       {
         name: "合同会社ザウエル",
-        url: "https://zauel.co.jp",
+        url: "https://zauel.co.jp/",
         image: "zauel.png"
       },
       {
@@ -165,8 +163,20 @@ module.exports = [
       },
       {
         name: "有限会社アートライ",
-        url: "http://www.artry.co.jp",
+        url: "http://www.artry.co.jp/",
         image: "artry.png"
+      },
+      /*
+      {
+        name: "株式会社SmartHR",
+        url: "https://hello-world.smarthr.co.jp/",
+        image: "smarthr.png"
+      },
+      */
+      {
+        name: "グリー株式会社",
+        url: "https://corp.gree.net/jp/ja/",
+        image: "gree.png"
       }
     ]
   },
