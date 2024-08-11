@@ -124,11 +124,45 @@
 						<%= speaker.title %><br>
 					</div>
 				</div>
-				<p class="text-sm sm:text-md p-5 text-justify bg-[#191919]">
+				<p class="text-sm sm:text-md p-5 text-balance bg-[#191919]">
 					<%= speaker.description %>
 				</p>
 			</div>
 			<% } %>
+	</div>
+
+
+	<header class="sectionHeader">
+		<h2><span>Special Event</span></h2>
+	</header>
+	<div class="container mx-auto max-w-7xl mt-20">
+		<h3 class="m-auto text-center text-5xl font-bold">北海道のエンジニアコミュニティ座談会</h3>
+		<p class="text-center text-2xl max-w-2xl m-auto my-10">説明が入説明が入説明が入説明が入説明が入説明が入説明が入説明が入説明が入るるるるるるるるる説明が入る</p>
+		<div class=" flex flex-wrap justify-center">
+			<% for (const speaker of locals.specialEventSpeakers) { %>
+				<div class="block p-4 pb-10 sm:basis-1/2 md:basis-1/3 xl:basis-1/3 fadeIn">
+					<img class="border-y-4 border-key w-full" src="<%= speaker.photo %>" alt="<%= speaker.name %>" />
+					<div class="grid m-auto p-5 bg-[#121212]">
+						<div class="font-bold text-2xl text-center">
+							<span class="shuffleText">
+								<%= speaker.name %>
+							</span>
+						</div>
+						<div class="text-sm text-center text-gray-500">
+							<span class="shuffleText text-display">
+								<%= speaker.name_en %>
+							</span>
+						</div>
+					</div>
+					<p class="text-sm sm:text-md p-5 text-balance bg-[#191919]">
+						<% if (speaker.title) { %>
+							<%= speaker.title %><br /><br />
+								<% } %>
+									<%= speaker.description %>
+					</p>
+				</div>
+				<% } %>
+		</div>
 	</div>
 
 	<% if (Object.keys(locals.sponsors).length> 0) { %>
