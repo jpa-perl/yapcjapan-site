@@ -58,13 +58,11 @@ module.exports = [
         url: "https://jobs.layerx.co.jp/",
         image: "layerx.png"
       },
-      /*
       {
         name: "株式会社DELTA",
         url: "https://teamdelta.jp",
-        image: "teamdelta.png"
+        image: "delta.png"
       },
-      */
       {
         name: "株式会社カケハシ",
         url: "https://www.kakehashi.life/",
