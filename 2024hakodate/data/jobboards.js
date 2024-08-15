@@ -2,7 +2,7 @@ module.exports = [
   {
     src: "toggle.png",
     alt: "トグルホールディングス株式会社",
-    url: "https://toggle.co.jp/position/engineer/",
+    url: "https://toggle.co.jp/position/product/",
   },
   {
     src: "dena.png",
