@@ -2,7 +2,7 @@ module.exports = [
   {
     src: "toggle.png",
     alt: "トグルホールディングス株式会社",
-    url: "https://toggle.co.jp/position/product/",
+    url: "https://hrmos.co/pages/toggle/jobs?category=2005201705715916800",
   },
   {
     src: "dena.png",
@@ -14,13 +14,11 @@ module.exports = [
     alt: "株式会社Helpfeel",
     url: "https://recruit.helpfeel.com/",
   },
-  /*
   {
-    src: "newmo.png",
+    src: "newmo.jpeg",
     alt: "newmo株式会社",
-    url: "",
+    url: "https://careers.newmo.me/",
   },
-  */
   {
     src: "pixiv.png",
     alt: "ピクシブ株式会社",
