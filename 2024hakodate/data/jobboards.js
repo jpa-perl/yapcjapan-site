@@ -56,13 +56,11 @@ module.exports = [
     alt: "株式会社カケハシ",
     url: "https://hrmos.co/pages/kakehashi/jobs",
   },
-  /*
   {
     src: "smartbank.png",
     alt: "株式会社スマートバンク",
-    url: "",
+    url: "https://smartbank.co.jp/recruit/engineer-summary",
   },
-  */
   {
     src: "findy.jpeg",
     alt: "ファインディ株式会社",
@@ -82,6 +80,11 @@ module.exports = [
     src: "freakout.png",
     alt: "株式会社フリークアウト",
     url: "https://www.fout.co.jp/recruit/freakout/career_tech/",
+  },
+  {
+    src: "mercari.png",
+    alt: "株式会社メルカリ",
+    url: "https://careers.mercari.com/jobs/engineering/engineering/",
   },
   {
     src: "kayac.png",
