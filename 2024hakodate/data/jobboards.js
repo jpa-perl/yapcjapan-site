@@ -22,7 +22,7 @@ module.exports = [
   {
     src: "pixiv.png",
     alt: "ピクシブ株式会社",
-    url: "https://www.pixiv.co.jp/",
+    url: "https://www.pixiv.co.jp/recruitment/",
   },
   {
     src: "hacomono.png",
