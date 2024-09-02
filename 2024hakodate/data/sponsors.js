@@ -58,13 +58,11 @@ module.exports = [
         url: "https://jobs.layerx.co.jp/",
         image: "layerx.png"
       },
-      /*
       {
         name: "株式会社DELTA",
         url: "https://teamdelta.jp",
-        image: "teamdelta.png"
+        image: "delta.png"
       },
-      */
       {
         name: "株式会社カケハシ",
         url: "https://www.kakehashi.life/",
@@ -102,6 +100,11 @@ module.exports = [
         name: "株式会社フリークアウト",
         url: "https://www.fout.co.jp/freakout/",
         image: "freakout.png"
+      },
+      {
+        name: "株式会社メルカリ",
+        url: "https://engineering.mercari.com/",
+        image: "mercari.png"
       }
     ]
   },
@@ -111,13 +114,11 @@ module.exports = [
     icon_class: "max-w-[160px]",
     label: "Silver Sponsors",
     companies: [
-  /*
       {
         name: "面白法人カヤック",
         url: "https://hubspot.kayac.com/engineer-interviews",
         image: "kayac.png"
       },
-  */
       {
         name: "株式会社モバイルファクトリー",
         url: "https://www.mobilefactory.jp/",
@@ -127,7 +128,14 @@ module.exports = [
         name: "株式会社コルシス",
         url: "https://colsis.jp/",
         image: "colsis.png"
+      },
+      /*
+      {
+        name: "株式会社ネコトーストラボ",
+        url: "https://nekotoast-lab.com/",
+        image: "neko_toast_lab.png"
       }
+      */
     ]
   },
   {
@@ -166,13 +174,11 @@ module.exports = [
         url: "http://www.artry.co.jp/",
         image: "artry.png"
       },
-      /*
       {
         name: "株式会社SmartHR",
         url: "https://hello-world.smarthr.co.jp/",
         image: "smarthr.png"
       },
-      */
       {
         name: "グリー株式会社",
         url: "https://corp.gree.net/jp/ja/",
