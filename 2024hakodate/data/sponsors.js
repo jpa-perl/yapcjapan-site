@@ -129,13 +129,11 @@ module.exports = [
         url: "https://colsis.jp/",
         image: "colsis.png"
       },
-      /*
       {
         name: "株式会社ネコトーストラボ",
         url: "https://nekotoast-lab.com/",
         image: "neko_toast_lab.png"
       }
-      */
     ]
   },
   {
