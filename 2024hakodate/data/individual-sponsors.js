@@ -203,6 +203,11 @@ const indivdualSponsors = [
         name: 'yammerjp',
         avatar_url: './images/individual-sponsors/yammerjp.jpg',
         profile_url: 'https://x.com/yammerjp'
+    },
+    {
+        name: 'myz',
+        avatar_url: './images/individual-sponsors/myz.png',
+        profile_url: '' // myz さんはリンク無し指定
     }
 ];
 
