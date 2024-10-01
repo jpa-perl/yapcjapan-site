@@ -1,10 +1,5 @@
 const indivdualSponsors = [
     {
-        name: 'makky12',
-        avatar_url: './images/individual-sponsors/makky12.jpg',
-        profile_url: 'https://x.com/makky12'
-    },
-    {
         name: 'sironekotoro',
         avatar_url: './images/individual-sponsors/sironekotoro.png',
         profile_url: 'https://x.com/sironekotoro'
