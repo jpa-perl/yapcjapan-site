@@ -1,0 +1,32 @@
+<%
+const staff=[
+	{title: "コアスタッフ" , staff: locals.staff.coreStaff},
+	// {title: "当日スタッフ" , staff: locals.staff.volunteerStaff},
+];
+%>
+<%- include('partial/header'); -%>
+    <section class="section flex flex-col">
+        <h2 class="en-serif-bold text-4xl sm:text-6xl text-center mb-16">STAFF</h2>
+	<% staff.forEach(s=> { %>
+        <h3 class="en-serif-bold text-xl text-center mb-4"><%=s.title %></h3>
+		<div class="container pb-32 m-auto text-primary ">
+			<div class="p-2 mx-auto max-w-5xl">
+				<div class="flex flex-wrap justify-center gap-5">
+					<% for (const member of s.staff) { %>
+						<div class="flex-3 mt-6 text-center sm:mt-8 basis-32 sm:basis-48">
+							<a href="<%= member.profile_url %>" target="_blank">
+								<div class="">
+									<img class="object-cover rounded-full w-full" src="<%= member.avatar_url %>" alt="" />
+								</div>
+								<div class="block pt-4 font-bold">
+									<%= member.name %>
+								</div>
+							</a>
+						</div>
+						<%}%>
+				</div>
+			</div>
+		</div>
+		<%});%>
+    </section>
+<%- include('partial/footer'); -%>
