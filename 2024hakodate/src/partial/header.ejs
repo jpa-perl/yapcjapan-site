@@ -1,0 +1,50 @@
+<html>
+
+<head>
+	<title>YAPC::Hakodate 2024</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,700;1,500;1,700&family=Roboto:wght@400;500;700&family=IBM+Plex+Mono:wght@400&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="YAPC::Hakodate 2024">
+	<meta name="twitter:image" content="./images/ogimage.png">
+	<meta property="og:title" content="YAPC::Hakodate 2024">
+	<meta property="og:description" content="YAPC::Hakodate 2024">
+	<meta property="og:image" content="./images/ogimage.png">
+	<link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="bg-default text-default">
+	<nav class="bg-gray-800 text-white">
+		<div class=" flex justify-between items-center">
+			<div>
+				<div class="bg-key tri-right flex items-center pl-4 w-32 sm:w-40 h-10 sm:h-14">
+					<a href="/2024hakodate/">
+						<img class="w-6 sm:w-8" src="./images/logo_small.svg" alt="YAPC::Hakodate 2024" />
+					</a>
+				</div>
+			</div>
+
+			<button id="menu-btn" class="material-symbols-outlined hamburger focus:outline-none" aria-label="メニューを開く">
+				menu
+			</button>
+		</div>
+		<div id="menu" class="hidden">
+			<a href="https://fortee.jp/yapc-hakodate-2024/timetable" class="block p-4 border-b border-gray-700 hover:bg-gray-700">タイムテーブル</a>
+			<a href="https://blog.yapcjapan.org/" class="block p-4 border-b border-gray-700 hover:bg-gray-700">BLOG</a>
+			<a href="/2024hakodate/individual-sponsors" class="block p-4 border-b border-gray-700 hover:bg-gray-700">個人スポンサー</a>
+			<a href="https://x.com/yapcjapan" class="block p-4">X</a>
+		</div>
+	</nav>
+
+	<script>
+		document.getElementById('menu-btn').addEventListener('click', function () {
+			document.getElementById('menu').classList.toggle('hidden');
+		});
+	</script>
