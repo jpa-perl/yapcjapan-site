@@ -55,9 +55,35 @@ const coreStaff = [
     profile_url: 'https://twitter.com/takanen28',
   }
 ];
-const volunteerStaff = [];
+const volunteerStaff = [
+  {
+    name: '1ye_q',
+    avatar_url: './images/staff/twitter/1ye_q.png',
+    profile_url: 'https://twitter.com/1ye_q',
+  },
+  {
+    name: 'walkure',
+    avatar_url: './images/staff/github/walkure.jpeg',
+    profile_url: 'https://github.com/walkure',
+  },
+  {
+    name: 'sogaoh',
+    avatar_url: './images/staff/twitter/sogaoh.jpg',
+    profile_url: 'https://twitter.com/sogaoh',
+  },
+  {
+    name: 'ksatoshi',
+    avatar_url: './images/staff/twitter/ksatoshifun.jpg',
+    profile_url: 'https://twitter.com/ksatoshifun',
+  },
+  {
+    name: 'nasa9084',
+    avatar_url: './images/staff/twitter/nasa9084.jpg',
+    profile_url: 'https://twitter.com/nasa9084',
+  }
+];
 
 module.exports = {
   coreStaff,
-  // volunteerStaff,
+  volunteerStaff,
 }
