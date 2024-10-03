@@ -100,7 +100,27 @@ const volunteerStaff = [
     name: 'make_now_just',
     avatar_url: './images/staff/twitter/make_now_just.png',
     profile_url: 'https://twitter.com/make_now_just',
-  }
+  },
+  {
+    name: 'ninjinkun',
+    avatar_url: './images/staff/bsky/ninjinkun.jpg',
+    profile_url: 'https://bsky.app/profile/ninjinkun.bsky.social',
+  },
+  {
+    name: 'FUN_issy',
+    avatar_url: './images/staff/twitter/FUN_issy.jpg',
+    profile_url: 'https://x.com/FUN_issy',
+  },
+  {
+    name: 'aya.myzr',
+    avatar_url: './images/staff/facebook/aya.myzr.jpg',
+    profile_url: 'https://www.facebook.com/aya.myzr',
+  },
+  {
+    name: 'uutan1108',
+    avatar_url: './images/staff/twitter/uutan1108.jpg',
+    profile_url: 'https://x.com/uutan1108',
+  },
 ];
 
 module.exports = {
