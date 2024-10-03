@@ -121,6 +121,11 @@ const volunteerStaff = [
     avatar_url: './images/staff/twitter/uutan1108.jpg',
     profile_url: 'https://x.com/uutan1108',
   },
+  {
+    name: 'aksakiaki',
+    avatar_url: './images/staff/twitter/aksakiaki.jpg',
+    profile_url: 'https://x.com/aksakiaki',
+  },
 ];
 
 module.exports = {
