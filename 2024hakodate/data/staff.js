@@ -82,6 +82,16 @@ const volunteerStaff = [
     profile_url: 'https://twitter.com/nasa9084',
   },
   {
+    name: 'ysaito8015',
+    avatar_url: './images/staff/twitter/ysaito8015.jpg',
+    profile_url: 'https://twitter.com/ysaito8015',
+  },
+  {
+    name: 'jugesuke',
+    avatar_url: './images/staff/twitter/jugesuke.jpg',
+    profile_url: 'https://twitter.com/jugesuke',
+  },
+  {
     name: 'await',
     avatar_url: './images/staff/twitter/await_2.jpg',
     profile_url: 'https://x.com/await_2',
