@@ -80,6 +80,16 @@ const volunteerStaff = [
     name: 'nasa9084',
     avatar_url: './images/staff/twitter/nasa9084.jpg',
     profile_url: 'https://twitter.com/nasa9084',
+  },
+  {
+    name: 'await',
+    avatar_url: './images/staff/twitter/await_2.jpg',
+    profile_url: 'https://x.com/await_2',
+  },
+  {
+    name: 'make_now_just',
+    avatar_url: './images/staff/twitter/make_now_just.png',
+    profile_url: 'https://twitter.com/make_now_just',
   }
 ];
 
