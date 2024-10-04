@@ -126,6 +126,16 @@ const volunteerStaff = [
     avatar_url: './images/staff/twitter/aksakiaki.jpg',
     profile_url: 'https://x.com/aksakiaki',
   },
+  {
+    name: 'teckl',
+    avatar_url: './images/staff/twitter/teckl.jpg',
+    profile_url: 'https://twitter.com/teckl',
+  },
+  {
+    name: 'BkNkbot',
+    avatar_url: './images/staff/twitter/BkNkbot.jpg',
+    profile_url: 'https://twitter.com/BkNkbot',
+  },
 ];
 
 module.exports = {
