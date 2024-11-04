@@ -7,14 +7,9 @@ module.exports = {
   locals: {
     announcements: [
       {
-        date: "2024.07.13",
-        title: "YAPC::Hakodate 2024のチケットを販売いたします!!!",
-        url: "https://blog.yapcjapan.org/entry/hakodate-2024-ticket",
-      },
-      {
-        date: "2024.05.24",
-        title: "YAPC::Hakodate 2024 ご協賛のお願い",
-        url: "https://blog.yapcjapan.org/entry/2024/05/24/170000",
+        date: "2024.11.4",
+        title: "YAPC::Hakodate 2024の写真を公開しました",
+        url: "https://30d.jp/yapcjapan/8",
       },
     ],
     guestSpeakers: [],
