@@ -1,8 +1,9 @@
 ---
+import "../styles/global.css";
 import favicon from "../assets/favicon.svg";
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
 const { title } = Astro.props as Props;
