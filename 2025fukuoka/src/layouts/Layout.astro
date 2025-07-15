@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import "../styles/global.css";
 import favicon from "../assets/favicon.svg";
 import headerPat from "../assets/header-pat.svg";
+import jpaImage from "../assets/jpa.png";
 
 interface Props {
   title?: string;
@@ -37,7 +39,13 @@ const backgroundImage = `url(${headerPat.src})`;
     <main>
       <slot />
     </main>
-    <footer>
+    <footer class="bg-black">
+      <div
+        class="min-h-[220px] flex flex-col items-center justify-center text-white text-sm font-ips gap-4"
+      >
+        <Image src={jpaImage} alt="JPA" height={33} densities={[1, 2]} />
+        <p>&copy; Japan Perl Association</p>
+      </div>
       <span class="_border"></span>
     </footer>
   </body>
@@ -52,6 +60,7 @@ const backgroundImage = `url(${headerPat.src})`;
 
   span._border {
     overflow: hidden;
+    background-color: var(--color-white);
     background-image: var(--backgroundImage);
     display: block;
     height: 40px;
