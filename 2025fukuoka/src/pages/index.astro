@@ -1,9 +1,30 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import HomeLogo from "../assets/home-logo.png";
 ---
 
 <Layout>
-  <div>
-    <h1>Hello World</h1>
+  <div class="fixed w-full top-0 left-0 w-full h-full z-[-1]">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 1800"
+      fill="none"
+      class="absolute top-[80px] right-0 w-[calc(1200*var(--scale))]"
+    >
+      <path fill="#FF9534" d="M361 525 1200 0v957L361 525Z"></path>
+      <path fill="#F78822" d="m361 525 839 432v843L0 1121l361-596Z"></path>
+    </svg>
   </div>
+  <h1
+    class="mx-auto w-[1440px] max-w-[100vw] px-[40px] mt-[calc(120*var(--scale))]"
+  >
+    <Image
+      src={HomeLogo}
+      alt="YAPC::Asia 2025 Fukuoka"
+      width={658}
+      densities={[1, 2]}
+      class="max-w-[calc(658*var(--scale))]"
+    />
+  </h1>
 </Layout>

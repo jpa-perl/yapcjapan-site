@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL;
 const links = [
   {
     label: "Announcements",
@@ -23,17 +24,17 @@ const links = [
 ];
 ---
 
-<nav class="w-full ml-[100px] mt-[100px]">
+<nav class="mt-[100px] px-[40px] w-[1440px] max-w-[100vw] mx-auto">
   <ul class="flex gap-6">
     {
       links.map((link, index) => (
         <li class="relative w-[180px]">
           <a
-            href={link.href}
+            href={link.href.startsWith("#") ? `${base}${link.href}` : link.href}
             target={link.href.startsWith("http") ? "_blank" : "_self"}
-            class="block flex flex-col h-full"
+            class="menu-link block flex flex-col h-full relative overflow-hidden"
           >
-            <div class="font-ips text-[17px] italic flex justify-between items-center w-full gap-2">
+            <div class="font-ips text-[17px] italic flex justify-between items-center w-full gap-2 relative z-10 transition-colors">
               <span>{link.label}</span>
               {link.href.startsWith("http") && (
                 <svg
@@ -42,17 +43,18 @@ const links = [
                   viewBox="0 0 18 21"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="link-arrow transition-colors"
                 >
                   <path
                     d="M2 3.15411H16M16 3.15411V17.1541M16 3.15411L3.15411 16"
-                    stroke="#1C2A4C"
+                    stroke="currentColor"
                   />
                 </svg>
               )}
             </div>
-            <div class="border-b border-black mt-[3px]" />
-            <div class="border-b-[3px] border-black mt-[2px]" />
-            <div class="text-xs self-end opacity-80 mt-[3px]">
+            <div class="border-line-1 border-b border-black mt-[3px] transition-colors" />
+            <div class="border-line-2 border-b-[3px] border-black mt-[2px] transition-colors" />
+            <div class="text-xs self-end opacity-80 mt-[3px] relative z-10 transition-colors">
               {link.label_jp}
             </div>
           </a>
@@ -61,3 +63,42 @@ const links = [
     }
   </ul>
 </nav>
+
+<style>
+  .menu-link {
+    position: relative;
+    padding: 0;
+  }
+
+  .menu-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--color-black);
+    transition: width 0.1s ease-out;
+    z-index: 1;
+  }
+
+  .menu-link:hover::before {
+    width: 100%;
+  }
+
+  .menu-link:hover div,
+  .menu-link:hover .border-line-1,
+  .menu-link:hover .border-line-2 {
+    z-index: 10;
+    color: var(--color-white);
+    border-color: var(--color-white);
+  }
+
+  .menu-link .link-arrow {
+    color: var(--color-black);
+  }
+
+  .menu-link:hover .link-arrow {
+    color: var(--color-white);
+  }
+</style>
