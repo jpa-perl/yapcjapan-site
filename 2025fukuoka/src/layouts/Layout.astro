@@ -1,12 +1,14 @@
 ---
 import "../styles/global.css";
 import favicon from "../assets/favicon.svg";
+import headerPat from "../assets/header-pat.svg";
 
 interface Props {
   title?: string;
 }
 
 const { title } = Astro.props as Props;
+const backgroundImage = `url(${headerPat.src})`;
 ---
 
 <!doctype html>
@@ -15,18 +17,59 @@ const { title } = Astro.props as Props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href={favicon.src} />
-    <title>{title && `${title} | ` + `YAPC::Asia 2025 Fukuoka`}</title></head
-  >
-  <body>
-    <slot />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title && `${title} | ` + `YAPC::Asia 2025 Fukuoka`}</title>
+  </head>
+  <body class="bg-bg text-black">
+    <header>
+      <span class="_border"></span>
+      <div>
+        <a href="/">
+          <span class="text-2xl font-bold">YAPC::Asia 2025 Fukuoka</span>
+        </a>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <span class="_border"></span>
+    </footer>
   </body>
-
-  <style>
-    html,
-    body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
 </html>
+
+<style define:vars={{ backgroundImage }}>
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+
+  span._border {
+    overflow: hidden;
+    background-image: var(--backgroundImage);
+    display: block;
+    height: 40px;
+    background-repeat: repeat-x;
+    background-size: auto 26px;
+    width: 100%;
+    border-bottom: 2px solid var(--color-black);
+
+    &::after {
+      content: "";
+      display: block;
+      margin-top: 29px;
+      height: 6px;
+      border-top: 1px solid var(--color-black);
+      border-bottom: 2px solid var(--color-black);
+    }
+  }
+  footer span._border {
+    transform: rotate(180deg);
+  }
+</style>
