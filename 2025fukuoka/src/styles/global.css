@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@theme {
+  /* color */
+  --color-*: initial;
+  --color-white: #fff;
+  --color-black: #1c2a4c;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-bg: #f2f2f2;
+  --color-primary: #ff9534;
+  --color-secondary: #ff4551;
+}
+
+@theme {
+  /* font */
+  --font-sans: "Roboto", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Noto Sans JP", "Meiryo", sans-serif;
+  --font-display: "Roboto", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Noto Sans JP", "Meiryo", sans-serif;
+  --font-ips: "IBM Plex Sans", sans-serif;
+}
