@@ -1,0 +1,63 @@
+---
+const links = [
+  {
+    label: "Announcements",
+    label_jp: "お知らせ",
+    href: "#announcements",
+  },
+  {
+    label: "Guest Speakers",
+    label_jp: "講演者",
+    href: "#guest-speakers",
+  },
+  {
+    label: "Sponsors",
+    label_jp: "スポンサー",
+    href: "#sponsors",
+  },
+  {
+    label: "Timetable",
+    label_jp: "タイムテーブル",
+    href: "https://fortee.jp/",
+  },
+];
+---
+
+<nav class="w-full ml-[100px] mt-[100px]">
+  <ul class="flex gap-6">
+    {
+      links.map((link, index) => (
+        <li class="relative w-[180px]">
+          <a
+            href={link.href}
+            target={link.href.startsWith("http") ? "_blank" : "_self"}
+            class="block flex flex-col h-full"
+          >
+            <div class="font-ips text-[17px] italic flex justify-between items-center w-full gap-2">
+              <span>{link.label}</span>
+              {link.href.startsWith("http") && (
+                <svg
+                  width="18"
+                  height="21"
+                  viewBox="0 0 18 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 3.15411H16M16 3.15411V17.1541M16 3.15411L3.15411 16"
+                    stroke="#1C2A4C"
+                  />
+                </svg>
+              )}
+            </div>
+            <div class="border-b border-black mt-[3px]" />
+            <div class="border-b-[3px] border-black mt-[2px]" />
+            <div class="text-xs self-end opacity-80 mt-[3px]">
+              {link.label_jp}
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

@@ -4,6 +4,7 @@ import "../styles/global.css";
 import favicon from "../assets/favicon.svg";
 import headerPat from "../assets/header-pat.svg";
 import jpaImage from "../assets/jpa.png";
+import Menu from "../components/Menu.astro";
 
 interface Props {
   title?: string;
@@ -30,11 +31,7 @@ const backgroundImage = `url(${headerPat.src})`;
   <body class="bg-bg text-black">
     <header>
       <span class="_border"></span>
-      <div>
-        <a href="/">
-          <span class="text-2xl font-bold">YAPC::Asia 2025 Fukuoka</span>
-        </a>
-      </div>
+      <Menu />
     </header>
     <main>
       <slot />
