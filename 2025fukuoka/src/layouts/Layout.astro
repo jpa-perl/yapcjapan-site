@@ -4,7 +4,6 @@ import "../styles/global.css";
 import favicon from "../assets/favicon.svg";
 import headerPat from "../assets/header-pat.svg";
 import jpaImage from "../assets/jpa.png";
-import Menu from "../components/Menu.astro";
 
 interface Props {
   title?: string;
@@ -29,10 +28,7 @@ const backgroundImage = `url(${headerPat.src})`;
     <title>{title && `${title} | ` + `YAPC::Asia 2025 Fukuoka`}</title>
   </head>
   <body class="bg-bg text-black">
-    <header>
-      <span class="_border"></span>
-      <Menu />
-    </header>
+    <span class="_border"></span>
     <main>
       <slot />
     </main>
@@ -49,12 +45,6 @@ const backgroundImage = `url(${headerPat.src})`;
 </html>
 
 <style define:vars={{ backgroundImage }}>
-  body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-  }
-
   span._border {
     overflow: hidden;
     background-color: var(--color-white);
