@@ -29,22 +29,18 @@ const guestSpeakers = [
 
 <div class="flex flex-col gap-[calc(130*var(--scale))] items-center relative">
   <OutlinedTitle title="ゲストスピーカー" subtitle="Guest<br />Speakers" />
-  <div
-    class="relative flex justify-between w-full gap-[calc(100*var(--scale))]"
-  >
+  <div class="relative flex flex-wrap justify-center w-full">
     {
       guestSpeakers.map((speaker, index) => (
-        <div class="flex flex-col items-center gap-[calc(27*var(--scale))] flex-1">
-          <div class="w-[calc(340*var(--scale))] h-[calc(340*var(--scale))] duotone">
+        <div class="flex flex-col items-center gap-[calc(27*var(--scale))] w-1/1 sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-10">
+          <div class="w-full h-full duotone">
             <img src={speaker.imageUrl} alt={speaker.name} />
           </div>
           <div class="flex flex-col items-center">
-            <p class="text-[calc(16*var(--scale))] font-ips">{speaker.role}</p>
-            <p class="text-[calc(24*var(--scale))] font-bold">{speaker.name}</p>
+            <p class="text-sm md:text-base font-ips">{speaker.role}</p>
+            <p class="text-lg md:text-2xl font-bold">{speaker.name}</p>
           </div>
-          <p class="text-[calc(14*var(--scale))] text-[#1c2a4c] w-[calc(340*var(--scale))] leading-[1.36]">
-            {speaker.description}
-          </p>
+          <p class="text-xs md:text-sm  leading-5">{speaker.description}</p>
         </div>
       ))
     }

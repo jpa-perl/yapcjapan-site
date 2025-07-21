@@ -16,14 +16,14 @@ const { title, subtitle, bg = "text-white" } = Astro.props as Props;
 </style>
 <div class="relative w-full">
   <div
-    class={`text-[max(calc(150*var(--scale)),35px)] italic font-ips text-gray-100 leading-[0.8] top-0 left-0 ${bg}`}
+    class={`text-[max(calc(150*var(--scale)),50px)] italic font-ips text-gray-100 leading-[0.8] top-0 left-0 ${bg}`}
     aria-hidden="true"
     set:html={subtitle}
   >
     <div class="absolute top-0 left-0 textStroke" set:html={subtitle} />
   </div>
   <h2
-    class="absolute text-[max(calc(96*var(--scale)),25px)] font-bold text-black bottom-0 translate-y-[60%] md:left-[calc(120*var(--scale))]"
+    class="absolute text-[max(calc(96*var(--scale)),40px)] font-bold text-black bottom-0 translate-y-[60%] md:left-[calc(120*var(--scale))]"
   >
     {title}
   </h2>
