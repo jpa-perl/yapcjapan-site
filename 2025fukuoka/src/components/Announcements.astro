@@ -15,8 +15,8 @@ const announcements = [
 ---
 
 <div class="flex flex-col gap-[20px] max-w-[1000px] mx-auto">
-  <div class="flex flex-col gap-[7px] items-center">
-    <h2 class="text-white text-[26px] font-bold tracking-[0.17em] text-center">
+  <div class="flex flex-col gap-1 sm:gap-[7px] items-center">
+    <h2 class="text-white text-[20px] sm:text-[26px] font-bold text-center">
       お知らせ
     </h2>
     <div class="flex flex-col gap-[2px] w-full">
@@ -32,13 +32,13 @@ const announcements = [
       announcements.map((announcement) => (
         <a
           href={announcement.link}
-          class={`bg-[rgba(255,255,255,0.05)] ${announcement.link ? "hover:bg-white/10" : ""} transition-colors flex items-center px-[30px] py-[20px] gap-[16px]`}
+          class={`bg-[rgba(255,255,255,0.05)] ${announcement.link ? "hover:bg-white/10" : ""} transition-colors sm:flex items-center px-[30px] py-[20px] gap-[16px]`}
         >
-          <p class="text-white text-[17px] font-ips italic tracking-[0.1em]">
+          <p class="text-white text-[14px] sm:text-[17px] font-ips italic ">
             {announcement.date}
           </p>
-          <div class="bg-white w-[1px] h-[50px]" />
-          <p class="text-white text-[18px] font-bold tracking-[0.17em] flex gap-[10px] items-center">
+          <div class="bg-white w-[1px] h-[40px] sm:h-[50px] hidden sm:block" />
+          <p class="text-white text-[16px] sm:text-[18px] font-bold  flex gap-[10px] items-center">
             {announcement.content}
             {announcement.link && (
               <svg
