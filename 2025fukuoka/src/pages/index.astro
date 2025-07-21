@@ -13,11 +13,11 @@ import Announcements from "../components/Announcements.astro";
 
 <Layout>
   <div
-    class="min-h-[calc(100vh-40px)] overflow-hidden grid grid-rows-[auto_1fr]"
+    class="min-h-[70vh] md:min-h-[calc(100vh-40px)] overflow-hidden grid grid-rows-[auto_1fr]"
   >
     <Menu />
     <div
-      class="mt-[calc(120*var(--scale))] grid grid-rows-[auto_auto_auto] mb-[4vh] gap-[2vh]"
+      class="grid grid-rows-[auto_1fr_auto] mb-[4vh] gap-[2vh] mt-[calc(80*var(--scale))]"
     >
       <h1 class="mx-auto w-[1440px] max-w-[100vw] px-[calc(40*var(--scale))]">
         <Image
@@ -25,43 +25,37 @@ import Announcements from "../components/Announcements.astro";
           alt="YAPC::Asia 2025 Fukuoka"
           width={658}
           densities={[1, 2]}
-          class="max-w-[calc(658*var(--scale))]"
+          class="max-w-[calc(1100*var(--scale))] md:max-w-[calc(658*var(--scale))]"
         />
       </h1>
-      <div class="mx-auto w-[1440px] max-w-[100vw] flex">
+      <div
+        class="mx-auto w-[1440px] max-w-[100vw] flex items-end lg:items-center justify-end lg:justify-start"
+      >
         <div
-          class="w-full max-w-[calc(474*var(--scale))] ml-[calc(400*var(--scale))]"
+          class="md:w-md lg:w-full lg:max-w-[calc(474*var(--scale))] lg:ml-[calc(400*var(--scale))]"
         >
           <div
-            class="bg-black text-white p-[calc(20*var(--scale))] relative text-right"
+            class="bg-black text-white p-5 md:p-[calc(20*var(--scale))] relative text-right"
             style="clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);"
           >
-            <p class="text-[max(12px,calc(22*var(--scale)))] font-ips">
+            <p class="text-base lg:text-2xl font-ips md:mb-1">
               2025.11.14 - 15
             </p>
-            <p class="text-[max(16px,calc(28*var(--scale)))] font-bold">
-              福岡工業大学
-            </p>
-            <p
-              class="text-[max(10px,calc(14*var(--scale)))] italic mb-[16px] font-ips"
-            >
+            <p class="text-xl lg:text-3xl font-bold">福岡工業大学</p>
+            <p class="text-xs lg:text-sm italic mb-[16px] font-ips">
               Fukuoka Institute of Technology
             </p>
             <span
-              class="inline-flex items-center justify-between
-              bg-white text-black px-[calc(20*var(--scale))] py-[calc(12*var(--scale))] rounded-[5px] w-full text-[calc(20*var(--scale))] font-bold hover:bg-gray-100 transition-colors"
+              class="flex items-center justify-between gap-6
+              bg-white text-black px-5 py-[calc(12*var(--scale))] rounded-[5px] w-full xl:text-xl font-bold hover:bg-gray-100 transition-colors"
             >
               <span
                 class="inline-flex items-center gap-[calc(10*var(--scale))]"
               >
                 <s> チケットを購入 </s>
-                <span class="font-normal">Coming Soon</span>
+                <span class="text-sm font-normal">Coming Soon</span>
               </span>
-              <svg
-                class="w-[calc(8*var(--scale))] h-[calc(14*var(--scale))]"
-                viewBox="0 0 8 14"
-                fill="none"
-              >
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
                 <path
                   d="M1 1L7 7L1 13"
                   stroke="currentColor"
@@ -75,7 +69,7 @@ import Announcements from "../components/Announcements.astro";
       </div>
       <div class="mx-auto w-[1440px] max-w-[100vw]">
         <div
-          class="w-[max(700px,calc(720*var(--scale)))] max-w-full bg-black text-white p-[calc(40*var(--scale))] font-bold text-[max(16px,calc(20*var(--scale)))]"
+          class="w-[max(800px,calc(800*var(--scale)))] max-w-full bg-black text-white p-[calc(40*var(--scale))] font-bold text-[max(16px,calc(20*var(--scale)))]"
         >
           <p>
             ああああああああああああああああああああああ1
@@ -96,14 +90,14 @@ import Announcements from "../components/Announcements.astro";
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1200 1800"
       fill="none"
-      class="absolute top-[80px] right-0 w-[calc(1200*var(--scale))]"
+      class="absolute top-[250px] lg:top-[80px] right-0 w-[110vw] xl:w-[calc(1200*var(--scale))]"
     >
       <path fill="#FF9534" d="M361 525 1200 0v957L361 525Z"></path>
       <path fill="#F78822" d="m361 525 839 432v843L0 1121l361-596Z"></path>
     </svg>
   </div>
   <div
-    class="fixed w-full top-0 left-[50%] translate-x-[-50%] h-full z-[-2] top-[200px] max-w-[2000px] mx-auto"
+    class="fixed w-full left-[50%] translate-x-[-50%] h-full z-[-2] hidden md:block top-[200px] max-w-[2000px] mx-auto"
   >
     <Image
       class="absolute top-[calc(870*var(--scale))] right-0 max-w-[calc(600*var(--scale))]"

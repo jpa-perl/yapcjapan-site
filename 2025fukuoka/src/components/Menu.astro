@@ -25,9 +25,74 @@ const links = [
 ---
 
 <nav
-  class="pt-[calc(100*var(--scale))] px-[40px] w-[1440px] max-w-[100vw] mx-auto"
+  class="pt-[calc(100*var(--scale))] md:px-[40px] px-4 w-[1440px] max-w-[100vw] mx-auto relative"
 >
-  <ul class="flex gap-6">
+  <button
+    id="menu-toggle"
+    class="md:hidden fixed top-4 right-4 z-50 p-2 bg-white border-1 border-black"
+    aria-label="メニューを開く"
+  >
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+
+  <dialog id="mobile-menu" class="mobile-menu">
+    <button
+      class="absolute top-4 right-4 z-50 p-2 bg-white border-1 border-black"
+      aria-label="メニューを閉じる"
+      onclick="this.closest('dialog').close(); document.body.classList.remove('menu-open')"
+    >
+      <div class="menu-icon menu-icon-close">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    <ul class="flex flex-col gap-8 p-8 pt-24">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={
+                link.href.startsWith("#") ? `${base}${link.href}` : link.href
+              }
+              target={link.href.startsWith("http") ? "_blank" : "_self"}
+              class="mobile-menu-link block"
+            >
+              <div class="flex justify-between items-center">
+                <div>
+                  <div class="text-sm  opacity-80 font-ips italic">
+                    {link.label}
+                  </div>
+                  <div class="text-xl  mt-1">{link.label_jp}</div>
+                </div>
+                {link.href.startsWith("http") && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 18 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-colors"
+                  >
+                    <path
+                      d="M2 3.15411H16M16 3.15411V17.1541M16 3.15411L3.15411 16"
+                      stroke="currentColor"
+                    />
+                  </svg>
+                )}
+              </div>
+              <div class="border-b-2 border-white mt-4" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </dialog>
+  <ul class="hidden md:flex gap-6">
     {
       links.map((link, index) => (
         <li class="relative w-[180px]">
@@ -67,6 +132,113 @@ const links = [
 </nav>
 
 <style>
+  .menu-icon {
+    width: 28px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-icon span {
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-black);
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transition: all 0.25s ease-out;
+  }
+
+  .menu-icon span:nth-child(1) {
+    top: 0px;
+  }
+
+  .menu-icon span:nth-child(2) {
+    top: 10px;
+  }
+
+  .menu-icon span:nth-child(3) {
+    top: 20px;
+  }
+
+  .menu-open .menu-icon span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+    background-color: var(--color-black);
+  }
+
+  .menu-open .menu-icon span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+
+  .menu-open .menu-icon span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+    background-color: var(--color-black);
+  }
+
+  .menu-open #menu-toggle {
+    background-color: var(--color-white);
+  }
+
+  .menu-icon-close span:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+
+  .menu-icon-close span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon-close span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    z-index: 40;
+  }
+
+  .mobile-menu::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-menu[open] {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .mobile-menu-link {
+    transition: opacity 0.2s ease-out;
+  }
+
+  .mobile-menu-link:hover {
+    opacity: 0.8;
+  }
+
   .menu-link {
     position: relative;
     padding: 0;
@@ -104,3 +276,44 @@ const links = [
     color: var(--color-white);
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById(
+      "mobile-menu"
+    ) as HTMLDialogElement;
+    const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+    const body = document.body;
+
+    menuToggle?.addEventListener("click", () => {
+      if (mobileMenu.open) {
+        mobileMenu.close();
+        body.classList.remove("menu-open");
+      } else {
+        mobileMenu.showModal();
+        body.classList.add("menu-open");
+      }
+    });
+
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.close();
+        body.classList.remove("menu-open");
+      });
+    });
+
+    // ESCキーで閉じた時の処理
+    mobileMenu?.addEventListener("close", () => {
+      body.classList.remove("menu-open");
+    });
+
+    // バックドロップクリックで閉じる
+    mobileMenu?.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.close();
+        body.classList.remove("menu-open");
+      }
+    });
+  });
+</script>

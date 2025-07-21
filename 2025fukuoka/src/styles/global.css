@@ -10,6 +10,8 @@
   --color-bg: #f2f2f2;
   --color-primary: #ff9534;
   --color-secondary: #ff4551;
+
+  --breakpoint-md800: 800px;
 }
 
 @theme {
