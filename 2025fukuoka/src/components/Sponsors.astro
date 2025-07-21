@@ -131,28 +131,30 @@ function getSponsorClass(type: string) {
   }
 </style>
 
-<OutlinedTitle title="スポンサー" subtitle="Sponsors" bg="text-primary" />
-<div class="py-[calc(60*var(--scale))]">
-  {
-    sponsors.map((s) => (
-      <div class="mb-[calc(50*var(--scale))]">
-        <h3 class="text-[calc(36*var(--scale))] capitalize font-bold text-center pb-[calc(20*var(--scale))]">
-          {s.type}
-        </h3>
-        <div class="content-box flex flex-wrap justify-center">
-          {s.sponsors.map((sponsor) => (
-            <div class={`sponsors ${getSponsorClass(s.type)}`}>
-              <a href={sponsor.link} target="_blank">
-                <img
-                  src={sponsor.logoUrl}
-                  alt={sponsor.name}
-                  class="max-w-full max-h-full object-contain"
-                />
-              </a>
-            </div>
-          ))}
+<div class="flex flex-col gap-[calc(130*var(--scale))]">
+  <OutlinedTitle title="スポンサー" subtitle="Sponsors" bg="text-primary" />
+  <div class="py-[calc(60*var(--scale))]">
+    {
+      sponsors.map((s) => (
+        <div class="mb-[calc(50*var(--scale))]">
+          <h3 class="text-[calc(36*var(--scale))] capitalize font-bold text-center pb-[calc(20*var(--scale))]">
+            {s.type}
+          </h3>
+          <div class="content-box flex flex-wrap justify-center">
+            {s.sponsors.map((sponsor) => (
+              <div class={`sponsors ${getSponsorClass(s.type)}`}>
+                <a href={sponsor.link} target="_blank">
+                  <img
+                    src={sponsor.logoUrl}
+                    alt={sponsor.name}
+                    class="max-w-full max-h-full object-contain"
+                  />
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
 </div>

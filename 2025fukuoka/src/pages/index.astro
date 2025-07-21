@@ -6,24 +6,9 @@ import HomePhoto01 from "../assets/home-photo-01.jpg";
 import HomePhoto03 from "../assets/home-photo-03.jpg";
 import HomePhoto04 from "../assets/home-photo-04.jpg";
 import Menu from "../components/Menu.astro";
-import OutlinedTitle from "../components/OutlinedTitle.astro";
 import Speakers from "../components/Speakers.astro";
 import Sponsors from "../components/Sponsors.astro";
-
-// お知らせデータ
-const announcements = [
-  {
-    date: "2025.12.12",
-    content: "チケット販売を開始しました",
-    link: "https://yapc.asia/2025fukuoka/",
-  },
-  { date: "2025.11.28", content: "スポンサー募集を開始しました" },
-  { date: "2025.11.15", content: "CFP募集を開始しました" },
-  {
-    date: "2025.11.01",
-    content: "YAPC::Asia 2025 Fukuokaのサイトを公開しました",
-  },
-];
+import Announcements from "../components/Announcements.astro";
 ---
 
 <Layout>
@@ -143,76 +128,21 @@ const announcements = [
     />
   </div>
 
-  <!-- お知らせセクション -->
-  <section class="bg-black py-[calc(150*var(--scale))]">
-    <div class="max-w-[1000px] mx-auto px-[40px]">
-      <div class="flex flex-col gap-[20px]">
-        <div class="flex flex-col gap-[7px] items-center">
-          <h2
-            class="text-white text-[26px] font-bold tracking-[0.17em] text-center"
-          >
-            お知らせ
-          </h2>
-          <div class="flex flex-col gap-[2px] w-full">
-            <div class="bg-white h-[1px] w-full"></div>
-            <div class="bg-white h-[2px] w-full"></div>
-          </div>
-          <p class="text-white text-[14px] font-ips italic text-center">
-            Announcement
-          </p>
-        </div>
-        <div class="flex flex-col gap-[5px]">
-          {
-            announcements.map((announcement) => (
-              <a
-                href={announcement.link}
-                class={`bg-[rgba(255,255,255,0.05)] ${announcement.link ? "hover:bg-white/10" : ""} transition-colors flex items-center px-[30px] py-[20px] gap-[16px]`}
-              >
-                <p class="text-white text-[17px] font-ips italic tracking-[0.1em]">
-                  {announcement.date}
-                </p>
-                <div class="bg-white w-[1px] h-[50px]" />
-                <p class="text-white text-[18px] font-bold tracking-[0.17em] flex gap-[10px] items-center">
-                  {announcement.content}
-                  {announcement.link && (
-                    <svg
-                      width="18"
-                      height="21"
-                      viewBox="0 0 18 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="link-arrow transition-colors"
-                    >
-                      <path
-                        d="M2 3.15411H16M16 3.15411V17.1541M16 3.15411L3.15411 16"
-                        stroke="currentColor"
-                      />
-                    </svg>
-                  )}
-                </p>
-              </a>
-            ))
-          }
-        </div>
-      </div>
+  <section class="bg-black py-[calc(140*var(--scale))]">
+    <div class="inner">
+      <Announcements />
     </div>
   </section>
 
   <section class="bg-white py-[calc(70*var(--scale))]">
-    <div class="max-w-[calc(1440*var(--scale))] mx-auto px-[20px]">
-      <div
-        class="flex flex-col gap-[calc(130*var(--scale))] items-center relative"
-      >
-        <Speakers />
-      </div>
+    <div class="inner">
+      <Speakers />
     </div>
   </section>
 
   <section class="bg-primary py-[calc(70*var(--scale))]">
-    <div class="max-w-[calc(1440*var(--scale))] mx-auto px-[20px]">
-      <div class="flex flex-col gap-[calc(130*var(--scale))]">
-        <Sponsors />
-      </div>
+    <div class="inner">
+      <Sponsors />
     </div>
   </section>
 </Layout>

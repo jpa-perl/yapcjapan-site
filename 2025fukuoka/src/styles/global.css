@@ -27,3 +27,7 @@
     --font-scale: max(var(--scale), 0.7);
   }
 }
+
+.inner {
+  @apply max-w-[calc(1440*var(--scale))] mx-auto px-[20px];
+}
