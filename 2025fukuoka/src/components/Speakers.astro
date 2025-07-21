@@ -1,0 +1,86 @@
+---
+import OutlinedTitle from "./OutlinedTitle.astro";
+
+// ゲストスピーカーデータ
+const guestSpeakers = [
+  {
+    name: "ゲストスピーカー",
+    role: "guest speaker",
+    description:
+      "ゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてください",
+    imageUrl: "https://i.pravatar.cc/400",
+  },
+  {
+    name: "ゲストスピーカー",
+    role: "guest speaker",
+    description:
+      "ゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてください",
+    imageUrl: "https://i.pravatar.cc/400",
+  },
+  {
+    name: "ゲストスピーカー",
+    role: "guest speaker",
+    description:
+      "ゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてください",
+    imageUrl: "https://i.pravatar.cc/400",
+  },
+];
+---
+
+<OutlinedTitle title="ゲストスピーカー" subtitle="Guest<br />Speakers" />
+<div class="relative flex justify-between w-full gap-[calc(100*var(--scale))]">
+  {
+    guestSpeakers.map((speaker, index) => (
+      <div class="flex flex-col items-center gap-[calc(27*var(--scale))] flex-1">
+        <div class="w-[calc(340*var(--scale))] h-[calc(340*var(--scale))] duotone">
+          <img src={speaker.imageUrl} alt={speaker.name} />
+        </div>
+        <div class="flex flex-col items-center">
+          <p class="text-[calc(16*var(--scale))] font-ips">{speaker.role}</p>
+          <p class="text-[calc(24*var(--scale))] font-bold">{speaker.name}</p>
+        </div>
+        <p class="text-[calc(14*var(--scale))] text-[#1c2a4c] w-[calc(340*var(--scale))] leading-[1.36]">
+          {speaker.description}
+        </p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .duotone {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+
+  .duotone img {
+    filter: grayscale(100%) contrast(1.5) brightness(1.5);
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+  }
+
+  .duotone:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    mix-blend-mode: lighten;
+  }
+
+  .duotone:hover img {
+    filter: grayscale(0%);
+  }
+
+  .duotone:hover,
+  .duotone:hover:after {
+    background-color: transparent;
+  }
+</style>
