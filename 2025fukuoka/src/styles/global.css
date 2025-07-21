@@ -14,9 +14,9 @@
 
 @theme {
   /* font */
-  --font-sans: "Roboto", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+  --font-sans: "Roboto", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
     "Noto Sans JP", "Meiryo", sans-serif;
-  --font-display: "Roboto", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+  --font-display: "Roboto", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
     "Noto Sans JP", "Meiryo", sans-serif;
   --font-ips: "IBM Plex Sans", sans-serif;
 }
@@ -24,5 +24,6 @@
 @layer base {
   :root {
     --scale: calc(min(100vw, 1440px) / 1440);
+    --font-scale: max(var(--scale), 0.7);
   }
 }

@@ -9,7 +9,11 @@ import Menu from "../components/Menu.astro";
 
 // お知らせデータ
 const announcements = [
-  { date: "2025.12.12", content: "チケット販売を開始しました" },
+  {
+    date: "2025.12.12",
+    content: "チケット販売を開始しました",
+    link: "https://yapc.asia/2025fukuoka/",
+  },
   { date: "2025.11.28", content: "スポンサー募集を開始しました" },
   { date: "2025.11.15", content: "CFP募集を開始しました" },
   {
@@ -17,15 +21,58 @@ const announcements = [
     content: "YAPC::Asia 2025 Fukuokaのサイトを公開しました",
   },
 ];
+
+// ゲストスピーカーデータ
+const guestSpeakers = [
+  {
+    name: "ゲストスピーカー",
+    role: "guest speaker",
+    description:
+      "ゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてください",
+    imageUrl: "https://i.pravatar.cc/400",
+  },
+  {
+    name: "ゲストスピーカー",
+    role: "guest speaker",
+    description:
+      "ゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてください",
+    imageUrl: "https://i.pravatar.cc/400",
+  },
+  {
+    name: "ゲストスピーカー",
+    role: "guest speaker",
+    description:
+      "ゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてください",
+    imageUrl: "https://i.pravatar.cc/400",
+  },
+];
+
+// スポンサーデータ
+const sponsors = [
+  { name: "DeNA", logoUrl: "https://via.placeholder.com/300x120?text=DeNA" },
+  { name: "neumo", logoUrl: "https://via.placeholder.com/300x120?text=neumo" },
+  {
+    name: "Helpfeel",
+    logoUrl: "https://via.placeholder.com/300x120?text=Helpfeel",
+  },
+  { name: "DeNA", logoUrl: "https://via.placeholder.com/300x120?text=DeNA" },
+  { name: "neumo", logoUrl: "https://via.placeholder.com/300x120?text=neumo" },
+  {
+    name: "Helpfeel",
+    logoUrl: "https://via.placeholder.com/300x120?text=Helpfeel",
+  },
+];
 ---
 
 <Layout>
   <div
-    class="h-[calc(100vh-40px)] min-h-[1000px] overflow-hidden grid grid-rows-[auto_1fr]"
+    class="min-h-[calc(100vh-40px)] overflow-hidden grid grid-rows-[auto_1fr]"
   >
     <Menu />
-    <div class="mt-[calc(120*var(--scale))] grid grid-rows-[auto_1fr_auto]">
-      <h1 class="mx-auto w-[1440px] max-w-[100vw] px-[40px]">
+    <div
+      class="mt-[calc(120*var(--scale))] grid grid-rows-[auto_auto_auto] mb-[4vh] gap-[2vh]"
+    >
+      <h1 class="mx-auto w-[1440px] max-w-[100vw] px-[calc(40*var(--scale))]">
         <Image
           src={HomeLogo}
           alt="YAPC::Asia 2025 Fukuoka"
@@ -34,25 +81,35 @@ const announcements = [
           class="max-w-[calc(658*var(--scale))]"
         />
       </h1>
-      <div class="mx-auto w-[1440px] max-w-[100vw] px-[40px] flex justify-end">
-        <div class="w-[calc(474*var(--scale))]">
+      <div class="mx-auto w-[1440px] max-w-[100vw] flex -rotate-1">
+        <div
+          class="w-full max-w-[calc(474*var(--scale))] ml-[calc(400*var(--scale))]"
+        >
           <div
-            class="bg-[#1c2a4c] text-white p-[40px] mt-[calc(120*var(--scale))] relative text-right"
+            class="bg-black text-white p-[calc(20*var(--scale))] relative text-right"
             style="clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);"
           >
-            <p class="text-[calc(22*var(--scale))]">2025.11.14 - 15</p>
-            <p class="text-[calc(28*var(--scale))] font-bold">福岡工業大学</p>
+            <p class="text-[max(12px,calc(22*var(--scale)))] font-ips">
+              2025.11.14 - 15
+            </p>
+            <p class="text-[max(16px,calc(28*var(--scale)))] font-bold">
+              福岡工業大学
+            </p>
             <p
-              class="text-[calc(14*var(--scale))] italic mb-[calc(16*var(--scale))]"
+              class="text-[max(10px,calc(14*var(--scale)))] italic mb-[16px] font-ips"
             >
               Fukuoka Institute of Technology
             </p>
-            <a
-              href="https://yapc.asia/2025fukuoka/"
-              target="_blank"
-              class="inline-flex items-center justify-between bg-white text-[#1c2a4c] px-[calc(20*var(--scale))] py-[calc(12*var(--scale))] rounded-[10px] w-full text-[calc(20*var(--scale))] font-bold hover:bg-gray-100 transition-colors"
+            <span
+              class="inline-flex items-center justify-between
+              bg-white text-black px-[calc(20*var(--scale))] py-[calc(12*var(--scale))] rounded-[5px] w-full text-[calc(20*var(--scale))] font-bold hover:bg-gray-100 transition-colors"
             >
-              チケットを購入
+              <span
+                class="inline-flex items-center gap-[calc(10*var(--scale))]"
+              >
+                <s> チケットを購入 </s>
+                <span class="font-normal">Coming Soon</span>
+              </span>
               <svg
                 class="w-[calc(8*var(--scale))] h-[calc(14*var(--scale))]"
                 viewBox="0 0 8 14"
@@ -65,8 +122,24 @@ const announcements = [
                   stroke-linecap="round"
                   stroke-linejoin="round"></path>
               </svg>
-            </a>
+            </span>
           </div>
+        </div>
+      </div>
+      <div class="mx-auto w-[1440px] max-w-[100vw] rotate-1">
+        <div
+          class="w-[max(700px,calc(720*var(--scale)))] max-w-full bg-black text-white p-[calc(40*var(--scale))] font-bold text-[max(16px,calc(20*var(--scale)))]"
+        >
+          <p>
+            ああああああああああああああああああああああ1
+            ああああああああああああああああああああああ1
+          </p>
+          <p>
+            ああああああああああああああああああああああ1
+            ああああああああああああああああああああああ1
+            ああああああああああああああああああああああ1
+            ああああああああああああああああああああああ1
+          </p>
         </div>
       </div>
     </div>
@@ -86,21 +159,21 @@ const announcements = [
     class="fixed w-full top-0 left-[50%] translate-x-[-50%] h-full z-[-2] top-[200px] max-w-[2000px] mx-auto"
   >
     <Image
-      class="absolute top-[calc(870*var(--scale))] right-0 max-w-[calc(600*var(--scale))]"
+      class="absolute top-[calc(870*var(--scale))] right-0 max-w-[calc(600*var(--scale))] rotate-1"
       src={HomePhoto01}
       alt=""
       width={600}
       densities={[1, 2]}
     />
     <Image
-      class="absolute top-[calc(450*var(--scale))] right-[calc(140*var(--scale))] max-w-[calc(600*var(--scale))]"
+      class="absolute top-[calc(450*var(--scale))] right-[calc(140*var(--scale))] max-w-[calc(600*var(--scale))] -rotate-1"
       src={HomePhoto03}
       alt=""
       width={600}
       densities={[1, 2]}
     />
     <Image
-      class="absolute top-[calc(30*var(--scale))] right-0 max-w-[calc(600*var(--scale))]"
+      class="absolute top-[calc(30*var(--scale))] right-0 max-w-[calc(600*var(--scale))] rotate-1"
       src={HomePhoto04}
       alt=""
       width={600}
@@ -109,37 +182,188 @@ const announcements = [
   </div>
 
   <!-- お知らせセクション -->
-  <section class="bg-[#1c2a4c] py-[calc(150*var(--scale))]">
-    <div class="max-w-[calc(801*var(--scale))] mx-auto px-[40px]">
-      <div class="flex flex-col gap-[calc(20*var(--scale))]">
-        <div class="flex flex-col gap-[calc(7*var(--scale))] items-center">
+  <section class="bg-black py-[calc(150*var(--scale))]">
+    <div class="max-w-[1000px] mx-auto px-[40px]">
+      <div class="flex flex-col gap-[20px]">
+        <div class="flex flex-col gap-[7px] items-center">
           <h2
-            class="text-white text-[calc(26*var(--scale))] font-bold tracking-[0.17em] text-center"
+            class="text-white text-[26px] font-bold tracking-[0.17em] text-center"
           >
             お知らせ
           </h2>
-          <div class="flex flex-col gap-[calc(2*var(--scale))] w-full">
+          <div class="flex flex-col gap-[2px] w-full">
             <div class="bg-white h-[1px] w-full"></div>
             <div class="bg-white h-[2px] w-full"></div>
           </div>
-          <p class="text-white text-[calc(14*var(--scale))] italic text-center">
+          <p class="text-white text-[14px] font-ips italic text-center">
             Announcement
           </p>
         </div>
-        <div class="flex flex-col gap-[calc(5*var(--scale))]">
+        <div class="flex flex-col gap-[5px]">
           {
             announcements.map((announcement) => (
-              <div class="bg-[rgba(255,255,255,0.05)] h-[calc(76*var(--scale))] flex items-center px-[calc(30*var(--scale))] gap-[calc(16*var(--scale))]">
-                <p class="text-white text-[calc(16*var(--scale))] italic tracking-[0.1em]">
+              <a
+                href={announcement.link}
+                class={`bg-[rgba(255,255,255,0.05)] ${announcement.link ? "hover:bg-white/10" : ""} transition-colors flex items-center px-[30px] py-[20px] gap-[16px]`}
+              >
+                <p class="text-white text-[17px] font-ips italic tracking-[0.1em]">
                   {announcement.date}
                 </p>
-                <div class="bg-white w-[1px] h-[calc(38*var(--scale))]" />
-                <p class="text-white text-[calc(18*var(--scale))] font-bold tracking-[0.17em]">
+                <div class="bg-white w-[1px] h-[50px]" />
+                <p class="text-white text-[18px] font-bold tracking-[0.17em] flex gap-[10px] items-center">
                   {announcement.content}
+                  {announcement.link && (
+                    <svg
+                      width="18"
+                      height="21"
+                      viewBox="0 0 18 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="link-arrow transition-colors"
+                    >
+                      <path
+                        d="M2 3.15411H16M16 3.15411V17.1541M16 3.15411L3.15411 16"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                  )}
+                </p>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ゲストスピーカーセクション -->
+  <style>
+    .textStroke {
+      -webkit-text-stroke: 1px var(--color-black);
+      text-stroke: 1px var(--color-black);
+    }
+
+    .duotone {
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: var(--color-primary);
+    }
+
+    .duotone img {
+      filter: grayscale(100%) contrast(1.5) brightness(1.5);
+      mix-blend-mode: multiply;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter 0.3s ease;
+    }
+
+    .duotone:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-black);
+      mix-blend-mode: lighten;
+    }
+
+    .duotone:hover img {
+      filter: grayscale(0%);
+    }
+
+    .duotone:hover,
+    .duotone:hover:after {
+      background-color: transparent;
+    }
+  </style>
+  <section class="bg-white py-[calc(70*var(--scale))]">
+    <div class="max-w-[calc(1440*var(--scale))] mx-auto px-[20px]">
+      <div
+        class="flex flex-col gap-[calc(130*var(--scale))] items-center relative"
+      >
+        <!-- タイトル -->
+        <div class="relative w-full">
+          <div
+            class="text-[calc(150*var(--scale))] italic font-ips text-gray-100 leading-[0.8] top-0 left-0 text-white"
+            aria-hidden="true"
+          >
+            Guest<br />Speakers
+            <div class="absolute top-0 left-0 textStroke">
+              Guest<br />Speakers
+            </div>
+          </div>
+          <h2
+            class="absolute text-[calc(96*var(--scale))] font-bold text-black bottom-0 translate-y-[50%] left-[calc(120*var(--scale))]"
+          >
+            ゲストスピーカー
+          </h2>
+        </div>
+        <div
+          class="relative flex justify-between w-full gap-[calc(100*var(--scale))]"
+        >
+          {
+            guestSpeakers.map((speaker, index) => (
+              <div class="flex flex-col items-center gap-[calc(27*var(--scale))] flex-1">
+                <div class="w-[calc(340*var(--scale))] h-[calc(340*var(--scale))] duotone">
+                  <img src={speaker.imageUrl} alt={speaker.name} />
+                </div>
+                <div class="flex flex-col items-center">
+                  <p class="text-[calc(16*var(--scale))] font-ips">
+                    {speaker.role}
+                  </p>
+                  <p class="text-[calc(24*var(--scale))] font-bold">
+                    {speaker.name}
+                  </p>
+                </div>
+                <p class="text-[calc(14*var(--scale))] text-[#1c2a4c] w-[calc(340*var(--scale))]  leading-[1.36]">
+                  {speaker.description}
                 </p>
               </div>
             ))
           }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- スポンサーセクション -->
+  <section class="bg-[#ff9534] py-[calc(70*var(--scale))]">
+    <div
+      class="max-w-[calc(1440*var(--scale))] mx-auto px-[calc(100*var(--scale))]"
+    >
+      <div class="flex flex-col gap-[calc(10*var(--scale))]">
+        <!-- タイトル -->
+        <div class="relative">
+          <h2
+            class="text-[calc(150*var(--scale))] italic font-['IBM_Plex_Sans'] text-white/20 leading-[0.863]"
+          >
+            Sponsors
+          </h2>
+          <p
+            class="absolute top-[calc(108*var(--scale))] left-[calc(106*var(--scale))] text-[calc(96*var(--scale))] font-bold text-[#1c2a4c] leading-[0.863]"
+          >
+            スポンサー
+          </p>
+        </div>
+
+        <!-- スポンサーロゴグリッド -->
+        <div class="py-[calc(60*var(--scale))]">
+          <div class="grid grid-cols-3 gap-[calc(20*var(--scale))]">
+            {
+              sponsors.map((sponsor) => (
+                <div class="bg-white rounded-[10px] aspect-square flex items-center justify-center p-[calc(40*var(--scale))]">
+                  <img
+                    src={sponsor.logoUrl}
+                    alt={sponsor.name}
+                    class="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>
