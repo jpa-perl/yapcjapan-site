@@ -6,6 +6,9 @@ import HomePhoto01 from "../assets/home-photo-01.jpg";
 import HomePhoto03 from "../assets/home-photo-03.jpg";
 import HomePhoto04 from "../assets/home-photo-04.jpg";
 import Menu from "../components/Menu.astro";
+import OutlinedTitle from "../components/OutlinedTitle.astro";
+import Speakers from "../components/Speakers.astro";
+import Sponsors from "../components/Sponsors.astro";
 
 // お知らせデータ
 const announcements = [
@@ -19,47 +22,6 @@ const announcements = [
   {
     date: "2025.11.01",
     content: "YAPC::Asia 2025 Fukuokaのサイトを公開しました",
-  },
-];
-
-// ゲストスピーカーデータ
-const guestSpeakers = [
-  {
-    name: "ゲストスピーカー",
-    role: "guest speaker",
-    description:
-      "ゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてください",
-    imageUrl: "https://i.pravatar.cc/400",
-  },
-  {
-    name: "ゲストスピーカー",
-    role: "guest speaker",
-    description:
-      "ゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてください",
-    imageUrl: "https://i.pravatar.cc/400",
-  },
-  {
-    name: "ゲストスピーカー",
-    role: "guest speaker",
-    description:
-      "ゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてくださいゲストスピーカーの紹介文を入れてください",
-    imageUrl: "https://i.pravatar.cc/400",
-  },
-];
-
-// スポンサーデータ
-const sponsors = [
-  { name: "DeNA", logoUrl: "https://via.placeholder.com/300x120?text=DeNA" },
-  { name: "neumo", logoUrl: "https://via.placeholder.com/300x120?text=neumo" },
-  {
-    name: "Helpfeel",
-    logoUrl: "https://via.placeholder.com/300x120?text=Helpfeel",
-  },
-  { name: "DeNA", logoUrl: "https://via.placeholder.com/300x120?text=DeNA" },
-  { name: "neumo", logoUrl: "https://via.placeholder.com/300x120?text=neumo" },
-  {
-    name: "Helpfeel",
-    logoUrl: "https://via.placeholder.com/300x120?text=Helpfeel",
   },
 ];
 ---
@@ -81,7 +43,7 @@ const sponsors = [
           class="max-w-[calc(658*var(--scale))]"
         />
       </h1>
-      <div class="mx-auto w-[1440px] max-w-[100vw] flex -rotate-1">
+      <div class="mx-auto w-[1440px] max-w-[100vw] flex">
         <div
           class="w-full max-w-[calc(474*var(--scale))] ml-[calc(400*var(--scale))]"
         >
@@ -126,7 +88,7 @@ const sponsors = [
           </div>
         </div>
       </div>
-      <div class="mx-auto w-[1440px] max-w-[100vw] rotate-1">
+      <div class="mx-auto w-[1440px] max-w-[100vw]">
         <div
           class="w-[max(700px,calc(720*var(--scale)))] max-w-full bg-black text-white p-[calc(40*var(--scale))] font-bold text-[max(16px,calc(20*var(--scale)))]"
         >
@@ -159,21 +121,21 @@ const sponsors = [
     class="fixed w-full top-0 left-[50%] translate-x-[-50%] h-full z-[-2] top-[200px] max-w-[2000px] mx-auto"
   >
     <Image
-      class="absolute top-[calc(870*var(--scale))] right-0 max-w-[calc(600*var(--scale))] rotate-1"
+      class="absolute top-[calc(870*var(--scale))] right-0 max-w-[calc(600*var(--scale))]"
       src={HomePhoto01}
       alt=""
       width={600}
       densities={[1, 2]}
     />
     <Image
-      class="absolute top-[calc(450*var(--scale))] right-[calc(140*var(--scale))] max-w-[calc(600*var(--scale))] -rotate-1"
+      class="absolute top-[calc(450*var(--scale))] right-[calc(140*var(--scale))] max-w-[calc(600*var(--scale))]"
       src={HomePhoto03}
       alt=""
       width={600}
       densities={[1, 2]}
     />
     <Image
-      class="absolute top-[calc(30*var(--scale))] right-0 max-w-[calc(600*var(--scale))] rotate-1"
+      class="absolute top-[calc(30*var(--scale))] right-0 max-w-[calc(600*var(--scale))]"
       src={HomePhoto04}
       alt=""
       width={600}
@@ -236,135 +198,20 @@ const sponsors = [
     </div>
   </section>
 
-  <!-- ゲストスピーカーセクション -->
-  <style>
-    .textStroke {
-      -webkit-text-stroke: 1px var(--color-black);
-      text-stroke: 1px var(--color-black);
-    }
-
-    .duotone {
-      position: relative;
-      overflow: hidden;
-      border-radius: 50%;
-      background-color: var(--color-primary);
-    }
-
-    .duotone img {
-      filter: grayscale(100%) contrast(1.5) brightness(1.5);
-      mix-blend-mode: multiply;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: filter 0.3s ease;
-    }
-
-    .duotone:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: var(--color-black);
-      mix-blend-mode: lighten;
-    }
-
-    .duotone:hover img {
-      filter: grayscale(0%);
-    }
-
-    .duotone:hover,
-    .duotone:hover:after {
-      background-color: transparent;
-    }
-  </style>
   <section class="bg-white py-[calc(70*var(--scale))]">
     <div class="max-w-[calc(1440*var(--scale))] mx-auto px-[20px]">
       <div
         class="flex flex-col gap-[calc(130*var(--scale))] items-center relative"
       >
-        <!-- タイトル -->
-        <div class="relative w-full">
-          <div
-            class="text-[calc(150*var(--scale))] italic font-ips text-gray-100 leading-[0.8] top-0 left-0 text-white"
-            aria-hidden="true"
-          >
-            Guest<br />Speakers
-            <div class="absolute top-0 left-0 textStroke">
-              Guest<br />Speakers
-            </div>
-          </div>
-          <h2
-            class="absolute text-[calc(96*var(--scale))] font-bold text-black bottom-0 translate-y-[50%] left-[calc(120*var(--scale))]"
-          >
-            ゲストスピーカー
-          </h2>
-        </div>
-        <div
-          class="relative flex justify-between w-full gap-[calc(100*var(--scale))]"
-        >
-          {
-            guestSpeakers.map((speaker, index) => (
-              <div class="flex flex-col items-center gap-[calc(27*var(--scale))] flex-1">
-                <div class="w-[calc(340*var(--scale))] h-[calc(340*var(--scale))] duotone">
-                  <img src={speaker.imageUrl} alt={speaker.name} />
-                </div>
-                <div class="flex flex-col items-center">
-                  <p class="text-[calc(16*var(--scale))] font-ips">
-                    {speaker.role}
-                  </p>
-                  <p class="text-[calc(24*var(--scale))] font-bold">
-                    {speaker.name}
-                  </p>
-                </div>
-                <p class="text-[calc(14*var(--scale))] text-[#1c2a4c] w-[calc(340*var(--scale))]  leading-[1.36]">
-                  {speaker.description}
-                </p>
-              </div>
-            ))
-          }
-        </div>
+        <Speakers />
       </div>
     </div>
   </section>
 
-  <!-- スポンサーセクション -->
-  <section class="bg-[#ff9534] py-[calc(70*var(--scale))]">
-    <div
-      class="max-w-[calc(1440*var(--scale))] mx-auto px-[calc(100*var(--scale))]"
-    >
-      <div class="flex flex-col gap-[calc(10*var(--scale))]">
-        <!-- タイトル -->
-        <div class="relative">
-          <h2
-            class="text-[calc(150*var(--scale))] italic font-['IBM_Plex_Sans'] text-white/20 leading-[0.863]"
-          >
-            Sponsors
-          </h2>
-          <p
-            class="absolute top-[calc(108*var(--scale))] left-[calc(106*var(--scale))] text-[calc(96*var(--scale))] font-bold text-[#1c2a4c] leading-[0.863]"
-          >
-            スポンサー
-          </p>
-        </div>
-
-        <!-- スポンサーロゴグリッド -->
-        <div class="py-[calc(60*var(--scale))]">
-          <div class="grid grid-cols-3 gap-[calc(20*var(--scale))]">
-            {
-              sponsors.map((sponsor) => (
-                <div class="bg-white rounded-[10px] aspect-square flex items-center justify-center p-[calc(40*var(--scale))]">
-                  <img
-                    src={sponsor.logoUrl}
-                    alt={sponsor.name}
-                    class="max-w-full max-h-full object-contain"
-                  />
-                </div>
-              ))
-            }
-          </div>
-        </div>
+  <section class="bg-primary py-[calc(70*var(--scale))]">
+    <div class="max-w-[calc(1440*var(--scale))] mx-auto px-[20px]">
+      <div class="flex flex-col gap-[calc(130*var(--scale))]">
+        <Sponsors />
       </div>
     </div>
   </section>
