@@ -1,0 +1,110 @@
+---
+import { Image } from "astro:assets";
+import HomeLogo from "../assets/home-logo.png";
+import HomePhoto01 from "../assets/home-photo-01.jpg";
+import HomePhoto03 from "../assets/home-photo-03.jpg";
+import HomePhoto04 from "../assets/home-photo-04.jpg";
+---
+
+<div
+  class="grid grid-rows-[auto_1fr_auto] mb-[4vh] gap-[40px] sm:gap-[2vh] mt-[calc(80*var(--scale))]"
+>
+  <h1 class="mx-auto w-[1440px] max-w-[100vw] px-[calc(40*var(--scale))]">
+    <Image
+      src={HomeLogo}
+      alt="YAPC::Asia 2025 Fukuoka"
+      width={658}
+      densities={[1, 2]}
+      class="max-w-[calc(1300*var(--scale))] md:max-w-[calc(658*var(--scale))]"
+    />
+  </h1>
+  <div
+    class="mx-auto w-[1440px] max-w-[100vw] flex items-end lg:items-center justify-end lg:justify-start"
+  >
+    <div
+      class="md:w-md lg:w-full lg:max-w-[calc(474*var(--scale))] lg:ml-[calc(400*var(--scale))]"
+    >
+      <div
+        class="bg-black text-white p-5 md:p-[calc(20*var(--scale))] relative text-right"
+        style="clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);"
+      >
+        <p class="text-base lg:text-2xl font-ips md:mb-1">2025.11.14 - 15</p>
+        <p class="text-xl lg:text-3xl font-bold">福岡工業大学</p>
+        <p class="text-xs lg:text-sm italic mb-[16px] font-ips">
+          Fukuoka Institute of Technology
+        </p>
+        <!--span
+              class="flex items-center justify-between gap-6
+              bg-white text-black px-5 py-[calc(12*var(--scale))] rounded-[5px] w-full xl:text-xl font-bold hover:bg-gray-100 transition-colors"
+            >
+              <span
+                class="flex flex-col sm:flex-row items-center gap-[calc(10*var(--scale))]"
+              >
+                <s> チケットを購入 </s>
+                <span class="text-xs sm:text-sm font-normal">Coming Soon</span>
+              </span>
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                <path
+                  d="M1 1L7 7L1 13"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span-->
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto w-[1440px] max-w-[100vw]">
+    <div
+      class="w-[max(800px,calc(800*var(--scale)))] max-w-full bg-black text-white p-[calc(40*var(--scale))] font-bold text-[max(15px,calc(20*var(--scale)))]"
+    >
+      <p>
+        この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れ
+      </p>
+    </div>
+  </div>
+</div>
+<div class="fixed w-full top-0 left-0 w-full h-full z-[-2]">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1200 1800"
+    fill="none"
+    class="absolute top-[250px] lg:top-[80px] right-0 w-[110vw] xl:w-[calc(1200*var(--scale))]"
+  >
+    <path fill="#FF9534" d="M361 525 1200 0v957L361 525Z"></path>
+    <path fill="#F78822" d="m361 525 839 432v843L0 1121l361-596Z"></path>
+  </svg>
+</div>
+<div
+  class="fixed w-full left-[50%] translate-x-[-50%] h-full z-[-2] hidden md:block top-[200px] max-w-[2000px] mx-auto"
+>
+  <Image
+    class="absolute top-[calc(870*var(--scale))] right-0 max-w-[calc(600*var(--scale))]"
+    src={HomePhoto01}
+    alt=""
+    width={600}
+    densities={[1, 2]}
+  />
+  <Image
+    class="absolute top-[calc(450*var(--scale))] right-[calc(140*var(--scale))] max-w-[calc(600*var(--scale))]"
+    src={HomePhoto03}
+    alt=""
+    width={600}
+    densities={[1, 2]}
+  />
+  <Image
+    class="absolute top-[calc(30*var(--scale))] right-0 max-w-[calc(600*var(--scale))]"
+    src={HomePhoto04}
+    alt=""
+    width={600}
+    densities={[1, 2]}
+  />
+</div>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+</script>
