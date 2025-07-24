@@ -4,6 +4,7 @@ import HomeLogo from "../assets/home-logo.png";
 import HomePhoto01 from "../assets/home-photo-01.jpg";
 import HomePhoto03 from "../assets/home-photo-03.jpg";
 import HomePhoto04 from "../assets/home-photo-04.jpg";
+import Que from "../assets/que.svg";
 ---
 
 <div
@@ -101,10 +102,102 @@ import HomePhoto04 from "../assets/home-photo-04.jpg";
     densities={[1, 2]}
   />
 </div>
+<div
+  class="fixed w-full h-full top-0 z-[-2] pointer-events-none"
+  id="que-container"
+>
+  <Que class="que-element absolute text-secondary" />
+  <Que class="que-element absolute text-white" />
+  <Que class="que-element absolute text-black" />
+  <Que class="que-element absolute text-secondary" />
+  <Que class="que-element absolute text-white" />
+  <Que class="que-element absolute text-black" />
+  <Que class="que-element absolute text-secondary" />
+  <Que class="que-element absolute text-white" />
+  <Que class="que-element absolute text-black" />
+  <Que class="que-element absolute text-secondary" />
+</div>
 
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
+
+  const queElements = gsap.utils.toArray(".que-element") as HTMLElement[];
+
+  function setRandomPosition(element: HTMLElement) {
+    const isMobile = window.innerWidth < 768;
+    const rightMin = isMobile ? 0 : 0;
+    const rightMax = isMobile ? 80 : 50;
+    const right = rightMin + Math.random() * (rightMax - rightMin);
+
+    const top = 5 + Math.random() * 80;
+
+    const scaleMin = isMobile ? 0.1 : 0.2;
+    const scaleMax = isMobile ? 0.6 : 1.0;
+    const scale = scaleMin + Math.random() * (scaleMax - scaleMin);
+
+    gsap.set(element, {
+      right: `${right}%`,
+      top: `${top}%`,
+      scale: scale,
+    });
+
+    element.dataset.baseScale = scale.toString();
+  }
+
+  queElements.forEach((que, index) => {
+    const randomDelay = Math.random() * 1;
+    const randomDuration = Math.random() * 0.5;
+    const randomRotation = Math.random() * 360;
+
+    setRandomPosition(que);
+    const baseScale = parseFloat(que.dataset.baseScale || "1");
+
+    // 大きさに基づいてパララックス速度を計算（大きい=近い=速い）
+    const parallaxSpeed = baseScale * 10;
+
+    gsap.set(que, {
+      opacity: 0,
+      scale: 0,
+      rotation: randomRotation,
+    });
+
+    gsap.to(que, {
+      opacity: 1,
+      scale: baseScale,
+      rotation: randomRotation + 360,
+      duration: randomDuration,
+      delay: randomDelay,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#que-container",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.to(que, {
+      y: "random(-30, 30)",
+      x: "random(-30, 30)",
+      rotation: "+=random(-30, 30)",
+      duration: "random(4, 8)",
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+      delay: randomDelay + randomDuration,
+    });
+
+    gsap.to(que, {
+      yPercent: -150 * parallaxSpeed,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+      },
+    });
+  });
 </script>
