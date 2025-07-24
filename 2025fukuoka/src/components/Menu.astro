@@ -278,6 +278,8 @@ const links = [
 </style>
 
 <script>
+  import { gsap } from "gsap";
+  
   document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById(
@@ -286,34 +288,104 @@ const links = [
     const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
     const body = document.body;
 
+    // モバイルメニューのアニメーション設定
+    gsap.set(mobileMenuLinks, {
+      opacity: 0,
+      x: -30,
+    });
+
+    const mobileMenuTl = gsap.timeline({ paused: true });
+    mobileMenuTl.to(mobileMenuLinks, {
+      opacity: 1,
+      x: 0,
+      duration: 0.4,
+      stagger: 0.08,
+      ease: "power2.out",
+    });
+
+    // メニューアイコンのアニメーション
+    const menuIconSpans = menuToggle?.querySelectorAll("span");
+    const iconTl = gsap.timeline({ paused: true });
+    
+    if (menuIconSpans) {
+      iconTl
+        .to(menuIconSpans[0], {
+          rotation: 45,
+          y: 10,
+          duration: 0.3,
+          ease: "power2.inOut",
+        }, 0)
+        .to(menuIconSpans[1], {
+          opacity: 0,
+          duration: 0.2,
+        }, 0)
+        .to(menuIconSpans[2], {
+          rotation: -45,
+          y: -10,
+          duration: 0.3,
+          ease: "power2.inOut",
+        }, 0);
+    }
+
     menuToggle?.addEventListener("click", () => {
       if (mobileMenu.open) {
         mobileMenu.close();
         body.classList.remove("menu-open");
+        mobileMenuTl.reverse();
+        iconTl.reverse();
       } else {
         mobileMenu.showModal();
         body.classList.add("menu-open");
+        mobileMenuTl.play();
+        iconTl.play();
       }
     });
 
     mobileMenuLinks.forEach((link) => {
       link.addEventListener("click", () => {
-        mobileMenu.close();
-        body.classList.remove("menu-open");
+        mobileMenuTl.reverse();
+        iconTl.reverse();
+        setTimeout(() => {
+          mobileMenu.close();
+          body.classList.remove("menu-open");
+        }, 300);
       });
     });
 
     // ESCキーで閉じた時の処理
     mobileMenu?.addEventListener("close", () => {
       body.classList.remove("menu-open");
+      mobileMenuTl.reverse();
+      iconTl.reverse();
     });
 
     // バックドロップクリックで閉じる
     mobileMenu?.addEventListener("click", (e) => {
       if (e.target === mobileMenu) {
-        mobileMenu.close();
-        body.classList.remove("menu-open");
+        mobileMenuTl.reverse();
+        iconTl.reverse();
+        setTimeout(() => {
+          mobileMenu.close();
+          body.classList.remove("menu-open");
+        }, 300);
       }
+    });
+    
+    // メニュートグルボタンのホバーエフェクト
+    menuToggle?.addEventListener("mouseenter", () => {
+      gsap.to(menuToggle, {
+        scale: 1.1,
+        duration: 0.2,
+        ease: "power2.inOut",
+      });
+    });
+    
+    menuToggle?.addEventListener("mouseleave", () => {
+      gsap.to(menuToggle, {
+        scale: 1,
+        duration: 0.2,
+        ease: "power2.inOut",
+      });
     });
   });
 </script>
