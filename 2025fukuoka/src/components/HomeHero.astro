@@ -23,9 +23,7 @@ import Que from "../assets/que.svg";
   <div
     class="mx-auto w-[1440px] max-w-[100vw] flex items-end lg:items-center justify-end lg:justify-start"
   >
-    <div
-      class="md:w-md lg:w-full lg:max-w-[calc(474*var(--scale))] lg:ml-[calc(400*var(--scale))]"
-    >
+    <div class="md:w-md lg:w-full lg:max-w-[calc(474*var(--scale))]">
       <div
         class="bg-black text-white p-5 md:p-[calc(20*var(--scale))] relative text-right"
         style="clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);"
@@ -58,67 +56,57 @@ import Que from "../assets/que.svg";
       </div>
     </div>
   </div>
-  <div class="mx-auto w-[1440px] max-w-[100vw]">
-    <div
-      class="w-[max(800px,calc(800*var(--scale)))] max-w-full bg-black text-white p-[calc(40*var(--scale))] font-bold text-[max(15px,calc(20*var(--scale)))]"
-      id="hero-message"
+  <div class="fixed w-full top-0 left-0 w-full h-full z-[-2]">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 1800"
+      fill="none"
+      class="absolute top-[250px] lg:top-[80px] right-0 w-[110vw] xl:w-[calc(1200*var(--scale))]"
     >
-      <p>
-        この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れ
-      </p>
-    </div>
+      <path fill="#FF9534" d="M361 525 1200 0v957L361 525Z"></path>
+      <path fill="#F78822" d="m361 525 839 432v843L0 1121l361-596Z"></path>
+    </svg>
   </div>
-</div>
-<div class="fixed w-full top-0 left-0 w-full h-full z-[-2]">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1200 1800"
-    fill="none"
-    class="absolute top-[250px] lg:top-[80px] right-0 w-[110vw] xl:w-[calc(1200*var(--scale))]"
+  <div
+    class="fixed w-full left-[50%] translate-x-[-50%] h-full z-[-2] hidden md:block top-[200px] max-w-[2000px] mx-auto"
   >
-    <path fill="#FF9534" d="M361 525 1200 0v957L361 525Z"></path>
-    <path fill="#F78822" d="m361 525 839 432v843L0 1121l361-596Z"></path>
-  </svg>
-</div>
-<div
-  class="fixed w-full left-[50%] translate-x-[-50%] h-full z-[-2] hidden md:block top-[200px] max-w-[2000px] mx-auto"
->
-  <Image
-    class="absolute top-[calc(870*var(--scale))] right-0 max-w-[calc(600*var(--scale))] hero-photo"
-    src={HomePhoto01}
-    alt=""
-    width={600}
-    densities={[1, 2]}
-  />
-  <Image
-    class="absolute top-[calc(450*var(--scale))] right-[calc(140*var(--scale))] max-w-[calc(600*var(--scale))] hero-photo"
-    src={HomePhoto03}
-    alt=""
-    width={600}
-    densities={[1, 2]}
-  />
-  <Image
-    class="absolute top-[calc(30*var(--scale))] right-0 max-w-[calc(600*var(--scale))] hero-photo"
-    src={HomePhoto04}
-    alt=""
-    width={600}
-    densities={[1, 2]}
-  />
-</div>
-<div
-  class="fixed w-full h-full top-0 z-[-2] pointer-events-none"
-  id="que-container"
->
-  <Que class="que-element absolute text-secondary" />
-  <Que class="que-element absolute text-white" />
-  <Que class="que-element absolute text-black" />
-  <Que class="que-element absolute text-secondary" />
-  <Que class="que-element absolute text-white" />
-  <Que class="que-element absolute text-black" />
-  <Que class="que-element absolute text-secondary" />
-  <Que class="que-element absolute text-white" />
-  <Que class="que-element absolute text-black" />
-  <Que class="que-element absolute text-secondary" />
+    <Image
+      class="absolute top-[calc(870*var(--scale))] right-0 max-w-[calc(600*var(--scale))] hero-photo"
+      src={HomePhoto01}
+      alt=""
+      width={600}
+      densities={[1, 2]}
+    />
+    <Image
+      class="absolute top-[calc(450*var(--scale))] right-[calc(140*var(--scale))] max-w-[calc(600*var(--scale))] hero-photo"
+      src={HomePhoto03}
+      alt=""
+      width={600}
+      densities={[1, 2]}
+    />
+    <Image
+      class="absolute top-[calc(30*var(--scale))] right-0 max-w-[calc(600*var(--scale))] hero-photo"
+      src={HomePhoto04}
+      alt=""
+      width={600}
+      densities={[1, 2]}
+    />
+  </div>
+  <div
+    class="fixed w-full h-full top-0 z-[-2] pointer-events-none"
+    id="que-container"
+  >
+    <Que class="que-element absolute text-secondary" />
+    <Que class="que-element absolute text-white" />
+    <Que class="que-element absolute text-black" />
+    <Que class="que-element absolute text-secondary" />
+    <Que class="que-element absolute text-white" />
+    <Que class="que-element absolute text-black" />
+    <Que class="que-element absolute text-secondary" />
+    <Que class="que-element absolute text-white" />
+    <Que class="que-element absolute text-black" />
+    <Que class="que-element absolute text-secondary" />
+  </div>
 </div>
 
 <script>
@@ -134,7 +122,6 @@ import Que from "../assets/que.svg";
       logo: { start: 0.4, duration: 1.0 },
       photos: { start: 0.8, stagger: 0.2 },
       dateCard: { start: 1.0 },
-      message: { start: 1.1 },
       svg: { start: 0.1, duration: 0.8 },
       queElements: { start: 1.0, stagger: 0.05, duration: 1.6 },
       menu: { start: 0.2, stagger: 0.08, duration: 0.8 },
@@ -278,7 +265,6 @@ import Que from "../assets/que.svg";
   const animationTargets = {
     logo: document.getElementById("hero-logo"),
     dateCard: document.getElementById("date-card"),
-    message: document.getElementById("hero-message"),
     svg: document.querySelector(".fixed svg") as SVGElement,
     photos: gsap.utils.toArray(".hero-photo") as HTMLElement[],
     queElements: gsap.utils.toArray(".que-element") as HTMLElement[],
@@ -353,17 +339,7 @@ import Que from "../assets/que.svg";
     applyParallaxEffect(photo, parallaxSpeed);
   });
 
-  // 5. メッセージアニメーション
-  setInitialState(animationTargets.message);
-  if (animationTargets.message) {
-    masterTl.to(
-      animationTargets.message,
-      createFadeInAnimation(animationTargets.message, 0.6),
-      ANIMATION_CONFIG.timing.message.start
-    );
-  }
-
-  // 6. SVGアニメーション
+  // 5. SVGアニメーション
   if (animationTargets.svg) {
     gsap.set(animationTargets.svg, {
       opacity: 0,
