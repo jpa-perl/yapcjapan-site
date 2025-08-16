@@ -28,6 +28,10 @@
     --scale: calc(min(100vw, 1440px) / 1440);
     --font-scale: max(var(--scale), 0.7);
   }
+
+  body {
+    font-feature-settings: palt;
+  }
 }
 
 .inner {
