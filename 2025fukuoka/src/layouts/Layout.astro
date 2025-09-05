@@ -18,6 +18,19 @@ const backgroundImage = `url(${headerPat.src})`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <script is:inline>
+      document.documentElement.classList.add("js", "is-preload");
+      const removePreload = () => {
+        document.documentElement.classList.remove("is-preload");
+      };
+      window.addEventListener("app:gsap-start", removePreload, { once: true });
+      window.addEventListener("load", removePreload, { once: true });
+    </script>
+    <style is:inline>
+      .js.is-preload body {
+        opacity: 0;
+      }
+    </style>
     <link rel="icon" type="image/svg+xml" href={favicon.src} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
