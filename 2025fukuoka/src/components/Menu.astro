@@ -11,6 +11,7 @@ const links = [
     label_jp: "講演者",
     href: "#guest-speakers",
   },
+  /*
   {
     label: "Sponsors",
     label_jp: "スポンサー",
@@ -21,6 +22,7 @@ const links = [
     label_jp: "タイムテーブル",
     href: "https://fortee.jp/",
   },
+  */
 ];
 ---
 
@@ -99,7 +101,7 @@ const links = [
           <a
             href={link.href.startsWith("#") ? `${base}${link.href}` : link.href}
             target={link.href.startsWith("http") ? "_blank" : "_self"}
-            class="menu-link block flex flex-col h-full relative overflow-hidden"
+            class="menu-link  flex flex-col h-full relative overflow-hidden"
           >
             <div class="font-ips text-[17px] italic flex justify-between items-center w-full gap-2 relative z-10 transition-colors">
               <span>{link.label}</span>
@@ -279,7 +281,7 @@ const links = [
 
 <script>
   import { gsap } from "gsap";
-  
+
   document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById(
@@ -306,25 +308,37 @@ const links = [
     // メニューアイコンのアニメーション
     const menuIconSpans = menuToggle?.querySelectorAll("span");
     const iconTl = gsap.timeline({ paused: true });
-    
+
     if (menuIconSpans) {
       iconTl
-        .to(menuIconSpans[0], {
-          rotation: 45,
-          y: 10,
-          duration: 0.3,
-          ease: "power2.inOut",
-        }, 0)
-        .to(menuIconSpans[1], {
-          opacity: 0,
-          duration: 0.2,
-        }, 0)
-        .to(menuIconSpans[2], {
-          rotation: -45,
-          y: -10,
-          duration: 0.3,
-          ease: "power2.inOut",
-        }, 0);
+        .to(
+          menuIconSpans[0],
+          {
+            rotation: 45,
+            y: 10,
+            duration: 0.3,
+            ease: "power2.inOut",
+          },
+          0
+        )
+        .to(
+          menuIconSpans[1],
+          {
+            opacity: 0,
+            duration: 0.2,
+          },
+          0
+        )
+        .to(
+          menuIconSpans[2],
+          {
+            rotation: -45,
+            y: -10,
+            duration: 0.3,
+            ease: "power2.inOut",
+          },
+          0
+        );
     }
 
     menuToggle?.addEventListener("click", () => {
@@ -370,7 +384,7 @@ const links = [
         }, 300);
       }
     });
-    
+
     // メニュートグルボタンのホバーエフェクト
     menuToggle?.addEventListener("mouseenter", () => {
       gsap.to(menuToggle, {
@@ -379,13 +393,31 @@ const links = [
         ease: "power2.inOut",
       });
     });
-    
+
     menuToggle?.addEventListener("mouseleave", () => {
       gsap.to(menuToggle, {
         scale: 1,
         duration: 0.2,
         ease: "power2.inOut",
       });
+    });
+  });
+
+  // フラグメントIDをクリックしたらスムーズに移動
+  const menuLinks = document.querySelectorAll(
+    ".menu-link"
+  ) as NodeListOf<HTMLAnchorElement>;
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const target = link.hash.split("#")[1];
+      const targetElement = document.getElementById(target);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          location.href = link.href;
+        }, 500);
+      }
     });
   });
 </script>
