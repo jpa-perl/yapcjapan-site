@@ -385,4 +385,9 @@ import Que from "../assets/que.svg";
       ANIMATION_CONFIG.timing.queElements.start + delay
     );
   });
+
+  // タイムラインが再生開始したタイミングで全体のプレロードを解除
+  masterTl.eventCallback("onStart", () => {
+    window.dispatchEvent(new Event("app:gsap-start"));
+  });
 </script>
