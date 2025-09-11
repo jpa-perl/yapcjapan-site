@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { title } = Astro.props as Props;
+const htmlTitle = title && `${title} | ` + `YAPC::Asia 2025 Fukuoka`;
 const backgroundImage = `url(${headerPat.src})`;
 ---
 
@@ -38,7 +39,26 @@ const backgroundImage = `url(${headerPat.src})`;
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>{title && `${title} | ` + `YAPC::Asia 2025 Fukuoka`}</title>
+    <title>{htmlTitle}</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content={htmlTitle} />
+    <meta name="twitter:title" content={htmlTitle} />
+    <meta
+      property="og:description"
+      content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。"
+    />
+    <meta
+      name="twitter:description"
+      content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。"
+    />
+    <meta
+      property="og:image"
+      content="https://yapcjapan.org/2025fukuoka/og-image.png"
+    />
+    <meta
+      name="twitter:image"
+      content="https://yapcjapan.org/2025fukuoka/og-image.png"
+    />
   </head>
   <body class="bg-bg text-black">
     <span class="_border"></span>
