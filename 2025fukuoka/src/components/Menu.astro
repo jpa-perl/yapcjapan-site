@@ -1,0 +1,423 @@
+---
+const base = import.meta.env.BASE_URL;
+const links = [
+  {
+    label: "Announcements",
+    label_jp: "お知らせ",
+    href: "#announcements",
+  },
+  {
+    label: "Guest Speakers",
+    label_jp: "講演者",
+    href: "#guest-speakers",
+  },
+  /*
+  {
+    label: "Sponsors",
+    label_jp: "スポンサー",
+    href: "#sponsors",
+  },
+  {
+    label: "Timetable",
+    label_jp: "タイムテーブル",
+    href: "https://fortee.jp/",
+  },
+  */
+];
+---
+
+<nav
+  class="pt-[calc(100*var(--scale))] md:px-[40px] px-4 w-[1440px] max-w-[100vw] mx-auto relative"
+>
+  <button
+    id="menu-toggle"
+    class="md:hidden fixed top-4 right-4 z-50 p-2 bg-white border-1 border-black"
+    aria-label="メニューを開く"
+  >
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+
+  <dialog id="mobile-menu" class="mobile-menu">
+    <button
+      class="absolute top-4 right-4 z-50 p-2 bg-white border-1 border-black"
+      aria-label="メニューを閉じる"
+      onclick="this.closest('dialog').close(); document.body.classList.remove('menu-open')"
+    >
+      <div class="menu-icon menu-icon-close">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    <ul class="flex flex-col gap-8 p-8 pt-24">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={
+                link.href.startsWith("#") ? `${base}${link.href}` : link.href
+              }
+              target={link.href.startsWith("http") ? "_blank" : "_self"}
+              class="mobile-menu-link block"
+            >
+              <div class="flex justify-between items-center">
+                <div>
+                  <div class="text-sm  opacity-80 font-ips italic">
+                    {link.label}
+                  </div>
+                  <div class="text-xl  mt-1">{link.label_jp}</div>
+                </div>
+                {link.href.startsWith("http") && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 18 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-colors"
+                  >
+                    <path
+                      d="M2 3.15411H16M16 3.15411V17.1541M16 3.15411L3.15411 16"
+                      stroke="currentColor"
+                    />
+                  </svg>
+                )}
+              </div>
+              <div class="border-b-2 border-white mt-4" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </dialog>
+  <ul class="hidden md:flex gap-6">
+    {
+      links.map((link, index) => (
+        <li class="relative w-[180px]">
+          <a
+            href={link.href.startsWith("#") ? `${base}${link.href}` : link.href}
+            target={link.href.startsWith("http") ? "_blank" : "_self"}
+            class="menu-link  flex flex-col h-full relative overflow-hidden"
+          >
+            <div class="font-ips text-[17px] italic flex justify-between items-center w-full gap-2 relative z-10 transition-colors">
+              <span>{link.label}</span>
+              {link.href.startsWith("http") && (
+                <svg
+                  width="18"
+                  height="21"
+                  viewBox="0 0 18 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="link-arrow transition-colors"
+                >
+                  <path
+                    d="M2 3.15411H16M16 3.15411V17.1541M16 3.15411L3.15411 16"
+                    stroke="currentColor"
+                  />
+                </svg>
+              )}
+            </div>
+            <div class="border-line-1 border-b border-black mt-[3px] transition-colors" />
+            <div class="border-line-2 border-b-[3px] border-black mt-[2px] transition-colors" />
+            <div class="text-xs self-end opacity-80 mt-[3px] relative z-10 transition-colors">
+              {link.label_jp}
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .menu-icon {
+    width: 28px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-icon span {
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-black);
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transition: all 0.25s ease-out;
+  }
+
+  .menu-icon span:nth-child(1) {
+    top: 0px;
+  }
+
+  .menu-icon span:nth-child(2) {
+    top: 10px;
+  }
+
+  .menu-icon span:nth-child(3) {
+    top: 20px;
+  }
+
+  .menu-open .menu-icon span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+    background-color: var(--color-black);
+  }
+
+  .menu-open .menu-icon span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+
+  .menu-open .menu-icon span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+    background-color: var(--color-black);
+  }
+
+  .menu-open #menu-toggle {
+    background-color: var(--color-white);
+  }
+
+  .menu-icon-close span:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+
+  .menu-icon-close span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon-close span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    z-index: 40;
+  }
+
+  .mobile-menu::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-menu[open] {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .mobile-menu-link {
+    transition: opacity 0.2s ease-out;
+  }
+
+  .mobile-menu-link:hover {
+    opacity: 0.8;
+  }
+
+  .menu-link {
+    position: relative;
+    padding: 0;
+  }
+
+  .menu-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--color-black);
+    transition: width 0.1s ease-out;
+    z-index: 1;
+  }
+
+  .menu-link:hover::before {
+    width: 100%;
+  }
+
+  .menu-link:hover div,
+  .menu-link:hover .border-line-1,
+  .menu-link:hover .border-line-2 {
+    z-index: 10;
+    color: var(--color-white);
+    border-color: var(--color-white);
+  }
+
+  .menu-link .link-arrow {
+    color: var(--color-black);
+  }
+
+  .menu-link:hover .link-arrow {
+    color: var(--color-white);
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById(
+      "mobile-menu"
+    ) as HTMLDialogElement;
+    const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+    const body = document.body;
+
+    // モバイルメニューのアニメーション設定
+    gsap.set(mobileMenuLinks, {
+      opacity: 0,
+      x: -30,
+    });
+
+    const mobileMenuTl = gsap.timeline({ paused: true });
+    mobileMenuTl.to(mobileMenuLinks, {
+      opacity: 1,
+      x: 0,
+      duration: 0.4,
+      stagger: 0.08,
+      ease: "power2.out",
+    });
+
+    // メニューアイコンのアニメーション
+    const menuIconSpans = menuToggle?.querySelectorAll("span");
+    const iconTl = gsap.timeline({ paused: true });
+
+    if (menuIconSpans) {
+      iconTl
+        .to(
+          menuIconSpans[0],
+          {
+            rotation: 45,
+            y: 10,
+            duration: 0.3,
+            ease: "power2.inOut",
+          },
+          0
+        )
+        .to(
+          menuIconSpans[1],
+          {
+            opacity: 0,
+            duration: 0.2,
+          },
+          0
+        )
+        .to(
+          menuIconSpans[2],
+          {
+            rotation: -45,
+            y: -10,
+            duration: 0.3,
+            ease: "power2.inOut",
+          },
+          0
+        );
+    }
+
+    menuToggle?.addEventListener("click", () => {
+      if (mobileMenu.open) {
+        mobileMenu.close();
+        body.classList.remove("menu-open");
+        mobileMenuTl.reverse();
+        iconTl.reverse();
+      } else {
+        mobileMenu.showModal();
+        body.classList.add("menu-open");
+        mobileMenuTl.play();
+        iconTl.play();
+      }
+    });
+
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenuTl.reverse();
+        iconTl.reverse();
+        setTimeout(() => {
+          mobileMenu.close();
+          body.classList.remove("menu-open");
+        }, 300);
+      });
+    });
+
+    // ESCキーで閉じた時の処理
+    mobileMenu?.addEventListener("close", () => {
+      body.classList.remove("menu-open");
+      mobileMenuTl.reverse();
+      iconTl.reverse();
+    });
+
+    // バックドロップクリックで閉じる
+    mobileMenu?.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenuTl.reverse();
+        iconTl.reverse();
+        setTimeout(() => {
+          mobileMenu.close();
+          body.classList.remove("menu-open");
+        }, 300);
+      }
+    });
+
+    // メニュートグルボタンのホバーエフェクト
+    menuToggle?.addEventListener("mouseenter", () => {
+      gsap.to(menuToggle, {
+        scale: 1.1,
+        duration: 0.2,
+        ease: "power2.inOut",
+      });
+    });
+
+    menuToggle?.addEventListener("mouseleave", () => {
+      gsap.to(menuToggle, {
+        scale: 1,
+        duration: 0.2,
+        ease: "power2.inOut",
+      });
+    });
+  });
+
+  // フラグメントIDをクリックしたらスムーズに移動
+  const menuLinks = document.querySelectorAll(
+    ".menu-link"
+  ) as NodeListOf<HTMLAnchorElement>;
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const target = link.hash.split("#")[1];
+      const targetElement = document.getElementById(target);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          location.href = link.href;
+        }, 500);
+      }
+    });
+  });
+</script>

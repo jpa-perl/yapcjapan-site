@@ -1,0 +1,113 @@
+---
+import { Image } from "astro:assets";
+import OutlinedTitle from "./OutlinedTitle.astro";
+import GuestSpeaker01 from "../assets/guest/01kis.png";
+import GuestSpeaker02 from "../assets/guest/02yuuk1.png";
+import GuestSpeaker03 from "../assets/guest/03azukiazusa.png";
+import GuestSpeaker04 from "../assets/guest/04inao.png";
+
+// ゲストスピーカーデータ
+const guestSpeakers = [
+  {
+    name: "きしだなおき",
+    role: "Naoki Kishida",
+    description:
+      "九州芸術工科大学 芸術工学部 音響設計学科を8年で退学後、フリーランスでの活動を経て、2015 年から大手IT企業に勤務。著書に、『プロになるJava 』(共著、技術評論社) など。内容は考え中ですが、今決めても2ヶ月半後にまたAIで世界が変わってるかもしれないので、なるべくホットな話をします",
+    imageUrl: GuestSpeaker01,
+  },
+  {
+    name: "坪内佑樹",
+    role: "yuuk1",
+    description:
+      "SREの研究者。博士（情報学）。株式会社はてなでSREを務めたのちに、2019年よりさくらインターネット研究所所属。SRE NEXT 2024でベストスピーカー賞を受賞。最近の研究開発テーマはAIインフラのオブザーバビリティとAIOps。",
+    imageUrl: GuestSpeaker02,
+  },
+  {
+    name: "azukiazusa",
+    role: "",
+    description:
+      "Webアプリケーションエンジニアとしてフロントエンド領域を中心に活動している。技術ブログ azukiazusa.dev ではフロントエンドや生成AI関連の技術について継続的に発信しており、実際に手を動かして得た知見をわかりやすく伝えることで読者から好評を得ている。",
+    imageUrl: GuestSpeaker03,
+  },
+  {
+    name: "稲尾尚徳",
+    role: "inao",
+    description:
+      "編集者。 現職はSmartHRのDevRel、前職はWEB+DB PRESSの編集長です。",
+    imageUrl: GuestSpeaker04,
+  },
+];
+---
+
+<div
+  id="guest-speakers"
+  class="flex flex-col gap-[calc(130*var(--scale))] items-center relative"
+>
+  <OutlinedTitle title="ゲストスピーカー" subtitle="Guest<br />Speakers" />
+  <div class="relative flex flex-wrap justify-center w-full">
+    {
+      guestSpeakers.map((speaker, index) => (
+        <div class="flex flex-col items-center gap-[calc(27*var(--scale))] w-1/1 sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-10">
+          <div class="duotone">
+            <Image
+              src={speaker.imageUrl}
+              alt={speaker.name}
+              width={340}
+              height={340}
+              densities={[1, 2]}
+            />
+          </div>
+          <div class="flex flex-col items-center">
+            <p class="text-sm md:text-base font-ips min-h-6">{speaker.role}</p>
+            <p class="text-lg md:text-2xl font-bold">{speaker.name}</p>
+          </div>
+          <p class="text-xs md:text-sm  leading-5">{speaker.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .duotone {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+
+  .duotone img {
+    /*
+    filter: grayscale(100%) contrast(1.5) brightness(1.5);
+    mix-blend-mode: multiply;
+    */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+  }
+
+  .duotone:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*
+    background-color: var(--color-black);
+    mix-blend-mode: lighten;
+    */
+  }
+
+  .duotone:hover img {
+    /*
+    filter: grayscale(0%);
+    */
+  }
+
+  .duotone:hover,
+  .duotone:hover:after {
+    background-color: transparent;
+  }
+</style>

@@ -1,0 +1,206 @@
+---
+
+---
+
+<div class="relative w-full max-w-full flex justify-center mb-30">
+  <div
+    class="max-w-full w-6xl p-2 md:p-10 bg-black text-white text-sm md:text-xl leading-relaxed xl:text-center font-bold tracking-wide top-triangle"
+    id="hero-message"
+  >
+    <div class="scale-x-90" id="hero-message-text">
+      <p>
+        YAPC::Fukuoka 2017 HAKATA以来、久々の<strong>九</strong
+        >州での開催となるYAPC::Fukuoka 2025。
+      </p>
+      <p>
+        実は、YAPC::Japanとしてリブートしてから<strong>9</strong
+        >年目のYAPC::Japanになります。
+      </p>
+      <p>
+        これを記念して、YAPC::Fukuoka 2025のテーマは「<strong>きゅう</strong
+        >」とします。
+      </p>
+      <p>
+        ロゴにもある通り、私達はこの「<strong>きゅう</strong><small>（9）</small
+        >」を地図のピンに見立てました。
+        <button
+          id="theme-toggle"
+          type="button"
+          class="align-middle group inline-flex items-center gap-1 px-2 py-1 rounded bg-[#000]/20 border-0 transition text-white/80 hover:text-white focus-visible:outline-none focus-visible:ring-2 ring-white/30 text-xs md:text-sm font-normal"
+          aria-expanded="false"
+          aria-controls="theme-details"
+        >
+          テーマ「きゅう」について
+          <svg
+            width="12"
+            height="6"
+            viewBox="0 0 12 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            id="theme-chevron"
+          >
+            <path
+              d="M1.04146 1L5.54146 5L10.0415 1"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </p>
+
+      <div
+        id="theme-details"
+        class="hidden mt-2 p-4 md:p-5 bg-[#000]/10 border border-[#000]/20 rounded-md relative overflow-hidden text-sm leading-relaxed"
+        aria-hidden="true"
+      >
+        <p>
+          近年<strong>急</strong
+          >速に進化するAI技術、それに伴いエンジニアリングやプロダクト開発の探<strong
+            >求</strong
+          >も高速に進んでいます。
+        </p>
+        <p>
+          だからこそ、改めてピンが指す「現在地」を明らかにして、そこから未来を見据えるようなカンファレンスにしたいと考えています。
+        </p>
+        <p>
+          そして、「<strong>きゅう</strong
+          >」という読みには、様々な文字を当てはめることができます。
+        </p>
+        <p>
+          「<strong>九</strong>」、「<strong>9</strong>」、「<strong>求</strong
+          >」、「<strong>Q</strong>」、「<strong>急</strong>」、「<strong
+            >旧</strong
+          >」、「<strong>休</strong>」…。
+        </p>
+        <p>
+          <strong>九</strong>州にちなんだ話はもちろん、ここ<strong>9</strong
+          >年の振り返り、学術や専門知識を探<strong>求</strong>・追<strong
+            >求</strong
+          >した話、<strong>急</strong>激な成長体験、あるいは「<strong>Q</strong
+          >」がテーマのYAPC::Kyoto 2020で話せなかったこと……。
+        </p>
+      </div>
+      <p>
+        「<strong>きゅう</strong
+        >」という不思議なテーマから、いろいろな話題を見出すことができるのではないでしょうか。
+      </p>
+      <p>
+        「<strong>きゅう</strong><small>（9）</small
+        >」というピンが指す、あなたの「現在地」を示してくれる発表を、
+      </p>
+      <p>YAPC::Fukuoka 2025でぜひ聞かせてください！</p>
+    </div>
+  </div>
+
+  <script>
+    import gsap from "gsap";
+
+    gsap.from("#hero-message", {
+      opacity: 0,
+      y: "20%",
+      duration: 0.8,
+      delay: 0.6,
+    });
+
+    // 1行づつフェードイン（上位直下のみを対象）
+    gsap.from("#hero-message-text > p", {
+      opacity: 0,
+      y: "10%",
+      duration: 0.5,
+      delay: 0.1,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: "#hero-message",
+        start: "top bottom",
+      },
+    });
+
+    // 展開ボタンの開閉制御
+    const btn = document.getElementById("theme-toggle");
+    const details = document.getElementById("theme-details");
+    const chev = document.getElementById("theme-chevron");
+    if (btn && details) {
+      const open = () => {
+        gsap.killTweensOf(details);
+        details.classList.remove("hidden");
+        btn.setAttribute("aria-expanded", "true");
+        details.setAttribute("aria-hidden", "false");
+        gsap.set(details, { overflow: "hidden", height: 0, opacity: 0 });
+        gsap.to(details, {
+          height: "auto",
+          opacity: 1,
+          duration: 0.4,
+          ease: "power2.out",
+          onComplete: () => {
+            gsap.set(details, { clearProps: "height,overflow" });
+          },
+        });
+        if (chev)
+          gsap.to(chev, { rotate: 180, duration: 0.25, ease: "power2.out" });
+      };
+
+      const close = () => {
+        gsap.killTweensOf(details);
+        btn.setAttribute("aria-expanded", "false");
+        details.setAttribute("aria-hidden", "true");
+        gsap.set(details, { overflow: "hidden" });
+        gsap.to(details, {
+          height: 0,
+          opacity: 0,
+          duration: 0.3,
+          ease: "power2.in",
+          onComplete: () => {
+            details.classList.add("hidden");
+            gsap.set(details, { clearProps: "height,overflow,opacity" });
+          },
+        });
+        if (chev)
+          gsap.to(chev, { rotate: 0, duration: 0.25, ease: "power2.in" });
+      };
+
+      btn.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        expanded ? close() : open();
+      });
+    }
+  </script>
+
+  <style>
+    #hero-message strong {
+      color: #ff9534;
+      font-weight: 900;
+      font-size: 1.7em;
+      padding: 0 0.2em;
+    }
+
+    #hero-message small {
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+
+    .top-triangle {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        background-color: var(--color-black);
+        width: 100%;
+        height: 100px;
+      }
+
+      &::before {
+        top: -100px;
+        clip-path: polygon(20% 0%, 0% 100%, 100% 100%);
+      }
+
+      &::after {
+        bottom: -100px;
+        clip-path: polygon(0% 0%, 100% 0, 90% 100%);
+      }
+    }
+  </style>
+</div>

@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+import Speakers from "../components/Speakers.astro";
+import Sponsors from "../components/Sponsors.astro";
+import Announcements from "../components/Announcements.astro";
+import HomeHero from "../components/HomeHero.astro";
+import Message from "../components/Message.astro";
+---
+
+<Layout>
+  <div class="h-screen overflow-hidden grid grid-rows-[auto_1fr]">
+    <Menu />
+    <HomeHero />
+  </div>
+  <Message />
+
+  <section class="bg-black py-[calc(140*var(--scale))]">
+    <div class="inner">
+      <Announcements />
+    </div>
+  </section>
+
+  <section class="bg-white py-[calc(70*var(--scale))]">
+    <div class="inner">
+      <Speakers />
+    </div>
+  </section>
+
+  {
+    /* 
+  <section class="bg-primary py-[calc(70*var(--scale))]">
+    <div class="inner">
+      <Sponsors />
+    </div>
+  </section>
+  */
+  }
+</Layout>
