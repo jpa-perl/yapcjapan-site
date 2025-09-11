@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "run-s build:clean build:astro build:copy",
     "build:clean": "rimraf dist && rm -rf .astro-cache",
-    "build:copy": "rimraf ../docs/2025fukuoka && cp -a ./dist/ ../docs/2025fukuoka",
+    "build:copy": "rimraf ../docs/2025fukuoka && cp -a ./dist/2025fukuoka ../docs/2025fukuoka",
     "build:astro": "astro build",
     "preview": "astro preview",
     "astro": "astro"
