@@ -10,7 +10,9 @@ interface Props {
 }
 
 const { title } = Astro.props as Props;
-const htmlTitle = title && `${title} | ` + `YAPC::Asia 2025 Fukuoka`;
+const htmlTitle = title
+  ? `${title} | ` + `YAPC::Fukuoka 2025`
+  : `YAPC::Fukuoka 2025`;
 const backgroundImage = `url(${headerPat.src})`;
 ---
 
