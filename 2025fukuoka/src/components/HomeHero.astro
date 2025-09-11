@@ -1,0 +1,393 @@
+---
+import { Image } from "astro:assets";
+import HomeLogo from "../assets/home-logo.png";
+import HomePhoto01 from "../assets/home-photo-01.jpg";
+import HomePhoto03 from "../assets/home-photo-03.jpg";
+import HomePhoto04 from "../assets/home-photo-04.jpg";
+import Que from "../assets/que.svg";
+---
+
+<div
+  class="grid grid-rows-[auto_1fr_auto] mb-[4vh] gap-[40px] sm:gap-[2vh] mt-[calc(80*var(--scale))]"
+>
+  <h1 class="mx-auto w-[1440px] max-w-[100vw] px-[calc(40*var(--scale))]">
+    <Image
+      src={HomeLogo}
+      alt="YAPC::Asia 2025 Fukuoka"
+      width={658}
+      densities={[1, 2]}
+      class="max-w-[calc(1300*var(--scale))] md:max-w-[calc(658*var(--scale))] hero-logo"
+      id="hero-logo"
+    />
+  </h1>
+  <div
+    class="mx-auto w-[1440px] max-w-[100vw] flex items-center justify-end md:justify-start"
+  >
+    <div class="w-sm lg:w-full lg:max-w-[calc(474*var(--scale))]">
+      <div
+        class="bg-black text-white p-5 md:p-[calc(20*var(--scale))] relative text-right"
+        style="clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);"
+        id="date-card"
+      >
+        <p class="text-base lg:text-2xl font-ips md:mb-1">2025.11.14 - 15</p>
+        <p class="text-xl lg:text-3xl font-bold">福岡工業大学</p>
+        <p class="text-xs lg:text-sm italic mb-[16px] font-ips">
+          Fukuoka Institute of Technology
+        </p>
+        <a
+          href="https://fortee.jp/yapc-fukuoka-2025/ticket-shop/index"
+          target="_blank"
+          class="flex items-center justify-between gap-6
+              bg-white text-black px-5 py-[calc(12*var(--scale))] rounded-[5px] w-full xl:text-xl font-bold hover:bg-gray-100 transition-colors"
+        >
+          <span
+            class="flex flex-col sm:flex-row items-center gap-[calc(10*var(--scale))]"
+          >
+            <span> チケットを購入 </span>
+          </span>
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+            <path
+              d="M1 1L7 7L1 13"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="fixed w-full top-0 left-0 w-full h-full z-[-2]">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 1800"
+      fill="none"
+      class="absolute top-[250px] lg:top-[80px] right-0 w-[110vw] xl:w-[calc(1200*var(--scale))]"
+    >
+      <path fill="#FF9534" d="M361 525 1200 0v957L361 525Z"></path>
+      <path fill="#F78822" d="m361 525 839 432v843L0 1121l361-596Z"></path>
+    </svg>
+  </div>
+  <div
+    class="fixed w-full left-[50%] translate-x-[-50%] h-full z-[-2] hidden md:block top-[200px] max-w-[2000px] mx-auto"
+  >
+    <Image
+      class="absolute top-[calc(870*var(--scale))] right-0 max-w-[calc(600*var(--scale))] hero-photo"
+      src={HomePhoto01}
+      alt=""
+      width={600}
+      densities={[1, 2]}
+    />
+    <Image
+      class="absolute top-[calc(450*var(--scale))] right-[calc(140*var(--scale))] max-w-[calc(600*var(--scale))] hero-photo"
+      src={HomePhoto03}
+      alt=""
+      width={600}
+      densities={[1, 2]}
+    />
+    <Image
+      class="absolute top-[calc(30*var(--scale))] right-0 max-w-[calc(600*var(--scale))] hero-photo"
+      src={HomePhoto04}
+      alt=""
+      width={600}
+      densities={[1, 2]}
+    />
+  </div>
+  <div
+    class="fixed w-full h-full top-0 z-[-2] pointer-events-none"
+    id="que-container"
+  >
+    <Que class="que-element absolute text-secondary" />
+    <Que class="que-element absolute text-white" />
+    <Que class="que-element absolute text-black" />
+    <Que class="que-element absolute text-secondary" />
+    <Que class="que-element absolute text-white" />
+    <Que class="que-element absolute text-black" />
+    <Que class="que-element absolute text-secondary" />
+    <Que class="que-element absolute text-white" />
+    <Que class="que-element absolute text-black" />
+    <Que class="que-element absolute text-secondary" />
+  </div>
+</div>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { CustomEase } from "gsap/CustomEase";
+
+  gsap.registerPlugin(ScrollTrigger, CustomEase);
+
+  // ===== アニメーション設定 =====
+  const ANIMATION_CONFIG = {
+    timing: {
+      logo: { start: 0.4, duration: 1.0 },
+      photos: { start: 0.8, stagger: 0.2 },
+      dateCard: { start: 1.0 },
+      svg: { start: 0.1, duration: 0.8 },
+      queElements: { start: 1.0, stagger: 0.05, duration: 1.6 },
+      menu: { start: 0.2, stagger: 0.08, duration: 0.8 },
+    },
+    easing: {
+      default: "power2.out",
+      floating: "sine.inOut",
+    },
+    parallax: {
+      trigger: { start: "top top", end: "bottom top", scrub: 1 },
+    },
+  };
+
+  // ===== 共通アニメーション関数 =====
+
+  /**
+   * 要素の初期状態を設定（フェードイン用）
+   */
+  function setInitialState(
+    element: Element | Element[] | null,
+    initialY = "5%"
+  ) {
+    if (!element) return;
+    gsap.set(element, { opacity: 0, y: initialY });
+  }
+
+  /**
+   * フェードインアニメーションを作成
+   */
+  function createFadeInAnimation(
+    element: Element | null,
+    duration = 1.0,
+    ease = ANIMATION_CONFIG.easing.default
+  ) {
+    if (!element) return null;
+    return {
+      y: 0,
+      opacity: 1,
+      duration,
+      ease,
+    };
+  }
+
+  /**
+   * パララックス効果を適用
+   */
+  function applyParallaxEffect(element: Element, speed: number) {
+    gsap.to(element, {
+      yPercent: -speed,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "body",
+        ...ANIMATION_CONFIG.parallax.trigger,
+      },
+    });
+  }
+
+  /**
+   * ランダムな位置を設定（que要素用）
+   */
+  function setRandomQuePosition(element: HTMLElement) {
+    const isMobile = window.innerWidth < 768;
+    const bounds = {
+      right: { min: 0, max: isMobile ? 80 : 45 },
+      top: { min: 5, max: 85 },
+      scale: { min: isMobile ? 0.1 : 0.2, max: isMobile ? 0.6 : 0.7 },
+    };
+
+    const position = {
+      right:
+        bounds.right.min +
+        Math.random() * (bounds.right.max - bounds.right.min),
+      top: bounds.top.min + Math.random() * (bounds.top.max - bounds.top.min),
+      scale:
+        bounds.scale.min +
+        Math.random() * (bounds.scale.max - bounds.scale.min),
+    };
+
+    gsap.set(element, {
+      right: `${position.right}%`,
+      top: `${position.top}%`,
+      scale: position.scale,
+    });
+
+    element.dataset.baseScale = position.scale.toString();
+    return position.scale;
+  }
+
+  /**
+   * フローティングアニメーションを作成
+   */
+  function createFloatingAnimation(element: HTMLElement) {
+    return gsap.to(element, {
+      y: "random(-30, 30)",
+      x: "random(-30, 30)",
+      rotation: "+=random(-30, 30)",
+      duration: "random(4, 8)",
+      repeat: -1,
+      yoyo: true,
+      ease: ANIMATION_CONFIG.easing.floating,
+      paused: true,
+    });
+  }
+
+  /**
+   * que要素を初期化
+   */
+  function initializeQueElement(que: HTMLElement) {
+    const baseScale = setRandomQuePosition(que);
+    const randomRotation = Math.random() * 360;
+
+    gsap.set(que, {
+      opacity: 0,
+      y: "random(10, 20)",
+      rotation: randomRotation,
+    });
+
+    // フローティングアニメーション
+    const floatingAnim = createFloatingAnimation(que);
+    que.dataset.floatingAnim = floatingAnim as any;
+
+    // パララックス効果（大きい要素ほど速く動く）
+    const parallaxSpeed = baseScale * 1500;
+    applyParallaxEffect(que, parallaxSpeed);
+
+    return { floatingAnim };
+  }
+
+  // ===== メインアニメーション実装 =====
+
+  // マスタータイムライン作成
+  const masterTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "body",
+      start: "top 90%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  // 各要素のアニメーション設定
+  const animationTargets = {
+    logo: document.getElementById("hero-logo"),
+    dateCard: document.getElementById("date-card"),
+    svg: document.querySelector(".fixed svg") as SVGElement,
+    photos: gsap.utils.toArray(".hero-photo") as HTMLElement[],
+    queElements: gsap.utils.toArray(".que-element") as HTMLElement[],
+    menuItems: gsap.utils.toArray(".menu-link") as HTMLElement[],
+  };
+
+  // 1. メニューアニメーション
+  if (window.innerWidth >= 768 && animationTargets.menuItems.length > 0) {
+    // デスクトップメニューの初期状態とアニメーション
+    setInitialState(animationTargets.menuItems, "20px");
+
+    masterTl.to(
+      animationTargets.menuItems,
+      {
+        opacity: 1,
+        y: 0,
+        duration: ANIMATION_CONFIG.timing.menu.duration,
+        stagger: ANIMATION_CONFIG.timing.menu.stagger,
+        ease: ANIMATION_CONFIG.easing.default,
+      },
+      ANIMATION_CONFIG.timing.menu.start
+    );
+
+    // 微細なパララックス効果
+    gsap.to(animationTargets.menuItems, {
+      yPercent: -10,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "300px top",
+        scrub: 1,
+      },
+    });
+  }
+
+  // 2. ロゴアニメーション
+  setInitialState(animationTargets.logo);
+  if (animationTargets.logo) {
+    masterTl.to(
+      animationTargets.logo,
+      createFadeInAnimation(animationTargets.logo),
+      ANIMATION_CONFIG.timing.logo.start
+    );
+  }
+
+  // 3. 日付カードアニメーション
+  setInitialState(animationTargets.dateCard);
+  if (animationTargets.dateCard) {
+    masterTl.to(
+      animationTargets.dateCard,
+      createFadeInAnimation(animationTargets.dateCard),
+      ANIMATION_CONFIG.timing.dateCard.start
+    );
+  }
+
+  // 4. 写真アニメーション
+  animationTargets.photos.forEach((photo, index) => {
+    setInitialState(photo);
+
+    const photoTl = gsap.timeline();
+    photoTl.to(photo, createFadeInAnimation(photo));
+
+    masterTl.add(
+      photoTl,
+      ANIMATION_CONFIG.timing.photos.start +
+        index * ANIMATION_CONFIG.timing.photos.stagger
+    );
+
+    // パララックス効果（上の写真ほど遅く）
+    const parallaxSpeed = 200 + index * 100;
+    applyParallaxEffect(photo, parallaxSpeed);
+  });
+
+  // 5. SVGアニメーション
+  if (animationTargets.svg) {
+    gsap.set(animationTargets.svg, {
+      opacity: 0,
+      y: "1%",
+      transformOrigin: "100% 0%",
+    });
+
+    masterTl.to(
+      animationTargets.svg,
+      {
+        y: 0,
+        opacity: 1,
+        duration: ANIMATION_CONFIG.timing.svg.duration,
+        ease: ANIMATION_CONFIG.easing.default,
+      },
+      ANIMATION_CONFIG.timing.svg.start
+    );
+  }
+
+  // 7. que要素アニメーション
+  const queAnimations: any[] = [];
+  animationTargets.queElements.forEach((que) => {
+    const { floatingAnim } = initializeQueElement(que);
+    queAnimations.push(floatingAnim);
+  });
+
+  animationTargets.queElements.forEach((que, index) => {
+    const delay = index * ANIMATION_CONFIG.timing.queElements.stagger;
+
+    masterTl.to(
+      que,
+      {
+        opacity: 1,
+        y: 0,
+        duration: ANIMATION_CONFIG.timing.queElements.duration,
+        ease: ANIMATION_CONFIG.easing.default,
+        onComplete: () => {
+          const floatingAnim = queAnimations[index];
+          if (floatingAnim) floatingAnim.play();
+        },
+      },
+      ANIMATION_CONFIG.timing.queElements.start + delay
+    );
+  });
+
+  // タイムラインが再生開始したタイミングで全体のプレロードを解除
+  masterTl.eventCallback("onStart", () => {
+    window.dispatchEvent(new Event("app:gsap-start"));
+  });
+</script>

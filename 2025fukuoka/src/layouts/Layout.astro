@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import "../styles/global.css";
+import favicon from "../assets/favicon.svg";
+import headerPat from "../assets/header-pat.svg";
+import jpaImage from "../assets/jpa.png";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props as Props;
+const htmlTitle = title && `${title} | ` + `YAPC::Asia 2025 Fukuoka`;
+const backgroundImage = `url(${headerPat.src})`;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script is:inline>
+      document.documentElement.classList.add("js", "is-preload");
+      const removePreload = () => {
+        document.documentElement.classList.remove("is-preload");
+      };
+      window.addEventListener("app:gsap-start", removePreload, { once: true });
+      window.addEventListener("load", removePreload, { once: true });
+    </script>
+    <style is:inline>
+      .js.is-preload body {
+        opacity: 0;
+      }
+    </style>
+    <link rel="icon" type="image/svg+xml" href={favicon.src} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{htmlTitle}</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content={htmlTitle} />
+    <meta name="twitter:title" content={htmlTitle} />
+    <meta
+      property="og:description"
+      content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。"
+    />
+    <meta
+      name="twitter:description"
+      content="YAPCはYet Another Perl Conferenceの略で、Perlを軸としたITに関わる全ての人のためのカンファレンスです。"
+    />
+    <meta
+      property="og:image"
+      content="https://yapcjapan.org/2025fukuoka/og-image.png"
+    />
+    <meta
+      name="twitter:image"
+      content="https://yapcjapan.org/2025fukuoka/og-image.png"
+    />
+  </head>
+  <body class="bg-bg text-black">
+    <span class="_border"></span>
+    <main>
+      <slot />
+    </main>
+    <footer class="bg-black">
+      <div
+        class="h-[220px] flex flex-col items-center justify-center text-white text-sm font-ips gap-4"
+      >
+        <Image src={jpaImage} alt="JPA" height={33} densities={[1, 2]} />
+        <p>&copy; Japan Perl Association</p>
+      </div>
+      <span class="_border"></span>
+    </footer>
+  </body>
+</html>
+
+<style define:vars={{ backgroundImage }}>
+  span._border {
+    overflow: hidden;
+    background-color: var(--color-white);
+    background-image: var(--backgroundImage);
+    display: block;
+    height: 40px;
+    background-repeat: repeat-x;
+    background-size: auto 26px;
+    width: 100%;
+    border-bottom: 2px solid var(--color-black);
+
+    &::after {
+      content: "";
+      display: block;
+      margin-top: 29px;
+      height: 6px;
+      border-top: 1px solid var(--color-black);
+      border-bottom: 2px solid var(--color-black);
+    }
+  }
+  footer span._border {
+    transform: rotate(180deg);
+  }
+</style>

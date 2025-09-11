@@ -1,0 +1,160 @@
+---
+import OutlinedTitle from "./OutlinedTitle.astro";
+
+interface Sponsor {
+  type: string;
+  sponsors: { name: string; logoUrl: string; link: string }[];
+}
+
+const sponsors: Sponsor[] = [
+  {
+    type: "gold",
+    sponsors: [
+      {
+        name: "Sponsor1",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor2",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor3",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+    ],
+  },
+  {
+    type: "silver",
+    sponsors: [
+      {
+        name: "Sponsor1",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor2",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor3",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor4",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor5",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+    ],
+  },
+  {
+    type: "bronze",
+    sponsors: [
+      {
+        name: "Sponsor1",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor2",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor3",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor4",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor5",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor6",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+      {
+        name: "Sponsor7",
+        logoUrl: "https://place-hold.it/600",
+        link: "https://www.example.com",
+      },
+    ],
+  },
+];
+
+function getSponsorClass(type: string) {
+  switch (type) {
+    case "gold":
+      return "w-1/1 md:w-1/2";
+    case "silver":
+      return "w-1/2 md:w-1/3";
+    case "bronze":
+      return "w-1/3 md:w-1/4";
+    default:
+      return "w-1/4 md:w-1/5";
+  }
+}
+---
+
+<style>
+  .sponsors {
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .sponsors img {
+    background-color: var(--color-white);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<div class="flex flex-col gap-[calc(130*var(--scale))]">
+  <OutlinedTitle title="スポンサー" subtitle="Sponsors" bg="text-primary" />
+  <div class="py-[calc(60*var(--scale))]">
+    {
+      sponsors.map((s) => (
+        <div class="mb-[calc(50*var(--scale))]">
+          <h3 class="text-2xl md:text-[calc(36*var(--scale))] capitalize font-bold text-center pb-[calc(20*var(--scale))]">
+            {s.type}
+          </h3>
+          <div class="content-box flex flex-wrap justify-center">
+            {s.sponsors.map((sponsor) => (
+              <div class={`sponsors ${getSponsorClass(s.type)}`}>
+                <a href={sponsor.link} target="_blank">
+                  <img
+                    src={sponsor.logoUrl}
+                    alt={sponsor.name}
+                    class="max-w-full max-h-full object-contain"
+                  />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

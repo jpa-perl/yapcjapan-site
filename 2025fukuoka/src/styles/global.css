@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* color */
+  --color-*: initial;
+  --color-white: #fff;
+  --color-black: #1c2a4c;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-bg: #f2f2f2;
+  --color-primary: #ff9534;
+  --color-secondary: #ff4551;
+
+  --breakpoint-md800: 800px;
+}
+
+@theme {
+  /* font */
+  --font-sans: "Roboto", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Meiryo", sans-serif;
+  --font-display: "Roboto", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Meiryo", sans-serif;
+  --font-ips: "IBM Plex Sans", sans-serif;
+}
+
+@layer base {
+  :root {
+    --scale: calc(min(100vw, 1440px) / 1440);
+    --font-scale: max(var(--scale), 0.7);
+  }
+
+  body {
+    font-feature-settings: palt;
+  }
+}
+
+.inner {
+  @apply max-w-[calc(1440*var(--scale))] mx-auto px-[20px];
+}
