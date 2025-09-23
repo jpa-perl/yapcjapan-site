@@ -8,6 +8,16 @@ import GuestSpeaker04 from "../assets/guest/04inao.png";
 import GuestSpeaker05 from "../assets/guest/05yamazawa.png";
 import GuestSpeaker06 from "../assets/guest/06pyama.jpg";
 
+const keynoteSpeakers = [
+  {
+    name: "P山",
+    role: "pyama86",
+    description:
+      "GO株式会社 開発本部ソフトウェア統括部バックエンド開発部所属 日本のモビリティをより良くするために、タクシーアプリ『GO』のバックエンド開発を行っています。 業務で発生する課題を抽象化して実装し、OSSとして公開しながら開発することを得意としています。",
+    imageUrl: GuestSpeaker06,
+  },
+];
+
 // ゲストスピーカーデータ
 const guestSpeakers = [
   {
@@ -48,14 +58,6 @@ const guestSpeakers = [
 人工知能基礎・コンピュータグラフィックス・画像情報処理などの授業を担当`,
     imageUrl: GuestSpeaker05,
   },
-
-  {
-    name: "P山",
-    role: "pyama86",
-    description:
-      "GO株式会社 開発本部ソフトウェア統括部バックエンド開発部所属 日本のモビリティをより良くするために、タクシーアプリ『GO』のバックエンド開発を行っています。 業務で発生する課題を抽象化して実装し、OSSとして公開しながら開発することを得意としています。",
-    imageUrl: GuestSpeaker06,
-  },
 ];
 ---
 
@@ -64,36 +66,66 @@ const guestSpeakers = [
   class="flex flex-col gap-[calc(130*var(--scale))] items-center relative"
 >
   <OutlinedTitle title="ゲストスピーカー" subtitle="Guest<br />Speakers" />
-  <div class="relative flex flex-wrap justify-center w-full">
-    {
-      guestSpeakers.map((speaker, index) => (
-        <div class="flex flex-col items-center gap-[calc(27*var(--scale))] w-1/1 sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-10">
-          <div class="duotone">
-            <Image
-              src={speaker.imageUrl}
-              alt={speaker.name}
-              width={340}
-              height={340}
-              densities={[1, 2]}
-            />
+
+  <div>
+    <div class="relative flex flex-wrap justify-center w-full">
+      {
+        keynoteSpeakers.map((speaker) => (
+          <div class="flex flex-col items-center gap-[calc(27*var(--scale))] w-1/1 sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-10">
+            <div class="duotone relative">
+              <Image
+                src={speaker.imageUrl}
+                alt={speaker.name}
+                width={340}
+                height={340}
+                densities={[1, 2]}
+              />
+              <span class="text-sm md:text-base font-ips font-bold text-white absolute bottom-0 left-1/2 -translate-x-1/2 sm:translate-y-1/2 bg-secondary px-4 py-1 z-10 tracking-wider">
+                KEY NOTE
+              </span>
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="text-sm md:text-base font-ips min-h-6">
+                {speaker.role}
+              </p>
+              <p class="text-lg md:text-2xl font-bold">{speaker.name}</p>
+            </div>
+            <p class="text-xs md:text-sm  leading-5">{speaker.description}</p>
           </div>
-          <div class="flex flex-col items-center">
-            <p class="text-sm md:text-base font-ips min-h-6">{speaker.role}</p>
-            <p class="text-lg md:text-2xl font-bold">{speaker.name}</p>
+        ))
+      }
+    </div>
+
+    <div class="relative flex flex-wrap justify-center w-full">
+      {
+        guestSpeakers.map((speaker) => (
+          <div class="flex flex-col items-center gap-[calc(27*var(--scale))] w-1/1 sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-10">
+            <div class="duotone">
+              <Image
+                src={speaker.imageUrl}
+                alt={speaker.name}
+                width={340}
+                height={340}
+                densities={[1, 2]}
+              />
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="text-sm md:text-base font-ips min-h-6">
+                {speaker.role}
+              </p>
+              <p class="text-lg md:text-2xl font-bold">{speaker.name}</p>
+            </div>
+            <p class="text-xs md:text-sm  leading-5">{speaker.description}</p>
           </div>
-          <p class="text-xs md:text-sm  leading-5">{speaker.description}</p>
-        </div>
-      ))
-    }
+        ))
+      }
+    </div>
   </div>
 </div>
 
 <style>
   .duotone {
     position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    background-color: var(--color-primary);
   }
 
   .duotone img {
@@ -104,7 +136,8 @@ const guestSpeakers = [
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: filter 0.3s ease;
+    overflow: hidden;
+    border-radius: 50%;
   }
 
   .duotone:after {
