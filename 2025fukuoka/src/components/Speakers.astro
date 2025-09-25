@@ -6,7 +6,8 @@ import GuestSpeaker02 from "../assets/guest/02yuuk1.png";
 import GuestSpeaker03 from "../assets/guest/03azukiazusa.png";
 import GuestSpeaker04 from "../assets/guest/04inao.png";
 import GuestSpeaker05 from "../assets/guest/05yamazawa.png";
-import GuestSpeaker06 from "../assets/guest/06pyama.jpg";
+import GuestSpeaker06 from "../assets/guest/06trial.png";
+import GuestSpeakerKeynote from "../assets/guest/pyama.jpg";
 
 const keynoteSpeakers = [
   {
@@ -14,7 +15,7 @@ const keynoteSpeakers = [
     role: "pyama86",
     description:
       "GO株式会社 開発本部ソフトウェア統括部バックエンド開発部所属 日本のモビリティをより良くするために、タクシーアプリ『GO』のバックエンド開発を行っています。 業務で発生する課題を抽象化して実装し、OSSとして公開しながら開発することを得意としています。",
-    imageUrl: GuestSpeaker06,
+    imageUrl: GuestSpeakerKeynote,
   },
 ];
 
@@ -57,6 +58,12 @@ const guestSpeakers = [
 画像認識・CG・複合現実など画像に関するテーマが専門
 人工知能基礎・コンピュータグラフィックス・画像情報処理などの授業を担当`,
     imageUrl: GuestSpeaker05,
+  },
+  {
+    name: "株式会社トライアルホールディングス",
+    role: "",
+    description: `トライアルホールディングスは、「世界の誰もが豊かさを享受できる社会をつくる。」というパーパスを掲げ、流通小売事業とリテールAI事業の両軸で事業を展開しています。 私たちは「オープンイノベーション」を重視し、業界や企業の垣根を超えた「共創」に取り組んでいます。従来の小売業の枠にとらわれず、新しい価値を生み出し、お客さまの生活に「豊かさ」を届けることを目指しています。`,
+    imageUrl: GuestSpeaker06,
   },
 ];
 ---
@@ -113,7 +120,7 @@ const guestSpeakers = [
               <p class="text-sm md:text-base font-ips min-h-6">
                 {speaker.role}
               </p>
-              <p class="text-lg md:text-2xl font-bold">{speaker.name}</p>
+              <p class="text-lg md:text-xl font-bold tracking-tight">{speaker.name}</p>
             </div>
             <p class="text-xs md:text-sm  leading-5">{speaker.description}</p>
           </div>
@@ -138,7 +145,7 @@ const guestSpeakers = [
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
-  }
+    border: 1px solid rgba(0, 0, 0, 0.1);
 
   .duotone:after {
     content: "";
