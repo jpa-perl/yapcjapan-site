@@ -254,7 +254,7 @@ const sponsors: Sponsor[] = [
     ],
   },
   {
-    type: "local",
+    type: "ご当地スポンサー",
     sponsors: [
       {
         name: "株式会社ヌーラボ",
@@ -282,10 +282,10 @@ function getSponsorClass(type: string) {
       return "w-1/2 md:w-1/4 max-w-[300px]";
     case "bronze":
       return "w-1/3 md:w-1/4 max-w-[200px]";
-    case "local":
-      return "w-1/3 md:w-1/4";
+    case "ご当地スポンサー":
+      return "w-1/3 md:w-1/5";
     default:
-      return "w-1/4 md:w-1/5";
+      return "w-1/3 md:w-1/5";
   }
 }
 ---
@@ -314,7 +314,7 @@ function getSponsorClass(type: string) {
     {
       sponsors.map((s) => (
         <div class="mb-[calc(50*var(--scale))]">
-          <h3 class="text-2xl md:text-[calc(36*var(--scale))] capitalize font-ips font-bold text-center pb-[calc(20*var(--scale))]">
+          <h3 class="text-2xl md:text-[calc(36*var(--scale))] capitalize font-bold text-center pb-[calc(20*var(--scale))]">
             {s.type}
           </h3>
           <div class="content-box flex flex-wrap justify-center">
