@@ -44,7 +44,7 @@ import smartbankLogo from "../assets/sponsors/platinum/smartbank.png";
 import cloudflareLogo from "../assets/sponsors/perl/cloudflare.png";
 import denaLogo from "../assets/sponsors/perl/dena.png";
 import layerxLogo from "../assets/sponsors/perl/layerx.png";
-import toglleLogo from "../assets/sponsors/perl/toglle.png";
+import toggleLogo from "../assets/sponsors/perl/toggle.png";
 
 // Local sponsors
 import nulabLogo from "../assets/sponsors/local/nulab.png";
@@ -61,7 +61,7 @@ const sponsors: Sponsor[] = [
     sponsors: [
       {
         name: "トグルホールディングス株式会社",
-        logo: toglleLogo,
+        logo: toggleLogo,
         link: " ",
       },
       {
@@ -306,13 +306,13 @@ function getSponsorClass(type: string) {
   }
 </style>
 
-<div class="flex flex-col gap-[calc(130*var(--scale))]">
+<div id="sponsors" class="flex flex-col gap-[calc(130*var(--scale))]">
   <OutlinedTitle title="スポンサー" subtitle="Sponsors" bg="text-primary" />
   <div class="py-[calc(60*var(--scale))]">
     {
       sponsors.map((s) => (
         <div class="mb-[calc(50*var(--scale))]">
-          <h3 class="text-2xl md:text-[calc(36*var(--scale))] capitalize font-bold text-center pb-[calc(20*var(--scale))]">
+          <h3 class="text-2xl md:text-[calc(36*var(--scale))] capitalize font-ips font-bold text-center pb-[calc(20*var(--scale))]">
             {s.type}
           </h3>
           <div class="content-box flex flex-wrap justify-center">
