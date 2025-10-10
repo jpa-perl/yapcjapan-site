@@ -1,29 +1,168 @@
 ---
+import { Image } from "astro:assets";
 import OutlinedTitle from "./OutlinedTitle.astro";
+
+// Bronze sponsors
+import artryLogo from "../assets/sponsors/bronze/artry.png";
+import classiLogo from "../assets/sponsors/bronze/classi.png";
+import gendaLogo from "../assets/sponsors/bronze/genda.png";
+import greeLogo from "../assets/sponsors/bronze/gree.png";
+import hottechLogo from "../assets/sponsors/bronze/hottech.png";
+import kodamaLogo from "../assets/sponsors/bronze/kodama.png";
+import linkageLogo from "../assets/sponsors/bronze/linkage.png";
+import smarthrLogo from "../assets/sponsors/bronze/smarthr.png";
+import winetonabeLogo from "../assets/sponsors/bronze/winetonabe.png";
+import ypmLogo from "../assets/sponsors/bronze/ypm.png";
+
+// Silver sponsors
+import colsisLogo from "../assets/sponsors/silver/colsis.png";
+import kayacLogo from "../assets/sponsors/silver/kayac.png";
+import nekotoastlabLogo from "../assets/sponsors/silver/nekotoastlab.png";
+import sanrioLogo from "../assets/sponsors/silver/sanrio.png";
+import showroomLogo from "../assets/sponsors/silver/showroom.png";
+
+// Gold sponsors
+import cybozuLogo from "../assets/sponsors/gold/cybozu.png";
+import freakoutLogo from "../assets/sponsors/gold/freakout.png";
+import hatenaLogo from "../assets/sponsors/gold/hatena.png";
+import mercariLogo from "../assets/sponsors/gold/mercari.png";
+import mobilefactoryLogo from "../assets/sponsors/gold/mobilefactory.png";
+
+// Platinum sponsors
+import bloomoLogo from "../assets/sponsors/platinum/bloomo.png";
+import deltaLogo from "../assets/sponsors/platinum/delta.png";
+import findyLogo from "../assets/sponsors/platinum/findy.png";
+import goLogo from "../assets/sponsors/platinum/go.png";
+import kakehashiLogo from "../assets/sponsors/platinum/kakehashi.png";
+import kintoLogo from "../assets/sponsors/platinum/kinto.png";
+import medicalforceLogo from "../assets/sponsors/platinum/medicalforce.png";
+import sakuraLogo from "../assets/sponsors/platinum/sakura.png";
+import sixapartLogo from "../assets/sponsors/platinum/sixapart.png";
+import smartbankLogo from "../assets/sponsors/platinum/smartbank.png";
+
+// Perl sponsors
+import cloudflareLogo from "../assets/sponsors/perl/cloudflare.png";
+import denaLogo from "../assets/sponsors/perl/dena.png";
+import layerxLogo from "../assets/sponsors/perl/layerx.png";
+import toggleLogo from "../assets/sponsors/perl/toggle.png";
+
+// Local sponsors
+import nulabLogo from "../assets/sponsors/local/nulab.png";
+import yamapLogo from "../assets/sponsors/local/yamap.png";
 
 interface Sponsor {
   type: string;
-  sponsors: { name: string; logoUrl: string; link: string }[];
+  sponsors: { name: string; logo: ImageMetadata; link: string }[];
 }
 
 const sponsors: Sponsor[] = [
   {
+    type: "perl",
+    sponsors: [
+      {
+        name: "トグルホールディングス株式会社",
+        logo: toggleLogo,
+        link: "https://toggle.co.jp/",
+      },
+      {
+        name: "株式会社ディー・エヌ・エー",
+        logo: denaLogo,
+        link: "http://dena.com",
+      },
+      {
+        name: "株式会社LayerX",
+        logo: layerxLogo,
+        link: "https://layerx.co.jp/",
+      },
+      {
+        name: "Cloudflare",
+        logo: cloudflareLogo,
+        link: "https://www.cloudflare.com/ja-jp/",
+      },
+    ],
+  },
+  {
+    type: "platinum",
+    sponsors: [
+      {
+        name: "さくらインターネット株式会社",
+        logo: sakuraLogo,
+        link: "https://www.sakura.ad.jp",
+      },
+      {
+        name: "ファインディ株式会社",
+        logo: findyLogo,
+        link: "https://findy-code.io/",
+      },
+      {
+        name: "株式会社カケハシ",
+        logo: kakehashiLogo,
+        link: "https://www.kakehashi.life/",
+      },
+      {
+        name: "GO株式会社",
+        logo: goLogo,
+        link: "https://goinc.jp/career/",
+      },
+      {
+        name: "株式会社DELTA",
+        logo: deltaLogo,
+        link: "https://teamdelta.jp/",
+      },
+      {
+        name: "シックス・アパート株式会社",
+        logo: sixapartLogo,
+        link: "https://www.sixapart.jp/",
+      },
+      {
+        name: "株式会社スマートバンク",
+        logo: smartbankLogo,
+        link: "https://smartbank.co.jp/recruit/engineer-summary/",
+      },
+      {
+        name: "KINTOテクノロジーズ株式会社",
+        logo: kintoLogo,
+        link: "https://www.kinto-technologies.com/",
+      },
+      {
+        name: "株式会社メディカルフォース",
+        logo: medicalforceLogo,
+        link: "https://corp.medical-force.com/",
+      },
+      {
+        name: "ブルーモ証券株式会社",
+        logo: bloomoLogo,
+        link: "https://bloomo.co.jp/",
+      },
+    ],
+  },
+  {
     type: "gold",
     sponsors: [
       {
-        name: "Sponsor1",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "株式会社モバイルファクトリー",
+        logo: mobilefactoryLogo,
+        link: "https://www.mobilefactory.jp/",
       },
       {
-        name: "Sponsor2",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "株式会社はてな",
+        logo: hatenaLogo,
+        link: "https://hatena.co.jp",
       },
       {
-        name: "Sponsor3",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "株式会社フリークアウト",
+        logo: freakoutLogo,
+        link: "https://www.fout.co.jp/freakout/",
+      },
+      {
+        name: "サイボウズ株式会社",
+        logo: cybozuLogo,
+        link: "https://tech.cybozu.io/",
+      },
+      {
+        name: "株式会社メルカリ",
+        logo: mercariLogo,
+        link: "https://engineering.mercari.com/",
       },
     ],
   },
@@ -31,29 +170,29 @@ const sponsors: Sponsor[] = [
     type: "silver",
     sponsors: [
       {
-        name: "Sponsor1",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "面白法人カヤック",
+        logo: kayacLogo,
+        link: "https://www.kayac.com/",
       },
       {
-        name: "Sponsor2",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "（株）コルシス",
+        logo: colsisLogo,
+        link: "https://colsis.jp",
       },
       {
-        name: "Sponsor3",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "株式会社ネコトーストラボ",
+        logo: nekotoastlabLogo,
+        link: "https://nekotoast-lab.com/",
       },
       {
-        name: "Sponsor4",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "株式会社サンリオ",
+        logo: sanrioLogo,
+        link: "https://corporate.sanrio.co.jp/",
       },
       {
-        name: "Sponsor5",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "SHOWROOM",
+        logo: showroomLogo,
+        link: "https://recruit.showroom.co.jp/",
       },
     ],
   },
@@ -61,39 +200,71 @@ const sponsors: Sponsor[] = [
     type: "bronze",
     sponsors: [
       {
-        name: "Sponsor1",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "株式会社SmartHR",
+        logo: smarthrLogo,
+        link: "https://hello-world.smarthr.co.jp/",
       },
       {
-        name: "Sponsor2",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "こだまリサーチ株式会社",
+        logo: kodamaLogo,
+        link: "https://www.kodamari.com",
       },
       {
-        name: "Sponsor3",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "株式会社グリー",
+        logo: greeLogo,
+        link: "https://cp.gree.net/",
       },
       {
-        name: "Sponsor4",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "株式会社リンケージ",
+        logo: linkageLogo,
+        link: "https://linkage-inc.co.jp",
       },
       {
-        name: "Sponsor5",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "有限会社アートライ",
+        logo: artryLogo,
+        link: "http://artry.co.jp/",
       },
       {
-        name: "Sponsor6",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "ワインと鍋",
+        logo: winetonabeLogo,
+        link: "https://winenabe.jp/",
       },
       {
-        name: "Sponsor7",
-        logoUrl: "https://place-hold.it/600",
-        link: "https://www.example.com",
+        name: "ほっとテック",
+        logo: hottechLogo,
+        link: "https://www.hotto.tech/",
+      },
+      {
+        name: "Classi株式会社",
+        logo: classiLogo,
+        link: "https://corp.classi.jp/",
+      },
+      {
+        name: "株式会社GENDA",
+        logo: gendaLogo,
+        link: "https://genda.jp/",
+      },
+      /*
+      {
+        name: "合同会社Y.pm",
+        logo: ypmLogo,
+        link: "https://www.ypm.llc/",
+      },
+      */
+    ],
+  },
+  {
+    type: "ご当地スポンサー",
+    sponsors: [
+      {
+        name: "株式会社ヌーラボ",
+        logo: nulabLogo,
+        link: "https://nulab.com/ja/",
+      },
+      {
+        name: "YAMAP",
+        logo: yamapLogo,
+        link: "https://yamap.com/",
       },
     ],
   },
@@ -101,14 +272,20 @@ const sponsors: Sponsor[] = [
 
 function getSponsorClass(type: string) {
   switch (type) {
+    case "perl":
+      return "w-1/1 md:w-1/2 max-w-[500px]";
+    case "platinum":
+      return "w-1/2 md:w-1/3 max-w-[400px]";
     case "gold":
-      return "w-1/1 md:w-1/2";
+      return "w-1/2 md:w-1/4 max-w-[300px]";
     case "silver":
-      return "w-1/2 md:w-1/3";
+      return "w-1/2 md:w-1/4 max-w-[300px]";
     case "bronze":
-      return "w-1/3 md:w-1/4";
+      return "w-1/3 md:w-1/4 max-w-[200px]";
+    case "ご当地スポンサー":
+      return "w-1/3 md:w-1/5";
     default:
-      return "w-1/4 md:w-1/5";
+      return "w-1/3 md:w-1/5";
   }
 }
 ---
@@ -131,7 +308,7 @@ function getSponsorClass(type: string) {
   }
 </style>
 
-<div class="flex flex-col gap-[calc(130*var(--scale))]">
+<div id="sponsors" class="flex flex-col gap-[calc(130*var(--scale))]">
   <OutlinedTitle title="スポンサー" subtitle="Sponsors" bg="text-primary" />
   <div class="py-[calc(60*var(--scale))]">
     {
@@ -144,8 +321,8 @@ function getSponsorClass(type: string) {
             {s.sponsors.map((sponsor) => (
               <div class={`sponsors ${getSponsorClass(s.type)}`}>
                 <a href={sponsor.link} target="_blank">
-                  <img
-                    src={sponsor.logoUrl}
+                  <Image
+                    src={sponsor.logo}
                     alt={sponsor.name}
                     class="max-w-full max-h-full object-contain"
                   />
