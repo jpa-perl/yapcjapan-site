@@ -49,7 +49,7 @@ const items: Item[] = [
   },
   {
     name: "さくらインターネット株式会社",
-    url: "https://www.sakura.ad.jp/recruit/",
+    url: "",
     image: sakuraLogo,
   },
   {
@@ -117,13 +117,21 @@ const items: Item[] = [
       {
         items.map((item) => (
           <div class="flex items-center justify-center p-1 w-1/2 lg:w-1/3">
-            <a href={item.url} target="_blank" class="w-full h-full">
+            {item.url ? (
+              <a href={item.url} target="_blank" class="w-full h-full">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  class="w-full h-full object-cover bg-white rounded-[5px]"
+                />
+              </a>
+            ) : (
               <Image
                 src={item.image}
                 alt={item.name}
                 class="w-full h-full object-cover bg-white rounded-[5px]"
               />
-            </a>
+            )}
           </div>
         ))
       }
