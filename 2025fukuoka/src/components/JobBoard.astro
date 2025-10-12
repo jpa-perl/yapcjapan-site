@@ -1,0 +1,140 @@
+---
+import { Image } from "astro:assets";
+import OutlinedTitle from "./OutlinedTitle.astro";
+
+// Job board images
+import denaLogo from "../assets/jobboard/dena.jpeg";
+import toggleLogo from "../assets/jobboard/toggle.png";
+import kakehashiLogo from "../assets/jobboard/kakehashi.jpeg";
+import goLogo from "../assets/jobboard/go.png";
+import sakuraLogo from "../assets/jobboard/sakura.png";
+import sixapartLogo from "../assets/jobboard/sixapart.png";
+import findyLogo from "../assets/jobboard/findy.jpeg";
+import mobilefactoryLogo from "../assets/jobboard/mobilefactory.png";
+import hatenaLogo from "../assets/jobboard/hatena.png";
+import freakoutLogo from "../assets/jobboard/freakout.png";
+import mercariLogo from "../assets/jobboard/mercari.png";
+import cybozuLogo from "../assets/jobboard/cybozu.png";
+import kayacLogo from "../assets/jobboard/kayac.png";
+import showroomLogo from "../assets/jobboard/showroom.png";
+import nulabLogo from "../assets/jobboard/nulab.png";
+import yamapLogo from "../assets/jobboard/yamap.png";
+
+interface Item {
+  name: string;
+  url: string;
+  image: ImageMetadata;
+}
+
+const items: Item[] = [
+  {
+    name: "株式会社ディー・エヌ・エー",
+    url: "https://herp.careers/v1/denacareer/requisition-groups/8dae8bb0-4433-4fc7-bdbe-907beddff680",
+    image: denaLogo,
+  },
+  {
+    name: "トグルホールディングス株式会社",
+    url: "https://hrmos.co/pages/toggle/jobs?jobType=FULL",
+    image: toggleLogo,
+  },
+  {
+    name: "株式会社カケハシ",
+    url: "https://hrmos.co/pages/kakehashi",
+    image: kakehashiLogo,
+  },
+  {
+    name: "GO株式会社",
+    url: "https://fuzzy-margin-4d6.notion.site/GO-Inc-Entrance-Book-for-Engineer-e3e916579fc64696bef64488f4c7e73c",
+    image: goLogo,
+  },
+  {
+    name: "さくらインターネット株式会社",
+    url: "",
+    image: sakuraLogo,
+  },
+  {
+    name: "シックス・アパート株式会社",
+    url: "https://www.sixapart.jp/jobs/",
+    image: sixapartLogo,
+  },
+  {
+    name: "ファインディ株式会社",
+    url: "https://herp.careers/v1/findy/requisition-groups/14c4a661-5e48-40c5-99d0-ea657b8b4c04",
+    image: findyLogo,
+  },
+  {
+    name: "株式会社モバイルファクトリー",
+    url: "https://recruit.mobilefactory.jp/",
+    image: mobilefactoryLogo,
+  },
+  {
+    name: "株式会社はてな",
+    url: "https://hatena.co.jp/recruit/engineer",
+    image: hatenaLogo,
+  },
+  {
+    name: "株式会社フリークアウト",
+    url: "https://open.talentio.com/r/1/c/freakout/homes/4564",
+    image: freakoutLogo,
+  },
+  {
+    name: "株式会社メルカリ",
+    url: "https://careers.mercari.com/jobs/engineering/engineering/",
+    image: mercariLogo,
+  },
+  {
+    name: "サイボウズ株式会社",
+    url: "https://cybozu.co.jp/recruit/",
+    image: cybozuLogo,
+  },
+  {
+    name: "面白法人カヤック",
+    url: "https://www.kayac.com/recruit/career",
+    image: kayacLogo,
+  },
+  {
+    name: "SHOWROOM",
+    url: "https://recruit.showroom.co.jp/",
+    image: showroomLogo,
+  },
+  {
+    name: "株式会社ヌーラボ",
+    url: "https://careers.nulab.com/",
+    image: nulabLogo,
+  },
+  {
+    name: "YAMAP",
+    url: "https://corporate.yamap.co.jp/recruit",
+    image: yamapLogo,
+  },
+];
+---
+
+<div id="jobboard" class="flex flex-col gap-[calc(130*var(--scale))]">
+  <OutlinedTitle title="ジョブボード" subtitle="Job Board" bg="text-primary" />
+  <div class="py-[calc(60*var(--scale))]">
+    <div class="content-box flex flex-wrap justify-center">
+      {
+        items.map((item) => (
+          <div class="flex items-center justify-center p-1 w-1/2 lg:w-1/3">
+            {item.url ? (
+              <a href={item.url} target="_blank" class="w-full h-full">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  class="w-full h-full object-cover bg-white rounded-[5px]"
+                />
+              </a>
+            ) : (
+              <Image
+                src={item.image}
+                alt={item.name}
+                class="w-full h-full object-cover bg-white rounded-[5px]"
+              />
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ import Sponsors from "../components/Sponsors.astro";
 import Announcements from "../components/Announcements.astro";
 import HomeHero from "../components/HomeHero.astro";
 import Message from "../components/Message.astro";
+import JobBoard from "../components/Jobboard.astro";
 ---
 
 <Layout>
@@ -24,6 +25,12 @@ import Message from "../components/Message.astro";
   <section class="bg-white py-[calc(70*var(--scale))]">
     <div class="inner">
       <Speakers />
+    </div>
+  </section>
+
+  <section class="bg-primary py-[calc(70*var(--scale))]">
+    <div class="inner">
+      <JobBoard />
     </div>
   </section>
 
