@@ -1,0 +1,91 @@
+---
+import OutlinedTitle from "./OutlinedTitle.astro";
+
+type Staff = {
+  name: string;
+  imageUrl?: string;
+  link?: string;
+};
+
+type StaffList = {
+  role: string;
+  members: Staff[];
+};
+
+const staffList: StaffList[] = [
+  {
+    role: "Organizer",
+    members: [
+      {
+        name: "Staff 1",
+        imageUrl: "/2025fukuoka/300x300.png",
+        link: "https://github.com/staff-1",
+      },
+      {
+        name: "Staff 2",
+        imageUrl: "/2025fukuoka/300x300.png",
+        link: "https://github.com/staff-2",
+      },
+      {
+        name: "Staff 3",
+        imageUrl: "/2025fukuoka/300x300.png",
+        link: "https://github.com/staff-3",
+      },
+    ],
+  },
+  {
+    role: "Staff",
+    members: [
+      {
+        name: "Staff 1",
+        imageUrl: "/2025fukuoka/300x300.png",
+        link: "https://github.com/staff-1",
+      },
+      {
+        name: "Staff 2",
+        imageUrl: "/2025fukuoka/300x300.png",
+        link: "https://github.com/staff-2",
+      },
+      {
+        name: "Staff 3",
+        imageUrl: "/2025fukuoka/300x300.png",
+        link: "https://github.com/staff-3",
+      },
+    ],
+  },
+];
+---
+
+<div id="staff" class="flex flex-col gap-[calc(130*var(--scale))]">
+  <OutlinedTitle title="スタッフ" subtitle="Staff" bg="text-primary" />
+  <div class="py-[calc(60*var(--scale))]">
+    {
+      staffList.map((s) => (
+        <div class="content-box flex flex-col justify-center">
+          <h3 class="text-2xl md:text-[calc(36*var(--scale))]  font-black text-center pt-[calc(50*var(--scale))] pb-[calc(30*var(--scale))]">
+            {s.role}
+          </h3>
+          <div class="content-box flex flex-wrap justify-center gap-6">
+            {s.members.map((m) => (
+              <a
+                href={m.link ?? "#"}
+                target="_blank"
+                class={`${m.link ? "" : "pointer-events-none"} transition-transform hover:translate-y-[-10px]`}
+              >
+                <img
+                  src={m.imageUrl}
+                  alt={m.name}
+                  width={240}
+                  class="aspect-square max-w-40 md:max-w-[calc(240*var(--scale))] bg-white rounded-full"
+                />
+                <span class="block text-sm md:text-base  font-bold text-center my-3">
+                  {m.name}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,85 @@
+---
+import OutlinedTitle from "./OutlinedTitle.astro";
+
+type Sponsor = {
+  name: string;
+  imageUrl?: string;
+  link?: string;
+};
+
+const sponsors: Sponsor[] = [
+  {
+    name: "Individual Sponsor 1",
+    imageUrl: "/2025fukuoka/300x300.png",
+  },
+  {
+    name: "Individual Sponsor 2",
+    imageUrl: "/2025fukuoka/300x300.png",
+    link: "https://github.com/individual-sponsor-2",
+  },
+  {
+    name: "Individual Sponsor 3",
+    imageUrl: "/2025fukuoka/300x300.png",
+    link: "https://github.com/individual-sponsor-3",
+  },
+  {
+    name: "Individual Sponsor 4",
+    imageUrl: "/2025fukuoka/300x300.png",
+    link: "https://github.com/individual-sponsor-4",
+  },
+  {
+    name: "Individual Sponsor 1",
+    imageUrl: "/2025fukuoka/300x300.png",
+    link: "https://github.com/individual-sponsor-1",
+  },
+  {
+    name: "Individual Sponsor 2",
+    imageUrl: "/2025fukuoka/300x300.png",
+    link: "https://github.com/individual-sponsor-2",
+  },
+  {
+    name: "Individual Sponsor 3",
+    imageUrl: "/2025fukuoka/300x300.png",
+    link: "https://github.com/individual-sponsor-3",
+  },
+  {
+    name: "Individual Sponsor 4",
+    imageUrl: "/2025fukuoka/300x300.png",
+    link: "https://github.com/individual-sponsor-4",
+  },
+];
+---
+
+<div
+  id="individual-sponsors"
+  class="flex flex-col gap-[calc(130*var(--scale))]"
+>
+  <OutlinedTitle
+    title="個人スポンサー"
+    subtitle="Individual Sponsors"
+    bg="text-primary"
+  />
+  <div class="py-[calc(60*var(--scale))]">
+    <div class="content-box flex flex-wrap justify-center gap-6">
+      {
+        sponsors.map((s) => (
+          <a
+            href={s.link ?? "#"}
+            target="_blank"
+            class={`${s.link ? "" : "pointer-events-none"} transition-transform hover:translate-y-[-10px]`}
+          >
+            <img
+              src={s.imageUrl ?? "/2025fukuoka/300x300.png"}
+              alt={s.name}
+              width={240}
+              class="aspect-square max-w-40 md:max-w-[calc(240*var(--scale))] bg-white rounded-full"
+            />
+            <span class="block text-sm md:text-base  font-bold text-center my-3">
+              {s.name}
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
