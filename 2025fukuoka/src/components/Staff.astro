@@ -1,5 +1,6 @@
 ---
 import OutlinedTitle from "./OutlinedTitle.astro";
+import staffData from "../assets/staff.json";
 
 type Staff = {
   name: string;
@@ -12,48 +13,7 @@ type StaffList = {
   members: Staff[];
 };
 
-const staffList: StaffList[] = [
-  {
-    role: "Organizer",
-    members: [
-      {
-        name: "Staff 1",
-        imageUrl: "/2025fukuoka/300x300.png",
-        link: "https://github.com/staff-1",
-      },
-      {
-        name: "Staff 2",
-        imageUrl: "/2025fukuoka/300x300.png",
-        link: "https://github.com/staff-2",
-      },
-      {
-        name: "Staff 3",
-        imageUrl: "/2025fukuoka/300x300.png",
-        link: "https://github.com/staff-3",
-      },
-    ],
-  },
-  {
-    role: "Staff",
-    members: [
-      {
-        name: "Staff 1",
-        imageUrl: "/2025fukuoka/300x300.png",
-        link: "https://github.com/staff-1",
-      },
-      {
-        name: "Staff 2",
-        imageUrl: "/2025fukuoka/300x300.png",
-        link: "https://github.com/staff-2",
-      },
-      {
-        name: "Staff 3",
-        imageUrl: "/2025fukuoka/300x300.png",
-        link: "https://github.com/staff-3",
-      },
-    ],
-  },
-];
+const staffList: StaffList[] = staffData;
 ---
 
 <div id="staff" class="flex flex-col gap-[calc(130*var(--scale))]">
