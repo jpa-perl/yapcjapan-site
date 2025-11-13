@@ -1,5 +1,6 @@
 ---
 import OutlinedTitle from "./OutlinedTitle.astro";
+import sponsorData from "../assets/individual-sponsors.json";
 
 type Sponsor = {
   name: string;
@@ -7,47 +8,7 @@ type Sponsor = {
   link?: string;
 };
 
-const sponsors: Sponsor[] = [
-  {
-    name: "Individual Sponsor 1",
-    imageUrl: "/2025fukuoka/300x300.png",
-  },
-  {
-    name: "Individual Sponsor 2",
-    imageUrl: "/2025fukuoka/300x300.png",
-    link: "https://github.com/individual-sponsor-2",
-  },
-  {
-    name: "Individual Sponsor 3",
-    imageUrl: "/2025fukuoka/300x300.png",
-    link: "https://github.com/individual-sponsor-3",
-  },
-  {
-    name: "Individual Sponsor 4",
-    imageUrl: "/2025fukuoka/300x300.png",
-    link: "https://github.com/individual-sponsor-4",
-  },
-  {
-    name: "Individual Sponsor 1",
-    imageUrl: "/2025fukuoka/300x300.png",
-    link: "https://github.com/individual-sponsor-1",
-  },
-  {
-    name: "Individual Sponsor 2",
-    imageUrl: "/2025fukuoka/300x300.png",
-    link: "https://github.com/individual-sponsor-2",
-  },
-  {
-    name: "Individual Sponsor 3",
-    imageUrl: "/2025fukuoka/300x300.png",
-    link: "https://github.com/individual-sponsor-3",
-  },
-  {
-    name: "Individual Sponsor 4",
-    imageUrl: "/2025fukuoka/300x300.png",
-    link: "https://github.com/individual-sponsor-4",
-  },
-];
+const sponsors: Sponsor[] = sponsorData;
 ---
 
 <div
