@@ -6,7 +6,9 @@ import Sponsors from "../components/Sponsors.astro";
 import Announcements from "../components/Announcements.astro";
 import HomeHero from "../components/HomeHero.astro";
 import Message from "../components/Message.astro";
-import JobBoard from "../components/Jobboard.astro";
+import JobBoard from "../components/JobBoard.astro";
+import IndividualSponsors from "../components/IndividualSponsors.astro";
+import Staff from "../components/Staff.astro";
 ---
 
 <Layout>
@@ -37,6 +39,18 @@ import JobBoard from "../components/Jobboard.astro";
   <section class="bg-primary py-[calc(70*var(--scale))]">
     <div class="inner">
       <Sponsors />
+    </div>
+  </section>
+
+  <section class="bg-white py-[calc(70*var(--scale))]">
+    <div class="inner">
+      <IndividualSponsors />
+    </div>
+  </section>
+
+  <section class="bg-white py-[calc(70*var(--scale))]">
+    <div class="inner">
+      <Staff />
     </div>
   </section>
 </Layout>
