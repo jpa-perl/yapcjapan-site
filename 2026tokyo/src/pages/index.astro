@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/2026tokyo/favicon.svg" />
+    <link rel="icon" href="/2026tokyo/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>YAPC::Tokyo 2026</title>
+  </head>
+  <body class="min-h-screen bg-yapc-navy text-white">
+    <main
+      class="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 py-16"
+    >
+      <p class="js-kicker text-sm font-bold uppercase tracking-[0.2em] text-yapc-cyan">
+        Yet Another Perl Conference
+      </p>
+      <h1
+        class="js-title mt-5 max-w-4xl text-5xl font-black leading-tight md:text-7xl"
+      >
+        YAPC::Tokyo 2026
+      </h1>
+      <p class="js-copy mt-8 max-w-2xl text-lg leading-8 text-white/78">
+        Astro, Tailwind CSS, and GSAP are ready for the next YAPC::Japan site.
+      </p>
+    </main>
+
+    <script>
+      import { gsap } from "gsap";
+
+      gsap
+        .timeline({ defaults: { duration: 0.7, ease: "power3.out" } })
+        .from(".js-kicker", { autoAlpha: 0, y: 16 })
+        .from(".js-title", { autoAlpha: 0, y: 24 }, "-=0.4")
+        .from(".js-copy", { autoAlpha: 0, y: 18 }, "-=0.45");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-yapc-navy: #18233f;
+  --color-yapc-cyan: #34d5ff;
+  --color-yapc-pink: #ff4d8d;
+  --font-sans: "Inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Meiryo", sans-serif;
+}
+
+@layer base {
+  body {
+    font-feature-settings: palt;
+  }
+}
