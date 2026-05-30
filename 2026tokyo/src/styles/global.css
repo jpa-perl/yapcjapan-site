@@ -16,8 +16,11 @@
   --color-gray-500: #a7a7a7;
   --color-gray-200: #e3e3e3;
 
-  --font-sans: "Inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-    "Noto Sans JP", "Meiryo", sans-serif;
+  --font-sans: "Zen Maru Gothic", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Meiryo", sans-serif;
+  --font-maru: "Zen Maru Gothic", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Meiryo", sans-serif;
+  --font-solway: "Solway", Georgia, "Times New Roman", serif;
 }
 
 @layer base {
