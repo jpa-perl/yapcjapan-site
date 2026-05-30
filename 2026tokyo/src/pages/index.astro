@@ -12,7 +12,21 @@ import {
 
 <Layout>
   <section id="hero" class="relative bg-gray-200">
-    <div class="flex flex-col items-center gap-6 py-40 max-w-screen-xl mx-auto px-5">
+    <div id="hero-shapes" class="absolute inset-0 pointer-events-none">
+      <img id="shape-gold-left-top" src="/2026tokyo/images/shape-gold-left-top.svg" alt="" class="absolute" />
+      <img id="shape-white-left" src="/2026tokyo/images/shape-white-left.svg" alt="" class="absolute" />
+      <img id="shape-blue-right-top" src="/2026tokyo/images/shape-blue-right-top.svg" alt="" class="absolute" />
+      <img id="shape-purple-right-small" src="/2026tokyo/images/shape-purple-right-small.svg" alt="" class="absolute" />
+      <img id="shape-green-center-top" src="/2026tokyo/images/shape-green-center-top.svg" alt="" class="absolute" />
+      <img id="shape-blue-stroke-left" src="/2026tokyo/images/shape-blue-stroke-left.svg" alt="" class="absolute" />
+      <img id="shape-gold-left-lower" src="/2026tokyo/images/shape-gold-left-lower.svg" alt="" class="absolute" />
+      <img id="shape-orange-stroke-right" src="/2026tokyo/images/shape-orange-stroke-right.svg" alt="" class="absolute" />
+      <img id="shape-gold-right" src="/2026tokyo/images/shape-gold-right.svg" alt="" class="absolute" />
+      <img id="shape-orange-stroke-center" src="/2026tokyo/images/shape-orange-stroke-center.svg" alt="" class="absolute" />
+      <img id="shape-white-left-bottom" src="/2026tokyo/images/shape-white-left-bottom.svg" alt="" class="absolute" />
+      <img id="shape-green-right-bottom" src="/2026tokyo/images/shape-green-right-bottom.svg" alt="" class="absolute" />
+    </div>
+    <div class="relative z-10 flex flex-col items-center pt-72 pb-48 gap-20 max-w-screen-xl mx-auto px-5">
       <h1 class="sr-only">{siteInfo.title}</h1>
       <img src="/2026tokyo/images/hero-logo-group.svg" alt="YAPC::Tokyo 2026" width="468" height="483" />
       <img src="/2026tokyo/images/hero-date-card.svg" alt="2026 11.27 FRI → 11.29 SUN @東京ビッグサイト" width="464" height="150" />
@@ -103,3 +117,47 @@ import {
     </div>
   </section>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+
+  const DESIGN_WIDTH = 1280;
+
+  // baseX: デザイン中心(640px)からの水平オフセット（図形左端基準）
+  // baseY: Figmaフレーム上端からのY座標（図形上端基準）
+  const shapes = [
+    { id: "shape-gold-left-top",        baseX: -675, baseY: 104 },
+    { id: "shape-white-left",           baseX: -498, baseY: 352 },
+    { id: "shape-blue-right-top",       baseX:  319, baseY: 464 },
+    { id: "shape-purple-right-small",   baseX:  197, baseY: 134 },
+    { id: "shape-green-center-top",     baseX:  -86, baseY:  19 },
+    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 627 },
+    { id: "shape-gold-left-lower",      baseX: -452, baseY: 859 },
+    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 185 },
+    { id: "shape-gold-right",           baseX:  400, baseY: 817 },
+    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1077 },
+    { id: "shape-white-left-bottom",    baseX: -406, baseY: 1103 },
+    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1037 },
+  ];
+
+  const heroSection = document.getElementById("hero");
+  if (heroSection) {
+    function updateShapes() {
+      const vw = window.innerWidth;
+      const cx = vw / 2;
+
+      shapes.forEach(shape => {
+        const el = document.getElementById(shape.id);
+        if (!el) return;
+
+        gsap.set(el, {
+          left: cx + shape.baseX,
+          top: shape.baseY,
+        });
+      });
+    }
+
+    window.addEventListener("resize", updateShapes);
+    updateShapes();
+  }
+</script>
