@@ -1,41 +1,100 @@
 ---
-import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import SpeakerCard from "../components/SpeakerCard.astro";
+import {
+  siteInfo,
+  announcements,
+  keynoteSpeaker,
+  speakers,
+} from "../data/site";
 ---
 
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/2026tokyo/favicon.svg" />
-    <link rel="icon" href="/2026tokyo/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>YAPC::Tokyo 2026</title>
-  </head>
-  <body class="min-h-screen bg-navy text-white">
-    <main
-      class="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 py-16"
-    >
-      <p class="js-kicker text-sm font-bold uppercase tracking-[0.2em] text-orange">
-        Yet Another Perl Conference
-      </p>
-      <h1
-        class="js-title mt-5 max-w-4xl text-5xl font-black leading-tight md:text-7xl"
-      >
-        YAPC::Tokyo 2026
-      </h1>
-      <p class="js-copy mt-8 max-w-2xl text-lg leading-8 text-white/78">
-        Astro, Tailwind CSS, and GSAP are ready for the next YAPC::Japan site.
-      </p>
-    </main>
+<Layout>
+  <section id="hero" class="bg-gray-200">
+    <div class="flex flex-col items-center gap-6 py-40 max-w-screen-xl mx-auto px-5">
+      <h1 class="font-solway text-5xl font-extrabold text-black">{siteInfo.title}</h1>
+    </div>
+  </section>
 
-    <script>
-      import { gsap } from "gsap";
+  <section id="announcements">
+    <div class="py-16 max-w-screen-xl mx-auto px-5 flex flex-col items-center gap-8">
+      <SectionHeading title="Announcement" subtitle="おしらせ" />
+      <ul class="w-full max-w-2xl">
+        {announcements.map((item) => (
+          <li class="border-t border-dashed border-gray-500">
+            <a href={item.href} class="flex items-center gap-5 px-1 py-5">
+              <time datetime={item.date} class="shrink-0 rounded-full border border-black bg-white px-4 py-0.5 font-solway font-medium text-base text-gray-700 text-center">
+                {item.displayDate}
+              </time>
+              <span class="font-maru font-bold text-lg text-black">{item.title}</span>
+            </a>
+          </li>
+        ))}
+        <li class="border-t border-dashed border-gray-500" />
+      </ul>
+      <a href={siteInfo.blogUrl} class="bg-black text-white font-maru font-bold text-base rounded-full px-5 py-2.5 text-center">
+        YAPC 公式ブログはこちら
+      </a>
+    </div>
+  </section>
 
-      gsap
-        .timeline({ defaults: { duration: 0.7, ease: "power3.out" } })
-        .from(".js-kicker", { autoAlpha: 0, y: 16 })
-        .from(".js-title", { autoAlpha: 0, y: 24 }, "-=0.4")
-        .from(".js-copy", { autoAlpha: 0, y: 18 }, "-=0.45");
-    </script>
-  </body>
-</html>
+  <section id="about" class="bg-gray-200">
+    <div class="py-16 max-w-screen-xl mx-auto px-5 flex flex-col items-center gap-8">
+      <SectionHeading title="About YAPC::Tokyo 2026" subtitle="YAPC::Tokyo 2026について" color="blue" />
+      <p class="max-w-2xl text-base font-maru font-bold text-black text-center whitespace-pre-line">{siteInfo.description}</p>
+
+      <div class="bg-white rounded-[20px] px-5 py-7 grid grid-cols-[theme(spacing.5)_1fr_theme(spacing.5)] gap-y-5">
+        <div class="col-start-2 flex flex-col gap-3 items-start">
+          <span class="rounded-full border border-black px-3 py-1 font-maru font-bold text-base">開催日時</span>
+          <ul class="font-maru font-medium text-base leading-relaxed">
+            {siteInfo.dates.map((d) => (
+              <li>
+                <time datetime={d.date}>{d.label}</time>  {d.note}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <hr class="col-span-full border-t border-dashed border-gray-500" />
+
+        <div class="col-start-2 flex flex-col gap-3 items-start">
+          <span class="rounded-full border border-black px-3 py-1 font-maru font-bold text-base">場所</span>
+          <div class="font-maru font-medium text-base leading-relaxed">
+            <p>{siteInfo.venue.name}</p>
+            <p><a href={siteInfo.venue.accessUrl}>アクセス方法(東京ビッグサイト公式ページ)</a></p>
+            <p><a href={siteInfo.venue.mapUrl}>Google Mapで見る</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="speakers">
+    <div class="py-16 max-w-screen-xl mx-auto px-5 flex flex-col items-center gap-12">
+      <SectionHeading title="Speakers" subtitle="スピーカー" />
+
+      <section id="keynote" class="w-full max-w-xl">
+        <SpeakerCard
+          name={keynoteSpeaker.name}
+          nameEn={keynoteSpeaker.nameEn}
+          description={keynoteSpeaker.description}
+          role={keynoteSpeaker.role}
+          keynote
+        />
+      </section>
+
+      <ul class="grid grid-cols-3 gap-12 w-full">
+        {speakers.map((speaker) => (
+          <li>
+            <SpeakerCard
+              name={speaker.name}
+              nameEn={speaker.nameEn}
+              description={speaker.description}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Layout>
