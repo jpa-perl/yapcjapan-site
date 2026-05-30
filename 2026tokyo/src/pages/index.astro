@@ -25,6 +25,11 @@ import {
       <img id="shape-orange-stroke-center" src="/2026tokyo/images/shape-orange-stroke-center.svg" alt="" class="absolute" />
       <img id="shape-white-left-bottom" src="/2026tokyo/images/shape-white-left-bottom.svg" alt="" class="absolute" />
       <img id="shape-green-right-bottom" src="/2026tokyo/images/shape-green-right-bottom.svg" alt="" class="absolute" />
+      <img id="photo-left-1" src="/2026tokyo/images/photo-hero-left-1.png" alt="" class="absolute" />
+      <img id="photo-left-2" src="/2026tokyo/images/photo-hero-left-2.png" alt="" class="absolute" />
+      <img id="photo-right-1" src="/2026tokyo/images/photo-hero-right-1.png" alt="" class="absolute" />
+      <img id="photo-right-2" src="/2026tokyo/images/photo-hero-right-2.png" alt="" class="absolute" />
+      <img id="photo-left-3" src="/2026tokyo/images/photo-hero-left-3.png" alt="" class="absolute" />
     </div>
     <div class="relative z-10 flex flex-col items-center pt-72 pb-48 gap-20 max-w-screen-xl mx-auto px-5">
       <h1 class="sr-only">{siteInfo.title}</h1>
@@ -130,14 +135,23 @@ import {
     { id: "shape-white-left",           baseX: -498, baseY: 352 },
     { id: "shape-blue-right-top",       baseX:  319, baseY: 464 },
     { id: "shape-purple-right-small",   baseX:  197, baseY: 134 },
-    { id: "shape-green-center-top",     baseX:  -86, baseY:  19 },
-    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 627 },
+    { id: "shape-green-center-top",     baseX: -160, baseY:  19 },
+    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 591 },
     { id: "shape-gold-left-lower",      baseX: -452, baseY: 859 },
-    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 185 },
-    { id: "shape-gold-right",           baseX:  400, baseY: 817 },
-    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1077 },
+    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 140 },
+    { id: "shape-gold-right",           baseX:  400, baseY: 730 },
+    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1027 },
     { id: "shape-white-left-bottom",    baseX: -406, baseY: 1103 },
-    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1037 },
+    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1028 },
+  ];
+
+  // マスク済み画像: baseX/Y = Figmaグループの左上座標, w/h = 画像px÷2（2xエクスポート）
+  const photos = [
+    { id: "photo-left-1",  baseX: -617, baseY: 297, w: 371, h: 260 },
+    { id: "photo-left-2",  baseX: -681, baseY: 706, w: 383, h: 293 },
+    { id: "photo-right-1", baseX:  276, baseY: 387, w: 329, h: 258 },
+    { id: "photo-right-2", baseX:  269, baseY: 846, w: 337, h: 364 },
+    { id: "photo-left-3",  baseX: -628, baseY: 1042, w: 423, h: 244 },
   ];
 
   const heroSection = document.getElementById("hero");
@@ -157,7 +171,29 @@ import {
       });
     }
 
-    window.addEventListener("resize", updateShapes);
-    updateShapes();
+    function updatePhotos() {
+      const vw = window.innerWidth;
+      const cx = vw / 2;
+
+      photos.forEach(photo => {
+        const el = document.getElementById(photo.id);
+        if (!el) return;
+
+        gsap.set(el, {
+          left: cx + photo.baseX,
+          top: photo.baseY,
+          width: photo.w,
+          height: photo.h,
+        });
+      });
+    }
+
+    function update() {
+      updateShapes();
+      updatePhotos();
+    }
+
+    window.addEventListener("resize", update);
+    update();
   }
 </script>
