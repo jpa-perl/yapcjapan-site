@@ -31,7 +31,7 @@ import {
       <img id="photo-right-2" src="/2026tokyo/images/photo-hero-right-2.png" alt="" class="absolute" />
       <img id="photo-left-3" src="/2026tokyo/images/photo-hero-left-3.png" alt="" class="absolute" />
     </div>
-    <div class="relative z-10 flex flex-col items-center pt-72 pb-48 gap-20 max-w-screen-xl mx-auto px-5">
+    <div id="hero-content" class="relative z-10 flex flex-col items-center pt-72 pb-48 gap-20 max-w-screen-xl mx-auto px-5">
       <h1 class="sr-only">{siteInfo.title}</h1>
       <img src="/2026tokyo/images/hero-logo-group.svg" alt="YAPC::Tokyo 2026" width="468" height="483" />
       <img src="/2026tokyo/images/hero-date-card.svg" alt="2026 11.27 FRI → 11.29 SUN @東京ビッグサイト" width="464" height="150" />
@@ -40,7 +40,7 @@ import {
   </section>
 
   <section id="announcements">
-    <div class="py-16 max-w-screen-xl mx-auto px-5 flex flex-col items-center gap-8">
+    <div class="pt-2 pb-16 max-w-screen-xl mx-auto px-5 flex flex-col items-center gap-8">
       <SectionHeading title="Announcement" subtitle="おしらせ" />
       <ul class="w-full max-w-2xl">
         {announcements.map((item) => (
@@ -126,71 +126,89 @@ import {
 <script>
   import { gsap } from "gsap";
 
+  function remap(v: number, inMin: number, inMax: number, outMin: number, outMax: number) {
+    return outMin + (v - inMin) * (outMax - outMin) / (inMax - inMin);
+  }
+  function clamp(v: number, min: number, max: number) {
+    return Math.min(Math.max(v, min), max);
+  }
+
   const DESIGN_WIDTH = 1280;
 
-  // baseX: デザイン中心(640px)からの水平オフセット（図形左端基準）
-  // baseY: Figmaフレーム上端からのY座標（図形上端基準）
+  // sf: spreadFactor — 画面幅変化時の水平広がり係数
   const shapes = [
-    { id: "shape-gold-left-top",        baseX: -675, baseY: 104 },
-    { id: "shape-white-left",           baseX: -498, baseY: 352 },
-    { id: "shape-blue-right-top",       baseX:  319, baseY: 464 },
-    { id: "shape-purple-right-small",   baseX:  197, baseY: 134 },
-    { id: "shape-green-center-top",     baseX: -160, baseY:  19 },
-    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 591 },
-    { id: "shape-gold-left-lower",      baseX: -452, baseY: 859 },
-    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 140 },
-    { id: "shape-gold-right",           baseX:  400, baseY: 730 },
-    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1027 },
-    { id: "shape-white-left-bottom",    baseX: -406, baseY: 1103 },
-    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1028 },
+    { id: "shape-gold-left-top",        baseX: -675, baseY: 104,  sf: 1.2 },
+    { id: "shape-white-left",           baseX: -498, baseY: 352,  sf: 0.8 },
+    { id: "shape-blue-right-top",       baseX:  319, baseY: 464,  sf: 1.0 },
+    { id: "shape-purple-right-small",   baseX:  197, baseY: 134,  sf: 0.9 },
+    { id: "shape-green-center-top",     baseX: -160, baseY:  19,  sf: 0.2 },
+    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 591,  sf: 1.3 },
+    { id: "shape-gold-left-lower",      baseX: -452, baseY: 859,  sf: 0.8 },
+    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 140,  sf: 1.3 },
+    { id: "shape-gold-right",           baseX:  400, baseY: 730,  sf: 1.0 },
+    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1027, sf: 0.3 },
+    { id: "shape-white-left-bottom",    baseX: -406, baseY: 1103, sf: 0.9 },
+    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1028, sf: 1.0 },
   ];
 
-  // マスク済み画像: baseX/Y = Figmaグループの左上座標, w/h = 画像px÷2（2xエクスポート）
   const photos = [
-    { id: "photo-left-1",  baseX: -617, baseY: 297, w: 371, h: 260 },
-    { id: "photo-left-2",  baseX: -681, baseY: 706, w: 424, h: 293 },
-    { id: "photo-right-1", baseX:  276, baseY: 387, w: 329, h: 258 },
-    { id: "photo-right-2", baseX:  269, baseY: 846, w: 337, h: 364 },
-    { id: "photo-left-3",  baseX: -628, baseY: 1042, w: 423, h: 244 },
+    { id: "photo-left-1",  baseX: -617, baseY: 297,  w: 371, h: 260, sf: 1.0 },
+    { id: "photo-left-2",  baseX: -681, baseY: 706,  w: 424, h: 293, sf: 1.1 },
+    { id: "photo-right-1", baseX:  276, baseY: 387,  w: 329, h: 258, sf: 1.0 },
+    { id: "photo-right-2", baseX:  269, baseY: 846,  w: 337, h: 364, sf: 1.0 },
+    { id: "photo-left-3",  baseX: -628, baseY: 1042, w: 423, h: 244, sf: 1.1 },
   ];
 
   const heroSection = document.getElementById("hero");
   if (heroSection) {
-    function updateShapes() {
+    function update() {
       const vw = window.innerWidth;
+      const vh = window.innerHeight;
       const cx = vw / 2;
+
+      const hScale = clamp((vh - 210) / 1193, 0.4, 1.0);
+      const spread = remap(vw, 768, 1920, -50, 80);
+
+      const heroEl = document.getElementById("hero-content");
+      if (heroEl) {
+        gsap.set(heroEl, {
+          paddingTop: 288 * hScale,
+          paddingBottom: 80 * hScale,
+          gap: 80 * hScale,
+        });
+
+        const logo = heroEl.querySelector("img:first-of-type") as HTMLElement;
+        const dateCard = heroEl.querySelector("img:last-of-type") as HTMLElement;
+        if (logo) gsap.set(logo, { width: 468 * hScale, height: 483 * hScale });
+        if (dateCard) gsap.set(dateCard, { width: 464 * hScale, height: 150 * hScale });
+      }
 
       shapes.forEach(shape => {
         const el = document.getElementById(shape.id);
         if (!el) return;
 
+        const spreadX = spread * shape.sf * Math.sign(shape.baseX);
+
         gsap.set(el, {
-          left: cx + shape.baseX,
-          top: shape.baseY,
+          left: cx + (shape.baseX * hScale) + spreadX,
+          top: shape.baseY * hScale,
+          scale: hScale,
         });
       });
-    }
-
-    function updatePhotos() {
-      const vw = window.innerWidth;
-      const cx = vw / 2;
 
       photos.forEach(photo => {
         const el = document.getElementById(photo.id);
         if (!el) return;
 
+        const spreadX = spread * photo.sf * Math.sign(photo.baseX);
+
         gsap.set(el, {
-          left: cx + photo.baseX,
-          top: photo.baseY,
-          width: photo.w,
-          height: photo.h,
+          left: cx + (photo.baseX * hScale) + spreadX,
+          top: photo.baseY * hScale,
+          width: photo.w * hScale,
+          height: photo.h * hScale,
         });
       });
-    }
-
-    function update() {
-      updateShapes();
-      updatePhotos();
     }
 
     window.addEventListener("resize", update);
