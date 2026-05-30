@@ -11,10 +11,13 @@ import {
 ---
 
 <Layout>
-  <section id="hero" class="bg-gray-200">
+  <section id="hero" class="relative bg-gray-200">
     <div class="flex flex-col items-center gap-6 py-40 max-w-screen-xl mx-auto px-5">
-      <h1 class="font-solway text-5xl font-extrabold text-black">{siteInfo.title}</h1>
+      <h1 class="sr-only">{siteInfo.title}</h1>
+      <img src="/2026tokyo/images/hero-logo-group.svg" alt="YAPC::Tokyo 2026" width="468" height="483" />
+      <img src="/2026tokyo/images/hero-date-card.svg" alt="2026 11.27 FRI → 11.29 SUN @東京ビッグサイト" width="464" height="150" />
     </div>
+    <img src="/2026tokyo/images/hero-wave.svg" alt="" class="block w-full bg-cream" />
   </section>
 
   <section id="announcements">
@@ -37,6 +40,7 @@ import {
         YAPC 公式ブログはこちら
       </a>
     </div>
+    <img src="/2026tokyo/images/about-wave-top.svg" alt="" class="block w-full bg-cream" />
   </section>
 
   <section id="about" class="bg-gray-200">
@@ -68,6 +72,7 @@ import {
         </div>
       </div>
     </div>
+    <img src="/2026tokyo/images/speakers-wave.svg" alt="" class="block w-full bg-gray-200" />
   </section>
 
   <section id="speakers">
