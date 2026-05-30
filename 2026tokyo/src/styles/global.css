@@ -1,9 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-yapc-navy: #18233f;
-  --color-yapc-cyan: #34d5ff;
-  --color-yapc-pink: #ff4d8d;
+  --color-*: initial;
+  --color-black: #222222;
+  --color-white: #ffffff;
+  --color-cream: #fffaed;
+  --color-orange: #ea5520;
+  --color-green: #00992b;
+  --color-brown: #473b1e;
+  --color-gold: #e29d25;
+  --color-blue: #004aba;
+  --color-navy: #10355e;
+  --color-purple: #593b6e;
+  --color-gray-700: #616161;
+  --color-gray-500: #a7a7a7;
+  --color-gray-200: #e3e3e3;
+
   --font-sans: "Inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
     "Noto Sans JP", "Meiryo", sans-serif;
 }
