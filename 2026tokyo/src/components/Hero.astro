@@ -1,0 +1,208 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section id="hero" class="relative bg-gray-200">
+  <div id="hero-shapes" class="absolute inset-0 pointer-events-none">
+    <img id="shape-gold-left-top" src="/2026tokyo/images/shape-gold-left-top.svg" alt="" class="absolute" />
+    <img id="shape-white-left" src="/2026tokyo/images/shape-white-left.svg" alt="" class="absolute" />
+    <img id="shape-blue-right-top" src="/2026tokyo/images/shape-blue-right-top.svg" alt="" class="absolute" />
+    <img id="shape-purple-right-small" src="/2026tokyo/images/shape-purple-right-small.svg" alt="" class="absolute" />
+    <img id="shape-green-center-top" src="/2026tokyo/images/shape-green-center-top.svg" alt="" class="absolute" />
+    <img id="shape-blue-stroke-left" src="/2026tokyo/images/shape-blue-stroke-left.svg" alt="" class="absolute" />
+    <img id="shape-gold-left-lower" src="/2026tokyo/images/shape-gold-left-lower.svg" alt="" class="absolute" />
+    <img id="shape-orange-stroke-right" src="/2026tokyo/images/shape-orange-stroke-right.svg" alt="" class="absolute" />
+    <img id="shape-gold-right" src="/2026tokyo/images/shape-gold-right.svg" alt="" class="absolute" />
+    <img id="shape-orange-stroke-center" src="/2026tokyo/images/shape-orange-stroke-center.svg" alt="" class="absolute" />
+    <img id="shape-white-left-bottom" src="/2026tokyo/images/shape-white-left-bottom.svg" alt="" class="absolute" />
+    <img id="shape-green-right-bottom" src="/2026tokyo/images/shape-green-right-bottom.svg" alt="" class="absolute" />
+    <img id="photo-left-1" src="/2026tokyo/images/photo-hero-left-1.png" alt="" class="absolute" />
+    <img id="photo-left-2" src="/2026tokyo/images/photo-hero-left-2.png" alt="" class="absolute" />
+    <img id="photo-right-1" src="/2026tokyo/images/photo-hero-right-1.png" alt="" class="absolute" />
+    <img id="photo-right-2" src="/2026tokyo/images/photo-hero-right-2.png" alt="" class="absolute" />
+    <img id="photo-left-3" src="/2026tokyo/images/photo-hero-left-3.png" alt="" class="absolute" />
+  </div>
+  <div id="hero-content" class="relative z-10 flex flex-col items-center pt-72 pb-48 gap-20 max-w-screen-xl mx-auto px-5">
+    <h1 class="sr-only">{title}</h1>
+    <img src="/2026tokyo/images/hero-logo-group.svg" alt="YAPC::Tokyo 2026" width="468" height="483" />
+    <img src="/2026tokyo/images/hero-date-card.svg" alt="2026 11.27 FRI → 11.29 SUN @東京ビッグサイト" width="464" height="150" />
+  </div>
+  <img
+    src="/2026tokyo/images/hero-wave.svg"
+    alt=""
+    width="1300"
+    height="120"
+    class="block w-full bg-cream h-[min(calc(120/1300*100vw),120px)]"
+  />
+</section>
+
+<script>
+  import { gsap } from "gsap";
+
+  function remap(v: number, inMin: number, inMax: number, outMin: number, outMax: number) {
+    return outMin + (v - inMin) * (outMax - outMin) / (inMax - inMin);
+  }
+  function clamp(v: number, min: number, max: number) {
+    return Math.min(Math.max(v, min), max);
+  }
+
+  const CONTENT_WIDTH = 468;
+  const LOGO_HEIGHT = 483;
+  const DATE_CARD_HEIGHT = 150;
+  const PAGE_SAFE_AREA_X = 40;
+  const ANNOUNCEMENT_TOP = 8;
+  const ANNOUNCEMENT_HEADING_HEIGHT = 94;
+
+  function getLayoutValue(vh: number, heightMin: number, heightMax: number, compact: number, roomy: number) {
+    return clamp(remap(vh, heightMin, heightMax, compact, roomy), compact, roomy);
+  }
+
+  function getHeroLayout(vw: number, vh: number) {
+    const widthScale = clamp((vw - PAGE_SAFE_AREA_X) / CONTENT_WIDTH, 0.68, 1);
+    const headingPeek = vw < 640
+      ? getLayoutValue(vh, 760, 840, 0, ANNOUNCEMENT_HEADING_HEIGHT)
+      : getLayoutValue(vh, 660, 1040, 0, ANNOUNCEMENT_HEADING_HEIGHT);
+    const waveHeight = Math.min(vw * 120 / 1300, 120);
+    const targetHeroHeight = Math.max(vh - ANNOUNCEMENT_TOP - headingPeek, 620);
+
+    const gap = vw < 640
+      ? getLayoutValue(vh, 620, 920, 18, 44)
+      : getLayoutValue(vh, 620, 1160, 22, 64);
+    const desiredBottom = getLayoutValue(vh, 640, 1120, 82, 120);
+    const heroBodyHeight = targetHeroHeight - waveHeight;
+    const logoCenterY = heroBodyHeight * (vw < 640 ? 0.43 : 0.45);
+    const scaleByTop = (logoCenterY - 72) * 2 / LOGO_HEIGHT;
+    const scaleByBottom = (heroBodyHeight - desiredBottom - gap - logoCenterY) / ((LOGO_HEIGHT / 2) + DATE_CARD_HEIGHT);
+    const contentScale = Math.min(clamp(Math.min(scaleByTop, scaleByBottom), 0.68, 1), widthScale);
+    const paddingTop = Math.max(72, logoCenterY - (LOGO_HEIGHT * contentScale / 2));
+    const paddingBottom = Math.max(
+      heroBodyHeight - paddingTop - gap - ((LOGO_HEIGHT + DATE_CARD_HEIGHT) * contentScale),
+      32,
+    );
+
+    return {
+      contentScale,
+      visualScale: clamp(contentScale * 1.06, 0.7, 1),
+      yCompress: clamp(heroBodyHeight / 1193, 0.58, 1),
+      paddingTop,
+      paddingBottom,
+      gap,
+      spread: clamp(remap(vw, 768, 1920, -50, 80), -70, 100),
+    };
+  }
+
+  // sf: spreadFactor — 画面幅変化時の水平広がり係数
+  // pd: parallaxDepth — スクロール時に上方向へ動く量
+  // px: parallaxX — スクロール時に横方向へ動く量
+  const shapes = [
+    { id: "shape-gold-left-top",        baseX: -675, baseY: 104,  sf: 1.2, pd: 34,  px: -10 },
+    { id: "shape-white-left",           baseX: -498, baseY: 352,  sf: 0.8, pd: 56,  px: -18 },
+    { id: "shape-blue-right-top",       baseX:  319, baseY: 464,  sf: 1.0, pd: 76,  px:  16 },
+    { id: "shape-purple-right-small",   baseX:  197, baseY: 134,  sf: 0.9, pd: 28,  px:   8 },
+    { id: "shape-green-center-top",     baseX: -160, baseY:  19,  sf: 0.2, pd: 18,  px:  -4 },
+    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 591,  sf: 1.3, pd: 88,  px: -24 },
+    { id: "shape-gold-left-lower",      baseX: -452, baseY: 859,  sf: 0.8, pd: 112, px: -18 },
+    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 140,  sf: 1.3, pd: 46,  px:  18 },
+    { id: "shape-gold-right",           baseX:  400, baseY: 730,  sf: 1.0, pd: 102, px:  22 },
+    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1027, sf: 0.3, pd: 132, px:   6 },
+    { id: "shape-white-left-bottom",    baseX: -406, baseY: 1103, sf: 0.9, pd: 144, px: -20 },
+    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1028, sf: 1.0, pd: 124, px:  20 },
+  ];
+
+  const photos = [
+    { id: "photo-left-1",  baseX: -617, baseY: 297,  w: 371, h: 260, sf: 1.0, pd: 82,  px: -18 },
+    { id: "photo-left-2",  baseX: -681, baseY: 706,  w: 424, h: 293, sf: 1.1, pd: 128, px: -34 },
+    { id: "photo-right-1", baseX:  276, baseY: 387,  w: 329, h: 258, sf: 1.0, pd: 96,  px:  22 },
+    { id: "photo-right-2", baseX:  269, baseY: 846,  w: 337, h: 364, sf: 1.0, pd: 154, px:  30 },
+    { id: "photo-left-3",  baseX: -628, baseY: 1042, w: 423, h: 244, sf: 1.1, pd: 184, px: -38 },
+  ];
+
+  const heroSection = document.getElementById("hero");
+  if (heroSection) {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const heroEl = document.getElementById("hero-content");
+    const logo = heroEl?.querySelector("img:first-of-type") as HTMLElement | undefined;
+    const dateCard = heroEl?.querySelector("img:last-of-type") as HTMLElement | undefined;
+    const shapeElements = shapes.map(shape => ({ ...shape, el: document.getElementById(shape.id) }));
+    const photoElements = photos.map(photo => ({ ...photo, el: document.getElementById(photo.id) }));
+    let rafId = 0;
+    let parallaxProgress = 0;
+
+    function getScrollProgress() {
+      if (reducedMotion.matches) return 0;
+      return clamp(window.scrollY / heroSection.offsetHeight, 0, 1);
+    }
+
+    function renderHero() {
+      rafId = 0;
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const cx = vw / 2;
+      const targetScrollProgress = getScrollProgress();
+      const progressDelta = targetScrollProgress - parallaxProgress;
+      parallaxProgress += progressDelta * 0.18;
+      if (Math.abs(progressDelta) < 0.001) parallaxProgress = targetScrollProgress;
+
+      const layout = getHeroLayout(vw, vh);
+
+      if (heroEl) {
+        gsap.set(heroEl, {
+          paddingTop: layout.paddingTop,
+          paddingBottom: layout.paddingBottom,
+          gap: layout.gap,
+        });
+
+        if (logo) gsap.set(logo, { width: 468 * layout.contentScale, height: 483 * layout.contentScale });
+        if (dateCard) gsap.set(dateCard, { width: 464 * layout.contentScale, height: 150 * layout.contentScale });
+      }
+
+      shapeElements.forEach(shape => {
+        const { el } = shape;
+        if (!el) return;
+
+        const spreadX = layout.spread * shape.sf * Math.sign(shape.baseX);
+        const parallaxY = parallaxProgress * shape.pd * layout.visualScale;
+        const parallaxX = parallaxProgress * shape.px * layout.visualScale;
+
+        gsap.set(el, {
+          left: cx + (shape.baseX * layout.visualScale) + spreadX + parallaxX,
+          top: (shape.baseY * layout.yCompress) - parallaxY,
+          scale: layout.visualScale,
+        });
+      });
+
+      photoElements.forEach(photo => {
+        const { el } = photo;
+        if (!el) return;
+
+        const spreadX = layout.spread * photo.sf * Math.sign(photo.baseX);
+        const parallaxY = parallaxProgress * photo.pd * layout.visualScale;
+        const parallaxX = parallaxProgress * photo.px * layout.visualScale;
+
+        gsap.set(el, {
+          left: cx + (photo.baseX * layout.visualScale) + spreadX + parallaxX,
+          top: (photo.baseY * layout.yCompress) - parallaxY,
+          width: photo.w * layout.visualScale,
+          height: photo.h * layout.visualScale,
+        });
+      });
+
+      if (parallaxProgress !== targetScrollProgress) scheduleRender();
+    }
+
+    function scheduleRender() {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(renderHero);
+    }
+
+    window.addEventListener("scroll", scheduleRender, { passive: true });
+    window.addEventListener("resize", scheduleRender);
+    reducedMotion.addEventListener("change", scheduleRender);
+    parallaxProgress = getScrollProgress();
+    renderHero();
+  }
+</script>
