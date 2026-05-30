@@ -36,7 +36,13 @@ import {
       <img src="/2026tokyo/images/hero-logo-group.svg" alt="YAPC::Tokyo 2026" width="468" height="483" />
       <img src="/2026tokyo/images/hero-date-card.svg" alt="2026 11.27 FRI → 11.29 SUN @東京ビッグサイト" width="464" height="150" />
     </div>
-    <img src="/2026tokyo/images/hero-wave.svg" alt="" class="block w-full bg-cream" />
+    <img
+      src="/2026tokyo/images/hero-wave.svg"
+      alt=""
+      width="1300"
+      height="120"
+      class="block w-full bg-cream h-[min(calc(120/1300*100vw),120px)]"
+    />
   </section>
 
   <section id="announcements">
@@ -133,7 +139,50 @@ import {
     return Math.min(Math.max(v, min), max);
   }
 
-  const DESIGN_WIDTH = 1280;
+  const CONTENT_WIDTH = 468;
+  const LOGO_HEIGHT = 483;
+  const DATE_CARD_HEIGHT = 150;
+  const PAGE_SAFE_AREA_X = 40;
+  const ANNOUNCEMENT_TOP = 8;
+  const ANNOUNCEMENT_HEADING_HEIGHT = 94;
+
+  function getLayoutValue(vh: number, heightMin: number, heightMax: number, compact: number, roomy: number) {
+    return clamp(remap(vh, heightMin, heightMax, compact, roomy), compact, roomy);
+  }
+
+  function getHeroLayout(vw: number, vh: number) {
+    const widthScale = clamp((vw - PAGE_SAFE_AREA_X) / CONTENT_WIDTH, 0.68, 1);
+    const headingPeek = vw < 640
+      ? getLayoutValue(vh, 760, 840, 0, ANNOUNCEMENT_HEADING_HEIGHT)
+      : getLayoutValue(vh, 660, 1040, 0, ANNOUNCEMENT_HEADING_HEIGHT);
+    const waveHeight = Math.min(vw * 120 / 1300, 120);
+    const targetHeroHeight = Math.max(vh - ANNOUNCEMENT_TOP - headingPeek, 620);
+
+    const gap = vw < 640
+      ? getLayoutValue(vh, 620, 920, 18, 44)
+      : getLayoutValue(vh, 620, 1160, 22, 64);
+    const desiredBottom = getLayoutValue(vh, 640, 1120, 82, 120);
+    const heroBodyHeight = targetHeroHeight - waveHeight;
+    const logoCenterY = heroBodyHeight * (vw < 640 ? 0.43 : 0.45);
+    const scaleByTop = (logoCenterY - 72) * 2 / LOGO_HEIGHT;
+    const scaleByBottom = (heroBodyHeight - desiredBottom - gap - logoCenterY) / ((LOGO_HEIGHT / 2) + DATE_CARD_HEIGHT);
+    const contentScale = Math.min(clamp(Math.min(scaleByTop, scaleByBottom), 0.68, 1), widthScale);
+    const paddingTop = Math.max(72, logoCenterY - (LOGO_HEIGHT * contentScale / 2));
+    const paddingBottom = Math.max(
+      heroBodyHeight - paddingTop - gap - ((LOGO_HEIGHT + DATE_CARD_HEIGHT) * contentScale),
+      32,
+    );
+
+    return {
+      contentScale,
+      visualScale: clamp(contentScale * 1.06, 0.7, 1),
+      yCompress: clamp(heroBodyHeight / 1193, 0.58, 1),
+      paddingTop,
+      paddingBottom,
+      gap,
+      spread: clamp(remap(vw, 768, 1920, -50, 80), -70, 100),
+    };
+  }
 
   // sf: spreadFactor — 画面幅変化時の水平広がり係数
   const shapes = [
@@ -166,33 +215,32 @@ import {
       const vh = window.innerHeight;
       const cx = vw / 2;
 
-      const hScale = clamp((vh - 210) / 1193, 0.4, 1.0);
-      const spread = remap(vw, 768, 1920, -50, 80);
+      const layout = getHeroLayout(vw, vh);
 
       const heroEl = document.getElementById("hero-content");
       if (heroEl) {
         gsap.set(heroEl, {
-          paddingTop: 288 * hScale,
-          paddingBottom: 80 * hScale,
-          gap: 80 * hScale,
+          paddingTop: layout.paddingTop,
+          paddingBottom: layout.paddingBottom,
+          gap: layout.gap,
         });
 
         const logo = heroEl.querySelector("img:first-of-type") as HTMLElement;
         const dateCard = heroEl.querySelector("img:last-of-type") as HTMLElement;
-        if (logo) gsap.set(logo, { width: 468 * hScale, height: 483 * hScale });
-        if (dateCard) gsap.set(dateCard, { width: 464 * hScale, height: 150 * hScale });
+        if (logo) gsap.set(logo, { width: 468 * layout.contentScale, height: 483 * layout.contentScale });
+        if (dateCard) gsap.set(dateCard, { width: 464 * layout.contentScale, height: 150 * layout.contentScale });
       }
 
       shapes.forEach(shape => {
         const el = document.getElementById(shape.id);
         if (!el) return;
 
-        const spreadX = spread * shape.sf * Math.sign(shape.baseX);
+        const spreadX = layout.spread * shape.sf * Math.sign(shape.baseX);
 
         gsap.set(el, {
-          left: cx + (shape.baseX * hScale) + spreadX,
-          top: shape.baseY * hScale,
-          scale: hScale,
+          left: cx + (shape.baseX * layout.visualScale) + spreadX,
+          top: shape.baseY * layout.yCompress,
+          scale: layout.visualScale,
         });
       });
 
@@ -200,13 +248,13 @@ import {
         const el = document.getElementById(photo.id);
         if (!el) return;
 
-        const spreadX = spread * photo.sf * Math.sign(photo.baseX);
+        const spreadX = layout.spread * photo.sf * Math.sign(photo.baseX);
 
         gsap.set(el, {
-          left: cx + (photo.baseX * hScale) + spreadX,
-          top: photo.baseY * hScale,
-          width: photo.w * hScale,
-          height: photo.h * hScale,
+          left: cx + (photo.baseX * layout.visualScale) + spreadX,
+          top: photo.baseY * layout.yCompress,
+          width: photo.w * layout.visualScale,
+          height: photo.h * layout.visualScale,
         });
       });
     }
