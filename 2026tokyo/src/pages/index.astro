@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import SpeakerCard from "../components/SpeakerCard.astro";
+import { externalLinkProps } from "../utils/links";
 import {
   siteInfo,
   announcements,
@@ -20,7 +21,7 @@ import {
       <ul class="w-full max-w-2xl">
         {announcements.map((item) => (
           <li class="border-t border-dashed border-gray-500">
-            <a href={item.href} class="flex flex-col items-start gap-1.5 px-1 py-5 sm:flex-row sm:items-center sm:gap-5">
+            <a href={item.href} {...externalLinkProps(item.href)} class="flex flex-col items-start gap-1.5 px-1 py-5 sm:flex-row sm:items-center sm:gap-5">
               <time datetime={item.date} class="shrink-0 rounded-full border border-black bg-white px-3.5 py-1 font-solway text-sm font-medium leading-none text-gray-700 text-center sm:px-4 sm:py-0.5 sm:text-base sm:leading-normal">
                 {item.displayDate}
               </time>
@@ -30,7 +31,7 @@ import {
         ))}
         <li class="border-t border-dashed border-gray-500" />
       </ul>
-      <a href={siteInfo.blogUrl} class="bg-black text-white font-maru font-bold text-base rounded-full px-5 py-2.5 text-center">
+      <a href={siteInfo.blogUrl} {...externalLinkProps(siteInfo.blogUrl)} class="bg-black text-white font-maru font-bold text-base rounded-full px-5 py-2.5 text-center">
         YAPC 公式ブログはこちら
       </a>
     </div>
@@ -66,8 +67,8 @@ import {
           <span class="rounded-full border border-black px-3 py-1 font-maru font-bold text-base">場所</span>
           <div class="font-maru font-medium text-base leading-relaxed">
             <p>{siteInfo.venue.name}</p>
-            <p><a href={siteInfo.venue.accessUrl}>アクセス方法(東京ビッグサイト公式ページ)</a></p>
-            <p><a href={siteInfo.venue.mapUrl}>Google Mapで見る</a></p>
+            <p><a href={siteInfo.venue.accessUrl} {...externalLinkProps(siteInfo.venue.accessUrl)}>アクセス方法(東京ビッグサイト公式ページ)</a></p>
+            <p><a href={siteInfo.venue.mapUrl} {...externalLinkProps(siteInfo.venue.mapUrl)}>Google Mapで見る</a></p>
           </div>
         </div>
       </div>
