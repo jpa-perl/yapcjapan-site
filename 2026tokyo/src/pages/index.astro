@@ -14,17 +14,17 @@ import {
 <Layout>
   <Hero title={siteInfo.title} />
 
-  <section id="announcements">
-    <div class="pt-2 pb-16 max-w-screen-xl mx-auto px-5 flex flex-col items-center gap-8">
+  <section id="announcements" class="scroll-mt-24 lg:scroll-mt-28">
+    <div class="pt-2 pb-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-7 sm:px-5 sm:pb-16 sm:gap-8">
       <SectionHeading title="Announcement" subtitle="おしらせ" />
       <ul class="w-full max-w-2xl">
         {announcements.map((item) => (
           <li class="border-t border-dashed border-gray-500">
-            <a href={item.href} class="flex items-center gap-5 px-1 py-5">
-              <time datetime={item.date} class="shrink-0 rounded-full border border-black bg-white px-4 py-0.5 font-solway font-medium text-base text-gray-700 text-center">
+            <a href={item.href} class="flex flex-col items-start gap-1.5 px-1 py-5 sm:flex-row sm:items-center sm:gap-5">
+              <time datetime={item.date} class="shrink-0 rounded-full border border-black bg-white px-3.5 py-1 font-solway text-sm font-medium leading-none text-gray-700 text-center sm:px-4 sm:py-0.5 sm:text-base sm:leading-normal">
                 {item.displayDate}
               </time>
-              <span class="font-maru font-bold text-lg text-black">{item.title}</span>
+              <span class="font-maru font-bold text-base text-black sm:text-lg">{item.title}</span>
             </a>
           </li>
         ))}
@@ -34,15 +34,21 @@ import {
         YAPC 公式ブログはこちら
       </a>
     </div>
-    <img src="/2026tokyo/images/about-wave-top.svg" alt="" class="block w-full bg-cream" />
+    <img
+      src="/2026tokyo/images/about-wave-top.svg"
+      alt=""
+      width="1400"
+      height="120"
+      class="block aspect-[1400/120] w-full bg-cream"
+    />
   </section>
 
-  <section id="about" class="bg-gray-200">
-    <div class="py-16 max-w-screen-xl mx-auto px-5 flex flex-col items-center gap-8">
+  <section id="about" class="scroll-mt-24 bg-gray-200 lg:scroll-mt-28">
+    <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-7 sm:px-5 sm:py-16 sm:gap-8">
       <SectionHeading title="About YAPC::Tokyo 2026" subtitle="YAPC::Tokyo 2026について" color="blue" />
       <p class="max-w-2xl text-base font-maru font-bold text-black text-center whitespace-pre-line">{siteInfo.description}</p>
 
-      <div class="bg-white rounded-[20px] px-5 py-7 grid grid-cols-[theme(spacing.5)_1fr_theme(spacing.5)] gap-y-5">
+      <div class="w-fit max-w-[calc(100vw-2rem)] bg-white rounded-2xl px-4 py-6 grid grid-cols-[theme(spacing.3)_1fr_theme(spacing.3)] gap-y-5 sm:max-w-2xl sm:rounded-[20px] sm:px-5 sm:py-7 sm:grid-cols-[theme(spacing.5)_1fr_theme(spacing.5)] md:px-8">
         <div class="col-start-2 flex flex-col gap-3 items-start">
           <span class="rounded-full border border-black px-3 py-1 font-maru font-bold text-base">開催日時</span>
           <ul class="font-maru font-medium text-base leading-relaxed">
@@ -66,11 +72,17 @@ import {
         </div>
       </div>
     </div>
-    <img src="/2026tokyo/images/speakers-wave.svg" alt="" class="block w-full bg-gray-200" />
+    <img
+      src="/2026tokyo/images/speakers-wave.svg"
+      alt=""
+      width="1340"
+      height="150"
+      class="block aspect-[1340/150] w-full bg-gray-200"
+    />
   </section>
 
-  <section id="speakers">
-    <div class="py-16 max-w-screen-xl mx-auto px-5 flex flex-col items-center gap-12">
+  <section id="speakers" class="scroll-mt-24 lg:scroll-mt-28">
+    <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">
       <SectionHeading title="Speakers" subtitle="スピーカー" />
 
       <section id="keynote" class="w-full max-w-xl">
@@ -83,9 +95,9 @@ import {
         />
       </section>
 
-      <ul class="grid grid-cols-3 gap-12 w-full">
+      <ul class="flex w-full flex-wrap justify-center gap-x-8 gap-y-12 lg:gap-x-12">
         {speakers.map((speaker) => (
-          <li>
+          <li class="w-full max-w-80 sm:basis-[calc((100%_-_2rem)/2)] lg:basis-[calc((100%_-_6rem)/3)]">
             <SpeakerCard
               name={speaker.name}
               nameEn={speaker.nameEn}

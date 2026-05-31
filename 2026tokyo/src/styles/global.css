@@ -2,12 +2,12 @@
 
 @theme {
   --color-*: initial;
+  --color-ink: #222222;
   --color-black: #222222;
   --color-white: #ffffff;
   --color-cream: #fffaed;
   --color-orange: #ea5520;
   --color-green: #00992b;
-  --color-brown: #473b1e;
   --color-gold: #e29d25;
   --color-blue: #004aba;
   --color-navy: #10355e;

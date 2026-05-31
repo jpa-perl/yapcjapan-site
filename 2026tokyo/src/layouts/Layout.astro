@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import TicketButton from "../components/TicketButton.astro";
 import { siteInfo, navItems } from "../data/site";
 
 interface Props {
@@ -26,16 +27,30 @@ const { title = siteInfo.title } = Astro.props;
   </head>
   <body class="bg-cream text-black font-maru overflow-x-hidden">
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white rounded-b-[28px]">
-      <div class="flex items-center justify-between px-5 py-4">
-        <a href="/2026tokyo/" class="font-solway font-extrabold text-lg text-black">
-          {siteInfo.title}
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white rounded-b-[24px] lg:rounded-b-[28px]">
+      <div class="flex items-center justify-between gap-4 px-4 py-3 lg:px-5 lg:py-4">
+        <a href="/2026tokyo/">
+          <img src="/2026tokyo/images/header-logo.svg" alt={siteInfo.title} class="h-6 lg:h-7" />
         </a>
-        <nav>
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="flex size-11 shrink-0 items-center justify-center text-ink lg:hidden"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">メニューを開閉する</span>
+          <span class="relative block h-3.5 w-5" aria-hidden="true">
+            <span id="mobile-menu-line-top" class="absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-ink"></span>
+            <span id="mobile-menu-line-middle" class="absolute left-0 top-1/2 block h-0.5 w-5 -translate-y-1/2 rounded-full bg-ink"></span>
+            <span id="mobile-menu-line-bottom" class="absolute bottom-0 left-0 block h-0.5 w-5 rounded-full bg-ink"></span>
+          </span>
+        </button>
+        <nav class="hidden lg:block" aria-label="メインメニュー">
           <ul class="flex gap-6">
             {navItems.map((item) => (
               <li>
-                <a href={item.href} class="flex flex-col items-center gap-1.5 text-brown text-center">
+                <a href={item.href} class="flex flex-col items-center gap-1.5 text-ink text-center">
                   <span class="font-maru font-black text-lg leading-none">{item.label}</span>
                   <span class="font-solway font-medium text-xs leading-none opacity-80">{item.labelEn}</span>
                 </a>
@@ -44,14 +59,119 @@ const { title = siteInfo.title } = Astro.props;
           </ul>
         </nav>
       </div>
+      <nav
+        id="mobile-menu"
+        class="h-0 overflow-hidden opacity-0 lg:hidden"
+        aria-label="モバイルメニュー"
+      >
+        <ul class="flex flex-col px-4 pb-4">
+          {navItems.map((item) => (
+            <li class="border-t border-dashed border-gray-500">
+              <a href={item.href} class="flex items-center justify-between gap-4 py-4 text-ink">
+                <span class="font-maru text-base font-black leading-none">{item.label}</span>
+                <span class="font-solway text-xs font-medium leading-none opacity-80">{item.labelEn}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
 
     <main>
       <slot />
     </main>
 
+    <TicketButton href={siteInfo.ticketUrl} />
+
     <footer class="bg-white border-t border-dashed border-gray-500 py-8 flex flex-col items-center gap-2">
       <small class="font-solway font-medium text-xs text-navy opacity-80">&copy; Japan Perl Association</small>
     </footer>
   </body>
 </html>
+
+<script>
+  import { gsap } from "gsap";
+
+  const header = document.querySelector("header");
+  const menuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const lineTop = document.getElementById("mobile-menu-line-top");
+  const lineMiddle = document.getElementById("mobile-menu-line-middle");
+  const lineBottom = document.getElementById("mobile-menu-line-bottom");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let menuOpen = false;
+  let headerHidden = false;
+  let lastScrollY = window.scrollY;
+
+  function setHeaderHidden(hidden: boolean, immediate = false) {
+    if (!header || headerHidden === hidden) return;
+    headerHidden = hidden;
+    gsap.to(header, {
+      yPercent: hidden ? -110 : 0,
+      duration: immediate || reducedMotion.matches ? 0 : 0.24,
+      ease: hidden ? "power2.in" : "power2.out",
+    });
+  }
+
+  function setMenu(open: boolean, immediate = false) {
+    if (!menuButton || !mobileMenu) return;
+    menuOpen = open;
+    menuButton.setAttribute("aria-expanded", String(open));
+    if (open) setHeaderHidden(false, immediate);
+
+    gsap.killTweensOf([mobileMenu, lineTop, lineMiddle, lineBottom]);
+    const duration = immediate || reducedMotion.matches ? 0 : 0.26;
+    const ease = open ? "power2.out" : "power2.inOut";
+
+    gsap.to(mobileMenu, {
+      height: open ? "auto" : 0,
+      opacity: open ? 1 : 0,
+      duration,
+      ease,
+    });
+    gsap.to(lineTop, {
+      y: open ? 6 : 0,
+      rotation: open ? 45 : 0,
+      duration,
+      ease,
+    });
+    gsap.to(lineMiddle, {
+      opacity: open ? 0 : 1,
+      duration: duration * 0.7,
+      ease,
+    });
+    gsap.to(lineBottom, {
+      y: open ? -6 : 0,
+      rotation: open ? -45 : 0,
+      duration,
+      ease,
+    });
+  }
+
+  menuButton?.addEventListener("click", () => setMenu(!menuOpen));
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
+  });
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    const delta = currentScrollY - lastScrollY;
+
+    if (menuOpen) {
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    if (currentScrollY <= 8) {
+      setHeaderHidden(false);
+    } else if (delta > 8 && currentScrollY > 120) {
+      setHeaderHidden(true);
+    } else if (delta < -8) {
+      setHeaderHidden(false);
+    }
+
+    lastScrollY = currentScrollY;
+  }, { passive: true });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) setMenu(false, true);
+  });
+</script>

@@ -8,24 +8,24 @@ interface Props {
 }
 
 const { name, nameEn, description, role, keynote = false } = Astro.props;
-const photoSize = keynote ? "size-80" : "size-64";
-const nameSize = keynote ? "text-3xl" : "text-2xl";
+const photoSize = keynote ? "size-56 sm:size-72 lg:size-80" : "size-48 sm:size-56 lg:size-64";
+const nameSize = keynote ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl";
 const nameEnSize = keynote ? "text-xl" : "text-xl";
 const descSize = keynote ? "text-base" : "text-sm";
 ---
 
 <article class="flex flex-col items-center gap-4">
   <div class:list={["rounded-full bg-gray-200", photoSize]} />
-  <div class="flex flex-col items-center gap-5">
+  <div class="flex flex-col items-center gap-4 sm:gap-5">
     <div class="flex flex-col items-center gap-2">
       {role && (
-        <span class="rounded-full border border-black bg-white px-3 py-1.5 text-base font-bold font-maru">
+        <span class="rounded-full border border-black bg-white px-3 py-1.5 text-sm font-bold font-maru sm:text-base">
           {role}
         </span>
       )}
       <h3 class:list={["font-maru font-black text-black leading-none", nameSize]}>{name}</h3>
       <p class:list={["font-solway font-bold text-orange leading-none", nameEnSize]}>{nameEn}</p>
     </div>
-    <p class:list={["font-maru font-medium text-black leading-relaxed", descSize]}>{description}</p>
+    <p class:list={["font-maru font-medium text-black leading-relaxed text-center sm:text-left", descSize]}>{description}</p>
   </div>
 </article>
