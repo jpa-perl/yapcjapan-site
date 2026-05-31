@@ -1,0 +1,19 @@
+---
+import ExternalLinkIcon from "./ExternalLinkIcon.astro";
+import { externalLinkProps } from "../utils/links";
+
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a
+  href={href}
+  {...externalLinkProps(href)}
+  class="inline-flex items-center gap-1.5 rounded-full border border-ink bg-white px-3.5 py-1.5 text-sm leading-none text-ink transition-colors hover:bg-ink hover:text-white"
+>
+  <span><slot /></span>
+  <ExternalLinkIcon />
+</a>
