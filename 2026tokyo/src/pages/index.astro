@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ExternalLinkIcon from "../components/ExternalLinkIcon.astro";
 import Hero from "../components/Hero.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import SpeakerCard from "../components/SpeakerCard.astro";
@@ -21,17 +22,17 @@ import {
       <ul class="w-full max-w-2xl">
         {announcements.map((item) => (
           <li class="border-t border-dashed border-gray-500">
-            <a href={item.href} {...externalLinkProps(item.href)} class="flex flex-col items-start gap-1.5 px-1 py-5 sm:flex-row sm:items-center sm:gap-5">
-              <time datetime={item.date} class="shrink-0 rounded-full border border-black bg-white px-3.5 py-1 font-solway text-sm font-medium leading-none text-gray-700 text-center sm:px-4 sm:py-0.5 sm:text-base sm:leading-normal">
+            <a href={item.href} {...externalLinkProps(item.href)} class="group flex flex-col items-start gap-1.5 px-1 py-5 transition-colors hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange sm:flex-row sm:items-center sm:gap-5">
+              <time datetime={item.date} class="shrink-0 rounded-full border border-black bg-white px-3.5 py-1 font-solway text-sm font-medium leading-none text-gray-700 text-center transition-colors group-hover:border-orange group-hover:text-orange sm:px-4 sm:py-0.5 sm:text-base sm:leading-normal">
                 {item.displayDate}
               </time>
-              <span class="font-maru font-bold text-base text-black sm:text-lg">{item.title}</span>
+              <span class="font-maru font-bold text-base text-black transition-colors group-hover:text-orange sm:text-lg">{item.title}</span>
             </a>
           </li>
         ))}
         <li class="border-t border-dashed border-gray-500" />
       </ul>
-      <a href={siteInfo.blogUrl} {...externalLinkProps(siteInfo.blogUrl)} class="bg-black text-white font-maru font-bold text-base rounded-full px-5 py-2.5 text-center">
+      <a href={siteInfo.blogUrl} {...externalLinkProps(siteInfo.blogUrl)} class="rounded-full bg-black px-5 py-2.5 text-center font-maru text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange">
         YAPC 公式ブログはこちら
       </a>
     </div>
@@ -49,13 +50,17 @@ import {
       <SectionHeading title="About YAPC::Tokyo 2026" subtitle="YAPC::Tokyo 2026について" color="blue" />
       <p class="max-w-2xl text-base font-maru font-bold text-black text-center whitespace-pre-line">{siteInfo.description}</p>
 
-      <div class="w-fit max-w-[calc(100vw-2rem)] bg-white rounded-2xl px-4 py-6 grid grid-cols-[theme(spacing.3)_1fr_theme(spacing.3)] gap-y-5 sm:max-w-2xl sm:rounded-[20px] sm:px-5 sm:py-7 sm:grid-cols-[theme(spacing.5)_1fr_theme(spacing.5)] md:px-8">
+      <div class="w-fit max-w-[calc(100vw-2rem)] bg-white rounded-2xl px-4 py-5 grid grid-cols-[theme(spacing.3)_1fr_theme(spacing.3)] gap-y-5 shadow-[0_10px_0_rgba(34,34,34,0.06)] sm:max-w-2xl sm:rounded-[20px] sm:px-5 sm:py-6 sm:grid-cols-[theme(spacing.5)_1fr_theme(spacing.5)] md:px-8">
         <div class="col-start-2 flex flex-col gap-3 items-start">
-          <span class="rounded-full border border-black px-3 py-1 font-maru font-bold text-base">開催日時</span>
-          <ul class="font-maru font-medium text-base leading-relaxed">
+          <span class="rounded-full border border-black px-3 py-1 font-maru text-sm sm:text-base">開催日時</span>
+          <ul class="flex flex-col gap-2 font-maru text-base leading-relaxed">
             {siteInfo.dates.map((d) => (
-              <li>
-                <time datetime={d.date}>{d.label}</time>  {d.note}
+              <li class="grid grid-cols-[auto_auto_1fr] items-baseline gap-x-1.5 sm:gap-x-2">
+                <time datetime={d.date} class="font-maru text-lg leading-none text-ink sm:text-xl">
+                  {d.label}
+                </time>
+                <span class="text-sm leading-none text-gray-700 sm:text-base">({d.weekday})</span>
+                <span class="text-lg leading-none text-ink sm:text-xl">{d.note}</span>
               </li>
             ))}
           </ul>
@@ -64,11 +69,22 @@ import {
         <hr class="col-span-full border-t border-dashed border-gray-500" />
 
         <div class="col-start-2 flex flex-col gap-3 items-start">
-          <span class="rounded-full border border-black px-3 py-1 font-maru font-bold text-base">場所</span>
-          <div class="font-maru font-medium text-base leading-relaxed">
-            <p>{siteInfo.venue.name}</p>
-            <p><a href={siteInfo.venue.accessUrl} {...externalLinkProps(siteInfo.venue.accessUrl)}>アクセス方法(東京ビッグサイト公式ページ)</a></p>
-            <p><a href={siteInfo.venue.mapUrl} {...externalLinkProps(siteInfo.venue.mapUrl)}>Google Mapで見る</a></p>
+          <span class="rounded-full border border-black px-3 py-1 font-maru text-sm sm:text-base">場所</span>
+          <div class="flex flex-col gap-3 font-maru text-base leading-relaxed">
+            <div class="flex flex-col gap-1">
+              <p class="text-lg leading-snug text-ink sm:text-xl">{siteInfo.venue.name}</p>
+              <p class="text-sm text-gray-700 sm:text-base">{siteInfo.venue.address}</p>
+            </div>
+            <div class="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap">
+              <a href={siteInfo.venue.accessUrl} {...externalLinkProps(siteInfo.venue.accessUrl)} class="inline-flex items-center gap-1.5 rounded-full border border-ink bg-white px-3.5 py-1.5 text-sm leading-none text-ink transition-colors hover:bg-ink hover:text-white">
+                <span>公式アクセス</span>
+                <ExternalLinkIcon />
+              </a>
+              <a href={siteInfo.venue.mapUrl} {...externalLinkProps(siteInfo.venue.mapUrl)} class="inline-flex items-center gap-1.5 rounded-full border border-ink bg-white px-3.5 py-1.5 text-sm leading-none text-ink transition-colors hover:bg-ink hover:text-white">
+                <span>Google Map</span>
+                <ExternalLinkIcon />
+              </a>
+            </div>
           </div>
         </div>
       </div>
