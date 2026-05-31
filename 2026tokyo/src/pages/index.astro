@@ -1,10 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ExternalLinkIcon from "../components/ExternalLinkIcon.astro";
+import AboutSection from "../components/AboutSection.astro";
+import AnnouncementSection from "../components/AnnouncementSection.astro";
 import Hero from "../components/Hero.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import SpeakerCard from "../components/SpeakerCard.astro";
-import { externalLinkProps } from "../utils/links";
 import {
   siteInfo,
   announcements,
@@ -16,87 +16,14 @@ import {
 <Layout>
   <Hero title={siteInfo.title} />
 
-  <section id="announcements" class="scroll-mt-24 lg:scroll-mt-28">
-    <div class="pt-2 pb-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-7 sm:px-5 sm:pb-16 sm:gap-8">
-      <SectionHeading title="Announcement" subtitle="おしらせ" />
-      <ul class="w-full max-w-2xl">
-        {announcements.map((item) => (
-          <li class="border-t border-dashed border-gray-500">
-            <a href={item.href} {...externalLinkProps(item.href)} class="group flex flex-col items-start gap-1.5 px-1 py-5 transition-colors hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange sm:flex-row sm:items-center sm:gap-5">
-              <time datetime={item.date} class="shrink-0 rounded-full border border-black bg-white px-3.5 py-1 font-solway text-sm font-medium leading-none text-gray-700 text-center transition-colors group-hover:border-orange group-hover:text-orange sm:px-4 sm:py-0.5 sm:text-base sm:leading-normal">
-                {item.displayDate}
-              </time>
-              <span class="font-maru font-bold text-base text-black transition-colors group-hover:text-orange sm:text-lg">{item.title}</span>
-            </a>
-          </li>
-        ))}
-        <li class="border-t border-dashed border-gray-500" />
-      </ul>
-      <a href={siteInfo.blogUrl} {...externalLinkProps(siteInfo.blogUrl)} class="rounded-full bg-black px-5 py-2.5 text-center font-maru text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange">
-        YAPC 公式ブログはこちら
-      </a>
-    </div>
-    <img
-      src="/2026tokyo/images/about-wave-top.svg"
-      alt=""
-      width="1400"
-      height="120"
-      class="block aspect-[1400/120] w-full bg-cream"
-    />
-  </section>
+  <AnnouncementSection announcements={announcements} blogUrl={siteInfo.blogUrl} />
 
-  <section id="about" class="scroll-mt-24 bg-gray-200 lg:scroll-mt-28">
-    <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-7 sm:px-5 sm:py-16 sm:gap-8">
-      <SectionHeading title="About YAPC::Tokyo 2026" subtitle="YAPC::Tokyo 2026について" color="blue" />
-      <p class="max-w-2xl text-base font-maru font-bold text-black text-center whitespace-pre-line">{siteInfo.description}</p>
-
-      <div class="w-fit max-w-[calc(100vw-2rem)] bg-white rounded-2xl px-4 py-5 grid grid-cols-[theme(spacing.3)_1fr_theme(spacing.3)] gap-y-5 shadow-[0_10px_0_rgba(34,34,34,0.06)] sm:max-w-2xl sm:rounded-[20px] sm:px-5 sm:py-6 sm:grid-cols-[theme(spacing.5)_1fr_theme(spacing.5)] md:px-8">
-        <div class="col-start-2 flex flex-col gap-3 items-start">
-          <span class="rounded-full border border-black px-3 py-1 font-maru text-sm sm:text-base">開催日時</span>
-          <ul class="flex flex-col gap-2 font-maru text-base leading-relaxed">
-            {siteInfo.dates.map((d) => (
-              <li class="grid grid-cols-[auto_auto_1fr] items-baseline gap-x-1.5 sm:gap-x-2">
-                <time datetime={d.date} class="font-maru text-lg leading-none text-ink sm:text-xl">
-                  {d.label}
-                </time>
-                <span class="text-sm leading-none text-gray-700 sm:text-base">({d.weekday})</span>
-                <span class="text-lg leading-none text-ink sm:text-xl">{d.note}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <hr class="col-span-full border-t border-dashed border-gray-500" />
-
-        <div class="col-start-2 flex flex-col gap-3 items-start">
-          <span class="rounded-full border border-black px-3 py-1 font-maru text-sm sm:text-base">場所</span>
-          <div class="flex flex-col gap-3 font-maru text-base leading-relaxed">
-            <div class="flex flex-col gap-1">
-              <p class="text-lg leading-snug text-ink sm:text-xl">{siteInfo.venue.name}</p>
-              <p class="text-sm text-gray-700 sm:text-base">{siteInfo.venue.address}</p>
-            </div>
-            <div class="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap">
-              <a href={siteInfo.venue.accessUrl} {...externalLinkProps(siteInfo.venue.accessUrl)} class="inline-flex items-center gap-1.5 rounded-full border border-ink bg-white px-3.5 py-1.5 text-sm leading-none text-ink transition-colors hover:bg-ink hover:text-white">
-                <span>公式アクセス</span>
-                <ExternalLinkIcon />
-              </a>
-              <a href={siteInfo.venue.mapUrl} {...externalLinkProps(siteInfo.venue.mapUrl)} class="inline-flex items-center gap-1.5 rounded-full border border-ink bg-white px-3.5 py-1.5 text-sm leading-none text-ink transition-colors hover:bg-ink hover:text-white">
-                <span>Google Map</span>
-                <ExternalLinkIcon />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img
-      src="/2026tokyo/images/speakers-wave.svg"
-      alt=""
-      width="1340"
-      height="150"
-      class="block aspect-[1340/150] w-full bg-gray-200"
-    />
-  </section>
+  <AboutSection
+    title={siteInfo.title}
+    description={siteInfo.description}
+    dates={siteInfo.dates}
+    venue={siteInfo.venue}
+  />
 
   <section id="speakers" class="scroll-mt-24 lg:scroll-mt-28">
     <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">

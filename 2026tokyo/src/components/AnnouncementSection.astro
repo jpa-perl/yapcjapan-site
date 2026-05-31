@@ -1,0 +1,47 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import { externalLinkProps } from "../utils/links";
+
+interface Announcement {
+  date: string;
+  displayDate: string;
+  title: string;
+  href: string;
+}
+
+interface Props {
+  announcements: readonly Announcement[];
+  blogUrl: string;
+}
+
+const { announcements, blogUrl } = Astro.props;
+---
+
+<section id="announcements" class="scroll-mt-24 lg:scroll-mt-28">
+  <div class="pt-2 pb-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-7 sm:px-5 sm:pb-16 sm:gap-8">
+    <SectionHeading title="Announcement" subtitle="おしらせ" />
+    <ul class="w-full max-w-2xl">
+      {announcements.map((item) => (
+        <li class="border-t border-dashed border-gray-500">
+          <a href={item.href} {...externalLinkProps(item.href)} class="group flex flex-col items-start gap-1.5 px-1 py-5 transition-colors hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange sm:flex-row sm:items-center sm:gap-5">
+            <time datetime={item.date} class="shrink-0 rounded-full border border-black bg-white px-3.5 py-1 font-solway text-sm font-medium leading-none text-gray-700 text-center transition-colors group-hover:border-orange group-hover:text-orange sm:px-4 sm:py-0.5 sm:text-base sm:leading-normal">
+              {item.displayDate}
+            </time>
+            <span class="font-maru font-bold text-base text-black transition-colors group-hover:text-orange sm:text-lg">{item.title}</span>
+          </a>
+        </li>
+      ))}
+      <li class="border-t border-dashed border-gray-500" />
+    </ul>
+    <a href={blogUrl} {...externalLinkProps(blogUrl)} class="rounded-full bg-black px-5 py-2.5 text-center font-maru text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange">
+      YAPC 公式ブログはこちら
+    </a>
+  </div>
+  <img
+    src="/2026tokyo/images/about-wave-top.svg"
+    alt=""
+    width="1400"
+    height="120"
+    class="block aspect-[1400/120] w-full bg-cream"
+  />
+</section>
