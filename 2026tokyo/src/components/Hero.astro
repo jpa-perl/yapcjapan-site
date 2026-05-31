@@ -6,7 +6,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<section id="hero" class="relative bg-gray-200">
+<section id="hero" class="relative overflow-x-clip overflow-y-visible bg-gray-200">
   <div id="hero-shapes" class="absolute inset-0 pointer-events-none">
     <img id="shape-gold-left-top" src="/2026tokyo/images/shape-gold-left-top.svg" alt="" class="absolute" />
     <img id="shape-white-left" src="/2026tokyo/images/shape-white-left.svg" alt="" class="absolute" />
@@ -56,13 +56,46 @@ const { title } = Astro.props;
   const PAGE_SAFE_AREA_X = 40;
   const ANNOUNCEMENT_TOP = 8;
   const ANNOUNCEMENT_HEADING_HEIGHT = 94;
+  const MOBILE_BREAKPOINT = 768;
+  const MOBILE_LAYOUT = {
+    baseWidth: 375,
+    heroHeight: 725,
+    scaleMin: 0.86,
+    scaleMax: 1.04,
+    logo: { x: 63, y: 191.868, w: 250, h: 258.21 },
+    dateCard: { x: 63, y: 475.078, w: 250, h: 88.331 },
+    items: {
+      "shape-white-left": { x: 20, y: 108, w: 124.824, h: 108.797, pd: 22 },
+      "shape-gold-right": { x: 265, y: 356, w: 173.984, h: 186.675, pd: 40 },
+      "shape-blue-stroke-left": { x: -60, y: 264, w: 171.355, h: 93.222, pd: 35 },
+      "shape-green-center-top": { x: 174, y: 40, w: 97.876, h: 117.724, pd: 25 },
+      "shape-orange-stroke-right": { x: 272, y: 82, w: 213.162, h: 115.966, pd: 30 },
+      "shape-orange-stroke-center": { x: 127, y: 561, w: 112.49, h: 159.696, pd: 50 },
+      "shape-green-right-bottom": { x: 221, y: 574, w: 143.527, h: 111.428, pd: 45 },
+      "photo-left-1": { x: -41, y: 91, w: 195.54, h: 136.981, pd: 45 },
+      "photo-left-2": { x: -48, y: 370, w: 223.519, h: 154.187, pd: 65 },
+      "photo-left-3": { x: -90, y: 574, w: 223.267, h: 128.738, pd: 60 },
+      "photo-right-1": { x: 270, y: 231, w: 173.765, h: 136.166, pd: 55 },
+      "photo-right-2": { x: 281, y: 516, w: 177.692, h: 191.959, pd: 70 },
+    },
+  } as const;
 
   function getLayoutValue(vh: number, heightMin: number, heightMax: number, compact: number, roomy: number) {
     return clamp(remap(vh, heightMin, heightMax, compact, roomy), compact, roomy);
   }
 
+  function getMobileScale(vw: number) {
+    return clamp(vw / MOBILE_LAYOUT.baseWidth, MOBILE_LAYOUT.scaleMin, MOBILE_LAYOUT.scaleMax);
+  }
+
   function getHeroLayout(vw: number, vh: number) {
     const widthScale = clamp((vw - PAGE_SAFE_AREA_X) / CONTENT_WIDTH, 0.68, 1);
+    const mobileContentMax = vw < 640
+      ? clamp(remap(vw, 320, 640, 0.54, 0.72), 0.54, 0.72)
+      : 1;
+    const mobileVisualScale = vw < 640
+      ? clamp(remap(vw, 320, 640, 0.7, 0.86), 0.7, 0.86)
+      : null;
     const headingPeek = vw < 640
       ? getLayoutValue(vh, 760, 840, 0, ANNOUNCEMENT_HEADING_HEIGHT)
       : getLayoutValue(vh, 660, 1040, 0, ANNOUNCEMENT_HEADING_HEIGHT);
@@ -74,10 +107,10 @@ const { title } = Astro.props;
       : getLayoutValue(vh, 620, 1160, 22, 64);
     const desiredBottom = getLayoutValue(vh, 640, 1120, 82, 120);
     const heroBodyHeight = targetHeroHeight - waveHeight;
-    const logoCenterY = heroBodyHeight * (vw < 640 ? 0.43 : 0.45);
+    const logoCenterY = heroBodyHeight * (vw < 640 ? 0.47 : 0.45);
     const scaleByTop = (logoCenterY - 72) * 2 / LOGO_HEIGHT;
     const scaleByBottom = (heroBodyHeight - desiredBottom - gap - logoCenterY) / ((LOGO_HEIGHT / 2) + DATE_CARD_HEIGHT);
-    const contentScale = Math.min(clamp(Math.min(scaleByTop, scaleByBottom), 0.68, 1), widthScale);
+    const contentScale = Math.min(clamp(Math.min(scaleByTop, scaleByBottom), 0.68, 1), widthScale, mobileContentMax);
     const paddingTop = Math.max(72, logoCenterY - (LOGO_HEIGHT * contentScale / 2));
     const paddingBottom = Math.max(
       heroBodyHeight - paddingTop - gap - ((LOGO_HEIGHT + DATE_CARD_HEIGHT) * contentScale),
@@ -86,7 +119,7 @@ const { title } = Astro.props;
 
     return {
       contentScale,
-      visualScale: clamp(contentScale * 1.06, 0.7, 1),
+      visualScale: mobileVisualScale ?? clamp(contentScale * 1.06, 0.7, 1),
       yCompress: clamp(heroBodyHeight / 1193, 0.58, 1),
       paddingTop,
       paddingBottom,
@@ -95,30 +128,29 @@ const { title } = Astro.props;
     };
   }
 
-  // sf: spreadFactor — 画面幅変化時の水平広がり係数
-  // pd: parallaxDepth — スクロール時に上方向へ動く量
-  // px: parallaxX — スクロール時に横方向へ動く量
+  // sf: spreadFactor - 画面幅変化時の水平広がり係数
+  // pd: parallaxDepth - スクロール時に上方向へ動く量
   const shapes = [
-    { id: "shape-gold-left-top",        baseX: -675, baseY: 104,  sf: 1.2, pd: 34,  px: -10 },
-    { id: "shape-white-left",           baseX: -498, baseY: 352,  sf: 0.8, pd: 56,  px: -18 },
-    { id: "shape-blue-right-top",       baseX:  319, baseY: 464,  sf: 1.0, pd: 76,  px:  16 },
-    { id: "shape-purple-right-small",   baseX:  197, baseY: 134,  sf: 0.9, pd: 28,  px:   8 },
-    { id: "shape-green-center-top",     baseX: -160, baseY:  19,  sf: 0.2, pd: 18,  px:  -4 },
-    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 591,  sf: 1.3, pd: 88,  px: -24 },
-    { id: "shape-gold-left-lower",      baseX: -452, baseY: 859,  sf: 0.8, pd: 112, px: -18 },
-    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 140,  sf: 1.3, pd: 46,  px:  18 },
-    { id: "shape-gold-right",           baseX:  400, baseY: 730,  sf: 1.0, pd: 102, px:  22 },
-    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1027, sf: 0.3, pd: 132, px:   6 },
-    { id: "shape-white-left-bottom",    baseX: -406, baseY: 1103, sf: 0.9, pd: 144, px: -20 },
-    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1028, sf: 1.0, pd: 124, px:  20 },
+    { id: "shape-gold-left-top",        baseX: -675, baseY: 104,  sf: 1.2, pd: 34 },
+    { id: "shape-white-left",           baseX: -498, baseY: 352,  sf: 0.8, pd: 56 },
+    { id: "shape-blue-right-top",       baseX:  319, baseY: 464,  sf: 1.0, pd: 76 },
+    { id: "shape-purple-right-small",   baseX:  197, baseY: 134,  sf: 0.9, pd: 28 },
+    { id: "shape-green-center-top",     baseX: -160, baseY:  19,  sf: 0.2, pd: 18 },
+    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 591,  sf: 1.3, pd: 88 },
+    { id: "shape-gold-left-lower",      baseX: -452, baseY: 859,  sf: 0.8, pd: 112 },
+    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 140,  sf: 1.3, pd: 46 },
+    { id: "shape-gold-right",           baseX:  400, baseY: 730,  sf: 1.0, pd: 102 },
+    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1027, sf: 0.3, pd: 132 },
+    { id: "shape-white-left-bottom",    baseX: -406, baseY: 1103, sf: 0.9, pd: 144 },
+    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1028, sf: 1.0, pd: 124 },
   ];
 
   const photos = [
-    { id: "photo-left-1",  baseX: -617, baseY: 297,  w: 371, h: 260, sf: 1.0, pd: 82,  px: -18 },
-    { id: "photo-left-2",  baseX: -681, baseY: 706,  w: 424, h: 293, sf: 1.1, pd: 128, px: -34 },
-    { id: "photo-right-1", baseX:  276, baseY: 387,  w: 329, h: 258, sf: 1.0, pd: 96,  px:  22 },
-    { id: "photo-right-2", baseX:  269, baseY: 846,  w: 337, h: 364, sf: 1.0, pd: 154, px:  30 },
-    { id: "photo-left-3",  baseX: -628, baseY: 1042, w: 423, h: 244, sf: 1.1, pd: 184, px: -38 },
+    { id: "photo-left-1",  baseX: -617, baseY: 297,  w: 371, h: 260, sf: 1.0, pd: 82 },
+    { id: "photo-left-2",  baseX: -681, baseY: 706,  w: 424, h: 293, sf: 1.1, pd: 128 },
+    { id: "photo-right-1", baseX:  276, baseY: 387,  w: 329, h: 258, sf: 1.0, pd: 96 },
+    { id: "photo-right-2", baseX:  269, baseY: 846,  w: 337, h: 364, sf: 1.0, pd: 154 },
+    { id: "photo-left-3",  baseX: -628, baseY: 1042, w: 423, h: 244, sf: 1.1, pd: 184 },
   ];
 
   const heroSection = document.getElementById("hero");
@@ -127,6 +159,7 @@ const { title } = Astro.props;
     const heroEl = document.getElementById("hero-content");
     const logo = heroEl?.querySelector("img:first-of-type") as HTMLElement | undefined;
     const dateCard = heroEl?.querySelector("img:last-of-type") as HTMLElement | undefined;
+    const wave = heroSection.querySelector(":scope > img:last-of-type") as HTMLElement | undefined;
     const shapeElements = shapes.map(shape => ({ ...shape, el: document.getElementById(shape.id) }));
     const photoElements = photos.map(photo => ({ ...photo, el: document.getElementById(photo.id) }));
     let rafId = 0;
@@ -135,6 +168,71 @@ const { title } = Astro.props;
     function getScrollProgress() {
       if (reducedMotion.matches) return 0;
       return clamp(window.scrollY / heroSection.offsetHeight, 0, 1);
+    }
+
+    function renderMobileHero(vw: number, progress: number) {
+      const scale = getMobileScale(vw);
+      const artboardWidth = MOBILE_LAYOUT.baseWidth * scale;
+      const artboardX = (vw - artboardWidth) / 2;
+      const waveHeight = Math.min(vw * 120 / 1300, 120);
+      const heroBodyHeight = (MOBILE_LAYOUT.heroHeight * scale) - waveHeight;
+
+      if (heroEl) {
+        gsap.set(heroEl, {
+          display: "block",
+          height: heroBodyHeight,
+          maxWidth: "none",
+          width: "100%",
+          paddingTop: 0,
+          paddingBottom: 0,
+          paddingLeft: 0,
+          paddingRight: 0,
+          gap: 0,
+        });
+      }
+
+      if (wave) gsap.set(wave, { height: waveHeight });
+
+      if (logo) {
+        gsap.set(logo, {
+          position: "absolute",
+          left: artboardX + (MOBILE_LAYOUT.logo.x * scale),
+          top: MOBILE_LAYOUT.logo.y * scale,
+          width: MOBILE_LAYOUT.logo.w * scale,
+          height: MOBILE_LAYOUT.logo.h * scale,
+        });
+      }
+
+      if (dateCard) {
+        gsap.set(dateCard, {
+          position: "absolute",
+          left: artboardX + (MOBILE_LAYOUT.dateCard.x * scale),
+          top: MOBILE_LAYOUT.dateCard.y * scale,
+          width: MOBILE_LAYOUT.dateCard.w * scale,
+          height: MOBILE_LAYOUT.dateCard.h * scale,
+        });
+      }
+
+      [...shapeElements, ...photoElements].forEach(item => {
+        const { el } = item;
+        if (!el) return;
+
+        const mobileItem = MOBILE_LAYOUT.items[item.id as keyof typeof MOBILE_LAYOUT.items];
+        if (!mobileItem) {
+          gsap.set(el, { autoAlpha: 0 });
+          return;
+        }
+
+        const parallaxY = progress * mobileItem.pd * scale;
+        gsap.set(el, {
+          autoAlpha: 1,
+          left: artboardX + (mobileItem.x * scale),
+          top: (mobileItem.y * scale) - parallaxY,
+          width: mobileItem.w * scale,
+          height: mobileItem.h * scale,
+          scale: 1,
+        });
+      });
     }
 
     function renderHero() {
@@ -147,18 +245,28 @@ const { title } = Astro.props;
       parallaxProgress += progressDelta * 0.18;
       if (Math.abs(progressDelta) < 0.001) parallaxProgress = targetScrollProgress;
 
+      if (vw < MOBILE_BREAKPOINT) {
+        renderMobileHero(vw, parallaxProgress);
+        if (parallaxProgress !== targetScrollProgress) scheduleRender();
+        return;
+      }
+
       const layout = getHeroLayout(vw, vh);
 
       if (heroEl) {
+        gsap.set(heroEl, {
+          clearProps: "height,maxWidth,width,paddingLeft,paddingRight,display",
+        });
         gsap.set(heroEl, {
           paddingTop: layout.paddingTop,
           paddingBottom: layout.paddingBottom,
           gap: layout.gap,
         });
 
-        if (logo) gsap.set(logo, { width: 468 * layout.contentScale, height: 483 * layout.contentScale });
-        if (dateCard) gsap.set(dateCard, { width: 464 * layout.contentScale, height: 150 * layout.contentScale });
+        if (logo) gsap.set(logo, { position: "static", width: 468 * layout.contentScale, height: 483 * layout.contentScale });
+        if (dateCard) gsap.set(dateCard, { position: "static", width: 464 * layout.contentScale, height: 150 * layout.contentScale });
       }
+      if (wave) gsap.set(wave, { clearProps: "height" });
 
       shapeElements.forEach(shape => {
         const { el } = shape;
@@ -166,10 +274,11 @@ const { title } = Astro.props;
 
         const spreadX = layout.spread * shape.sf * Math.sign(shape.baseX);
         const parallaxY = parallaxProgress * shape.pd * layout.visualScale;
-        const parallaxX = parallaxProgress * shape.px * layout.visualScale;
 
+        gsap.set(el, { clearProps: "width,height" });
         gsap.set(el, {
-          left: cx + (shape.baseX * layout.visualScale) + spreadX + parallaxX,
+          autoAlpha: 1,
+          left: cx + (shape.baseX * layout.visualScale) + spreadX,
           top: (shape.baseY * layout.yCompress) - parallaxY,
           scale: layout.visualScale,
         });
@@ -181,10 +290,11 @@ const { title } = Astro.props;
 
         const spreadX = layout.spread * photo.sf * Math.sign(photo.baseX);
         const parallaxY = parallaxProgress * photo.pd * layout.visualScale;
-        const parallaxX = parallaxProgress * photo.px * layout.visualScale;
 
+        gsap.set(el, { clearProps: "transform" });
         gsap.set(el, {
-          left: cx + (photo.baseX * layout.visualScale) + spreadX + parallaxX,
+          autoAlpha: 1,
+          left: cx + (photo.baseX * layout.visualScale) + spreadX,
           top: (photo.baseY * layout.yCompress) - parallaxY,
           width: photo.w * layout.visualScale,
           height: photo.h * layout.visualScale,
