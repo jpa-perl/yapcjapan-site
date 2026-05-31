@@ -8,28 +8,66 @@ const { title } = Astro.props;
 
 <section id="hero" class="relative overflow-x-clip overflow-y-visible bg-gray-200">
   <div id="hero-shapes" class="absolute inset-0 pointer-events-none">
-    <img id="shape-gold-left-top" src="/2026tokyo/images/shape-gold-left-top.svg" alt="" class="absolute" />
-    <img id="shape-white-left" src="/2026tokyo/images/shape-white-left.svg" alt="" class="absolute" />
-    <img id="shape-blue-right-top" src="/2026tokyo/images/shape-blue-right-top.svg" alt="" class="absolute" />
-    <img id="shape-purple-right-small" src="/2026tokyo/images/shape-purple-right-small.svg" alt="" class="absolute" />
-    <img id="shape-green-center-top" src="/2026tokyo/images/shape-green-center-top.svg" alt="" class="absolute" />
-    <img id="shape-blue-stroke-left" src="/2026tokyo/images/shape-blue-stroke-left.svg" alt="" class="absolute" />
-    <img id="shape-gold-left-lower" src="/2026tokyo/images/shape-gold-left-lower.svg" alt="" class="absolute" />
-    <img id="shape-orange-stroke-right" src="/2026tokyo/images/shape-orange-stroke-right.svg" alt="" class="absolute" />
-    <img id="shape-gold-right" src="/2026tokyo/images/shape-gold-right.svg" alt="" class="absolute" />
-    <img id="shape-orange-stroke-center" src="/2026tokyo/images/shape-orange-stroke-center.svg" alt="" class="absolute" />
-    <img id="shape-white-left-bottom" src="/2026tokyo/images/shape-white-left-bottom.svg" alt="" class="absolute" />
-    <img id="shape-green-right-bottom" src="/2026tokyo/images/shape-green-right-bottom.svg" alt="" class="absolute" />
-    <img id="photo-left-1" src="/2026tokyo/images/photo-hero-left-1.png" alt="" class="absolute" />
-    <img id="photo-left-2" src="/2026tokyo/images/photo-hero-left-2.png" alt="" class="absolute" />
-    <img id="photo-right-1" src="/2026tokyo/images/photo-hero-right-1.png" alt="" class="absolute" />
-    <img id="photo-right-2" src="/2026tokyo/images/photo-hero-right-2.png" alt="" class="absolute" />
-    <img id="photo-left-3" src="/2026tokyo/images/photo-hero-left-3.png" alt="" class="absolute" />
+    <span id="shape-gold-left-top" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-gold-left-top.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-white-left" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-white-left.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-blue-right-top" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-blue-right-top.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-purple-right-small" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-purple-right-small.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-green-center-top" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-green-center-top.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-blue-stroke-left" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-blue-stroke-left.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-gold-left-lower" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-gold-left-lower.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-orange-stroke-right" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-orange-stroke-right.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-gold-right" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-gold-right.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-orange-stroke-center" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-orange-stroke-center.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-white-left-bottom" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-white-left-bottom.svg" alt="" data-intro-target />
+    </span>
+    <span id="shape-green-right-bottom" class="absolute" data-intro-frame data-intro-kind="shape">
+      <img src="/2026tokyo/images/shape-green-right-bottom.svg" alt="" data-intro-target />
+    </span>
+    <span id="photo-left-1" class="absolute" data-intro-frame data-intro-kind="photo">
+      <img src="/2026tokyo/images/photo-hero-left-1.png" alt="" data-intro-target />
+    </span>
+    <span id="photo-left-2" class="absolute" data-intro-frame data-intro-kind="photo">
+      <img src="/2026tokyo/images/photo-hero-left-2.png" alt="" data-intro-target />
+    </span>
+    <span id="photo-right-1" class="absolute" data-intro-frame data-intro-kind="photo">
+      <img src="/2026tokyo/images/photo-hero-right-1.png" alt="" data-intro-target />
+    </span>
+    <span id="photo-right-2" class="absolute" data-intro-frame data-intro-kind="photo">
+      <img src="/2026tokyo/images/photo-hero-right-2.png" alt="" data-intro-target />
+    </span>
+    <span id="photo-left-3" class="absolute" data-intro-frame data-intro-kind="photo">
+      <img src="/2026tokyo/images/photo-hero-left-3.png" alt="" data-intro-target />
+    </span>
   </div>
   <div id="hero-content" class="relative z-10 flex flex-col items-center pt-72 pb-48 gap-20 max-w-screen-xl mx-auto px-5">
     <h1 class="sr-only">{title}</h1>
-    <img src="/2026tokyo/images/hero-logo-group.svg" alt="YAPC::Tokyo 2026" width="468" height="483" />
-    <img src="/2026tokyo/images/hero-date-card.svg" alt="2026 11.27 FRI → 11.29 SUN @東京ビッグサイト" width="464" height="150" />
+    <span data-intro-center="logo">
+      <img src="/2026tokyo/images/hero-logo-group.svg" alt="YAPC::Tokyo 2026" width="468" height="483" data-intro-center-target />
+    </span>
+    <span data-intro-center="date">
+      <img src="/2026tokyo/images/hero-date-card.svg" alt="2026 11.27 FRI → 11.29 SUN @東京ビッグサイト" width="464" height="150" data-intro-center-target />
+    </span>
   </div>
   <img
     src="/2026tokyo/images/hero-wave.svg"
@@ -38,7 +76,37 @@ const { title } = Astro.props;
     height="120"
     class="block w-full bg-cream h-[min(calc(120/1300*100vw),120px)]"
   />
+  <noscript>
+    <style>
+      [data-intro-target],
+      [data-intro-center-target] {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+    </style>
+  </noscript>
 </section>
+
+<style>
+  [data-intro-frame],
+  [data-intro-center] {
+    display: block;
+  }
+
+  [data-intro-center] {
+    overflow: hidden;
+  }
+
+  [data-intro-target],
+  [data-intro-center-target] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: 50% 50%;
+  }
+</style>
 
 <script>
   import { gsap } from "gsap";
@@ -57,6 +125,58 @@ const { title } = Astro.props;
   const ANNOUNCEMENT_TOP = 8;
   const ANNOUNCEMENT_HEADING_HEIGHT = 94;
   const MOBILE_BREAKPOINT = 768;
+  const INTRO_ANIMATION = {
+    center: {
+      logoDelay: 0,
+      dateDelay: 0.14,
+      duration: 0.56,
+      yPercentFrom: 105,
+      ease: "power3.out",
+    },
+    shape: {
+      delayMin: 0.05,
+      delayMax: 0.48,
+      duration: 0.66,
+      fromScale: 0.72,
+      overshootScale: 1.1,
+      settleScale: 0.98,
+      yFrom: 14,
+      yOvershoot: -4,
+      rotatePeakMin: 1.5,
+      rotatePeakMax: 4,
+    },
+    photo: {
+      delayMin: 0.12,
+      delayMax: 0.58,
+      duration: 0.72,
+      fromScale: 0.78,
+      overshootScale: 1.045,
+      settleScale: 0.99,
+      yFrom: 16,
+      yOvershoot: -3,
+      rotatePeakMin: 1,
+      rotatePeakMax: 3,
+    },
+    priorityDelay: {
+      "shape-green-center-top": 0,
+      "shape-orange-stroke-right": 0.02,
+      "shape-white-left": 0.04,
+      "shape-purple-right-small": 0.08,
+      "shape-blue-right-top": 0.1,
+      "shape-blue-stroke-left": 0.12,
+      "shape-gold-right": 0.16,
+      "shape-gold-left-top": 0.18,
+      "photo-right-1": 0.2,
+      "photo-left-1": 0.22,
+      "shape-gold-left-lower": 0.24,
+      "photo-left-2": 0.28,
+      "photo-right-2": 0.32,
+      "shape-orange-stroke-center": 0.34,
+      "shape-white-left-bottom": 0.38,
+      "shape-green-right-bottom": 0.4,
+      "photo-left-3": 0.42,
+    },
+  } as const;
   const MOBILE_LAYOUT = {
     baseWidth: 375,
     heroHeight: 725,
@@ -131,18 +251,18 @@ const { title } = Astro.props;
   // sf: spreadFactor - 画面幅変化時の水平広がり係数
   // pd: parallaxDepth - スクロール時に上方向へ動く量
   const shapes = [
-    { id: "shape-gold-left-top",        baseX: -675, baseY: 104,  sf: 1.2, pd: 34 },
-    { id: "shape-white-left",           baseX: -498, baseY: 352,  sf: 0.8, pd: 56 },
-    { id: "shape-blue-right-top",       baseX:  319, baseY: 464,  sf: 1.0, pd: 76 },
-    { id: "shape-purple-right-small",   baseX:  197, baseY: 134,  sf: 0.9, pd: 28 },
-    { id: "shape-green-center-top",     baseX: -160, baseY:  19,  sf: 0.2, pd: 18 },
-    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 591,  sf: 1.3, pd: 88 },
-    { id: "shape-gold-left-lower",      baseX: -452, baseY: 859,  sf: 0.8, pd: 112 },
-    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 140,  sf: 1.3, pd: 46 },
-    { id: "shape-gold-right",           baseX:  400, baseY: 730,  sf: 1.0, pd: 102 },
-    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1027, sf: 0.3, pd: 132 },
-    { id: "shape-white-left-bottom",    baseX: -406, baseY: 1103, sf: 0.9, pd: 144 },
-    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1028, sf: 1.0, pd: 124 },
+    { id: "shape-gold-left-top",        baseX: -675, baseY: 104,  w: 212, h: 185, sf: 1.2, pd: 34 },
+    { id: "shape-white-left",           baseX: -498, baseY: 352,  w: 237, h: 206, sf: 0.8, pd: 56 },
+    { id: "shape-blue-right-top",       baseX:  319, baseY: 464,  w: 317, h: 249, sf: 1.0, pd: 76 },
+    { id: "shape-purple-right-small",   baseX:  197, baseY: 134,  w: 243, h: 98,  sf: 0.9, pd: 28 },
+    { id: "shape-green-center-top",     baseX: -160, baseY:  19,  w: 158, h: 192, sf: 0.2, pd: 18 },
+    { id: "shape-blue-stroke-left",     baseX: -681, baseY: 591,  w: 303, h: 167, sf: 1.3, pd: 88 },
+    { id: "shape-gold-left-lower",      baseX: -452, baseY: 859,  w: 213, h: 124, sf: 0.8, pd: 112 },
+    { id: "shape-orange-stroke-right",  baseX:  394, baseY: 140,  w: 377, h: 207, sf: 1.3, pd: 46 },
+    { id: "shape-gold-right",           baseX:  400, baseY: 730,  w: 257, h: 318, sf: 1.0, pd: 102 },
+    { id: "shape-orange-stroke-center", baseX:   93, baseY: 1027, w: 206, h: 282, sf: 0.3, pd: 132 },
+    { id: "shape-white-left-bottom",    baseX: -406, baseY: 1103, w: 220, h: 166, sf: 0.9, pd: 144 },
+    { id: "shape-green-right-bottom",   baseX:  322, baseY: 1028, w: 265, h: 203, sf: 1.0, pd: 124 },
   ];
 
   const photos = [
@@ -157,17 +277,194 @@ const { title } = Astro.props;
   if (heroSection) {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const heroEl = document.getElementById("hero-content");
-    const logo = heroEl?.querySelector("img:first-of-type") as HTMLElement | undefined;
-    const dateCard = heroEl?.querySelector("img:last-of-type") as HTMLElement | undefined;
+    const logo = heroEl?.querySelector('[data-intro-center="logo"]') as HTMLElement | undefined;
+    const dateCard = heroEl?.querySelector('[data-intro-center="date"]') as HTMLElement | undefined;
+    const centerTargets = [
+      {
+        el: logo?.querySelector("[data-intro-center-target]") as HTMLElement | null | undefined,
+        delay: INTRO_ANIMATION.center.logoDelay,
+      },
+      {
+        el: dateCard?.querySelector("[data-intro-center-target]") as HTMLElement | null | undefined,
+        delay: INTRO_ANIMATION.center.dateDelay,
+      },
+    ];
     const wave = heroSection.querySelector(":scope > img:last-of-type") as HTMLElement | undefined;
-    const shapeElements = shapes.map(shape => ({ ...shape, el: document.getElementById(shape.id) }));
-    const photoElements = photos.map(photo => ({ ...photo, el: document.getElementById(photo.id) }));
+    const shapeElements = shapes.map(shape => ({
+      ...shape,
+      el: document.getElementById(shape.id),
+      target: document.querySelector(`#${shape.id} [data-intro-target]`) as HTMLElement | null,
+    }));
+    const photoElements = photos.map(photo => ({
+      ...photo,
+      el: document.getElementById(photo.id),
+      target: document.querySelector(`#${photo.id} [data-intro-target]`) as HTMLElement | null,
+    }));
+    const introItems = [...shapeElements, ...photoElements].map(item => ({
+      id: item.id,
+      kind: item.id.startsWith("photo-") ? "photo" : "shape",
+      el: item.el,
+      target: item.target,
+    })) as {
+      id: string;
+      kind: "shape" | "photo";
+      el: HTMLElement | null;
+      target: HTMLElement | null;
+    }[];
+    const loadedIntroIds = new Set<string>();
+    const shownIntroIds = new Set<string>();
     let rafId = 0;
     let parallaxProgress = 0;
+    let playIntro = false;
 
     function getScrollProgress() {
       if (reducedMotion.matches) return 0;
       return clamp(window.scrollY / heroSection.offsetHeight, 0, 1);
+    }
+
+    function stableRandom(id: string) {
+      let hash = 2166136261;
+      for (let i = 0; i < id.length; i += 1) {
+        hash ^= id.charCodeAt(i);
+        hash = Math.imul(hash, 16777619);
+      }
+      return (hash >>> 0) / 4294967295;
+    }
+
+    function getIntroDelay(id: string, kind: "shape" | "photo") {
+      const config = INTRO_ANIMATION[kind];
+      const randomDelay = remap(stableRandom(id), 0, 1, config.delayMin, config.delayMax);
+      const priorityDelay = INTRO_ANIMATION.priorityDelay[id as keyof typeof INTRO_ANIMATION.priorityDelay] ?? 0;
+      return randomDelay + priorityDelay;
+    }
+
+    function getIntroPeakRotation(id: string, kind: "shape" | "photo") {
+      const config = INTRO_ANIMATION[kind];
+      const direction = stableRandom(`${id}:rotate-direction`) > 0.5 ? 1 : -1;
+      const amount = remap(stableRandom(`${id}:rotate-amount`), 0, 1, config.rotatePeakMin, config.rotatePeakMax);
+      return direction * amount;
+    }
+
+    function isIntroItemVisible(id: string) {
+      return window.innerWidth >= MOBILE_BREAKPOINT || id in MOBILE_LAYOUT.items;
+    }
+
+    async function waitForImageReady(img: HTMLImageElement) {
+      if (!img.complete) {
+        await new Promise<void>((resolve) => {
+          img.addEventListener("load", () => resolve(), { once: true });
+          img.addEventListener("error", () => resolve(), { once: true });
+        });
+      }
+
+      if (!img.naturalWidth) return;
+
+      try {
+        await img.decode();
+      } catch {
+        // Decode can fail for cached or SVG images in some browsers. Load completion is enough then.
+      }
+    }
+
+    function showIntroItem(item: typeof introItems[number], immediate = false) {
+      const { id, kind, target } = item;
+      if (!target || shownIntroIds.has(id) || !loadedIntroIds.has(id) || !isIntroItemVisible(id)) return;
+      shownIntroIds.add(id);
+
+      const config = INTRO_ANIMATION[kind];
+      gsap.killTweensOf(target);
+
+      if (immediate || reducedMotion.matches || !playIntro) {
+        gsap.set(target, { autoAlpha: 1, scale: 1, y: 0, rotation: 0 });
+        return;
+      }
+
+      const duration = config.duration;
+      const delay = getIntroDelay(id, kind);
+      const rotatePeak = getIntroPeakRotation(id, kind);
+      gsap.timeline({ delay })
+        .set(target, {
+          autoAlpha: 0,
+          scale: config.fromScale,
+          y: config.yFrom,
+          rotation: 0,
+          transformOrigin: "50% 50%",
+        })
+        .to(target, {
+          autoAlpha: 1,
+          duration: Math.min(0.14, duration * 0.25),
+          ease: "power1.out",
+        }, 0)
+        .to(target, {
+          scale: config.overshootScale,
+          y: config.yOvershoot,
+          rotation: rotatePeak,
+          duration: duration * 0.46,
+          ease: "power3.out",
+        }, 0)
+        .to(target, {
+          scale: config.settleScale,
+          y: 0,
+          rotation: 0,
+          duration: duration * 0.32,
+          ease: "power1.inOut",
+        })
+        .to(target, {
+          scale: 1,
+          y: 0,
+          rotation: 0,
+          duration: duration * 0.22,
+          ease: "power2.out",
+        });
+    }
+
+    function showReadyIntroItems(immediate = false) {
+      introItems.forEach(item => {
+        if (isIntroItemVisible(item.id)) {
+          showIntroItem(item, immediate);
+        } else if (item.el) {
+          gsap.set(item.el, { autoAlpha: 0 });
+        }
+      });
+    }
+
+    function showCenterIntro(immediate = false) {
+      centerTargets.forEach(({ el, delay }) => {
+        if (!el) return;
+        gsap.killTweensOf(el);
+
+        if (immediate || reducedMotion.matches || !playIntro) {
+          gsap.set(el, { autoAlpha: 1, yPercent: 0 });
+          return;
+        }
+
+        gsap.fromTo(el, {
+          autoAlpha: 0,
+          yPercent: INTRO_ANIMATION.center.yPercentFrom,
+        }, {
+          autoAlpha: 1,
+          yPercent: 0,
+          duration: INTRO_ANIMATION.center.duration,
+          delay,
+          ease: INTRO_ANIMATION.center.ease,
+        });
+      });
+    }
+
+    function startIntro() {
+      playIntro = !reducedMotion.matches && window.scrollY < heroSection.offsetHeight * 0.5;
+      showCenterIntro(!playIntro);
+      showReadyIntroItems(!playIntro);
+
+      introItems.forEach((item) => {
+        const img = item.target as HTMLImageElement | null;
+        if (!img) return;
+
+        waitForImageReady(img).then(() => {
+          loadedIntroIds.add(item.id);
+          showReadyIntroItems(!playIntro);
+        });
+      });
     }
 
     function renderMobileHero(vw: number, progress: number) {
@@ -275,11 +572,12 @@ const { title } = Astro.props;
         const spreadX = layout.spread * shape.sf * Math.sign(shape.baseX);
         const parallaxY = parallaxProgress * shape.pd * layout.visualScale;
 
-        gsap.set(el, { clearProps: "width,height" });
         gsap.set(el, {
           autoAlpha: 1,
           left: cx + (shape.baseX * layout.visualScale) + spreadX,
           top: (shape.baseY * layout.yCompress) - parallaxY,
+          width: shape.w,
+          height: shape.h,
           scale: layout.visualScale,
         });
       });
@@ -298,6 +596,7 @@ const { title } = Astro.props;
           top: (photo.baseY * layout.yCompress) - parallaxY,
           width: photo.w * layout.visualScale,
           height: photo.h * layout.visualScale,
+          scale: 1,
         });
       });
 
@@ -310,9 +609,20 @@ const { title } = Astro.props;
     }
 
     window.addEventListener("scroll", scheduleRender, { passive: true });
-    window.addEventListener("resize", scheduleRender);
-    reducedMotion.addEventListener("change", scheduleRender);
+    window.addEventListener("resize", () => {
+      scheduleRender();
+      window.requestAnimationFrame(() => showReadyIntroItems(!playIntro));
+    });
+    reducedMotion.addEventListener("change", () => {
+      scheduleRender();
+      if (reducedMotion.matches) {
+        playIntro = false;
+        showCenterIntro(true);
+        showReadyIntroItems(true);
+      }
+    });
     parallaxProgress = getScrollProgress();
     renderHero();
+    startIntro();
   }
 </script>
