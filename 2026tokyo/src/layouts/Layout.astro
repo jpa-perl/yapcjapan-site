@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import TicketButton from "../components/TicketButton.astro";
 import { siteInfo, navItems } from "../data/site";
+import { externalLinkProps } from "../utils/links";
 
 interface Props {
   title?: string;
@@ -50,7 +51,7 @@ const { title = siteInfo.title } = Astro.props;
           <ul class="flex gap-6">
             {navItems.map((item) => (
               <li>
-                <a href={item.href} class="flex flex-col items-center gap-1.5 text-ink text-center">
+                <a href={item.href} {...externalLinkProps(item.href)} class="flex flex-col items-center gap-1.5 text-ink text-center">
                   <span class="font-maru font-black text-lg leading-none">{item.label}</span>
                   <span class="font-solway font-medium text-xs leading-none opacity-80">{item.labelEn}</span>
                 </a>
@@ -67,7 +68,7 @@ const { title = siteInfo.title } = Astro.props;
         <ul class="flex flex-col px-4 pb-4">
           {navItems.map((item) => (
             <li class="border-t border-dashed border-gray-500">
-              <a href={item.href} class="flex items-center justify-between gap-4 py-4 text-ink">
+              <a href={item.href} {...externalLinkProps(item.href)} class="flex items-center justify-between gap-4 py-4 text-ink">
                 <span class="font-maru text-base font-black leading-none">{item.label}</span>
                 <span class="font-solway text-xs font-medium leading-none opacity-80">{item.labelEn}</span>
               </a>
@@ -83,7 +84,10 @@ const { title = siteInfo.title } = Astro.props;
 
     <TicketButton href={siteInfo.ticketUrl} />
 
-    <footer class="bg-white border-t border-dashed border-gray-500 py-8 flex flex-col items-center gap-2">
+    <footer class="flex min-h-[150px] flex-col items-center justify-start gap-2 bg-white border-t border-dashed border-gray-500 pt-5 pb-20 sm:h-[90px] sm:min-h-0 sm:justify-center sm:py-0">
+      <a href="https://japan.perlassociation.org/" {...externalLinkProps("https://japan.perlassociation.org/")} aria-label="Japan Perl Association">
+        <img src="/2026tokyo/images/jpa-logo.png" alt="Japan Perl Association" width="80" height="29" class="h-auto w-20" />
+      </a>
       <small class="font-solway font-medium text-xs text-navy opacity-80">&copy; Japan Perl Association</small>
     </footer>
   </body>

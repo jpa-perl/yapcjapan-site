@@ -21,7 +21,11 @@ export const siteInfo = {
 
 export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
-  { label: "行動指針", labelEn: "Code of Conduct", href: "#code-of-conduct" },
+  {
+    label: "行動指針",
+    labelEn: "Code of Conduct",
+    href: "https://japan.perlassociation.org/entry/yapc/code_of_conduct",
+  },
   { label: "スピーカー", labelEn: "Guest Speakers", href: "#speakers" },
 ] as const;
 

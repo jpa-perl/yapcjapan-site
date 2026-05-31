@@ -8,14 +8,14 @@ interface Props {
 }
 
 const { name, nameEn, description, role, keynote = false } = Astro.props;
-const photoSize = keynote ? "size-56 sm:size-72 lg:size-80" : "size-48 sm:size-56 lg:size-64";
+const photoSize = keynote ? "w-56 sm:w-72 lg:w-80" : "w-48 sm:w-56 lg:w-64";
 const nameSize = keynote ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl";
 const nameEnSize = keynote ? "text-xl" : "text-xl";
 const descSize = keynote ? "text-base" : "text-sm";
 ---
 
 <article class="flex flex-col items-center gap-4">
-  <div class:list={["rounded-full bg-gray-200", photoSize]} />
+  <div class:list={["speaker-photo-mask bg-gray-200", photoSize]} />
   <div class="flex flex-col items-center gap-4 sm:gap-5">
     <div class="flex flex-col items-center gap-2">
       {role && (
@@ -29,3 +29,12 @@ const descSize = keynote ? "text-base" : "text-sm";
     <p class:list={["font-maru font-medium text-black leading-relaxed text-center sm:text-left", descSize]}>{description}</p>
   </div>
 </article>
+
+<style>
+  .speaker-photo-mask {
+    aspect-ratio: 260 / 254.196;
+    --speaker-photo-mask: url("data:image/svg+xml,%3Csvg width='260' height='254.196' viewBox='0 0 260 254.196' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M259.475 127.357C265.176 190.338 224.59 242.734 129.748 253.319C34.9047 263.905 1.11012 176.048 0.0200381 127.357C-1.07004 78.6653 42.9497 19.918 105.341 2.45246C167.732 -15.013 253.774 64.3754 259.475 127.357Z' fill='white'/%3E%3C/svg%3E");
+    mask: var(--speaker-photo-mask) center / 100% 100% no-repeat;
+    -webkit-mask: var(--speaker-photo-mask) center / 100% 100% no-repeat;
+  }
+</style>
