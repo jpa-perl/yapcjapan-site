@@ -51,7 +51,7 @@ const { title = siteInfo.title } = Astro.props;
           <ul class="flex gap-6">
             {navItems.map((item) => (
               <li>
-                <a href={item.href} {...externalLinkProps(item.href)} class="flex flex-col items-center gap-1.5 text-ink text-center">
+                <a href={item.href} {...externalLinkProps(item.href)} class="flex flex-col items-center gap-1.5 text-ink text-center transition-colors hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange">
                   <span class="font-maru font-black text-lg leading-none">{item.label}</span>
                   <span class="font-solway font-medium text-xs leading-none opacity-80">{item.labelEn}</span>
                 </a>
@@ -68,7 +68,7 @@ const { title = siteInfo.title } = Astro.props;
         <ul class="flex flex-col px-4 pb-4">
           {navItems.map((item) => (
             <li class="border-t border-dashed border-gray-500">
-              <a href={item.href} {...externalLinkProps(item.href)} class="flex items-center justify-between gap-4 py-4 text-ink">
+              <a href={item.href} {...externalLinkProps(item.href)} class="flex items-center justify-between gap-4 py-4 text-ink transition-colors hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange">
                 <span class="font-maru text-base font-black leading-none">{item.label}</span>
                 <span class="font-solway text-xs font-medium leading-none opacity-80">{item.labelEn}</span>
               </a>
