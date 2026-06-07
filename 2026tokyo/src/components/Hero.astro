@@ -165,7 +165,7 @@ const { title } = Astro.props;
 
     function getScrollProgress() {
       if (reducedMotion.matches) return 0;
-      return clamp(window.scrollY / heroSection.offsetHeight, 0, 1);
+      return clamp(window.scrollY / heroSection!.offsetHeight, 0, 1);
     }
 
     function stableRandom(id: string) {
@@ -298,7 +298,7 @@ const { title } = Astro.props;
     }
 
     function startIntro() {
-      playIntro = !reducedMotion.matches && window.scrollY < heroSection.offsetHeight * 0.5;
+      playIntro = !reducedMotion.matches && window.scrollY < heroSection!.offsetHeight * 0.5;
       showCenterIntro(!playIntro);
       showReadyIntroItems(!playIntro);
 
