@@ -3,72 +3,138 @@ import ExternalPillLink from "./ExternalPillLink.astro";
 import SectionHeading from "./SectionHeading.astro";
 
 interface DateItem {
-  date: string;
-  label: string;
-  weekday: string;
-  note: string;
+    date: string;
+    label: string;
+    weekday: string;
+    note: string;
 }
 
 interface Venue {
-  name: string;
-  address: string;
-  accessUrl: string;
-  mapUrl: string;
+    name: string;
+    address: string;
+    accessUrl: string;
+    mapUrl: string;
+}
+
+interface DescriptionSegment {
+    text: string;
+    emphasis?: "strong" | "mark" | "small";
+    lineBreakAfter?: boolean;
 }
 
 interface Props {
-  title: string;
-  description: string;
-  dates: readonly DateItem[];
-  venue: Venue;
+    title: string;
+    description: readonly (readonly DescriptionSegment[])[];
+    dates: readonly DateItem[];
+    venue: Venue;
 }
 
 const { title, description, dates, venue } = Astro.props;
 ---
 
 <section id="about" class="scroll-mt-24 bg-gray-200 lg:scroll-mt-28">
-  <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-7 sm:px-5 sm:py-16 sm:gap-8">
-    <SectionHeading title={`About ${title}`} subtitle={`${title}について`} color="blue" />
-    <p class="max-w-2xl text-base font-maru font-bold text-black text-center whitespace-pre-line">{description}</p>
-
-    <div class="w-fit max-w-[calc(100vw-2rem)] bg-white rounded-2xl px-4 py-5 grid grid-cols-[theme(spacing.3)_1fr_theme(spacing.3)] gap-y-5 shadow-[0_10px_0_rgba(34,34,34,0.06)] sm:max-w-2xl sm:rounded-[20px] sm:px-5 sm:py-6 sm:grid-cols-[theme(spacing.5)_1fr_theme(spacing.5)] md:px-8">
-      <div class="col-start-2 flex flex-col gap-3 items-start">
-        <span class="rounded-full border border-black px-3 py-1 font-maru text-sm sm:text-base">開催日時</span>
-        <ul class="flex flex-col gap-2 font-maru text-base leading-relaxed">
-          {dates.map((d) => (
-            <li class="grid grid-cols-[auto_auto_1fr] items-baseline gap-x-1.5 sm:gap-x-2">
-              <time datetime={d.date} class="font-maru text-lg leading-none text-ink sm:text-xl">
-                {d.label}
-              </time>
-              <span class="text-sm leading-none text-gray-700 sm:text-base">({d.weekday})</span>
-              <span class="text-lg leading-none text-ink sm:text-xl">{d.note}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <hr class="col-span-full border-t border-dashed border-gray-500" />
-
-      <div class="col-start-2 flex flex-col gap-3 items-start">
-        <span class="rounded-full border border-black px-3 py-1 font-maru text-sm sm:text-base">場所</span>
-        <div class="flex flex-col gap-3 font-maru text-base leading-relaxed">
-          <div class="flex flex-col gap-1">
-            <p class="text-lg leading-snug text-ink sm:text-xl">{venue.name}</p>
-            <p class="text-sm text-gray-700 sm:text-base">{venue.address}</p>
-          </div>
-          <div class="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap">
-            <ExternalPillLink href={venue.accessUrl}>公式アクセス</ExternalPillLink>
-            <ExternalPillLink href={venue.mapUrl}>Google Map</ExternalPillLink>
-          </div>
+    <div
+        class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-7 sm:px-5 sm:py-16 sm:gap-8"
+    >
+        <SectionHeading
+            title={`About ${title}`}
+            subtitle={`${title}について`}
+            color="blue"
+        />
+        <div
+            class="mb-4 max-w-3xl space-y-5 text-left text-base font-maru font-bold leading-loose text-black sm:mb-6 sm:text-lg"
+        >
+            {
+                description.map((paragraph) => (
+                    <p>
+                        {paragraph.map((segment) => (
+                            <>
+                                {segment.emphasis === "strong" ? (
+                                    <strong class="text-ink">{segment.text}</strong>
+                                ) : segment.emphasis === "mark" ? (
+                                    <strong class="text-orange">{segment.text}</strong>
+                                ) : segment.emphasis === "small" ? (
+                                    <span class="text-sm sm:text-base">{segment.text}</span>
+                                ) : (
+                                    segment.text
+                                )}
+                                {segment.lineBreakAfter && <br />}
+                            </>
+                        ))}
+                    </p>
+                ))
+            }
         </div>
-      </div>
+
+        <div
+            class="patchwork-card w-fit max-w-[calc(100vw-2rem)] rounded-2xl bg-white px-6 py-7 grid grid-cols-[theme(spacing.3)_1fr_theme(spacing.3)] gap-y-5 shadow-[0_10px_0_rgba(34,34,34,0.06)] sm:max-w-2xl sm:rounded-[20px] sm:px-8 sm:py-9 sm:grid-cols-[theme(spacing.5)_1fr_theme(spacing.5)] md:px-11"
+        >
+            <div class="col-start-2 flex flex-col gap-3 items-start">
+                <span
+                    class="rounded-full border border-black px-3 py-1 font-maru text-sm sm:text-base"
+                    >開催日時</span
+                >
+                <ul
+                    class="flex flex-col gap-2 font-maru text-base leading-relaxed"
+                >
+                    {
+                        dates.map((d) => (
+                            <li class="grid grid-cols-[auto_auto_1fr] items-baseline gap-x-1.5 sm:gap-x-2">
+                                <time
+                                    datetime={d.date}
+                                    class="font-maru text-lg leading-none text-ink sm:text-xl"
+                                >
+                                    {d.label}
+                                </time>
+                                <span class="text-sm leading-none text-gray-700 sm:text-base">
+                                    ({d.weekday})
+                                </span>
+                                <span class="text-lg leading-none text-ink sm:text-xl">
+                                    {d.note}
+                                </span>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+
+            <hr class="col-span-full border-t border-dashed border-gray-500" />
+
+            <div class="col-start-2 flex flex-col gap-3 items-start">
+                <span
+                    class="rounded-full border border-black px-3 py-1 font-maru text-sm sm:text-base"
+                    >場所</span
+                >
+                <div
+                    class="flex flex-col gap-3 font-maru text-base leading-relaxed"
+                >
+                    <div class="flex flex-col gap-1">
+                        <p class="text-lg leading-snug text-ink sm:text-xl">
+                            {venue.name}
+                        </p>
+                        <p class="text-sm text-gray-700 sm:text-base">
+                            {venue.address}
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap"
+                    >
+                        <ExternalPillLink href={venue.accessUrl}
+                            >公式アクセス</ExternalPillLink
+                        >
+                        <ExternalPillLink href={venue.mapUrl}
+                            >Google Map</ExternalPillLink
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <img
-    src="/2026tokyo/images/speakers-wave.svg"
-    alt=""
-    width="1340"
-    height="150"
-    class="block aspect-[1340/150] w-full bg-gray-200"
-  />
+    <img
+        src="/2026tokyo/images/speakers-wave.svg"
+        alt=""
+        width="1340"
+        height="150"
+        class="block aspect-[1340/150] w-full bg-gray-200"
+    />
 </section>
