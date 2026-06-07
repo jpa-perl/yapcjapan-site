@@ -46,7 +46,7 @@ const descSize = keynote ? "text-base" : "text-sm";
       <h3 class:list={["font-maru font-black text-black leading-none", nameSize]}>{name}</h3>
       <p class:list={["font-solway font-bold text-orange leading-none", nameEnSize]}>{nameEn}</p>
     </div>
-    <div class:list={["font-maru font-medium text-black leading-relaxed text-center whitespace-pre-line sm:text-left", descSize]} set:html={description.toString()} />
+    <div class:list={["speaker-description font-maru font-medium text-black leading-relaxed text-center whitespace-pre-line sm:text-left", descSize]} set:html={description.toString()} />
   </div>
 </article>
 
@@ -69,5 +69,11 @@ const descSize = keynote ? "text-base" : "text-sm";
   .speaker-photo-mask {
     mask: var(--speaker-photo-mask) center / 100% 100% no-repeat;
     -webkit-mask: var(--speaker-photo-mask) center / 100% 100% no-repeat;
+  }
+
+  :global(.speaker-description a) {
+    text-decoration: underline currentColor;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
   }
 </style>
