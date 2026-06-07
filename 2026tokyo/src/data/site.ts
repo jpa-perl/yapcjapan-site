@@ -15,8 +15,8 @@ export const siteInfo = {
   title: "YAPC::Tokyo 2026",
   dates: [
     { date: "2026-11-27", label: "2026年11月27日", weekday: "金", note: "前夜祭" },
-    { date: "2026-11-28", label: "2026年11月28日", weekday: "土", note: "1日目" },
-    { date: "2026-11-29", label: "2026年11月29日", weekday: "日", note: "2日目 + アフターパーティ" },
+    { date: "2026-11-28", label: "2026年11月28日", weekday: "土", note: "1日目 + 懇親会" },
+    { date: "2026-11-29", label: "2026年11月29日", weekday: "日", note: "2日目" },
   ],
   venue: {
     name: "東京ビッグサイト（東京国際展示場）",
