@@ -1,5 +1,12 @@
+import fujiwaraPhoto from "../assets/fujiwara.jpg";
+import hitodePhoto from "../assets/hitode.jpg";
+
 const speakerDescription =
   "人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利とを承認することは、世界における自由、正義及び平和の基礎であるので、人権の無視及び軽侮が、人類の良心を踏みにじった野蛮行為をもたらし、言論及び信仰の自由が受けられ、恐怖及び欠乏のない世界の到来が、一般の人々の最高の願望として宣言されたので、";
+const fujiwaraDescription =
+  "2025年よりさくらインターネット株式会社。クラウド制御基盤の開発・運用に従事\n2011〜2024年までは面白法人カヤック\nOSS開発者。代表作として Amazon ECSデプロイツールecspresso ほか多数\nWebパフォーマンスチューニングコンテストISUCON 優勝4回、出題3回\n最近の趣味はマネージドサービスの隙間を埋める隙間家具のようなツールをGoで作ってOSSにすること、ランニング";
+const hitodeDescription =
+  "株式会社はてな エンジニアリングマネージャー。\n2009年にアルバイトとして入社、2012年に新卒入社。\nはてなブログやGigaViewerの開発に携わる。\nコードのデバッグとチームのデバッグを交互に行う。\n好きなスライドは、文字の大きいスライド。";
 
 export const siteInfo = {
   title: "YAPC::Tokyo 2026",
@@ -105,14 +112,16 @@ export const keynoteSpeaker = {
 
 export const speakers = [
   {
-    name: "田中 棚卸",
-    nameEn: "Tanao Tanaka",
-    description: speakerDescription,
+    name: "藤原俊一郎",
+    nameEn: "fujiwara",
+    photo: fujiwaraPhoto,
+    description: fujiwaraDescription,
   },
   {
-    name: "田中 棚卸",
-    nameEn: "Tanao Tanaka",
-    description: speakerDescription,
+    name: "hitode909",
+    nameEn: "hitode909",
+    photo: hitodePhoto,
+    description: hitodeDescription,
   },
   {
     name: "田中 棚卸",
