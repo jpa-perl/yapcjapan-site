@@ -45,6 +45,7 @@ import {
             <SpeakerCard
               name={speaker.name}
               nameEn={speaker.nameEn}
+              photo={"photo" in speaker ? speaker.photo : undefined}
               description={speaker.description}
             />
           </li>
