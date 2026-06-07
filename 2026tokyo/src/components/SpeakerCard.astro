@@ -1,5 +1,7 @@
 ---
 import type { ImageMetadata } from "astro";
+import { remark } from 'remark';
+import html from 'remark-html';
 
 interface Props {
   name: string;
@@ -10,7 +12,8 @@ interface Props {
   keynote?: boolean;
 }
 
-const { name, nameEn, description, photo, role, keynote = false } = Astro.props;
+const { name, nameEn, description: rawDescription, photo, role, keynote = false } = Astro.props;
+const description = await (remark as () => typeof remark)().use(html).process(rawDescription);
 const photoSize = keynote ? "w-56 sm:w-72 lg:w-80" : "w-48 sm:w-56 lg:w-64";
 const nameSize = keynote ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl";
 const nameEnSize = keynote ? "text-xl" : "text-xl";
@@ -43,7 +46,7 @@ const descSize = keynote ? "text-base" : "text-sm";
       <h3 class:list={["font-maru font-black text-black leading-none", nameSize]}>{name}</h3>
       <p class:list={["font-solway font-bold text-orange leading-none", nameEnSize]}>{nameEn}</p>
     </div>
-    <p class:list={["font-maru font-medium text-black leading-relaxed text-center whitespace-pre-line sm:text-left", descSize]}>{description}</p>
+    <div class:list={["font-maru font-medium text-black leading-relaxed text-center whitespace-pre-line sm:text-left", descSize]} set:html={description.toString()} />
   </div>
 </article>
 
