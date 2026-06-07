@@ -13,6 +13,7 @@ YAPC::Tokyo 2026 website project.
 ```sh
 npm install
 npm run dev
+npm run check
 npm run build
 npm run preview
 ```
