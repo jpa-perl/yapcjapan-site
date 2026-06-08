@@ -90,23 +90,16 @@ export const navItems = [
 
 export const announcements = [
   {
-    date: "2026-11-11",
-    displayDate: "2026.11.11",
-    title: "チケットの販売を開始しました",
-    href: "#",
+    date: "2026-06-01",
+    displayDate: "2026.06.01",
+    title: "ご協賛のお願い",
+    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-call-for-sponsors",
   },
   {
-    date: "2026-11-11",
-    displayDate: "2026.11.11",
-    title:
-      "ちょっと長いタイトルの場合のお知らせはどういうレイアウトにするのがいいのか",
-    href: "#",
-  },
-  {
-    date: "2026-11-11",
-    displayDate: "2026.11.11",
-    title: "チケットの販売を開始しました",
-    href: "#",
+    date: "2026-05-27",
+    displayDate: "2026.05.27",
+    title: "ロゴが完成しました",
+    href: "https://blog.yapcjapan.org/entry/2026/05/27/180000",
   },
 ] as const;
 
