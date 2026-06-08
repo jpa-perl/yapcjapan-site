@@ -74,7 +74,7 @@ export const siteInfo = {
       { text: "を育む場を目指します。" },
     ],
   ],
-  blogUrl: "#",
+  blogUrl: "https://blog.yapcjapan.org/",
   ticketUrl: "#",
 } as const;
 
