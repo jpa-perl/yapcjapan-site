@@ -9,6 +9,9 @@ interface Props {
 }
 
 const { title = siteInfo.title } = Astro.props;
+const siteUrl = "https://yapcjapan.org/2026tokyo/";
+const ogImageUrl = `${siteUrl}images/ogimage.png`;
+const siteDescription = "YAPC::Tokyo 2026は一般社団法人Japan Perl Associationが主催する技術カンファレンスです。";
 ---
 
 <html lang="ja">
@@ -25,6 +28,18 @@ const { title = siteInfo.title } = Astro.props;
       rel="stylesheet"
     />
     <title>{title}</title>
+    <meta name="description" content={siteDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={ogImageUrl} />
   </head>
   <body class="bg-cream text-black font-maru overflow-x-hidden">
 
