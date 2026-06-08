@@ -119,6 +119,17 @@ export const speakers = [
     description: fujiwaraDescription,
   },
   {
+    name: "",
+    nameEn: "",
+    description: "Coming soon ...",
+  },
+  {
+    name: "",
+    nameEn: "",
+    description: "Coming soon ...",
+  },
+  /*
+  {
     name: "hitode909",
     nameEn: "hitode909",
     photo: hitodePhoto,
@@ -134,14 +145,5 @@ export const speakers = [
     nameEn: "Tanao Tanaka",
     description: speakerDescription,
   },
-  {
-    name: "田中 棚卸",
-    nameEn: "Tanao Tanaka",
-    description: speakerDescription,
-  },
-  {
-    name: "田中 棚卸",
-    nameEn: "Tanao Tanaka",
-    description: speakerDescription,
-  },
+  */
 ] as const;
