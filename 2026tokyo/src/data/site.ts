@@ -75,8 +75,12 @@ export const siteInfo = {
     ],
   ],
   blogUrl: "https://blog.yapcjapan.org/",
-  ticketUrl: "#",
 } as const;
+
+export const featuredButton = {
+  text: "スポンサー募集中",
+  url: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-call-for-sponsors",
+} as const
 
 export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
