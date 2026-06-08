@@ -28,7 +28,11 @@ export const siteInfo = {
     [
       { text: "YAPC::Tokyo 2026" },
       { text: "は" },
-      { text: "一般社団法人Japan Perl Association" },
+      {
+        text: "一般社団法人Japan Perl Association",
+        emphasis: "link",
+        href: "https://japan.perlassociation.org/",
+      },
       { text: "が主催する、" },
       { text: "10周年の節目" },
       { text: "を迎える技術カンファレンスです。" },
@@ -70,9 +74,13 @@ export const siteInfo = {
       { text: "を育む場を目指します。" },
     ],
   ],
-  blogUrl: "#",
-  ticketUrl: "#",
+  blogUrl: "https://blog.yapcjapan.org/",
 } as const;
+
+export const featuredButton = {
+  text: "スポンサー募集中",
+  url: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-call-for-sponsors",
+} as const
 
 export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
@@ -86,23 +94,16 @@ export const navItems = [
 
 export const announcements = [
   {
-    date: "2026-11-11",
-    displayDate: "2026.11.11",
-    title: "チケットの販売を開始しました",
-    href: "#",
+    date: "2026-06-01",
+    displayDate: "2026.06.01",
+    title: "ご協賛のお願い",
+    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-call-for-sponsors",
   },
   {
-    date: "2026-11-11",
-    displayDate: "2026.11.11",
-    title:
-      "ちょっと長いタイトルの場合のお知らせはどういうレイアウトにするのがいいのか",
-    href: "#",
-  },
-  {
-    date: "2026-11-11",
-    displayDate: "2026.11.11",
-    title: "チケットの販売を開始しました",
-    href: "#",
+    date: "2026-05-27",
+    displayDate: "2026.05.27",
+    title: "ロゴが完成しました",
+    href: "https://blog.yapcjapan.org/entry/2026/05/27/180000",
   },
 ] as const;
 
@@ -122,6 +123,17 @@ export const speakers = [
     description: fujiwaraDescription,
   },
   {
+    name: "",
+    nameEn: "",
+    description: "Coming soon ...",
+  },
+  {
+    name: "",
+    nameEn: "",
+    description: "Coming soon ...",
+  },
+  /*
+  {
     name: "hitode909",
     nameEn: "hitode909",
     photo: hitodePhoto,
@@ -137,14 +149,5 @@ export const speakers = [
     nameEn: "Tanao Tanaka",
     description: speakerDescription,
   },
-  {
-    name: "田中 棚卸",
-    nameEn: "Tanao Tanaka",
-    description: speakerDescription,
-  },
-  {
-    name: "田中 棚卸",
-    nameEn: "Tanao Tanaka",
-    description: speakerDescription,
-  },
+  */
 ] as const;
