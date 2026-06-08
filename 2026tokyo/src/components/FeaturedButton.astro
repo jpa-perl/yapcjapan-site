@@ -1,0 +1,22 @@
+---
+import { externalLinkProps } from "../utils/links";
+
+interface Props {
+  href: string;
+  text: string;
+  disabled?: boolean;
+}
+
+const { href, text, disabled } = Astro.props;
+---
+
+{ !disabled && (
+<a
+  href={href}
+  {...externalLinkProps(href)}
+  class="patchwork-ticket fixed bottom-5 right-5 z-40 flex h-12 items-center justify-center gap-2.5 rounded-lg bg-[#000] px-7 font-maru text-base font-bold leading-none text-white shadow-[0_6px_18px_rgba(0,0,0,0.18)] transition-transform duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#000] sm:bottom-6 sm:right-6"
+>
+  <span>{text}</span>
+  <img src="/2026tokyo/images/ticket-arrow.svg" alt="" class="h-[9px] w-[7px] shrink-0" />
+</a>
+)}
