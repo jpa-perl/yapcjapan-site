@@ -28,7 +28,11 @@ export const siteInfo = {
     [
       { text: "YAPC::Tokyo 2026" },
       { text: "は" },
-      { text: "一般社団法人Japan Perl Association" },
+      {
+        text: "一般社団法人Japan Perl Association",
+        emphasis: "link",
+        href: "https://japan.perlassociation.org/",
+      },
       { text: "が主催する、" },
       { text: "10周年の節目" },
       { text: "を迎える技術カンファレンスです。" },
