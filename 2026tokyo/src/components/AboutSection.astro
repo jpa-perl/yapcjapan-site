@@ -18,8 +18,9 @@ interface Venue {
 
 interface DescriptionSegment {
     text: string;
-    emphasis?: "strong" | "mark" | "small";
+    emphasis?: "strong" | "mark" | "small" | "link";
     lineBreakAfter?: boolean;
+    href?: string;
 }
 
 interface Props {
@@ -55,6 +56,8 @@ const { title, description, dates, venue } = Astro.props;
                                     <strong class="text-orange">{segment.text}</strong>
                                 ) : segment.emphasis === "small" ? (
                                     <span class="text-sm sm:text-base">{segment.text}</span>
+                                ) : segment.emphasis === "link" ? (
+                                    <a href={segment.href}>{segment.text}</a>
                                 ) : (
                                     segment.text
                                 )}
