@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
-import TicketButton from "../components/TicketButton.astro";
-import { siteInfo, navItems } from "../data/site";
+import FeaturedButton from "../components/FeaturedButton.astro";
+import { siteInfo, featuredButton, navItems } from "../data/site";
 import { externalLinkProps } from "../utils/links";
 
 interface Props {
@@ -82,7 +82,7 @@ const { title = siteInfo.title } = Astro.props;
       <slot />
     </main>
 
-    <TicketButton href={siteInfo.ticketUrl} />
+    <FeaturedButton text={featuredButton.text} href={featuredButton.url} />
 
     <footer class="flex min-h-[150px] flex-col items-center justify-start gap-2 bg-white border-t border-dashed border-gray-500 pt-5 pb-20 sm:h-[90px] sm:min-h-0 sm:justify-center sm:py-0">
       <a href="https://japan.perlassociation.org/" {...externalLinkProps("https://japan.perlassociation.org/")} aria-label="Japan Perl Association">
