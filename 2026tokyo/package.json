@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "test": "node --test \"src/**/*.test.mjs\"",
     "build": "run-s build:clean build:astro build:copy",
     "build:clean": "rimraf dist",
     "build:copy": "rimraf ../docs/2026tokyo && cp -a ./dist/2026tokyo ../docs/2026tokyo",
