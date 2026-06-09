@@ -22,7 +22,7 @@ export const siteInfo = {
     name: "東京ビッグサイト（東京国際展示場）",
     address: "東京都江東区有明3-11-1",
     accessUrl: "https://www.bigsight.jp/visitor/access/",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%93%E3%83%83%E3%82%B0%E3%82%B5%E3%82%A4%E3%83%88",
+    mapUrl: "https://maps.app.goo.gl/BeYmd6iD2tQV2v478",
   },
   description: [
     [
