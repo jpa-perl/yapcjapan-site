@@ -9,7 +9,7 @@ const { title, subtitle, color = "orange" } = Astro.props;
 const colorClass = color === "blue" ? "text-blue" : "text-orange";
 ---
 
-<hgroup class="flex flex-col items-center text-center gap-1">
+<hgroup class="relative z-30 flex flex-col items-center text-center gap-1">
   <h2 class:list={["font-solway text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl", colorClass]}>{title}</h2>
   <p class="font-maru text-lg font-black text-gray-700 leading-tight sm:text-2xl">{subtitle}</p>
 </hgroup>
