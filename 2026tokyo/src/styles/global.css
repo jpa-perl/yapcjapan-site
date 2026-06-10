@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-ink: #222222;
+  --color-black: #222222;
+  --color-white: #ffffff;
+  --color-cream: #fffaed;
+  --color-orange: #ea5520;
+  --color-green: #00992b;
+  --color-gold: #e29d25;
+  --color-blue: #004aba;
+  --color-navy: #10355e;
+  --color-purple: #593b6e;
+  --color-gray-700: #616161;
+  --color-gray-500: #a7a7a7;
+  --color-gray-200: #e3e3e3;
+
+  --font-sans: "Zen Maru Gothic", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Meiryo", sans-serif;
+  --font-maru: "Zen Maru Gothic", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Meiryo", sans-serif;
+  --font-solway: "Solway", Georgia, "Times New Roman", serif;
+}
+
+@layer base {
+  body {
+    font-feature-settings: palt;
+  }
+}
+
+@layer components {
+  .patchwork-card {
+    --stitch-inset: 0.5rem;
+    position: relative;
+  }
+
+  .patchwork-ticket {
+    --stitch-inset: 0.4rem;
+    position: fixed;
+    transform: rotate(-2deg);
+  }
+
+  .patchwork-ticket:hover {
+    transform: rotate(-2deg) translateY(-0.125rem);
+  }
+
+  .patchwork-card::before,
+  .patchwork-ticket::before {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: inherit;
+    content: "";
+    inset: var(--stitch-inset);
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .patchwork-card::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='99' height='99' rx='4' ry='4' fill='none' stroke='%23a7a7a7' stroke-width='0.65' stroke-linecap='round' stroke-dasharray='4 6' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  }
+
+  .patchwork-ticket::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='99' height='99' rx='8' ry='8' fill='none' stroke='%23ffffff' stroke-width='1' stroke-linecap='round' stroke-dasharray='4 6' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  }
+
+  @media (min-width: 40rem) {
+    .patchwork-card {
+      --stitch-inset: 0.75rem;
+    }
+  }
+}

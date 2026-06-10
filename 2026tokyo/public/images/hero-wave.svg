@@ -1,0 +1,4 @@
+<svg viewBox="0 0 1300 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H1300V20C1300 20 1162 120 1085 120C1008 120 913 10 846 10C780 10 681 105 589 100C497 96 320 20 248 10C175 0 165 90 104 93C42 97 0 27 0 27Z" fill="#E3E3E3"/>
+<path d="M1300 13C1300 13 1162 113 1085 113C1008 113 913 3 846 3C780 3 681 98 589 93C497 89 320 13 248 3C175 -7 165 83 104 86C42 90 0 20 0 20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 10"/>
+</svg>

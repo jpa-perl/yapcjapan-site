@@ -1,0 +1,196 @@
+---
+import "../styles/global.css";
+import FeaturedButton from "../components/FeaturedButton.astro";
+import { siteInfo, featuredButton, navItems } from "../data/site";
+import { externalLinkProps } from "../utils/links";
+
+interface Props {
+  title?: string;
+}
+
+const { title = siteInfo.title } = Astro.props;
+const siteUrl = "https://yapcjapan.org/2026tokyo/";
+const ogImageUrl = `${siteUrl}images/ogimage.png`;
+const siteDescription = "YAPC::Tokyo 2026は一般社団法人Japan Perl Associationが主催する技術カンファレンスです。";
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/2026tokyo/favicon.svg" />
+    <link rel="icon" href="/2026tokyo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Solway:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+    <meta name="description" content={siteDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={ogImageUrl} />
+  </head>
+  <body class="bg-cream text-black font-maru overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white rounded-b-[24px] lg:rounded-b-[28px]">
+      <div class="flex items-center justify-between gap-4 px-4 py-3 lg:px-5 lg:py-4">
+        <a href="/2026tokyo/">
+          <img src="/2026tokyo/images/header-logo.svg" alt={siteInfo.title} class="h-6 lg:h-7" />
+        </a>
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="flex size-11 shrink-0 items-center justify-center text-ink lg:hidden"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">メニューを開閉する</span>
+          <span class="relative block h-3.5 w-5" aria-hidden="true">
+            <span id="mobile-menu-line-top" class="absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-ink"></span>
+            <span id="mobile-menu-line-middle" class="absolute left-0 top-1/2 block h-0.5 w-5 -translate-y-1/2 rounded-full bg-ink"></span>
+            <span id="mobile-menu-line-bottom" class="absolute bottom-0 left-0 block h-0.5 w-5 rounded-full bg-ink"></span>
+          </span>
+        </button>
+        <nav class="hidden lg:block" aria-label="メインメニュー">
+          <ul class="flex gap-6">
+            {navItems.map((item) => (
+              <li>
+                <a href={item.href} {...externalLinkProps(item.href)} class="flex flex-col items-center gap-1.5 text-ink text-center transition-colors hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange">
+                  <span class="font-maru font-black text-lg leading-none">{item.label}</span>
+                  <span class="font-solway font-medium text-xs leading-none opacity-80">{item.labelEn}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+      <nav
+        id="mobile-menu"
+        class="h-0 overflow-hidden opacity-0 lg:hidden"
+        aria-label="モバイルメニュー"
+      >
+        <ul class="flex flex-col px-4 pb-4">
+          {navItems.map((item) => (
+            <li class="border-t border-dashed border-gray-500">
+              <a href={item.href} {...externalLinkProps(item.href)} class="flex items-center justify-between gap-4 py-4 text-ink transition-colors hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange">
+                <span class="font-maru text-base font-black leading-none">{item.label}</span>
+                <span class="font-solway text-xs font-medium leading-none opacity-80">{item.labelEn}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <FeaturedButton text={featuredButton.text} href={featuredButton.url} />
+
+    <footer class="flex min-h-[150px] flex-col items-center justify-start gap-2 bg-white border-t border-dashed border-gray-500 pt-5 pb-20 sm:h-[90px] sm:min-h-0 sm:justify-center sm:py-0">
+      <a href="https://japan.perlassociation.org/" {...externalLinkProps("https://japan.perlassociation.org/")} aria-label="Japan Perl Association">
+        <img src="/2026tokyo/images/jpa-logo.png" alt="Japan Perl Association" width="80" height="29" class="h-auto w-20" />
+      </a>
+      <small class="font-solway font-medium text-xs text-navy opacity-80">&copy; Japan Perl Association</small>
+    </footer>
+  </body>
+</html>
+
+<script>
+  import { gsap } from "gsap";
+
+  const header = document.querySelector("header");
+  const menuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const lineTop = document.getElementById("mobile-menu-line-top");
+  const lineMiddle = document.getElementById("mobile-menu-line-middle");
+  const lineBottom = document.getElementById("mobile-menu-line-bottom");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let menuOpen = false;
+  let headerHidden = false;
+  let lastScrollY = window.scrollY;
+
+  function setHeaderHidden(hidden: boolean, immediate = false) {
+    if (!header || headerHidden === hidden) return;
+    headerHidden = hidden;
+    gsap.to(header, {
+      yPercent: hidden ? -110 : 0,
+      duration: immediate || reducedMotion.matches ? 0 : 0.24,
+      ease: hidden ? "power2.in" : "power2.out",
+    });
+  }
+
+  function setMenu(open: boolean, immediate = false) {
+    if (!menuButton || !mobileMenu) return;
+    menuOpen = open;
+    menuButton.setAttribute("aria-expanded", String(open));
+    if (open) setHeaderHidden(false, immediate);
+
+    gsap.killTweensOf([mobileMenu, lineTop, lineMiddle, lineBottom]);
+    const duration = immediate || reducedMotion.matches ? 0 : 0.26;
+    const ease = open ? "power2.out" : "power2.inOut";
+
+    gsap.to(mobileMenu, {
+      height: open ? "auto" : 0,
+      opacity: open ? 1 : 0,
+      duration,
+      ease,
+    });
+    gsap.to(lineTop, {
+      y: open ? 6 : 0,
+      rotation: open ? 45 : 0,
+      duration,
+      ease,
+    });
+    gsap.to(lineMiddle, {
+      opacity: open ? 0 : 1,
+      duration: duration * 0.7,
+      ease,
+    });
+    gsap.to(lineBottom, {
+      y: open ? -6 : 0,
+      rotation: open ? -45 : 0,
+      duration,
+      ease,
+    });
+  }
+
+  menuButton?.addEventListener("click", () => setMenu(!menuOpen));
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
+  });
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    const delta = currentScrollY - lastScrollY;
+
+    if (menuOpen) {
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    if (currentScrollY <= 8) {
+      setHeaderHidden(false);
+    } else if (delta > 8 && currentScrollY > 120) {
+      setHeaderHidden(true);
+    } else if (delta < -8) {
+      setHeaderHidden(false);
+    }
+
+    lastScrollY = currentScrollY;
+  }, { passive: true });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) setMenu(false, true);
+  });
+</script>

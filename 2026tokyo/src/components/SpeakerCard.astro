@@ -1,0 +1,79 @@
+---
+import type { ImageMetadata } from "astro";
+import { remark } from 'remark';
+import html from 'remark-html';
+
+interface Props {
+  name: string;
+  nameEn: string;
+  description: string;
+  photo?: ImageMetadata;
+  role?: string;
+  keynote?: boolean;
+}
+
+const { name, nameEn, description: rawDescription, photo, role, keynote = false } = Astro.props;
+const description = await (remark as () => typeof remark)().use(html).process(rawDescription);
+const photoSize = keynote ? "w-56 sm:w-72 lg:w-80" : "w-48 sm:w-56 lg:w-64";
+const nameSize = keynote ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl";
+const nameEnSize = keynote ? "text-xl" : "text-xl";
+const descSize = keynote ? "text-base" : "text-sm";
+---
+
+<article class="flex flex-col items-center gap-4">
+  <div class:list={["speaker-photo-frame", photoSize]}>
+    <div class="speaker-photo-mask size-full bg-gray-200">
+      {photo && (
+        <img
+          src={photo.src}
+          width={photo.width}
+          height={photo.height}
+          alt={name}
+          class="block size-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      )}
+    </div>
+  </div>
+  <div class="flex flex-col items-center gap-4 sm:gap-5">
+    <div class="flex flex-col items-center gap-2">
+      {role && (
+        <span class="rounded-full border border-black bg-white px-3 py-1.5 text-sm font-bold font-maru sm:text-base">
+          {role}
+        </span>
+      )}
+      <h3 class:list={["font-maru font-black text-black leading-none", nameSize]}>{name}</h3>
+      <p class:list={["font-solway font-bold text-orange leading-none", nameEnSize]}>{nameEn}</p>
+    </div>
+    <div class:list={["speaker-description font-maru font-medium text-black leading-relaxed text-center whitespace-pre-line sm:text-left", descSize]} set:html={description.toString()} />
+  </div>
+</article>
+
+<style>
+  .speaker-photo-frame {
+    aspect-ratio: 260 / 254.196;
+    --speaker-photo-mask: url("data:image/svg+xml,%3Csvg width='260' height='254.196' viewBox='0 0 260 254.196' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M259.475 127.357C265.176 190.338 224.59 242.734 129.748 253.319C34.9047 263.905 1.11012 176.048 0.0200381 127.357C-1.07004 78.6653 42.9497 19.918 105.341 2.45246C167.732 -15.013 253.774 64.3754 259.475 127.357Z' fill='white'/%3E%3C/svg%3E");
+    --speaker-photo-stitch: url("data:image/svg+xml,%3Csvg width='260' height='254.196' viewBox='0 0 260 254.196' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M259.475 127.357C265.176 190.338 224.59 242.734 129.748 253.319C34.9047 263.905 1.11012 176.048 0.0200381 127.357C-1.07004 78.6653 42.9497 19.918 105.341 2.45246C167.732 -15.013 253.774 64.3754 259.475 127.357Z' fill='none' stroke='%23A7A7A7' stroke-width='1.5' stroke-linecap='round' stroke-dasharray='10 10'/%3E%3C/svg%3E");
+    position: relative;
+  }
+
+  .speaker-photo-frame::after {
+    background: var(--speaker-photo-stitch) center / 100% 100% no-repeat;
+    content: "";
+    inset: -5px;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .speaker-photo-mask {
+    mask: var(--speaker-photo-mask) center / 100% 100% no-repeat;
+    -webkit-mask: var(--speaker-photo-mask) center / 100% 100% no-repeat;
+  }
+
+  :global(.speaker-description a) {
+    text-decoration: underline currentColor;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+</style>

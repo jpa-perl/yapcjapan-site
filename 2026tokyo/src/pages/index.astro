@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutSection from "../components/AboutSection.astro";
+import AnnouncementSection from "../components/AnnouncementSection.astro";
+import Hero from "../components/Hero.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import SpeakerCard from "../components/SpeakerCard.astro";
+import {
+  siteInfo,
+  announcements,
+  keynoteSpeaker,
+  speakers,
+} from "../data/site";
+---
+
+<Layout>
+  <Hero title={siteInfo.title} />
+
+  <AnnouncementSection announcements={announcements} blogUrl={siteInfo.blogUrl} />
+
+  <AboutSection
+    title={siteInfo.title}
+    description={siteInfo.description}
+    dates={siteInfo.dates}
+    venue={siteInfo.venue}
+  />
+
+  <section id="speakers" class="scroll-mt-24 lg:scroll-mt-28">
+    <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">
+      <SectionHeading title="Speakers" subtitle="スピーカー" />
+
+      <section id="keynote" class="w-full max-w-xl">
+        <SpeakerCard
+          name={keynoteSpeaker.name}
+          nameEn={keynoteSpeaker.nameEn}
+          photo={keynoteSpeaker.photo}
+          description={keynoteSpeaker.description}
+          role={keynoteSpeaker.role}
+          photo={"photo" in keynoteSpeaker ? keynoteSpeaker.photo : undefined}
+          keynote
+        />
+      </section>
+
+      <ul class="flex w-full flex-wrap justify-center gap-x-8 gap-y-12 lg:gap-x-12">
+        {speakers.map((speaker) => (
+          <li class="w-full max-w-80 sm:basis-[calc((100%_-_2rem)/2)] lg:basis-[calc((100%_-_6rem)/3)]">
+            <SpeakerCard
+              name={speaker.name}
+              nameEn={speaker.nameEn}
+              photo={"photo" in speaker ? speaker.photo : undefined}
+              description={speaker.description}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Layout>
