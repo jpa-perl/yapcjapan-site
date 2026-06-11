@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import FeaturedButton from "../components/FeaturedButton.astro";
-import { siteInfo, featuredButton, navItems } from "../data/site";
+import { siteInfo, featuredButton, navItems, officialXLink } from "../data/site";
 import { externalLinkProps } from "../utils/links";
 
 interface Props {
@@ -48,32 +48,42 @@ const siteDescription = "YAPC::Tokyo 2026は一般社団法人Japan Perl Associa
         <a href="/2026tokyo/">
           <img src="/2026tokyo/images/header-logo.svg" alt={siteInfo.title} class="h-6 lg:h-7" />
         </a>
-        <button
-          id="mobile-menu-button"
-          type="button"
-          class="flex size-11 shrink-0 items-center justify-center text-ink lg:hidden"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-        >
-          <span class="sr-only">メニューを開閉する</span>
-          <span class="relative block h-3.5 w-5" aria-hidden="true">
-            <span id="mobile-menu-line-top" class="absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-ink"></span>
-            <span id="mobile-menu-line-middle" class="absolute left-0 top-1/2 block h-0.5 w-5 -translate-y-1/2 rounded-full bg-ink"></span>
-            <span id="mobile-menu-line-bottom" class="absolute bottom-0 left-0 block h-0.5 w-5 rounded-full bg-ink"></span>
-          </span>
-        </button>
-        <nav class="hidden lg:block" aria-label="メインメニュー">
-          <ul class="flex gap-6">
-            {navItems.map((item) => (
-              <li>
-                <a href={item.href} {...externalLinkProps(item.href)} class="flex flex-col items-center gap-1.5 text-ink text-center transition-colors hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange">
-                  <span class="font-maru font-black text-lg leading-none">{item.label}</span>
-                  <span class="font-solway font-medium text-xs leading-none opacity-80">{item.labelEn}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div class="flex items-center gap-3 lg:gap-5">
+          <nav class="hidden lg:block" aria-label="メインメニュー">
+            <ul class="flex gap-6">
+              {navItems.map((item) => (
+                <li>
+                  <a href={item.href} {...externalLinkProps(item.href)} class="flex flex-col items-center gap-1.5 text-ink text-center transition-colors hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange">
+                    <span class="font-maru font-black text-lg leading-none">{item.label}</span>
+                    <span class="font-solway font-medium text-xs leading-none opacity-80">{item.labelEn}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <a
+            href={officialXLink.href}
+            {...externalLinkProps(officialXLink.href)}
+            aria-label={officialXLink.label}
+            class="hidden size-7 shrink-0 items-center justify-center rounded-full bg-black transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange lg:flex"
+          >
+            <img src="/2026tokyo/images/x-logo.svg" alt="" width="16" height="16" class="size-3 lg:size-3" />
+          </a>
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="flex size-11 shrink-0 items-center justify-center text-ink lg:hidden"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">メニューを開閉する</span>
+            <span class="relative block h-3.5 w-5" aria-hidden="true">
+              <span id="mobile-menu-line-top" class="absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-ink"></span>
+              <span id="mobile-menu-line-middle" class="absolute left-0 top-1/2 block h-0.5 w-5 -translate-y-1/2 rounded-full bg-ink"></span>
+              <span id="mobile-menu-line-bottom" class="absolute bottom-0 left-0 block h-0.5 w-5 rounded-full bg-ink"></span>
+            </span>
+          </button>
+        </div>
       </div>
       <nav
         id="mobile-menu"
@@ -89,6 +99,16 @@ const siteDescription = "YAPC::Tokyo 2026は一般社団法人Japan Perl Associa
               </a>
             </li>
           ))}
+          <li class="flex justify-end border-t border-dashed border-gray-500 pt-4">
+            <a
+              href={officialXLink.href}
+              {...externalLinkProps(officialXLink.href)}
+              aria-label={officialXLink.label}
+              class="flex size-8 shrink-0 items-center justify-center rounded-full bg-black transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
+            >
+              <img src="/2026tokyo/images/x-logo.svg" alt="" width="14" height="14" class="size-3.5" />
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

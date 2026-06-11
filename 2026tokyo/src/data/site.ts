@@ -97,10 +97,14 @@ export const featuredButton = {
   url: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-call-for-sponsors",
 } as const;
 
+export const officialXLink = {
+  label: "公式X",
+  href: "https://x.com/yapcjapan",
+} as const;
+
 export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
   { label: "スピーカー", labelEn: "Guest Speakers", href: "#speakers" },
-  { label: "公式 X", labelEn: "Official X", href: "https://x.com/yapcjapan" },
   {
     label: "行動指針",
     labelEn: "Code of Conduct",
