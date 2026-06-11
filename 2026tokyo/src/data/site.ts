@@ -1,4 +1,4 @@
-import lestrratPhoto from '../assets/lestrrat.jpg';
+import lestrratPhoto from "../assets/lestrrat.jpg";
 import fujiwaraPhoto from "../assets/fujiwara.jpg";
 import hitodePhoto from "../assets/hitode.jpg";
 
@@ -14,9 +14,24 @@ const hitodeDescription =
 export const siteInfo = {
   title: "YAPC::Tokyo 2026",
   dates: [
-    { date: "2026-11-27", label: "2026年11月27日", weekday: "金", note: "前夜祭" },
-    { date: "2026-11-28", label: "2026年11月28日", weekday: "土", note: "1日目 + 懇親会" },
-    { date: "2026-11-29", label: "2026年11月29日", weekday: "日", note: "2日目" },
+    {
+      date: "2026-11-27",
+      label: "2026年11月27日",
+      weekday: "金",
+      note: "前夜祭",
+    },
+    {
+      date: "2026-11-28",
+      label: "2026年11月28日",
+      weekday: "土",
+      note: "1日目 + 懇親会",
+    },
+    {
+      date: "2026-11-29",
+      label: "2026年11月29日",
+      weekday: "日",
+      note: "2日目",
+    },
   ],
   venue: {
     name: "東京ビッグサイト（東京国際展示場）",
@@ -80,11 +95,12 @@ export const siteInfo = {
 export const featuredButton = {
   text: "スポンサー募集中",
   url: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-call-for-sponsors",
-} as const
+} as const;
 
 export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
   { label: "スピーカー", labelEn: "Guest Speakers", href: "#speakers" },
+  { label: "公式 X", labelEn: "Official X", href: "https://x.com/yapcjapan" },
   {
     label: "行動指針",
     labelEn: "Code of Conduct",
