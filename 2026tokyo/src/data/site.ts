@@ -114,6 +114,18 @@ export const navItems = [
 
 export const announcements = [
   {
+    date: "2026-07-21",
+    displayDate: "2026.07.21",
+    title: "「学生支援」「U29支援」の募集を開始しました",
+    href: "https://blog.yapcjapan.org/entry/2026/07/21/100000",
+  },
+  {
+    date: "2026-07-20",
+    displayDate: "2026.07.20",
+    title: "チケットの販売を開始しました",
+    href: "https://blog.yapcjapan.org/entry/2026/07/20/170000",
+  },
+  {
     date: "2026-06-01",
     displayDate: "2026.06.01",
     title: "ご協賛のお願い",
