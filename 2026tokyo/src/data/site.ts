@@ -114,6 +114,12 @@ export const navItems = [
 
 export const announcements = [
   {
+    date: "2026-07-24",
+    displayDate: "2026.07.24",
+    title: "トーク等のセッション募集を開始しました",
+    href: "https://blog.yapcjapan.org/entry/2026/07/24/172000",
+  },
+  {
     date: "2026-07-21",
     displayDate: "2026.07.21",
     title: "「学生支援」「U29支援」の募集を開始しました",
