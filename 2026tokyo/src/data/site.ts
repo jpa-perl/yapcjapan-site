@@ -137,12 +137,6 @@ export const announcements = [
     title: "ご協賛のお願い",
     href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-call-for-sponsors",
   },
-  {
-    date: "2026-05-27",
-    displayDate: "2026.05.27",
-    title: "ロゴが完成しました",
-    href: "https://blog.yapcjapan.org/entry/2026/05/27/180000",
-  },
 ] as const;
 
 export const keynoteSpeaker = {
