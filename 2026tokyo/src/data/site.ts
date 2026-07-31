@@ -1,5 +1,6 @@
 import lestrratPhoto from "../assets/lestrrat.jpg";
 import fujiwaraPhoto from "../assets/fujiwara.jpg";
+import voluntasPhoto from "../assets/voluntas.png";
 import hitodePhoto from "../assets/hitode.jpg";
 
 const speakerDescription =
@@ -155,9 +156,10 @@ export const speakers = [
     description: fujiwaraDescription,
   },
   {
-    name: "",
-    nameEn: "",
-    description: "Coming soon ...",
+    name: "voluntas",
+    // nameEn: "voluntas",
+    photo: voluntasPhoto,
+    description: "[株式会社時雨堂](https://shiguredo.jp/)",
   },
   {
     name: "",
