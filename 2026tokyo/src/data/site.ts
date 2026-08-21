@@ -2,6 +2,7 @@ import lestrratPhoto from "../assets/lestrrat.jpg";
 import fujiwaraPhoto from "../assets/fujiwara.jpg";
 import voluntasPhoto from "../assets/voluntas.png";
 import larryPhoto from "../assets/larry.jpg";
+import hitodePhoto from "../assets/hitode.jpg";
 
 const speakerDescription =
   "人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利とを承認することは、世界における自由、正義及び平和の基礎であるので、人権の無視及び軽侮が、人類の良心を踏みにじった野蛮行為をもたらし、言論及び信仰の自由が受けられ、恐怖及び欠乏のない世界の到来が、一般の人々の最高の願望として宣言されたので、";
@@ -11,8 +12,10 @@ const fujiwaraDescription =
   "2025年よりさくらインターネット株式会社。クラウド制御基盤の開発・運用に従事\n2011〜2024年までは面白法人カヤック\nOSS開発者。代表作として Amazon ECSデプロイツールecspresso ほか多数\nWebパフォーマンスチューニングコンテストISUCON 優勝4回、出題3回\n最近の趣味はマネージドサービスの隙間を埋める隙間家具のようなツールをGoで作ってOSSにすること、ランニング";
 const larryDescription =
   "Larry made Perl! Before that he helped get the Open Source movement going with programs like rn, metaconfig, and patch.  Larry worked at various jobs but especially enjoyed his time in the space program at Jet Propulsion Laboratory where Perl 4 got its start.  With Randal Schwartz he wrote the best-seller Programming Perl, the first computer book that dared to be funny.  Over the years he has nurtured a community of people to make Perl better and more useful, eventually leading to Perl 6, which was different enough to be renamed Raku.  Now Larry is retired, with far too many hobbies to do any of them well, but mostly he's just happy the Perl and Raku teams are still working to make the world a better place.";
+const hitodeDescription =
+  "株式会社はてな エンジニアリングマネージャー。\n2009年にアルバイトとして入社、2012年に新卒入社。\nはてなブログやGigaViewerの開発に携わる。\nコードのデバッグとチームのデバッグを交互に行う。\n好きなスライドは、文字の大きいスライド。";
 
-export const siteInfo = {
+  export const siteInfo = {
   title: "YAPC::Tokyo 2026",
   dates: [
     {
@@ -166,6 +169,11 @@ export const speakers = [
     nameEn: "",
     photo: larryPhoto,
     description: larryDescription,
+  },
+  {
+    name: "",
+    nameEn: "",
+    description: "Coming soon ...",
   },
   /*
   {
