@@ -153,6 +153,12 @@ export const keynoteSpeaker = {
 
 export const speakers = [
   {
+    name: "Larry Wall",
+    nameEn: "",
+    photo: larryPhoto,
+    description: larryDescription,
+  },
+  {
     name: "藤原俊一郎",
     nameEn: "fujiwara",
     photo: fujiwaraPhoto,
@@ -163,12 +169,6 @@ export const speakers = [
     // nameEn: "voluntas",
     photo: voluntasPhoto,
     description: "[株式会社時雨堂](https://shiguredo.jp/)",
-  },
-  {
-    name: "Larry Wall",
-    nameEn: "",
-    photo: larryPhoto,
-    description: larryDescription,
   },
   {
     name: "",
