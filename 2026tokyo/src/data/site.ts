@@ -109,6 +109,7 @@ export const officialXLink = {
 export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
   { label: "スピーカー", labelEn: "Guest Speakers", href: "#speakers" },
+  { label: "特別企画", labelEn: "Special Session", href: "#special-session" },
   {
     label: "行動指針",
     labelEn: "Code of Conduct",
@@ -153,12 +154,6 @@ export const keynoteSpeaker = {
 
 export const speakers = [
   {
-    name: "Larry Wall",
-    nameEn: "",
-    photo: larryPhoto,
-    description: larryDescription,
-  },
-  {
     name: "藤原俊一郎",
     nameEn: "fujiwara",
     photo: fujiwaraPhoto,
@@ -166,31 +161,37 @@ export const speakers = [
   },
   {
     name: "voluntas",
-    // nameEn: "voluntas",
+    nameEn: "",
     photo: voluntasPhoto,
     description: "[株式会社時雨堂](https://shiguredo.jp/)",
   },
-  {
-    name: "",
-    nameEn: "",
-    description: "Coming soon ...",
-  },
-  /*
-  {
+] as const;
+
+export const specialSession = {
+  title: "TBD",
+  description: `TBD`,
+  guests: [
+    {
+      name: "Larry Wall",
+      nameEn: "",
+      photo: larryPhoto,
+      description: larryDescription,
+    },
+    {
+      name: "",
+      nameEn: "",
+      description: "Coming soon ...",
+    },
+  ],
+} as const;
+
+export const workshopSession = {
+  title: "TBD",
+  description: `TBD`,
+  guest: {
     name: "hitode909",
-    nameEn: "hitode909",
+    nameEn: "",
     photo: hitodePhoto,
     description: hitodeDescription,
   },
-  {
-    name: "田中 棚卸",
-    nameEn: "Tanao Tanaka",
-    description: speakerDescription,
-  },
-  {
-    name: "田中 棚卸",
-    nameEn: "Tanao Tanaka",
-    description: speakerDescription,
-  },
-  */
-] as const;
+} as const;
