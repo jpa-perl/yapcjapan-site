@@ -181,8 +181,8 @@ export const specialSession = {
       description: larryDescription,
     },
     {
-      name: "matz",
-      nameEn: "",
+      name: "まつもと ゆきひろ",
+      nameEn: "matz",
       photo: matzPhoto,
       description: matzDescription,
     },
