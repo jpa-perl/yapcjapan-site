@@ -12,7 +12,7 @@ import {
   keynoteSpeaker,
   speakers,
   specialSession,
-  workshopSession
+  specialWorkshop
 } from "../data/site";
 ---
 
@@ -86,18 +86,18 @@ import {
 
   <section id="workshop-session" class="scroll-mt-24 lg:scroll-mt-28">
     <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">
-      <SectionHeading title="Workshop Session" subtitle="ワークショップ" />
+      <SectionHeading title="Special Workshop" subtitle="特別ワークショップ" />
 
       <div class="flex w-full flex-col items-center gap-6 sm:gap-8">
         <h3 class="font-maru font-black text-black text-center text-xl leading-tight sm:text-2xl">
-          {workshopSession.title}
+          {specialWorkshop.title}
         </h3>
-        <SectionDescription text={workshopSession.description} />
+        <SectionDescription text={specialWorkshop.description} />
         <SpeakerCard
-          name={workshopSession.guest.name}
-          nameEn={workshopSession.guest.nameEn}
-          photo={workshopSession.guest.photo}
-          description={workshopSession.guest.description}
+          name={specialWorkshop.guest.name}
+          nameEn={specialWorkshop.guest.nameEn}
+          photo={specialWorkshop.guest.photo}
+          description={specialWorkshop.guest.description}
         />
       </div>
     </div>

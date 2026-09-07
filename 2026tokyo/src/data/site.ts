@@ -2,6 +2,7 @@ import lestrratPhoto from "../assets/lestrrat.jpg";
 import fujiwaraPhoto from "../assets/fujiwara.jpg";
 import voluntasPhoto from "../assets/voluntas.png";
 import larryPhoto from "../assets/larry.jpg";
+import matzPhoto from "../assets/matz.png";
 import hitodePhoto from "../assets/hitode.jpg";
 
 const speakerDescription =
@@ -12,6 +13,8 @@ const fujiwaraDescription =
   "2025年よりさくらインターネット株式会社。クラウド制御基盤の開発・運用に従事\n2011〜2024年までは面白法人カヤック\nOSS開発者。代表作として Amazon ECSデプロイツールecspresso ほか多数\nWebパフォーマンスチューニングコンテストISUCON 優勝4回、出題3回\n最近の趣味はマネージドサービスの隙間を埋める隙間家具のようなツールをGoで作ってOSSにすること、ランニング";
 const larryDescription =
   "Larry made Perl! Before that he helped get the Open Source movement going with programs like rn, metaconfig, and patch.  Larry worked at various jobs but especially enjoyed his time in the space program at Jet Propulsion Laboratory where Perl 4 got its start.  With Randal Schwartz he wrote the best-seller Programming Perl, the first computer book that dared to be funny.  Over the years he has nurtured a community of people to make Perl better and more useful, eventually leading to Perl 6, which was different enough to be renamed Raku.  Now Larry is retired, with far too many hobbies to do any of them well, but mostly he's just happy the Perl and Raku teams are still working to make the world a better place.";
+const matzDescription =
+  "Rubyのパパ。Larryのファン。";
 const hitodeDescription =
   "株式会社はてな エンジニアリングマネージャー。\n2009年にアルバイトとして入社、2012年に新卒入社。\nはてなブログやGigaViewerの開発に携わる。\nコードのデバッグとチームのデバッグを交互に行う。\n好きなスライドは、文字の大きいスライド。";
 
@@ -168,8 +171,8 @@ export const speakers = [
 ] as const;
 
 export const specialSession = {
-  title: "TBD",
-  description: `TBD`,
+  title: "スペシャル対談",
+  description: "Larry and matz",
   guests: [
     {
       name: "Larry Wall",
@@ -178,16 +181,23 @@ export const specialSession = {
       description: larryDescription,
     },
     {
-      name: "",
+      name: "matz",
       nameEn: "",
-      description: "Coming soon ...",
+      photo: matzPhoto,
+      description: matzDescription,
     },
   ],
 } as const;
 
-export const workshopSession = {
-  title: "TBD",
-  description: `TBD`,
+export const specialWorkshop = {
+  title: "即席LT大会ワークショップ！",
+  description: `YAPCの舞台で、飛び入り発表しませんか？
+
+発表テーマの探し方、組み立て方、興味のあることの探し方など、YAPCで発表するのに必要なすべてをお伝えします。
+ワークショップ形式で、参加者の皆様にはLT資料をその場で作っていただき、即席LT大会を開催します。
+
+本編のLT枠を1つ確保しています。このワークショップで発表した方から、メインステージLTでの発表枠をゲットできるかも？
+`,
   guest: {
     name: "hitode909",
     nameEn: "",

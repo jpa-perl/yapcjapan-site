@@ -11,7 +11,7 @@ const description = await (remark as () => typeof remark)().use(html).process(te
 ---
 
 <div
-  class="section-description max-w-3xl font-maru font-medium text-base leading-loose text-black text-center whitespace-pre-line sm:text-lg"
+  class="section-description max-w-2xl font-maru font-medium text-base leading-loose text-black text-left whitespace-pre-line sm:text-lg"
   set:html={description.toString()}
 />
 
