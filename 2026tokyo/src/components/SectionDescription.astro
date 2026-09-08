@@ -1,0 +1,29 @@
+---
+import { remark } from 'remark';
+import html from 'remark-html';
+
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+const description = await (remark as () => typeof remark)().use(html).process(text);
+---
+
+<div
+  class="section-description max-w-2xl font-maru font-medium text-base leading-loose text-black text-left whitespace-pre-line sm:text-lg"
+  set:html={description.toString()}
+/>
+
+<style>
+  :global(.section-description a) {
+    text-decoration: underline currentColor;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    transition: color 0.15s;
+  }
+
+  :global(.section-description a:hover) {
+    color: var(--color-orange);
+  }
+</style>
