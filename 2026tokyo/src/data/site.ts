@@ -111,6 +111,7 @@ export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
   { label: "スピーカー", labelEn: "Guest Speakers", href: "#speakers" },
   { label: "特別企画", labelEn: "Special Session", href: "#special-session" },
+  { label: "スポンサー", labelEn: "Sponsors", href: "#sponsors" },
   {
     label: "行動指針",
     labelEn: "Code of Conduct",

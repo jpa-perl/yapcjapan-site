@@ -6,6 +6,7 @@ import Hero from "../components/Hero.astro";
 import SectionDescription from "../components/SectionDescription.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import SpeakerCard from "../components/SpeakerCard.astro";
+import SponsorsSection from "../components/SponsorsSection.astro";
 import {
   siteInfo,
   announcements,
@@ -14,6 +15,7 @@ import {
   specialSession,
   specialWorkshop
 } from "../data/site";
+import { sponsorPlans } from "../data/sponsors";
 ---
 
 <Layout>
@@ -102,4 +104,6 @@ import {
       </div>
     </div>
   </section>
+
+  <SponsorsSection plans={sponsorPlans} />
 </Layout>
