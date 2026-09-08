@@ -5,8 +5,6 @@ import larryPhoto from "../assets/larry.jpg";
 import matzPhoto from "../assets/matz.png";
 import hitodePhoto from "../assets/hitode.jpg";
 
-const speakerDescription =
-  "人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利とを承認することは、世界における自由、正義及び平和の基礎であるので、人権の無視及び軽侮が、人類の良心を踏みにじった野蛮行為をもたらし、言論及び信仰の自由が受けられ、恐怖及び欠乏のない世界の到来が、一般の人々の最高の願望として宣言されたので、";
 const lestrratDescription =
   "[jwx](https://github.com/lestrrat-go/jwx)や [peco](https://github.com/peco/peco) の開発責任者。Go/Perl/Cプログラマ、講演、執筆、動画プロデュースなどを生業としている。過去には技術カンファレンスの運営に関わり続けていた（元[YAPC::Asia Tokyo](https://yapcasia.org)主催、元[builderscon](https://builderscon.io)主催）。3児の父。[株式会社メルカリ](https://about.mercari.com)所属。";
 const fujiwaraDescription =
@@ -100,8 +98,8 @@ const hitodeDescription =
 } as const;
 
 export const featuredButton = {
-  text: "スポンサー募集中",
-  url: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-call-for-sponsors",
+  text: "チケット発売中",
+  url: "https://blog.yapcjapan.org/entry/2026/07/20/170000",
 } as const;
 
 export const officialXLink = {
@@ -138,12 +136,6 @@ export const announcements = [
     displayDate: "2026.07.20",
     title: "チケットの販売を開始しました",
     href: "https://blog.yapcjapan.org/entry/2026/07/20/170000",
-  },
-  {
-    date: "2026-06-01",
-    displayDate: "2026.06.01",
-    title: "ご協賛のお願い",
-    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-call-for-sponsors",
   },
 ] as const;
 
