@@ -172,7 +172,7 @@ export const speakers = [
 
 export const specialSession = {
   title: "スペシャル対談",
-  description: "Larry and matz",
+  description: "Larry and Matz",
   guests: [
     {
       name: "Larry Wall",
@@ -182,7 +182,7 @@ export const specialSession = {
     },
     {
       name: "まつもと ゆきひろ",
-      nameEn: "matz",
+      nameEn: "Matz",
       photo: matzPhoto,
       description: matzDescription,
     },
@@ -190,13 +190,11 @@ export const specialSession = {
 } as const;
 
 export const specialWorkshop = {
-  title: "即席LT大会ワークショップ！",
-  description: `YAPCの舞台で、飛び入り発表しませんか？
+  title: "即席LTワークショップ",
+  description: `YAPCの舞台で、飛び入り発表しませんか？hitode909があなたの発表を後押しします！
 
 発表テーマの探し方、組み立て方、興味のあることの探し方など、YAPCで発表するのに必要なすべてをお伝えします。
 ワークショップ形式で、参加者の皆様にはLT資料をその場で作っていただき、即席LT大会を開催します。
-
-本編のLT枠を1つ確保しています。このワークショップで発表した方から、メインステージLTでの発表枠をゲットできるかも？
 `,
   guest: {
     name: "hitode909",
