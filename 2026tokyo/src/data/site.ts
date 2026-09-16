@@ -111,6 +111,7 @@ export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
   { label: "スピーカー", labelEn: "Guest Speakers", href: "#speakers" },
   { label: "特別企画", labelEn: "Special Session", href: "#special-session" },
+  { label: "タイムテーブル", labelEn: "Timetable", href: "https://fortee.jp/yapc-tokyo-2026/timetable/2026-11-28" },
   {
     label: "行動指針",
     labelEn: "Code of Conduct",
@@ -119,6 +120,12 @@ export const navItems = [
 ] as const;
 
 export const announcements = [
+  {
+    date: "2026-09-16",
+    displayDate: "2026.09.16",
+    title: "採択結果とタイムテーブルを公開しました",
+    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-timetable-published",
+  },
   {
     date: "2026-07-24",
     displayDate: "2026.07.24",
