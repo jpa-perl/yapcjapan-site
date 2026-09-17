@@ -118,6 +118,7 @@ export const navItems = [
     labelEn: "Code of Conduct",
     href: "https://japan.perlassociation.org/entry/yapc/code_of_conduct",
   },
+  { label: "お問い合わせ", labelEn: "Contact", href: "mailto:yapc-tokyo-2026-core@perlassociation.org" },
 ] as const;
 
 export const announcements = [
