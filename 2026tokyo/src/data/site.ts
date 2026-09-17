@@ -111,12 +111,14 @@ export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
   { label: "スピーカー", labelEn: "Guest Speakers", href: "#speakers" },
   { label: "特別企画", labelEn: "Special Session", href: "#special-session" },
+  { label: "チケット", labelEn: "Tickets", href: "https://fortee.jp/yapc-tokyo-2026/ticket-shop/index" },
   { label: "タイムテーブル", labelEn: "Timetable", href: "https://fortee.jp/yapc-tokyo-2026/timetable/2026-11-28" },
   {
     label: "行動指針",
     labelEn: "Code of Conduct",
     href: "https://japan.perlassociation.org/entry/yapc/code_of_conduct",
   },
+  { label: "お問い合わせ", labelEn: "Contact", href: "mailto:yapc-tokyo-2026-core@perlassociation.org" },
 ] as const;
 
 export const announcements = [
