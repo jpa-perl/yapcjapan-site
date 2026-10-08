@@ -6,6 +6,8 @@ import Hero from "../components/Hero.astro";
 import SectionDescription from "../components/SectionDescription.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import SpeakerCard from "../components/SpeakerCard.astro";
+import JobBoardSection from "../components/JobBoardSection.astro";
+import SponsorsSection from "../components/SponsorsSection.astro";
 import {
   siteInfo,
   announcements,
@@ -14,6 +16,8 @@ import {
   specialSession,
   specialWorkshop
 } from "../data/site";
+import { sponsorPlans } from "../data/sponsors";
+import { jobBoardItems } from "../data/jobboard";
 ---
 
 <Layout>
@@ -29,10 +33,10 @@ import {
   />
 
   <section id="speakers" class="scroll-mt-24 lg:scroll-mt-28">
-    <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">
+    <div class="py-12 max-w-page mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">
       <SectionHeading title="Speakers" subtitle="スピーカー" />
 
-      <section id="keynote" class="w-full max-w-xl">
+      <section id="keynote" class="w-full max-w-xl xl:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl">
         <SpeakerCard
           name={keynoteSpeaker.name}
           nameEn={keynoteSpeaker.nameEn}
@@ -46,7 +50,7 @@ import {
 
       <ul class="flex w-full flex-wrap justify-center gap-x-8 gap-y-12 lg:gap-x-12">
         {speakers.map((speaker) => (
-          <li class="w-full max-w-80 sm:basis-[calc((100%_-_2rem)/2)] lg:basis-[calc((100%_-_6rem)/3)]">
+          <li class="w-full max-w-80 xl:max-w-md 2xl:max-w-lg 3xl:max-w-xl sm:basis-[calc((100%_-_2rem)/2)] lg:basis-[calc((100%_-_6rem)/3)]">
             <SpeakerCard
               name={speaker.name}
               nameEn={speaker.nameEn}
@@ -57,11 +61,18 @@ import {
         ))}
       </ul>
     </div>
+    <img
+      src="/2026tokyo/images/about-wave-top.svg"
+      alt=""
+      width="1400"
+      height="120"
+      class="block aspect-[1400/120] w-full bg-cream"
+    />
   </section>
 
-  <section id="special-session" class="scroll-mt-24 lg:scroll-mt-28">
-    <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">
-      <SectionHeading title="Special Session" subtitle="特別企画" />
+  <section id="special-session" class="scroll-mt-24 bg-gray-200 lg:scroll-mt-28">
+    <div class="py-12 max-w-page mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">
+      <SectionHeading title="Special Session" subtitle="特別企画" color="blue" />
 
       <div class="flex w-full flex-col items-center gap-6 sm:gap-8">
         <h3 class="font-maru font-black text-black text-center text-xl leading-tight sm:text-2xl">
@@ -70,7 +81,7 @@ import {
         <SectionDescription text={specialSession.description} />
         <ul class="flex w-full flex-wrap justify-center gap-x-8 gap-y-12 lg:gap-x-12">
           {specialSession.guests.map((guest) => (
-            <li class="w-full max-w-80 sm:basis-[calc((100%_-_2rem)/2)] lg:basis-[calc((100%_-_6rem)/3)]">
+            <li class="w-full max-w-80 xl:max-w-md 2xl:max-w-lg 3xl:max-w-xl sm:basis-[calc((100%_-_2rem)/2)] lg:basis-[calc((100%_-_6rem)/3)]">
               <SpeakerCard
                 name={guest.name}
                 nameEn={guest.nameEn}
@@ -82,10 +93,17 @@ import {
         </ul>
       </div>
     </div>
+    <img
+      src="/2026tokyo/images/speakers-wave.svg"
+      alt=""
+      width="1340"
+      height="150"
+      class="block aspect-[1340/150] w-full bg-gray-200"
+    />
   </section>
 
   <section id="workshop-session" class="scroll-mt-24 lg:scroll-mt-28">
-    <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">
+    <div class="py-12 max-w-page mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12">
       <SectionHeading title="Special Workshop" subtitle="特別ワークショップ" />
 
       <div class="flex w-full flex-col items-center gap-6 sm:gap-8">
@@ -101,5 +119,16 @@ import {
         />
       </div>
     </div>
+    <img
+      src="/2026tokyo/images/about-wave-top.svg"
+      alt=""
+      width="1400"
+      height="120"
+      class="block aspect-[1400/120] w-full bg-cream"
+    />
   </section>
+
+  <JobBoardSection items={jobBoardItems} />
+
+  <SponsorsSection plans={sponsorPlans} />
 </Layout>

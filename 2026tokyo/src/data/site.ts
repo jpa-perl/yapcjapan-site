@@ -97,11 +97,6 @@ const hitodeDescription =
   blogUrl: "https://blog.yapcjapan.org/",
 } as const;
 
-export const featuredButton = {
-  text: "チケット発売中",
-  url: "https://blog.yapcjapan.org/entry/2026/07/20/170000",
-} as const;
-
 export const officialXLink = {
   label: "公式X",
   href: "https://x.com/yapcjapan",
@@ -111,8 +106,8 @@ export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
   { label: "スピーカー", labelEn: "Guest Speakers", href: "#speakers" },
   { label: "特別企画", labelEn: "Special Session", href: "#special-session" },
-  { label: "チケット", labelEn: "Tickets", href: "https://fortee.jp/yapc-tokyo-2026/ticket-shop/index" },
   { label: "タイムテーブル", labelEn: "Timetable", href: "https://fortee.jp/yapc-tokyo-2026/timetable/2026-11-28" },
+  { label: "スポンサー", labelEn: "Sponsors", href: "#sponsors" },
   {
     label: "行動指針",
     labelEn: "Code of Conduct",

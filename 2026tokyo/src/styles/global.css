@@ -21,6 +21,13 @@
   --font-maru: "Zen Maru Gothic", "Hiragino Sans",
     "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Meiryo", sans-serif;
   --font-solway: "Solway", Georgia, "Times New Roman", serif;
+
+  /* 各セクションの中身の最大幅。これを超えると中央の塊が間延びして見える。 */
+  --container-page: 120rem;
+
+  /* Tailwind の 2xl(1536px) より上の段。横に広いディスプレイでも
+     中身が止まったままにならないよう、もう一段用意する。 */
+  --breakpoint-3xl: 120rem;
 }
 
 @layer base {

@@ -18,7 +18,7 @@ const { announcements, blogUrl } = Astro.props;
 ---
 
 <section id="announcements" class="scroll-mt-24 lg:scroll-mt-28">
-  <div class="pt-2 pb-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-7 sm:px-5 sm:pb-16 sm:gap-8">
+  <div class="pt-2 pb-12 max-w-page mx-auto px-4 flex flex-col items-center gap-7 sm:px-5 sm:pb-16 sm:gap-8">
     <SectionHeading title="Announcement" subtitle="おしらせ" />
     <ul class="w-full max-w-2xl">
       {announcements.map((item) => (
