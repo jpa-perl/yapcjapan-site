@@ -1,0 +1,131 @@
+---
+import type { ImageMetadata } from "astro";
+import SectionHeading from "./SectionHeading.astro";
+import { externalLinkProps } from "../utils/links";
+
+interface Item {
+  name: string;
+  url: string;
+  banner: ImageMetadata;
+}
+
+interface Props {
+  items: readonly Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<section id="jobboard" class="scroll-mt-24 bg-gray-200 lg:scroll-mt-28">
+  <div
+    class="py-12 max-w-page mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12"
+  >
+    <SectionHeading title="Job Board" subtitle="ジョブボード" color="blue" />
+
+    <ul class="jobboard-items">
+      {
+        items.map((item) => (
+          <li>
+            <a
+              href={item.url}
+              {...externalLinkProps(item.url)}
+              class="jobboard-banner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
+            >
+              <img
+                src={item.banner.src}
+                width={item.banner.width}
+                height={item.banner.height}
+                alt={`${item.name}の採用情報`}
+                class="block size-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <img
+    src="/2026tokyo/images/speakers-wave.svg"
+    alt=""
+    width="1340"
+    height="150"
+    class="block aspect-[1340/150] w-full bg-gray-200"
+  />
+</section>
+
+<style>
+  /* バナーは 18 件あるので、どの画面幅でも 3 列 6 行で割り切れるようにする。
+     各段のバナー幅は、セクションの内側から列間を引いて 3 等分した値。 */
+  .jobboard-items {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--banner-gap);
+    --banner-width: clamp(16rem, 86vw, 19.5rem);
+    --banner-gap: 1rem;
+  }
+
+  .jobboard-items li {
+    display: flex;
+    width: var(--banner-width);
+    min-width: 0;
+  }
+
+  .jobboard-banner {
+    display: block;
+    position: relative;
+    /* 提出規定が 1200x600 なので、枠も 2:1 で固定する。 */
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    background-color: var(--color-white);
+    transition: opacity 180ms ease;
+  }
+
+  @media (hover: hover) {
+    .jobboard-banner:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .jobboard-items {
+      --banner-gap: 1.25rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .jobboard-items {
+      --banner-width: 19.5rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .jobboard-items {
+      --banner-width: 24.5rem;
+      --banner-gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 96rem) {
+    .jobboard-items {
+      --banner-width: 29.5rem;
+      --banner-gap: 1.75rem;
+    }
+  }
+
+  @media (min-width: 120rem) {
+    .jobboard-items {
+      --banner-width: 37.5rem;
+      --banner-gap: 2rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .jobboard-banner {
+      transition: none;
+    }
+  }
+</style>

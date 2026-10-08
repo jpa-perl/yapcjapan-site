@@ -24,58 +24,48 @@ const { plans } = Astro.props;
 
 <section id="sponsors" class="scroll-mt-24 lg:scroll-mt-28">
   <div
-    class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12"
+    class="py-12 max-w-page mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12"
   >
     <SectionHeading title="Sponsors" subtitle="スポンサー" />
 
     <div class="sponsor-plans">
       {
-        plans.map((plan) => {
-          const columns = Math.max(1, Math.ceil(Math.sqrt(plan.sponsors.length)));
-          const lastRowCount = plan.sponsors.length % columns;
-          return (
-            <section
-              class="sponsor-plan"
-              data-plan={plan.id}
-              style={`--logo-columns: ${columns}`}
-              aria-labelledby={`sponsor-plan-${plan.id}`}
+        plans.map((plan) => (
+          <section
+            class="sponsor-plan"
+            data-plan={plan.id}
+            aria-labelledby={`sponsor-plan-${plan.id}`}
+          >
+            <h3
+              id={`sponsor-plan-${plan.id}`}
+              class="font-solway text-xl font-bold leading-tight text-ink sm:text-2xl"
             >
-              <h3
-                id={`sponsor-plan-${plan.id}`}
-                class="font-solway text-xl font-bold leading-tight text-ink sm:text-2xl"
-              >
-                {plan.name}
-              </h3>
+              {plan.name}
+            </h3>
 
-              <ul class="sponsor-logos">
-                {plan.sponsors.map((sponsor, index) => (
-                  <li style={{
-                    // 半列単位でずらし、最終行のロゴが少ない場合も中央に配置する。
-                    "grid-column-start": lastRowCount > 0 && index === plan.sponsors.length - lastRowCount
-                      ? columns - lastRowCount + 1
-                      : undefined,
-                  }}>
-                    <a
-                      href={sponsor.url}
-                      {...externalLinkProps(sponsor.url)}
-                      class="sponsor-logo rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
-                    >
-                      <img
-                        src={sponsor.logo.src}
-                        width={sponsor.logo.width}
-                        height={sponsor.logo.height}
-                        alt={sponsor.name}
-                        class="block size-full object-contain"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          );
-        })
+            <ul class="sponsor-logos">
+              {plan.sponsors.map((sponsor) => (
+                <li>
+                  <a
+                    href={sponsor.url}
+                    {...externalLinkProps(sponsor.url)}
+                    class="sponsor-logo rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
+                  >
+                    <img
+                      src={sponsor.logo.src}
+                      width={sponsor.logo.width}
+                      height={sponsor.logo.height}
+                      alt={sponsor.name}
+                      class="block size-full object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
       }
     </div>
   </div>
@@ -85,7 +75,7 @@ const { plans } = Astro.props;
   .sponsor-plans {
     display: flex;
     width: 100%;
-    max-width: 52rem;
+    max-width: 100rem;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
@@ -118,16 +108,13 @@ const { plans } = Astro.props;
   }
 
   .sponsor-logos {
-    display: grid;
-    /* 半列単位のトラックにして最終行を中央寄せする。1ロゴ = 2トラック + 列間1つ
-       = ちょうど --logo-size になるようトラック幅を決めるので、ロゴ同士の間隔は
+    /* 折り返しは画面幅まかせにする。1 行に入る数が幅に応じて変わり、
+       余った最終行も justify-content で中央に寄る。ロゴ同士の間隔は
        過去サイト（2024hakodate の gap-5、2025fukuoka のセル padding 10px）と
        同じく --logo-gap ぴったりになる。 */
+    display: flex;
     max-width: 100%;
-    grid-template-columns: repeat(
-      calc(var(--logo-columns) * 2),
-      minmax(0, calc((var(--logo-size) - var(--logo-gap)) / 2))
-    );
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: var(--logo-gap);
@@ -135,7 +122,6 @@ const { plans } = Astro.props;
 
   .sponsor-logos li {
     display: flex;
-    grid-column-end: span 2;
     align-items: center;
     justify-content: center;
     min-width: 0;
@@ -153,6 +139,12 @@ const { plans } = Astro.props;
     background-color: var(--color-white);
     padding: 0.25rem;
     transition: opacity 180ms ease;
+  }
+
+  /* 画像の直角の角が角丸の外に出るため、画像側にも同じ角丸を与える。
+     外側を overflow で切ると、枠の外に描いている縫い目まで消える。 */
+  .sponsor-logo img {
+    border-radius: inherit;
   }
 
   /* スピーカー写真の縫い目（#a7a7a7・線幅 1.5px・外側 5px）と同じ扱いにして、
@@ -208,6 +200,77 @@ const { plans } = Astro.props;
 
     .sponsor-plan[data-plan="silver-sponsor"] {
       --logo-size: 7rem;
+    }
+  }
+
+  /* 1280px 以上はロゴを一段大きくする。1 行に入る数が増えるぶん 1 枚は
+     控えめにして、プランごとの大小は保つ。 */
+  @media (min-width: 80rem) {
+    .sponsor-plan {
+      --logo-size: 8rem;
+      --logo-gap: 1.5rem;
+    }
+
+    .sponsor-plan[data-plan="perl-sponsor"] {
+      --logo-size: 18rem;
+    }
+
+    .sponsor-plan[data-plan="platinum-sponsor"] {
+      --logo-size: 13rem;
+    }
+
+    .sponsor-plan[data-plan="gold-sponsor"] {
+      --logo-size: 10.5rem;
+    }
+
+    .sponsor-plan[data-plan="silver-sponsor"] {
+      --logo-size: 9.5rem;
+    }
+  }
+
+  @media (min-width: 96rem) {
+    .sponsor-plan {
+      --logo-size: 10rem;
+      --logo-gap: 1.75rem;
+    }
+
+    .sponsor-plan[data-plan="perl-sponsor"] {
+      --logo-size: 21.5rem;
+    }
+
+    .sponsor-plan[data-plan="platinum-sponsor"] {
+      --logo-size: 16rem;
+    }
+
+    .sponsor-plan[data-plan="gold-sponsor"] {
+      --logo-size: 14rem;
+    }
+
+    .sponsor-plan[data-plan="silver-sponsor"] {
+      --logo-size: 13rem;
+    }
+  }
+
+  @media (min-width: 120rem) {
+    .sponsor-plan {
+      --logo-size: 10.5rem;
+      --logo-gap: 2rem;
+    }
+
+    .sponsor-plan[data-plan="perl-sponsor"] {
+      --logo-size: 23rem;
+    }
+
+    .sponsor-plan[data-plan="platinum-sponsor"] {
+      --logo-size: 17rem;
+    }
+
+    .sponsor-plan[data-plan="gold-sponsor"] {
+      --logo-size: 15rem;
+    }
+
+    .sponsor-plan[data-plan="silver-sponsor"] {
+      --logo-size: 14rem;
     }
   }
 

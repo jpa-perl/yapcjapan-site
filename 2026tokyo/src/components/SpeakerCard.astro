@@ -14,7 +14,7 @@ interface Props {
 
 const { name, nameEn, description: rawDescription, photo, role, keynote = false } = Astro.props;
 const description = await (remark as () => typeof remark)().use(html).process(rawDescription);
-const photoSize = keynote ? "w-56 sm:w-72 lg:w-80" : "w-48 sm:w-56 lg:w-64";
+const photoSize = keynote ? "w-56 sm:w-72 lg:w-80 xl:w-88 2xl:w-96 3xl:w-md" : "w-48 sm:w-56 lg:w-64 xl:w-72 2xl:w-80 3xl:w-88";
 const nameSize = keynote ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl";
 const nameEnSize = keynote ? "text-xl" : "text-xl";
 const descSize = keynote ? "text-base" : "text-sm";
