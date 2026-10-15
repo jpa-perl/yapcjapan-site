@@ -11,11 +11,6 @@
 // Figma に取り込む時点で吸収している。
 //
 // ロゴご提供待ちの会社はコメントアウトして非表示にしている。
-//
-// CARTA HOLDINGS、ネコトーストラボ、転職ドラフト、湘.なんか の 4 社は Figma を
-// 通さず、提出物の余白を詰めて 820x605 に収まるよう縮め、1024x1024 の白地の中央に
-// 置いて書き出した。大きさは横長ほど小さくなる既存ロゴの傾向に合わせてある。
-// Figma に取り込んだら書き出し直して差し替える。
 import andpadLogo from "../assets/sponsors/andpad.png";
 import cartaLogo from "../assets/sponsors/carta.png";
 import cloudflareLogo from "../assets/sponsors/cloudflare.png";
@@ -134,8 +129,8 @@ export const sponsorPlans = [
       { name: "株式会社オプティム", url: "https://www.optim.co.jp/?utm_source=event&utm_medium=referral&utm_campaign=YPAC2026", logo: optimLogo },
       { name: "株式会社永和システムマネジメント", url: "https://agile.esm.co.jp/", logo: esmLogo },
       { name: "合同会社ザウエル", url: "https://zauel.co.jp/", logo: zauelLogo },
-      // ご提供いただいた SVG は ImageMagick で黄色の帯がずれて描画されるため、
-      // 同じ図柄の Illustrator 形式(RGB 版)から書き出した。
+      // ご提供の SVG は黄色の帯が図柄からずれて描画されるため、同じ図柄の
+      // Illustrator 形式(RGB 版)を Figma に取り込んでいる。
       { name: "湘.なんか", url: "https://shonanka.connpass.com/", logo: shonankaLogo },
     ],
   },
