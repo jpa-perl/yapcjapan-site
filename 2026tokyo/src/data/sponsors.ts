@@ -12,6 +12,7 @@
 //
 // ロゴご提供待ちの会社はコメントアウトして非表示にしている。
 import andpadLogo from "../assets/sponsors/andpad.png";
+import cartaLogo from "../assets/sponsors/carta.png";
 import cloudflareLogo from "../assets/sponsors/cloudflare.png";
 import colsisLogo from "../assets/sponsors/colsis.png";
 import denaLogo from "../assets/sponsors/dena.png";
@@ -26,6 +27,7 @@ import greeLogo from "../assets/sponsors/gree.png";
 import hacomonoLogo from "../assets/sponsors/hacomono.png";
 import hatenaLogo from "../assets/sponsors/hatena.png";
 import hirerooLogo from "../assets/sponsors/hireroo.png";
+import jobDraftLogo from "../assets/sponsors/job-draft.png";
 import kayacLogo from "../assets/sponsors/kayac.png";
 import kodamariLogo from "../assets/sponsors/kodamari.png";
 import layerxLogo from "../assets/sponsors/layerx.png";
@@ -34,10 +36,12 @@ import mcd3Logo from "../assets/sponsors/mcd3.png";
 import mercariLogo from "../assets/sponsors/mercari.png";
 import mobileFactoryLogo from "../assets/sponsors/mobile-factory.png";
 import mutoCtLogo from "../assets/sponsors/muto-ct.png";
+import nekotoastLogo from "../assets/sponsors/nekotoast.png";
 import optimLogo from "../assets/sponsors/optim.png";
 import reproLogo from "../assets/sponsors/repro.png";
 import sakuraLogo from "../assets/sponsors/sakura.png";
 import sansanLogo from "../assets/sponsors/sansan.png";
+import shonankaLogo from "../assets/sponsors/shonanka.png";
 import showroomLogo from "../assets/sponsors/showroom.png";
 import sixapartLogo from "../assets/sponsors/sixapart.png";
 import smartbankLogo from "../assets/sponsors/smartbank.png";
@@ -77,7 +81,8 @@ export const sponsorPlans = [
       { name: "株式会社クロステック・マネジメント（京都芸術大学）", url: "https://xtm.jp/", logo: xtmLogo },
       { name: "GMO Flatt Security株式会社", url: "https://flatt.tech/", logo: flattSecurityLogo },
       { name: "Cloudflare Japan株式会社", url: "https://www.cloudflare.com/", logo: cloudflareLogo },
-      // { name: "株式会社CARTA HOLDINGS", url: "https://cartaholdings.co.jp/engineering?utm_source=yapc2026&utm_medium=Paid+Other&utm_campaign=yapc2026", logo: ??? },
+      // ご提供いただいたのは Illustrator 形式のみ。RGB 版の 1 ページ目(白地に黒)を使用。
+      { name: "株式会社CARTA HOLDINGS", url: "https://cartaholdings.co.jp/engineering?utm_source=yapc2026&utm_medium=Paid+Other&utm_campaign=yapc2026", logo: cartaLogo },
       // { name: "タイムリープ株式会社", url: "https://timeleap.co.jp/", logo: ??? },
       // { name: "株式会社Helpfeel", url: "https://corp.helpfeel.com", logo: ??? },
     ],
@@ -95,9 +100,9 @@ export const sponsorPlans = [
       { name: "株式会社COLSIS", url: "https://colsis.jp", logo: colsisLogo },
       { name: "株式会社モバイルファクトリー", url: "https://www.mobilefactory.jp/", logo: mobileFactoryLogo },
       { name: "株式会社SmartHR", url: "https://hello-world.smarthr.co.jp/", logo: smarthrLogo },
-      // { name: "株式会社ネコトーストラボ", url: "https://nekotoast-lab.com/", logo: ??? },
+      { name: "株式会社ネコトーストラボ", url: "https://nekotoast-lab.com/", logo: nekotoastLogo },
       // { name: "株式会社サンリオ", url: "https://corporate.sanrio.co.jp/", logo: ??? },
-      // { name: "転職ドラフト", url: "https://job-draft.jp/?utm_source=site&utm_medium=conference&utm_campaign=allconference&utm_term=yapc2026", logo: ??? },
+      { name: "転職ドラフト", url: "https://job-draft.jp/?utm_source=site&utm_medium=conference&utm_campaign=allconference&utm_term=yapc2026", logo: jobDraftLogo },
     ],
   },
   {
@@ -124,7 +129,9 @@ export const sponsorPlans = [
       { name: "株式会社オプティム", url: "https://www.optim.co.jp/?utm_source=event&utm_medium=referral&utm_campaign=YPAC2026", logo: optimLogo },
       { name: "株式会社永和システムマネジメント", url: "https://agile.esm.co.jp/", logo: esmLogo },
       { name: "合同会社ザウエル", url: "https://zauel.co.jp/", logo: zauelLogo },
-      // { name: "湘.なんか", url: "https://shonanka.connpass.com/", logo: ??? },
+      // ご提供の SVG は黄色の帯が図柄からずれて描画されるため、同じ図柄の
+      // Illustrator 形式(RGB 版)を Figma に取り込んでいる。
+      { name: "湘.なんか", url: "https://shonanka.connpass.com/", logo: shonankaLogo },
     ],
   },
 ] as const;

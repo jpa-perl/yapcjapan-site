@@ -21,6 +21,7 @@ import jobDraftBanner from "../assets/jobboard/job-draft.png";
 import mercariBanner from "../assets/jobboard/mercari.png";
 import mobileFactoryBanner from "../assets/jobboard/mobile-factory.jpg";
 import reproBanner from "../assets/jobboard/repro.png";
+import sakuraBanner from "../assets/jobboard/sakura.jpg";
 import sansanBanner from "../assets/jobboard/sansan.png";
 import showroomBanner from "../assets/jobboard/showroom.jpg";
 import sixapartBanner from "../assets/jobboard/sixapart.jpg";
@@ -28,6 +29,7 @@ import smartbankBanner from "../assets/jobboard/smartbank.png";
 import smarthrBanner from "../assets/jobboard/smarthr.jpg";
 import supaBanner from "../assets/jobboard/supa.jpg";
 import tebikiBanner from "../assets/jobboard/tebiki.jpg";
+import xtmBanner from "../assets/jobboard/xtm.jpg";
 
 export const jobBoardItems = [
   { name: "株式会社COLSIS", url: "https://colsis.jp/recruit/", banner: colsisBanner },
@@ -49,6 +51,7 @@ export const jobBoardItems = [
   { name: "supa, inc.", url: "https://supa.co.jp", banner: supaBanner },
   { name: "Tebiki株式会社", url: "https://techblog.tebiki.co.jp/", banner: tebikiBanner },
   // バナーは src/assets/jobboard/ に置いてあるが、遷移先 URL が未提出のため伏せている。
-  // { name: "さくらインターネット株式会社", url: ???, banner: sakuraBanner },
-  // { name: "株式会社クロステック・マネジメント（京都芸術大学）", url: ???, banner: xtmBanner },
+  // URL にはロゴと同じ会社トップを仮に入れてある。
+  // { name: "さくらインターネット株式会社", url: "https://www.sakura.ad.jp/", banner: sakuraBanner },
+  // { name: "株式会社クロステック・マネジメント（京都芸術大学）", url: "https://xtm.jp/", banner: xtmBanner },
 ] as const;
