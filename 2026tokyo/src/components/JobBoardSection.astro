@@ -5,7 +5,8 @@ import { externalLinkProps } from "../utils/links";
 
 interface Item {
   name: string;
-  url: string;
+  // 遷移先 URL が未提出の会社は持たない。その場合はバナーをリンクにしない。
+  url?: string;
   banner: ImageMetadata;
 }
 
@@ -24,25 +25,31 @@ const { items } = Astro.props;
 
     <ul class="jobboard-items">
       {
-        items.map((item) => (
-          <li>
-            <a
-              href={item.url}
-              {...externalLinkProps(item.url)}
-              class="jobboard-banner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
-            >
-              <img
-                src={item.banner.src}
-                width={item.banner.width}
-                height={item.banner.height}
-                alt={`${item.name}の採用情報`}
-                class="block size-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-          </li>
-        ))
+        items.map((item) => {
+          const Banner = item.url ? "a" : "div";
+          const linkProps = item.url
+            ? { href: item.url, ...externalLinkProps(item.url) }
+            : {};
+
+          return (
+            <li>
+              <Banner
+                {...linkProps}
+                class="jobboard-banner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
+              >
+                <img
+                  src={item.banner.src}
+                  width={item.banner.width}
+                  height={item.banner.height}
+                  alt={`${item.name}の採用情報`}
+                  class="block size-full object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </Banner>
+            </li>
+          );
+        })
       }
     </ul>
   </div>
@@ -56,8 +63,9 @@ const { items } = Astro.props;
 </section>
 
 <style>
-  /* バナーは 18 件あるので、どの画面幅でも 3 列 6 行で割り切れるようにする。
-     各段のバナー幅は、セクションの内側から列間を引いて 3 等分した値。 */
+  /* 広い画面ではバナーを 3 列に並べる。各段のバナー幅は、セクションの内側から
+     列間を引いて 3 等分した値。件数が 3 で割り切れないときは、最終行を中央に
+     寄せる。 */
   .jobboard-items {
     display: flex;
     max-width: 100%;
@@ -77,15 +85,17 @@ const { items } = Astro.props;
   .jobboard-banner {
     display: block;
     position: relative;
-    /* 提出規定が 1200x600 なので、枠も 2:1 で固定する。 */
+    /* 提出規定が 1200x600 なので、枠も 2:1 で固定する。
+       規定と違う比率で提出された画像は、切らずに白地の枠の中へ収める。 */
     width: 100%;
     aspect-ratio: 2 / 1;
     background-color: var(--color-white);
     transition: opacity 180ms ease;
   }
 
+  /* リンクのないバナーは押せるように見せない。 */
   @media (hover: hover) {
-    .jobboard-banner:hover {
+    a.jobboard-banner:hover {
       opacity: 0.7;
     }
   }
