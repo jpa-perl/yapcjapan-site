@@ -106,6 +106,7 @@ export const navItems = [
   { label: "おしらせ", labelEn: "Announcement", href: "#announcements" },
   { label: "スピーカー", labelEn: "Guest Speakers", href: "#speakers" },
   { label: "特別企画", labelEn: "Special Session", href: "#special-session" },
+  { label: "チケット", labelEn: "Tickets", href: "https://fortee.jp/yapc-tokyo-2026/ticket-shop/index" },
   { label: "タイムテーブル", labelEn: "Timetable", href: "https://fortee.jp/yapc-tokyo-2026/timetable/2026-11-28" },
   { label: "スポンサー", labelEn: "Sponsors", href: "#sponsors" },
   {
@@ -118,28 +119,28 @@ export const navItems = [
 
 export const announcements = [
   {
-    date: "2026-09-16",
-    displayDate: "2026.09.16",
-    title: "採択結果とタイムテーブルを公開しました",
-    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-timetable-published",
+    date: "2026-11-09",
+    displayDate: "2026.11.09",
+    title: "YAPC::Tokyo 2026 参加チケットの再販売を11月10日（火）20:00 JST より行います",
+    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-resale-vol2",
   },
   {
-    date: "2026-07-24",
-    displayDate: "2026.07.24",
-    title: "トーク等のセッション募集を開始しました",
-    href: "https://blog.yapcjapan.org/entry/2026/07/24/172000",
+    date: "2026-11-04",
+    displayDate: "2026.11.04",
+    title: "YAPC::Tokyo 2026 本編で発表するライトニングトークを募集します！",
+    href: "https://blog.yapcjapan.org/entry/2026/11/04/153000",
+  },  
+  {
+    date: "2026-10-28",
+    displayDate: "2026.10.28",
+    title: "YAPC::Tokyo 2026の前夜祭チケットを2026年10月28日（水）から販売します！",
+    href: "https://blog.yapcjapan.org/entry/2026/10/28/203236",
   },
   {
-    date: "2026-07-21",
-    displayDate: "2026.07.21",
-    title: "「学生支援」「U29支援」の募集を開始しました",
-    href: "https://blog.yapcjapan.org/entry/2026/07/21/100000",
-  },
-  {
-    date: "2026-07-20",
-    displayDate: "2026.07.20",
-    title: "チケットの販売を開始しました",
-    href: "https://blog.yapcjapan.org/entry/2026/07/20/170000",
+    date: "2026-09-25",
+    displayDate: "2026.09.25",
+    title: "YAPC::Tokyo 2026の託児所チケットの販売を開始しました！",
+    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-childcare-ticket",
   },
 ] as const;
 
