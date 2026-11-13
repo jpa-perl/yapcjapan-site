@@ -29,6 +29,7 @@ import gendaLogo from "../assets/sponsors/genda.png";
 import greeLogo from "../assets/sponsors/gree.png";
 import hacomonoLogo from "../assets/sponsors/hacomono.png";
 import hatenaLogo from "../assets/sponsors/hatena.png";
+import hellocloudLogo from "../assets/sponsors/hellocloud.png";
 import helpfeelLogo from "../assets/sponsors/helpfeel.png";
 import hirerooLogo from "../assets/sponsors/hireroo.png";
 import jobDraftLogo from "../assets/sponsors/job-draft.png";
@@ -51,7 +52,6 @@ import showroomLogo from "../assets/sponsors/showroom.png";
 import sixapartLogo from "../assets/sponsors/sixapart.png";
 import smartbankLogo from "../assets/sponsors/smartbank.png";
 import smarthrLogo from "../assets/sponsors/smarthr.png";
-import supaLogo from "../assets/sponsors/supa.png";
 import tebikiLogo from "../assets/sponsors/tebiki.png";
 import timeleapLogo from "../assets/sponsors/timeleap.png";
 import vaddyLogo from "../assets/sponsors/vaddy.png";
@@ -84,8 +84,10 @@ export const sponsorPlans = [
       // ANDPAD_RGB_for Screen/svg/Secondary Logo_Vertical_RGB.svg を使用
       // （横組みの Primary は正方形枠に対して横長すぎるため）。
       { name: "株式会社アンドパッド", url: "https://engineer.andpad.co.jp/", logo: andpadLogo },
-      // 2026-10-23 にロゴのデザイン変更のご連絡があり、新しい supa.ai の SVG を使用。
-      { name: "supa, inc.", url: "https://supa.co.jp/", logo: supaLogo },
+      // 旧 supa, inc.。2026-11-06 に掲載社名とロゴの変更のご連絡があり差し替えた。
+      // ロゴは Figma を通さず、ご提供の PNG (1799x262) を ImageMagick で幅 840 に
+      // 縮小して 1024 枠の中央に置いている。URL は変更のご連絡がないため据え置き。
+      { name: "株式会社HelloCloud", url: "https://supa.co.jp/", logo: hellocloudLogo },
       { name: "タイムリープ株式会社", url: "https://timeleap.co.jp/", logo: timeleapLogo },
       { name: "株式会社クロステック・マネジメント（京都芸術大学）", url: "https://xtm.jp/", logo: xtmLogo },
       { name: "GMO Flatt Security株式会社", url: "https://flatt.tech/", logo: flattSecurityLogo },

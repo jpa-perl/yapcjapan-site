@@ -17,6 +17,9 @@
 // アンドパッドは fortee の不具合で提出できず、10/1 にメールで受領した。その後
 // 運営が fortee に登録したものを取得している。
 //
+// HelloCloud（旧 supa, inc.）は社名変更に伴い、11/12 にメールで受領した 1200x600 の
+// PNG をそのまま置いている。遷移先は変更のご連絡がないため据え置き。
+//
 // 遷移先 URL が未提出の会社は url を持たせず、リンクなしでバナーだけを載せる。
 import andpadBanner from "../assets/jobboard/andpad.png";
 import cartaBanner from "../assets/jobboard/carta.jpg";
@@ -27,6 +30,7 @@ import flattSecurityBanner from "../assets/jobboard/flatt-security.jpg";
 import freakoutBanner from "../assets/jobboard/freakout.jpg";
 import hacomonoBanner from "../assets/jobboard/hacomono.jpg";
 import hatenaBanner from "../assets/jobboard/hatena.png";
+import hellocloudBanner from "../assets/jobboard/hellocloud.png";
 import helpfeelBanner from "../assets/jobboard/helpfeel.jpg";
 import jobDraftBanner from "../assets/jobboard/job-draft.png";
 import mercariBanner from "../assets/jobboard/mercari.png";
@@ -38,7 +42,6 @@ import showroomBanner from "../assets/jobboard/showroom.jpg";
 import sixapartBanner from "../assets/jobboard/sixapart.jpg";
 import smartbankBanner from "../assets/jobboard/smartbank.png";
 import smarthrBanner from "../assets/jobboard/smarthr.jpg";
-import supaBanner from "../assets/jobboard/supa.jpg";
 import tebikiBanner from "../assets/jobboard/tebiki.jpg";
 import timeleapBanner from "../assets/jobboard/timeleap.png";
 import xtmBanner from "../assets/jobboard/xtm.jpg";
@@ -53,6 +56,7 @@ export const jobBoardItems = [
   { name: "株式会社フリークアウト", url: "https://www.fout.co.jp/recruit/", banner: freakoutBanner },
   { name: "株式会社hacomono", url: "https://www.hacomono.co.jp/recruit/engineer/", banner: hacomonoBanner },
   { name: "株式会社はてな", url: "https://hatena.co.jp/recruit", banner: hatenaBanner },
+  { name: "株式会社HelloCloud", url: "https://supa.co.jp", banner: hellocloudBanner },
   { name: "株式会社Helpfeel", url: "https://recruit-engineer.helpfeel.com/?utm_source=yapc_tokyo_2026&utm_medium=sponsor&utm_campaign=jobboard", banner: helpfeelBanner },
   { name: "転職ドラフト", url: "https://job-draft.jp/?utm_source=site&utm_medium=conference&utm_campaign=allconference&utm_term=yapc2026", banner: jobDraftBanner },
   { name: "株式会社メルカリ", url: "https://careers.mercari.com/jobs/engineering/engineering/", banner: mercariBanner },
@@ -64,7 +68,6 @@ export const jobBoardItems = [
   { name: "シックス・アパート株式会社", url: "https://www.sixapart.jp/jobs/", banner: sixapartBanner },
   { name: "株式会社スマートバンク", url: "https://smartbank.co.jp/recruit/engineer-summary/", banner: smartbankBanner },
   { name: "株式会社SmartHR", url: "https://recruit.smarthr.co.jp/engineer/", banner: smarthrBanner },
-  { name: "supa, inc.", url: "https://supa.co.jp", banner: supaBanner },
   { name: "Tebiki株式会社", url: "https://techblog.tebiki.co.jp/", banner: tebikiBanner },
   { name: "タイムリープ株式会社", url: "https://timeleap.co.jp/recruit", banner: timeleapBanner },
   { name: "株式会社クロステック・マネジメント（京都芸術大学）", banner: xtmBanner },
