@@ -86,8 +86,8 @@ export const sponsorPlans = [
       { name: "株式会社アンドパッド", url: "https://engineer.andpad.co.jp/", logo: andpadLogo },
       // 旧 supa, inc.。2026-11-06 に掲載社名とロゴの変更のご連絡があり差し替えた。
       // ロゴは Figma を通さず、ご提供の PNG (1799x262) を ImageMagick で幅 840 に
-      // 縮小して 1024 枠の中央に置いている。URL は変更のご連絡がないため据え置き。
-      { name: "株式会社HelloCloud", url: "https://supa.co.jp/", logo: hellocloudLogo },
+      // 縮小して 1024 枠の中央に置いている。URL はご依頼により https://cloud.hello.ai/ に変えた。
+      { name: "株式会社HelloCloud", url: "https://cloud.hello.ai/", logo: hellocloudLogo },
       { name: "タイムリープ株式会社", url: "https://timeleap.co.jp/", logo: timeleapLogo },
       { name: "株式会社クロステック・マネジメント（京都芸術大学）", url: "https://xtm.jp/", logo: xtmLogo },
       { name: "GMO Flatt Security株式会社", url: "https://flatt.tech/", logo: flattSecurityLogo },

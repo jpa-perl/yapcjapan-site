@@ -18,7 +18,7 @@
 // 運営が fortee に登録したものを取得している。
 //
 // HelloCloud（旧 supa, inc.）は社名変更に伴い、11/12 にメールで受領した 1200x600 の
-// PNG をそのまま置いている。遷移先は変更のご連絡がないため据え置き。
+// PNG をそのまま置いている。遷移先はご依頼により https://cloud.hello.ai/ に変えた。
 //
 // 遷移先 URL が未提出の会社は url を持たせず、リンクなしでバナーだけを載せる。
 import andpadBanner from "../assets/jobboard/andpad.png";
@@ -56,7 +56,7 @@ export const jobBoardItems = [
   { name: "株式会社フリークアウト", url: "https://www.fout.co.jp/recruit/", banner: freakoutBanner },
   { name: "株式会社hacomono", url: "https://www.hacomono.co.jp/recruit/engineer/", banner: hacomonoBanner },
   { name: "株式会社はてな", url: "https://hatena.co.jp/recruit", banner: hatenaBanner },
-  { name: "株式会社HelloCloud", url: "https://supa.co.jp", banner: hellocloudBanner },
+  { name: "株式会社HelloCloud", url: "https://cloud.hello.ai/", banner: hellocloudBanner },
   { name: "株式会社Helpfeel", url: "https://recruit-engineer.helpfeel.com/?utm_source=yapc_tokyo_2026&utm_medium=sponsor&utm_campaign=jobboard", banner: helpfeelBanner },
   { name: "転職ドラフト", url: "https://job-draft.jp/?utm_source=site&utm_medium=conference&utm_campaign=allconference&utm_term=yapc2026", banner: jobDraftBanner },
   { name: "株式会社メルカリ", url: "https://careers.mercari.com/jobs/engineering/engineering/", banner: mercariBanner },
