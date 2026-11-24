@@ -119,28 +119,28 @@ export const navItems = [
 
 export const announcements = [
   {
-    date: "2026-11-09",
-    displayDate: "2026.11.09",
-    title: "YAPC::Tokyo 2026 参加チケットの再販売を11月10日（火）20:00 JST より行います",
-    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-resale-vol2",
+    date: "2026-11-24",
+    displayDate: "2026.11.24",
+    title: "YAPC::Tokyo 2026の情報をまとめた「詳解」を公開しました！",
+    href: "https://blog.yapcjapan.org/entry/2026/11/24/133000",
   },
   {
-    date: "2026-11-04",
-    displayDate: "2026.11.04",
-    title: "YAPC::Tokyo 2026 本編で発表するライトニングトークを募集します！",
-    href: "https://blog.yapcjapan.org/entry/2026/11/04/153000",
-  },  
-  {
-    date: "2026-10-28",
-    displayDate: "2026.10.28",
-    title: "YAPC::Tokyo 2026の前夜祭チケットを2026年10月28日（水）から販売します！",
-    href: "https://blog.yapcjapan.org/entry/2026/10/28/203236",
+    date: "2026-11-18",
+    displayDate: "2026.11.18",
+    title: "YAPC::Tokyo 2026を盛り上げるライトニングトークの採択結果をお知らせします！",
+    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-lt-accepted",
   },
   {
-    date: "2026-09-25",
-    displayDate: "2026.09.25",
-    title: "YAPC::Tokyo 2026の託児所チケットの販売を開始しました！",
-    href: "https://blog.yapcjapan.org/entry/yapc-tokyo-2026-childcare-ticket",
+    date: "2026-11-16",
+    displayDate: "2026.11.16",
+    title: "2026年11月27日（金）に開催される「YAPC::Tokyo 2026 前夜祭」の中身をご紹介します！",
+    href: "https://blog.yapcjapan.org/entry/2026/11/16/214500",
+  },
+  {
+    date: "2026-11-16",
+    displayDate: "2026.11.16",
+    title: "「コードゴルフコンテスト Anybatross 2026」を面白法人カヤック様と合同で開催します",
+    href: "https://blog.yapcjapan.org/entry/2026/11/16/211758",
   },
 ] as const;
 
