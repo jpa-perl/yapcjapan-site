@@ -121,9 +121,8 @@ export const announcements = [
   {
     date: "2026-11-24",
     displayDate: "2026.11.24",
-    title: "詳解 YAPC::Tokyo 2026",
-    // TODO: 詳解記事の公開後に、公開URLへ差し替える
-    href: "https://blog.yapcjapan.org/",
+    title: "YAPC::Tokyo 2026の情報をまとめた「詳解」を公開しました！",
+    href: "https://blog.yapcjapan.org/entry/2026/11/24/133000",
   },
   {
     date: "2026-11-18",
