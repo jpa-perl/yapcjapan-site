@@ -48,7 +48,7 @@ const siteDescription = "YAPC::Tokyo 2026は一般社団法人Japan Perl Associa
           <img src="/2026tokyo/images/header-logo.svg" alt={siteInfo.title} class="h-6 lg:h-7" />
         </a>
         <div class="flex items-center gap-3 lg:gap-5">
-          <nav class="hidden lg:block" aria-label="メインメニュー">
+          <nav class="hidden 2xl:block" aria-label="メインメニュー">
             <ul class="flex gap-6">
               {navItems.map((item) => (
                 <li>
@@ -64,14 +64,14 @@ const siteDescription = "YAPC::Tokyo 2026は一般社団法人Japan Perl Associa
             href={officialXLink.href}
             {...externalLinkProps(officialXLink.href)}
             aria-label={officialXLink.label}
-            class="hidden size-7 shrink-0 items-center justify-center rounded-full bg-black transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange lg:flex"
+            class="hidden size-7 shrink-0 items-center justify-center rounded-full bg-black transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange 2xl:flex"
           >
             <img src="/2026tokyo/images/x-logo.svg" alt="" width="16" height="16" class="size-3 lg:size-3" />
           </a>
           <button
             id="mobile-menu-button"
             type="button"
-            class="flex size-11 shrink-0 items-center justify-center text-ink lg:hidden"
+            class="flex size-11 shrink-0 items-center justify-center text-ink 2xl:hidden"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -86,7 +86,7 @@ const siteDescription = "YAPC::Tokyo 2026は一般社団法人Japan Perl Associa
       </div>
       <nav
         id="mobile-menu"
-        class="h-0 overflow-hidden opacity-0 lg:hidden"
+        class="h-0 overflow-hidden opacity-0 2xl:hidden"
         aria-label="モバイルメニュー"
       >
         <ul class="flex flex-col px-4 pb-4">
@@ -209,6 +209,6 @@ const siteDescription = "YAPC::Tokyo 2026は一般社団法人Japan Perl Associa
     lastScrollY = currentScrollY;
   }, { passive: true });
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024) setMenu(false, true);
+    if (window.innerWidth >= 1536) setMenu(false, true);
   });
 </script>
