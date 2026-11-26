@@ -1,0 +1,75 @@
+---
+import type { ImageMetadata } from "astro";
+import { externalLinkProps } from "../utils/links";
+
+interface Person {
+  name: string;
+  // リンク先のない方は持たない。その場合はアイコンと名前をリンクにしない。
+  url?: string;
+  // アイコンのない方は持たない。その場合は下地の丸だけを出す。
+  icon?: ImageMetadata;
+}
+
+interface Props {
+  people: readonly Person[];
+}
+
+const { people } = Astro.props;
+---
+
+<ul class="flex w-full max-w-[100rem] flex-wrap justify-center gap-x-4 gap-y-6 sm:gap-x-6 sm:gap-y-8">
+  {
+    people.map((person) => {
+      const Card = person.url ? "a" : "div";
+      const linkProps = person.url
+        ? { href: person.url, ...externalLinkProps(person.url) }
+        : {};
+
+      return (
+        <li class="w-24 sm:w-28">
+          <Card
+            {...linkProps}
+            class="person-card flex flex-col items-center gap-2 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
+          >
+            <div class="size-20 overflow-hidden rounded-full bg-gray-200 sm:size-24">
+              {person.icon && (
+                // 名前をすぐ下に出しているので、読み上げが重ならないよう alt は空にする。
+                <img
+                  src={person.icon.src}
+                  width={person.icon.width}
+                  height={person.icon.height}
+                  alt=""
+                  class="block size-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
+            </div>
+            <span class="font-maru text-sm font-bold leading-snug text-ink text-center wrap-anywhere">
+              {person.name}
+            </span>
+          </Card>
+        </li>
+      );
+    })
+  }
+</ul>
+
+<style>
+  .person-card {
+    transition: opacity 180ms ease;
+  }
+
+  /* リンクのない方は押せるように見せない。 */
+  @media (hover: hover) {
+    a.person-card:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .person-card {
+      transition: none;
+    }
+  }
+</style>
