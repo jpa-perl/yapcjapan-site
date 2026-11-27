@@ -1,0 +1,40 @@
+---
+import PersonList from "./PersonList.astro";
+import SectionHeading from "./SectionHeading.astro";
+import type { StaffGroup } from "../data/staff";
+
+interface Props {
+  groups: readonly StaffGroup[];
+}
+
+const { groups } = Astro.props;
+---
+
+<section id="staff" class="scroll-mt-24 bg-gray-200 lg:scroll-mt-28">
+  <div
+    class="pt-12 pb-24 max-w-page mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:pt-16 sm:pb-36 sm:gap-12"
+  >
+    <SectionHeading title="Staff" subtitle="スタッフ" />
+
+    <!-- アイコン 112px と横の間隔 24px に対して、広い画面では 1 行 8 名で折り返す幅にしている。 -->
+    <div class="flex w-full max-w-6xl flex-col items-center gap-12 sm:gap-16">
+      {
+        groups.map((group) => (
+          <section
+            class="flex w-full flex-col items-center gap-8 sm:gap-10"
+            aria-labelledby={`staff-group-${group.id}`}
+          >
+            <h3
+              id={`staff-group-${group.id}`}
+              class="font-maru font-black text-black text-center text-xl leading-tight sm:text-2xl"
+            >
+              {group.name}
+            </h3>
+
+            <PersonList people={group.members} />
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</section>

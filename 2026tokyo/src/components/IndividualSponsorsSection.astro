@@ -1,0 +1,28 @@
+---
+import PersonList from "./PersonList.astro";
+import SectionHeading from "./SectionHeading.astro";
+import type { IndividualSponsor } from "../data/individual-sponsors";
+
+interface Props {
+  sponsors: readonly IndividualSponsor[];
+}
+
+const { sponsors } = Astro.props;
+---
+
+<section id="individual-sponsors" class="scroll-mt-24 lg:scroll-mt-28">
+  <div
+    class="py-12 max-w-page mx-auto px-4 flex flex-col items-center gap-10 sm:px-5 sm:py-16 sm:gap-12"
+  >
+    <SectionHeading title="Individual Sponsors" subtitle="個人スポンサー" />
+
+    <PersonList people={sponsors} />
+  </div>
+  <img
+    src="/2026tokyo/images/about-wave-top.svg"
+    alt=""
+    width="1400"
+    height="120"
+    class="block aspect-[1400/120] w-full bg-cream"
+  />
+</section>

@@ -109,6 +109,8 @@ export const navItems = [
   { label: "チケット", labelEn: "Tickets", href: "https://fortee.jp/yapc-tokyo-2026/ticket-shop/index" },
   { label: "タイムテーブル", labelEn: "Timetable", href: "https://fortee.jp/yapc-tokyo-2026/timetable/2026-11-28" },
   { label: "スポンサー", labelEn: "Sponsors", href: "#sponsors" },
+  { label: "個人スポンサー", labelEn: "Individual Sponsors", href: "#individual-sponsors" },
+  { label: "スタッフ", labelEn: "Staff", href: "#staff" },
   {
     label: "行動指針",
     labelEn: "Code of Conduct",

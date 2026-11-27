@@ -22,14 +22,14 @@ const descSize = keynote ? "text-base" : "text-sm";
 
 <article class="flex flex-col items-center gap-4">
   <div class:list={["speaker-photo-frame", photoSize]}>
-    <div class="speaker-photo-mask size-full bg-gray-200">
+    <div class="speaker-photo-mask relative size-full bg-gray-200">
       {photo && (
         <img
           src={photo.src}
           width={photo.width}
           height={photo.height}
           alt={name}
-          class="block size-full object-cover"
+          class="absolute inset-0 size-full object-cover"
           loading="lazy"
           decoding="async"
         />

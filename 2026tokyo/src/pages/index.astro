@@ -8,6 +8,8 @@ import SectionHeading from "../components/SectionHeading.astro";
 import SpeakerCard from "../components/SpeakerCard.astro";
 import JobBoardSection from "../components/JobBoardSection.astro";
 import SponsorsSection from "../components/SponsorsSection.astro";
+import IndividualSponsorsSection from "../components/IndividualSponsorsSection.astro";
+import StaffSection from "../components/StaffSection.astro";
 import {
   siteInfo,
   announcements,
@@ -18,6 +20,8 @@ import {
 } from "../data/site";
 import { sponsorPlans } from "../data/sponsors";
 import { jobBoardItems } from "../data/jobboard";
+import { individualSponsors } from "../data/individual-sponsors";
+import { staffGroups } from "../data/staff";
 ---
 
 <Layout>
@@ -131,4 +135,8 @@ import { jobBoardItems } from "../data/jobboard";
   <JobBoardSection items={jobBoardItems} />
 
   <SponsorsSection plans={sponsorPlans} />
+
+  <IndividualSponsorsSection sponsors={individualSponsors} />
+
+  <StaffSection groups={staffGroups} />
 </Layout>
