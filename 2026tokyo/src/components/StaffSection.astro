@@ -8,6 +8,12 @@ interface Props {
 }
 
 const { groups } = Astro.props;
+
+// アイコン 112px と横の間隔 24px に対して、広い画面で 1 行に並ぶ人数を幅で決める。
+// 当日スタッフは 1 行 9 名 (112 * 9 + 24 * 8 = 1200px)、それ以外は 1 行 8 名で折り返す。
+function groupWidthClass(groupId: string): string {
+  return groupId === "staff" ? "max-w-[75rem]" : "max-w-6xl";
+}
 ---
 
 <section id="staff" class="scroll-mt-24 bg-gray-200 lg:scroll-mt-28">
@@ -16,12 +22,11 @@ const { groups } = Astro.props;
   >
     <SectionHeading title="Staff" subtitle="スタッフ" />
 
-    <!-- アイコン 112px と横の間隔 24px に対して、広い画面では 1 行 8 名で折り返す幅にしている。 -->
-    <div class="flex w-full max-w-6xl flex-col items-center gap-12 sm:gap-16">
+    <div class="flex w-full flex-col items-center gap-12 sm:gap-16">
       {
         groups.map((group) => (
           <section
-            class="flex w-full flex-col items-center gap-8 sm:gap-10"
+            class:list={["flex w-full flex-col items-center gap-8 sm:gap-10", groupWidthClass(group.id)]}
             aria-labelledby={`staff-group-${group.id}`}
           >
             <h3

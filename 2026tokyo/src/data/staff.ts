@@ -75,6 +75,7 @@ export const staffGroups: readonly StaffGroup[] = [
       { name: "Kaitou", url: "https://x.com/Kaitou1192", icon: icon("kaitou.jpg") },
       { name: "てらうちたかし", icon: icon("member-d552a044.jpg") },
       { name: "yakumi", icon: icon("yakumi.jpg") },
+      { name: "むねにく", icon: icon("member-84dc916f.png") },
       { name: "sironekotoro", icon: icon("sironekotoro.png") },
       { name: "fkuMnk", icon: icon("fkumnk.jpg") },
       { name: "ラティ", url: "https://x.com/ratie_dev", icon: icon("member-f6715662.jpg") },
